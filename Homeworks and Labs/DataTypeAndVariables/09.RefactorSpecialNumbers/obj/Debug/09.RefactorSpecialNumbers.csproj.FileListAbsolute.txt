@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\09.RefactorSpecialNumbers\bin\Debug\09.RefactorSpecialNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\09.RefactorSpecialNumbers\bin\Debug\09.RefactorSpecialNumbers.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\09.RefactorSpecialNumbers\bin\Debug\09.RefactorSpecialNumbers.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\09.RefactorSpecialNumbers\obj\Debug\09.RefactorSpecialNumbers.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\09.RefactorSpecialNumbers\obj\Debug\09.RefactorSpecialNumbers.pdb

@@ -1,0 +1,5 @@
+C:\DateAndVariables\02.CircleArea\bin\Debug\02.CircleArea.exe.config
+C:\DateAndVariables\02.CircleArea\bin\Debug\02.CircleArea.exe
+C:\DateAndVariables\02.CircleArea\bin\Debug\02.CircleArea.pdb
+C:\DateAndVariables\02.CircleArea\obj\Debug\02.CircleArea.exe
+C:\DateAndVariables\02.CircleArea\obj\Debug\02.CircleArea.pdb
