@@ -1,2 +1,2 @@
 # Programming-Fundamentals
-Programing Fundamentals - exercises
+Programing Fundamentals - labs, homeworks and old exams
