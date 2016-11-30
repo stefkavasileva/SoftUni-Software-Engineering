@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\10.PriceChangeAlert\bin\Debug\10.PriceChangeAlert.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\10.PriceChangeAlert\bin\Debug\10.PriceChangeAlert.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\10.PriceChangeAlert\bin\Debug\10.PriceChangeAlert.pdb
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\10.PriceChangeAlert\obj\Debug\10.PriceChangeAlert.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\10.PriceChangeAlert\obj\Debug\10.PriceChangeAlert.pdb

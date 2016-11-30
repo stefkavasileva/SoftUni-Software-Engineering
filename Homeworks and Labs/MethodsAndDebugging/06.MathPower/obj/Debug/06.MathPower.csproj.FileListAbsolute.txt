@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\bin\Debug\06.MathPower.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\bin\Debug\06.MathPower.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\bin\Debug\06.MathPower.pdb
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\obj\Debug\06.MathPower.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\obj\Debug\06.MathPower.pdb

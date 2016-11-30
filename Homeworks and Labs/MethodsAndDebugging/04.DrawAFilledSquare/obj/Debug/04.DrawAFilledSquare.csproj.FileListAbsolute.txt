@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\04.DrawAFilledSquare\bin\Debug\04.DrawAFilledSquare.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\04.DrawAFilledSquare\bin\Debug\04.DrawAFilledSquare.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\04.DrawAFilledSquare\bin\Debug\04.DrawAFilledSquare.pdb
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\04.DrawAFilledSquare\obj\Debug\04.DrawAFilledSquare.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\04.DrawAFilledSquare\obj\Debug\04.DrawAFilledSquare.pdb

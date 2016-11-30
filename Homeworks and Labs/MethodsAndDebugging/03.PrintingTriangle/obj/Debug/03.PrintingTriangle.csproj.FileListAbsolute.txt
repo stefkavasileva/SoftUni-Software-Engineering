@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\03.PrintingTriangle\bin\Debug\03.PrintingTriangle.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\03.PrintingTriangle\bin\Debug\03.PrintingTriangle.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\03.PrintingTriangle\bin\Debug\03.PrintingTriangle.pdb
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\03.PrintingTriangle\obj\Debug\03.PrintingTriangle.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\03.PrintingTriangle\obj\Debug\03.PrintingTriangle.pdb

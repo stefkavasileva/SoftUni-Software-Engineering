@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\bin\Debug\02.SignOfIntegerNumber.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\bin\Debug\02.SignOfIntegerNumber.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\bin\Debug\02.SignOfIntegerNumber.pdb
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.exe
+C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.pdb
