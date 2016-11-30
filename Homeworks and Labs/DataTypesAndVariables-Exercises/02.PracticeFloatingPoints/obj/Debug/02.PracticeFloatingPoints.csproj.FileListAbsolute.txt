@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\02.PracticeFloatingPoints\bin\Debug\02.PracticeFloatingPoints.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\02.PracticeFloatingPoints\bin\Debug\02.PracticeFloatingPoints.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\02.PracticeFloatingPoints\bin\Debug\02.PracticeFloatingPoints.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\02.PracticeFloatingPoints\obj\Debug\02.PracticeFloatingPoints.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\02.PracticeFloatingPoints\obj\Debug\02.PracticeFloatingPoints.pdb

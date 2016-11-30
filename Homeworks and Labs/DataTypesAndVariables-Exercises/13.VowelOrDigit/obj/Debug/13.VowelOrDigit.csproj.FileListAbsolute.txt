@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\bin\Debug\13.VowelOrDigit.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\bin\Debug\13.VowelOrDigit.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\bin\Debug\13.VowelOrDigit.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\obj\Debug\13.VowelOrDigit.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\obj\Debug\13.VowelOrDigit.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\13.VowelOrDigit\obj\Debug\13.VowelOrDigit.pdb

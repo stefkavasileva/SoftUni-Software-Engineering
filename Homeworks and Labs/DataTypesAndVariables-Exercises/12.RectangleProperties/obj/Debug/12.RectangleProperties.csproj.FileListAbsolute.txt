@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\12.RectangleProperties\bin\Debug\12.RectangleProperties.exe.config

@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\07.ExchangeVariableValues\bin\Debug\07.ExchangeVariableValues.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\07.ExchangeVariableValues\bin\Debug\07.ExchangeVariableValues.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\07.ExchangeVariableValues\bin\Debug\07.ExchangeVariableValues.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\07.ExchangeVariableValues\obj\Debug\07.ExchangeVariableValues.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\07.ExchangeVariableValues\obj\Debug\07.ExchangeVariableValues.pdb

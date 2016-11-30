@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\08.EmployeeData\bin\Debug\08.EmployeeData.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\08.EmployeeData\bin\Debug\08.EmployeeData.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\08.EmployeeData\bin\Debug\08.EmployeeData.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\08.EmployeeData\obj\Debug\08.EmployeeData.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\08.EmployeeData\obj\Debug\08.EmployeeData.pdb

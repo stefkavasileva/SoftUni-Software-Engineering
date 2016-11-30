@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\05.BooleanVariable\bin\Debug\05.BooleanVariable.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\05.BooleanVariable\bin\Debug\05.BooleanVariable.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\05.BooleanVariable\bin\Debug\05.BooleanVariable.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\05.BooleanVariable\obj\Debug\05.BooleanVariable.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\05.BooleanVariable\obj\Debug\05.BooleanVariable.pdb

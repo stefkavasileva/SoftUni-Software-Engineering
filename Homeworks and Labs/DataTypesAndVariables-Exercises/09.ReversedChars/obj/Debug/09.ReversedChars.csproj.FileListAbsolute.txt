@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\bin\Debug\09.ReversedChars.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\bin\Debug\09.ReversedChars.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\bin\Debug\09.ReversedChars.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.pdb
