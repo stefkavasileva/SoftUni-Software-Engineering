@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\09.ExtractMiddleElements\bin\Debug\09.ExtractMiddleElements.exe.config

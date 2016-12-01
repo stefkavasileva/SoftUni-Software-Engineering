@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\07.SumArrays\bin\Debug\07.SumArrays.exe.config

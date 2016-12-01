@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\16.CountNumbers\bin\Debug\16.CountNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\16.CountNumbers\bin\Debug\16.CountNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\16.CountNumbers\bin\Debug\16.CountNumbers.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\16.CountNumbers\obj\Debug\16.CountNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\16.CountNumbers\obj\Debug\16.CountNumbers.pdb

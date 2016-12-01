@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\02.ReverseArrayOfIntegers\bin\Debug\02.ReverseArrayOfIntegers.exe.config

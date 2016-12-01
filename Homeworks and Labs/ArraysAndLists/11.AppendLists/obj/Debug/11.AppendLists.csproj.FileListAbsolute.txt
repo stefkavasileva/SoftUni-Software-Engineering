@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\11.AppendLists\bin\Debug\11.AppendLists.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\11.AppendLists\bin\Debug\11.AppendLists.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\11.AppendLists\bin\Debug\11.AppendLists.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\11.AppendLists\obj\Debug\11.AppendLists.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\11.AppendLists\obj\Debug\11.AppendLists.pdb

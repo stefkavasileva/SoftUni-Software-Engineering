@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\14.SortNumbers\bin\Debug\14.SortNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\14.SortNumbers\bin\Debug\14.SortNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\14.SortNumbers\bin\Debug\14.SortNumbers.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\14.SortNumbers\obj\Debug\14.SortNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\14.SortNumbers\obj\Debug\14.SortNumbers.pdb

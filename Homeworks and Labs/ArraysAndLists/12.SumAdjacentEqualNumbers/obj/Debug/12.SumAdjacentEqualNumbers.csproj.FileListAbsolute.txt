@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\bin\Debug\12.SumAdjacentEqualNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\bin\Debug\12.SumAdjacentEqualNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\bin\Debug\12.SumAdjacentEqualNumbers.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\obj\Debug\12.SumAdjacentEqualNumbers.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\obj\Debug\12.SumAdjacentEqualNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\12.SumAdjacentEqualNumbers\obj\Debug\12.SumAdjacentEqualNumbers.pdb

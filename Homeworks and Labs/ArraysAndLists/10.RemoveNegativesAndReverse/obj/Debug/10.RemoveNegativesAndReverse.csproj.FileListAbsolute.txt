@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\10.RemoveNegativesAndReverse\bin\Debug\10.RemoveNegativesAndReverse.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\10.RemoveNegativesAndReverse\bin\Debug\10.RemoveNegativesAndReverse.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\10.RemoveNegativesAndReverse\bin\Debug\10.RemoveNegativesAndReverse.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\10.RemoveNegativesAndReverse\obj\Debug\10.RemoveNegativesAndReverse.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\10.RemoveNegativesAndReverse\obj\Debug\10.RemoveNegativesAndReverse.pdb

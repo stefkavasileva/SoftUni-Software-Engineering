@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\15.SquareNumbers\bin\Debug\15.SquareNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\15.SquareNumbers\bin\Debug\15.SquareNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\15.SquareNumbers\bin\Debug\15.SquareNumbers.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\15.SquareNumbers\obj\Debug\15.SquareNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\15.SquareNumbers\obj\Debug\15.SquareNumbers.pdb

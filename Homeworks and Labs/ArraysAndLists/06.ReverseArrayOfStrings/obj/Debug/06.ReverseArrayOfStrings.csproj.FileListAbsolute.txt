@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists\06.ReverseArrayOfStrings\bin\Debug\06.ReverseArrayOfStrings.exe.config
