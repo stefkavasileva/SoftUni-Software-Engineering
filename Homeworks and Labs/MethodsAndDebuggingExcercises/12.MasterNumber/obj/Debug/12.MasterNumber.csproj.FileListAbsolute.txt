@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.pdb

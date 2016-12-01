@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.pdb

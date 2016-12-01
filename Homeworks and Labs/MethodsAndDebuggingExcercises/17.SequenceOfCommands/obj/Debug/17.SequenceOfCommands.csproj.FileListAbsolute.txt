@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\17.SequenceOfCommands\bin\Debug\17.SequenceOfCommands.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\17.SequenceOfCommands\bin\Debug\17.SequenceOfCommands.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\17.SequenceOfCommands\bin\Debug\17.SequenceOfCommands.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\17.SequenceOfCommands\obj\Debug\17.SequenceOfCommands.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\17.SequenceOfCommands\obj\Debug\17.SequenceOfCommands.pdb

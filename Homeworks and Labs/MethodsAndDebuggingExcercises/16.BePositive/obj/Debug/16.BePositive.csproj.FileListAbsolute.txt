@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\bin\Debug\16.BePositive.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\bin\Debug\16.BePositive.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\bin\Debug\16.BePositive.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\obj\Debug\16.BePositive.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\obj\Debug\16.BePositive.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\16.BePositive\obj\Debug\16.BePositive.pdb

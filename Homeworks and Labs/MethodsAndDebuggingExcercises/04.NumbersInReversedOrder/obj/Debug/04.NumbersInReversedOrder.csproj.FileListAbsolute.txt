@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\04.NumbersInReversedOrder\bin\Debug\04.NumbersInReversedOrder.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\04.NumbersInReversedOrder\bin\Debug\04.NumbersInReversedOrder.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\04.NumbersInReversedOrder\bin\Debug\04.NumbersInReversedOrder.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\04.NumbersInReversedOrder\obj\Debug\04.NumbersInReversedOrder.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\04.NumbersInReversedOrder\obj\Debug\04.NumbersInReversedOrder.pdb

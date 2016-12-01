@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\bin\Debug\15.InstructionSet.exe.config
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\bin\Debug\15.InstructionSet.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\bin\Debug\15.InstructionSet.pdb
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\obj\Debug\15.InstructionSet.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\obj\Debug\15.InstructionSet.exe
+C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\15.InstructionSet\obj\Debug\15.InstructionSet.pdb
