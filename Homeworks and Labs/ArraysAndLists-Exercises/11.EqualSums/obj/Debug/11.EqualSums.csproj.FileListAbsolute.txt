@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\11.EqualSums\bin\Debug\11.EqualSums.exe.config

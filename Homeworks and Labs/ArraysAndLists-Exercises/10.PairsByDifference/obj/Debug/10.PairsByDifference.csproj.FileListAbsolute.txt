@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\10.PairsByDifference\bin\Debug\10.PairsByDifference.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\10.PairsByDifference\bin\Debug\10.PairsByDifference.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\10.PairsByDifference\bin\Debug\10.PairsByDifference.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\10.PairsByDifference\obj\Debug\10.PairsByDifference.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\10.PairsByDifference\obj\Debug\10.PairsByDifference.pdb

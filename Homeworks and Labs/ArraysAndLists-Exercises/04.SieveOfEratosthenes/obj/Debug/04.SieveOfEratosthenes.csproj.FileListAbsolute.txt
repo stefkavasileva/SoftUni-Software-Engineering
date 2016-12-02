@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\bin\Debug\04.SieveOfEratosthenes.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\bin\Debug\04.SieveOfEratosthenes.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\bin\Debug\04.SieveOfEratosthenes.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\obj\Debug\04.SieveOfEratosthenes.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\obj\Debug\04.SieveOfEratosthenes.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\04.SieveOfEratosthenes\obj\Debug\04.SieveOfEratosthenes.pdb
