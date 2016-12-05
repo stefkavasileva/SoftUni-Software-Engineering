@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\15.SumReversedNumbers\bin\Debug\15.SumReversedNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\15.SumReversedNumbers\bin\Debug\15.SumReversedNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\15.SumReversedNumbers\bin\Debug\15.SumReversedNumbers.pdb
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\15.SumReversedNumbers\obj\Debug\15.SumReversedNumbers.exe
+C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\15.SumReversedNumbers\obj\Debug\15.SumReversedNumbers.pdb
