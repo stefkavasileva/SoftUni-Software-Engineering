@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.exe.config
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.pdb
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.pdb

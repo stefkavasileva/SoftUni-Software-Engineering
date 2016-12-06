@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\06.UserLogs\bin\Debug\06.UserLogs.exe.config

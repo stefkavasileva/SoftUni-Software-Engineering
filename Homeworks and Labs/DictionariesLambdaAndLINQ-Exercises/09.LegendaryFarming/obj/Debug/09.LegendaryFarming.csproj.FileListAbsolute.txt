@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.exe.config
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.pdb
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.pdb

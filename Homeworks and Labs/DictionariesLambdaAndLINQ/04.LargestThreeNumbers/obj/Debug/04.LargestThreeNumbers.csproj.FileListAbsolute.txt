@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\04.LargestThreeNumbers\bin\Debug\04.LargestThreeNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\04.LargestThreeNumbers\bin\Debug\04.LargestThreeNumbers.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\04.LargestThreeNumbers\bin\Debug\04.LargestThreeNumbers.pdb
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\04.LargestThreeNumbers\obj\Debug\04.LargestThreeNumbers.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\04.LargestThreeNumbers\obj\Debug\04.LargestThreeNumbers.pdb

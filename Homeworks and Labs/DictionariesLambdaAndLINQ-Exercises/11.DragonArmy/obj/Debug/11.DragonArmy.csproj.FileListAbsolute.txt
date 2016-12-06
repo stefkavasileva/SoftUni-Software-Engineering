@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.exe.config
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.pdb
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.exe
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.pdb

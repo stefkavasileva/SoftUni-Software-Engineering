@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\bin\Debug\01.Phonebook.exe.config

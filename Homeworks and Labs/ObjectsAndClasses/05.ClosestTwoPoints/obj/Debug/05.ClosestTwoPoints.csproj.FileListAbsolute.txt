@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\05.ClosestTwoPoints\bin\Debug\05.ClosestTwoPoints.exe.config

@@ -1,0 +1,1 @@
+C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\bin\Debug\03.AMinerTask.exe.config

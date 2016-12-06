@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\bin\Debug\01.DayOfWeek.exe.config
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\obj\Debug\01.DayOfWeek.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\bin\Debug\01.DayOfWeek.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\bin\Debug\01.DayOfWeek.pdb
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\obj\Debug\01.DayOfWeek.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\01.DayOfWeek\obj\Debug\01.DayOfWeek.pdb
