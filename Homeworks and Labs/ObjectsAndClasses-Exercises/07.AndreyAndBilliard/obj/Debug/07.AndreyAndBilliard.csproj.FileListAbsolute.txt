@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\bin\Debug\07.AndreyAndBilliard.exe.config
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\bin\Debug\07.AndreyAndBilliard.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\bin\Debug\07.AndreyAndBilliard.pdb
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\obj\Debug\07.AndreyAndBilliard.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\obj\Debug\07.AndreyAndBilliard.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\07.AndreyAndBilliard\obj\Debug\07.AndreyAndBilliard.pdb

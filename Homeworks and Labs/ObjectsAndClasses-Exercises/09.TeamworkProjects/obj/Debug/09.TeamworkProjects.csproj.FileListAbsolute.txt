@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\bin\Debug\09.TeamworkProjects.exe.config
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\bin\Debug\09.TeamworkProjects.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\bin\Debug\09.TeamworkProjects.pdb
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\obj\Debug\09.TeamworkProjects.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\obj\Debug\09.TeamworkProjects.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\09.TeamworkProjects\obj\Debug\09.TeamworkProjects.pdb

@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.exe.config
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.pdb
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.exe
+C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.pdb
