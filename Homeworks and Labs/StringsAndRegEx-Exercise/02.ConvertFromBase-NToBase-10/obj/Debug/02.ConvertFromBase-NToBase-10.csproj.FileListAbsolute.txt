@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\bin\Debug\02.ConvertFromBase-NToBase-10.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\bin\Debug\02.ConvertFromBase-NToBase-10.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\bin\Debug\02.ConvertFromBase-NToBase-10.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\obj\Debug\02.ConvertFromBase-NToBase-10.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\obj\Debug\02.ConvertFromBase-NToBase-10.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\02.ConvertFromBase-NToBase-10\obj\Debug\02.ConvertFromBase-NToBase-10.pdb

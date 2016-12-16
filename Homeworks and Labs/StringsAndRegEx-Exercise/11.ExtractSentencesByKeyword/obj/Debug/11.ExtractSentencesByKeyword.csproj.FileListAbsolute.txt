@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\11.ExtractSentencesByKeyword\bin\Debug\11.ExtractSentencesByKeyword.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\11.ExtractSentencesByKeyword\bin\Debug\11.ExtractSentencesByKeyword.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\11.ExtractSentencesByKeyword\bin\Debug\11.ExtractSentencesByKeyword.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\11.ExtractSentencesByKeyword\obj\Debug\11.ExtractSentencesByKeyword.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\11.ExtractSentencesByKeyword\obj\Debug\11.ExtractSentencesByKeyword.pdb

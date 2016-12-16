@@ -1,0 +1,6 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\bin\Debug\08.LettersChangeNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\bin\Debug\08.LettersChangeNumbers.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\bin\Debug\08.LettersChangeNumbers.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\obj\Debug\08.LettersChangeNumbers.csprojResolveAssemblyReference.cache
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\obj\Debug\08.LettersChangeNumbers.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\08.LettersChangeNumbers\obj\Debug\08.LettersChangeNumbers.pdb

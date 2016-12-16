@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\06.SumBigNumbers\bin\Debug\06.SumBigNumbers.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\06.SumBigNumbers\bin\Debug\06.SumBigNumbers.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\06.SumBigNumbers\bin\Debug\06.SumBigNumbers.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\06.SumBigNumbers\obj\Debug\06.SumBigNumbers.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\06.SumBigNumbers\obj\Debug\06.SumBigNumbers.pdb

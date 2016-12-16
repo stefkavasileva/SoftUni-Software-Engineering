@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\03.UnicodeCharacters\bin\Debug\03.UnicodeCharacters.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\03.UnicodeCharacters\bin\Debug\03.UnicodeCharacters.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\03.UnicodeCharacters\bin\Debug\03.UnicodeCharacters.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\03.UnicodeCharacters\obj\Debug\03.UnicodeCharacters.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\03.UnicodeCharacters\obj\Debug\03.UnicodeCharacters.pdb

@@ -1,0 +1,5 @@
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\04.CharacterMultiplier\bin\Debug\04.CharacterMultiplier.exe.config
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\04.CharacterMultiplier\bin\Debug\04.CharacterMultiplier.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\04.CharacterMultiplier\bin\Debug\04.CharacterMultiplier.pdb
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\04.CharacterMultiplier\obj\Debug\04.CharacterMultiplier.exe
+C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\04.CharacterMultiplier\obj\Debug\04.CharacterMultiplier.pdb
