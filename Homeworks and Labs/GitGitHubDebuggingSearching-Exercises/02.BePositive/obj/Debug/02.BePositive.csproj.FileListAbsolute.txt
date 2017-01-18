@@ -1,0 +1,6 @@
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\bin\Debug\02.BePositive.exe.config
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\bin\Debug\02.BePositive.exe
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\bin\Debug\02.BePositive.pdb
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.csprojResolveAssemblyReference.cache
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.exe
+C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.pdb
