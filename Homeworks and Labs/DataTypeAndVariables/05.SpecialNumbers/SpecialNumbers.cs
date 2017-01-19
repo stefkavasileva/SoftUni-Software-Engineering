@@ -9,17 +9,17 @@ class SpecialNumbers
 {
     static void Main(string[] args)
     {
-        int endNums = int.Parse(Console.ReadLine());
+        int endNum = int.Parse(Console.ReadLine());
 
-        for (int i = 1; i <= endNums; i++)
+        for (int i = 1; i <= endNum; i++)
         {
             int currentNum = i;
 
             int firstDigit = (currentNum / 10) % 10;
             int lastDigit = currentNum % 10;
-            int sumOfDigit = firstDigit + lastDigit;
+            int sumOfDigits = firstDigit + lastDigit;
 
-            if (sumOfDigit == 5 || sumOfDigit == 11 || sumOfDigit == 7)
+            if (sumOfDigits == 5 || sumOfDigits == 11 || sumOfDigits == 7)
             {
                 Console.WriteLine($"{i} -> True");
             }
