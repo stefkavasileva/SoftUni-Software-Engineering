@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\bin\Debug\08.RefactorVolumeOfPyramid.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\bin\Debug\08.RefactorVolumeOfPyramid.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\bin\Debug\08.RefactorVolumeOfPyramid.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\obj\Debug\08.RefactorVolumeOfPyramid.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\obj\Debug\08.RefactorVolumeOfPyramid.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\08.RefactorVolumeOfPyramid\obj\Debug\08.RefactorVolumeOfPyramid.pdb
