@@ -8,15 +8,15 @@ class TriplesOfLatinLetters
 {
     static void Main(string[] args)
     {
-        int n = int.Parse(Console.ReadLine());
+        int stopLetter = int.Parse(Console.ReadLine());
 
-        for (int i1 = 0; i1 < n; i1++)
+        for (int firstLetter = 0; firstLetter < stopLetter; firstLetter++)
         {
-            for (int i2= 0; i2 < n; i2++)
+            for (int secondLetter= 0; secondLetter < stopLetter; secondLetter++)
             {
-                for (int i3 = 0; i3 < n; i3++)
+                for (int thirdLetter = 0; thirdLetter < stopLetter; thirdLetter++)
                 {
-                    Console.WriteLine($"{((char)('a'+i1))}{((char)('a' + i2))}{((char)('a' + i3))}");
+                    Console.WriteLine($"{((char)('a'+firstLetter))}{((char)('a' + secondLetter))}{((char)('a' + thirdLetter))}");
                 }
             }
         }
