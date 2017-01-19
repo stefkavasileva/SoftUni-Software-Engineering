@@ -9,7 +9,7 @@ class RefactorSpecialNumbers
     static void Main(string[] args)
     {
         int endNum = int.Parse(Console.ReadLine());
-        int sumNum = 0;
+        int sum = 0;
         int currentNum = 0;
         bool isSpecialNum = false;
         for (int index = 1; index <= endNum; index++)
@@ -17,14 +17,14 @@ class RefactorSpecialNumbers
             currentNum = index;
             while (index > 0)
             {
-                sumNum += index % 10;
+                sum += index % 10;
                 index = index / 10;
             }
 
-            isSpecialNum = (sumNum == 5) || (sumNum == 7) || (sumNum == 11);
+            isSpecialNum = (sum == 5) || (sum == 7) || (sum == 11);
 
             Console.WriteLine($"{currentNum} -> {isSpecialNum}");
-            sumNum = 0;
+            sum = 0;
             index = currentNum;
         }
 
