@@ -99,3 +99,32 @@ Print the values of the **n elements** after the execution of each command (exce
 - The **number value** will be an integer in the range [-100 … 100]. If the command is **“rshift”** or **“lshift”** there
 
 are no parameters.
+
+## 04. Substring 
+####Problem Description
+
+You are given a **text** and a number **count**. Your program should search through the text for the letter **&#39;p&#39;** (ASCII code
+
+**112**) and print **&#39;p&#39;** along with **count** letters to its right.
+
+For example, we are given the text **&quot;phahah put&quot;** and **count = 3**. We find a match of **&#39;p&#39;** in the first letter so we print
+
+it and the 3 letters to its right. The result is &quot;phah&quot;. We continue and find another match of &#39;p&#39;, but there aren&#39;t 3
+
+letters to its right, so we print only **&quot;put&quot;**.
+
+Each match should be printed on a separate line. If there are no matches of **&#39;p&#39;** in the text, we print **&quot;no&quot;**.
+
+####Input
+
+- The first line holds the **text** to be processed (string).
+
+- The second line holds the **number count**.
+
+####Output
+
+For each match, print the **matched substring** at separate line. Print **&quot;no&quot;** if there are no matches.
+
+####Constraints
+
+- The number **count** will be in the range [0 ... 100].
