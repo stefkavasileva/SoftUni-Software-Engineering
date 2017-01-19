@@ -1,0 +1,8 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\bin\Debug\16.PrintPartOfASCIITable.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\bin\Debug\16.PrintPartOfASCIITable.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\bin\Debug\16.PrintPartOfASCIITable.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\obj\Debug\16.PrintPartOfASCIITable.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\obj\Debug\16.PrintPartOfASCIITable.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\bin\Debug\16.PrintPartOfASCIITable.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\obj\Debug\16.PrintPartOfASCIITable.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\16.PrintPartOfASCIITable\obj\Debug\16.PrintPartOfASCIITable.pdb

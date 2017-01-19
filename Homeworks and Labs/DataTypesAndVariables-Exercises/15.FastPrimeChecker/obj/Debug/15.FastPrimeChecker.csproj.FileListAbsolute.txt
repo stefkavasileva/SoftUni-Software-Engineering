@@ -1,0 +1,6 @@
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\bin\Debug\15.FastPrimeChecker.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\bin\Debug\15.FastPrimeChecker.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\bin\Debug\15.FastPrimeChecker.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\obj\Debug\15.FastPrimeChecker.csprojResolveAssemblyReference.cache
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\obj\Debug\15.FastPrimeChecker.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.FastPrimeChecker\obj\Debug\15.FastPrimeChecker.pdb

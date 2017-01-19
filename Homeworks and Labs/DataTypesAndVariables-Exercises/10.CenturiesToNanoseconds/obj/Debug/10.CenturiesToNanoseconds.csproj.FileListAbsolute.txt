@@ -4,3 +4,6 @@ C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exerc
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\obj\Debug\10.CenturiesToNanoseconds.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\obj\Debug\10.CenturiesToNanoseconds.exe
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\obj\Debug\10.CenturiesToNanoseconds.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\bin\Debug\10.CenturiesToNanoseconds.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\obj\Debug\10.CenturiesToNanoseconds.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\10.CenturiesToNanoseconds\obj\Debug\10.CenturiesToNanoseconds.pdb

@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exerc
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\bin\Debug\09.ReversedChars.pdb
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.exe
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\09.ReversedChars\bin\Debug\09.ReversedChars.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\09.ReversedChars\obj\Debug\09.ReversedChars.pdb

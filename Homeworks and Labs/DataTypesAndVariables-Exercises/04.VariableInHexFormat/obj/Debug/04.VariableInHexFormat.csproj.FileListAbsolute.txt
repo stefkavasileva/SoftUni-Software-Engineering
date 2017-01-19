@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exerc
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\04.VariableInHexFormat\bin\Debug\04.VariableInHexFormat.pdb
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.exe
 C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\04.VariableInHexFormat\bin\Debug\04.VariableInHexFormat.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\04.VariableInHexFormat\obj\Debug\04.VariableInHexFormat.pdb

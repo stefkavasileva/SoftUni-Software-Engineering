@@ -1,0 +1,8 @@
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\bin\Debug\17.DifferentIntegersSize.exe.config
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\bin\Debug\17.DifferentIntegersSize.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\bin\Debug\17.DifferentIntegersSize.pdb
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\obj\Debug\17.DifferentIntegersSize.exe
+C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\obj\Debug\17.DifferentIntegersSize.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\bin\Debug\17.DifferentIntegersSize.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\obj\Debug\17.DifferentIntegersSize.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\17.DifferentIntegersSize\obj\Debug\17.DifferentIntegersSize.pdb
