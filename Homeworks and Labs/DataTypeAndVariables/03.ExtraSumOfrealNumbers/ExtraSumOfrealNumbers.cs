@@ -11,15 +11,15 @@ class ExtraSumOfrealNumbers
     {
         int inputNums = int.Parse(Console.ReadLine());
 
-        decimal sumOfInputNums = 0M;
+        decimal sum = 0M;
 
         for (int i = 0; i < inputNums; i++)
         {
             decimal currentRealNum = decimal.Parse(Console.ReadLine());
-            sumOfInputNums += currentRealNum;
+            sum += currentRealNum;
         }
 
-        Console.WriteLine(sumOfInputNums);
+        Console.WriteLine(sum);
     }
 }
 
