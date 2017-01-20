@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.DifferentIntegersSize", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.FastPrimeChecker", "15.FastPrimeChecker\15.FastPrimeChecker.csproj", "{2373782C-9300-4227-B596-57E31469A338}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.TheaThePhotographer", "19.TheaThePhotographer\19.TheaThePhotographer.csproj", "{53515838-7AAC-4837-A543-D61E6BD1025E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{2373782C-9300-4227-B596-57E31469A338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2373782C-9300-4227-B596-57E31469A338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2373782C-9300-4227-B596-57E31469A338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53515838-7AAC-4837-A543-D61E6BD1025E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53515838-7AAC-4837-A543-D61E6BD1025E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53515838-7AAC-4837-A543-D61E6BD1025E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53515838-7AAC-4837-A543-D61E6BD1025E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
