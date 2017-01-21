@@ -1,0 +1,6 @@
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\bin\Debug\05.BlurFilter.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\bin\Debug\05.BlurFilter.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\bin\Debug\05.BlurFilter.pdb
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\obj\Debug\05.BlurFilter.csprojResolveAssemblyReference.cache
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\obj\Debug\05.BlurFilter.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\(Old)Exam-April2016\05.BlurFilter\obj\Debug\05.BlurFilter.pdb
