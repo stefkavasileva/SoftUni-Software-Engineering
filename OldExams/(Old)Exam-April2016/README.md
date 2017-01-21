@@ -1,6 +1,6 @@
 #<p align="center"> Exam - April 2016 <p>
 
-## 01. **01. Nacepin**
+## 01.Nacepin
 
 ####**Problem Description**
 **“Nacepin”** is sold in three different stores – US, UK and China. In every store the product price is in local currency for different packages.
