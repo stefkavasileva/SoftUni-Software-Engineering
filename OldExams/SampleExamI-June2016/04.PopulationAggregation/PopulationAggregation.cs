@@ -11,12 +11,12 @@ class PopulationAggregation
     {
         string inputLine = Console.ReadLine();
         SortedDictionary<string, int> countryCount = new SortedDictionary<string, int>();
-        Dictionary<string, int> townPopulation = new Dictionary<string, int>();
+        Dictionary<string, long> townPopulation = new Dictionary<string, long>();
 
         while (!inputLine.Equals("stop"))
         {
             string[] populationArgs = inputLine.Split('\\').ToArray();
-            int populationsCount = int.Parse(populationArgs[2]);
+            long populationsCount = long.Parse(populationArgs[2]);
             populationArgs[0] = RemoveProhibitedSymbols(populationArgs[0]);
             populationArgs[1] = RemoveProhibitedSymbols(populationArgs[1]);
             string countryName = string.Empty;
@@ -58,7 +58,7 @@ class PopulationAggregation
         PrintTopTowns(topTowns);
     }
 
-    private static void PrintTopTowns(Dictionary<string, int> topTowns)
+    private static void PrintTopTowns(Dictionary<string, long> topTowns)
     {
         foreach (var town in topTowns )
         {
