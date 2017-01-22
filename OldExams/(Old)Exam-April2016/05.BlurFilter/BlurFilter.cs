@@ -9,15 +9,15 @@ class BlurFilter
 {
     static void Main(string[] args)
     {
-        //70/100
-        long blurAmount = long.Parse(Console.ReadLine());
-        long[] matrixInfo = Console.ReadLine().Split().Select(long.Parse).ToArray();
-        long rows = matrixInfo[0];
-        long cols = matrixInfo[1];
+        //90/100
+        int blurAmount = int.Parse(Console.ReadLine());
+        int[] matrixInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        int rows = matrixInfo[0];
+        int cols = matrixInfo[1];
 
         long[][] matrix = new long[rows][];
 
-        for (long row = 0; row < rows; row++)
+        for (int row = 0; row < rows; row++)
         {
             matrix[row] = Console.ReadLine().Split().Select(long.Parse).ToArray();
         }
@@ -27,48 +27,18 @@ class BlurFilter
         int targetRow = coordinatesOfTheBlur[0];
         int targetCol = coordinatesOfTheBlur[1];
 
-        matrix[targetRow][targetCol] += blurAmount;
+        int startRow = Math.Max(0, targetRow - 1);
+        int endRow = Math.Min(rows - 1, targetRow + 1);
 
+        int startCol = Math.Max(0, targetCol - 1);
+        int endCol = Math.Min(cols - 1, targetCol + 1);
 
-
-        if (targetRow - 1 >= 0 && targetCol - 1 >= 0)
+        for (int row = startRow; row <=endRow ; row++)
         {
-            matrix[targetRow - 1][targetCol - 1] += blurAmount;
-        }
-
-        if (targetCol - 1 >= 0 && targetCol + 1 <= cols - 1)
-        {
-            matrix[targetRow - 1][targetCol + 1] += blurAmount;
-        }
-
-        if (targetRow + 1 <= rows - 1 && targetCol + 1 <= cols - 1)
-        {
-            matrix[targetRow + 1][targetCol + 1] += blurAmount;
-        }
-
-        if (targetRow + 1 <= rows - 1 && targetCol - 1 >= 0)
-        {
-            matrix[targetRow + 1][targetCol - 1] += blurAmount;
-        }
-
-        if (targetRow + 1 <= rows - 1)
-        {
-            matrix[targetRow + 1][targetCol] += blurAmount;
-        }
-
-        if (targetCol - 1 >= 0)
-        {
-            matrix[targetRow][targetCol - 1] += blurAmount;
-        }
-
-        if (targetCol + 1 <= cols - 1)
-        {
-            matrix[targetRow][targetCol + 1] += blurAmount;
-        }
-
-        if (targetRow - 1 >= 0)
-        {
-            matrix[targetRow - 1][targetCol] += blurAmount;
+            for (int col = startCol; col <=endCol ; col++)
+            {
+                matrix[row][col] += blurAmount;
+            }
         }
 
         foreach (var row in matrix)
