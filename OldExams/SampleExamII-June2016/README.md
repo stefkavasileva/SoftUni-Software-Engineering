@@ -19,7 +19,9 @@ On the first line you will receive an integer N, the number of flights you need 
 - fuel price per hour
 - fuel consumption per hour
 - flight duration
+
 ####Output
+
 - For **each flight** you need to **calculate the profit** and **print** the result in the following format:
 If the **income** is **greater or equal** than the **expense**:
 You are ahead with {profit}$.
@@ -29,7 +31,9 @@ If the expenses are greater:
 **Overall profit -> {overallProfit}$.**
 **Average profit -> {averageProfit}$.**
 The output **must be rounded** to **three decimal places** after the decimal point.
+
 ####Constraints
+
 - The **adult and youth passengers count** will be integers in range [0…1,000,000,000].
 - The **adult and youth ticket price** will be floating-point numbers in range [1…1,000,000,000.00].
 - The **fuel price** will be **floating-point** number in range [1…1,000,000.00].
@@ -58,7 +62,9 @@ On the **first line** you are given the **total amount of water** that we have. 
 **“With indexes: {index}, {index}, {index}”**
 The order of the indexes must be the same, as the order in which you are traversing the array.
 “We need {amountOfWaterNeeded} more liters!”
+
 ####Constraints
+
 - The **total amount of water** will be **integer** in range [0…2,147,483,647].
 - The i**tems in the array** will be **floating-point numbers** in range [0…1.7*10308].
 - The **bottle capacity** will be **integer** in range [0…2,147,483,647].
@@ -84,9 +90,13 @@ The position will be in the following format: **{row / col index}**.
 - **swap {firstRow} {secondRow}**
 - **insert {row} {element}**
 - The input stops when you receive the command **“end”**.
+
 ####Output
+
 - The output should consist of the matrix after all commands have been executed.
+
 ####Constraints
+
 - The **rows** of the table will be in range **[1…30]**.
 - The **columns** of each row will be in range **[0…30]**.
 - The **elements of the table** will be **integers** in the range [-2,147,483,648…2,147,483,647].
@@ -108,7 +118,9 @@ The second report **should tell us which team members** have some coffee left, a
 **“CoffeeType[secondDelimiter]Quantity”**
 - On the next lines, until you receive **“end of week”** you will receive how much coffee everyone drinks in the following format:
 **“PersonName count”**
+
 ####Output
+
 - When you run out of a coffee type you must print:
 **“Out of {coffeeType}”**
 - After you receive the command **“end of week”** you must print the following reports:
@@ -116,6 +128,8 @@ The second report **should tell us which team members** have some coffee left, a
 **“{coffeeType} {quantity}”** – All coffee types that have more than 0 quantity, sorted in descending order by quantity
 **“For:”**
 **“{personName} {coffeeType}”**– For each of the coffeeTypes from the previous report, print the team members drinking each type of coffee. This report must be sorted in lexicographical order for each coffee type. If there is more than 1 team member drinking the same coffeeType, order them alphabetically in descending order.
+
 ####Constraints
+
 - The **two delimiters** will always be **different** strings
 - The **Coffee Quantity** will be valid integer in the range **[0...231]**
