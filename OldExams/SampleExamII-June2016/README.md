@@ -8,7 +8,9 @@ Your **income** is calculated based on **how many tickets you sell**. There are 
 You also have **expenses**. They are calculated based on the **fuel you are burning during a flight**. You will receive the fuel consumption per hour, the **fuel price for 1-hour** flight and the **flight duration**. To calculate the expenses, use the following formula:
 **flight duration * fuel consumption * fuel price**
 For **each flight** you need to **calculate your profit**, **subtracting** the **expense** from the **income**, and you need to print the result. After **all flights**, you need to **calculate** your **overall** and **average profit**.
+
 ####Input
+
 On the first line you will receive an integer N, the number of flights you need to manage. For **each flight** you will receive exactly **7 lines** of input:
 - adult passengers count
 - adult ticket price 
@@ -40,7 +42,9 @@ In the SoftUni office we drink lots of water (and other drinks). That’s why in
 Everyone is using different bottles, but with the **same capacity**. You are given an **array of floating-point numbers**, in **which each index represents someone’s bottle**.
 We have **some water in stock**, but sometimes it is **not enough to fill our bottles**. That’s why we need you. Your job is to create a program that fills our bottles and **tells us if there is enough water or not**. If there is enough water to fill all bottles, you need to tell us how much water we have left. If there are some bottles that are not completely filled, you need to tell us **how many are those bottles**, and how much more **water we need** in order to fill them. We also need to know **which members of the team** need to wait for more **water**, and instead of using names, we will use the indexes of the bottles.
 On the **first line** you are given the **total amount of water** that we have. On the second line you are given **all bottles** that you need to fill. There is a tricky part. If the total water is an **even number**, you will start filling the bottles from the **beginning of the array**, until you run out of water, or fill all bottles. If the number is **odd**, you will traverse the array **from the end to the beginning**, filling the bottles that way. In case you run out of water, you need to **print the indexes of the empty bottles** in the **same order** in which you are traversing the array. On the **last line you will receive the maximum capacity** that each bottle has.
+
 ####Input
+
 - On the **first line** you will receive integer, which represents the **total amount of water** that we have.
 - On the **second line** you will receive an **array, representing the bottles** that you need to fill.
 - On the **last line** you will receive the **capacity for each bottle** of the array.
@@ -70,7 +74,9 @@ The position will be in the following format: **{row / col index}**.
 - The **swap** command – the **2 rows** that you need to swap.
 - The **insert** command – **row** and **number** that you need to **insert at the beginning** of the given row.
 - The **input stops** once you receive the **“end”** command, and then you need to print the table after all operations.
+
 ####Input
+
 - On the first line you will receive integer **r – rows**.
 - On the next r lines, you will receive the elements for **each row**.
 - On the next lines, you will receive commands in the **following format**:
@@ -93,7 +99,9 @@ After you receive **all of the information** you need, you must check **how much
 **“coffeeType count”**
 This report must be sorted by the count for each coffee type in descending order.
 The second report **should tell us which team members** have some coffee left, and what is the type of the coffee. The report must be sorted by **coffee type lexicographically**. If there are team members that drink the **same type of coffee**, their names must be **sorted lexicographically** in **descending order**.
+
 ####Input
+
 - On the first line you are given the two delimiters separated by (space).
 - On the next lines, until you receive **“end of info”** you are given one of the following lines:
 **“PersonName[firstDelimiter]CoffeeType”**
