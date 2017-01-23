@@ -1,0 +1,6 @@
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\bin\Debug\03.MatrixOperator.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\bin\Debug\03.MatrixOperator.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\bin\Debug\03.MatrixOperator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\obj\Debug\03.MatrixOperator.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\obj\Debug\03.MatrixOperator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\03.MatrixOperator\obj\Debug\03.MatrixOperator.csprojResolveAssemblyReference.cache

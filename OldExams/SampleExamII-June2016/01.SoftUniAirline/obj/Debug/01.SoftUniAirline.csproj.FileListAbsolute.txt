@@ -1,0 +1,6 @@
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\bin\Debug\01.SoftUniAirline.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\bin\Debug\01.SoftUniAirline.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\bin\Debug\01.SoftUniAirline.pdb
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\obj\Debug\01.SoftUniAirline.csprojResolveAssemblyReference.cache
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\obj\Debug\01.SoftUniAirline.exe
+C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamII-June2016\01.SoftUniAirline\obj\Debug\01.SoftUniAirline.pdb
