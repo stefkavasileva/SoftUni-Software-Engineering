@@ -19,9 +19,9 @@ On the first line you will receive an integer N, the number of flights you need 
 - flight duration
 ####Output
 - For **each flight** you need to **calculate the profit** and **print** the result in the following format:
-o	If the **income** is **greater or equal** than the **expense**:
+If the **income** is **greater or equal** than the **expense**:
 You are ahead with {profit}$.
-o	If the expenses are greater:
+If the expenses are greater:
 **We’ve got to sell more tickets! We’ve lost {profit}$.**
 - After **all of the flights** you need to print the **overall profit** in the following format:
 **Overall profit -> {overallProfit}$.**
@@ -46,14 +46,14 @@ On the **first line** you are given the **total amount of water** that we have. 
 - On the **last line** you will receive the **capacity for each bottle** of the array.
 ####Output
 - If there is enough water to fill all bottles print the following lines:
-o	**“Enough water!”**
-o	**“Water left: {amountOfWaterLeft}l.”**
+**“Enough water!”**
+**“Water left: {amountOfWaterLeft}l.”**
 - If there isn’t enough water print the following lines:
-o	**“We need more water!”**
-o	**“Bottles left: {amountOfBottles}”**
-o	**“With indexes: {index}, {index}, {index}”**
-	The order of the indexes must be the same, as the order in which you are traversing the array.
-o	“We need {amountOfWaterNeeded} more liters!”
+**“We need more water!”**
+**“Bottles left: {amountOfBottles}”**
+**“With indexes: {index}, {index}, {index}”**
+The order of the indexes must be the same, as the order in which you are traversing the array.
+“We need {amountOfWaterNeeded} more liters!”
 ####Constraints
 - The **total amount of water** will be **integer** in range [0…2,147,483,647].
 - The i**tems in the array** will be **floating-point numbers** in range [0…1.7*10308].
@@ -65,8 +65,8 @@ You are matrix operator chief, but you are tired of doing your job manually. You
 You are given a **table of integers**. For that table you will need to execute some **commands**.
 The **commands** are the following: **remove, swap** and **insert**. All commands come with 2 additional parameters. 
 - The **remove** command – **type** and **position**.
-o	The **type** can be one of the following – **positive / negative / odd / even**. That means that you will need to **remove said elements** from the **given row / col**.
-o	The position will be in the following format: **{row / col index}**.
+The **type** can be one of the following – **positive / negative / odd / even**. That means that you will need to **remove said elements** from the **given row / col**.
+The position will be in the following format: **{row / col index}**.
 - The **swap** command – the **2 rows** that you need to swap.
 - The **insert** command – **row** and **number** that you need to **insert at the beginning** of the given row.
 - The **input stops** once you receive the **“end”** command, and then you need to print the table after all operations.
@@ -96,18 +96,18 @@ The second report **should tell us which team members** have some coffee left, a
 ####Input
 - On the first line you are given the two delimiters separated by (space).
 - On the next lines, until you receive **“end of info”** you are given one of the following lines:
-o	**“PersonName[firstDelimiter]CoffeeType”**
-o	**“CoffeeType[secondDelimiter]Quantity”**
+**“PersonName[firstDelimiter]CoffeeType”**
+**“CoffeeType[secondDelimiter]Quantity”**
 - On the next lines, until you receive **“end of week”** you will receive how much coffee everyone drinks in the following format:
-o	**“PersonName count”**
+**“PersonName count”**
 ####Output
 - When you run out of a coffee type you must print:
-o	**“Out of {coffeeType}”**
+**“Out of {coffeeType}”**
 - After you receive the command **“end of week”** you must print the following reports:
-o	**“Coffee Left:”**
-o	**“{coffeeType} {quantity}”** – All coffee types that have more than 0 quantity, sorted in descending order by quantity
-o	**“For:”**
-o	**“{personName} {coffeeType}”**– For each of the coffeeTypes from the previous report, print the team members drinking each type of coffee. This report must be sorted in lexicographical order for each coffee type. If there is more than 1 team member drinking the same coffeeType, order them alphabetically in descending order.
+**“Coffee Left:”**
+**“{coffeeType} {quantity}”** – All coffee types that have more than 0 quantity, sorted in descending order by quantity
+**“For:”**
+**“{personName} {coffeeType}”**– For each of the coffeeTypes from the previous report, print the team members drinking each type of coffee. This report must be sorted in lexicographical order for each coffee type. If there is more than 1 team member drinking the same coffeeType, order them alphabetically in descending order.
 ####Constraints
 - The **two delimiters** will always be **different** strings
 - The **Coffee Quantity** will be valid integer in the range **[0...231]**
