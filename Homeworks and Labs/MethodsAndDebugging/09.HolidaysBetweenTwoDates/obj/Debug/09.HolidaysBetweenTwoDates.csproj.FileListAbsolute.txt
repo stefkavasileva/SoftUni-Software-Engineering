@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\09.Ho
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\09.HolidaysBetweenTwoDates\bin\Debug\09.HolidaysBetweenTwoDates.pdb
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\09.HolidaysBetweenTwoDates\obj\Debug\09.HolidaysBetweenTwoDates.exe
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\09.HolidaysBetweenTwoDates\obj\Debug\09.HolidaysBetweenTwoDates.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\09.HolidaysBetweenTwoDates\bin\Debug\09.HolidaysBetweenTwoDates.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\09.HolidaysBetweenTwoDates\obj\Debug\09.HolidaysBetweenTwoDates.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\09.HolidaysBetweenTwoDates\obj\Debug\09.HolidaysBetweenTwoDates.pdb

@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.Ma
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\bin\Debug\06.MathPower.pdb
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\obj\Debug\06.MathPower.exe
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\06.MathPower\obj\Debug\06.MathPower.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\06.MathPower\bin\Debug\06.MathPower.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\06.MathPower\obj\Debug\06.MathPower.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\06.MathPower\obj\Debug\06.MathPower.pdb

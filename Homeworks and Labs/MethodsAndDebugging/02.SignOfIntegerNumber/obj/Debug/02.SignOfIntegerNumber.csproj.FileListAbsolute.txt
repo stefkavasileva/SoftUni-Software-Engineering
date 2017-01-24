@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.Si
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\bin\Debug\02.SignOfIntegerNumber.pdb
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.exe
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\02.SignOfIntegerNumber\bin\Debug\02.SignOfIntegerNumber.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\02.SignOfIntegerNumber\obj\Debug\02.SignOfIntegerNumber.pdb

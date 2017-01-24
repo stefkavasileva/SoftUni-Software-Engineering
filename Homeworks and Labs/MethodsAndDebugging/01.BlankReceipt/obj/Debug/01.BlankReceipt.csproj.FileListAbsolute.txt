@@ -4,3 +4,6 @@ C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\01.Bl
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\01.BlankReceipt\obj\Debug\01.BlankReceipt.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\01.BlankReceipt\obj\Debug\01.BlankReceipt.exe
 C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\01.BlankReceipt\obj\Debug\01.BlankReceipt.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\01.BlankReceipt\bin\Debug\01.BlankReceipt.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\01.BlankReceipt\obj\Debug\01.BlankReceipt.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\01.BlankReceipt\obj\Debug\01.BlankReceipt.pdb

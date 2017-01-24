@@ -1,69 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 class PriceChangeAlert
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        int numOfPrices = int.Parse(Console.ReadLine());
-        double significance = double.Parse(Console.ReadLine());
-        double lastPrice = double.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
+        decimal threshold = decimal.Parse(Console.ReadLine());
+        decimal lastPrice = decimal.Parse(Console.ReadLine());
 
-        for (int i = 0; i < numOfPrices - 1; i++)
+        for (int i = 0; i < n - 1; i++)
         {
-            double price = double.Parse(Console.ReadLine());
-            double diff = CalcPercentage(lastPrice, price);
-            bool isDifference = IsDiffrence(diff, significance);
-
-            string message = GetResult(price, lastPrice, diff, isDifference);
+            decimal currentPrice = decimal.Parse(Console.ReadLine());
+            decimal diff = ProcentDifference(lastPrice, currentPrice);
+            bool isSignificantDifference = isDif(diff, threshold);
+            string message = GetMessage(currentPrice, lastPrice, diff, isSignificantDifference);
             Console.WriteLine(message);
-
-            lastPrice = price;
+            lastPrice = currentPrice;
         }
     }
 
-    private static string GetResult(double price, double lastPrice, double diff, bool isDifference)
+    private static string GetMessage(decimal currentPrice, decimal lastPrice, decimal procentDiff, bool etherTrueOrFalse)
     {
-        string message = string.Empty;
-        if (diff == 0)
+        string output = "";
+        if (procentDiff == 0)
         {
-            message = string.Format("NO CHANGE: {0}", price);
+            output = string.Format("NO CHANGE: {0}", currentPrice);
         }
-        else if (!isDifference)
+        else if (!etherTrueOrFalse)
         {
-            message = string.Format("MINOR CHANGE: {0} to {1} ({2:F2}%)", lastPrice, price, diff);
+            output = string.Format("MINOR CHANGE: {0} to {1} ({2:F2}%)", lastPrice, currentPrice, procentDiff * 100);
         }
-        else if (isDifference && (diff > 0))
+        else if (etherTrueOrFalse && (procentDiff > 0))
         {
-            message = string.Format("PRICE UP: {0} to {1} ({2:F2}%)", lastPrice, price, diff);
+            output = string.Format("PRICE UP: {0} to {1} ({2:F2}%)", lastPrice, currentPrice, procentDiff * 100);
         }
-        else if (isDifference && (diff < 0))
-        {
-            message = string.Format("PRICE DOWN: {0} to {1} ({2:F2}%)", lastPrice, price, diff);
-        }
+        else if (etherTrueOrFalse && (procentDiff < 0))
+            output = string.Format("PRICE DOWN: {0} to {1} ({2:F2}%)", lastPrice, currentPrice, procentDiff * 100);
 
-        return message;
+        return output;
     }
 
-    private static bool IsDiffrence(double diff, double significance)
+    private static bool isDif(decimal Diff, decimal threshold)
     {
-        if (Math.Abs(diff) >= significance)
+        if (Math.Abs(Diff) >= threshold)
         {
             return true;
         }
         return false;
     }
 
-    private static double CalcPercentage(double lastPrice, double price)
+    private static decimal ProcentDifference(decimal lastPrice, decimal currentPrice)
     {
-        double percentage = ((price - lastPrice) / lastPrice) * 100;
-        return percentage;
+        decimal diff = (currentPrice - lastPrice) / lastPrice;
+        return diff;
     }
-
-
 }
-
