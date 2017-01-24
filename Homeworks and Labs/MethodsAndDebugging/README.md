@@ -16,10 +16,10 @@ Create a method for printing triangles as shown below: n=3
 
 ## 04.Draw a Filled Square
 Draw at the console a filled square of size n like in the example: n=4
- --------
+ ________
  -\/\/\/-
  -\/\/\/-
- --------
+ ________
 
 ## 05.Calculate Triangle Area
 Create a method that calculates and returns the area of a triangle by given base and height
