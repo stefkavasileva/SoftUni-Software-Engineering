@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\07.PrimesInGiv
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\bin\Debug\07.PrimesInGivenRange.pdb
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\obj\Debug\07.PrimesInGivenRange.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\obj\Debug\07.PrimesInGivenRange.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\bin\Debug\07.PrimesInGivenRange.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\obj\Debug\07.PrimesInGivenRange.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\07.PrimesInGivenRange\obj\Debug\07.PrimesInGivenRange.pdb

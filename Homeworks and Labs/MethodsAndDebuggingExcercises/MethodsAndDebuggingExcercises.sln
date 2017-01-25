@@ -31,13 +31,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.Factorial", "13.Factoria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.FactorialTrailingZeroes", "14.FactorialTrailingZeroes\14.FactorialTrailingZeroes.csproj", "{FD446E81-FF12-45C7-B317-04E0588D1071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.InstructionSet", "15.InstructionSet\15.InstructionSet.csproj", "{D023D099-B1D3-4A39-841C-8C8B4B8BA35C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.Substring", "15.InstructionSet\15.Substring.csproj", "{D023D099-B1D3-4A39-841C-8C8B4B8BA35C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.BePositive", "16.BePositive\16.BePositive.csproj", "{D468516A-6721-4722-8A6E-53540A8738ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.BePositive", "16.BePositive\17.BePositive.csproj", "{D468516A-6721-4722-8A6E-53540A8738ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.SequenceOfCommands", "17.SequenceOfCommands\17.SequenceOfCommands.csproj", "{BDE222B3-5BF0-46FB-8041-26C22BFF092F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.Substring", "18.Substring\18.Substring.csproj", "{4961CEA7-5FC9-4759-B1DF-C64375F6C1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.InstructionSet", "16.InstructionSet\16.InstructionSet.csproj", "{3012DBEB-1D11-4C58-86A0-DF2755329D6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{4961CEA7-5FC9-4759-B1DF-C64375F6C1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4961CEA7-5FC9-4759-B1DF-C64375F6C1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4961CEA7-5FC9-4759-B1DF-C64375F6C1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3012DBEB-1D11-4C58-86A0-DF2755329D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3012DBEB-1D11-4C58-86A0-DF2755329D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3012DBEB-1D11-4C58-86A0-DF2755329D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3012DBEB-1D11-4C58-86A0-DF2755329D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

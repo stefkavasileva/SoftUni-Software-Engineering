@@ -3,3 +3,9 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishName
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.pdb
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\bin\Debug\03.EnglishNameOfLastDigit.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\03.EnglishNameOfLastDigit\obj\Debug\03.EnglishNameOfLastDigit.csprojResolveAssemblyReference.cache

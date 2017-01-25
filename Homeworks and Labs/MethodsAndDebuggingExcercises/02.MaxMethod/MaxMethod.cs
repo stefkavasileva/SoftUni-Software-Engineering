@@ -9,21 +9,20 @@ class MaxMethod
 {
     static void Main(string[] args)
     {
-        int firstNum = int.Parse(Console.ReadLine());
-        int secondNum = int.Parse(Console.ReadLine());
-        int thidrNum = int.Parse(Console.ReadLine());
+        int firstNumber = int.Parse(Console.ReadLine());
+        int secondNumber = int.Parse(Console.ReadLine());
+        int thirdNumber = int.Parse(Console.ReadLine());
 
-        int maxNum = GetMax(firstNum, secondNum);
-        maxNum = GetMax(maxNum, thidrNum);
+        int biggerNum = GetMax(firstNumber, secondNumber);
+        int biggestNum = GetMax(thirdNumber, biggerNum);
 
-        Console.WriteLine(maxNum);
+        Console.WriteLine(biggestNum);
 
     }
 
-    private static int GetMax(int firstNum, int secondNum)
+    private static int GetMax(int firstNumber, int secondNumber)
     {
-        int maxNum = Math.Max(firstNum, secondNum);
-        return maxNum;
+        return Math.Max(firstNumber, secondNumber);
     }
 }
 

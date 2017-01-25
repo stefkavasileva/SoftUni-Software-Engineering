@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\01.HelloName\b
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\bin\Debug\01.HelloName.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\bin\Debug\01.HelloName.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\bin\Debug\01.HelloName.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\01.HelloName\obj\Debug\01.HelloName.csprojResolveAssemblyReference.cache

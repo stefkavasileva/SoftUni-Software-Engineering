@@ -9,13 +9,13 @@ class HelloName
 {
     static void Main(string[] args)
     {
-        string name = Console.ReadLine();
-        PrintGreeting(name);
+        string personName = Console.ReadLine();
+        PrintGreeting(personName);
     }
 
-    private static void PrintGreeting(string name)
+    private static void PrintGreeting(string personName)
     {
-        Console.WriteLine($"Hello, {name}!");
+        Console.WriteLine($"Hello, {personName}!");
     }
 }
 

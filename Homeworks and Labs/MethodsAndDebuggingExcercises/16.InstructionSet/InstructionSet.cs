@@ -10,11 +10,11 @@ class InstructionSet
     static void Main(string[] args)
     {
         string opCode = Console.ReadLine();
+        long result = 0;
 
         while (opCode != "END")
         {
             string[] codeArgs = opCode.Split(' ');
-            long result = 0;
 
             switch (codeArgs[0])
             {
@@ -49,7 +49,6 @@ class InstructionSet
             opCode = Console.ReadLine();
 
         }
-
     }
 }
 

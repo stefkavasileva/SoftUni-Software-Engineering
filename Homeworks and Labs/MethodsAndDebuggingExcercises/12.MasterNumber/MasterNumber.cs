@@ -9,89 +9,69 @@ class MasterNumber
 {
     static void Main(string[] args)
     {
-        int endNumber = int.Parse(Console.ReadLine());
+        int endNum = int.Parse(Console.ReadLine());
 
-        for (int currentNum = 1; currentNum <= endNumber; currentNum++)
+        for (int i = 1; i <= endNum; i++)
         {
-            bool isMasterNum = IsMaterNum(currentNum);
+            bool isMasterNum = IsMasterNumber(i);
 
             if (isMasterNum)
             {
-                Console.WriteLine(currentNum);
+                Console.WriteLine(i);
             }
         }
     }
 
-    private static bool IsMaterNum(int currentNum)
+    private static bool IsMasterNumber(int i)
     {
-        bool isSimetric = IsSimetric(currentNum);
-        bool isSumDivisibleBySeven = IsSumDivisibleBySeven(currentNum);
-        bool hasEvenDigit = HasEvenDigit(currentNum);
+        bool isSymetric = IsSymetricNumber(i.ToString());
+        bool isSumDevisibleBySeven = CheckSum(i);
+        bool hasEvenNum = CheckForEvenNum(i);
 
-        if (isSimetric && isSumDivisibleBySeven && hasEvenDigit)
-        {
-            return true;
-        }
-
-        return false;
+        return isSymetric && isSumDevisibleBySeven && hasEvenNum;
     }
 
-    private static bool HasEvenDigit(int currentNum)
+    private static bool CheckForEvenNum(int i)
     {
-        while (currentNum!=0)
+        while (i != 0)
         {
-            int lastDigit = currentNum % 10;
-            if (lastDigit%2==0)
+            int lastDigit = i % 10;
+            i /= 10;
+            if (lastDigit % 2 == 0)
             {
                 return true;
             }
-
-            currentNum /= 10;
         }
 
         return false;
     }
 
-    private static bool IsSumDivisibleBySeven(int currentNum)
+    private static bool CheckSum(int i)
     {
-        long sumOfDigits = 0;
-        while (currentNum != 0)
+        int sum = 0;
+        while (i != 0)
         {
-            int lastDigit = currentNum % 10;
-            sumOfDigits += lastDigit;
-            currentNum /= 10;
+            int lastDigit = i % 10;
+            i /= 10;
+            sum += lastDigit;
         }
 
-        if (sumOfDigits % 7 == 0)
-        {
-            return true;
-        }
-
-        return false;
+        return sum % 7 == 0;
     }
 
-    private static bool IsSimetric(int currentNum)
+    private static bool IsSymetricNumber(string numAsStr)
     {
-        bool isSimetetric = true;
-
-        if (currentNum < 9)
+        bool isSymetric = true;
+        for (int i = 0; i < numAsStr.Length / 2; i++)
         {
-            return isSimetetric;
-        }
-        else
-        {
-            char[] number = currentNum.ToString().ToCharArray();
-            for (int num = 0; num < number.Length / 2; num++)
+            if (numAsStr[i] != numAsStr[numAsStr.Length - 1 - i])
             {
-                if (number[num] != number[number.Length - num - 1])
-                {
-                    isSimetetric = false;
-                    break;
-                }
+                isSymetric = false;
+                break;
             }
         }
 
-        return isSimetetric;
+        return isSymetric;
     }
 }
 

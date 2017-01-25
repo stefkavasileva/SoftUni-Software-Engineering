@@ -9,20 +9,19 @@ class EnglishNameOfLastDigit
 {
     static void Main(string[] args)
     {
-        string number = Console.ReadLine();
+        string inputNumberAsStr = Console.ReadLine();
 
-        string lastDigtAsText = GetLastDigitText(number);
+        int lastDigit =int.Parse(inputNumberAsStr.Substring(inputNumberAsStr.Length - 1));
 
-        Console.WriteLine(lastDigtAsText);
+        string digitName = GetDigitName(lastDigit);
+
+        Console.WriteLine(digitName);
     }
 
-    private static string GetLastDigitText(string number)
+    private static string GetDigitName(int lastDigit)
     {
-        string lastDigitAsStr = number.Substring(number.Length - 1);
-        int lastDigit = int.Parse(lastDigitAsStr);
-        string[] numsAsText = new string[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-        string lastDigitText = numsAsText[lastDigit];
-        return lastDigitText;
+        string [] numberText= new string[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+        return numberText[lastDigit];
     }
 }
 

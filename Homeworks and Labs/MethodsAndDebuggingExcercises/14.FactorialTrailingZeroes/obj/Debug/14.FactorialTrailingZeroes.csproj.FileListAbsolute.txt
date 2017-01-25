@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\14.FactorialTr
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\bin\Debug\14.FactorialTrailingZeroes.pdb
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\obj\Debug\14.FactorialTrailingZeroes.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\obj\Debug\14.FactorialTrailingZeroes.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\bin\Debug\14.FactorialTrailingZeroes.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\obj\Debug\14.FactorialTrailingZeroes.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\14.FactorialTrailingZeroes\obj\Debug\14.FactorialTrailingZeroes.pdb

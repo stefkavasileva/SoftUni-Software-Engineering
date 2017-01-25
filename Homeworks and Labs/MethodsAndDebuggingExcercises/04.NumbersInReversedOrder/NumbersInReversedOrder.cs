@@ -9,16 +9,16 @@ class NumbersInReversedOrder
 {
     static void Main(string[] args)
     {
-        char[] decimalNumber = Console.ReadLine().ToCharArray();
+        char[] decimalNum = Console.ReadLine().ToCharArray();
 
-        ReverseNum(decimalNumber);
-
-        Console.WriteLine(string.Join("",decimalNumber));
+        string reversedNum = ReverseNumber(decimalNum);
+        Console.WriteLine(reversedNum);
     }
 
-    private static void ReverseNum(char[] decimalNumber)
+    private static string ReverseNumber(char[] decimalNum)
     {
-        Array.Reverse(decimalNumber);
+        Array.Reverse(decimalNum);
+        return string.Join("", decimalNum);
     }
 }
 

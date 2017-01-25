@@ -1,5 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\18.Substring\bin\Debug\18.Substring.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\18.Substring\bin\Debug\18.Substring.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\18.Substring\bin\Debug\18.Substring.pdb
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\18.Substring\obj\Debug\18.Substring.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\18.Substring\obj\Debug\18.Substring.pdb

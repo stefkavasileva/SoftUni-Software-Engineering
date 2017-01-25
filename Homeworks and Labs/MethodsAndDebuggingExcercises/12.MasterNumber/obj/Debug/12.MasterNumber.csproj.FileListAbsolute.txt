@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumbe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\bin\Debug\12.MasterNumber.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\12.MasterNumber\obj\Debug\12.MasterNumber.csprojResolveAssemblyReference.cache

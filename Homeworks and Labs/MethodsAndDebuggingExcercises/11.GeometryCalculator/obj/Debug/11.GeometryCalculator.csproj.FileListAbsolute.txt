@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\11.GeometryCal
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\11.GeometryCalculator\bin\Debug\11.GeometryCalculator.pdb
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\11.GeometryCalculator\obj\Debug\11.GeometryCalculator.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\11.GeometryCalculator\obj\Debug\11.GeometryCalculator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\11.GeometryCalculator\bin\Debug\11.GeometryCalculator.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\11.GeometryCalculator\obj\Debug\11.GeometryCalculator.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\11.GeometryCalculator\obj\Debug\11.GeometryCalculator.pdb

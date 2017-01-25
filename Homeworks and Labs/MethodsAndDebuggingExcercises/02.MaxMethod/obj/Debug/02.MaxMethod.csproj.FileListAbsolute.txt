@@ -3,3 +3,8 @@ C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\02.MaxMethod\b
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\02.MaxMethod\bin\Debug\02.MaxMethod.pdb
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\02.MaxMethod\obj\Debug\02.MaxMethod.exe
 C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\02.MaxMethod\obj\Debug\02.MaxMethod.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\02.MaxMethod\bin\Debug\02.MaxMethod.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\02.MaxMethod\obj\Debug\02.MaxMethod.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\02.MaxMethod\obj\Debug\02.MaxMethod.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\02.MaxMethod\bin\Debug\02.MaxMethod.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\02.MaxMethod\bin\Debug\02.MaxMethod.pdb
