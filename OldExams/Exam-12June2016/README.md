@@ -1,4 +1,4 @@
-#<p align="center"> Exam - 12 June 2016 <p>
+#<p align="center"> Programming Fundamentals Exam - 12 June 2016 <p>
 
 ## 01.Numbers
 ####**Problem Description**
