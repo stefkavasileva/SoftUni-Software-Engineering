@@ -17,6 +17,9 @@ The course covers source control systems, **Git** and **GitHub** for team collab
 6. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/MethodsAndDebuggingExcercises" > Methods and Debugging- Exercises</a>
 
 ## Old exams.
+
+- <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/SampleExamII-October2016"> Programming Fundamentals Sample Exam II - October 2016 <a/>
+- <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/ExamI-October2016">Programming Fundamentals Sample Exam I - October 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/RetakeExam-11September2016">Programming Fundamentals Retake Exam - 11 September 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/Exam-12June2016"> Programming Fundamentals Exam - 12 June 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/SampleExamII-June2016"> Programming Fundamentals Sample Exam II - June 2016</a>
