@@ -18,6 +18,7 @@ The course covers source control systems, **Git** and **GitHub** for team collab
 
 ## Old exams.
 
+- <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/Exam-23October2016"> Programming Fundamentals Exam - 23 October 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/SampleExamII-October2016"> Programming Fundamentals Sample Exam II - October 2016 <a/>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/ExamI-October2016">Programming Fundamentals Sample Exam I - October 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/RetakeExam-11September2016">Programming Fundamentals Retake Exam - 11 September 2016 </a>
