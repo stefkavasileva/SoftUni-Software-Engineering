@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\bin\Debug\13.SplitByWordCasing.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\bin\Debug\13.SplitByWordCasing.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\bin\Debug\13.SplitByWordCasing.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\obj\Debug\13.SplitByWordCasing.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\obj\Debug\13.SplitByWordCasing.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\13.SplitByWordCasing\obj\Debug\13.SplitByWordCasing.pdb

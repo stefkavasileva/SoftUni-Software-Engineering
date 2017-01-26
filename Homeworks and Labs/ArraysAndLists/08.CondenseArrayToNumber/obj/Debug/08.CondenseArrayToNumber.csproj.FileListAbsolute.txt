@@ -1,1 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\08.CondenseArrayToNumber\bin\Debug\08.CondenseArrayToNumber.exe.config

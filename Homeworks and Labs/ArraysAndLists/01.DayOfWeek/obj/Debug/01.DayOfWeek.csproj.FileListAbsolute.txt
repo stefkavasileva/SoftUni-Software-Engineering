@@ -1,1 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\01.DayOfWeek\bin\Debug\01.DayOfWeek.exe.config

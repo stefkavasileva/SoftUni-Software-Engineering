@@ -1,1 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists\04.TrippleSum\bin\Debug\04.TrippleSum.exe.config
