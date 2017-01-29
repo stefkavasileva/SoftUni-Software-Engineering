@@ -9,6 +9,7 @@ class Portal
 {
     static void Main(string[] args)
     {
+        //50/100
         int size = int.Parse(Console.ReadLine());
         char[][] matrix = new char[size][];
         FillTheMatrix(matrix, size);
