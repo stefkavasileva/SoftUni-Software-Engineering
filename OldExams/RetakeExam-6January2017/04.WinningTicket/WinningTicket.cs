@@ -27,8 +27,8 @@ class WinningTicket
                 continue;
             }
 
-            string leftPart = tickets[i].Substring(0, tickets[i].Length / 2);
-            string rightPart = tickets[i].Substring(tickets[i].Length / 2 - 1);
+            string leftPart = tickets[i].Substring(0, 10);
+            string rightPart = tickets[i].Substring(11);
 
             Regex reg = new Regex(@"[@|$|#|^]{6,10}");
 

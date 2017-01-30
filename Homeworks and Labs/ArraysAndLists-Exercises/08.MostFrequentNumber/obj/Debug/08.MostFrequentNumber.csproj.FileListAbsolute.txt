@@ -1,5 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\08.MostFrequentNumber\bin\Debug\08.MostFrequentNumber.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\08.MostFrequentNumber\bin\Debug\08.MostFrequentNumber.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\08.MostFrequentNumber\bin\Debug\08.MostFrequentNumber.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\08.MostFrequentNumber\obj\Debug\08.MostFrequentNumber.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\08.MostFrequentNumber\obj\Debug\08.MostFrequentNumber.pdb

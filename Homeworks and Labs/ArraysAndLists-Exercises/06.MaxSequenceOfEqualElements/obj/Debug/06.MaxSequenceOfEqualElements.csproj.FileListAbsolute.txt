@@ -1,5 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\06.MaxSequenceOfEqualElements\bin\Debug\06.MaxSequenceOfEqualElements.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\06.MaxSequenceOfEqualElements\bin\Debug\06.MaxSequenceOfEqualElements.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\06.MaxSequenceOfEqualElements\bin\Debug\06.MaxSequenceOfEqualElements.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\06.MaxSequenceOfEqualElements\obj\Debug\06.MaxSequenceOfEqualElements.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\06.MaxSequenceOfEqualElements\obj\Debug\06.MaxSequenceOfEqualElements.pdb

@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\bin\Debug\16.BombNumbers.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\bin\Debug\16.BombNumbers.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\bin\Debug\16.BombNumbers.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\obj\Debug\16.BombNumbers.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\obj\Debug\16.BombNumbers.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\16.BombNumbers\obj\Debug\16.BombNumbers.pdb

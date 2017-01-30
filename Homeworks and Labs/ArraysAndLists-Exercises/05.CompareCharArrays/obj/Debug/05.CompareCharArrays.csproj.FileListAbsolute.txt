@@ -1,1 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\05.CompareCharArrays\bin\Debug\05.CompareCharArrays.exe.config

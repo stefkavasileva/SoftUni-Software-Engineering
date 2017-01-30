@@ -1,5 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\07.MaxSequenceOfIncreasingElements\bin\Debug\07.MaxSequenceOfIncreasingElements.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\07.MaxSequenceOfIncreasingElements\bin\Debug\07.MaxSequenceOfIncreasingElements.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\07.MaxSequenceOfIncreasingElements\bin\Debug\07.MaxSequenceOfIncreasingElements.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\07.MaxSequenceOfIncreasingElements\obj\Debug\07.MaxSequenceOfIncreasingElements.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\07.MaxSequenceOfIncreasingElements\obj\Debug\07.MaxSequenceOfIncreasingElements.pdb

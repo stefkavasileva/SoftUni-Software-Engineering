@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\bin\Debug\13.LongestIncreasingSubsequence.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\bin\Debug\13.LongestIncreasingSubsequence.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\bin\Debug\13.LongestIncreasingSubsequence.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\obj\Debug\13.LongestIncreasingSubsequence.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\obj\Debug\13.LongestIncreasingSubsequence.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\13.LongestIncreasingSubsequence\obj\Debug\13.LongestIncreasingSubsequence.pdb

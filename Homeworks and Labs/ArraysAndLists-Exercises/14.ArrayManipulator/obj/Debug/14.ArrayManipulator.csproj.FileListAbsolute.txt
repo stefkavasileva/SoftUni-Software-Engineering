@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\bin\Debug\14.ArrayManipulator.exe.config
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\bin\Debug\14.ArrayManipulator.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\bin\Debug\14.ArrayManipulator.pdb
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\obj\Debug\14.ArrayManipulator.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\obj\Debug\14.ArrayManipulator.exe
-C:\ProgrammingFundamentalsExercises\ArraysAndLists-Exercises\14.ArrayManipulator\obj\Debug\14.ArrayManipulator.pdb
