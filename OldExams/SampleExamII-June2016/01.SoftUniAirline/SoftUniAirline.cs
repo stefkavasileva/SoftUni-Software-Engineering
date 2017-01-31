@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SoftUniAirline
+public class SoftUniAirline
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int flightsCount = int.Parse(Console.ReadLine());
 
@@ -23,12 +20,8 @@ class SoftUniAirline
             decimal fuelConsumptionPerHour = decimal.Parse(Console.ReadLine());
             decimal flightDuration = decimal.Parse(Console.ReadLine());
 
-
-
             decimal income = (adultPassengersCount * adultTicketPrice) +
                 (youthPassengersCount * youthTicketPrice);
-
-
 
             decimal expense = flightDuration * fuelConsumptionPerHour * fuelPricePerHour;
             decimal profit = income - expense;
@@ -42,11 +35,9 @@ class SoftUniAirline
             {
                 Console.WriteLine($"We've got to sell more tickets! We've lost {profit:f3}$.");
             }
-
         }
 
         Console.WriteLine($"Overall profit -> {profits.Sum():f3}$.");
         Console.WriteLine($"Average profit -> {profits.Average():f3}$.");
     }
 }
-

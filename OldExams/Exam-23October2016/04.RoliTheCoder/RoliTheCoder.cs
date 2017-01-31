@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RoliTheCoder
+public class RoliTheCoder
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputEvent = Console.ReadLine();
 
@@ -27,13 +24,11 @@ class RoliTheCoder
 
             GetParticipants(eventsArgs, participants);
 
-
             if (!eventsArgs[1].Contains('#'))
             {
                 inputEvent = Console.ReadLine();
                 continue;
             }
-
 
             if (!events.ContainsKey(id))
             {
@@ -48,7 +43,6 @@ class RoliTheCoder
 
             inputEvent = Console.ReadLine();
         }
-
 
         var sortedEvents = new Dictionary<string, List<string>>();
 
@@ -88,4 +82,3 @@ class RoliTheCoder
         }
     }
 }
-

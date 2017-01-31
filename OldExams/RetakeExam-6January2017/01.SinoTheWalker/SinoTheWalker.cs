@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SinoTheWalker
+public class SinoTheWalker
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string leavesTimeAsStr = Console.ReadLine();
 
@@ -25,4 +19,3 @@ class SinoTheWalker
         Console.WriteLine($"Time Arrival: {leavesTime.ToString("HH:mm:ss")}");
     }
 }
-

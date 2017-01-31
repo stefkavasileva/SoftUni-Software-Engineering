@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class EnduranceRally
+public class EnduranceRally
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] drivers = Console.ReadLine().Split().ToArray();
         double[] zones = Console.ReadLine().Split().Select(double.Parse).ToArray();
@@ -57,7 +54,5 @@ class EnduranceRally
         {
             Console.WriteLine(result);
         }
-       
     }
 }
-

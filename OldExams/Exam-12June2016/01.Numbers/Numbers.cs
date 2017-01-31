@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Numbers
+public class Numbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         double average = numbers.Average();
@@ -28,4 +24,3 @@ class Numbers
         }
     }
 }
-

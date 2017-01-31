@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Portal
+public class Portal
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        //50/100
+        ////50/100
         int size = int.Parse(Console.ReadLine());
         char[][] matrix = new char[size][];
         FillTheMatrix(matrix, size);
@@ -44,7 +41,6 @@ class Portal
                         }
                     }
                 }
-
             }
             else if (diraction[i].Equals('U'))
             {
@@ -84,12 +80,10 @@ class Portal
                             col = matrix[row].Length - 1;
                         }
                     }
-                }
-
+                }         
             }
             else
             {
-
                 col++;
                 if (col >= matrix[row].Length)
                 {
@@ -117,7 +111,6 @@ class Portal
         }
 
         Console.WriteLine($"Robot stuck at {row} {col}. Experiment failed.");
-
     }
 
     private static int[] GetStartPosition(char[][] matrix)
@@ -135,12 +128,12 @@ class Portal
                 }
             }
         }
+
         return position;
     }
 
     private static void FillTheMatrix(char[][] matrix, int size)
     {
-
         for (int row = 0; row < matrix.Length; row++)
         {
             List<char> colsElements = Console.ReadLine().ToCharArray().ToList();
@@ -151,8 +144,6 @@ class Portal
             }
 
             matrix[row] = colsElements.ToArray();
-
         }
     }
 }
-

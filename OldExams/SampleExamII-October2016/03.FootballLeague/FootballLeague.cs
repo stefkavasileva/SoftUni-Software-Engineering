@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FootballLeague
+public class FootballLeague
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string key = Console.ReadLine();
         string footballMatch = Console.ReadLine();
@@ -46,7 +43,6 @@ class FootballLeague
 
         PrintTeams(count, teams);
 
-
         teamsGoals = teamsGoals.OrderByDescending(x => x.Value)
                      .ThenBy(x => x.Key)
                      .ToDictionary(x => x.Key, x => x.Value);
@@ -63,6 +59,7 @@ class FootballLeague
             Console.WriteLine($"- {teamg.Key} -> {teamg.Value}");
         }
     }
+
     private static void PrintTeams(int count, Dictionary<string, int> teams)
     {
         Console.WriteLine("League standings:");
@@ -73,6 +70,7 @@ class FootballLeague
             count++;
         }
     }
+
     private static void AddTeamsGoals(Dictionary<string, int> teamsGoals, string firstTeam, string secondTeam, int[] score)
     {
         if (!teamsGoals.ContainsKey(firstTeam))
@@ -116,4 +114,3 @@ class FootballLeague
         }
     }
 }
-

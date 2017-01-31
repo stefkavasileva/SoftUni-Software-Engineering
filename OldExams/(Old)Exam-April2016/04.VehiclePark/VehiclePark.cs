@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class VehiclePark
+public class VehiclePark
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         List<string> vehicles = Console.ReadLine().Split().ToList();
 
@@ -54,4 +51,3 @@ class VehiclePark
         Console.WriteLine("Vehicles sold: {0}", solds);
     }
 }
-

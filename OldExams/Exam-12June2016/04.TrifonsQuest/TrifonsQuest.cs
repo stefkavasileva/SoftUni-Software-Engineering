@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TrifonsQuest
+public class TrifonsQuest
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long health = long.Parse(Console.ReadLine());
         int[] matrixDimensions = Console.ReadLine()
@@ -61,7 +57,6 @@ class TrifonsQuest
         Console.WriteLine("Quest completed!");
         Console.WriteLine($"Health: {health}");
         Console.WriteLine($"Turns: {turns}");
-
     }
 
     private static void UpdateHealthState(ref long health, char[][] matrix, ref int turns, int col, int row)
@@ -88,4 +83,3 @@ class TrifonsQuest
         }
     }
 }
-

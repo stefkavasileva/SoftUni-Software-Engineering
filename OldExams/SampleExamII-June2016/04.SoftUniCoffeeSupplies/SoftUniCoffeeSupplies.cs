@@ -1,21 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-
-class SoftUniCoffeeSupplies
+public class SoftUniCoffeeSupplies
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        //40/100
+        ////40/100
         string[] delimiters = Console.ReadLine().Split().ToArray();
 
         Dictionary<string, string> personOrders = new Dictionary<string, string>();
         Dictionary<string, int> coffeQuantity = new Dictionary<string, int>();
-
 
         string inputLine = Console.ReadLine();
         while (!inputLine.Equals("end of info"))
@@ -32,7 +27,6 @@ class SoftUniCoffeeSupplies
                 }
 
                 personOrders[personName] = coffeType;
-
             }
             else
             {
@@ -49,7 +43,6 @@ class SoftUniCoffeeSupplies
                 coffeQuantity[coffeType] += quantity;
             }
 
-
             inputLine = Console.ReadLine();
         }
 
@@ -65,7 +58,7 @@ class SoftUniCoffeeSupplies
 
         while (!purchase.Equals("end of week"))
         {
-            string[] purchaseArgs = purchase.Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries).ToArray();
+            string[] purchaseArgs = purchase.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
             string personName = purchaseArgs[0];
             int quantity = int.Parse(purchaseArgs[1].Trim());
 
@@ -78,7 +71,6 @@ class SoftUniCoffeeSupplies
         coffeQuantity = coffeQuantity
             .OrderBy(x => x.Key)
             .ToDictionary(x => x.Key, x => x.Value);
-
 
         foreach (var coffe in coffeQuantity.Where(x => x.Value <= 0))
         {
@@ -111,9 +103,7 @@ class SoftUniCoffeeSupplies
                 {
                     Console.WriteLine($"{person.Key} {person.Value}");
                 }
-
             }
         }
     }
 }
-

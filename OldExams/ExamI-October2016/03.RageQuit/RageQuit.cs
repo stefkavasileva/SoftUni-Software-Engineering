@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-
-class RageQuit
+public class RageQuit
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputLine = Console.ReadLine().ToUpper().Trim();
 
@@ -34,4 +31,3 @@ class RageQuit
         Console.WriteLine(result);
     }
 }
-

@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TheaThePhotographer
+public class TheaThePhotographer
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long nPictures = long.Parse(Console.ReadLine());
         long filterSeconds = long.Parse(Console.ReadLine());
-        long PercentUseful = long.Parse(Console.ReadLine());
+        long percentUseful = long.Parse(Console.ReadLine());
         long secondsUpload = long.Parse(Console.ReadLine());
 
-
-        long TimeFiltering = nPictures * filterSeconds;
-        long nUseful = (long)Math.Ceiling((nPictures * PercentUseful) / 100.0);
+        long timeFiltering = nPictures * filterSeconds;
+        long nUseful = (long)Math.Ceiling((nPictures * percentUseful) / 100.0);
 
         long totalTime = secondsUpload * nUseful;
 
-        long totalSec = TimeFiltering + totalTime;
+        long totalSec = timeFiltering + totalTime;
         long days = totalSec / 86400;
         long daysLeft = totalSec % 86400;
         long hours = daysLeft / 3600;
@@ -28,8 +22,6 @@ class TheaThePhotographer
         long min = hoursLeft / 60;
         long sec = hoursLeft % 60;
 
-
-        Console.WriteLine($"{days}:{hours:00}:{min:00}:{sec:00}"
+        Console.WriteLine($"{days}:{hours:00}:{min:00}:{sec:00}");
     }
 }
-

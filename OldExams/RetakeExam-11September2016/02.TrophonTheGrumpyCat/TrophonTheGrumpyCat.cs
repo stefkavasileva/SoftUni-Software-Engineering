@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TrophonTheGrumpyCat
+public class TrophonTheGrumpyCat
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long[] priceRatings = Console.ReadLine().Split().Select(long.Parse).ToArray();
         int entryPoint = int.Parse(Console.ReadLine());
@@ -25,7 +21,6 @@ class TrophonTheGrumpyCat
         else
         {
             Console.WriteLine("Right - {0}", rightSum);
-
         }
     }
 
@@ -84,4 +79,3 @@ class TrophonTheGrumpyCat
         return sum;
     }
 }
-

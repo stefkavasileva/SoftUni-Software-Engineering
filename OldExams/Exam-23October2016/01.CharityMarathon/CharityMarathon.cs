@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CharityMarathon
+public class CharityMarathon
 {
-    static void Main(string[] args)
+   public static void Main()
     {
         int maratonDays = int.Parse(Console.ReadLine());
         int countRunner = int.Parse(Console.ReadLine());
@@ -22,7 +17,5 @@ class CharityMarathon
         decimal moneyRaised = totalKm * moneyPerKm;
 
         Console.WriteLine("Money raised: {0:f2}", moneyRaised);
-
     }
 }
-

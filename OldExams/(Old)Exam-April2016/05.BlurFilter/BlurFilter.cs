@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BlurFilter
+public class BlurFilter
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        //90/100
+        ////90/100
         int blurAmount = int.Parse(Console.ReadLine());
         int[] matrixInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int rows = matrixInfo[0];
@@ -33,9 +29,9 @@ class BlurFilter
         int startCol = Math.Max(0, targetCol - 1);
         int endCol = Math.Min(cols - 1, targetCol + 1);
 
-        for (int row = startRow; row <=endRow ; row++)
+        for (int row = startRow; row <= endRow; row++)
         {
-            for (int col = startCol; col <=endCol ; col++)
+            for (int col = startCol; col <= endCol; col++)
             {
                 matrix[row][col] += blurAmount;
             }
@@ -45,7 +41,5 @@ class BlurFilter
         {
             Console.WriteLine(string.Join(" ", row));
         }
-
     }
 }
-

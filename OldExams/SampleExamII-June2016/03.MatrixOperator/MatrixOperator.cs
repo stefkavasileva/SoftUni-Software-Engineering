@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MatrixOperator
+public class MatrixOperator
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int rows = int.Parse(Console.ReadLine());
         List<List<int>> matrix = new List<List<int>>();
 
-        for (int row = 0; row < rows; row++)  //fill the matrix
+        for (int row = 0; row < rows; row++) 
         {
             matrix.Add(new List<int>());
             matrix[row] = Console.ReadLine().Split().Select(int.Parse).ToList();
@@ -38,10 +35,9 @@ class MatrixOperator
                 List<int> firstRow = matrix[firstIndexOfRow].ToList();
                 List<int> secondRow = matrix[secondIndexOfRow].ToList();
                 matrix[firstIndexOfRow] = secondRow;
-                matrix[secondIndexOfRow] = firstRow;
-
+                matrix[secondIndexOfRow] = firstRow;            
             }
-            else if(comandName.Equals("insert"))
+            else if (comandName.Equals("insert"))
             {
                 int row = int.Parse(comandArgs[1]);
                 int element = int.Parse(comandArgs[2]);
@@ -53,14 +49,12 @@ class MatrixOperator
 
         foreach (var row in matrix)
         {
-            Console.WriteLine(string.Join(" ",row));
+            Console.WriteLine(string.Join(" ", row));
         }
-
     }
 
     private static void RemoveNums(List<List<int>> matrix, bool isRow, int index, string type)
     {
-
         if (isRow)
         {
             for (int col = 0; col < matrix[index].Count; col++)
@@ -70,10 +64,10 @@ class MatrixOperator
                     continue;
                 }
 
-                if ((type.Equals("positive") && matrix[index][col] >= 0)||
+                if ((type.Equals("positive") && matrix[index][col] >= 0) ||
                     (type.Equals("negative") && matrix[index][col] < 0) ||
-                    (type.Equals("odd") && matrix[index][col] %2!= 0) ||
-                    (type.Equals("even") && matrix[index][col] %2== 0))
+                    (type.Equals("odd") && matrix[index][col] % 2 != 0) ||
+                    (type.Equals("even") && matrix[index][col] % 2 == 0))
                 {
                     matrix[index].RemoveAt(col);
                     col--;
@@ -84,7 +78,7 @@ class MatrixOperator
         {
             for (int row = 0; row < matrix.Count; row++)
             {
-                if (matrix[row].Count<=index)
+                if (matrix[row].Count <= index)
                 {
                     continue;
                 }
@@ -95,10 +89,8 @@ class MatrixOperator
                     (type.Equals("even") && matrix[row][index] % 2 == 0))
                 {
                     matrix[row].RemoveAt(index);
-                   
                 }
             }
         }
     }
 }
-

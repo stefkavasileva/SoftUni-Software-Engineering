@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Files
+public class Files
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int filesCount = int.Parse(Console.ReadLine());
 
@@ -62,14 +60,11 @@ class Files
                     hasFile = true;
                 }
             }
-
         }
 
         if (!hasFile)
         {
             Console.WriteLine("No");
         }
-
     }
 }
-

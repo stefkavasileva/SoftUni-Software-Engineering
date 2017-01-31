@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SweetDessert
+public class SweetDessert
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal amountOfCash = decimal.Parse(Console.ReadLine());
         int guests = int.Parse(Console.ReadLine());
@@ -23,8 +18,6 @@ class SweetDessert
 
         decimal totalPrice = totalBananaPrice + totalBerriesPrice + totalEggsPrice;
 
-
-
         if (totalPrice <= amountOfCash)
         {
             Console.WriteLine("Ivancho has enough money - it would cost {0:f2}lv.", totalPrice);
@@ -33,7 +26,5 @@ class SweetDessert
         {
             Console.WriteLine("Ivancho will have to withdraw money - he will need {0:f2}lv more.", totalPrice - amountOfCash);
         }
-
     }
 }
-

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PopulationAggregation
+public class PopulationAggregation
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputLine = Console.ReadLine();
         SortedDictionary<string, int> countryCount = new SortedDictionary<string, int>();
@@ -43,6 +40,7 @@ class PopulationAggregation
             {
                 townPopulation.Add(townName, 0);
             }
+
             townPopulation[townName] = populationsCount;
 
             inputLine = Console.ReadLine();
@@ -60,7 +58,7 @@ class PopulationAggregation
 
     private static void PrintTopTowns(Dictionary<string, long> topTowns)
     {
-        foreach (var town in topTowns )
+        foreach (var town in topTowns)
         {
             Console.WriteLine($"{town.Key} -> {town.Value}");
         }
@@ -76,16 +74,15 @@ class PopulationAggregation
 
     private static string RemoveProhibitedSymbols(string populationArgs)
     {
-      
         char[] symbols = "@#$&0123456789".ToCharArray();
         for (int index = 0; index < symbols.Length; index++)
         {
             if (populationArgs.Contains(symbols[index]))
             {
-                populationArgs=populationArgs.Replace(symbols[index].ToString(), "");
+                populationArgs = populationArgs.Replace(symbols[index].ToString(), string.Empty);
             }
         }
+
         return populationArgs;
     }
 }
-

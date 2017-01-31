@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Ladybugs
+public class Ladybugs
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
         int[] ladybugIndexes = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -54,8 +50,6 @@ class Ladybugs
                 }
             }
 
-
-
             comand = Console.ReadLine();
         }
 
@@ -84,8 +78,6 @@ class Ladybugs
             {
                 field[ladybugIndexes[i]] = 1;
             }
-
         }
     }
 }
-

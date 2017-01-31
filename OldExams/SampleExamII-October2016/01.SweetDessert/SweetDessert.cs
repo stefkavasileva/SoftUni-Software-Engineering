@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SweetDessert
+public class SweetDessert
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal amountOfCash = decimal.Parse(Console.ReadLine());
         long guests = long.Parse(Console.ReadLine());
@@ -39,4 +34,3 @@ class SweetDessert
         }
     }
 }
-

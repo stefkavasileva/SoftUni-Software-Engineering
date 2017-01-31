@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CommandInterpreter
+public class CommandInterpreter
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         List<string> inputElements = Console.ReadLine()
            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
@@ -36,7 +33,6 @@ class CommandInterpreter
 
                 if (comandArgs[0].Equals("reverse"))
                 {
-
                     elements.Reverse();
                 }
                 else
@@ -45,11 +41,9 @@ class CommandInterpreter
                 }
 
                 inputElements.InsertRange(startIndex, elements);
-
             }
             else
             {
-
                 int count = int.Parse(comandArgs[1]) % inputElements.Count();
 
                 if (count < 0)
@@ -65,7 +59,6 @@ class CommandInterpreter
                     {
                         inputElements.Add(inputElements[0]);
                         inputElements.RemoveAt(0);
-
                     }
                 }
                 else
@@ -74,11 +67,8 @@ class CommandInterpreter
                     {
                         inputElements.Insert(0, inputElements[inputElements.Count - 1]);
                         inputElements.RemoveAt(inputElements.Count - 1);
-
-
                     }
                 }
-
             }
 
             comand = Console.ReadLine();
@@ -87,4 +77,3 @@ class CommandInterpreter
         Console.WriteLine("[{0}]", string.Join(", ", inputElements));
     }
 }
-

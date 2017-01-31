@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class FootballLeague
+public class FootballLeague
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string key = Console.ReadLine();
 
@@ -31,7 +29,7 @@ class FootballLeague
                 teamName = teamName.Substring(startIndex + key.Length, endIndex - startIndex - key.Length);
                 char[] teamNameArr = teamName.ToCharArray();
                 Array.Reverse(teamNameArr);
-                teamName = string.Join("", teamNameArr);
+                teamName = string.Join(string.Empty, teamNameArr);
                 teamsNames[i] = teamName.ToUpper();
                 if (!teams.ContainsKey(teamsNames[i]))
                 {
@@ -90,4 +88,3 @@ class FootballLeague
         }
     }
 }
-

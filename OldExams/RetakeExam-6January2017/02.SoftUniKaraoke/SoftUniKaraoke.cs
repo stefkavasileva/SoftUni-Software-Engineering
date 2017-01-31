@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SoftUniKaraoke
+public class SoftUniKaraoke
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         List<string> participants = Console.ReadLine()
             .Split(',')
@@ -55,7 +52,7 @@ class SoftUniKaraoke
         {
             Console.WriteLine($"{performance.Key}: {performance.Value.Count} awards");
 
-            foreach (var award in performance.Value.OrderBy(x=>x))
+            foreach (var award in performance.Value.OrderBy(x => x))
             {
                 Console.WriteLine($"--{award}");
             }
@@ -64,8 +61,8 @@ class SoftUniKaraoke
         }
 
         if (!hasAward)
+        {
             Console.WriteLine("No awards");
-
+        }
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Nacepin
+public class Nacepin
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal priceUSStore = decimal.Parse(Console.ReadLine());
         long weightUSInKg = long.Parse(Console.ReadLine());
@@ -46,8 +41,6 @@ class Nacepin
             decimal diff = maxValue - totalPriceFromUS;
 
             Console.WriteLine("Difference {0:f2} lv/kg", diff);
-
         }
     }
 }
-

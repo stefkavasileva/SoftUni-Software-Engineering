@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-class SoftuniCoffeeOrders
+public class SoftuniCoffeeOrders
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int ordersCount = int.Parse(Console.ReadLine());
 
@@ -30,4 +30,3 @@ class SoftuniCoffeeOrders
         Console.WriteLine("Total: ${0:f2}", orders.Sum());
     }
 }
-

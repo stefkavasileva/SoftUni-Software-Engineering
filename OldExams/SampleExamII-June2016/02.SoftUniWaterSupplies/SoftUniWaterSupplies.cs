@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SoftUniWaterSupplies
+public class SoftUniWaterSupplies
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double amountOfWater = double.Parse(Console.ReadLine());
         double[] bottlesToFill = Console.ReadLine().Split().Select(double.Parse).ToArray();
@@ -17,6 +13,7 @@ class SoftUniWaterSupplies
         int endIndex = -1;
         bool hasWater = true;
         double leftWater = amountOfWater;
+
         if ((int)amountOfWater % 2 != 0)
         {
             Array.Reverse(bottlesToFill);
@@ -40,7 +37,6 @@ class SoftUniWaterSupplies
             Console.WriteLine($"Bottles left: {leftBottle}");
             Console.Write($"With indexes: ");
 
-
             for (int i = 0; i < leftBottle; i++)
             {
                 if (i == leftBottle - 1)
@@ -50,6 +46,7 @@ class SoftUniWaterSupplies
                 else
                 {
                     Console.Write(endIndex + ", ");
+
                     if (amountOfWater % 2 == 0)
                     {
                         endIndex++;
@@ -70,4 +67,3 @@ class SoftUniWaterSupplies
         }
     }
 }
-

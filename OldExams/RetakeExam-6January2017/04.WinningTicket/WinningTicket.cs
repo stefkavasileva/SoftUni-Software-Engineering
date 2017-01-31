@@ -1,26 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-
-class WinningTicket
+public class WinningTicket
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] tickets = Console.ReadLine()
             .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(x => x.Trim())
             .ToArray();
 
-
         List<string> results = new List<string>();
 
         for (int i = 0; i < tickets.Length; i++)
         {
-
             if (tickets[i].Length != 20)
             {
                 results.Add("invalid ticket");
@@ -53,13 +48,11 @@ class WinningTicket
                 if (leftLenght == 10)
                 {
                     result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbol} Jackpot!";
-
                 }
                 else if (leftLenght >= 6)
                 {
                     result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbol}";
                 }
-
             }
             else
             {
@@ -75,4 +68,3 @@ class WinningTicket
         }
     }
 }
-

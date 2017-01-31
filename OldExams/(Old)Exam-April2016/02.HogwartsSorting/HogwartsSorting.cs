@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class HogwartsSorting
+public class HogwartsSorting
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numsOfStudents = int.Parse(Console.ReadLine());
 
@@ -56,7 +52,6 @@ class HogwartsSorting
                 students.Add(result);
                 studenstInHuff++;
             }
-
         }
 
         foreach (var s in students)
@@ -72,4 +67,3 @@ class HogwartsSorting
         Console.WriteLine("Hufflepuff: {0}", studenstInHuff);
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Strawberry
+public class Strawberry
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int outerDashes = 0;
@@ -20,9 +15,7 @@ class Strawberry
 
         for (int i = 0; i < topSize; i++)
         {
-            Console.WriteLine("{0}\\{1}|{1}/{0}",
-                new string('-', outerDashes),
-                new string('-', innerdashes));
+            Console.WriteLine("{0}\\{1}|{1}/{0}", new string('-', outerDashes), new string('-', innerdashes));
 
             outerDashes += 2;
             innerdashes -= 2;
@@ -39,9 +32,7 @@ class Strawberry
                 dots -= 2;
             }
 
-            Console.WriteLine("{0}#{1}#{0}",
-                new string('-', outerDashes),
-                new string('.', dots));
+            Console.WriteLine("{0}#{1}#{0}", new string('-', outerDashes), new string('.', dots));
 
             outerDashes -= 2;
             dots += 4;
@@ -52,9 +43,7 @@ class Strawberry
 
         for (int i = 0; i < bottomSize; i++)
         {
-            Console.WriteLine("{0}#{1}#{0}",
-                new string('-', outerDashes),
-                new string('.', dots));
+            Console.WriteLine("{0}#{1}#{0}", new string('-', outerDashes), new string('.', dots));
 
             outerDashes++;
             dots -= 2;

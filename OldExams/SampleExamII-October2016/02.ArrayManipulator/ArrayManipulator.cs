@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ArrayManipulator
+public class ArrayManipulator
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] inputArr = Console.ReadLine()
            .Split().Select(int.Parse).ToArray();
@@ -28,7 +24,6 @@ class ArrayManipulator
                 }
 
                 inputArr = ExchangeArr(inputArr, int.Parse(comandArgs[1]));
-
             }
             else if (comandArgs[0].Equals("first") || comandArgs[0].Equals("last"))
             {
@@ -93,7 +88,6 @@ class ArrayManipulator
         }
 
         return result;
-
     }
 
     private static void IsMatch(int index)
@@ -135,6 +129,7 @@ class ArrayManipulator
 
         return index;
     }
+
     private static int GetMaxIndex(int[] inputArr, string numberType)
     {
         int index = -1;
@@ -172,4 +167,3 @@ class ArrayManipulator
         return inputArr;
     }
 }
-

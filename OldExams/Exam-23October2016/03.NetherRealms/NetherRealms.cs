@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-
-class NetherRealms
+public class NetherRealms
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] names = Console.ReadLine()
            .Split(',')
@@ -46,7 +43,6 @@ class NetherRealms
 
             demons[currentName].Add(health);
             demons[currentName].Add(damage);
-
         }
 
         foreach (var demon in demons.OrderBy(x => x.Key))
@@ -105,4 +101,3 @@ class NetherRealms
         }
     }
 }
-

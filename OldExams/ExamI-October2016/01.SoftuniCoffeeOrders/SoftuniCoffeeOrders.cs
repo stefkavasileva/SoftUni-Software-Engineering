@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
-
-class SoftuniCoffeeOrders
+public class SoftuniCoffeeOrders
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         decimal totalPrice = 0.0m;
@@ -27,4 +23,3 @@ class SoftuniCoffeeOrders
         Console.WriteLine($"Total: ${totalPrice:f2}");
     }
 }
-

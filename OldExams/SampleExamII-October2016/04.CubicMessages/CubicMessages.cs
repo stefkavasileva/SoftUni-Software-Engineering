@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-class CubicMessages
+public class CubicMessages
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string message = Console.ReadLine();
         while (!message.Equals("Over!"))
@@ -30,7 +27,6 @@ class CubicMessages
 
             for (int i = 0; i < digitsInMessage.Length; i++)
             {
-
                 int currentIndex = (int)char.GetNumericValue(digitsInMessage[i]);
 
                 if (currentIndex >= 0 && currentIndex <= validMessage.Length - 1)
@@ -49,4 +45,3 @@ class CubicMessages
         }
     }
 }
-

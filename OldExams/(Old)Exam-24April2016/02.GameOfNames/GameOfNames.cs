@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class GameOfNames
+public class GameOfNames
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -44,4 +39,3 @@ class GameOfNames
         Console.WriteLine("The winner is {0} - {1} points", nameOfWinner, bestScore);
     }
 }
-
