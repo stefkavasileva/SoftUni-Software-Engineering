@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MathPower
+public class MathPower
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double num = double.Parse(Console.ReadLine());
         int power = int.Parse(Console.ReadLine());
@@ -20,12 +15,11 @@ class MathPower
     private static double ReiseToPower(double num, int power)
     {
         double result = num;
-        for (int i = 0; i < power-1; i++)
+        for (int i = 0; i < power - 1; i++)
         {
-            result*=num ;
+            result *= num;
         }
 
         return result;
     }
 }
-

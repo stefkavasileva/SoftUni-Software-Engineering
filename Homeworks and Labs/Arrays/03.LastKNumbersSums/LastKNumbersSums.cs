@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LastKNumbersSums
+public class LastKNumbersSums
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int k = int.Parse(Console.ReadLine());
@@ -32,7 +27,7 @@ class LastKNumbersSums
                 sum += arr[i];
             }
         }
+
         return sum;
     }
 }
-

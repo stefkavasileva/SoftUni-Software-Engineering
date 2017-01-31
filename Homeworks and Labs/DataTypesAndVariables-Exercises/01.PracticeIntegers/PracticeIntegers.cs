@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ProgPracticeIntegers
+public class ProgPracticeIntegers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         sbyte sbyteNum = -100;
         byte byteNum = 128;
@@ -24,7 +19,5 @@ class ProgPracticeIntegers
         Console.WriteLine(uintNum);
         Console.WriteLine(intNum);
         Console.WriteLine(longNum);
-
     }
 }
-

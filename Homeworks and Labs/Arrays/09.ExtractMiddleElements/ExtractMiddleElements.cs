@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ExtractMiddleElements
+public class ExtractMiddleElements
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] nums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
         string result = GetMiddleElements(nums);
 
         Console.WriteLine(result);
-
     }
 
     private static string GetMiddleElements(int[] nums)
@@ -38,4 +33,3 @@ class ExtractMiddleElements
         }
     }
 }
-

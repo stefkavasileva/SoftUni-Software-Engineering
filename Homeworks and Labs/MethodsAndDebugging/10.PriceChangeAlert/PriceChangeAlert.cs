@@ -1,8 +1,8 @@
 ﻿using System;
 
-class PriceChangeAlert
+public class PriceChangeAlert
 {
-    static void Main()
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         decimal threshold = decimal.Parse(Console.ReadLine());
@@ -12,7 +12,7 @@ class PriceChangeAlert
         {
             decimal currentPrice = decimal.Parse(Console.ReadLine());
             decimal diff = ProcentDifference(lastPrice, currentPrice);
-            bool isSignificantDifference = isDif(diff, threshold);
+            bool isSignificantDifference = IsDif(diff, threshold);
             string message = GetMessage(currentPrice, lastPrice, diff, isSignificantDifference);
             Console.WriteLine(message);
             lastPrice = currentPrice;
@@ -21,7 +21,7 @@ class PriceChangeAlert
 
     private static string GetMessage(decimal currentPrice, decimal lastPrice, decimal procentDiff, bool etherTrueOrFalse)
     {
-        string output = "";
+        string output = string.Empty;
         if (procentDiff == 0)
         {
             output = string.Format("NO CHANGE: {0}", currentPrice);
@@ -35,17 +35,20 @@ class PriceChangeAlert
             output = string.Format("PRICE UP: {0} to {1} ({2:F2}%)", lastPrice, currentPrice, procentDiff * 100);
         }
         else if (etherTrueOrFalse && (procentDiff < 0))
+        {
             output = string.Format("PRICE DOWN: {0} to {1} ({2:F2}%)", lastPrice, currentPrice, procentDiff * 100);
+        }
 
         return output;
     }
 
-    private static bool isDif(decimal Diff, decimal threshold)
+    private static bool IsDif(decimal diff, decimal threshold)
     {
-        if (Math.Abs(Diff) >= threshold)
+        if (Math.Abs(diff) >= threshold)
         {
             return true;
         }
+
         return false;
     }
 

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BePositive
+public class BePositive
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int countSequences = int.Parse(Console.ReadLine());
 
@@ -61,8 +57,8 @@ class BePositive
                         Console.Write(currentNum);
 
                         found = true;
-
                     }
+
                     j++;
                 }
             }
@@ -78,4 +74,3 @@ class BePositive
         }
     }
 }
-

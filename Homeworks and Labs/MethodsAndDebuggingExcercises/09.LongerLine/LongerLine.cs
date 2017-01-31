@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LongerLine
+public class LongerLine
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double x1 = double.Parse(Console.ReadLine());
         double y1 = double.Parse(Console.ReadLine());
@@ -22,7 +17,6 @@ class LongerLine
         double secondDistance = CalcDistance(x3, y3, x4, y4);
 
         PrintLongerLine(x1, y1, x2, y2, x3, y3, x4, y4, firstDistance, secondDistance);
-
     }
 
     private static void PrintLongerLine(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double firstDistance, double secondDistance)
@@ -68,10 +62,10 @@ class LongerLine
             Console.WriteLine($"({x2}, {y2})");
         }
     }
+
     private static double CalcDistance(double x1, double y1, double x2, double y2)
     {
         double distance = Math.Sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
         return distance;
     }
 }
-

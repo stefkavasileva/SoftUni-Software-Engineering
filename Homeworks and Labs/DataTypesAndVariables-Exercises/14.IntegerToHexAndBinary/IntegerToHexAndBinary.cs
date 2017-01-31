@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class IntegerToHexAndBinary
+public class IntegerToHexAndBinary
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int inputNum = int.Parse(Console.ReadLine());
 
@@ -18,4 +13,3 @@ class IntegerToHexAndBinary
         Console.WriteLine(binaryNum);
     }
 }
-

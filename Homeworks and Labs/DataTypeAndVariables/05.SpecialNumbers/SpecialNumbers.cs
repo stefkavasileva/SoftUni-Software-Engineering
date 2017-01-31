@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SpecialNumbers
+public class SpecialNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int endNum = int.Parse(Console.ReadLine());
 
@@ -30,4 +25,3 @@ class SpecialNumbers
         }
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ExchangeVariableValues
+public class ExchangeVariableValues
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int firstNum = 5;
         int secondNum = 10;
@@ -26,4 +21,3 @@ class ExchangeVariableValues
         Console.WriteLine($"b = {secondNum}");
     }
 }
-

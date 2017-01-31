@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FibonacciNumbers
+public class FibonacciNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int nThNum = int.Parse(Console.ReadLine());
 
@@ -21,12 +16,12 @@ class FibonacciNumbers
         int f1 = 1;
         int f2 = 1;
 
-        if (nThNum==1 || nThNum==0)
+        if (nThNum == 1 || nThNum == 0)
         {
             return f1;
         }
-     
-        for (int i = 2; i <=nThNum; i++)
+
+        for (int i = 2; i <= nThNum; i++)
         {
             int tempNum = f1 + f2;
             f1 = f2;
@@ -37,4 +32,3 @@ class FibonacciNumbers
 
     }
 }
-

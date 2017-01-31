@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class InstructionSet
+public class InstructionSet
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string opCode = Console.ReadLine();
         long result = 0;
@@ -25,12 +19,14 @@ class InstructionSet
                         result = operandOne + 1;
                         break;
                     }
+
                 case "DEC":
                     {
                         long operandOne = long.Parse(codeArgs[1]);
                         result = operandOne - 1;
                         break;
                     }
+
                 case "ADD":
                     {
                         long operandOne = long.Parse(codeArgs[1]);
@@ -38,6 +34,7 @@ class InstructionSet
                         result = operandOne + operandTwo;
                         break;
                     }
+
                 case "MLA":
                     {
                         long operandOne = long.Parse(codeArgs[1]);
@@ -46,10 +43,9 @@ class InstructionSet
                         break;
                     }
             }
+
             Console.WriteLine(result);
             opCode = Console.ReadLine();
-
         }
     }
 }
-

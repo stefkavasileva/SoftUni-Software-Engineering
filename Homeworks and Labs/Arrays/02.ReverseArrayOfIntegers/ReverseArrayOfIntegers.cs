@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ReverseArrayOfIntegers
+public class ReverseArrayOfIntegers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         string[] nums = new string[n];
@@ -19,7 +14,6 @@ class ReverseArrayOfIntegers
         }
 
         Array.Reverse(nums);
-        Console.WriteLine(string.Join(" ",nums));
+        Console.WriteLine(string.Join(" ", nums));
     }
 }
-

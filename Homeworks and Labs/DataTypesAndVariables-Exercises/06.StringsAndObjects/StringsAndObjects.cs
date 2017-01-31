@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class StringsAndObjects
+public class StringsAndObjects
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string firstWord = "Hello";
         string secondWord = "World";
@@ -19,4 +14,3 @@ class StringsAndObjects
         Console.WriteLine(result);
     }
 }
-

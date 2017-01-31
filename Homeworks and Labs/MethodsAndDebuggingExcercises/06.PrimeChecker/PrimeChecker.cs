@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class PrimeChecker
+public class PrimeChecker
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long number = long.Parse(Console.ReadLine());
 
@@ -25,7 +21,7 @@ class PrimeChecker
             return isPrime;
         }
 
-        for (long i = 2; i <=Math.Sqrt(number); i++)
+        for (long i = 2; i <= Math.Sqrt(number); i++)
         {
             if (number % i == 0)
             {
@@ -36,4 +32,3 @@ class PrimeChecker
         return isPrime;
     }
 }
-

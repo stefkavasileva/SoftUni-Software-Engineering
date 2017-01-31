@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ReverseArrayOfStrings
+public class ReverseArrayOfStrings
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string text = Console.ReadLine();
         string[] letters = text.Split(' ').ToArray();
 
         Array.Reverse(letters);
 
-        Console.WriteLine(string.Join(" ",letters));
-       
+        Console.WriteLine(string.Join(" ", letters));
     }
 }
-

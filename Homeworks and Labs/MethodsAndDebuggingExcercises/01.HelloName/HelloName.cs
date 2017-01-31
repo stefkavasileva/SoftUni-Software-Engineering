@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class HelloName
+public class HelloName
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string personName = Console.ReadLine();
         PrintGreeting(personName);
@@ -18,4 +13,3 @@ class HelloName
         Console.WriteLine($"Hello, {personName}!");
     }
 }
-

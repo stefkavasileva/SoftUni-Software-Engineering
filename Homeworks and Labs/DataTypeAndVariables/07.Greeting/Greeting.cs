@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Greeting
+public class Greeting
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string firstName = Console.ReadLine();
         string lastName = Console.ReadLine();
@@ -15,4 +11,3 @@ class Greeting
         Console.WriteLine($"Hello, {firstName} {lastName}. You are {age} years old.");
     }
 }
-

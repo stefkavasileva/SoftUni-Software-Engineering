@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumbersInReversedOrder
+public class NumbersInReversedOrder
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char[] decimalNum = Console.ReadLine().ToCharArray();
 
@@ -18,7 +13,6 @@ class NumbersInReversedOrder
     private static string ReverseNumber(char[] decimalNum)
     {
         Array.Reverse(decimalNum);
-        return string.Join("", decimalNum);
+        return string.Join(string.Empty, decimalNum);
     }
 }
-

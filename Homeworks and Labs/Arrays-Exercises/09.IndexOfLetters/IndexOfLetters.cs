@@ -2,7 +2,7 @@
 
 public class IndexOfLetters
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         string letters = Console.ReadLine();
 

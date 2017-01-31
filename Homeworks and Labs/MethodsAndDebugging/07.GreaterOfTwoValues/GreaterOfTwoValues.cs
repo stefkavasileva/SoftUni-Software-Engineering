@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class GreaterOfTwoValues
+public class GreaterOfTwoValues
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string type = Console.ReadLine().ToLower();
         string firstVar = Console.ReadLine();
@@ -25,7 +20,7 @@ class GreaterOfTwoValues
 
         if (type.Equals("char"))
         {
-            char firstChar= char.Parse(firstVar);
+            char firstChar = char.Parse(firstVar);
             char secondChar = char.Parse(secondVar);
             char result = GetMax(firstChar, secondChar);
 
@@ -40,7 +35,6 @@ class GreaterOfTwoValues
             Console.WriteLine(result);
             return;
         }
-
     }
 
     public static int GetMax(int first, int second)
@@ -51,7 +45,7 @@ class GreaterOfTwoValues
 
     public static char GetMax(char first, char second)
     {
-        if (first>=second)
+        if (first >= second)
         {
             return first;
         }
@@ -59,7 +53,6 @@ class GreaterOfTwoValues
         {
             return second;
         }
-        
     }
 
     public static string GetMax(string first, string second)
@@ -72,7 +65,5 @@ class GreaterOfTwoValues
         {
             return second;
         }
-
     }
 }
-

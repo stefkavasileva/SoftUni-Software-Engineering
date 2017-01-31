@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MaxMethod
+public class MaxMethod
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int firstNumber = int.Parse(Console.ReadLine());
         int secondNumber = int.Parse(Console.ReadLine());
@@ -17,7 +12,6 @@ class MaxMethod
         int biggestNum = GetMax(thirdNumber, biggerNum);
 
         Console.WriteLine(biggestNum);
-
     }
 
     private static int GetMax(int firstNumber, int secondNumber)
@@ -25,4 +19,3 @@ class MaxMethod
         return Math.Max(firstNumber, secondNumber);
     }
 }
-

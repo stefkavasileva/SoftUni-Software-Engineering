@@ -4,3 +4,6 @@ C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\bin\D
 C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.csprojResolveAssemblyReference.cache
 C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.exe
 C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\02.BePositive\bin\Debug\02.BePositive.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\02.BePositive\obj\Debug\02.BePositive.pdb

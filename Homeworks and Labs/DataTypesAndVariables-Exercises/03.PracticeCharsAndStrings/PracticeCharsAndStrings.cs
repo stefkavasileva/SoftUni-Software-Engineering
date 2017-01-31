@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PracticeCharsAndStrings
+public class PracticeCharsAndStrings
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string firstText = "Software University";
         char firstLetter = 'B';
@@ -20,7 +15,5 @@ class PracticeCharsAndStrings
         Console.WriteLine(secondLetter);
         Console.WriteLine(thirdLetter);
         Console.WriteLine(secondText);
-
     }
 }
-

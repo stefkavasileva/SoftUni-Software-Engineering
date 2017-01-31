@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class VowelOrDigit
+public class VowelOrDigit
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char symbol = char.Parse(Console.ReadLine().ToLower());
 
@@ -27,4 +23,3 @@ class VowelOrDigit
         }
     }
 }
-

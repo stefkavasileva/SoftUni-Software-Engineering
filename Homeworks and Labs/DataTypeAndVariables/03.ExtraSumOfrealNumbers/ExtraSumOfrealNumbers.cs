@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ExtraSumOfrealNumbers
+public class ExtraSumOfrealNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int inputNums = int.Parse(Console.ReadLine());
 
@@ -22,4 +17,3 @@ class ExtraSumOfrealNumbers
         Console.WriteLine(sum);
     }
 }
-

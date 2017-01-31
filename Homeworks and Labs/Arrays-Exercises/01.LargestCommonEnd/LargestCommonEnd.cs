@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq;
 
-class LargestCommonEnd
+public class LargestCommonEnd
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] firstWords = Console.ReadLine().Split().ToArray();
         string[] secondWords = Console.ReadLine().Split().ToArray();
 
-        int minLength = Math.Min(firstWords.Length, secondWords.Length); 
+        int minLength = Math.Min(firstWords.Length, secondWords.Length);
 
         int firstLength = GetMaxLength(firstWords, secondWords, minLength);
 
@@ -38,4 +38,3 @@ class LargestCommonEnd
         return firstLength;
     }
 }
-

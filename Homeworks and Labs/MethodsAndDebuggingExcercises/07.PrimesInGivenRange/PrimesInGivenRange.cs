@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PrimesInGivenRange
+public class PrimesInGivenRange
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int startNum = int.Parse(Console.ReadLine());
         int endNum = int.Parse(Console.ReadLine());
@@ -19,7 +15,7 @@ class PrimesInGivenRange
 
     private static void PrintPrimesNums(List<int> primesNums)
     {
-        Console.WriteLine(string.Join(", ",primesNums));
+        Console.WriteLine(string.Join(", ", primesNums));
     }
 
     private static List<int> FindPrimesInRange(int startNum, int endNum)
@@ -27,7 +23,7 @@ class PrimesInGivenRange
         List<int> primesNums = new List<int>();
 
         bool isPrime = true;
-        
+
         for (int i = startNum; i <= endNum; i++)
         {
             if (i < 2)
@@ -35,12 +31,12 @@ class PrimesInGivenRange
                 continue;
             }
 
-            for (int j = 2; j <=Math.Sqrt(i); j++)
+            for (int j = 2; j <= Math.Sqrt(i); j++)
             {
                 if (i % j == 0)
                 {
                     isPrime = false;
-                }               
+                }
             }
 
             if (isPrime)
@@ -56,4 +52,3 @@ class PrimesInGivenRange
         return primesNums;
     }
 }
-

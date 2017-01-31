@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RectangleProperties
+public class RectangleProperties
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double width = double.Parse(Console.ReadLine());
         double hight = double.Parse(Console.ReadLine());
 
-        //rectangle properies
+        /////rectangle properies
         double perimeter = 2 * (width + hight);
         double area = width * hight;
         double diagonal = Math.Sqrt((width * width) + (hight * hight));
@@ -20,8 +15,5 @@ class RectangleProperties
         Console.WriteLine(perimeter);
         Console.WriteLine(area);
         Console.WriteLine(diagonal);
-
-
     }
 }
-

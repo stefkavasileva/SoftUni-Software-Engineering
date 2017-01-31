@@ -3,7 +3,7 @@ using System.Linq;
 
 public class CompareCharArrays
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         char[] fitestLetters = Console.ReadLine().Split().Select(char.Parse).ToArray();
         char[] secondLetters = Console.ReadLine().Split().Select(char.Parse).ToArray();

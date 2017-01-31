@@ -3,7 +3,7 @@ using System.Linq;
 
 public class MaxSequenceOfEqualElements
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int maxLength = -1;

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class VariableInHexFormat
+public class VariableInHexFormat
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string hexadecimalNum = Console.ReadLine();
 
@@ -16,4 +11,3 @@ class VariableInHexFormat
         Console.WriteLine(decimalNum);
     }
 }
-

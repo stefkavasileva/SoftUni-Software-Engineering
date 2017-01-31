@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FactorialTrailingZeroes
+public class FactorialTrailingZeroes
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int num = int.Parse(Console.ReadLine());
 
@@ -17,7 +12,6 @@ class FactorialTrailingZeroes
         int trailingZeroes = GetTrailingZeroes(factorial);
 
         Console.WriteLine(trailingZeroes);
-
     }
 
     private static int GetTrailingZeroes(BigInteger factorial)
@@ -28,6 +22,7 @@ class FactorialTrailingZeroes
             zeroes++;
             factorial /= 10;
         }
+
         return zeroes;
     }
 
@@ -42,4 +37,3 @@ class FactorialTrailingZeroes
         return factorial;
     }
 }
-

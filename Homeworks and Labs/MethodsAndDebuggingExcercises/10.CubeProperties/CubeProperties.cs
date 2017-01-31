@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class CubeProperties
+public class CubeProperties
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double cubeSide = double.Parse(Console.ReadLine());
         string cubeParameter = Console.ReadLine().ToLower();
@@ -31,7 +27,6 @@ class CubeProperties
             double area = CalcCubeArea(cubeSide);
             PrintCubeParameter(area);
         }
-
     }
 
     private static double CalcCubeArea(double cubeSide)
@@ -63,4 +58,3 @@ class CubeProperties
         return faceDiagonal;
     }
 }
-

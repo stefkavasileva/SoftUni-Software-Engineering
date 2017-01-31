@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SequenceOfCommands
+public class SequenceOfCommands
 {
-    static void Main()
+    public static void Main()
     {
         int sizeOfArray = int.Parse(Console.ReadLine());
 
@@ -18,7 +14,7 @@ class SequenceOfCommands
 
         string command = Console.ReadLine();
         int index = 0;
-        int value = 0;  
+        int value = 0;
 
         while (!command.Equals("stop"))
         {
@@ -26,8 +22,8 @@ class SequenceOfCommands
 
             if (!lineArgs[0].Equals("rshift") && !lineArgs[0].Equals("lshift"))
             {
-                 index = int.Parse(lineArgs[1]) - 1;
-                 value = int.Parse(lineArgs[2]);
+                index = int.Parse(lineArgs[1]) - 1;
+                value = int.Parse(lineArgs[2]);
             }
 
             switch (lineArgs[0])
@@ -63,6 +59,7 @@ class SequenceOfCommands
         {
             array[i] = array[i - 1];
         }
+
         array[0] = lastNum;
     }
 
@@ -73,6 +70,7 @@ class SequenceOfCommands
         {
             array[i] = array[i + 1];
         }
+
         array[array.Length - 1] = firstNum;
     }
 
@@ -84,4 +82,3 @@ class SequenceOfCommands
         }
     }
 }
-

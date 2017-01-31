@@ -3,7 +3,7 @@ using System.Text;
 
 public class SieveOfEratosthenes
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 

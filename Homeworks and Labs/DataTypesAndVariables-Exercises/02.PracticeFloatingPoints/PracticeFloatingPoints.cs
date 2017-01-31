@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class PracticeFloatingPoints
+public class PracticeFloatingPoints
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal firstDecimalNum = 3.141592653589793238M;
         double doubleNum = 1.60217657D;
@@ -17,4 +13,3 @@ class PracticeFloatingPoints
         Console.WriteLine(secondDecimalNum);
     }
 }
-

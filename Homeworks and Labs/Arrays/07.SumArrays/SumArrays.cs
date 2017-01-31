@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SumArrays
+public class SumArrays
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] firstNums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         int[] secondNums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
@@ -24,7 +20,5 @@ class SumArrays
         }
 
         Console.WriteLine(string.Join(" ", sumOfNums));
-      
     }
 }
-

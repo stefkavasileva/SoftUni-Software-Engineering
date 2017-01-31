@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BlankReceipt
+public class BlankReceipt
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         PrintReceipt();
     }
@@ -37,4 +32,3 @@ class BlankReceipt
         Console.WriteLine("------------------------------");
     }
 }
-

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-
-class EqualSums
+public class EqualSums
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
@@ -28,4 +27,3 @@ class EqualSums
         }
     }
 }
-

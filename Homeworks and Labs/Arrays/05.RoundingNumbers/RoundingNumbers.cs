@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RoundingNumbers
+public class RoundingNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputLine = Console.ReadLine();
         double[] nums = inputLine.Split(' ').Select(double.Parse).ToArray();
@@ -21,4 +17,3 @@ class RoundingNumbers
 
     }
 }
-

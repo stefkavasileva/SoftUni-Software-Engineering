@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MultiplyEvensByOdds
+public class MultiplyEvensByOdds
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char[] inputNum = Console.ReadLine().ToCharArray();
 
@@ -35,6 +30,7 @@ class MultiplyEvensByOdds
                 oddSum += currentNum;
             }
         }
+
         return oddSum;
     }
 
@@ -49,7 +45,7 @@ class MultiplyEvensByOdds
                 evenSum += currentNum;
             }
         }
+
         return evenSum;
     }
 }
-
