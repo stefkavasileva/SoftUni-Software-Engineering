@@ -18,6 +18,7 @@ The course covers source control systems, **Git** and **GitHub** for team collab
 7. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/Arrays"> Arrays - Lab </a>
 8. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/Arrays-Exercises"> Arrays - Exercises </a>
 9. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/Lists"> Lists - Lab </a>
+10. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/ListsExercises"> Lists - Exercises </a>
 
 ## Old exams.
 
