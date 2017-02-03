@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MinMaxSumAverage
+public class MinMaxSumAverage
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -23,7 +19,7 @@ class MinMaxSumAverage
         int sum = nums.Sum();
         int min = nums.Min();
         int max = nums.Max();
-        int firstNum =nums.First();
+        int firstNum = nums.First();
         int lastNum = nums.Last();
         double average = nums.Average();
 
@@ -33,4 +29,3 @@ class MinMaxSumAverage
         Console.WriteLine($"Average = {average}");
     }
 }
-

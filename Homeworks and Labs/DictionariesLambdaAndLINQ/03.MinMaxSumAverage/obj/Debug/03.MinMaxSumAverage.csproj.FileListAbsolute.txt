@@ -3,3 +3,6 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\03.MinMaxSumAverag
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\bin\Debug\03.MinMaxSumAverage.pdb
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\obj\Debug\03.MinMaxSumAverage.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\obj\Debug\03.MinMaxSumAverage.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\bin\Debug\03.MinMaxSumAverage.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\obj\Debug\03.MinMaxSumAverage.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\03.MinMaxSumAverage\obj\Debug\03.MinMaxSumAverage.pdb
