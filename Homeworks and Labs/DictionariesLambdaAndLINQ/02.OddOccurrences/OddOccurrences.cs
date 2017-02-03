@@ -1,44 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OddOccurrences
+public class OddOccurrences
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        string[] words = Console.ReadLine().ToLower().Split().ToArray();
+        string[] words = Console.ReadLine().ToLower().Split();
 
-        Dictionary<string, int> wordsCount = new Dictionary<string, int>();
+        var wordsCount = new Dictionary<string, int>();
 
-        for (int i = 0; i < words.Length; i++)
+        foreach (var word in words)
         {
-            if (wordsCount.ContainsKey(words[i]))
+            if (!wordsCount.ContainsKey(word))
             {
-                wordsCount[words[i]]++;
+                wordsCount.Add(word, 0);
             }
-            else
-            {
-                wordsCount.Add(words[i], 1);
-            }
+
+            wordsCount[word]++;
         }
 
-        List<string> oddWords = new List<string>();
-        GetOddWords(wordsCount, oddWords);
+        var oddWords = wordsCount
+            .Where(w => w.Value % 2 == 1)
+            .ToDictionary(x => x.Key, x => x.Value)
+            .Keys
+            .ToArray();
+
         Console.WriteLine(string.Join(", ", oddWords));
     }
-
-    private static void GetOddWords(Dictionary<string, int> wordsCount, List<string> oddWords)
-    {
-        foreach (var w in wordsCount)
-        {
-            if (w.Value % 2 != 0)
-            {
-                oddWords.Add(w.Key);
-            }
-        }
-    }
 }
-

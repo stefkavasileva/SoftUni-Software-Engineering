@@ -3,3 +3,8 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\02.OddOccurrences\
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\02.OddOccurrences\bin\Debug\02.OddOccurrences.pdb
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\02.OddOccurrences\obj\Debug\02.OddOccurrences.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\02.OddOccurrences\obj\Debug\02.OddOccurrences.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\02.OddOccurrences\bin\Debug\02.OddOccurrences.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\02.OddOccurrences\obj\Debug\02.OddOccurrences.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\02.OddOccurrences\obj\Debug\02.OddOccurrences.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\02.OddOccurrences\bin\Debug\02.OddOccurrences.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\02.OddOccurrences\bin\Debug\02.OddOccurrences.pdb
