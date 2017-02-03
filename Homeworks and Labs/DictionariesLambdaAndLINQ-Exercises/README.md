@@ -79,7 +79,7 @@ On each input line you’ll be given data in format: **"city|country|population"
 - It consists of a variable number of lines and ends when the command **"report"** is received.
 - The input data will always be valid and in the format described. There is no need to check it explicitly.
 
-Output
+####Output
 
 - The output should be printed on the console.
 - Print the aggregated data for each country and city in the format shown below.
