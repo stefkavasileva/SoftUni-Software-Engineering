@@ -4,3 +4,6 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\05.ShortWordsSorte
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\05.ShortWordsSorted\obj\Debug\05.ShortWordsSorted.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\05.ShortWordsSorted\obj\Debug\05.ShortWordsSorted.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ\05.ShortWordsSorted\obj\Debug\05.ShortWordsSorted.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\05.ShortWordsSorted\bin\Debug\05.ShortWordsSorted.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\05.ShortWordsSorted\obj\Debug\05.ShortWordsSorted.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ\05.ShortWordsSorted\obj\Debug\05.ShortWordsSorted.pdb

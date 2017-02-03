@@ -1,29 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ShortWordsSorted
+public class ShortWordsSorted
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char[] separators = ".,:;()[]\"\'\\/!? ".ToCharArray();
+
         string[] words = Console.ReadLine()
             .ToLower()
-            .Split(separators, StringSplitOptions
-            .RemoveEmptyEntries)
+            .Split(separators, StringSplitOptions.RemoveEmptyEntries)
             .ToArray();
 
         words = words.Where(x => x.Length < 5).OrderBy(a => a).ToArray();
         words = words.Distinct().ToArray();
 
-        Console.WriteLine(string.Join(", ",words));
-
-
-
-
+        Console.WriteLine(string.Join(", ", words));
     }
 }
-
