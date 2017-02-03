@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FoldAndSum
+public class FoldAndSum
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int k = nums.Length / 4;
@@ -18,15 +14,11 @@ class FoldAndSum
         int[] middleKELements = nums.Skip(k).Take(2 * k).ToArray();
         int[] arrsConcated = firstKElements.Concat(lastKElements).ToArray();
 
-        PrintElements(middleKELements, arrsConcated);
+        var result = middleKELements.Zip(arrsConcated, (x, y) => x + y);
+
+        Console.WriteLine(string.Join(" ",result));
     }
 
-    private static void PrintElements(int[] middleKELements, int[] arrsConcated)
-    {
-        for (int i = 0; i < middleKELements.Length; i++)
-        {
-            Console.Write(middleKELements[i] + arrsConcated[i] + " ");
-        }
-    }
+   
 }
 
