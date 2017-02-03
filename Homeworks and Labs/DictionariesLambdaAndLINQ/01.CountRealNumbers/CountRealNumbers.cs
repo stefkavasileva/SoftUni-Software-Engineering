@@ -1,36 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CountRealNumbers
+public class CountRealNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        double[] nums = Console.ReadLine().
-            Split().Select(double.Parse).ToArray();
+        double[] numbers = Console.ReadLine().Split().Select(double.Parse).ToArray();
 
-        SortedDictionary<double,int> numsCount = new SortedDictionary<double, int>();
+        var realNumCount = new SortedDictionary<double, int>();
 
-        for (int i = 0; i < nums.Length; i++)
+        foreach (var num in numbers)
         {
-            if (!numsCount.ContainsKey(nums[i]))
+            if (!realNumCount.ContainsKey(num))
             {
-                numsCount.Add(nums[i], 1);
+                realNumCount.Add(num, 0);
             }
-            else
-            {
-                numsCount[nums[i]]++;
-            }
+
+            realNumCount[num]++;
         }
 
-        foreach (var num in numsCount)
+        foreach (var num in realNumCount)
         {
             Console.WriteLine($"{num.Key} -> {num.Value}");
         }
-
     }
 }
-
