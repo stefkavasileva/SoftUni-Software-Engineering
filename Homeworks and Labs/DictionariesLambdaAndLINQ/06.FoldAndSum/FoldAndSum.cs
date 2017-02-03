@@ -18,7 +18,4 @@ public class FoldAndSum
 
         Console.WriteLine(string.Join(" ",result));
     }
-
-   
 }
-
