@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsA
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\bin\Debug\08.LogsAggregator.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\08.LogsAggregator\obj\Debug\08.LogsAggregator.csprojResolveAssemblyReference.cache

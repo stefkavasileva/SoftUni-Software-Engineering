@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.Legen
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\bin\Debug\09.LegendaryFarming.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\09.LegendaryFarming\obj\Debug\09.LegendaryFarming.csprojResolveAssemblyReference.cache

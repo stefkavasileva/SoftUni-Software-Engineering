@@ -1,37 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Phonebook
+public class Phonebook
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputLine = Console.ReadLine();
-        Dictionary<string, string> phonebook = new Dictionary<string, string>();
+
+        var phonebook = new Dictionary<string, string>();
 
         while (!inputLine.Equals("END"))
         {
             string[] comandArgs = inputLine.Split().ToArray();
-            string comand = comandArgs[0];
-            string name = comandArgs[1];
 
-            if (comand.Equals("A"))
+            if (comandArgs[0].Equals("A"))
             {
+                string name = comandArgs[1];
                 string phoneNumber = comandArgs[2];
+
+                if (!phonebook.ContainsKey(name))
+                {
+                    phonebook.Add(name, string.Empty);
+                }
+
                 phonebook[name] = phoneNumber;
             }
             else
             {
+                string name = comandArgs[1];
+
                 if (phonebook.ContainsKey(name))
                 {
-                    Console.WriteLine("{0} -> {1}", name, phonebook[name]);
+                    Console.WriteLine($"{name} -> {phonebook[name]}");
                 }
                 else
                 {
-                    Console.WriteLine("Contact {0} does not exist.", name);
+                    Console.WriteLine($"Contact {name} does not exist.");
                 }
             }
 
@@ -39,4 +44,3 @@ class Phonebook
         }
     }
 }
-

@@ -2,64 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-
-class UserLogs
+public class UserLogs
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        var usersLogs = new SortedDictionary<string, Dictionary<string, int>>();
+        var userLogs = new SortedDictionary<string, Dictionary<string, int>>();
 
         string inputLine = Console.ReadLine();
+
         while (!inputLine.Equals("end"))
         {
-            string[] inputArgs = inputLine.Split();
-            string[] userInfo = inputArgs[2].Split('=');
-            string userName = userInfo[1];
+            string[] lineArgs = inputLine.Split().ToArray();
 
-            if (!usersLogs.ContainsKey(userName))
+            int index = lineArgs[0].IndexOf('=');
+            string ipAddress = lineArgs[0].Substring(index + 1).Trim();
+
+            index = lineArgs[1].IndexOf('=');
+            string message = lineArgs[1].Substring(index + 1).Trim();
+
+            index = lineArgs[2].IndexOf('=');
+            string username = lineArgs[2].Substring(index + 1).Trim();
+
+            if (!userLogs.ContainsKey(username))
             {
-                usersLogs.Add(userName, new Dictionary<string, int>());
+                userLogs.Add(username, new Dictionary<string, int>());
             }
 
-            string[] ipInfo = inputArgs[0].Split('=');
-            string ipAddress = ipInfo[1];
-
-            if (!usersLogs[userName].ContainsKey(ipAddress))
+            if (!userLogs[username].ContainsKey(ipAddress))
             {
-                usersLogs[userName].Add(ipAddress, 1);
+                userLogs[username].Add(ipAddress, 0);
             }
-            else
-            {
-                usersLogs[userName][ipAddress]++;
 
-            }
+            userLogs[username][ipAddress]++;
 
             inputLine = Console.ReadLine();
         }
 
-        foreach (var user in usersLogs)
+        foreach (var user in userLogs)
         {
-            Console.WriteLine("{0}: ", user.Key);
-            int counter = 0;
+            Console.WriteLine($"{user.Key}:");
+
+            StringBuilder curentLine = new StringBuilder();
+
+            int count = 0;
 
             foreach (var ip in user.Value)
             {
-                if (counter < user.Value.Count - 1)
+                if (count == user.Value.Count - 1)
                 {
-                    Console.Write("{0} => {1}, ", ip.Key, ip.Value);
+                    curentLine.Append($"{ip.Key} => {ip.Value}.");
                 }
                 else
                 {
-                    Console.Write("{0} => {1}.", ip.Key, ip.Value);
-
+                    curentLine.Append($"{ip.Key} => {ip.Value}, ");
                 }
-                counter++;
+
+                count++;
             }
 
-            Console.WriteLine();
+            Console.WriteLine(curentLine.ToString());
         }
     }
 }
-

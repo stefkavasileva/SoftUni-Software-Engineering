@@ -1,56 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class PopulationCounter
+public class PopulationCounter
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        var countryPopulation = new Dictionary<string, Dictionary<string, long>>();
         string inputLine = Console.ReadLine();
+
+        var population = new Dictionary<string, Dictionary<string, long>>();
 
         while (!inputLine.Equals("report"))
         {
-            string[] comandArgs = inputLine.Split('|').ToArray();
-            string country = comandArgs[1];
-            string town = comandArgs[0];
-            long populationInTown = long.Parse(comandArgs[2]);
+            string[] lineArgs = inputLine.Split('|').ToArray();
 
-            if (!countryPopulation.ContainsKey(country))
+            string country = lineArgs[1];
+            string city = lineArgs[0];
+            int populationCount = int.Parse(lineArgs[2]);
+
+            if (!population.ContainsKey(country))
             {
-                countryPopulation.Add(country, new Dictionary<string, long>());
+                population.Add(country, new Dictionary<string, long>());
             }
 
-            if (!countryPopulation[country].ContainsKey(town))
+            if (!population[country].ContainsKey(city))
             {
-                countryPopulation[country].Add(town, populationInTown);
+                population[country].Add(city, 0);
             }
-            else
-            {
-                countryPopulation[country][town] += populationInTown;
-            }
+
+            population[country][city] += populationCount;
 
             inputLine = Console.ReadLine();
         }
 
+        population = population
+             .OrderByDescending(x => x.Value.Values.Sum())
+             .ToDictionary(x => x.Key, x => x.Value);
 
-        countryPopulation = countryPopulation
-                .OrderByDescending(c => c.Value.Values.Sum(t => t))
-                .ToDictionary(x => x.Key, x => x.Value);
-
-        foreach (var country in countryPopulation)
+        foreach (var country in population)
         {
-            var towns = country.Value.OrderByDescending(c => c.Value).ToDictionary(x => x.Key, x => x.Value);
-            Console.WriteLine("{0} (total population: {1})", country.Key, towns.Values.Sum(x => x));
+            Console.WriteLine($"{country.Key} (total population: {country.Value.Values.Sum()})");
 
-            foreach (var town in towns)
+            foreach (var city in country.Value.OrderByDescending(x => x.Value))
             {
-                Console.WriteLine("=>{0}: {1}", town.Key, town.Value);
+                Console.WriteLine($"=>{city.Key}: {city.Value}");
             }
-
         }
     }
 }
-

@@ -1,89 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-
-class SerbianUnleashed
+public class SerbianUnleashed
 {
-    static void Main(string[] args)
+    public static void Main()
     {
+        string pattern = @"(([A-Za-z]+\s){1,})@(([A-Za-z]+\s){1,})(\d+)\s(\d+)";
+
         string inputLine = Console.ReadLine();
-        var venues = new Dictionary<string, Dictionary<string, decimal>>();
 
-        while (!inputLine.ToLower().Equals("end"))
+        var venues = new Dictionary<string, Dictionary<string, int>>();
+
+        while (!inputLine.Equals("End"))
         {
+            Regex reg = new Regex(pattern);
+            Match match = reg.Match(inputLine);
 
-            string[] inputArgs = inputLine.Split('@');
-            string singer = string.Empty;
-            string venueName = string.Empty;
-            decimal totalPrice = 0.0m;
-
-            try
+            if (match.Success)
             {
+                string singer = match.Groups[1].Value.Trim();
+                string venue = match.Groups[3].Value.Trim();
+                decimal ticketsPrice = decimal.Parse(match.Groups[5].Value);
+                int ticketsCount = int.Parse(match.Groups[6].Value);
 
-                singer = inputArgs[0];
+                int income = (int)(ticketsCount * ticketsPrice);
 
-                if (singer.Substring(singer.Length-1)!=" ")
+                if (!venues.ContainsKey(venue))
                 {
-                    inputLine = Console.ReadLine();
-                    continue;
+                    venues.Add(venue, new Dictionary<string, int>());
                 }
 
-                string[] venueArgs = inputArgs[1].Split();               
-
-                if (venueArgs.Length > 3)
+                if (!venues[venue].ContainsKey(singer))
                 {
-                    for (int i = 0; i < venueArgs.Length-2; i++)
-                    {
-                        venueName += venueArgs[i] + " ";
-                    }   
-                }
-                else
-                {
-                    venueName = venueArgs[0];
+                    venues[venue].Add(singer, 0);
                 }
 
-                decimal ticketPrice = decimal.Parse(venueArgs[venueArgs.Length - 2]);
-                int ticketCount = int.Parse(venueArgs[venueArgs.Length - 1]);
-                totalPrice = ticketPrice * ticketCount;
-            }
-            catch (Exception)
-            {
-                inputLine = Console.ReadLine();
-                continue;
-            }
-
-
-            if (!venues.ContainsKey(venueName))
-            {
-                venues.Add(venueName, new Dictionary<string, decimal>());
-            }
-
-            if (!venues[venueName].ContainsKey(singer))
-            {
-                venues[venueName].Add(singer, totalPrice);
-            }
-            else
-            {
-                venues[venueName][singer] += totalPrice;
+                venues[venue][singer] += income;
             }
 
             inputLine = Console.ReadLine();
         }
 
-        foreach (var town in venues)
+        foreach (var venue in venues)
         {
-            Console.WriteLine(town.Key);
-            Dictionary<string, decimal> singer = town.Value.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+            Console.WriteLine(venue.Key);
 
-            foreach (var s in singer)
+            foreach (var singer in venue.Value.OrderByDescending(x => x.Value))
             {
-                Console.WriteLine("#  {0}-> {1}", s.Key, s.Value);
+                Console.WriteLine($"#  {singer.Key} -> {singer.Value}");
             }
-
         }
     }
 }
-

@@ -1,49 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LogsAggregator
+public class LogsAggregator
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-        var logs = new SortedDictionary<string, SortedDictionary<string, int>>();
+        int count = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < n; i++)
+        var users = new SortedDictionary<string, SortedDictionary<string, int>>();
+
+        for (int i = 0; i < count; i++)
         {
-            string[] inputLine = Console.ReadLine().Split();
-            string name = inputLine[1];
-            string ipAddress = inputLine[0];
-            int duration = int.Parse(inputLine[2]);
+            string[] lineArgs = Console.ReadLine().Split().ToArray();
 
-            if (!logs.ContainsKey(name))
+            string username = lineArgs[1];
+            string ipAddress = lineArgs[0];
+            int duration = int.Parse(lineArgs[2]);
+
+            if (!users.ContainsKey(username))
             {
-                logs.Add(name, new SortedDictionary<string, int>());
+                users.Add(username, new SortedDictionary<string, int>());
             }
 
-            if (!logs[name].ContainsKey(ipAddress))
+            if (!users[username].ContainsKey(ipAddress))
             {
-                logs[name].Add(ipAddress, duration);
+                users[username].Add(ipAddress, 0);
             }
-            else
-            {
-                logs[name][ipAddress] += duration;
-            }
+
+            users[username][ipAddress] += duration;
         }
 
-
-        foreach (var l in logs)
+        foreach (var user in users)
         {
-            SortedDictionary<string, int> ipLogs = l.Value;
-            Console.WriteLine("{0}: {1} [{2}]",
-                l.Key,
-                ipLogs.Values.Sum(x => x),
-                string.Join(", ", ipLogs.Keys));
-
+            Console.WriteLine($"{user.Key}: {user.Value.Values.Sum()} [{string.Join(", ",user.Value.Keys)}]");
         }
     }
 }
-

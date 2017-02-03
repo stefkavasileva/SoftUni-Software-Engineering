@@ -1,94 +1,95 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class HandsOfCards
+public class HandsOfCards
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        Dictionary<string, List<string>> hands = new Dictionary<string, List<string>>();
-        char[] separators = ", ".ToCharArray();
         string inputLine = Console.ReadLine();
+
+        var peopleScore = new Dictionary<string, List<string>>();
+
         while (!inputLine.Equals("JOKER"))
         {
-            string[] inputArgs = inputLine.Split(':');
-            string name = inputArgs[0];
-            string[] hand = inputArgs[1].Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            if (!hands.ContainsKey(name))
+            string[] lineArgs = inputLine.Split(':').ToArray();
+            string personName = lineArgs[0].Trim();
+
+            List<string> cards = lineArgs[1]
+                .Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
+            if (!peopleScore.ContainsKey(personName))
             {
-                hands.Add(name, new List<string>());
+                peopleScore.Add(personName, new List<string>());
             }
 
-            hands[name].AddRange(hand);
+            peopleScore[personName].AddRange(cards);
+
             inputLine = Console.ReadLine();
         }
 
-
-        foreach (var p in hands)
+        foreach (var score in peopleScore)
         {
-            List<string> cards = p.Value.Distinct().ToList();
-            int sum = 0;
-            for (int i = 0; i < cards.Count; i++)
-            {
-                string suitAsStr = cards[i].Substring(cards[i].Length - 1);
-                string rankAsStr = cards[i].Substring(0, cards[i].Length - 1);
-                int rank = CalRank(rankAsStr);
-                int suit = CalSuit(suitAsStr);
-                sum += rank * suit;
-            }
-
-            Console.WriteLine("{0}: {1}", p.Key, sum);
-
+            var peopleHands = score.Value.Distinct().ToList();
+            int value = GetValue(peopleHands);
+            Console.WriteLine($"{score.Key}: {value}");
         }
     }
 
-    private static int CalSuit(string suitAsStr)
+    private static int GetValue(List<string> cards)
     {
-        int suit = 0;
-        switch (suitAsStr)
+        int value = 0;
+
+        for (int i = 0; i < cards.Count; i++)
+        {
+            int faceCardpower = GetFaceCardPower(cards[i].Substring(0, cards[i].Length - 1));
+            int suitPower = GetSuitPower(cards[i].Substring(cards[i].Length - 1));
+
+            value += faceCardpower * suitPower;
+        }
+
+        return value;
+    }
+
+    private static int GetFaceCardPower(string faceCard)
+    {
+        try
+        {
+            return int.Parse(faceCard);
+        }
+        catch (Exception)
+        {
+            switch (faceCard)
+            {
+                case "J":
+                    return 11;
+                case "Q":
+                    return 12;
+                case "K":
+                    return 13;
+                case "A":
+                    return 14;
+                default:
+                    return 0;
+            }
+        }
+    }
+
+    private static int GetSuitPower(string suit)
+    {
+        switch (suit)
         {
             case "S":
-                suit = 4;
-                break;
+                return 4;
             case "H":
-                suit = 3;
-                break;
+                return 3;
             case "D":
-                suit = 2;
-                break;
+                return 2;
+            case "C":
+                return 1;
             default:
-                suit = 1;
-                break;
+                return 0;
         }
-        return suit;
-    }
-
-    private static int CalRank(string rankAsStr)
-    {
-        int rank = 0;
-
-        switch (rankAsStr)
-        {
-            case "J":
-                rank = 11;
-                break;
-            case "Q":
-                rank = 12;
-                break;
-            case "K":
-                rank = 13;
-                break;
-            case "A":
-                rank = 14;
-                break;
-            default:
-                rank = int.Parse(rankAsStr);
-                break;
-        }
-        return rank;
     }
 }
-

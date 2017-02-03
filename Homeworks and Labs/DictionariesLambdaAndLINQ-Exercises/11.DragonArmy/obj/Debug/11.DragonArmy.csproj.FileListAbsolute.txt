@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.Drago
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.exe
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\bin\Debug\11.DragonArmy.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\11.DragonArmy\obj\Debug\11.DragonArmy.csprojResolveAssemblyReference.cache

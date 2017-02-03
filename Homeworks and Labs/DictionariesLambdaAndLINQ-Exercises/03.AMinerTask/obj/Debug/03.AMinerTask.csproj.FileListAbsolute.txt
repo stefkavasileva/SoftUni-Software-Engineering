@@ -1,1 +1,6 @@
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\bin\Debug\03.AMinerTask.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\bin\Debug\03.AMinerTask.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\bin\Debug\03.AMinerTask.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\bin\Debug\03.AMinerTask.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\obj\Debug\03.AMinerTask.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\03.AMinerTask\obj\Debug\03.AMinerTask.pdb

@@ -1,129 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DragonArmy
+public class DragonArmy
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        int numsOfDragons = int.Parse(Console.ReadLine());
+        int dragonsCount = int.Parse(Console.ReadLine());
 
-        var dragons = new Dictionary<string, Dictionary<string, List<int>>>();
+        var dragons = new Dictionary<string, SortedDictionary<string, int[]>>();
 
-        for (int i = 0; i < numsOfDragons; i++)
+        for (int i = 0; i < dragonsCount; i++)
         {
-            string[] dragonArgs = Console.ReadLine()
-                .Split().ToArray();
+            string[] lineArgs = Console.ReadLine().Split().ToArray();
 
-            string dragonType = dragonArgs[0];
-            string dragonName = dragonArgs[1];
-            int damage = GetValidDamageValue(dragonArgs);
-            int health = GetValidHealthValue(dragonArgs);
-            int armor = GetValidArmorValue(dragonArgs);
+            string dragonType = lineArgs[0];
+            string dragonName = lineArgs[1];
 
-            List<int> dragonState = new List<int>
-            {
-                damage,health,armor
-            };
+            int damage = GetValue(lineArgs[2]) < 0 ? 45 : GetValue(lineArgs[2]);
+            int health = GetValue(lineArgs[3]) < 0 ? 250 : GetValue(lineArgs[3]);
+            int armor = GetValue(lineArgs[4]) < 0 ? 10 : GetValue(lineArgs[4]);
+            int[] dragonState = new int[] { damage, health, armor };
 
             if (!dragons.ContainsKey(dragonType))
             {
-                dragons[dragonType] = new Dictionary<string, List<int>>();
+                dragons.Add(dragonType, new SortedDictionary<string, int[]>());
             }
 
             if (!dragons[dragonType].ContainsKey(dragonName))
             {
-                dragons[dragonType].Add(dragonName, dragonState);
-            }
-            else
-            {
-                dragons[dragonType][dragonName] = dragonState;
+                dragons[dragonType].Add(dragonName, new int[3]);
             }
 
+            dragons[dragonType][dragonName][0] = damage;
+            dragons[dragonType][dragonName][1] = health;
+            dragons[dragonType][dragonName][2] = armor;
         }
 
         foreach (var dragonType in dragons)
         {
-            double totalDamage = 0;
-            double totalHealt = 0;
-            double totalArmor = 0;
-            int dragonsCount = 0;
+            var damageAverage = dragonType.Value.Select(x => x.Value[0]).ToArray().Average();
+            var healthAverage = dragonType.Value.Select(x => x.Value[1]).ToArray().Average();
+            var armorAverage = dragonType.Value.Select(x => x.Value[2]).ToArray().Average();
+
+            Console.WriteLine($"{dragonType.Key}::({damageAverage:f2}/{healthAverage:f2}/{armorAverage:f2})");
+
             foreach (var dragon in dragonType.Value)
             {
-                List<int> dragonState = dragon.Value.ToList();
-                totalDamage += dragonState[0];
-                totalHealt += dragonState[1];
-                totalArmor += dragonState[2];
-                dragonsCount++;
+                Console.WriteLine($"-{dragon.Key} -> damage: {dragon.Value[0]}, health: {dragon.Value[1]}, armor: {dragon.Value[2]}");
             }
-
-            Console.Write($"{dragonType.Key}::");
-            Console.Write($"({totalDamage / dragonsCount:f2}/");
-            Console.Write($"{totalHealt / dragonsCount:f2}/");
-            Console.WriteLine($"{totalArmor / dragonsCount:f2})");
-
-            PrintDragonState(dragonType);
-        }
-
-    }
-
-    private static void PrintDragonState(KeyValuePair<string, Dictionary<string, List<int>>> dragonType)
-    {
-        foreach (var dragon in dragonType.Value.OrderBy(x => x.Key))
-        {
-            Console.Write($"-{dragon.Key} -> ");
-            Console.Write($"damage: {dragon.Value[0]}, ");
-            Console.Write($"health: {dragon.Value[1]}, ");
-            Console.WriteLine($"armor: {dragon.Value[2]}");
         }
     }
 
-    private static int GetValidArmorValue(string[] dragonArgs)
+    private static int GetValue(string state)
     {
-        int armor;
-        if (dragonArgs[4] != "null")
+        try
         {
-            armor = int.Parse(dragonArgs[4]);
+            return int.Parse(state);
         }
-        else
+        catch (Exception)
         {
-            armor = 10;
+            return -1;
         }
-
-        return armor;
-    }
-
-    private static int GetValidHealthValue(string[] dragonArgs)
-    {
-        int health;
-        if (dragonArgs[3] != "null")
-        {
-            health = int.Parse(dragonArgs[3]);
-        }
-        else
-        {
-            health = 250;
-        }
-
-        return health;
-    }
-
-    private static int GetValidDamageValue(string[] dragonArgs)
-    {
-        int damage;
-        if (dragonArgs[2] != "null")
-        {
-            damage = int.Parse(dragonArgs[2]);
-        }
-        else
-        {
-            damage = 45;
-        }
-
-        return damage;
     }
 }
-

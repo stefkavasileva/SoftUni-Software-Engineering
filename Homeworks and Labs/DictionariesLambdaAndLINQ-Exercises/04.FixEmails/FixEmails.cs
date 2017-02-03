@@ -1,44 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FixEmails
+public class FixEmails
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        Dictionary<string, string> contacts = new Dictionary<string, string>();
-        int counter = 0;
-        string name = string.Empty;
+        var contacts = new Dictionary<string, string>();
 
-        string inputLine = Console.ReadLine();
-
-        while (!inputLine.Equals("stop"))
+        while (true)
         {
-            if (counter % 2 == 0)
-            {
-                contacts[inputLine] = string.Empty;
-                name = inputLine;
-            }
-            else
-            {
-                contacts[name] = inputLine;
-            }
-            counter++;
-            inputLine = Console.ReadLine();
-        }
+            string name = Console.ReadLine();
 
-        foreach (KeyValuePair<string, string> c in contacts)
-        {
-            string[] emailArgs = c.Value.ToLower().Split('.');
-            string domain = emailArgs[1];
+            if (name.Equals("stop")) break;
+
+            string email = Console.ReadLine();
+
+            string domain = email.Substring(email.Length - 2).ToLower();
+
             if (!domain.Equals("us") && !domain.Equals("uk"))
             {
-                Console.WriteLine("{0} -> {1}", c.Key, c.Value);
+                if (!contacts.ContainsKey(name))
+                {
+                    contacts.Add(name, string.Empty);
+                }
+
+                contacts[name] = email;
             }
+        }
+
+        foreach (var contact in contacts)
+        {
+            Console.WriteLine($"{contact.Key} -> {contact.Value}");
         }
     }
 }
-

@@ -1,49 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class AMinerTask
+public class AMinerTask
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        Dictionary<string, int> resourses = new Dictionary<string, int>();
-        int counter = 0;
-        string key = string.Empty;
-        string input = Console.ReadLine();
+        var resourceQuantity = new Dictionary<string, int>();
 
-        while (!input.Equals("stop"))
+        while (true)
         {
+            string resource = Console.ReadLine();
 
-            if (counter % 2 == 0)
-            {
-                try
-                {
-                    resourses.Add(input, 0);
-                    key = input;
-                }
-                catch (Exception)
-                {
-                    key = input;
-                }
+            if (resource.Equals("stop")) break;
 
-            }
-            else
+            int quantity = int.Parse(Console.ReadLine());
+
+            if (!resourceQuantity.ContainsKey(resource))
             {
-                resourses[key] += int.Parse(input);
+                resourceQuantity.Add(resource, 0);
             }
 
-            counter++;
-
-            input = Console.ReadLine();
+            resourceQuantity[resource] += quantity;
         }
 
-        foreach (KeyValuePair<string, int> resours in resourses)
+        foreach (var resource in resourceQuantity)
         {
-            Console.WriteLine("{0} -> {1}", resours.Key, resours.Value);
+            Console.WriteLine($"{resource.Key} -> {resource.Value}");
         }
     }
 }
-

@@ -1,64 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PhonebookUpgrade
+public class PhonebookUpgrade
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string inputLine = Console.ReadLine();
+
         var phonebook = new SortedDictionary<string, string>();
 
         while (!inputLine.Equals("END"))
         {
             string[] comandArgs = inputLine.Split().ToArray();
-            string action = comandArgs[0];        
-            if (action.Equals("A"))
+
+            if (comandArgs[0].Equals("A"))
             {
-                AddEntryToPhonebook(phonebook, comandArgs);
+                string name = comandArgs[1];
+                string phoneNumber = comandArgs[2];
+
+                if (!phonebook.ContainsKey(name))
+                {
+                    phonebook.Add(name, string.Empty);
+                }
+
+                phonebook[name] = phoneNumber;
             }
-            else if (action.Equals("S"))
+            else if (comandArgs[0].Equals("S"))
             {
-                SearchByGivenName(phonebook, comandArgs);
+                string name = comandArgs[1];
+
+                if (phonebook.ContainsKey(name))
+                {
+                    Console.WriteLine($"{name} -> {phonebook[name]}");
+                }
+                else
+                {
+                    Console.WriteLine($"Contact {name} does not exist.");
+                }
             }
-            else if (action.Equals("ListAll"))
+            else
             {
-                PrintPhonebook(phonebook);
+                foreach (var contact in phonebook)
+                {
+                    Console.WriteLine($"{contact.Key} -> {contact.Value}");
+                }
             }
 
             inputLine = Console.ReadLine();
         }
     }
-
-    private static void PrintPhonebook(SortedDictionary<string, string> phonebook)
-    {
-        foreach (var contact in phonebook)
-        {
-            Console.WriteLine($"{contact.Key} -> {contact.Value}");
-        }
-    }
-
-    private static void SearchByGivenName(SortedDictionary<string, string> phonebook, string[] comandArgs)
-    {
-        string name = comandArgs[1];
-        if (phonebook.ContainsKey(name))
-        {
-            Console.WriteLine("{0} -> {1}", name, phonebook[name]);
-        }
-        else
-        {
-            Console.WriteLine("Contact {0} does not exist.", name);
-        }
-    }
-
-    private static void AddEntryToPhonebook(SortedDictionary<string, string> phonebook, string[] comandArgs)
-    {
-        string name = comandArgs[1];
-        string phoneNumber = comandArgs[2];
-        phonebook[name] = phoneNumber;
-    }
 }
-

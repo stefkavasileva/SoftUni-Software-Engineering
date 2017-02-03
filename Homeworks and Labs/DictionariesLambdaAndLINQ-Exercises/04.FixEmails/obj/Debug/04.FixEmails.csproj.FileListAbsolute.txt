@@ -1,1 +1,6 @@
 C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\bin\Debug\04.FixEmails.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\bin\Debug\04.FixEmails.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\bin\Debug\04.FixEmails.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\bin\Debug\04.FixEmails.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\obj\Debug\04.FixEmails.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\04.FixEmails\obj\Debug\04.FixEmails.pdb

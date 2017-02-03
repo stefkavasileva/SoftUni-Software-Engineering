@@ -1,92 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LegendaryFarming
+public class LegendaryFarming
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        string[] materialsArgs = Console.ReadLine()
-            .ToLower().Split().ToArray();
-        Dictionary<string, int> materials = new Dictionary<string, int>();
+        var keyMaterialesNames = new Dictionary<string, string>();
+        keyMaterialesNames.Add("shards", "Shadowmourne");
+        keyMaterialesNames.Add("fragments", "Valanyr");
+        keyMaterialesNames.Add("motes", "Dragonwrath");
 
-        materials.Add("shards", 0);
-        materials.Add("fragments", 0);
-        materials.Add("motes", 0);
-        int count = 0;
-        while (count != 10)
+        string[] lineArgs = Console.ReadLine().ToLower().Split().ToArray();
+
+        var junkMateriales = new SortedDictionary<string, int>();
+        var keyMateriales = new Dictionary<string, int>();
+
+        keyMateriales.Add("shards", 0);
+        keyMateriales.Add("fragments", 0);
+        keyMateriales.Add("motes", 0);
+
+        while (true)
         {
-            string legendary = string.Empty;
+            string[] currentMaterials = lineArgs.Where((x, i) => i % 2 == 1).ToArray();
+            int[] quantity = lineArgs.Where((x, i) => i % 2 == 0).Select(int.Parse).ToArray();
 
-            for (int i = 0; i < materialsArgs.Length; i += 2)
+            bool hasObtained = false;
+
+            for (int i = 0; i < currentMaterials.Length; i++)
             {
-                int materialsCount = int.Parse(materialsArgs[i]);
+                string currentMaterial = currentMaterials[i];
 
-                if (!materials.ContainsKey(materialsArgs[i + 1]))
+                if (keyMaterialesNames.Keys.Contains(currentMaterial))
                 {
-                    materials.Add(materialsArgs[i + 1], 0);
+                    keyMateriales[currentMaterial] += quantity[i];
+
+                    if (keyMateriales.Values.Any(x => x >= 250))
+                    {
+                        hasObtained = true;
+                        break;
+                    }
+                }
+                else
+                {
+                    if (!junkMateriales.ContainsKey(currentMaterial))
+                    {
+                        junkMateriales.Add(currentMaterial, 0);
+                    }
+
+                    junkMateriales[currentMaterial] += quantity[i];
                 }
 
-                materials[materialsArgs[i + 1]] += materialsCount;
-
-                legendary = HasLegendary(materials);
-
-                if (legendary != string.Empty)
-                {            
+                if (hasObtained)
+                {
                     break;
                 }
             }
 
-            if (legendary != string.Empty)
+            if (hasObtained)
             {
-                Console.WriteLine($"{legendary} obtained!");
                 break;
             }
 
-            materialsArgs = Console.ReadLine()
-            .ToLower().Split().ToArray();
-            count++;
+            lineArgs = Console.ReadLine().ToLower().Split().ToArray();
         }
 
+        var obtainedElementName = keyMateriales
+            .Where(x => x.Value >= 250)
+            .First()
+            .Key
+            .ToString();
 
-        var keyMaterials = materials.Take(3).OrderByDescending(x => x.Value).ThenBy(x => x.Key).ToList();
-        var junkMaterials = materials.Skip(3).OrderBy(x => x.Key).ToList();
+        keyMateriales[obtainedElementName] -= 250;
 
-        foreach (var item in keyMaterials)
+        keyMateriales = keyMateriales
+            .OrderByDescending(x => x.Value)
+            .ThenBy(x => x.Key)
+            .ToDictionary(x => x.Key, x => x.Value);
+
+        Console.WriteLine($"{keyMaterialesNames[obtainedElementName]} obtained!");
+
+        var result = keyMateriales.Concat(junkMateriales).ToDictionary(x => x.Key, x => x.Value);
+
+        foreach (var material in result)
         {
-            Console.WriteLine($"{item.Key}: {item.Value}");
+            Console.WriteLine($"{material.Key}: {material.Value}");
         }
-
-        foreach (var item in junkMaterials)
-        {
-            Console.WriteLine($"{item.Key}: {item.Value}");
-        }
-
-    }
-
-    private static string HasLegendary(Dictionary<string, int> materials)
-    {
-        string legendary = string.Empty;
-        if (materials["shards"] >= 250)
-        {
-            materials["shards"] -= 250;
-            legendary = "Shadowmourne";
-        }
-        else if (materials["fragments"] >= 250)
-        {
-            materials["fragments"] -= 250;
-            legendary = "Valanyr";
-        }
-        else if (materials["motes"] >= 250)
-        {
-            materials["motes"] -= 250;
-            legendary = "Dragonwrath";
-        }
-
-        return legendary;
     }
 }
-
