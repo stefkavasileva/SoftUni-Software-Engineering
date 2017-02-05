@@ -11,3 +11,4 @@ The course covers source control systems, **Git** and **GitHub** for team collab
 ## Exercises and labs.
 1. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Programming%20Fundamentals%20-%20Extended%20-%20Exercises/DataTypesTypeConversion-Lab" > Data Types: Numeral Types and Type Conversion </a> 
 2. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Programming%20Fundamentals%20-%20Extended%20-%20Exercises/DataTypesTextOtherTypesLab" > Data Types: Text and Other Types, Variables - Lab </a> 
+3. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/DataTypesAndVariables-Exercises" > Data Types and Variables-Exercises</a>
