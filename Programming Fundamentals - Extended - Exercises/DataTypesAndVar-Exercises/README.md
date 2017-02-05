@@ -1,5 +1,9 @@
 #<p align="center"> Data Type And Variables - Exercises <p>
 
+---
+<a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/DataTypesAndVariables-Exercises" > Data Types and Variables-Exercises</a>
+---
+
 ## 01.Practice Integer Numbers
 
 ####**Problem Description**
