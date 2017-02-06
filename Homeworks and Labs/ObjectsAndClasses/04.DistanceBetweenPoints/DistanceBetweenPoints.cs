@@ -1,50 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 public class Point
 {
-    public double X { get; set; }
-    public double Y { get; set; }
-
-    public static double CalDistance(Point p1, Point p2)
+    public Point(double x, double y)
     {
-        double distance = 0.0;
-        double sideA = p1.X - p2.X;
-        double sideB = p1.Y - p2.Y;
-        distance = Math.Sqrt((sideA * sideA) + (sideB * sideB));
-
-        return distance;
+        this.X = x;
+        this.Y = y;
     }
 
+    public double X { get; set; }
+
+    public double Y { get; set; }
 }
 
-class DistanceBetweenPoints
+public class DistanceBetweenPoints
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        int[] coordinatesP1 = Console.ReadLine().Split().Select(int.Parse).ToArray();
-        int[] coordinatesP2 = Console.ReadLine().Split().Select(int.Parse).ToArray();
-        Point p1 = new Point();
-        Point p2 = new Point();
-        p1.X = coordinatesP1[0];
-        p1.Y = coordinatesP1[1];
-        p2.X = coordinatesP2[0];
-        p2.Y = coordinatesP2[1];
-        double distance = CalDistance(p1, p2);
+        int[] firstPointCoordinates = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        int[] secondPointCoordinates = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+        Point firstPoint = new Point(firstPointCoordinates[0], firstPointCoordinates[1]);
+        Point secondPoint = new Point(secondPointCoordinates[0], secondPointCoordinates[1]);
+
+        double distance = CalDistanceBetweenTwoPoints(firstPoint, secondPoint);
+
         Console.WriteLine($"{distance:f3}");
     }
 
-    public static double CalDistance(Point p1, Point p2)
+    public static double CalDistanceBetweenTwoPoints(Point firstPoint, Point secondPoint)
     {
-        double distance = 0.0;
-        double sideA = p1.X - p2.X;
-        double sideB = p1.Y - p2.Y;
-        distance = Math.Sqrt((sideA * sideA) + (sideB * sideB));
+        double sideA = firstPoint.X - secondPoint.X;
+        double sideB = firstPoint.Y - secondPoint.Y;
+
+        double distance = Math.Sqrt((sideA * sideA) + (sideB * sideB));
 
         return distance;
     }
 }
-
