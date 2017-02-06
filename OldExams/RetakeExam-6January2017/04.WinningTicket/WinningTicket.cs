@@ -23,9 +23,9 @@ public class WinningTicket
             }
 
             string leftPart = tickets[i].Substring(0, 10);
-            string rightPart = tickets[i].Substring(11);
+            string rightPart = tickets[i].Substring(10);
 
-            Regex reg = new Regex(@"[@|$|#|^]{6,10}");
+            Regex reg = new Regex(@"[@]{6,10}|[#]{6,10}|[$]{6,10}|[\^]{6,10}");
 
             Match leftMatch = reg.Match(leftPart);
             Match rightMatch = reg.Match(rightPart);
@@ -37,21 +37,34 @@ public class WinningTicket
                 int leftLenght = leftMatch.Groups[0].Value.Length;
                 int rightLenght = rightMatch.Groups[0].Value.Length;
 
-                if (leftLenght != rightLenght)
+                int uniqLeftElements = leftMatch.Groups[0].Value.Distinct().Count();
+                int uniqRightElements = rightMatch.Groups[0].Value.Distinct().Count();
+
+                char symbolLeft = leftMatch.Groups[0].Value.Distinct().ToArray().First();
+                char symbolRight = rightMatch.Groups[0].Value.Distinct().ToArray().First();
+
+                if (uniqLeftElements > 1 || uniqRightElements > 1)
                 {
-                    results.Add("invalid ticket");
+                    result = $"ticket \"{tickets[i]}\" - no match";
+                    results.Add(result);
                     continue;
                 }
 
-                string symbol = leftMatch.Groups[0].Value.Substring(0, 1);
-
-                if (leftLenght == 10)
+                if (!symbolLeft.Equals(symbolRight))
                 {
-                    result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbol} Jackpot!";
+                    result = $"ticket \"{tickets[i]}\" - no match";
+                    results.Add(result);
+                    continue;
                 }
-                else if (leftLenght >= 6)
+
+                if (leftLenght == 10 && rightLenght == 10)
                 {
-                    result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbol}";
+                    result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbolLeft} Jackpot!";
+                }
+                else if (leftLenght >= 6 && rightLenght >= 6)
+                {
+                    int lenght = leftLenght > rightLenght ? rightLenght : leftLenght;
+                    result = $"ticket \"{tickets[i]}\" - {lenght}{symbolLeft}";
                 }
             }
             else
