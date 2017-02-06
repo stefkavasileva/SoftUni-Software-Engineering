@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RandomizeWords
+public class RandomizeWords
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        string[] words = Console.ReadLine().Split().ToArray();
+        List<string> words = Console.ReadLine().Split().ToList();
 
         Random rand = new Random();
 
-        for (int first = 0; first < words.Length; first++)
+        for (int currentWord = 0; currentWord < words.Count; currentWord++)
         {
-            int second = rand.Next(0, words.Length);
-            string old = words[first];
-            words[first] = words[second];
-            words[second] = old;
+            int secondWordIndex = rand.Next(0, words.Count);
+            string oldWord = words[currentWord];
+
+            words[currentWord] = words[secondWordIndex];
+            words[secondWordIndex] = oldWord;
         }
 
-        Console.WriteLine(string.Join("\r\n", words));
+        Console.WriteLine(string.Join(Environment.NewLine,words));
     }
 }
-
