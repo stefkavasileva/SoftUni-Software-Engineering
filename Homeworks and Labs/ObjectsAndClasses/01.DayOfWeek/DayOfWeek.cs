@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DayOfWeek
+public class DayOfWeek
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string dataAsStr = Console.ReadLine();
         DateTime date = DateTime.ParseExact(dataAsStr, "d-M-yyyy", CultureInfo.InvariantCulture);
@@ -16,5 +11,3 @@ class DayOfWeek
         Console.WriteLine(dayOfWeek);
     }
 }
-
-
