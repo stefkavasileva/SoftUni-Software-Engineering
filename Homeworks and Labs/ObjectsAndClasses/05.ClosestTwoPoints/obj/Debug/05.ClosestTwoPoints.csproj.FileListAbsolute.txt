@@ -1,1 +1,2 @@
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\05.ClosestTwoPoints\bin\Debug\05.ClosestTwoPoints.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\05.ClosestTwoPoints\bin\Debug\05.ClosestTwoPoints.exe.config
