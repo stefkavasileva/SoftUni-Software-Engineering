@@ -37,27 +37,14 @@ public class WinningTicket
                 int leftLenght = leftMatch.Groups[0].Value.Length;
                 int rightLenght = rightMatch.Groups[0].Value.Length;
 
-                int uniqLeftElements = leftMatch.Groups[0].Value.Distinct().Count();
-                int uniqRightElements = rightMatch.Groups[0].Value.Distinct().Count();
-
                 char symbolLeft = leftMatch.Groups[0].Value.Distinct().ToArray().First();
                 char symbolRight = rightMatch.Groups[0].Value.Distinct().ToArray().First();
 
-                if (uniqLeftElements > 1 || uniqRightElements > 1)
-                {
-                    result = $"ticket \"{tickets[i]}\" - no match";
-                    results.Add(result);
-                    continue;
-                }
-
                 if (!symbolLeft.Equals(symbolRight))
                 {
-                    result = $"ticket \"{tickets[i]}\" - no match";
-                    results.Add(result);
-                    continue;
+                    result = $"ticket \"{tickets[i]}\" - no match";                    
                 }
-
-                if (leftLenght == 10 && rightLenght == 10)
+                else if (leftLenght == 10 && rightLenght == 10)
                 {
                     result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbolLeft} Jackpot!";
                 }
