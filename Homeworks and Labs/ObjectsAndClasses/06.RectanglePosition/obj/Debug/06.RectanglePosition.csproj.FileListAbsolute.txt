@@ -1,1 +1,2 @@
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\06.RectanglePosition\bin\Debug\06.RectanglePosition.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\06.RectanglePosition\bin\Debug\06.RectanglePosition.exe.config
