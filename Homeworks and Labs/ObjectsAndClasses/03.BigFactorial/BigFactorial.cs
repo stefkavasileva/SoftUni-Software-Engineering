@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BigFactorial
+public class BigFactorial
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int num = int.Parse(Console.ReadLine());
 
@@ -22,4 +17,3 @@ class BigFactorial
         Console.WriteLine(factorial);
     }
 }
-
