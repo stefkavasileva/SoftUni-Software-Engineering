@@ -1,68 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-class Circle
+﻿namespace _03CirclesIntersection
 {
-    public Point Center { get; set; }
+    using System;
+    using System.Linq;
+    using _03.CirclesIntersection;
 
-    public double Radius { get; set; }
-
-    public static bool IsIntersect(Circle c1, Circle c2)
+    public class CirclesIntersection
     {
-        bool isIntersect = false;
-        double distance = Point.CalDistance(c1.Center, c2.Center);
-        if (distance <= c1.Radius + c2.Radius)
+        public static void Main()
         {
-            isIntersect = true;
+            var firstCircleProp = Console.ReadLine().Split().Select(double.Parse).ToArray();
+            var secondCircleProp = Console.ReadLine().Split().Select(double.Parse).ToArray();
+
+            var firstPoint = new Point(firstCircleProp[0], firstCircleProp[1]);
+            var secondPoint = new Point(secondCircleProp[0], secondCircleProp[1]);
+
+            var firstCircle = new Circle(firstPoint, firstCircleProp[2]);
+            var secondCircle = new Circle(secondPoint, secondCircleProp[2]);
+
+            bool isIntersect = IsIntersect(firstCircle, secondCircle);
+
+            if (isIntersect)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
         }
 
-        return isIntersect;
-    }
+        public static bool IsIntersect(Circle firstCircle, Circle secondCircle)
+        {
+            double distance = CalcDistrance(firstCircle.Center, secondCircle.Center);
 
-    public static Circle ReadCircle()
-    {
-        double[] coordinates = Console.ReadLine().Split().Select(double.Parse).ToArray();
-        Point point = new Point { X = coordinates[0], Y = coordinates[1] };
-        double radius = coordinates[2];
-        Circle c1 = new Circle { Center = point, Radius = radius };
-        return c1;
-    }
+            bool isIntersect = false;
 
+            if (distance <= firstCircle.Radius + secondCircle.Radius)
+            {
+                isIntersect = true;
+            }
 
-}
+            return isIntersect;
+        }
 
-class Point
-{
-    public double X { get; set; }
+        public static double CalcDistrance(Point firstPoint, Point secondPoint)
+        {
+            var diffX = secondPoint.X - firstPoint.X;
+            var diffY = secondPoint.Y - firstPoint.Y;
 
-    public double Y { get; set; }
+            var powX = Math.Pow(diffX, 2);
+            var powY = Math.Pow(diffY, 2);
 
-    public static double CalDistance(Point p1, Point p2)
-    {
-        double a = p1.X - p2.X;
-        double b = p2.Y - p1.Y;
+            var distance = Math.Sqrt(powX + powY);
 
-        double distance = Math.Sqrt((a * a) + (b * b));
-        return distance;
+            return distance;
+        }
     }
 }
-
-class CirclesIntersection
-{
-    static void Main(string[] args)
-    {
-        Circle c1 = Circle.ReadCircle();
-        Circle c2 = Circle.ReadCircle();
-
-        bool isIntersect = Circle.IsIntersect(c1, c2);
-
-        if (isIntersect)
-            Console.WriteLine("Yes");
-        else
-            Console.WriteLine("No");
-    }
-}
-

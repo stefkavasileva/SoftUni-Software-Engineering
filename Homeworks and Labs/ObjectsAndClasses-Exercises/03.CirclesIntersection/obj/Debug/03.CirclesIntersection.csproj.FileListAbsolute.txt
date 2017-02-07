@@ -1,1 +1,7 @@
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\03.CirclesIntersection\bin\Debug\03.CirclesIntersection.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\bin\Debug\03.CirclesIntersection.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\bin\Debug\03.CirclesIntersection.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\bin\Debug\03.CirclesIntersection.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\obj\Debug\03.CirclesIntersection.csprojResolveAssemblyReference.cache
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\obj\Debug\03.CirclesIntersection.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\03.CirclesIntersection\obj\Debug\03.CirclesIntersection.pdb
