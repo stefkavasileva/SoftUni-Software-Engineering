@@ -1,72 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-class Book
+﻿namespace _06.BookLibraryModification
 {
-    public string Title { get; set; }
-    public string Author { get; set; }
-    public string Publisher { get; set; }
-    public DateTime ReleaseDate { get; set; }
-    public string ISBN_number { get; set; }
-    public decimal Price { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using _05.BookLibrary;
 
-    public Book(string title, string author, string punlisher, DateTime releaseDate, string isbnNumber, decimal price)
+    public class BookLibraryModification
     {
-        this.Title = title;
-        this.Author = author;
-        this.Publisher = punlisher;
-        this.ReleaseDate = releaseDate;
-        this.ISBN_number = isbnNumber;
-        this.Price = price;
-    }
-}
-
-class BookLibraryModification
-{
-    static void Main(string[] args)
-    {
-
-        int numberOfBooks = int.Parse(Console.ReadLine());
-        List<Book> books = new List<Book>();
-
-        for (int i = 0; i < numberOfBooks; i++)
+        public static void Main()
         {
-            string[] bookArgs = Console.ReadLine().Split().ToArray();
-            string titel = bookArgs[0];
-            string author = bookArgs[1];
-            string publisher = bookArgs[2];
-            DateTime releaseDate =DateTime.ParseExact(bookArgs[3],"d.M.yyyy", CultureInfo.InvariantCulture);
-            string isbnNumber = bookArgs[4];
-            decimal price = decimal.Parse(bookArgs[5]);
+            var booksCount = int.Parse(Console.ReadLine());
+            var books = ReadBooks(booksCount);
 
-            Book currentBook = new Book(titel, author, publisher, releaseDate, isbnNumber, price);
+            var dateAsStr = Console.ReadLine();
+            var date = DateTime.ParseExact(dateAsStr, "dd.MM.yyyy", CultureInfo.InvariantCulture);
 
-            books.Add(currentBook);
-        }
+            books = books
+                .Where(x => x.ReleaseDate > date)
+                .OrderBy(x => x.ReleaseDate)
+                .ThenBy(x => x.Title)
+                .ToList();
 
-        DateTime date = DateTime
-    .ParseExact(Console.ReadLine(), "d.M.yyyy", CultureInfo.InstalledUICulture);
-
-
-Dictionary <string, DateTime> titlesReleased = new Dictionary<string, DateTime>();
-        foreach (var book in books)
-        {
-            if (!titlesReleased.ContainsKey(book.Title) && book.ReleaseDate>date)
+            foreach (var book in books)
             {
-                titlesReleased.Add(book.Title, book.ReleaseDate);
+                Console.WriteLine($"{book.Title} -> {book.ReleaseDate.ToString("dd.MM.yyyy")}");
             }
         }
 
-        titlesReleased = titlesReleased.OrderBy(x => x.Value).ThenBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
-
-        foreach (var author in titlesReleased)
+        public static List<Book> ReadBooks(int booksCount)
         {
-            Console.WriteLine($"{author.Key} -> {author.Value.ToString("dd.MM.yyyy")}");
+            var books = new List<Book>();
+
+            for (int i = 0; i < booksCount; i++)
+            {
+                var booksArgs = Console.ReadLine().Split().ToArray();
+                var title = booksArgs[0];
+                var author = booksArgs[1];
+                var publisher = booksArgs[2];
+                var releaseDate = DateTime.ParseExact(booksArgs[3], "dd.MM.yyyy", CultureInfo.InvariantCulture);
+                var isbnNumber = booksArgs[4];
+                var price = decimal.Parse(booksArgs[5]);
+
+                var currrentBook = new Book(title, author, publisher, releaseDate, isbnNumber, price);
+
+                books.Add(currrentBook);
+            }
+
+            return books;
         }
     }
 }
-

@@ -3,3 +3,8 @@ C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryMo
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.pdb
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.exe
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\06.BookLibraryModification\obj\Debug\06.BookLibraryModification.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\06.BookLibraryModification\bin\Debug\06.BookLibraryModification.pdb
