@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class CountWorkDays
+public class CountWorkDays
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         DateTime startDate = DateTime.ParseExact(Console.ReadLine(), "dd-MM-yyyy", CultureInfo.InvariantCulture);
         DateTime endDate = DateTime.ParseExact(Console.ReadLine(), "dd-MM-yyyy", CultureInfo.InvariantCulture);
@@ -40,4 +38,3 @@ class CountWorkDays
         Console.WriteLine(workingDayCounter);
     }
 }
-
