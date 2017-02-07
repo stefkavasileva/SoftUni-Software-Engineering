@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\05.BookLibrary\b
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.exe
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\bin\Debug\05.BookLibrary.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\bin\Debug\05.BookLibrary.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\bin\Debug\05.BookLibrary.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\05.BookLibrary\obj\Debug\05.BookLibrary.csprojResolveAssemblyReference.cache
