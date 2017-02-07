@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class AdvertisementMessage
+public class AdvertisementMessage
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-
         int messages = int.Parse(Console.ReadLine());
 
         string[] phrases = { "Excellent product.", "Such a great product.", "I always use that product.", "Best product of its category.", "Exceptional product.", "I can’t live without this product." };
@@ -34,4 +28,3 @@ class AdvertisementMessage
         }
     }
 }
-

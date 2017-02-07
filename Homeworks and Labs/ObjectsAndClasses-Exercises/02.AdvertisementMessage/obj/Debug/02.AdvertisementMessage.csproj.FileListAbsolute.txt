@@ -1,1 +1,2 @@
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\02.AdvertisementMessage\bin\Debug\02.AdvertisementMessage.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\02.AdvertisementMessage\bin\Debug\02.AdvertisementMessage.exe.config
