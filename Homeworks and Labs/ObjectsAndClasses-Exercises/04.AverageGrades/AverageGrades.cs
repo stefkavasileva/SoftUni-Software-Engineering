@@ -1,62 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public class Student
+﻿namespace _04AverageGrade
 {
-    public string Name { get; set; }
-    public List<double> Grades { get; set; }
-    public double AverageGrade { get; set; }
-}
-class AverageGrades
-{
-    static void Main(string[] args)
-    {
-        int numberOfStudents = int.Parse(Console.ReadLine());
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using _04.AverageGrades;
 
-        List<Student> students = new List<Student>();
-        ReadStudents(numberOfStudents, students);
-        students = students.Where(x => x.AverageGrade >= 5.00)
-                                    .OrderBy(x => x.Name)
-                                    .ThenByDescending(x => x.AverageGrade)
-                                    .ToList();
-        PrintTopStudent(students);
-    }
-
-    private static void PrintTopStudent(List<Student> students)
+    public class AverageGrades
     {
-        foreach (var s in students)
+        public static void Main()
         {
-            Console.WriteLine($"{s.Name} -> {s.AverageGrade:f2}");
+            int studentsCount = int.Parse(Console.ReadLine());
+
+            var students = new List<Student>();
+
+            students = ReadStudents(studentsCount);
+
+            var topStudents = students
+                  .Where(x => x.AverageGrade >= 5.00)
+                  .OrderBy(x => x.Name)
+                  .ThenByDescending(x => x.AverageGrade)
+                  .ToList();
+
+            foreach (var student in topStudents)
+            {
+                Console.WriteLine($"{student.Name} -> {student.AverageGrade:f2}");
+            }
         }
-    }
 
-    private static void ReadStudents(int numberOfStudents, List<Student> students)
-    {
-        for (int i = 0; i < numberOfStudents; i++)
+        private static List<Student> ReadStudents(int studentsCount)
         {
-            string[] studentArgs = Console.ReadLine().Split().ToArray();
+            var students = new List<Student>();
 
-            List<double> grades = new List<double>();
-            GetStudentGrades(studentArgs, grades);
+            for (int i = 0; i < studentsCount; i++)
+            {
+                var currentStudent = Console.ReadLine().Split();
+                var name = currentStudent[0];
+                var studentGrades = new List<double>();
 
-            Student currentStudent = new Student();
-            currentStudent.Name = studentArgs[0];
-            currentStudent.Grades = grades;
-            currentStudent.AverageGrade = grades.Average();
-            students.Add(currentStudent);
+                studentGrades.AddRange(currentStudent.Where((x, index) => index > 0).Select(double.Parse));
 
-        }
-    }
+                var student = new Student(name, studentGrades);
 
-    private static void GetStudentGrades(string[] studentArgs, List<double> grades)
-    {
-        for (int j = 1; j < studentArgs.Length; j++)
-        {
-            grades.Add(double.Parse(studentArgs[j]));
+                students.Add(student);
+            }
+
+            return students;
         }
     }
 }
-
