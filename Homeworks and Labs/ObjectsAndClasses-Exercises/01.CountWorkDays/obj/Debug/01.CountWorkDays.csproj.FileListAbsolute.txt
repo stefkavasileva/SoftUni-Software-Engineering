@@ -1,2 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\01.CountWorkDays\bin\Debug\01.CountWorkDays.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\01.CountWorkDays\bin\Debug\01.CountWorkDays.exe.config
