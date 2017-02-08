@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\06.StringsAndObjects\bin\Debug\06.StringsAndObjects.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\06.StringsAndObjects\bin\Debug\06.StringsAndObjects.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\06.StringsAndObjects\bin\Debug\06.StringsAndObjects.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\06.StringsAndObjects\obj\Debug\06.StringsAndObjects.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\06.StringsAndObjects\obj\Debug\06.StringsAndObjects.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\06.StringsAndObjects\bin\Debug\06.StringsAndObjects.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\06.StringsAndObjects\obj\Debug\06.StringsAndObjects.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\06.StringsAndObjects\obj\Debug\06.StringsAndObjects.pdb
