@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\15.ComparingFloats\bin\Debug\15.ComparingFloats.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\15.ComparingFloats\bin\Debug\15.ComparingFloats.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\15.ComparingFloats\bin\Debug\15.ComparingFloats.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\15.ComparingFloats\obj\Debug\15.ComparingFloats.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\15.ComparingFloats\obj\Debug\15.ComparingFloats.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.ComparingFloats\bin\Debug\15.ComparingFloats.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.ComparingFloats\obj\Debug\15.ComparingFloats.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\15.ComparingFloats\obj\Debug\15.ComparingFloats.pdb
