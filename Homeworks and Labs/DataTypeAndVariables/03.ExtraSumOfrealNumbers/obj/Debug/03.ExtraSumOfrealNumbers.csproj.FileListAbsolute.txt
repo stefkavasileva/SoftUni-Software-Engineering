@@ -1,5 +1,0 @@
-C:\DateAndVariables\03.ExtraSumOfrealNumbers\bin\Debug\03.ExtraSumOfrealNumbers.exe.config
-C:\DateAndVariables\03.ExtraSumOfrealNumbers\bin\Debug\03.ExtraSumOfrealNumbers.exe
-C:\DateAndVariables\03.ExtraSumOfrealNumbers\bin\Debug\03.ExtraSumOfrealNumbers.pdb
-C:\DateAndVariables\03.ExtraSumOfrealNumbers\obj\Debug\03.ExtraSumOfrealNumbers.exe
-C:\DateAndVariables\03.ExtraSumOfrealNumbers\obj\Debug\03.ExtraSumOfrealNumbers.pdb
