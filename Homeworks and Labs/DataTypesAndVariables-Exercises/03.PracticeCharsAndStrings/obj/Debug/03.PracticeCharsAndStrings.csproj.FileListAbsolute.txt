@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\bin\Debug\03.PracticeCharsAndStrings.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\bin\Debug\03.PracticeCharsAndStrings.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\bin\Debug\03.PracticeCharsAndStrings.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\obj\Debug\03.PracticeCharsAndStrings.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\obj\Debug\03.PracticeCharsAndStrings.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\bin\Debug\03.PracticeCharsAndStrings.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\obj\Debug\03.PracticeCharsAndStrings.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\03.PracticeCharsAndStrings\obj\Debug\03.PracticeCharsAndStrings.pdb
