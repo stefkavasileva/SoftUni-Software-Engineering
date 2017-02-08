@@ -1,5 +1,0 @@
-C:\DateAndVariables\04.Elevator\bin\Debug\04.Elevator.exe.config
-C:\DateAndVariables\04.Elevator\bin\Debug\04.Elevator.exe
-C:\DateAndVariables\04.Elevator\bin\Debug\04.Elevator.pdb
-C:\DateAndVariables\04.Elevator\obj\Debug\04.Elevator.exe
-C:\DateAndVariables\04.Elevator\obj\Debug\04.Elevator.pdb
