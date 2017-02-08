@@ -1,9 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\bin\Debug\01.PracticeIntegers.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\bin\Debug\01.PracticeIntegers.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\bin\Debug\01.PracticeIntegers.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\obj\Debug\01.PracticeIntegers.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\obj\Debug\01.PracticeIntegers.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\01.PracticeIntegers\obj\Debug\01.PracticeIntegers.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\01.PracticeIntegers\bin\Debug\01.PracticeIntegers.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\01.PracticeIntegers\obj\Debug\01.PracticeIntegers.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\01.PracticeIntegers\obj\Debug\01.PracticeIntegers.pdb
