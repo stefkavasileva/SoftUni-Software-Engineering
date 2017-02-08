@@ -1,108 +1,79 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-class MentorGroup
+﻿namespace _08.MentorGroup
 {
-    static void Main(string[] args)
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+
+    public class MentorGroup
     {
-        var studentsAttendances = new Dictionary<string, List<DateTime>>();
-        var studentsComments = new Dictionary<string, List<string>>();
-        ReadStudentsAttendances(studentsAttendances);
-        ReadStudentsComments(studentsAttendances, studentsComments);
-
-        studentsAttendances = studentsAttendances.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
-
-        foreach (var student in studentsAttendances)
+        public static void Main()
         {
-            Console.WriteLine(student.Key);
-            Console.WriteLine("Comments:");
-            if (studentsComments.ContainsKey(student.Key))
+            var students = new List<Student>();
+
+            var inputLine = Console.ReadLine();
+
+            while (!inputLine.Equals("end of dates"))
             {
-                var comments = studentsComments[student.Key];
-                for (int i = 0; i < comments.Count; i++)
+                var studentsActivities = inputLine.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                  .ToArray();
+
+                var studentName = studentsActivities[0];
+                var dates = studentsActivities
+                    .Skip(1)
+                    .Select(x => DateTime.ParseExact(x, "dd/MM/yyyy", CultureInfo.InvariantCulture))
+                    .ToList();
+
+                if (students.Any(x => x.Name == studentName))
                 {
-                    Console.WriteLine($"- {comments[i]}");
+                    var existingStudent = students.Where(x => x.Name == studentName).First();
+                    existingStudent.DatesActivities.AddRange(dates);
                 }
-            }
-
-            Console.WriteLine("Dates attended:");
-
-            List<DateTime> dates = student.Value;
-            dates = dates.OrderBy(x => x).ToList();
-
-            for (int i = 0; i < dates.Count; i++)
-            {
-                Console.WriteLine($"-- {dates[i].ToString("dd/MM/yyyy")}");
-            }
-
-        }
-    }
-
-    private static void ReadStudentsComments(Dictionary<string, List<DateTime>> studentsAttendances, Dictionary<string, List<string>> studentsComments)
-    {
-        string studentComment = Console.ReadLine();
-
-        while (!studentComment.Equals("end of comments"))
-        {
-            string[] commentArgs = studentComment.Split('-').ToArray();
-
-            if (!studentsComments.ContainsKey(commentArgs[0]))
-            {
-                studentsComments.Add(commentArgs[0], new List<string>());
-            }
-
-            studentsComments[commentArgs[0]].Add(commentArgs[1]);
-
-
-            studentComment = Console.ReadLine();
-        }
-    }
-
-    private static void ReadStudentsAttendances(Dictionary<string, List<DateTime>> studentsAttendances)
-    {
-        string studentAttendance = Console.ReadLine();
-        while (!studentAttendance.Equals("end of dates"))
-        {
-            string[] datesArgs = studentAttendance.Split(' ').ToArray();
-            if (datesArgs.Length < 2)
-            {
-                if (!studentsAttendances.ContainsKey(datesArgs[0]))
+                else
                 {
-                    studentsAttendances.Add(datesArgs[0], new List<DateTime>());
+                    var student = new Student(studentName, new List<string>(), dates);
+                    students.Add(student);
+                }
+              
+                inputLine = Console.ReadLine();
+            }
+
+            inputLine = Console.ReadLine();
+
+            while (!inputLine.Equals("end of comments"))
+            {
+                var studentComment = inputLine.Split('-');
+                var studentName = studentComment[0];
+                var comment = studentComment[1];
+
+                if (students.Any(x => x.Name == studentName))
+                {
+                    var existingStudent = students.Where(x => x.Name == studentName).First();
+                    existingStudent.Comments.Add(comment);
                 }
 
-                studentAttendance = Console.ReadLine();
-                continue;
+                inputLine = Console.ReadLine();
             }
-            string[] datesAsStr = datesArgs[1].Split(',').ToArray();
 
-            List<DateTime> dates = new List<DateTime>();
+            students = students
+                .OrderBy(x => x.Name)
+                .ToList();
 
-            if (datesArgs.Length > 0)
+            foreach (var student in students)
             {
-                for (int i = 0; i < datesAsStr.Length; i++)
+                Console.WriteLine(student.Name);
+                Console.WriteLine("Comments:");
+                foreach (var comment in student.Comments)
                 {
-                    DateTime currentDate = DateTime.ParseExact(datesAsStr[i], "d/M/yyyy", CultureInfo.InvariantCulture);
-                    dates.Add(currentDate);
+                    Console.WriteLine($"- {comment}");
+                }
+
+                Console.WriteLine("Dates attended:");
+                foreach (var date in student.DatesActivities.OrderBy(x => x))
+                {
+                    Console.WriteLine($"-- {date.ToString("dd/MM/yyyy")}");
                 }
             }
-
-            if (!studentsAttendances.ContainsKey(datesArgs[0]))
-            {
-                studentsAttendances.Add(datesArgs[0], dates);
-            }
-            else
-            {
-                studentsAttendances[datesArgs[0]].AddRange(dates);
-            }
-
-            studentAttendance = Console.ReadLine();
         }
     }
 }
-

@@ -4,3 +4,9 @@ C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\08.MentorGroup\b
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.csprojResolveAssemblyReference.cache
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.exe
 C:\ProgrammingFundamentalsExercises\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\bin\Debug\08.MentorGroup.exe.config
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\bin\Debug\08.MentorGroup.exe
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\bin\Debug\08.MentorGroup.pdb
+C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses-Exercises\08.MentorGroup\obj\Debug\08.MentorGroup.csprojResolveAssemblyReference.cache
