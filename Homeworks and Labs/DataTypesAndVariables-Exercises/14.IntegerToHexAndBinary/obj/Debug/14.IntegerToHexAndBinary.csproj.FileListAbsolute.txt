@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\bin\Debug\14.IntegerToHexAndBinary.exe.config
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\bin\Debug\14.IntegerToHexAndBinary.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\bin\Debug\14.IntegerToHexAndBinary.pdb
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\obj\Debug\14.IntegerToHexAndBinary.exe
-C:\ProgrammingFundamentalsExercises\DateAndVariables\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\obj\Debug\14.IntegerToHexAndBinary.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\bin\Debug\14.IntegerToHexAndBinary.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\obj\Debug\14.IntegerToHexAndBinary.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\14.IntegerToHexAndBinary\obj\Debug\14.IntegerToHexAndBinary.pdb
