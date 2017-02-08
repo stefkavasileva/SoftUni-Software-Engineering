@@ -1,107 +1,93 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-class Customer
+﻿namespace _07.AndreyAndBilliard
 {
-    public string Name { get; set; }
-    public Dictionary<string, int> ShopList { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
-}
-
-class AndreyAndBilliard
-{
-    static void Main(string[] args)
+    public class AndreyAndBilliard
     {
-        long amount = long.Parse(Console.ReadLine());
-        var productsPrices = new Dictionary<string, decimal>();
-
-        GetProductAndPrices(amount, productsPrices);
-
-        List<Customer> customers = new List<Customer>();
-
-        string client = Console.ReadLine();
-        while (!client.Equals("end of clients"))
+        public static void Main()
         {
-            string[] clientArgs = client.Split(new char[] { ',', '-' }).ToArray();
-            string productName = clientArgs[1];
-            int quantity = int.Parse(clientArgs[2]);
+            long amount = long.Parse(Console.ReadLine());
+            var productsPrices = new Dictionary<string, decimal>();
 
-            Customer customer = new Customer();
-            customer.ShopList = new Dictionary<string, int>();
-            customer.Name = clientArgs[0];
-            customer.ShopList.Add(productName, quantity);
+            GetProductAndPrices(amount, productsPrices);
 
+            List<Customer> customers = new List<Customer>();
 
-            if (customers.Any(c => c.Name == clientArgs[0]))
+            string client = Console.ReadLine();
+            while (!client.Equals("end of clients"))
             {
-                Customer existingCustomer = customers.First(c => c.Name == clientArgs[0]);
-                if (existingCustomer.ShopList.ContainsKey(productName))
+                string[] clientArgs = client.Split(new char[] { ',', '-' }).ToArray();
+                string productName = clientArgs[1];
+                int quantity = int.Parse(clientArgs[2]);
+
+                var customer = new Customer(clientArgs[0], new Dictionary<string, int>());
+                customer.ShopList.Add(productName, quantity);
+
+                if (customers.Any(c => c.Name == clientArgs[0]))
                 {
-                    existingCustomer.ShopList[productName] += quantity;
+                    var existingCustomer = customers.First(c => c.Name == clientArgs[0]);
+                    if (existingCustomer.ShopList.ContainsKey(productName))
+                    {
+                        existingCustomer.ShopList[productName] += quantity;
+                    }
+                    else
+                    {
+                        existingCustomer.ShopList[productName] = quantity;
+                    }
                 }
                 else
                 {
-                    existingCustomer.ShopList[productName] = quantity;
+                    if (productsPrices.ContainsKey(productName))
+                    {
+                        customers.Add(customer);
+                    }
                 }
+
+                client = Console.ReadLine();
             }
-            else
+
+            decimal totalBill = 0.0m;
+            customers = customers.OrderBy(x => x.Name).ToList();
+
+            foreach (var custumer in customers)
             {
-                if (productsPrices.ContainsKey(productName))
+                Console.WriteLine(custumer.Name);
+
+                foreach (var p in custumer.ShopList)
                 {
-                    customers.Add(customer);
+                    if (productsPrices.ContainsKey(p.Key))
+                    {
+                        Console.WriteLine($"-- {p.Key} - {p.Value}");
+                        custumer.Bill += productsPrices[p.Key] * p.Value;
+                    }
                 }
 
+                Console.WriteLine($"Bill: {custumer.Bill:f2}");
+                totalBill += custumer.Bill;
             }
 
-            client = Console.ReadLine();
+            Console.WriteLine($"Total bill: {totalBill:f2}");
         }
 
-        decimal totalBill = 0.0m;
-
-        customers = customers.OrderBy(x => x.Name).ToList();
-
-        foreach (var custumer in customers)
+        private static void GetProductAndPrices(long amount, Dictionary<string, decimal> productsPrices)
         {
-            decimal custumerBill = 0.0m;
-            Console.WriteLine(custumer.Name);
-
-            foreach (var p in custumer.ShopList)
+            for (int i = 0; i < amount; i++)
             {
-                if (productsPrices.ContainsKey(p.Key))
+                string[] productArgs = Console.ReadLine().Split('-').ToArray();
+                string productName = productArgs[0];
+                decimal productPrice = decimal.Parse(productArgs[1]);
+
+                if (!productsPrices.ContainsKey(productName))
                 {
-                    Console.WriteLine($"-- {p.Key} - {p.Value}");
-                    custumerBill += productsPrices[p.Key] * p.Value;
+                    productsPrices.Add(productName, productPrice);
                 }
-            }
-
-            Console.WriteLine($"Bill: {custumerBill:f2}");
-            totalBill += custumerBill;
-        }
-
-        Console.WriteLine($"Total bill: {totalBill:f2}");
-
-    }
-
-    private static void GetProductAndPrices(long amount, Dictionary<string, decimal> productsPrices)
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            string[] productArgs = Console.ReadLine().Split('-').ToArray();
-            string productName = productArgs[0];
-            decimal productPrice = decimal.Parse(productArgs[1]);
-
-            if (!productsPrices.ContainsKey(productName))
-            {
-                productsPrices.Add(productName, productPrice);
-            }
-            else
-            {
-                productsPrices[productName] = productPrice;
+                else
+                {
+                    productsPrices[productName] = productPrice;
+                }
             }
         }
     }
 }
-
