@@ -1,6 +1,0 @@
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\bin\Debug\19.TheaThePhotographer.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\bin\Debug\19.TheaThePhotographer.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\bin\Debug\19.TheaThePhotographer.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\obj\Debug\19.TheaThePhotographer.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\obj\Debug\19.TheaThePhotographer.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DataTypesAndVariables-Exercises\19.TheaThePhotographer\obj\Debug\19.TheaThePhotographer.pdb
