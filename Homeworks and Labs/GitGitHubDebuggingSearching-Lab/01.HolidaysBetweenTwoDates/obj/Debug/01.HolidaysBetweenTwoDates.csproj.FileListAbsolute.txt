@@ -1,9 +1,0 @@
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\bin\Debug\01.HolidaysBetweenTwoDates.exe.config
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\bin\Debug\01.HolidaysBetweenTwoDates.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\bin\Debug\01.HolidaysBetweenTwoDates.pdb
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\obj\Debug\01.HolidaysBetweenTwoDates.csprojResolveAssemblyReference.cache
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\obj\Debug\01.HolidaysBetweenTwoDates.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\obj\Debug\01.HolidaysBetweenTwoDates.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\bin\Debug\01.HolidaysBetweenTwoDates.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\obj\Debug\01.HolidaysBetweenTwoDates.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\01.HolidaysBetweenTwoDates\obj\Debug\01.HolidaysBetweenTwoDates.pdb
