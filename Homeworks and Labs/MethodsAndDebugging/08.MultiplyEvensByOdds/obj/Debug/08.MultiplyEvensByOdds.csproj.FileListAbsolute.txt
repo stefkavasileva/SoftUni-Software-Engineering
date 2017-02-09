@@ -1,9 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\bin\Debug\08.MultiplyEvensByOdds.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\bin\Debug\08.MultiplyEvensByOdds.exe
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\bin\Debug\08.MultiplyEvensByOdds.pdb
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\obj\Debug\08.MultiplyEvensByOdds.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\obj\Debug\08.MultiplyEvensByOdds.exe
-C:\ProgrammingFundamentalsExercises\MethodsDebuggingAndTroubleshootingCode\08.MultiplyEvensByOdds\obj\Debug\08.MultiplyEvensByOdds.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\08.MultiplyEvensByOdds\bin\Debug\08.MultiplyEvensByOdds.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\08.MultiplyEvensByOdds\obj\Debug\08.MultiplyEvensByOdds.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebugging\08.MultiplyEvensByOdds\obj\Debug\08.MultiplyEvensByOdds.pdb
