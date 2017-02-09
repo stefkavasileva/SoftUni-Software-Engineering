@@ -1,7 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\bin\Debug\07.PopulationCounter.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\bin\Debug\07.PopulationCounter.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\bin\Debug\07.PopulationCounter.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\bin\Debug\07.PopulationCounter.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\obj\Debug\07.PopulationCounter.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\obj\Debug\07.PopulationCounter.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\07.PopulationCounter\obj\Debug\07.PopulationCounter.pdb
