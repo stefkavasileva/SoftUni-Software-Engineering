@@ -1,7 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\bin\Debug\05.HandsOfCards.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\bin\Debug\05.HandsOfCards.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\bin\Debug\05.HandsOfCards.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\bin\Debug\05.HandsOfCards.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\obj\Debug\05.HandsOfCards.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\obj\Debug\05.HandsOfCards.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\05.HandsOfCards\obj\Debug\05.HandsOfCards.pdb
