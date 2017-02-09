@@ -1,8 +1,0 @@
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\04.Substring\bin\Debug\04.Substring.exe.config
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\04.Substring\bin\Debug\04.Substring.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\04.Substring\bin\Debug\04.Substring.pdb
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\04.Substring\obj\Debug\04.Substring.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\04.Substring\obj\Debug\04.Substring.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\04.Substring\bin\Debug\04.Substring.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\04.Substring\obj\Debug\04.Substring.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\04.Substring\obj\Debug\04.Substring.pdb
