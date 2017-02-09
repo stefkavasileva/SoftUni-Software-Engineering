@@ -1,4 +1,4 @@
-#<p align="center"> Programming Fundamentals - Old Exams<p>
+#<p align="center"> Programming Fundamentals - Old Exams <p>
 
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/Exam-23October2016"> Programming Fundamentals Exam - 23 October 2016 </a>
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/SampleExamII-October2016"> Programming Fundamentals Sample Exam II - October 2016 <a/>
