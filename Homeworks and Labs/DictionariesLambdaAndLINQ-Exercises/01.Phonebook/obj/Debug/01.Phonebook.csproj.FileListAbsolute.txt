@@ -1,7 +1,0 @@
-C:\ProgrammingFundamentalsExercises\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\bin\Debug\01.Phonebook.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\bin\Debug\01.Phonebook.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\bin\Debug\01.Phonebook.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\bin\Debug\01.Phonebook.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\obj\Debug\01.Phonebook.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\obj\Debug\01.Phonebook.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\DictionariesLambdaAndLINQ-Exercises\01.Phonebook\obj\Debug\01.Phonebook.pdb
