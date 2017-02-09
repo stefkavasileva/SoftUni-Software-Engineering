@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\bin\Debug\10.ExtractEmails.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\bin\Debug\10.ExtractEmails.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\bin\Debug\10.ExtractEmails.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\obj\Debug\10.ExtractEmails.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\obj\Debug\10.ExtractEmails.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\10.ExtractEmails\obj\Debug\10.ExtractEmails.pdb

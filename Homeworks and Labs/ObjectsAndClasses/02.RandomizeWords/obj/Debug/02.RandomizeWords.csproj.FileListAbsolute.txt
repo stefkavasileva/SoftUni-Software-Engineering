@@ -1,7 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\02.RandomizeWords\bin\Debug\02.RandomizeWords.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\bin\Debug\02.RandomizeWords.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\bin\Debug\02.RandomizeWords.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\bin\Debug\02.RandomizeWords.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\obj\Debug\02.RandomizeWords.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\obj\Debug\02.RandomizeWords.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\02.RandomizeWords\obj\Debug\02.RandomizeWords.pdb

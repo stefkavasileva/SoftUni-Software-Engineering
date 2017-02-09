@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\bin\Debug\13.QueryMess.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\obj\Debug\13.QueryMess.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\bin\Debug\13.QueryMess.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\bin\Debug\13.QueryMess.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\obj\Debug\13.QueryMess.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\13.QueryMess\obj\Debug\13.QueryMess.pdb

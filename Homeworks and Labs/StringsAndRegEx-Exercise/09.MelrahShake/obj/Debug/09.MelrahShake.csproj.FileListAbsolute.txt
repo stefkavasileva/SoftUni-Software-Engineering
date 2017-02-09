@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\bin\Debug\09.MelrahShake.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\bin\Debug\09.MelrahShake.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\bin\Debug\09.MelrahShake.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\obj\Debug\09.MelrahShake.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\obj\Debug\09.MelrahShake.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\09.MelrahShake\obj\Debug\09.MelrahShake.pdb

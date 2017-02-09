@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\bin\Debug\07.MultiplyBigNumber.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\bin\Debug\07.MultiplyBigNumber.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\bin\Debug\07.MultiplyBigNumber.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\obj\Debug\07.MultiplyBigNumber.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\obj\Debug\07.MultiplyBigNumber.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\07.MultiplyBigNumber\obj\Debug\07.MultiplyBigNumber.csprojResolveAssemblyReference.cache

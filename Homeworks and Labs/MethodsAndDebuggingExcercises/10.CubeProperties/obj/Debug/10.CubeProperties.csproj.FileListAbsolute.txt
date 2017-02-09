@@ -1,9 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\bin\Debug\10.CubeProperties.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\bin\Debug\10.CubeProperties.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\bin\Debug\10.CubeProperties.pdb
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\obj\Debug\10.CubeProperties.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\obj\Debug\10.CubeProperties.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\10.CubeProperties\obj\Debug\10.CubeProperties.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\10.CubeProperties\bin\Debug\10.CubeProperties.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\10.CubeProperties\obj\Debug\10.CubeProperties.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\10.CubeProperties\obj\Debug\10.CubeProperties.pdb

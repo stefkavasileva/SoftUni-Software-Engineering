@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\bin\Debug\01.ConvertFromBase-10ToBase-N.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\bin\Debug\01.ConvertFromBase-10ToBase-N.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\bin\Debug\01.ConvertFromBase-10ToBase-N.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\obj\Debug\01.ConvertFromBase-10ToBase-N.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\obj\Debug\01.ConvertFromBase-10ToBase-N.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\01.ConvertFromBase-10ToBase-N\obj\Debug\01.ConvertFromBase-10ToBase-N.pdb

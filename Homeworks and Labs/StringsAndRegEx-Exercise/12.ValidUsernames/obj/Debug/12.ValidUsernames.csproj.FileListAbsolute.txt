@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\bin\Debug\12.ValidUsernames.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\bin\Debug\12.ValidUsernames.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\bin\Debug\12.ValidUsernames.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\obj\Debug\12.ValidUsernames.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\obj\Debug\12.ValidUsernames.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\12.ValidUsernames\obj\Debug\12.ValidUsernames.pdb

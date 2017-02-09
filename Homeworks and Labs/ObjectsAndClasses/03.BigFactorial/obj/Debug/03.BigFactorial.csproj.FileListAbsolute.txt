@@ -1,2 +1,0 @@
-C:\ProgrammingFundamentalsExercises\ObjectsAndClasses\03.BigFactorial\bin\Debug\03.BigFactorial.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\ObjectsAndClasses\03.BigFactorial\bin\Debug\03.BigFactorial.exe.config

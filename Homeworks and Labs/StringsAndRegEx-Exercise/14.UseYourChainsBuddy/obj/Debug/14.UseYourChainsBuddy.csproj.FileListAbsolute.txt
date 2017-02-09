@@ -1,6 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\bin\Debug\14.UseYourChainsBuddy.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\obj\Debug\14.UseYourChainsBuddy.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\bin\Debug\14.UseYourChainsBuddy.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\bin\Debug\14.UseYourChainsBuddy.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\obj\Debug\14.UseYourChainsBuddy.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\14.UseYourChainsBuddy\obj\Debug\14.UseYourChainsBuddy.pdb

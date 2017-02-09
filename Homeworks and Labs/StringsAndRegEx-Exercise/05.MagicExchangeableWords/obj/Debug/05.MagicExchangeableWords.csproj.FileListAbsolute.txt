@@ -1,5 +1,0 @@
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\05.MagicExchangeableWords\bin\Debug\05.MagicExchangeableWords.exe.config
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\05.MagicExchangeableWords\bin\Debug\05.MagicExchangeableWords.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\05.MagicExchangeableWords\bin\Debug\05.MagicExchangeableWords.pdb
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\05.MagicExchangeableWords\obj\Debug\05.MagicExchangeableWords.exe
-C:\ProgrammingFundamentalsExercises\StringsAndRegEx-Exercise\05.MagicExchangeableWords\obj\Debug\05.MagicExchangeableWords.pdb

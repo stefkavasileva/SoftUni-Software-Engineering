@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\06.PrimeChecker\bin\Debug\06.PrimeChecker.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\06.PrimeChecker\bin\Debug\06.PrimeChecker.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\06.PrimeChecker\bin\Debug\06.PrimeChecker.pdb
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\06.PrimeChecker\obj\Debug\06.PrimeChecker.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\06.PrimeChecker\obj\Debug\06.PrimeChecker.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\06.PrimeChecker\bin\Debug\06.PrimeChecker.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\06.PrimeChecker\obj\Debug\06.PrimeChecker.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\06.PrimeChecker\obj\Debug\06.PrimeChecker.pdb

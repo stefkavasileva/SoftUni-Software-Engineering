@@ -1,8 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\08.CenterPoint\bin\Debug\08.CenterPoint.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\08.CenterPoint\bin\Debug\08.CenterPoint.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\08.CenterPoint\bin\Debug\08.CenterPoint.pdb
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\08.CenterPoint\obj\Debug\08.CenterPoint.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\08.CenterPoint\obj\Debug\08.CenterPoint.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\08.CenterPoint\bin\Debug\08.CenterPoint.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\08.CenterPoint\obj\Debug\08.CenterPoint.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\08.CenterPoint\obj\Debug\08.CenterPoint.pdb

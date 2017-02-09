@@ -1,9 +1,0 @@
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\bin\Debug\09.LongerLine.exe.config
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\obj\Debug\09.LongerLine.csprojResolveAssemblyReference.cache
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\bin\Debug\09.LongerLine.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\bin\Debug\09.LongerLine.pdb
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\obj\Debug\09.LongerLine.exe
-C:\ProgrammingFundamentalsExercises\MethodsAndDebuggingExcercises\09.LongerLine\obj\Debug\09.LongerLine.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\09.LongerLine\bin\Debug\09.LongerLine.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\09.LongerLine\obj\Debug\09.LongerLine.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\MethodsAndDebuggingExcercises\09.LongerLine\obj\Debug\09.LongerLine.pdb
