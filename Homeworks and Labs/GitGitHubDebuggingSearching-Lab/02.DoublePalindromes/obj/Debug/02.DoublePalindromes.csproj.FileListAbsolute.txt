@@ -1,9 +1,0 @@
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\bin\Debug\02.DoublePalindromes.exe.config
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\bin\Debug\02.DoublePalindromes.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\bin\Debug\02.DoublePalindromes.pdb
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\obj\Debug\02.DoublePalindromes.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\obj\Debug\02.DoublePalindromes.pdb
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\obj\Debug\02.DoublePalindromes.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\bin\Debug\02.DoublePalindromes.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\obj\Debug\02.DoublePalindromes.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Lab\02.DoublePalindromes\obj\Debug\02.DoublePalindromes.pdb
