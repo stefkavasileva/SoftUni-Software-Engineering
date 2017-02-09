@@ -1,6 +1,0 @@
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\bin\Debug\04.PopulationAggregation.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\bin\Debug\04.PopulationAggregation.exe
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\bin\Debug\04.PopulationAggregation.pdb
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\obj\Debug\04.PopulationAggregation.csprojResolveAssemblyReference.cache
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\obj\Debug\04.PopulationAggregation.exe
-C:\GitHubRepositories\Programming-Fundamentals\OldExams\SampleExamI-June2016\04.PopulationAggregation\obj\Debug\04.PopulationAggregation.pdb
