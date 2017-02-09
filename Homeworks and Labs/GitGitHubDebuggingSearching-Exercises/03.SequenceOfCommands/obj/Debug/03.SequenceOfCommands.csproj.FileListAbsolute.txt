@@ -1,8 +1,0 @@
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\bin\Debug\03.SequenceOfCommands.exe.config
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\bin\Debug\03.SequenceOfCommands.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\bin\Debug\03.SequenceOfCommands.pdb
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\obj\Debug\03.SequenceOfCommands.exe
-C:\TechModuleExercises\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\obj\Debug\03.SequenceOfCommands.pdb
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\bin\Debug\03.SequenceOfCommands.exe.config
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\obj\Debug\03.SequenceOfCommands.exe
-C:\GitHubRepositories\Programming-Fundamentals\Homeworks and Labs\GitGitHubDebuggingSearching-Exercises\03.SequenceOfCommands\obj\Debug\03.SequenceOfCommands.pdb
