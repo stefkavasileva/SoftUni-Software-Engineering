@@ -13,3 +13,4 @@
 12. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/DictionariesLambdaAndLINQ-Exercises"> Dictionaries, Lambda and LINQ - Exercises </a>
 13. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/ObjectsAndClasses"> Objects and Classes - Lab </a>
 14. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/ObjectsAndClasses-Exercises"> Objects and Classes - Exercises </a>
+15. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/FilesAndExceptionsLab"> Files And Exceptions - Lab </a>
