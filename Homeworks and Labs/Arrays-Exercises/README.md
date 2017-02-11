@@ -63,6 +63,14 @@ Write a program that finds the **longest increasing subsequence** in an array of
 
 - Use the same algorithm like in the previous problem (Max Sequence of Equal Elements).
 
+##08.Most Frequent Number
+
+Write a program that finds the **most frequent number** in a given sequence of numbers.
+
+- Numbers will be in the range [0…65535].
+
+- In case of multiple numbers with the same maximal frequency, print the leftmost of them.
+
 ##09.Index of Letters
 Write a program that creates an array containing all letters from the alphabet (a-z). Read a lowercase word from the console and print the **index of each of its letters in the letters array**.
 
