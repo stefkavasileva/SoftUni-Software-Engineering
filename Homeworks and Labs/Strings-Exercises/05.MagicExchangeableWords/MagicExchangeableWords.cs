@@ -25,11 +25,13 @@ public class MagicExchangeableWords
         {
             for (int i = 0; i < firstStr.Length; i++)
             {
-                if (!letters.ContainsKey(firstStr[i]))
+                var firstLetter = firstStr[i];
+                var secondLetter = secondStr[i];
+                if (!letters.ContainsKey(firstLetter))
                 {
-                    letters.Add(firstStr[i], secondStr[i]);
+                    letters.Add(firstLetter, secondLetter);
                 }
-                else if (!letters.ContainsValue(secondStr[i]))
+                else if (letters[firstLetter] != secondLetter)
                 {
                     isExchangeable = false;
                 }
