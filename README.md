@@ -25,7 +25,7 @@ The course covers source control systems, **Git** and **GitHub** for team collab
 14. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/ObjectsAndClasses-Exercises"> Objects and Classes - Exercises </a>
 15. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/FilesAndExceptionsLab"> Files And Exceptions - Lab </a>
 16. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/FilesAndExceptionsExercises"> Files And Exceptions - Exercises </a>
-
+17. <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/Strings-Lab"> Strings and Text Processing - Lab </a> 
 ## Old exams.
 
 - <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/OldExams/Exam-23October2016"> Programming Fundamentals Exam - 23 October 2016 </a>

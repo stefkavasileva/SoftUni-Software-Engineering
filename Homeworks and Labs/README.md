@@ -15,3 +15,4 @@
 <p align="center"> <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/ObjectsAndClasses-Exercises"> Objects and Classes - Exercises </a> </p>
 <p align="center"> <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/FilesAndExceptionsLab"> Files And Exceptions - Lab </a> </p>
 <p align="center"> <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/FilesAndExceptionsExercises"> Files And Exceptions - Exercises </a> </p>
+<p align="center"> <a href="https://github.com/stefkavasileva/Programming-Fundamentals/tree/master/Homeworks%20and%20Labs/Strings-Lab"> Strings and Text Processing - Lab </a> </p>
