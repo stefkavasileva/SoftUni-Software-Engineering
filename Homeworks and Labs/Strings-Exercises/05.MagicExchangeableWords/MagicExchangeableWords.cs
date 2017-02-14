@@ -1,40 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class MagicExchangeableWords
 {
     public static void Main()
     {
-        var inputLine = Console.ReadLine().Split();
-        var firstString = inputLine[0];
-        var secondString = inputLine[1];
+        var inputLine = Console.ReadLine().Split().ToArray();
+        var firstStr = inputLine[0];
+        var secondStr = inputLine[1];
 
-        bool isExchangeble = IsExchangeble(firstString, secondString);
-
-        Console.WriteLine(isExchangeble.ToString().ToLower());
-
-    }
-
-    private static bool IsExchangeble(string firstString, string secondString)
-    {
         var letters = new Dictionary<char, char>();
 
-        for (int i = 0; i < firstString.Length; i++)
-        {
-            var firstWordLetter = firstString[i];
-            var secondWordLetter = secondString[i];
+        bool isExchangeable = IsExchangeable(firstStr, secondStr, letters);
 
-            if (!letters.ContainsKey(firstWordLetter))
+        Console.WriteLine(isExchangeable.ToString().ToLower());
+    }
+
+    public static bool IsExchangeable(string firstStr, string secondStr, Dictionary<char, char> letters)
+    {
+        bool isExchangeable = true;
+
+        if (firstStr.Length.Equals(secondStr.Length))
+        {
+            for (int i = 0; i < firstStr.Length; i++)
             {
-                letters.Add(firstWordLetter, secondWordLetter);
-            }
-            else if (!letters[firstWordLetter].Equals(secondWordLetter))
-            {
-                return false;
+                if (!letters.ContainsKey(firstStr[i]))
+                {
+                    letters.Add(firstStr[i], secondStr[i]);
+                }
+                else if (!letters.ContainsValue(secondStr[i]))
+                {
+                    isExchangeable = false;
+                }
             }
         }
-              
-        return true;
+        else
+        {
+            isExchangeable = false;
+        }
+
+        return isExchangeable;
     }
 }
-
