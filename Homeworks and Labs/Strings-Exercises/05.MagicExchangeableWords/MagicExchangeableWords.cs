@@ -27,11 +27,11 @@ public class MagicExchangeableWords
             {
                 var firstLetter = firstStr[i];
                 var secondLetter = secondStr[i];
-                if (!letters.ContainsKey(firstLetter))
+                if (!letters.ContainsKey(firstLetter) && letters.ContainsValue(secondLetter))
                 {
                     letters.Add(firstLetter, secondLetter);
                 }
-                else if (letters[firstLetter] != secondLetter)
+                else if (letters[firstLetter] != secondLetter || letters.ContainsValue(secondLetter))
                 {
                     isExchangeable = false;
                 }
@@ -39,7 +39,16 @@ public class MagicExchangeableWords
         }
         else
         {
-            isExchangeable = false;
+            var longerStr = firstStr.Length > secondStr.Length ? firstStr : secondStr;
+            var remainingLetters = longerStr.Substring(Math.Min(firstStr.Length , secondStr.Length));
+
+            foreach (char letter in remainingLetters)
+            {
+                if (!letters.ContainsKey(letter) && !letters.ContainsValue(letter))
+                {
+                    return false;
+                }
+            }
         }
 
         return isExchangeable;
