@@ -20,27 +20,32 @@ public class MagicExchangeableWords
     public static bool IsExchangeable(string firstStr, string secondStr, Dictionary<char, char> letters)
     {
         bool isExchangeable = true;
+        var minLen = Math.Min(firstStr.Length, secondStr.Length);
 
-        if (firstStr.Length.Equals(secondStr.Length))
+        for (int i = 0; i < minLen; i++)
         {
-            for (int i = 0; i < firstStr.Length; i++)
+            var firstLetter = firstStr[i];
+            var secondLetter = secondStr[i];
+
+            if (!letters.ContainsKey(firstLetter))
             {
-                var firstLetter = firstStr[i];
-                var secondLetter = secondStr[i];
-                if (!letters.ContainsKey(firstLetter) && letters.ContainsValue(secondLetter))
+                if (letters.ContainsValue(secondLetter))
                 {
-                    letters.Add(firstLetter, secondLetter);
+                    return false;
                 }
-                else if (letters[firstLetter] != secondLetter || letters.ContainsValue(secondLetter))
-                {
-                    isExchangeable = false;
-                }
+
+                letters.Add(firstLetter, secondLetter);
+            }
+            else if (letters[firstLetter] != secondLetter)
+            {
+                isExchangeable = false;
             }
         }
-        else
+
+        if (firstStr.Length != secondStr.Length)
         {
             var longerStr = firstStr.Length > secondStr.Length ? firstStr : secondStr;
-            var remainingLetters = longerStr.Substring(Math.Min(firstStr.Length , secondStr.Length));
+            var remainingLetters = longerStr.Substring(Math.Min(firstStr.Length, secondStr.Length));
 
             foreach (char letter in remainingLetters)
             {
