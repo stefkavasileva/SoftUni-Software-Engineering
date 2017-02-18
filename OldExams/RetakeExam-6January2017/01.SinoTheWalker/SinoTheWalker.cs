@@ -5,17 +5,13 @@ public class SinoTheWalker
 {
     public static void Main()
     {
-        string leavesTimeAsStr = Console.ReadLine();
+        var timeLeaves = DateTime.ParseExact(Console.ReadLine(), "HH:mm:ss", CultureInfo.InstalledUICulture);
+        var steps = int.Parse(Console.ReadLine()) % 86400;
+        var timeForStep = int.Parse(Console.ReadLine()) % 86400;
 
-        DateTime leavesTime = DateTime.ParseExact(leavesTimeAsStr, "HH:mm:ss", CultureInfo.InvariantCulture);
+        var stepsTime = steps * timeForStep;
+        var timeArrival = timeLeaves.AddSeconds(stepsTime);
 
-        int steps = int.Parse(Console.ReadLine()) % 86400;
-        int timeInSeconds = int.Parse(Console.ReadLine()) % 86400;
-
-        int walkSeconds = steps * timeInSeconds;
-
-        leavesTime = leavesTime.AddSeconds(walkSeconds);
-
-        Console.WriteLine($"Time Arrival: {leavesTime.ToString("HH:mm:ss")}");
+        Console.WriteLine($"Time Arrival: {timeArrival.ToString("HH:mm:ss")}");
     }
 }
