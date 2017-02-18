@@ -1,70 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 public class WinningTicket
 {
     public static void Main()
     {
-        string[] tickets = Console.ReadLine()
-            .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
-            .Select(x => x.Trim())
-            .ToArray();
+        var result = new StringBuilder();
 
-        List<string> results = new List<string>();
+        var tickets = Console.ReadLine()
+            .Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(x => x.Trim());
 
-        for (int i = 0; i < tickets.Length; i++)
+        var pattern = @"(\@{6,}|\${6,}|\^{6,}|\#{6,})";
+        var reg = new Regex(pattern);
+
+        foreach (var ticket in tickets)
         {
-            if (tickets[i].Length != 20)
+            if (ticket.Length != 20)
             {
-                results.Add("invalid ticket");
+                result.Append($"invalid ticket{Environment.NewLine}");
                 continue;
             }
 
-            string leftPart = tickets[i].Substring(0, 10);
-            string rightPart = tickets[i].Substring(10);
+            var leftMatch = reg.Match(ticket.Substring(0, 10));
+            var rightMatch = reg.Match(ticket.Substring(10));
+            var minLen = Math.Min(leftMatch.Length, rightMatch.Length);
 
-            Regex reg = new Regex(@"[@]{6,10}|[#]{6,10}|[$]{6,10}|[\^]{6,10}");
-
-            Match leftMatch = reg.Match(leftPart);
-            Match rightMatch = reg.Match(rightPart);
-
-            string result = string.Empty;
-
-            if (leftMatch.Success && rightMatch.Success)
+            if (!leftMatch.Success || !rightMatch.Success)
             {
-                int leftLenght = leftMatch.Groups[0].Value.Length;
-                int rightLenght = rightMatch.Groups[0].Value.Length;
+                result.Append($"ticket \"{ ticket}\" - no match{Environment.NewLine}");
+                continue;
+            }
 
-                char symbolLeft = leftMatch.Groups[0].Value.Distinct().ToArray().First();
-                char symbolRight = rightMatch.Groups[0].Value.Distinct().ToArray().First();
+            var leftPart = leftMatch.Value.Substring(0, minLen);
+            var rightPart = rightMatch.Value.Substring(0, minLen);
 
-                if (!symbolLeft.Equals(symbolRight))
+            if (leftPart.Equals(rightPart))
+            {
+                if (leftPart.Length == 10)
                 {
-                    result = $"ticket \"{tickets[i]}\" - no match";                    
+                    result.Append($"ticket \"{ ticket}\" - {minLen}{leftPart.Substring(0, 1)} Jackpot!{Environment.NewLine}");
                 }
-                else if (leftLenght == 10 && rightLenght == 10)
+                else
                 {
-                    result = $"ticket \"{tickets[i]}\" - {leftLenght}{symbolLeft} Jackpot!";
-                }
-                else if (leftLenght >= 6 && rightLenght >= 6)
-                {
-                    int lenght = leftLenght > rightLenght ? rightLenght : leftLenght;
-                    result = $"ticket \"{tickets[i]}\" - {lenght}{symbolLeft}";
-                }
+                    result.Append($"ticket \"{ ticket}\" - {minLen}{leftPart.Substring(0, 1)}{Environment.NewLine}");
+                }                             
             }
             else
             {
-                result = $"ticket \"{tickets[i]}\" - no match";
+                result.Append($"ticket \"{ ticket}\" - no match{Environment.NewLine}");
             }
-
-            results.Add(result);
         }
 
-        foreach (var result in results)
-        {
-            Console.WriteLine(result);
-        }
+        Console.Write(result.ToString());
     }
 }
