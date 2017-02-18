@@ -1,58 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 public class EnduranceRally
 {
     public static void Main()
     {
-        string[] drivers = Console.ReadLine().Split().ToArray();
-        double[] zones = Console.ReadLine().Split().Select(double.Parse).ToArray();
-        int[] indexes = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        var driversNames = Console.ReadLine().Split();
+        var zones = Console.ReadLine().Split().Select(double.Parse).ToArray();
+        var checkpoints = Console.ReadLine().Split().Select(int.Parse);
 
-        List<string> results = new List<string>();
+        var result = new StringBuilder();
 
-        for (int i = 0; i < drivers.Length; i++)
+        foreach (var driver in driversNames)
         {
-            string driverName = drivers[i];
-            double driverFuel = driverName[0];
-            int endIndex = -1;
-
-            for (int j = 0; j < zones.Length; j++)
+            var firstLetter = char.Parse(driver.Substring(0, 1));
+            var driverFuel = (double)firstLetter; 
+            bool hasFuel = true;
+            for (int i = 0; i < zones.Length; i++)
             {
-                if (indexes.Contains(j))
+                if (checkpoints.Contains(i))
                 {
-                    driverFuel += zones[j];
+                    driverFuel += zones[i];
                 }
                 else
                 {
-                    driverFuel -= zones[j];
+                    driverFuel -= zones[i];
                 }
 
                 if (driverFuel <= 0)
                 {
-                    endIndex = j;
+                    result.Append($"{driver} - reached {i}{Environment.NewLine}");
+                    hasFuel = false;
                     break;
                 }
             }
 
-            string result = string.Empty;
-
-            if (driverFuel > 0)
+            if (hasFuel)
             {
-                result = $"{driverName} - fuel left {driverFuel:f2}";
+                result.Append($"{driver} - fuel left {driverFuel:f2}{Environment.NewLine}");
             }
-            else
-            {
-                result = $"{driverName} - reached {endIndex}";
-            }
-
-            results.Add(result);
         }
 
-        foreach (var result in results)
-        {
-            Console.WriteLine(result);
-        }
+        Console.Write(result);
     }
 }
