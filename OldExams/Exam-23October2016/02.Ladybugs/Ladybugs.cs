@@ -5,48 +5,54 @@ public class Ladybugs
 {
     public static void Main()
     {
-        int size = int.Parse(Console.ReadLine());
-        int[] ladybugIndexes = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        var size = int.Parse(Console.ReadLine());
+        var indexes = Console.ReadLine()
+            .Split()
+            .Select(int.Parse)
+            .Where(x => x > -1 && x < size)
+            .ToList();
 
-        int[] field = new int[size];
+        var field = new int[size];
+        indexes.ForEach(x => field[x] = 1);
 
-        FillField(size, ladybugIndexes, field);
-
-        string comand = Console.ReadLine();
-        while (!comand.Equals("end"))
+        var comand = Console.ReadLine();
+        while (!comand.ToLower().Equals("end"))
         {
-            string[] comandArgs = comand.Split().ToArray();
-            int position = int.Parse(comandArgs[0]);
-            string direction = comandArgs[1];
-            int lentgth = int.Parse(comandArgs[2]);
+            var comandArgs = comand.Split();
+            var index = int.Parse(comandArgs[0]);
 
-            if (position < 0 || position > size - 1 || field[position] != 1)
+            if (!IsInRange(index, size))
             {
                 comand = Console.ReadLine();
                 continue;
             }
 
-            int newPosition = GetNewPosition(direction, lentgth, position);
-
-            if (newPosition < 0 || newPosition >= size)
+            if (!IsValid(index, field, true))
             {
-                field[position] = 0;
                 comand = Console.ReadLine();
                 continue;
             }
 
-            field[position] = 0;
+            var direction = comandArgs[1];
+            var length = int.Parse(comandArgs[2]);
 
-            while (position < size && position >= 0 && newPosition < size && newPosition >= 0)
+            field[index] = 0;
+
+            while (true)
             {
-                if (field[newPosition] == 0)
+                var newPosition = direction.Equals("right") ? index += length : index -= length;
+
+                if (IsInRange(newPosition, size))
                 {
-                    field[newPosition] = 1;
-                    break;
+                    if (IsValid(newPosition, field, false))
+                    {
+                        field[newPosition] = 1;
+                        break;
+                    }
                 }
                 else
                 {
-                    newPosition = GetNewPosition(direction, lentgth, newPosition);
+                    break;
                 }
             }
 
@@ -56,28 +62,27 @@ public class Ladybugs
         Console.WriteLine(string.Join(" ", field));
     }
 
-    private static int GetNewPosition(string direction, int lentgth, int newPosition)
+    public static bool IsInRange(int index, int size)
     {
-        if (direction == "right")
+        if (index < 0 || index >= size)
         {
-            newPosition += lentgth;
-        }
-        else
-        {
-            newPosition -= lentgth;
+            return false;
         }
 
-        return newPosition;
+        return true;
     }
 
-    private static void FillField(int size, int[] ladybugIndexes, int[] field)
+    public static bool IsValid(int index, int[] field, bool isFirstValidation)
     {
-        for (int i = 0; i < ladybugIndexes.Length; i++)
+        if (field[index] != 1 && isFirstValidation)
         {
-            if (ladybugIndexes[i] >= 0 && ladybugIndexes[i] < size)
-            {
-                field[ladybugIndexes[i]] = 1;
-            }
+            return false;
         }
+        else if (field[index] == 1 && !isFirstValidation)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
