@@ -7,7 +7,6 @@ public class NetherRealms
 {
     public static void Main()
     {
-        ////80/100
         var demonsNames = Console.ReadLine()
             .Split(',')
             .Select(x => x.Trim())
@@ -17,10 +16,13 @@ public class NetherRealms
 
         foreach (var name in demonsNames.OrderBy(x => x))
         {
-            var health = name.Where(x => char.IsLetter(x)).Select(x => (int)x).Sum();
+            var health = Regex.Matches(name, @"[^\d\.\-\+\*\/]")
+               .Cast<Match>().Select(match => match.Value)
+               .Select(x => (int)char.Parse(x))
+               .Sum();        
 
             var damage = Regex
-               .Matches(name, @"(-*\d+\.*\d*)")
+               .Matches(name, @"[-|+]*[0.0-9]+")
                .Cast<Match>().Select(match => match.Value)
                .Select(double.Parse)
                .Sum();
