@@ -4,18 +4,19 @@ public class CharityMarathon
 {
    public static void Main()
     {
-        int maratonDays = int.Parse(Console.ReadLine());
-        int countRunner = int.Parse(Console.ReadLine());
-        int numOfLaps = int.Parse(Console.ReadLine());
-        int lapLenght = int.Parse(Console.ReadLine());
-        int trackCapacity = int.Parse(Console.ReadLine());
-        decimal moneyPerKm = decimal.Parse(Console.ReadLine());
+        var marathonLength = int.Parse(Console.ReadLine());
+        var runnersCount = int.Parse(Console.ReadLine());
+        var laps = int.Parse(Console.ReadLine());
+        var lengthOfTrack = int.Parse(Console.ReadLine());
+        var capacityOfTrack = int.Parse(Console.ReadLine());
+        var amountOfMoneyPerKm = decimal.Parse(Console.ReadLine());
 
-        long maxRunners = Math.Min((trackCapacity * maratonDays), countRunner);
-        long totalKm = (maxRunners * numOfLaps * lapLenght) / 1000;
+        long runnersToBeRun = Math.Min((capacityOfTrack * marathonLength),runnersCount);
+        long totalMeters = runnersToBeRun * laps * lengthOfTrack;
+        var totalKm = totalMeters / 1000;
 
-        decimal moneyRaised = totalKm * moneyPerKm;
+        var moneyForMarathon = totalKm * amountOfMoneyPerKm;
 
-        Console.WriteLine("Money raised: {0:f2}", moneyRaised);
+        Console.WriteLine($"Money raised: {moneyForMarathon:f2}");
     }
 }
