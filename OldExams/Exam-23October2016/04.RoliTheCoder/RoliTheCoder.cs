@@ -1,84 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public class RoliTheCoder
+﻿namespace _04.RoliTheCoder
 {
-    public static void Main()
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
+    public class RoliTheCoder
     {
-        string inputEvent = Console.ReadLine();
-
-        var events = new Dictionary<string, Dictionary<string, List<string>>>();
-
-        while (!inputEvent.Equals("Time for Code"))
+        public static void Main()
         {
-            string[] eventsArgs = inputEvent
-                .Split(new char[] { ' ' }, StringSplitOptions
-                .RemoveEmptyEntries)
-                .Select(x => x.Trim())
-                .ToArray();
+            ////90/100
+            var events = new List<Event>();
 
-            string id = eventsArgs[0];
-            string name = eventsArgs[1].Substring(1);
-            string[] participants = new string[eventsArgs.Length - 2];
+            var inputLine = Console.ReadLine();
 
-            GetParticipants(eventsArgs, participants);
-
-            if (!eventsArgs[1].Contains('#'))
+            while (!inputLine.ToLower().Equals("time for code"))
             {
-                inputEvent = Console.ReadLine();
-                continue;
+                var reg = new Regex(@"(\d+)\s\#(\w+)((\s\@\w+)*)");
+                var match = reg.Match(inputLine);
+
+                if (match.Success)
+                {
+                    var id = match.Groups[1].Value.Trim();
+                    var name = match.Groups[2].Value.Trim();
+                    var participants = match.Groups[3].Value.Split().Where(x => x != string.Empty).ToList();
+
+                    if (!events.Any(x => x.Id == id))
+                    {
+                        var currentEvent = new Event(name, id, new SortedSet<string>());
+                        events.Add(currentEvent);
+                    }
+
+                    if (events.First(x => x.Id == id).Name == name)
+                    {
+                        var curentParticipants = events.First(x => x.Id == id).Participants;
+                        participants.ForEach(x => curentParticipants.Add(x));
+                        events.First(x => x.Id == id).Participants = curentParticipants;
+                    }
+                }
+
+                inputLine = Console.ReadLine();
             }
 
-            if (!events.ContainsKey(id))
+            events = events
+                .OrderByDescending(x => x.Participants.Count())
+                .ThenBy(x => x.Name)
+                .ToList();
+
+            foreach (var currentEvent in events)
             {
-                events.Add(id, new Dictionary<string, List<string>>());
-                events[id].Add(name, new List<string>());
+                Console.WriteLine($"{currentEvent.Name} - {currentEvent.Participants.Count()}");
+
+                foreach (var participant in currentEvent.Participants.OrderBy(x => x))
+                {
+                    Console.WriteLine($"{participant}");
+                }
             }
-
-            if (events[id].ContainsKey(name))
-            {
-                events[id][name].AddRange(participants);
-            }
-
-            inputEvent = Console.ReadLine();
-        }
-
-        var sortedEvents = new Dictionary<string, List<string>>();
-
-        sortedEvents = SortEvents(events, sortedEvents);
-
-        foreach (var e in sortedEvents)
-        {
-            Console.WriteLine($"{e.Key} - {e.Value.Count}");
-
-            foreach (var participant in e.Value.OrderBy(x => x))
-            {
-                Console.WriteLine($"{participant}");
-            }
-        }
-    }
-
-    private static Dictionary<string, List<string>> SortEvents(Dictionary<string, Dictionary<string, List<string>>> events, Dictionary<string, List<string>> sortedEvents)
-    {
-        foreach (var eventArgs in events.Values)
-        {
-            foreach (var e in eventArgs)
-            {
-                sortedEvents.Add(e.Key, new List<string>());
-                sortedEvents[e.Key].AddRange(e.Value.Distinct().ToList());
-            }
-        }
-
-        sortedEvents = sortedEvents.OrderByDescending(x => x.Value.Count()).ThenBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
-        return sortedEvents;
-    }
-
-    private static void GetParticipants(string[] eventsArgs, string[] participants)
-    {
-        for (int i = 2; i < eventsArgs.Length; i++)
-        {
-            participants[i - 2] = eventsArgs[i];
         }
     }
 }
