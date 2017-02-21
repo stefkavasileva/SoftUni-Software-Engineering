@@ -3,28 +3,29 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text.RegularExpressions;
 
     public class RoliTheCoder
     {
         public static void Main()
         {
-            ////90/100
             var events = new List<Event>();
 
             var inputLine = Console.ReadLine();
 
             while (!inputLine.ToLower().Equals("time for code"))
             {
-                var reg = new Regex(@"(\d+)\s\#(\w+)((\s\@\w+)*)");
-                var match = reg.Match(inputLine);
+                var eventsArgs = inputLine
+                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToArray();
 
-                if (match.Success)
+                var id = eventsArgs[0];
+                var name = eventsArgs[1].Substring(1);
+                var participants = new List<string>();
+                participants.AddRange(eventsArgs.Skip(2));
+
+                if (eventsArgs[1].Contains('#'))
                 {
-                    var id = match.Groups[1].Value.Trim();
-                    var name = match.Groups[2].Value.Trim();
-                    var participants = match.Groups[3].Value.Split().Where(x => x != string.Empty).ToList();
-
                     if (!events.Any(x => x.Id == id))
                     {
                         var currentEvent = new Event(name, id, new SortedSet<string>());
@@ -51,7 +52,7 @@
             {
                 Console.WriteLine($"{currentEvent.Name} - {currentEvent.Participants.Count()}");
 
-                foreach (var participant in currentEvent.Participants.OrderBy(x => x))
+                foreach (var participant in currentEvent.Participants)
                 {
                     Console.WriteLine($"{participant}");
                 }
