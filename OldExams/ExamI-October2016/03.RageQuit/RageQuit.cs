@@ -7,27 +7,21 @@ public class RageQuit
 {
     public static void Main()
     {
-        string inputLine = Console.ReadLine().ToUpper().Trim();
+        var text = Console.ReadLine().ToUpper();
 
-        StringBuilder result = new StringBuilder();
+        var regex = new Regex(@"(\D+)(\d+)");
+        var matches = regex.Matches(text);
 
-        string pattern = @"(\D+)(\d+)";
-        Regex reg = new Regex(pattern);
-        MatchCollection matches = reg.Matches(inputLine);
-
+        var result = new StringBuilder();
+       
         foreach (Match match in matches)
         {
-            int count = int.Parse(match.Groups[2].Value);
-            string message = match.Groups[1].Value;
-
-            for (int i = 0; i < count; i++)
-            {
-                result.Append(message);
-            }
+            var symbols = match.Groups[1].Value;
+            var counter = int.Parse(match.Groups[2].Value);
+            result.Append(string.Concat(Enumerable.Repeat(symbols, counter)));
         }
 
-        int uniqueSymbols = result.ToString().Distinct().Count();
-        Console.WriteLine($"Unique symbols used: {uniqueSymbols}");
-        Console.WriteLine(result);
+        Console.WriteLine($"Unique symbols used: {result.ToString().Distinct().Count()}");
+        Console.WriteLine(result.ToString());
     }
 }

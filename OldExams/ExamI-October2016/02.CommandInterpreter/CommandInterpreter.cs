@@ -1,51 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 public class CommandInterpreter
 {
     public static void Main()
     {
-        List<string> inputElements = Console.ReadLine()
-           .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-           .Select(x => x.Trim())
-           .ToList();
+        var elements = Console.ReadLine()
+            .Split()
+            .Where(x => x != string.Empty)
+            .Select(x => x.Trim())
+            .ToList();
 
-        string comand = Console.ReadLine();
-        while (!comand.Equals("end"))
+        var comand = Console.ReadLine();
+
+        while (!comand.ToLower().Equals("end"))
         {
-            string[] comandArgs = comand.Split().Select(x => x.Trim()).ToArray();
+            var comandArgs = comand
+                .Split()
+                .Where(x => x != string.Empty)
+                .Select(x => x.Trim())
+                .ToArray();
 
-            if (comandArgs[0].Equals("reverse") || comandArgs[0].Equals("sort"))
+            var action = comandArgs[0];
+
+            if (action.Equals("reverse") || action.Equals("sort"))
             {
-                int startIndex = int.Parse(comandArgs[2]);
-                int count = int.Parse(comandArgs[4]);
+                var index = int.Parse(comandArgs[2]);
+                var count = int.Parse(comandArgs[4]);
 
-                if (startIndex < 0 || startIndex >= inputElements.Count || count < 0 || startIndex + count > inputElements.Count)
+                if (index < 0 || index >= elements.Count || count < 0 || index + count > elements.Count)
                 {
                     Console.WriteLine("Invalid input parameters.");
                     comand = Console.ReadLine();
                     continue;
                 }
 
-                List<string> elements = inputElements.Skip(startIndex).Take(count).ToList();
-                inputElements.RemoveRange(startIndex, count);
+                var potionOfArray = elements.Skip(index).Take(count).ToList();
 
-                if (comandArgs[0].Equals("reverse"))
+                if (action.Equals("sort"))
                 {
-                    elements.Reverse();
+                    potionOfArray.Sort();
                 }
                 else
                 {
-                    elements.Sort();
+                    potionOfArray.Reverse();
                 }
 
-                inputElements.InsertRange(startIndex, elements);
+                elements.RemoveRange(index, count);
+                elements.InsertRange(index, potionOfArray);
             }
             else
             {
-                int count = int.Parse(comandArgs[1]) % inputElements.Count();
-
+                var count = int.Parse(comandArgs[1]);
                 if (count < 0)
                 {
                     Console.WriteLine("Invalid input parameters.");
@@ -53,20 +59,24 @@ public class CommandInterpreter
                     continue;
                 }
 
-                if (comandArgs[0].Equals("rollLeft"))
+                count = count % elements.Count;
+
+                if (action.Equals("rollRight"))
                 {
                     for (int i = 0; i < count; i++)
                     {
-                        inputElements.Add(inputElements[0]);
-                        inputElements.RemoveAt(0);
+                        var lastNum = elements[elements.Count - 1];
+                        elements.RemoveAt(elements.Count - 1);
+                        elements.Insert(0, lastNum);
                     }
                 }
                 else
                 {
                     for (int i = 0; i < count; i++)
                     {
-                        inputElements.Insert(0, inputElements[inputElements.Count - 1]);
-                        inputElements.RemoveAt(inputElements.Count - 1);
+                        var firstNum = elements[0];
+                        elements.RemoveAt(0);
+                        elements.Add(firstNum);
                     }
                 }
             }
@@ -74,6 +84,6 @@ public class CommandInterpreter
             comand = Console.ReadLine();
         }
 
-        Console.WriteLine("[{0}]", string.Join(", ", inputElements));
+        Console.WriteLine($"[{string.Join(", ", elements)}]");
     }
 }

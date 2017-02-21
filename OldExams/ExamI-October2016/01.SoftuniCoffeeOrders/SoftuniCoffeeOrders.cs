@@ -1,25 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 public class SoftuniCoffeeOrders
 {
     public static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-        decimal totalPrice = 0.0m;
+        var ordersCount = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < n; i++)
+        var orderPrice = new List<decimal>();
+
+        for (int i = 0; i < ordersCount; i++)
         {
-            decimal pricePerCapsule = decimal.Parse(Console.ReadLine());
-            DateTime date = DateTime.ParseExact(Console.ReadLine(), "d/M/yyyy", CultureInfo.InstalledUICulture);
-            decimal capsuleCount = decimal.Parse(Console.ReadLine());
-            int daysInMonth = DateTime.DaysInMonth(date.Year, date.Month);
-
-            decimal capsulesPrice = ((daysInMonth * capsuleCount) * pricePerCapsule);
-            totalPrice += capsulesPrice;
-            Console.WriteLine($"The price for the coffee is: ${capsulesPrice:f2}");
+            var capsulePrice = decimal.Parse(Console.ReadLine());
+            var date = DateTime.ParseExact(Console.ReadLine(), "d/M/yyyy", CultureInfo.InstalledUICulture);
+            var daysInMonth = DateTime.DaysInMonth(date.Year, date.Month);
+            var capsuleCount = long.Parse(Console.ReadLine());
+            var picePerCapsules = (daysInMonth * capsuleCount) * capsulePrice;
+            orderPrice.Add(picePerCapsules);
         }
 
-        Console.WriteLine($"Total: ${totalPrice:f2}");
+        foreach (var order in orderPrice)
+        {
+            Console.WriteLine($"The price for the coffee is: ${order:f2}");
+        }
+
+        Console.WriteLine($"Total: ${orderPrice.Sum():f2}");
     }
 }
