@@ -4,33 +4,23 @@ public class SweetDessert
 {
     public static void Main()
     {
-        decimal amountOfCash = decimal.Parse(Console.ReadLine());
-        long guests = long.Parse(Console.ReadLine());
-        decimal bananasPrice = decimal.Parse(Console.ReadLine());
-        decimal eggsPrice = decimal.Parse(Console.ReadLine());
-        decimal berriesPrice = decimal.Parse(Console.ReadLine());
+        var amountOfCash = decimal.Parse(Console.ReadLine());
+        var guestsCount = int.Parse(Console.ReadLine());
 
-        decimal sets = (int)guests / 6;
+        var bananasPrice = decimal.Parse(Console.ReadLine());
+        var eggsPrice = decimal.Parse(Console.ReadLine());
+        var berriestPrice = decimal.Parse(Console.ReadLine());
 
-        if (guests % 6 != 0)
+        var portions = Math.Ceiling(guestsCount / 6.0m);
+        var totalPrice = (portions * (2 * bananasPrice)) + (portions * (4 * eggsPrice)) + (portions * (0.2m * berriestPrice));
+
+        if (amountOfCash >= totalPrice)
         {
-            sets += 1;
-        }
-
-        decimal neededBananas = sets * (2.0m * bananasPrice);
-        decimal neededEggs = sets * (4.0m * eggsPrice);
-        decimal neededBerries = sets * (0.2m * berriesPrice);
-
-        decimal totalNeededCash = neededBananas + neededBerries + neededEggs;
-
-        if (totalNeededCash <= amountOfCash)
-        {
-            Console.WriteLine($"Ivancho has enough money - it would cost {totalNeededCash:f2}lv.");
+            Console.WriteLine($"Ivancho has enough money - it would cost {totalPrice:f2}lv.");
         }
         else
         {
-            decimal diff = totalNeededCash - amountOfCash;
-            Console.WriteLine($"Ivancho will have to withdraw money - he will need {diff:f2}lv more.");
+            Console.WriteLine($"Ivancho will have to withdraw money - he will need {(totalPrice - amountOfCash):f2}lv more.");
         }
     }
 }

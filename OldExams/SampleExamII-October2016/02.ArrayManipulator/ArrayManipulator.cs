@@ -1,169 +1,86 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 public class ArrayManipulator
 {
     public static void Main()
     {
-        int[] inputArr = Console.ReadLine()
-           .Split().Select(int.Parse).ToArray();
+        var result = new StringBuilder();
 
-        string comand = Console.ReadLine().ToLower();
+        var numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-        while (!comand.Equals("end"))
+        var comand = Console.ReadLine();
+        while (!comand.ToLower().Equals("end"))
         {
-            string[] comandArgs = comand.Split().Select(x => x.Trim()).ToArray();
+            var comandArgs = comand.Split();
+            var action = comandArgs.First();
 
-            if (comandArgs[0].Equals("exchange"))
+            if (action.Equals("exchange"))
             {
-                if (int.Parse(comandArgs[1]) < 0 || int.Parse(comandArgs[1]) >= inputArr.Length)
+                var index = int.Parse(comandArgs[1]);
+                if (index < 0 || index >= numbers.Count)
                 {
-                    Console.WriteLine("Invalid index");
+                    result.AppendLine("Invalid index");
                     comand = Console.ReadLine();
                     continue;
                 }
 
-                inputArr = ExchangeArr(inputArr, int.Parse(comandArgs[1]));
+                var someNumbers = numbers.Skip(index + 1).ToArray();
+                numbers.RemoveRange(index + 1, numbers.Count - index - 1);
+                numbers.InsertRange(0, someNumbers);
             }
-            else if (comandArgs[0].Equals("first") || comandArgs[0].Equals("last"))
+            else if (action.Equals("max") || action.Equals("min"))
             {
-                int count = int.Parse(comandArgs[1]);
+                var numberType = comandArgs.Last();
 
-                if (count < 0 || count > inputArr.Length)
+                var currentNums = numberType.Equals("even") ?
+                    numbers.Where(x => x % 2 == 0) :
+                    numbers.Where(x => x % 2 == 1);
+
+                if (currentNums.Count() == 0)
                 {
-                    Console.WriteLine("Invalid count");
+                    result.AppendLine("No matches");
                     comand = Console.ReadLine();
                     continue;
                 }
 
-                int[] nums = new int[] { };
+                var number = action.Equals("max") ?
+                    numbers.LastIndexOf(currentNums.Max()) :
+                    numbers.LastIndexOf(currentNums.Min());
 
-                if (comandArgs[0].Equals("first"))
+                result.AppendLine(number.ToString());
+            }        
+            else
+            {
+                var count = int.Parse(comandArgs[1]);
+
+                if (count > numbers.Count)
                 {
-                    nums = GetFirstNNums(inputArr, count, comandArgs[2]);
+                    result.AppendLine("Invalid count");
+                    comand = Console.ReadLine();
+                    continue;
+                }
+
+                var currentNums = comandArgs[2].Equals("even") ?
+                        numbers.Where(x => x % 2 == 0).ToList() :
+                        numbers.Where(x => x % 2 != 0).ToList();
+
+                if (action.Equals("first"))
+                {
+                    result.AppendLine($"[{string.Join(", ", currentNums.Take(count))}]");
                 }
                 else
                 {
-                    Array.Reverse(inputArr);
-                    nums = GetFirstNNums(inputArr, count, comandArgs[2]);
-                    Array.Reverse(nums);
-                    Array.Reverse(inputArr);
-                }
-
-                Console.WriteLine($"[{string.Join(", ", nums)}]");
-            }
-            else
-            {
-                int index = 0;
-
-                if (comandArgs[0].Equals("max"))
-                {
-                    index = GetMaxIndex(inputArr, comandArgs[1]);
-                }
-                else
-                {
-                    index = GetMinIndex(inputArr, comandArgs[1]);
-                }
-
-                IsMatch(index);
-            }
-
-            comand = Console.ReadLine().ToLower();
-        }
-
-        Console.WriteLine("[{0}]", string.Join(", ", inputArr));
-    }
-
-    private static int[] GetFirstNNums(int[] inputArr, int size, string typeOfNum)
-    {
-        int[] result = new int[size];
-
-        if (typeOfNum.Equals("odd"))
-        {
-            result = inputArr.Where(x => x % 2 != 0).Take(size).ToArray();
-        }
-        else
-        {
-            result = inputArr.Where(x => x % 2 == 0).Take(size).ToArray();
-        }
-
-        return result;
-    }
-
-    private static void IsMatch(int index)
-    {
-        if (index < 0)
-        {
-            Console.WriteLine("No matches");
-        }
-        else
-        {
-            Console.WriteLine(index);
-        }
-    }
-
-    private static int GetMinIndex(int[] inputArr, string numberType)
-    {
-        int index = -1;
-        int minNum = int.MaxValue;
-
-        for (int i = 0; i < inputArr.Length; i++)
-        {
-            if (numberType.Equals("even"))
-            {
-                if (inputArr[i] <= minNum && inputArr[i] % 2 == 0)
-                {
-                    minNum = inputArr[i];
-                    index = i;
+                    var skipCount = currentNums.Count - count;
+                    result.AppendLine($"[{string.Join(", ", currentNums.Skip(skipCount))}]");
                 }
             }
-            else
-            {
-                if (inputArr[i] <= minNum && inputArr[i] % 2 != 0)
-                {
-                    minNum = inputArr[i];
-                    index = i;
-                }
-            }
+
+            comand = Console.ReadLine();
         }
 
-        return index;
-    }
-
-    private static int GetMaxIndex(int[] inputArr, string numberType)
-    {
-        int index = -1;
-        int maxNum = int.MinValue;
-
-        for (int i = 0; i < inputArr.Length; i++)
-        {
-            if (numberType.Equals("even"))
-            {
-                if (inputArr[i] >= maxNum && inputArr[i] % 2 == 0)
-                {
-                    maxNum = inputArr[i];
-                    index = i;
-                }
-            }
-            else
-            {
-                if (inputArr[i] >= maxNum && inputArr[i] % 2 != 0)
-                {
-                    maxNum = inputArr[i];
-                    index = i;
-                }
-            }
-        }
-
-        return index;
-    }
-
-    private static int[] ExchangeArr(int[] inputArr, int index)
-    {
-        int[] firstElements = inputArr.Where((x, i) => i <= index).ToArray();
-        inputArr = inputArr.Where((x, i) => i > index).ToArray();
-        inputArr = inputArr.Concat(firstElements).ToArray();
-
-        return inputArr;
+        result.AppendLine($"[{string.Join(", ", numbers)}]");
+        Console.Write(result.ToString());
     }
 }
