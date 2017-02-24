@@ -5,77 +5,43 @@ public class TrophonTheGrumpyCat
 {
     public static void Main()
     {
-        long[] priceRatings = Console.ReadLine().Split().Select(long.Parse).ToArray();
-        int entryPoint = int.Parse(Console.ReadLine());
-        string typeOfItems = Console.ReadLine();
-        string typeOfPriceRatings = Console.ReadLine();
+        var prices = Console.ReadLine().Split().Select(long.Parse).ToArray();
+        var entryPoint = int.Parse(Console.ReadLine());
+        var typeOfItems = Console.ReadLine();
+        var typeOfPrice = Console.ReadLine();
 
-        long leftSum = GetLeftSum(priceRatings, entryPoint, typeOfItems, typeOfPriceRatings);
+        var leftPart = prices.Take(entryPoint).ToArray();
+        var rightPart = prices.Skip(entryPoint + 1).ToArray();
 
-        long rightSum = GetRightSum(priceRatings, entryPoint, typeOfItems, typeOfPriceRatings);
+        leftPart = typeOfItems.Equals("cheap") ?
+            leftPart.Where(x => x < prices[entryPoint]).ToArray() :
+            leftPart.Where(x => x >= prices[entryPoint]).ToArray();
+
+        rightPart = typeOfItems.Equals("cheap") ?
+            rightPart.Where(x => x < prices[entryPoint]).ToArray() :
+            rightPart.Where(x => x >= prices[entryPoint]).ToArray();
+
+        if (typeOfPrice.Equals("positive"))
+        {
+            leftPart = leftPart.Where(x => x > 0).ToArray();
+            rightPart = rightPart.Where(x => x > 0).ToArray();
+        }
+        else if (typeOfPrice.Equals("negative"))
+        {
+            leftPart = leftPart.Where(x => x < 0).ToArray();
+            rightPart = rightPart.Where(x => x < 0).ToArray();
+        }
+
+        long leftSum = leftPart.Sum();
+        long rightSum = rightPart.Sum();
 
         if (leftSum >= rightSum)
         {
-            Console.WriteLine("Left - {0}", leftSum);
+            Console.WriteLine($"Left - {leftSum}");
         }
         else
         {
-            Console.WriteLine("Right - {0}", rightSum);
+            Console.WriteLine($"Right - {rightSum}");
         }
-    }
-
-    private static long GetRightSum(long[] priceRatings, int entryPoint, string typeOfItems, string typeOfPriceRatings)
-    {
-        long rightSum = 0;
-        for (int i = entryPoint + 1; i < priceRatings.Length; i++)
-        {
-            rightSum += GetCurrentValue(priceRatings, entryPoint, typeOfItems, typeOfPriceRatings, i);
-        }
-
-        return rightSum;
-    }
-
-    private static long GetLeftSum(long[] priceRatings, int entryPoint, string typeOfItems, string typeOfPriceRatings)
-    {
-        long leftSum = 0;
-        for (int i = entryPoint - 1; i >= 0; i--)
-        {
-            leftSum += GetCurrentValue(priceRatings, entryPoint, typeOfItems, typeOfPriceRatings, i);
-        }
-
-        return leftSum;
-    }
-
-    private static long GetCurrentValue(long[] priceRatings, int entryPoint, string typeOfItems, string typeOfPriceRatings, int i)
-    {
-        long sum = 0;
-        if (typeOfItems.Equals("cheap") && priceRatings[i] < priceRatings[entryPoint])
-        {
-            sum = IsValidNum(priceRatings, typeOfPriceRatings, i, sum);
-        }
-        else if (typeOfItems.Equals("expensive") && priceRatings[i] >= priceRatings[entryPoint])
-        {
-            sum = IsValidNum(priceRatings, typeOfPriceRatings, i, sum);
-        }
-
-        return sum;
-    }
-
-    private static long IsValidNum(long[] priceRatings, string typeOfPriceRatings, int i, long sum)
-    {
-        if (typeOfPriceRatings.Equals("positive") && priceRatings[i] > 0)
-        {
-            sum += priceRatings[i];
-        }
-        else if (typeOfPriceRatings.Equals("negative") && priceRatings[i] < 0)
-        {
-            sum += priceRatings[i];
-        }
-        else if (typeOfPriceRatings.Equals("all"))
-        {
-            sum += priceRatings[i];
-        }
-
-        return sum;
-    }
+    }  
 }

@@ -6,23 +6,23 @@ public class Files
 {
     public static void Main()
     {
-        int filesCount = int.Parse(Console.ReadLine());
+        var filesCount = int.Parse(Console.ReadLine());
 
         var filesPaths = new Dictionary<string, Dictionary<string, long>>();
 
         for (int i = 0; i < filesCount; i++)
         {
-            string[] fileArgs = Console.ReadLine()
+            var fileArgs = Console.ReadLine()
                 .Split(new char[] { ';' }, StringSplitOptions
                 .RemoveEmptyEntries).ToArray();
 
-            string[] filePathArgs = fileArgs[0]
+            var filePathArgs = fileArgs[0]
                 .Split(new char[] { '\\' }, StringSplitOptions
                 .RemoveEmptyEntries).ToArray();
 
-            long fileSize = long.Parse(fileArgs[1].Trim());
-            string root = filePathArgs[0].Trim();
-            string fileName = filePathArgs[filePathArgs.Length - 1].Trim();
+            var fileSize = long.Parse(fileArgs[1].Trim());
+            var root = filePathArgs[0].Trim();
+            var fileName = filePathArgs[filePathArgs.Length - 1].Trim();
 
             if (!filesPaths.ContainsKey(root))
             {
@@ -37,17 +37,17 @@ public class Files
             filesPaths[root][fileName] = fileSize;
         }
 
-        string[] queryFileArgs = Console.ReadLine()
+        var queryFileArgs = Console.ReadLine()
             .Split(new char[] { ' ' }, StringSplitOptions
             .RemoveEmptyEntries).ToArray();
 
-        string extension = queryFileArgs[0];
-        string queryRoot = queryFileArgs[2];
-        bool hasFile = false;
+        var extension = queryFileArgs[0];
+        var queryRoot = queryFileArgs[2];
+        var hasFile = false;
 
         if (filesPaths.ContainsKey(queryRoot))
         {
-            Dictionary<string, long> currentRoot = filesPaths[queryRoot]
+            var currentRoot = filesPaths[queryRoot]
                 .OrderByDescending(x => x.Value)
                 .ThenBy(x => x.Key)
                 .ToDictionary(x => x.Key, x => x.Value);

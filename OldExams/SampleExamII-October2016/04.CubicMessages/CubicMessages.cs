@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -6,42 +7,40 @@ public class CubicMessages
 {
     public static void Main()
     {
-        string message = Console.ReadLine();
-        while (!message.Equals("Over!"))
+        var result = new StringBuilder();
+
+        var message = Console.ReadLine();
+        while (!message.ToLower().Equals("over!"))
         {
-            int number = int.Parse(Console.ReadLine());
-            string pattern = $"(^\\d+)([A-Za-z]{{{number}}})([^A-Za-z]*$)";
-            Regex reg = new Regex(pattern);
-            Match match = Regex.Match(message, pattern);
+            var messageLenght = int.Parse(Console.ReadLine());
+            var reg = new Regex($@"^\d+([A-Za-z]{{{messageLenght}}})[^A-Za-z]*$");
+            var match = reg.Match(message);
 
-            if (!match.Success)
+            if (match.Success)
             {
-                message = Console.ReadLine();
-                continue;
-            }
+                var indexes = message.Where(x => char.IsDigit(x)).ToArray();
+                var currentMessage = match.Groups[1].Value;
+                var code = string.Empty;
 
-            string validMessage = match.Groups[2].Value;
-            string digitsInMessage = match.Groups[1].Value + match.Groups[3].Value;
-
-            StringBuilder decryptedMessage = new StringBuilder();
-
-            for (int i = 0; i < digitsInMessage.Length; i++)
-            {
-                int currentIndex = (int)char.GetNumericValue(digitsInMessage[i]);
-
-                if (currentIndex >= 0 && currentIndex <= validMessage.Length - 1)
+                for (int i = 0; i < indexes.Count(); i++)
                 {
-                    decryptedMessage.Append(validMessage[currentIndex]);
+                    var currentIndex = (int)char.GetNumericValue(indexes[i]);
+                    if (currentIndex < 0 || currentIndex >= currentMessage.Length)
+                    {
+                        code += " ";
+                    }
+                    else
+                    {
+                        code += currentMessage[currentIndex];
+                    }
                 }
-                else
-                {
-                    decryptedMessage.Append(" ");
-                }
-            }
 
-            Console.WriteLine($"{validMessage} == {decryptedMessage}");
+                result.AppendLine($"{currentMessage} == {code}");
+            }
 
             message = Console.ReadLine();
         }
+
+        Console.Write(result);
     }
 }
