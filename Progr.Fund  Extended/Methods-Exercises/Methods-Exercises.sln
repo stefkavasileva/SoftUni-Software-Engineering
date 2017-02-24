@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.IntegerToBase", "05.Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Notifications", "06.Notifications\06.Notifications.csproj", "{94375E73-5F6B-4196-88E1-104BE5117646}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.NumbersToWords", "07.NumbersToWords\07.NumbersToWords.csproj", "{80EA8867-F154-41D3-81A4-173AA9884A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.StringEncryption", "08.StringEncryption\08.StringEncryption.csproj", "{CF22C089-65F6-4808-9F00-50A51B701EF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{94375E73-5F6B-4196-88E1-104BE5117646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94375E73-5F6B-4196-88E1-104BE5117646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94375E73-5F6B-4196-88E1-104BE5117646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EA8867-F154-41D3-81A4-173AA9884A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EA8867-F154-41D3-81A4-173AA9884A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EA8867-F154-41D3-81A4-173AA9884A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EA8867-F154-41D3-81A4-173AA9884A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF22C089-65F6-4808-9F00-50A51B701EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF22C089-65F6-4808-9F00-50A51B701EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF22C089-65F6-4808-9F00-50A51B701EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF22C089-65F6-4808-9F00-50A51B701EF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
