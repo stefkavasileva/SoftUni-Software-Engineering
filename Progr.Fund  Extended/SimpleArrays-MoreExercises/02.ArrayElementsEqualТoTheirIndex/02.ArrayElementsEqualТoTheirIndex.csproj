@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}</ProjectGuid>
+    <ProjectGuid>{7E7E6FC2-4D6D-43A8-8E55-9AF4B64B4338}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.Altitude</RootNamespace>
-    <AssemblyName>09.Altitude</AssemblyName>
+    <RootNamespace>_02.ArrayElementsEqualТoTheirIndex</RootNamespace>
+    <AssemblyName>02.ArrayElementsEqualТoTheirIndex</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Altitude.cs" />
+    <Compile Include="ArrayElementsEqualТoTheirIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

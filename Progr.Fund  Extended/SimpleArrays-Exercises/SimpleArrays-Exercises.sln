@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.CountOfCapitalLettersInA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ArraySymmetry", "08.ArraySymmetry\08.ArraySymmetry.csproj", "{954BD8BA-E7C6-42B8-B36D-01FC3C598942}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Altitude", "09.Altitude\09.Altitude.csproj", "{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.BallisticsTraining", "10.BallisticsTraining\10.BallisticsTraining.csproj", "{0F67C879-A8B1-4F73-B9F0-FF625896FA57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{954BD8BA-E7C6-42B8-B36D-01FC3C598942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{954BD8BA-E7C6-42B8-B36D-01FC3C598942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{954BD8BA-E7C6-42B8-B36D-01FC3C598942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F67C879-A8B1-4F73-B9F0-FF625896FA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F67C879-A8B1-4F73-B9F0-FF625896FA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F67C879-A8B1-4F73-B9F0-FF625896FA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F67C879-A8B1-4F73-B9F0-FF625896FA57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

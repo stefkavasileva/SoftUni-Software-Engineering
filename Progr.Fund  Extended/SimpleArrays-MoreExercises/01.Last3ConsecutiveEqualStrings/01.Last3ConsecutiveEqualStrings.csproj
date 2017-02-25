@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}</ProjectGuid>
+    <ProjectGuid>{A3167762-221C-4C54-912F-778EEE49A851}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.Altitude</RootNamespace>
-    <AssemblyName>09.Altitude</AssemblyName>
+    <RootNamespace>_01.Last3ConsecutiveEqualStrings</RootNamespace>
+    <AssemblyName>01.Last3ConsecutiveEqualStrings</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Altitude.cs" />
+    <Compile Include="Last3ConsecutiveEqualStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

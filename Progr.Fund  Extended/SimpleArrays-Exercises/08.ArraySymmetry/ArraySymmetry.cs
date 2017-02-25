@@ -11,6 +11,7 @@ public class ArraySymmetry
         var rightPart = inputArr.Length % 2 == 0 ?
             inputArr.Skip(inputArr.Length / 2).ToArray() :
             inputArr.Skip(inputArr.Length / 2 + 1).ToArray();
+
         Array.Reverse(rightPart);
 
         var isSimetric = true;

@@ -1,15 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _09.Altitude
+public class Altitude
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
+        var lineArgs = Console.ReadLine().Split().ToArray();
+
+        var altitude = double.Parse(lineArgs[0]);
+
+        for (int i = 1; i < lineArgs.Length - 1; i += 2)
         {
+            var direction = lineArgs[i];
+            var value = double.Parse(lineArgs[i + 1]);
+
+            if (direction.Equals("up"))
+            {
+                altitude += value;
+            }
+            else
+            {
+                altitude -= value;
+            }
+
+            if (altitude <= 0)
+            {
+                Console.WriteLine("crashed");
+                return;
+            }
         }
+
+        Console.WriteLine($"got through safely. current altitude: {altitude}m");
     }
 }

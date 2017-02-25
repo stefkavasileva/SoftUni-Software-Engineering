@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F824CD8-C1B8-42EC-94D9-784FEC29BE2F}</ProjectGuid>
+    <ProjectGuid>{6328B1A5-C0B4-41CA-856F-23C0C0BAEDE4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.Altitude</RootNamespace>
-    <AssemblyName>09.Altitude</AssemblyName>
+    <RootNamespace>_05.CharRotation</RootNamespace>
+    <AssemblyName>05.CharRotation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Altitude.cs" />
+    <Compile Include="CharRotation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
