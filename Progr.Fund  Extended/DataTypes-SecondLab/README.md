@@ -86,17 +86,10 @@ Write a program that enters **first name** , **last name** and **age** and print
 
 ### Examples
 
-+---------------+---------------+
-| **Input**         | **Output**| 
-+===============+===============+
-| Svetlin       |Hello, Svetlin Nakov. You are 25 years old.|
-|  Nakov        |               							|    
-|  25           |               							|    
-+---------------+---------------+
 
 | **Input** | **Output** |
 | --- | --- |
-|Svetlin Nakov 25|Hello, Svetlin Nakov. You are 25 years old. 
+| Svetlin<br/> Nakov <br/> 25 <br/>|Hello, Svetlin Nakov. You are 25 years old. 
 
 
 ### Hints
