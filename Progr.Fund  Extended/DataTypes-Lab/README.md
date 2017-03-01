@@ -62,8 +62,14 @@ Write program to enter **n** numbers and calculate and print their **exact produ
 
 | **Input** | **Output** | 
 | --- | --- | --- | --- |
-| 31000000000000000000510 3 | 9.999999999999 |
-| 50000000000000000000 |   | 20.00000000003333333333333.|
+|3 | 50000000000000000000 
+1000000000000000000
+5
+10
+| 2 | 9.999999999999
+0.00000000003
+333333333333.3
+
 ### Hints
 
 - If you use types like **float** or **double** , the result will lose some of its precision. Also it might be printed in scientific notation.
