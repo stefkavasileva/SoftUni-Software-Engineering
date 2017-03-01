@@ -52,7 +52,7 @@ Declare two integer variables **a** and **b** and assign them with 5 and 10 and 
 
 | **Input** | **Output** |
 | --- | --- |
-| 5<br/>10 | 10<bre/b>5 |
+| 5<br/>10 | 10<br/>5 |
 
 ### Hints
 
@@ -172,18 +172,11 @@ You are given **3 integer numbers: a** , **b**** and c **, which will represent 
 If it is, print &quot; **Triangle is valid.**&quot;.
 Otherwise print &quot; **Invalid Triangle.**&quot; and **end the program**.
 
-If it is valid, you have to check if it is a **right triangle** (a
-
-# 2
- + b
-# 2
- == c
-# 2
-).
+If it is valid, you have to check if it is a **right triangle** (a*a + b*b == c*c).
 If it is a right triangle, print &quot; **Triangle has a right angle between sides a and b**&quot;, depending on which side forms a **right angle**. If the sides **b** and **c** form a right angle, print &quot; **Triangle has a right angle between sides b and c**&quot;, and so on.
 ### Examples
 
-|| **Input** | **Output** |
+| **Input** | **Output** |
 | --- | --- |
 | 3<br/> 4 <br/> 5 |Triangle is valid. <br/> Triangle has a right angle between sides a and b |
 | 5<br/> 5 <br/> 5 |Triangle is valid. <br/> Triangle has no right angles |
@@ -194,27 +187,9 @@ If it is a right triangle, print &quot; **Triangle has a right angle between sid
 
 - A triangle is valid if **every** two sides&#39; sums are greater than the third side.
 - A triangle is a right triangle if **either** of these rules apply:
-  - a
-# 2
- + b
-# 2
-==  c
-# 2
-
-  - b
-# 2
- + c
-# 2
-==  a
-# 2
-
-  - c
-# 2
- + a
-# 2
-==  b
-# 2
-
+- a * a + b * b == c *c 
+- b * b + c * c == a *a 
+- c * c + a * a == b *b 
 
 ## 10.\* Data Overflow
 
