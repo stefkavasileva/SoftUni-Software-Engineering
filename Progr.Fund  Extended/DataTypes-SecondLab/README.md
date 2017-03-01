@@ -30,7 +30,33 @@ Write a program to read an integer **n** and print all **triples** of the first 
 
 | **Input** | **Output** |
 | --- | --- |
-| 3 | aaaaabaacabaabbabcacaacbaccbaababbacbbabbbbbcbcabcbbcccaacabcaccbacbbcbcccaccbccc |
+| 3 | aaa
+	| aab
+	|aac
+	|aba
+	|abb
+	|abc
+	|aca
+	|acb
+	|acc
+	|baa
+	|bab
+	|bac
+	|bba
+	|bbb
+	|bbc
+	|bca
+	|bcb
+	|bcc
+	|caa
+	|cab
+	|cac
+	|cba
+	|cbb
+	|cbc
+	|cca
+	|ccb
+	|ccc |
 
 ### Hints
 
