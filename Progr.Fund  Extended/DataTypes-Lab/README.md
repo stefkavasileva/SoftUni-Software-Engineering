@@ -58,18 +58,6 @@ Console.WriteLine("{0:f2}", 2 * Math.PI * r);
 
 Write program to enter **n** numbers and calculate and print their **exact product** (without rounding).
 
-### Examples
-
-| **Input** | **Output** | 
-| --- | --- | --- | --- |
-|3 | 50000000000000000000 
-1000000000000000000
-5
-10
-| 2 | 9.999999999999
-0.00000000003
-333333333333.3
-
 ### Hints
 
 - If you use types like **float** or **double** , the result will lose some of its precision. Also it might be printed in scientific notation.
