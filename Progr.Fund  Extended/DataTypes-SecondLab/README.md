@@ -16,8 +16,7 @@ Write a program to read an integer **n** and for all numbers in the range **1…
 
 | **Input** | **Output** |
 | --- | --- |
-| 15 | 1 -&gt; False
-	<br/>2 -&gt; False <br/>3 -&gt; False <br/>4 -&gt; False <br/>5 -&gt; True <br/>6 -&gt; False <br/>7 -&gt; True <br/>8 -&gt; False <br/>9 -&gt; False <br/>10 -&gt; False <br/>11 -&gt; False <br/>12 -&gt; False <br/>13 -&gt; False <br/>14 -&gt; True <br/> 15 -&gt; False |
+| 15 | 1 -&gt; False <br/>2 -&gt; False <br/>3 -&gt; False <br/>4 -&gt; False <br/>5 -&gt; True <br/>6 -&gt; False <br/>7 -&gt; True <br/>8 -&gt; False <br/>9 -&gt; False <br/>10 -&gt; False <br/>11 -&gt; False <br/>12 -&gt; False <br/>13 -&gt; False <br/>14 -&gt; True <br/> 15 -&gt; False |
 
 ### Hints
 
