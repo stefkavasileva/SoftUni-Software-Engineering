@@ -172,7 +172,7 @@ You are given **3 integer numbers: a , b and c **, which will represent the** 3 
 If it is, print &quot; **Triangle is valid.**&quot;.
 Otherwise print &quot; **Invalid Triangle.**&quot; and **end the program**.
 
-If it is valid, you have to check if it is a **right triangle** (a*a + b*b == c*c).
+If it is valid, you have to check if it is a **right triangle** (a * a + b * b == c * c).
 If it is a right triangle, print &quot; **Triangle has a right angle between sides a and b**&quot;, depending on which side forms a **right angle**. If the sides **b** and **c** form a right angle, print &quot; **Triangle has a right angle between sides b and c**&quot;, and so on.
 ### Examples
 
@@ -200,7 +200,6 @@ You will be given two numbers. Your task is to find the lowest one by value, fin
 | **Input** | **Output** | **Explanation** |
 | --- | --- | --- |
 | 100000 <br/> 5 | bigger type: uint <br/> smaller type: byte <br/> 100000 can overflow byte 392 times | uint.MinValue ≤ 100000 ≤ uint.MaxValue bigger type -> uint <br/> byte.MinValue ≤ 5 ≤ byte.MaxValuesmaller type -> byte 100000 / byte.MaxValue = 392.1568 -> 392 |
-| 1200 <br/> 2 | bigger type: ushort <br/> smaller type: byte <br/> 1200 can overflow byte 5 times |
 
 | **Input** | **Output** | 
 | --- | --- | --- |
@@ -270,7 +269,7 @@ The task is to **concatenate** everything in **string** format.
 | **Input** | **Output** |  
 | --- | --- |
 | **2** <br/> 104 <br/> 105 | hi |
-| **7** 83 <br/>111<br/>102<br/>116<br/>85<br/>110<br/>105 | SoftUni |
+| **7** <br/>83 <br/>111<br/>102<br/>116<br/>85<br/>110<br/>105 | SoftUni |
 
 ### Hints
 
@@ -314,7 +313,7 @@ Note: the delimiter and strings could be **anything** : whitespace and empty str
 | -<br/>5<br/>I<br/>Am<br/>Five<br/>Strings<br/>Long | I-Am-Five-Strings-Long |
 | \_<br/>5<br/>you<br/><br/>cannot<br/> tric<br/>kme | you\_cannot\_\_trick\_me |
 | &#39; <br/>7 <br/> S<br/>o<br/>f<br/>t<br/>U<br/>n<br/>i | S&#39;o&#39;f&#39;t&#39;U&#39;n&#39;i | 
-|trep<br/>8 ni <br/> ni<br/>ni | treptreptreptreptrepnitrepnitrepni |
+|trep<br/>8 <br/> ni <br/> ni<br/>ni | treptreptreptreptrepnitrepnitrepni |
 
 ### Hints
 
