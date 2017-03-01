@@ -88,9 +88,8 @@ Write a program that enters **first name** , **last name** and **age** and print
 
 | **Input** | **Output** |
 | --- | --- |
-| Svetlin|Hello, Svetlin Nakov. You are 25 years old. 
-Nakov| |
-25 | | 
+|Svetlin Nakov 25|Hello, Svetlin Nakov. You are 25 years old. 
+
 
 ### Hints
 
