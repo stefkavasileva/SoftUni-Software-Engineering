@@ -17,20 +17,7 @@ Write a program to read an integer **n** and for all numbers in the range **1…
 | **Input** | **Output** |
 | --- | --- |
 | 15 | 1 -&gt; False
-	|2 -&gt; False
-	|3 -&gt; False
-	|4 -&gt; False
-	|5 -&gt; True
-	|6 -&gt; False
-	|7 -&gt; True
-	|8 -&gt; False
-	|9 -&gt; False
-	|10 -&gt; False
-	|11 -&gt; False
-	|12 -&gt; False
-	|13 -&gt; False
-	|14 -&gt; True
-	|15 -&gt; False |
+	<br/>2 -&gt; False <br/>3 -&gt; False <br/>4 -&gt; False <br/>5 -&gt; True <br/>6 -&gt; False <br/>7 -&gt; True <br/>8 -&gt; False <br/>9 -&gt; False <br/>10 -&gt; False <br/>11 -&gt; False <br/>12 -&gt; False <br/>13 -&gt; False <br/>14 -&gt; True <br/> 15 -&gt; False |
 
 ### Hints
 
@@ -44,33 +31,7 @@ Write a program to read an integer **n** and print all **triples** of the first 
 
 | **Input** | **Output** |
 | --- | --- |
-| 3 | aaa
-	| aab
-	|aac
-	|aba
-	|abb
-	|abc
-	|aca
-	|acb
-	|acc
-	|baa
-	|bab
-	|bac
-	|bba
-	|bbb
-	|bbc
-	|bca
-	|bcb
-	|bcc
-	|caa
-	|cab
-	|cac
-	|cba
-	|cbb
-	|cbc
-	|cca
-	|ccb
-	|ccc |
+| 3 | aaa <br/> aab<br/>aac<br/>aba<br/>abb<br/>abc<br/>aca<br/>acb<br/>acc<br/>baa<br/>bab<br/>bac<br/>bba <br/> bbb <br/> bbc <br/>bca <br/> bcb <br/>bcc<br/> caa<br/> cab<br/>cac<br/> cba<br/>cbb<br/>cbc <br/>cca<br/> ccb<br/> ccc |
 
 ### Hints
 
