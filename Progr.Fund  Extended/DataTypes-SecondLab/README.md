@@ -16,7 +16,21 @@ Write a program to read an integer **n** and for all numbers in the range **1…
 
 | **Input** | **Output** |
 | --- | --- |
-| 15 | 1 -&gt; False2 -&gt; False3 -&gt; False4 -&gt; False5 -&gt; True6 -&gt; False7 -&gt; True8 -&gt; False9 -&gt; False10 -&gt; False11 -&gt; False12 -&gt; False13 -&gt; False14 -&gt; True15 -&gt; False |
+| 15 | 1 -&gt; False
+	|2 -&gt; False
+	|3 -&gt; False
+	|4 -&gt; False
+	|5 -&gt; True
+	|6 -&gt; False
+	|7 -&gt; True
+	|8 -&gt; False
+	|9 -&gt; False
+	|10 -&gt; False
+	|11 -&gt; False
+	|12 -&gt; False
+	|13 -&gt; False
+	|14 -&gt; True
+	|15 -&gt; False |
 
 ### Hints
 
@@ -74,7 +88,9 @@ Write a program that enters **first name** , **last name** and **age** and print
 
 | **Input** | **Output** |
 | --- | --- |
-| SvetlinNakov25 | Hello, Svetlin Nakov. You are 25 years old. |
+| Svetlin
+Nakov
+25 | Hello, Svetlin Nakov. You are 25 years old. |
 
 ### Hints
 
