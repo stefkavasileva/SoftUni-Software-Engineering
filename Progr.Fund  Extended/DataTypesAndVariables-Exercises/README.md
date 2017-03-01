@@ -167,7 +167,7 @@ Every number in the output **should be formatted to**** 0 digits** after the flo
 
 ## 9.\* Triangle Formations
 
-You are given **3 integer numbers: a** , **b**** and c **, which will represent the** 3 sides of a triangle **. Your task is to check whether the triangle is** valid**.
+You are given **3 integer numbers: a , b and c **, which will represent the** 3 sides of a triangle **. Your task is to check whether the triangle is** valid**.
 
 If it is, print &quot; **Triangle is valid.**&quot;.
 Otherwise print &quot; **Invalid Triangle.**&quot; and **end the program**.
@@ -187,9 +187,9 @@ If it is a right triangle, print &quot; **Triangle has a right angle between sid
 
 - A triangle is valid if **every** two sides&#39; sums are greater than the third side.
 - A triangle is a right triangle if **either** of these rules apply:
-- a * a + b * b == c *c 
-- b * b + c * c == a *a 
-- c * c + a * a == b *b 
+- a \* a + b \* b == c \* c 
+- b \* b + c \* c == a \* a 
+- c \* c + a \* a == b \* b 
 
 ## 10.\* Data Overflow
 
