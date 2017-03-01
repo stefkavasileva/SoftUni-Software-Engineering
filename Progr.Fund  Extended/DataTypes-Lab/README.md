@@ -5,6 +5,5 @@ Problems for exercises and homework for the [“Programming Fundamentals” cour
 You can check your solutions [here](https://judge.softuni.bg/Contests/171/Data-Types-and-Variables-Lab).
 
 ##I.	Integer and Real Numbers
-```html
-   <span style="color:#f03c15 ">01.Time Since Birthday  <span>
-```
+<span style="color:orange;">01.Time Since Birthday </span>
+
