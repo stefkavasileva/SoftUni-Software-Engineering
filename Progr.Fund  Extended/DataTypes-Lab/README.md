@@ -2,7 +2,7 @@
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
-You can check your solutions [here] (https://judge.softuni.bg/Contests/171/Data-Types-and-Variables-Lab).
+You can check your solutions [here] (https://judge.softuni.bg/Contests/Practice/Index/171#0).
 
 # I.Integer and Real Numbers
 
