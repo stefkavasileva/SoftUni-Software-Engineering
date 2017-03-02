@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TrickyStrings", "01.TrickyStrings\01.TrickyStrings.csproj", "{ED8A121C-4639-42ED-8344-5EB26C59AA79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TriangleFormations", "02.TriangleFormations\02.TriangleFormations.csproj", "{D1CCA752-5D64-45D8-898E-5C4CCC8FE63C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Tetris", "03.Tetris\03.Tetris.csproj", "{4EBEE079-A08A-4BB8-980B-9C03B5C9A7D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED8A121C-4639-42ED-8344-5EB26C59AA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8A121C-4639-42ED-8344-5EB26C59AA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8A121C-4639-42ED-8344-5EB26C59AA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8A121C-4639-42ED-8344-5EB26C59AA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1CCA752-5D64-45D8-898E-5C4CCC8FE63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1CCA752-5D64-45D8-898E-5C4CCC8FE63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1CCA752-5D64-45D8-898E-5C4CCC8FE63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1CCA752-5D64-45D8-898E-5C4CCC8FE63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EBEE079-A08A-4BB8-980B-9C03B5C9A7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EBEE079-A08A-4BB8-980B-9C03B5C9A7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EBEE079-A08A-4BB8-980B-9C03B5C9A7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EBEE079-A08A-4BB8-980B-9C03B5C9A7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
