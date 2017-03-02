@@ -85,7 +85,7 @@ Write a program to read **an array of integers** and find **how many odd element
 | **Input** | **Output** |
 | --- | --- |
 | **1** -2 **3** 4 | 2 |
-| **3**** 9 ****-9** -6 **1** -2 | 4 |
+| **3** ** 9 ** **-9** -6 **1** -2 | 4 |
 | 66 0 2 1 | 1 |
 
 ### Hints:
