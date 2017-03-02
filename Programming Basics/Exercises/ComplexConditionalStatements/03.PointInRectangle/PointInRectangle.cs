@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PointInRectangle
+public class PointInRectangle
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double x1 = double.Parse(Console.ReadLine());
         double y1 = double.Parse(Console.ReadLine());
@@ -31,4 +26,3 @@ class PointInRectangle
         }
     }
 }
-

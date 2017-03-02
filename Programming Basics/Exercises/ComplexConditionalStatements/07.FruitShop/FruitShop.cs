@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FruitShop
+public class FruitShop
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string product = Console.ReadLine();
         string day = Console.ReadLine().ToLower();
@@ -82,7 +77,6 @@ class FruitShop
             decimal totalPrice = priceProduct * (decimal)quantity;
 
             Console.WriteLine("{0:f2}", totalPrice);
-
         }
         else
         {
@@ -90,4 +84,3 @@ class FruitShop
         }
     }
 }
-

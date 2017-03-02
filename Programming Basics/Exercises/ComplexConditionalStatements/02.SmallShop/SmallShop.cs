@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SmallShop
+public class SmallShop
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string product = Console.ReadLine().ToLower();
         string town = Console.ReadLine().ToLower();
@@ -87,7 +82,5 @@ class SmallShop
         decimal totalPrice = price * (decimal)quantity;
 
         Console.WriteLine((double)totalPrice);
-
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TradeComissions
+public class TradeComissions
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string town = Console.ReadLine().ToLower();
         decimal sales = decimal.Parse(Console.ReadLine());

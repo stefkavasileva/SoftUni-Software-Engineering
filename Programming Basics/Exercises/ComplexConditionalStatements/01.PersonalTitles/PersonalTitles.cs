@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PersonalTitles
+public class PersonalTitles
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double age = double.Parse(Console.ReadLine());
         char gender = char.Parse(Console.ReadLine());
@@ -36,4 +31,3 @@ class PersonalTitles
         }
     }
 }
-
