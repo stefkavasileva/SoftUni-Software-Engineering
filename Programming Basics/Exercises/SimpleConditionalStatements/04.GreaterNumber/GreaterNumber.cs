@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class GreaterNumber
+public class GreaterNumber
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int firstNum = int.Parse(Console.ReadLine());
         int secondNum = int.Parse(Console.ReadLine());
@@ -22,4 +17,3 @@ class GreaterNumber
         }
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class AreaOfFigures
+public class AreaOfFigures
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string figure = Console.ReadLine().ToLower();
 
@@ -40,4 +35,3 @@ class AreaOfFigures
         Console.WriteLine("{0}", Math.Round(areaOfFigure, 3));
     }
 }
-

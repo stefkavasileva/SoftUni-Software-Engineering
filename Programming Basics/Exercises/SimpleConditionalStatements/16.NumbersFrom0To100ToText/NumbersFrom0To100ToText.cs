@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumbersFrom0To100ToText
+public class NumbersFrom0To100ToText
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int inputNumber = int.Parse(Console.ReadLine());
         string[] numToNineText = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -76,4 +71,3 @@ class NumbersFrom0To100ToText
         }
     }
 }
-

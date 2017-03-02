@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumberFromZeroToNineText
+public class NumberFromZeroToNineText
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int inputNum = int.Parse(Console.ReadLine());
 
@@ -57,4 +52,3 @@ class NumberFromZeroToNineText
         }
     }
 }
-
