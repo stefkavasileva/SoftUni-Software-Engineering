@@ -54,7 +54,7 @@ After you remove the elements, check the **sum** of both lists. If the sum of bo
 
 You will receive an integer list on the first line of the input (space-separated). Leave the first, middle and last elements as they are. For every other element, **exchange** it with its **opposite indexed element** (**list[1]****list[length-2]** and so on…). After that, print the list on the console (space-separated).
 
-![Array](C:\GitHubRepositories\Programming-Fundamentals\Progr.Fund  Extended\Lists-Exercises\images\04.ProblemArray.png?raw=true "Optional Title")
+![Array](C:\GitHubRepositories\Programming-Fundamentals\Progr.Fund  Extended\Lists-Exercises\images\04.ProblemArray.jpg?raw=true "Optional Title")
 
 _Note: If the list has an even number of elements, as there is no middle element,_ **flip** _all the elements_ **except** _for the_ **first** _and_ **last** _ones._
 
