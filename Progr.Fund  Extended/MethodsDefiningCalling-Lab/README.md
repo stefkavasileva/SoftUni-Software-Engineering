@@ -1,4 +1,4 @@
-#<p align="center"> Lab: Methods - Defining and Calling Methods <p>
+#<p align="center">Lab: Methods - Defining and Calling Methods <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
