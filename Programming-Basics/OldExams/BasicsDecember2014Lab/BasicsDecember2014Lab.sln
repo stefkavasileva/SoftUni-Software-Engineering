@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Beers", "01.Beers\01.Beers.csproj", "{B2813E79-8122-4A39-A232-D8334E5EE8A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.FunWithMatrices", "02.FunWithMatrices\02.FunWithMatrices.csproj", "{6CEB07E5-7DD8-4696-86AA-D189DAB39367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Tetris", "04.Tetris\04.Tetris.csproj", "{223CF0AC-5269-4FB8-B02F-35B4E5CF2EE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2813E79-8122-4A39-A232-D8334E5EE8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2813E79-8122-4A39-A232-D8334E5EE8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2813E79-8122-4A39-A232-D8334E5EE8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2813E79-8122-4A39-A232-D8334E5EE8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEB07E5-7DD8-4696-86AA-D189DAB39367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEB07E5-7DD8-4696-86AA-D189DAB39367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEB07E5-7DD8-4696-86AA-D189DAB39367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEB07E5-7DD8-4696-86AA-D189DAB39367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223CF0AC-5269-4FB8-B02F-35B4E5CF2EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223CF0AC-5269-4FB8-B02F-35B4E5CF2EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223CF0AC-5269-4FB8-B02F-35B4E5CF2EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223CF0AC-5269-4FB8-B02F-35B4E5CF2EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
