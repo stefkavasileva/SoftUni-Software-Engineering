@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Harvest
+public class Harvest
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int vineyardArea = int.Parse(Console.ReadLine());
         double neededVine = double.Parse(Console.ReadLine());
@@ -27,7 +22,5 @@ class Harvest
         {
             Console.WriteLine("It will be a tough winter! More {0} liters wine needed.", Math.Floor(neededLitersVine - vine));
         }
-
     }
 }
-

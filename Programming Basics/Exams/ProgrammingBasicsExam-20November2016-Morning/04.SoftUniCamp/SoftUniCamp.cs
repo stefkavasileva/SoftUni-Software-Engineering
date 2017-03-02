@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SoftUniCamp
+public class SoftUniCamp
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int groups = int.Parse(Console.ReadLine());
 
@@ -51,7 +46,5 @@ class SoftUniCamp
         Console.WriteLine("{0:f2}%", (minibus / people) * 100.0);
         Console.WriteLine("{0:f2}%", (bus / people) * 100.0);
         Console.WriteLine("{0:f2}%", (train / people) * 100.0);
-
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FlowerShop
+public class FlowerShop
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int magnolias = int.Parse(Console.ReadLine());
         int hyacinths = int.Parse(Console.ReadLine());
@@ -33,7 +28,5 @@ class FlowerShop
             int remainder = (int)Math.Ceiling(presentPrice - totalIncome);
             Console.WriteLine($"She will have to borrow {remainder} leva.");
         }
-
     }
 }
-

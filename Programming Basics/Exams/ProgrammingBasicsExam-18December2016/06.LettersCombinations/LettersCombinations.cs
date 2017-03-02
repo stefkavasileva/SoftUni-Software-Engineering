@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LettersCombinations
+public class LettersCombinations
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char startLetter = char.Parse(Console.ReadLine());
         char endLetter = char.Parse(Console.ReadLine());
@@ -35,7 +31,5 @@ class LettersCombinations
         }
 
         Console.WriteLine(combinations);
-
     }
 }
-

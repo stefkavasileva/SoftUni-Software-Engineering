@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Vacantion
+public class Vacantion
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int adults = int.Parse(Console.ReadLine());
         int students = int.Parse(Console.ReadLine());
@@ -52,4 +47,3 @@ class Vacantion
         Console.WriteLine("{0:f2}", totalPrice);
     }
 }
-

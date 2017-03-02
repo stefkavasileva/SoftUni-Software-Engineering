@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Logistics
+public class Logistics
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -15,6 +10,7 @@ class Logistics
         int truck = 0;
         int train = 0;
         int totalLoad = 0;
+        
         for (int i = 0; i < n; i++)
         {
             int load = int.Parse(Console.ReadLine());
@@ -31,15 +27,14 @@ class Logistics
                 train += load;
             }
 
-            totalLoad +=load;
+            totalLoad += load;
         }
 
         double average = ((microbus * 200.0) + (truck * 175.0) + (train * 120.0)) / totalLoad;
 
         Console.WriteLine($"{average:f2}");
-        Console.WriteLine($"{((double)microbus/totalLoad)*100.0:f2}%");
-        Console.WriteLine($"{((double)truck/totalLoad)*100.0:f2}%");
-        Console.WriteLine($"{((double)train/totalLoad)*100.0:f2}%");
+        Console.WriteLine($"{((double)microbus / totalLoad) * 100.0:f2}%");
+        Console.WriteLine($"{((double)truck / totalLoad) * 100.0:f2}%");
+        Console.WriteLine($"{((double)train / totalLoad) * 100.0:f2}%");
     }
 }
-

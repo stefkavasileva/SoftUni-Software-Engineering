@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MatchTickets
+public class MatchTickets
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal budget = decimal.Parse(Console.ReadLine());
         string categorie = Console.ReadLine().ToLower();
@@ -35,4 +30,3 @@ class MatchTickets
             Console.WriteLine("Not enough money! You need {0} leva.", Math.Abs(budget));
     }
 }
-

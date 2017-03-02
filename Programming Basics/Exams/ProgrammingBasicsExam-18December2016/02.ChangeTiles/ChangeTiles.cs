@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ChangeTiles
+public class ChangeTiles
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal money = decimal.Parse(Console.ReadLine());
         double width = double.Parse(Console.ReadLine());
@@ -22,17 +17,13 @@ class ChangeTiles
         int neededTiles = (int)Math.Ceiling(floorArea / tileArea) + 5;
         decimal total = (neededTiles * (decimal)tilePrice) + (decimal)workmanMoney;
 
-
-        if (total<=money)
+        if (total <= money)
         {
-            Console.WriteLine($"{money-total:f2} lv left.");
+            Console.WriteLine($"{money - total:f2} lv left.");
         }
         else
         {
-            Console.WriteLine($"You'll need {total-money:f2} lv more.");
+            Console.WriteLine($"You'll need {total - money:f2} lv more.");
         }
-
-        
     }
 }
-

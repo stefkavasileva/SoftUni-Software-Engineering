@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Histogram
+public class Histogram
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         double p1 = 0;
@@ -39,4 +34,3 @@ class Histogram
         Console.WriteLine("{0:f2}%", (p5 / n) * 100);
     }
 }
-

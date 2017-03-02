@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OnTimeForTheExam
+public class OnTimeForTheExam
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int hourExam = int.Parse(Console.ReadLine());
         int minutesExam = int.Parse(Console.ReadLine());
@@ -62,8 +57,6 @@ class OnTimeForTheExam
             {
                 Console.WriteLine("{0:00} minutes before the start", minutes);
             }
-
         }
     }
 }
-

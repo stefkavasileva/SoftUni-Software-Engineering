@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Bricks
+public class Bricks
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double x = int.Parse(Console.ReadLine());
         int workers = int.Parse(Console.ReadLine());
@@ -18,4 +13,3 @@ class Bricks
         Console.WriteLine(Math.Ceiling(result));
     }
 }
-

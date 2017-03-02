@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
-class Grades
+public class Grades
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int students = int.Parse(Console.ReadLine());
 
@@ -22,7 +19,7 @@ class Grades
         double weakPercentage = grades.Count(x => x < 3) * 100.0 / students;
         double goodPercentage = grades.Count(x => x >= 3 && x < 4) * 100.0 / students;
         double veryGoodPercentage = grades.Count(x => x >= 4 && x < 5) * 100.0 / students;
-        double exelentPercentage = grades.Count(x => x >= 5 ) * 100.0 / students;
+        double exelentPercentage = grades.Count(x => x >= 5) * 100.0 / students;
         double average = grades.Average();
 
         Console.WriteLine($"Top students: {exelentPercentage:f2}%");
@@ -30,7 +27,5 @@ class Grades
         Console.WriteLine($"Between 3.00 and 3.99: {goodPercentage:f2}%");
         Console.WriteLine($"Fail: {weakPercentage:f2}%");
         Console.WriteLine($"Average: {average:f2}");
-
     }
 }
-

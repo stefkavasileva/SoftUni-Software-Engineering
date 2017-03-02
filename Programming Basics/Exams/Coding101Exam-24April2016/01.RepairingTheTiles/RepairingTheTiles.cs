@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RepairingTheTiles
+public class RepairingTheTiles
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int hightPlayground = int.Parse(Console.ReadLine());
         double widthTitle = double.Parse(Console.ReadLine());
@@ -27,4 +22,3 @@ class RepairingTheTiles
         Console.WriteLine(neededTime);
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Diamond
+public class Diamond
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int innerDots = 3 * n;
@@ -48,9 +43,7 @@ class Diamond
             }
             else
             {
-                Console.WriteLine("{0}*{1}*{0}",
-                                   new string('.', outerDots),
-                                   new string('.', innerDots));
+                Console.WriteLine("{0}*{1}*{0}", new string('.', outerDots), new string('.', innerDots));
             }
 
             outerDots++;
@@ -58,4 +51,3 @@ class Diamond
         }
     }
 }
-

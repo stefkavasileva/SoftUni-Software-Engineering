@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TriangleArea
+public class TriangleArea
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int x1 = int.Parse(Console.ReadLine());
         int y1 = int.Parse(Console.ReadLine());
@@ -24,4 +19,3 @@ class TriangleArea
         Console.WriteLine(area);
     }
 }
-

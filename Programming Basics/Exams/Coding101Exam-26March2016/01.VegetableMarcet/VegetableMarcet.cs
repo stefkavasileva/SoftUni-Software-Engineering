@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class VegetableMarcet
+public class VegetableMarcet
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal priceVegetables = decimal.Parse(Console.ReadLine());
         decimal priceFruits = decimal.Parse(Console.ReadLine());
@@ -20,4 +15,3 @@ class VegetableMarcet
         Console.WriteLine("{0}", result);
     }
 }
-

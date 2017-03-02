@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Stop
+public class Stop
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -15,6 +10,7 @@ class Stop
         int bottomSize = n;
         int dots = n + 1;
         int dashes = (2 * n) - 3;
+
         for (int i = 1; i <= topSize; i++)
         {
             if (i == 1)
@@ -50,4 +46,3 @@ class Stop
         }
     }
 }
-

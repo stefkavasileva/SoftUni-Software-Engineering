@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-
-class MaxCombination
+public class MaxCombination
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int start = int.Parse(Console.ReadLine());
         int end = int.Parse(Console.ReadLine());
@@ -17,9 +13,9 @@ class MaxCombination
 
         int count = 0;
 
-        for (int i = start; i <=end ; i++)
+        for (int i = start; i <= end; i++)
         {
-            for (int j = start; j <=end; j++)
+            for (int j = start; j <= end; j++)
             {
                 if (count == max)
                 {
@@ -33,7 +29,5 @@ class MaxCombination
         }
 
         Console.WriteLine(result);
-
     }
 }
-

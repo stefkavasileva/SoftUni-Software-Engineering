@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Devision
+public class Devision
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -27,7 +22,6 @@ class Devision
 
             if (num % 4 == 0)
                 p3++;
-
         }
 
         Console.WriteLine("{0:f2}%", (p1 / n) * 100.0);
@@ -35,4 +29,3 @@ class Devision
         Console.WriteLine("{0:f2}%", (p3 / n) * 100.0);
     }
 }
-

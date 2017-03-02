@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RectangleWithStars
+public class RectangleWithStars
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -31,11 +26,9 @@ class RectangleWithStars
             else
             {
                 Console.WriteLine("%{0}%", new string(' ', (2 * n) - 2));
-
             }
         }
 
         Console.WriteLine(new string('%', 2 * n));
     }
 }
-

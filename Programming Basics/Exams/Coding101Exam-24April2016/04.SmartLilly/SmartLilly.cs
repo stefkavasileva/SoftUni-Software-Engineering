@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SmartLilly
+public class SmartLilly
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int lillysAge = int.Parse(Console.ReadLine());
         decimal laundryPrice = decimal.Parse(Console.ReadLine());
@@ -15,7 +10,6 @@ class SmartLilly
 
         decimal lillysMoney = 0;
         decimal birthayMoney = 10;
-
 
         for (int i = 1; i <= lillysAge; i++)
         {
@@ -30,7 +24,6 @@ class SmartLilly
             }
         }
 
-
         decimal result = Math.Abs(lillysMoney - laundryPrice);
 
         if (lillysMoney >= laundryPrice)
@@ -43,4 +36,3 @@ class SmartLilly
         }
     }
 }
-

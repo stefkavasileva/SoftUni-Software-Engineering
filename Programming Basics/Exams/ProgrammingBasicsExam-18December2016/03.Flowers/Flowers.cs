@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Flowers
+public class Flowers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int chrysanthemums = int.Parse(Console.ReadLine());
         int roses = int.Parse(Console.ReadLine());
@@ -39,8 +34,6 @@ class Flowers
             bouquetPrice += bouquetPrice * 0.15m;
         }
 
-
-
         if (tulips > 7 && season.Equals("Spring"))
         {
             bouquetPrice -= bouquetPrice * 0.05m;
@@ -61,4 +54,3 @@ class Flowers
         Console.WriteLine($"{bouquetPrice:f2}");
     }
 }
-

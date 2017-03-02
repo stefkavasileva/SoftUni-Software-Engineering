@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Trip
+public class Trip
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal budget = decimal.Parse(Console.ReadLine());
         string season = Console.ReadLine().ToLower();
@@ -54,4 +49,3 @@ class Trip
         }
     }
 }
-

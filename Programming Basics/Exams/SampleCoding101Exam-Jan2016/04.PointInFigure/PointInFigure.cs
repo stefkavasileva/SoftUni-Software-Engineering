@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class PointInFigure
+public class PointInFigure
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int x = int.Parse(Console.ReadLine());
         int y = int.Parse(Console.ReadLine());
@@ -25,4 +21,3 @@ class PointInFigure
         }
     }
 }
-

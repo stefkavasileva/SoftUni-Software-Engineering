@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Battles
+public class Battles
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         int firstPlayer = int.Parse(Console.ReadLine());
         int secondPlayer = int.Parse(Console.ReadLine());
@@ -31,5 +26,3 @@ class Battles
         }
     }
 }
-
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BackToThePast
+public class BackToThePast
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal heritage = decimal.Parse(Console.ReadLine());
         int endYear = int.Parse(Console.ReadLine());
@@ -23,8 +18,7 @@ class BackToThePast
                 int age = (i - 1800) + 18;
                 heritage -= 12000 + (50 * age);
             }
-        }
-
+        }   
 
         if (heritage >= 0)
         {
@@ -36,4 +30,3 @@ class BackToThePast
         }
     }
 }
-

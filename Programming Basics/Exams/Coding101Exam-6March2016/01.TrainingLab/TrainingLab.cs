@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TrainingLab
+public class TrainingLab
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double width = double.Parse(Console.ReadLine());
         double hight = double.Parse(Console.ReadLine());

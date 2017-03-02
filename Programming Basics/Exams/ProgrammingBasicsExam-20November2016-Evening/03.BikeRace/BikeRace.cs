@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BikeRace
+public class BikeRace
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int juniors = int.Parse(Console.ReadLine());
         int seniors = int.Parse(Console.ReadLine());
@@ -25,9 +20,8 @@ class BikeRace
 
             if (seniors + juniors >= 50)
             {
-                income -= income * 0.25m;                       
+                income -= income * 0.25m;
             }
-           
         }
         else if (layout.Equals("downhill"))
         {
@@ -43,4 +37,3 @@ class BikeRace
         Console.WriteLine($"{income:f2}");
     }
 }
-

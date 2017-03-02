@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class StupidPasswordGenerator
+public class StupidPasswordGenerator
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int l = int.Parse(Console.ReadLine());
+
         List<string> stupidPasswards = new List<string>();
 
         for (int i1 = 1; i1 <= n; i1++)
@@ -36,4 +33,3 @@ class StupidPasswordGenerator
         Console.WriteLine(string.Join(" ", stupidPasswards));
     }
 }
-

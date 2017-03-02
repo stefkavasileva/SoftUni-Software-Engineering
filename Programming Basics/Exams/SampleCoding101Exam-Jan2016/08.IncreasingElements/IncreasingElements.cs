@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class IncreasingElements
+public class IncreasingElements
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -32,11 +27,11 @@ class IncreasingElements
             {
                 maxlen = len;
             }
-            previousNum = num;
 
+            previousNum = num;
         }
 
-        Console.WriteLine(maxlen)
+        Console.WriteLine(maxlen);
     }
 }
 

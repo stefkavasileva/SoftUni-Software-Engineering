@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class HousePrice
+public class HousePrice
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double smallestRoomArea = double.Parse(Console.ReadLine());
         double kitchenArea = double.Parse(Console.ReadLine());
@@ -20,7 +15,6 @@ class HousePrice
         double houseArea = smallestRoomArea + kitchenArea + secondRoomArea + thirdRoomArea + bathroomArea;
         houseArea += houseArea * 0.05;
 
-        Console.WriteLine($"{(decimal)houseArea*price:f2}");
+        Console.WriteLine($"{(decimal)houseArea * price:f2}");
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class HotelRoom
+public class HotelRoom
 {
-    static void Main(string[] args)
+    public static void Main()
     {
 
         string month = Console.ReadLine().ToLower();
@@ -29,7 +24,6 @@ class HotelRoom
             {
                 studioPrice -= studioPrice * 0.05m;
             }
-
         }
         else if (month.Equals("june") || month.Equals("september"))
         {
@@ -40,7 +34,6 @@ class HotelRoom
             {
                 studioPrice -= studioPrice * 0.2m;
             }
-
         }
         else if (month.Equals("july") || month.Equals("august"))
         {
@@ -55,7 +48,5 @@ class HotelRoom
 
         Console.WriteLine("Apartment: {0:f2} lv.", apartamentPrice);
         Console.WriteLine("Studio: {0:f2} lv.", studioPrice);
-
     }
 }
-

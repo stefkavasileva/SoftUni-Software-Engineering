@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
-
-class DateAfterFiveDays
+public class DateAfterFiveDays
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int day = int.Parse(Console.ReadLine());
         int month = int.Parse(Console.ReadLine());
@@ -19,4 +15,3 @@ class DateAfterFiveDays
         Console.WriteLine(date.ToString("d.MM"));
     }
 }
-

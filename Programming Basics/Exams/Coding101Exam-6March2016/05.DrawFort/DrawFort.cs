@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class DrawFort
+public class DrawFort
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
         int middleTop = (2 * n) - ((n / 2) * 2) - 4;
         int size = n - 2;
+
         Console.WriteLine("/{0}\\{1}/{0}\\",
             new string('^', n / 2),
             new string('_', middleTop));
@@ -33,7 +30,6 @@ class DrawFort
         Console.WriteLine("\\{0}/{1}\\{0}/",
            new string('_', n / 2),
            new string(' ', middleTop));
-
     }
 }
 

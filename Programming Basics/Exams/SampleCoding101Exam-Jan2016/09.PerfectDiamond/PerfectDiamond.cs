@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PerfectDiamond
+public class PerfectDiamond
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
-
 
         int spaces = n - 1;
 
@@ -24,7 +18,6 @@ class PerfectDiamond
 
             Console.WriteLine();
             spaces--;
-
         }
 
         spaces = 1;
@@ -42,4 +35,3 @@ class PerfectDiamond
         }
     }
 }
-

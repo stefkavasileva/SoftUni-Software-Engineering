@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Profit
+public class Profit
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int workDays = int.Parse(Console.ReadLine());
         decimal moneyPerDay = decimal.Parse(Console.ReadLine());
@@ -22,4 +17,3 @@ class Profit
         Console.WriteLine("{0:f2}", moneyInBG / 365.0m);
     }
 }
-

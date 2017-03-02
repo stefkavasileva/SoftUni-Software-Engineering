@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Money
+public class Money
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int bitcoins = int.Parse(Console.ReadLine());
         var yuans = double.Parse(Console.ReadLine());
@@ -20,7 +15,7 @@ class Money
         var levas = bitcoinsInLeva + dollarsToLeva;
         var euros = levas / 1.95;
         euros -= commision * euros;
+
         Console.WriteLine(euros);
     }
 }
-
