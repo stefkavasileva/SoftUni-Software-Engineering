@@ -1,7 +1,6 @@
-#<p align="center"> Programming Fundamentals - january 2017<p>
 
-<a href="https://softuni.bg/trainings/1509/programming-fundamentals-january-2017" rel="Programming-Fundamentals">![Software University]
-(http://innovationstarterbox.bg/wp-content/uploads/2016/05/Softuni_logo_trasparent.png)</a>
+<a href="https://softuni.bg/trainings/1509/programming-fundamentals-january-2017" rel="Programming-Fundamentals"><p align="center"> Programming Fundamentals - january 2017<p>
+</a>
 
 ---
 The **“Programming Fundamentals”** course extends the previously gained basic coding skills from the **“Programming Basics”**course at the Software University and adds additional **knowledge** and **practical programming skills.**
