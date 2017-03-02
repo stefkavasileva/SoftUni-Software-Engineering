@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class House
+public class House
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int top = 0;
@@ -30,7 +25,6 @@ class House
             dashes = (n * 1) / 2;
         }
 
-
         for (int row = 0; row < top; row++)
         {
             Console.WriteLine("{0}{1}{0}",
@@ -46,4 +40,3 @@ class House
         }
     }
 }
-

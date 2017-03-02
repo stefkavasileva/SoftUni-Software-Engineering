@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Diamond
+public class Diamond
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -15,6 +10,7 @@ class Diamond
         int asterisks = 0;
         int outerDashes = 0;
         int middleDashes = 0;
+
         if (n % 2 == 0)
         {
             firstSegment = n / 2;
@@ -38,6 +34,7 @@ class Diamond
                 outerDashes--;
                 continue;
             }
+
             Console.WriteLine("{0}*{1}*{0}", new string('-', outerDashes), new string('-', middleDashes));
             outerDashes--;
             middleDashes += 2;
@@ -45,6 +42,7 @@ class Diamond
 
         outerDashes = 1;
         middleDashes = n - 4;
+
         for (int i = 0; i < firstSegment - 1; i++)
         {
             if (i == firstSegment - 2)
@@ -52,10 +50,10 @@ class Diamond
                 Console.WriteLine("{0}{1}{0}", new string('-', outerDashes), new string('*', asterisks));
                 continue;
             }
+
             Console.WriteLine("{0}*{1}*{0}", new string('-', outerDashes), new string('-', middleDashes));
             outerDashes++;
             middleDashes -= 2;
         }
     }
 }
-

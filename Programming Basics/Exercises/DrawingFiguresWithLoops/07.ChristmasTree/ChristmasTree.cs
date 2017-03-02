@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ChristmasTree
+public class ChristmasTree
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -18,8 +13,6 @@ class ChristmasTree
             Console.WriteLine("{0}{1} | {1}{0}",
                 new string(' ', n - row),
                 new string('*', row));
-
         }
     }
 }
-
