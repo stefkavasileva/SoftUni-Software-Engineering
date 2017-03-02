@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RectangleArea
+public class RectangleArea
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int a = int.Parse(Console.ReadLine());
         int b = int.Parse(Console.ReadLine());
@@ -16,4 +11,3 @@ class RectangleArea
         Console.WriteLine(result);
     }
 }
-

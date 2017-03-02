@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumsFromOneToTwenty
+public class NumsFromOneToTwenty
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         for (int i = 1; i <= 20; i++)
         {
@@ -15,4 +10,3 @@ class NumsFromOneToTwenty
         }
     }
 }
-
