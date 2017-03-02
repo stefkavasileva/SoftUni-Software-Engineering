@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OddEvenPosition
+public class OddEvenPosition
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         double evenMin = 1000000000;
@@ -63,4 +58,3 @@ class OddEvenPosition
         }
     }
 }
-

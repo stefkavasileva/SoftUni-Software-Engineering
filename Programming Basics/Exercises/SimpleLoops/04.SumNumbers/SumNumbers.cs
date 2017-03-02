@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SumNumbers
+public class SumNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int number = int.Parse(Console.ReadLine());
 
@@ -22,4 +17,3 @@ class SumNumbers
         Console.WriteLine(sumOfNums);
     }
 }
-

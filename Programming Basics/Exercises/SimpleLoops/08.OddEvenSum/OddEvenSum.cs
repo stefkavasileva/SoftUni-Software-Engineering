@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OddEvenSum
+public class OddEvenSum
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numbers = int.Parse(Console.ReadLine());
         int oddSum = 0;
@@ -36,4 +31,3 @@ class OddEvenSum
         }
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LeftAndRightSum
+public class LeftAndRightSum
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int nums = int.Parse(Console.ReadLine());
         int leftSum = 0;
@@ -39,4 +34,3 @@ class LeftAndRightSum
         }
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumbersFrom1To100
+public class NumbersFrom1To100
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         for (int i = 1; i <= 100; i++)
         {
@@ -15,4 +10,3 @@ class NumbersFrom1To100
         }
     }
 }
-

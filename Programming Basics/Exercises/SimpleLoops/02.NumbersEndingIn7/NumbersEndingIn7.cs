@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class NumbersEndingIn7
+public class NumbersEndingIn7
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         for (int i = 1; i < 1000; i++)
         {
@@ -18,4 +13,3 @@ class NumbersEndingIn7
         }
     }
 }
-
