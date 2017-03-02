@@ -10,7 +10,7 @@ You can check your solutions [here] (https://judge.softuni.bg/Contests/Practice/
 
 ### Hints
 
-1. First create a method with no parameters for printing the header starting with **static void**. Give it a **meaningful name** like &quot; **PrintReceiptHeader**&quot; and write the code that it will execute:
+First create a method with no parameters for printing the header starting with **static void**. Give it a **meaningful name** like &quot; **PrintReceiptHeader**&quot; and write the code that it will execute:
 
 ```C#
 static void PrintReceiptHeader ()
@@ -20,9 +20,9 @@ static void PrintReceiptHeader ()
 }
 ```
 
-2. Do the same for printing the receipt body and footer.
+Do the same for printing the receipt body and footer.
 
-3. Create a **method that will call all three methods** in the necessary order. Again, give it a **meaningful and descriptive name** like &quot; **PrintReceipt**&quot; and write the code:
+Create a **method that will call all three methods** in the necessary order. Again, give it a **meaningful and descriptive name** like &quot; **PrintReceipt**&quot; and write the code:
 
 ```C#
 static void PrintReceiptHeader ()
@@ -32,9 +32,9 @@ static void PrintReceiptHeader ()
 }
 ```
 
-4. For printing **&quot;©&quot;** use Unicode **&quot;\u00A9&quot;**
+For printing **&quot;©&quot;** use Unicode **&quot;\u00A9&quot;**
 
-5. **Call** (invoke) the **PrintReceipt** method from the **Main** method.
+**Call** (invoke) the **PrintReceipt** method from the **Main** method.
 
 ```C#
 static void Main (string [] args)
@@ -57,7 +57,7 @@ Create a method that prints the sign of an integer number n.
 
 ### Hints
 
-1. Create a method with a **descriptive name** like &quot; **PrintSign**&quot; which should receive **one parameter** of type **int**.
+Create a method with a **descriptive name** like &quot; **PrintSign**&quot; which should receive **one parameter** of type **int**.
 
 ```C#
 static void PrintSign(int number)
@@ -66,12 +66,12 @@ static void PrintSign(int number)
 }
 ```
 
-2. Implement the body of the method by handling different cases:
+Implement the body of the method by handling different cases:
   1. If the number is greater than zero
   2. If the number is less than zero
   3. And if the number is equal to zero
 
-3. Call (invoke) the newly created method from the main.
+Call (invoke) the newly created method from the main.
 
 ```C#
 static void Main (string [] args)
@@ -94,9 +94,9 @@ Create a method for printing triangles as shown below:
 
 ### Hints
 
-1. After you read the input
+After you read the input
 
-2. Start by creating a method **for printing a single line** from a **given start** to a **given end**. Choose a **meaningful name** for it, describing its purpose:
+Start by creating a method **for printing a single line** from a **given start** to a **given end**. Choose a **meaningful name** for it, describing its purpose:
 
 ```C#
 static void PrintLine(int start, int end)
@@ -109,11 +109,11 @@ static void PrintLine(int start, int end)
 }
 ```
 
-3. Think how you can use it to solve the problem
+Think how you can use it to solve the problem
 
-4. After you spent some time thinking, you should have come to the conclusion that you will need two loops
+After you spent some time thinking, you should have come to the conclusion that you will need two loops
 
-5. In the first loop you can print the first half of the triangle without the middle line:
+In the first loop you can print the first half of the triangle without the middle line:
 
 ```C#
 for(int i = 0; i < n; i++)
@@ -122,13 +122,13 @@ for(int i = 0; i < n; i++)
 }
 ```	
 
-6. Next, print the middle line:
+Next, print the middle line:
 
 ```C#
 PrintLine(1, n);
 ```
 
-7. Lastly, print the rest of the triangle:
+Lastly, print the rest of the triangle:
 
 ```C#
 for(int i = n-1; i >= 0; i++)
@@ -149,10 +149,10 @@ Draw at the console a filled square of size n like in the example:
 
 ### Hints
 
-1. Read the input
+Read the input
 
-2. Create a method which will print the top and the bottom rows (they are the same). Don&#39;t forget to give it a descriptive name and to give it as a parameter some length
-  A. Instead of loop you can use the &quot;new string&quot; command which creates a new string consisting of a character repeated some given times:
+Create a method which will print the top and the bottom rows (they are the same). Don&#39;t forget to give it a descriptive name and to give it as a parameter some length
+- Instead of loop you can use the &quot;new string&quot; command which creates a new string consisting of a character repeated some given times:
 
 ```C#
 static void PrintHeaderRow(int n)
@@ -160,7 +160,7 @@ static void PrintHeaderRow(int n)
 	Console.WriteLine(new string('-', 2 * n));
 }
 ```	
-3. Create the method which will print the middle rows. Well, of course, you should probably name it &quot; **PrintMiddleRow**&quot;
+Create the method which will print the middle rows. Well, of course, you should probably name it &quot; **PrintMiddleRow**&quot;
 
 ```C#
 static void PrintMiddleRow(int n)
@@ -175,7 +175,7 @@ static void PrintMiddleRow(int n)
 }
 ```	
 
-4. Use the methods that you&#39;ve just created to draw a square
+Use the methods that you&#39;ve just created to draw a square
 
  ```C#
  static void Main()
@@ -200,9 +200,9 @@ Create a method that calculates and **returns** the [area](http://www.mathopenre
 
 ### Hints
 
-1. After reading the input
+After reading the input
 
-2. Create a method, but this time **instead** of typing **&quot;static void&quot;** before its name, type **&quot;static double&quot;** as this will make it to **return a value of type double** :
+Create a method, but this time **instead** of typing **&quot;static void&quot;** before its name, type **&quot;static double&quot;** as this will make it to **return a value of type double** :
 
 ```C#
 static double GetTriangleAre(double width, double height)
@@ -211,7 +211,7 @@ static double GetTriangleAre(double width, double height)
 }
 ```
 
-3. **Invoke** the method in the main and **save the return value in a new variable** :
+**Invoke** the method in the main and **save the return value in a new variable** :
 
  ```C#
  static void Main()
@@ -223,7 +223,7 @@ static double GetTriangleAre(double width, double height)
  }
  ```
 
- ## 6.Math Power
+## 6.Math Power
 
 Create a method that calculates and returns the value of a number raised to a given power:
 
@@ -236,9 +236,9 @@ Create a method that calculates and returns the value of a number raised to a gi
 
 ### Hints
 
-1. As usual, read the input
+As usual, read the input
 
-2. Create a method which will have two parameters - the number and the power, and will return a result of type double:
+Create a method which will have two parameters - the number and the power, and will return a result of type double:
 
 ```C#
 static double RaiseToPower(double number, int power)
@@ -251,7 +251,7 @@ static double RaiseToPower(double number, int power)
 }
 ```
 
-3. Print the result
+Print the result
 
 ## 7.Greater of Two Values
 
@@ -267,9 +267,9 @@ You are given two values of the same type as input. The values can be of type in
 
 ### Hints
 
-1. For this method you need to create three methods with the same name and different signatures
+For this method you need to create three methods with the same name and different signatures
 
-2. Create a method which will compare integers:
+Create a method which will compare integers:
 
 ```C#
 static int GetMax(int first, int second)
@@ -283,7 +283,7 @@ static int GetMax(int first, int second)
 }
 ```
 
-3. Create a second method with the same name which will compare characters. Follow the logic of the previous method:
+Create a second method with the same name which will compare characters. Follow the logic of the previous method:
 
  ```C#
 static char GetMax(char first, char second)
@@ -292,7 +292,7 @@ static char GetMax(char first, char second)
 }
 ```
 
-4. Lastly you need to create a method to compare strings. This is a bit different as strings don&#39;t allow to be compared with the operators &gt; and &lt;
+Lastly you need to create a method to compare strings. This is a bit different as strings don&#39;t allow to be compared with the operators &gt; and &lt;
 
  ```C#
 static string GetMax(string first, string second)
@@ -307,7 +307,7 @@ static string GetMax(string first, string second)
 ```
 You need to use the method &quot;**CompareTo()**&quot;, which returns an integer value (greater than zero if the compared object is greater, less than zero if the compared object is lesser and zero if the two objects are equal.
 
-5. The last step is to read the input, use appropriate variables and call the **GetMax()** from your **Main()**:
+The last step is to read the input, use appropriate variables and call the **GetMax()** from your **Main()**:
 
 ```C#
 var type = Console.ReadLine();
