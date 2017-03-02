@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ConcatenateData
+public class ConcatenateData
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string firstName = Console.ReadLine();
         string lastName = Console.ReadLine();
@@ -17,4 +12,3 @@ class ConcatenateData
         Console.WriteLine($"You are {firstName} {lastName}, a {age}-years old person from {town}.");
     }
 }
-

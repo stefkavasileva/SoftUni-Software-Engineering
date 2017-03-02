@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RadiansToDegrees
+public class RadiansToDegrees
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double radians = double.Parse(Console.ReadLine());
         double degrees = Math.Round((radians * 180) / Math.PI, 2);
@@ -15,4 +10,3 @@ class RadiansToDegrees
         Console.WriteLine(degrees);
     }
 }
-

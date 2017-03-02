@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class InchesToCentimeters
+public class InchesToCentimeters
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         Console.Write("Inches = ");
 
@@ -19,4 +14,3 @@ class InchesToCentimeters
         Console.WriteLine(centimeters);
     }
 }
-

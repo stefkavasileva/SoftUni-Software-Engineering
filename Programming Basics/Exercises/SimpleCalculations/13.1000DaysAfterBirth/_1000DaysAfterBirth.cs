@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class _1000DaysAfterBirth
+public class _1000DaysAfterBirth
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string birthday = Console.ReadLine();
 
@@ -18,4 +13,3 @@ class _1000DaysAfterBirth
         Console.WriteLine("{0}", date.ToString("dd-MM-yyyy"));
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SquareArea
+public class SquareArea
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         Console.Write("a= ");
 
@@ -18,4 +13,3 @@ class SquareArea
         Console.WriteLine(area);
     }
 }
-

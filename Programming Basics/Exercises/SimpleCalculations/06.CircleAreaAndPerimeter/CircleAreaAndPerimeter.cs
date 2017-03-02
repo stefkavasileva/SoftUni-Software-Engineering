@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CircleAreaAndPerimeter
+public class CircleAreaAndPerimeter
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         double radius = double.Parse(Console.ReadLine());
 
@@ -18,4 +13,3 @@ class CircleAreaAndPerimeter
         Console.WriteLine("Perimeter = {0}", perimeter);
     }
 }
-

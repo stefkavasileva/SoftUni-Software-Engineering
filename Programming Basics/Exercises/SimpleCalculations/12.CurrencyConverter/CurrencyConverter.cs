@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CurrencyConverter
+public class CurrencyConverter
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal currency = decimal.Parse(Console.ReadLine());
         string inputCurrency = Console.ReadLine().ToUpper();
@@ -42,4 +37,3 @@ class CurrencyConverter
         Console.WriteLine("{0} {1}", Math.Round(currency, 2), outputCurrency.ToUpper());
     }
 }
-
