@@ -24,7 +24,7 @@ Read an integer **N** and on the next **N** lines read an **array** of **integer
 
 | **Input** | **Output** |
 | --- | --- |
-| 5<br/>1<br/>-2<br/>3-4<br/>5 | 2 |
+| 5<br/>1<br/>-2<br/>3<br/>-4<br/>5 | 2 |
 | 3<br/>1<br/>3<br/>2 | 0 |
 | 6<br/>-1<br/>-2<br/>-3<br/>-4<br/>-4<br/>4 | 5 |
 
