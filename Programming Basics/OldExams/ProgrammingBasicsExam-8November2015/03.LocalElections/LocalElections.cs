@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LocalElections
+public class LocalElections
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int candidateList = int.Parse(Console.ReadLine());
         int elector = int.Parse(Console.ReadLine());
@@ -52,11 +47,9 @@ class LocalElections
                 Console.WriteLine("{0}.|.....|...", num);
                 Console.WriteLine("...|.....|...");
                 Console.WriteLine("...+-----+...");
-
-
             }
         }
+
         Console.WriteLine(".............");
     }
 }
-

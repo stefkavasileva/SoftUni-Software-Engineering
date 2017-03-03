@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Firefighters
+public class Firefighters
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numOfFirefighters = int.Parse(Console.ReadLine());
 
@@ -51,4 +47,3 @@ class Firefighters
         Console.WriteLine("Seniors: {0}", savedSeniors);
     }
 }
-

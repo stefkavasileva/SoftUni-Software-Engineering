@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TheFootballStatistician
+public class TheFootballStatistician
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         //88/100
         decimal payment = decimal.Parse(Console.ReadLine());
@@ -168,10 +165,6 @@ class TheFootballStatistician
         //    {
         //        Console.WriteLine("{0} - {1} points.", itemKey, itemValue);
         //    }
-
-
         //}
     }
 }
-
-

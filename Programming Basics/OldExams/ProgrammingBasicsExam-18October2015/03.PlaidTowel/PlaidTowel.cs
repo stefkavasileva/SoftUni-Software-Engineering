@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PlaidTowel
+public class PlaidTowel
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
         char backgroundSymbol = char.Parse(Console.ReadLine());
@@ -59,6 +54,7 @@ class PlaidTowel
                             innerElement -= 2;
                             middleElement = 1;
                         }
+
                         Console.WriteLine("{0}{1}{2}{1}{3}{1}{2}{1}{0}",
                                 new string(backgroundSymbol, outerElement),
                                 new string(rhombusSymbol, 1),
@@ -73,4 +69,3 @@ class PlaidTowel
         }
     }
 }
-

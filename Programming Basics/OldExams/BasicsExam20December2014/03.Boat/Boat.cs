@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Boat
+public class Boat
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int outerDots = n - 1;
         int asterisks = 1;
+
         for (int i = 1; i <= n; i++)
         {
             if (i >= 1 && i <= (n + 1) / 2)
@@ -27,13 +23,16 @@ class Boat
                     outerDots += 4;
                     asterisks -= 4;
                 }
+
                 Console.WriteLine("{0}{1}{2}", new string('.', outerDots), new string('*', asterisks), new string('.', n));
                 outerDots += 2;
                 asterisks -= 2;
             }
         }
+
         outerDots = 1;
         asterisks = (n * 2) - 2;
+
         for (int i = 1; i <= (n - 1) / 2; i++)
         {
             if (i == 1)
@@ -49,4 +48,3 @@ class Boat
         }
     }
 }
-

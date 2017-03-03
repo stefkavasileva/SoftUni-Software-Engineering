@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SequenceOfKNumbers
+public class SequenceOfKNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         List<int> nums = Console.ReadLine().Split().Select(int.Parse).ToList();
         int k = int.Parse(Console.ReadLine());

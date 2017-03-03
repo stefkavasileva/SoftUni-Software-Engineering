@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class AceOfDiamonds
+public class AceOfDiamonds
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-
         int n = int.Parse(Console.ReadLine());
         int dashes = (n - 3) / 2;
         int symbol = 1;
@@ -45,4 +39,3 @@ class AceOfDiamonds
         }
     }
 }
-

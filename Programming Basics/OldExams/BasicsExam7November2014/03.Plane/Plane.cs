@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Plane
+public class Plane
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int outerDots = (((n * 3) - 3) / 2);
@@ -30,6 +25,7 @@ class Plane
             outerDots--;
             innerDots += 2;
         }
+
         for (int i = 1; i <= segmen2; i++)
         {
             if (i == 1)
@@ -43,6 +39,7 @@ class Plane
             outerDots -= 2;
             innerDots += 4;
         }
+
         for (int i = 1; i <= segmet3; i++)
         {
             if (i == 1)
@@ -61,6 +58,7 @@ class Plane
                 innerDosts2 += 2;
             }
         }
+
         for (int i = 1; i <= n; i++)
         {
             if (i == n)
@@ -79,4 +77,3 @@ class Plane
         }
     }
 }
-

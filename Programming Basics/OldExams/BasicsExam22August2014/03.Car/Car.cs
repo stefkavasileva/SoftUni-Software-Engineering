@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Car
+public class Car
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -53,4 +49,3 @@ class Car
                new string('.', n - 2));
     }
 }
-

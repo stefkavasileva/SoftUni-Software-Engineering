@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ChessQueens
+public class ChessQueens
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int distance = int.Parse(Console.ReadLine());
@@ -47,4 +42,3 @@ class ChessQueens
         }
     }
 }
-

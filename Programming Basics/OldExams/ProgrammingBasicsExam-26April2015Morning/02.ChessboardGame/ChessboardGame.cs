@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ChessboardGame
+public class ChessboardGame
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
         char[] inputLetters = Console.ReadLine().ToCharArray();
@@ -62,4 +57,3 @@ class ChessboardGame
         }
     }
 }
-

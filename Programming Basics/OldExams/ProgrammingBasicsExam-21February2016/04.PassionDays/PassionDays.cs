@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PassionDays
+public class PassionDays
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal money = decimal.Parse(Console.ReadLine());
         string comand = Console.ReadLine();
@@ -67,4 +62,3 @@ class PassionDays
         }
     }
 }
-

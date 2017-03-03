@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class PerfectGirlfriend
+public class PerfectGirlfriend
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         List<string> girls = new List<string>();
         int perfectGirls = 0;
+
         for (;;)
         {
             string input = Console.ReadLine();
@@ -17,8 +15,10 @@ class PerfectGirlfriend
             {
                 break;
             }
+
             string[] girlsInfo = input.Split('\\');
             int day = 0;
+
             switch (girlsInfo[0])
             {
                 case "Monday":
@@ -43,13 +43,16 @@ class PerfectGirlfriend
                     day = 7;
                     break;
             }
+
             string phoneNumber = girlsInfo[1];
             int sumOfTelephoneNumber = 0;
+
             for (int i = 0; i < phoneNumber.Length; i++)
             {
                 int num = (int)char.GetNumericValue(phoneNumber[i]);
                 sumOfTelephoneNumber += num;
             }
+
             string braSize = girlsInfo[2];
             int size = int.Parse(braSize.Substring(0, braSize.Length - 1));
             char letter = braSize[braSize.Length - 1];
@@ -75,7 +78,7 @@ class PerfectGirlfriend
         {
             Console.WriteLine(girl);
         }
+
         Console.WriteLine(perfectGirls);
     }
 }
-

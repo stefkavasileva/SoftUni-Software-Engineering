@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Summertime
+public class Summertime
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int space = (n - 1) / 2;
         int innerElement = n + 1;
+
         for (int i = 1; i <= n; i++)
         {
             if (i == 1)
@@ -52,9 +48,7 @@ class Summertime
             {
                 Console.WriteLine("*{0}*", new string('@', (2 * n) - 2));
             }
-
         }
     }
 }
-
 

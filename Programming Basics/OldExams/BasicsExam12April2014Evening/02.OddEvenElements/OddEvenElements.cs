@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OddEvenElements
+public class OddEvenElements
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal[] inputNums = new decimal[] { };
         try
@@ -23,6 +20,7 @@ class OddEvenElements
 
         List<decimal> oddNums = new List<decimal>();
         List<decimal> evenNums = new List<decimal>();
+
         for (int i = 1; i <= inputNums.Length; i++)
         {
             if (i % 2 == 0)
@@ -47,8 +45,5 @@ class OddEvenElements
                       (double)oddNums.Sum(), (double)oddNums.Min(), (double)oddNums.Max(),
                       (double)evenNums.Sum(), (double)evenNums.Min(), (double)evenNums.Max());
         }
-
-
     }
 }
-

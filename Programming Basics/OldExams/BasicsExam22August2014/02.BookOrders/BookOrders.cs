@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BookOrders
+public class BookOrders
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numberOfOrder = int.Parse(Console.ReadLine());
         int totalBook = 0;
         decimal totalPrice = 0.0m;
+
         for (int i = 0; i < numberOfOrder; i++)
         {
             int numberOfPackets = int.Parse(Console.ReadLine());
@@ -37,12 +33,13 @@ class BookOrders
             {
                 discount = bookPrice * 0.15m;
             }
+
             bookPrice = bookPrice - discount;
             totalPrice += bookPrice * books;
             totalBook += books;
         }
+
         Console.WriteLine(totalBook);
         Console.WriteLine("{0:f2}", totalPrice);
     }
 }
-

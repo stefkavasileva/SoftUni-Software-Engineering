@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class EncryptedMatrix
+public class EncryptedMatrix
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string message = Console.ReadLine();
         char direction = char.Parse(Console.ReadLine());
@@ -19,6 +15,7 @@ class EncryptedMatrix
             int lastDigit = numLetter % 10;
             digitsFromMessage.Add(lastDigit);
         }
+
         List<int> convertedNum = new List<int>();
 
         for (int i = 0; i < digitsFromMessage.Count; i++)
@@ -26,6 +23,7 @@ class EncryptedMatrix
             int digit = digitsFromMessage[i];
             int previousDigit;
             int nextDigit;
+
             try
             {
                 previousDigit = digitsFromMessage[i - 1];
@@ -66,6 +64,7 @@ class EncryptedMatrix
                 convertedNum.Add(sum);
             }
         }
+
         int count = convertedNum.Count - 1;
         for (int row = 0; row < convertedNum.Count; row++)
         {
@@ -82,7 +81,7 @@ class EncryptedMatrix
                         Console.Write("0 ");
                     }
                 }
-                else // anti-diagonal
+                else
                 {
                     if (row == 0 && col == 0)
                     {
@@ -98,10 +97,9 @@ class EncryptedMatrix
                     }
                 }
             }
+
             Console.WriteLine();
             count -= 2;
         }
-
     }
 }
-

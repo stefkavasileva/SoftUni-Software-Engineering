@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CakeTycoon
+public class CakeTycoon
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int amountOfCakes = int.Parse(Console.ReadLine());
         decimal flourNeeded = decimal.Parse(Console.ReadLine());
@@ -32,4 +27,3 @@ class CakeTycoon
         }
     }
 }
-

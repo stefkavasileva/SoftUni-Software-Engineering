@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Cinema
+public class Cinema
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string typeOfProjection = Console.ReadLine().ToLower();
         int rows = int.Parse(Console.ReadLine());
@@ -23,7 +18,6 @@ class Cinema
         else if (typeOfProjection.Equals("normal"))
         {
             tototalIncoms = totalSites * 7.50m;
-
         }
         else
         {
@@ -33,4 +27,3 @@ class Cinema
         Console.WriteLine($"{tototalIncoms:f2} leva");
     }
 }
-

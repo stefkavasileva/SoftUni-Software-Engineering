@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class OddAndEvenJumps
+public class OddAndEvenJumps
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string text = Console.ReadLine().ToLower();
         string letters = text.Replace(" ", string.Empty);
@@ -71,4 +67,3 @@ class OddAndEvenJumps
         Console.WriteLine("Even: " + evenResult);
     }
 }
-

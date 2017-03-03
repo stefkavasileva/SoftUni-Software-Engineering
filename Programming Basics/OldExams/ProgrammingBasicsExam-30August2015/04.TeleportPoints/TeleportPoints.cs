@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TeleportPoints
+public class TeleportPoints
 {
     static void Main(string[] args)
     {
@@ -22,7 +17,6 @@ class TeleportPoints
         double y1 = double.Parse(B[1]);
         double y2 = double.Parse(C[1]);
 
-
         double count = 0;
 
         for (double x = x1 - 1; x < x2; x += step)
@@ -38,7 +32,7 @@ class TeleportPoints
                 }
             }
         }
+
         Console.WriteLine(count);
     }
 }
-

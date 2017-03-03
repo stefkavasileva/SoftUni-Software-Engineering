@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class Point
+public class Point
 {
     public int X { get; set; }
     public int Y { get; set; }
 }
 
-class InsideTheBuilding
+public class InsideTheBuilding
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
 
@@ -40,8 +36,6 @@ class InsideTheBuilding
         points[3] = p4;
         points[4] = p5;
 
-
-
         for (int i = 0; i < points.Length; i++)
         {
             bool isInside = PointChecker(points[i], size);
@@ -56,7 +50,7 @@ class InsideTheBuilding
         }
     }
 
-    private static bool PointChecker(Point point, int size)
+    public static bool PointChecker(Point point, int size)
     {
         bool isInRectangleOne = point.X >= 0 && point.X <= 3 * size && point.Y >= 0 && point.Y <= size;
         bool isInRectangleTwo = point.X >= size && point.X <= 2 * size && point.Y >= 0 && point.Y <= 4 * size;
@@ -70,4 +64,3 @@ class InsideTheBuilding
         return isInside;
     }
 }
-

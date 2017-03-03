@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PandaScotlandFlag1
+public class PandaScotlandFlag1
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int outerSymbol = 0;
@@ -57,4 +52,3 @@ class PandaScotlandFlag1
         }
     }
 }
-

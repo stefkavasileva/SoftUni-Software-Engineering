@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CompoundInterest
+public class CompoundInterest
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal tvPrice = decimal.Parse(Console.ReadLine());
         double term = double.Parse(Console.ReadLine());
@@ -28,4 +23,3 @@ class CompoundInterest
         }
     }
 }
-

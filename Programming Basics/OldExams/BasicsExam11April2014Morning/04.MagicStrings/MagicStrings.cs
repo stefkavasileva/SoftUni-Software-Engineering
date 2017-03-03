@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MagicStrings
+public class MagicStrings
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int diff = int.Parse(Console.ReadLine());
         char[] letters = new char[] { 's', 'n', 'k', 'p' };
@@ -36,7 +32,6 @@ class MagicStrings
                                             megicStrings.Add(letters[i1].ToString() + letters[i2] + letters[i3] +
                                                  letters[i4] + letters[i5] + letters[i6]
                                                  + letters[i7] + letters[i8]);
-
                                         }
                                     }
                                 }
@@ -61,10 +56,10 @@ class MagicStrings
         }
     }
 
-    private static int CalcSum(char v)
+    public static int CalcSum(char letter)
     {
         int num = 0;
-        switch (v)
+        switch (letter)
         {
             case 's':
                 num = 3;

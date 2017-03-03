@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
-
-class MagicDates
+public class MagicDates
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         DateTime startDate = DateTime.ParseExact("01-01-" + Console.ReadLine(), "dd-MM-yyyy", CultureInfo.InvariantCulture); ;
         DateTime endDate = DateTime.ParseExact("31-12-" + Console.ReadLine(), "dd-MM-yyyy", CultureInfo.InvariantCulture);
@@ -61,4 +57,3 @@ class MagicDates
         }
     }
 }
-

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DecryptTheMessages
+public class DecryptTheMessages
 {
-    static void Main(string[] args)
+    public static void Main()
     {
 
         string comandStart = Console.ReadLine();
@@ -80,13 +76,11 @@ class DecryptTheMessages
             message = Console.ReadLine();
         }
 
-
         if (decriptedMessages.Count == 0)
         {
             Console.WriteLine("No message received.");
             return;
         }
-
 
         Console.WriteLine("Total number of messages: {0}", numOfMessage);
 
@@ -96,4 +90,3 @@ class DecryptTheMessages
         }
     }
 }
-

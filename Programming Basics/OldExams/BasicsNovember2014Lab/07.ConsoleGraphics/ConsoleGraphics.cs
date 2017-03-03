@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ConsoleGraphics
+public class ConsoleGraphics
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -16,7 +11,7 @@ class ConsoleGraphics
         PrintBottom(n);
     }
 
-    private static void PrintBottom(int n)
+    public static void PrintBottom(int n)
     {
         for (int i = 0; i < 2; i++)
         {
@@ -24,7 +19,7 @@ class ConsoleGraphics
         }
     }
 
-    private static void PrintMiddle(int n)
+    public static void PrintMiddle(int n)
     {
         int asterisks = ((2 * n) - (n - 1)) / 2;
 
@@ -36,13 +31,11 @@ class ConsoleGraphics
         }
     }
 
-    private static void PrintTop(int n)
+    public static void PrintTop(int n)
     {
         for (int i = 0; i < 2; i++)
         {
             Console.WriteLine(new string('*', 2 * n));
         }
-
     }
 }
-

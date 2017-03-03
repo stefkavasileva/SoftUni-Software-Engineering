@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class MagicCarNumbers
+public class MagicCarNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int[] letters = { 10, 20, 30, 50, 80, 110, 130, 160, 200, 240 };
         int sumLetters = 0;
         int count = 0;
+
         for (int i = 0; i < letters.Length; i++)
         {
             for (int j = 0; j < letters.Length; j++)
@@ -23,6 +20,7 @@ class MagicCarNumbers
                     {
                         count++;
                     }
+
                     for (int b = 0; b <= 9; b++)
                     {
                         if (a != b)
@@ -40,12 +38,11 @@ class MagicCarNumbers
                                 count = count + 3;
                             }
                         }
-
                     }
                 }
             }
         }
+
         Console.WriteLine(count);
     }
 }
-

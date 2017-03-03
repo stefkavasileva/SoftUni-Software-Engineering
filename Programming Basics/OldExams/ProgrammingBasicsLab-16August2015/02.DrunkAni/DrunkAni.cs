@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DrunkAni
+public class DrunkAni
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numOfCabins = int.Parse(Console.ReadLine());
 
@@ -41,6 +37,7 @@ class DrunkAni
                 string comand = "Stay there, Ani.";
                 comands.Add(comand);
             }
+
             inputLine = Console.ReadLine();
         }
 
@@ -52,4 +49,3 @@ class DrunkAni
         Console.WriteLine("Moved a total of {0} steps.", numOfSteps);
     }
 }
-

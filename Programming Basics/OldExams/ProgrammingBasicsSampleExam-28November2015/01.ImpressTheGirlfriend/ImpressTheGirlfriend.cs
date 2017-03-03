@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ImpressTheGirlfriend
+public class ImpressTheGirlfriend
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal rubles = decimal.Parse(Console.ReadLine());
         decimal dollars = decimal.Parse(Console.ReadLine());
@@ -34,4 +29,3 @@ class ImpressTheGirlfriend
         Console.WriteLine("{0:f2}", Math.Ceiling(mostExpensive));
     }
 }
-

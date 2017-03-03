@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class House
+public class House
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -41,4 +36,3 @@ class House
             new string('*', n - (2 * (n / 4) + 2) + 2));
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Tic_Tac_ToePower
+public class Tic_Tac_ToePower
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int y = int.Parse(Console.ReadLine());
         int x = int.Parse(Console.ReadLine());
@@ -18,7 +13,5 @@ class Tic_Tac_ToePower
         long result = (long)Math.Pow(currentNum, index);
 
         Console.WriteLine(result);
-
     }
 }
-

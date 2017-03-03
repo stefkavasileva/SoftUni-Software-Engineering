@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class EncodedAnswers
+public class EncodedAnswers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         string answer = "";
@@ -46,7 +41,5 @@ class EncodedAnswers
         Console.WriteLine("Answer B: {0}", b);
         Console.WriteLine("Answer C: {0}", c);
         Console.WriteLine("Answer D: {0}", d);
-
     }
 }
-

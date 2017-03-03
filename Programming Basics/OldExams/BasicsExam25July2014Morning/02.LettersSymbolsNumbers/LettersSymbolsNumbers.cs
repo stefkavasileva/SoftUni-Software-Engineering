@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LettersSymbolsNumbers
+public class LettersSymbolsNumbers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int letterSum = 0;
         int numberSum = 0;
         int symbolSum = 0;
+
         for (int i = 0; i < n; i++)
         {
             char[] input = Console.ReadLine().ToLower().ToCharArray();
@@ -42,4 +38,3 @@ class LettersSymbolsNumbers
         Console.WriteLine(symbolSum);
     }
 }
-

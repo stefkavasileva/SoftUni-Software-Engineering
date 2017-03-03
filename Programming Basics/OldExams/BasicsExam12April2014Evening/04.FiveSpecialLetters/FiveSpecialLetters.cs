@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FiveSpecialLetters
+public class FiveSpecialLetters
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int start = int.Parse(Console.ReadLine());
         int end = int.Parse(Console.ReadLine());
@@ -61,4 +58,3 @@ class FiveSpecialLetters
         }
     }
 }
-

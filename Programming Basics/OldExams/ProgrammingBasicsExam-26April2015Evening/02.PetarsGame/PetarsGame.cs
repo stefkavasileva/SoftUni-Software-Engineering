@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PetarsGame
+public class PetarsGame
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         //90/100
         ulong start = ulong.Parse(Console.ReadLine());
@@ -55,7 +50,7 @@ class PetarsGame
                 }
             }
         }
+
         Console.WriteLine(sumAsStr);
     }
 }
-

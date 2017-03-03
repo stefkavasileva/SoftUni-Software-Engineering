@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Dumbbell
+public class Dumbbell
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int dots = ((n - 1) / 2) - 1;
         int asterisks = (n - 1) / 2;
+
         for (int i = 1; i <= n; i++)
         {
             if (i == 1 || i == n)
@@ -20,7 +16,6 @@ class Dumbbell
                     new string('.', (n - 1) / 2),
                     new string('&', (n + 1) / 2),
                     new string('.', n));
-
             }
             else
             {
@@ -30,6 +25,7 @@ class Dumbbell
                          new string('.', dots),
                          new string('*', asterisks),
                          new string('.', n));
+
                     dots--;
                     asterisks++;
                 }
@@ -51,9 +47,7 @@ class Dumbbell
                     dots++;
                     asterisks--;
                 }
-
             }
         }
     }
 }
-

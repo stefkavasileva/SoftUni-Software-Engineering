@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ProspectInHospitality
+public class ProspectInHospitality
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long buildersNeeded = long.Parse(Console.ReadLine());
         long receptionistsNeeded = long.Parse(Console.ReadLine());
@@ -42,4 +37,3 @@ class ProspectInHospitality
         }
     }
 }
-

@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Volleyball
+public class Volleyball
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string typeOfYear = Console.ReadLine().ToLower();
         int holidays = int.Parse(Console.ReadLine());
         int hometownWeekens = int.Parse(Console.ReadLine());
-
 
         double plays = (48 - hometownWeekens) * (3.0 / 4.0) + hometownWeekens + (holidays * 2 / 3.0);
 
@@ -22,7 +16,5 @@ class Volleyball
         }
 
         Console.WriteLine((int)plays);
-
     }
 }
-

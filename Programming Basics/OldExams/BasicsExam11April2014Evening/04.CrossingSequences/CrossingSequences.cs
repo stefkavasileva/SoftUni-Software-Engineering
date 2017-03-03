@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CrossingSequences
+public class CrossingSequences
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long num1 = long.Parse(Console.ReadLine());
         long num2 = long.Parse(Console.ReadLine());
         long num3 = long.Parse(Console.ReadLine());
         long spiralStart = int.Parse(Console.ReadLine());
         long spiralStep = long.Parse(Console.ReadLine());
+
         List<long> tribonacci = new List<long>() { num1, num2, num3 };
         List<long> spiral = new List<long>() { spiralStart };
         bool check = false;
@@ -24,10 +21,12 @@ class CrossingSequences
             num3 = num1 + num2 + num3;
             num1 = num2;
             num2 = ctemp;
+
             if (num3 > 1000000)
             {
                 break;
             }
+
             tribonacci.Add(num3);
         }
 
@@ -56,7 +55,5 @@ class CrossingSequences
             Console.WriteLine("No");
 
         }
-
     }
 }
-

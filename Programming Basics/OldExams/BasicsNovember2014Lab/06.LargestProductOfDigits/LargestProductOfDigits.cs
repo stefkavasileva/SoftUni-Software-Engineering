@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LargestProductOfDigits
+public class LargestProductOfDigits
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char[] inputNums = Console.ReadLine().ToCharArray();
         int[] nums = Array.ConvertAll(inputNums, c => (int)char.GetNumericValue(c));
@@ -27,4 +22,3 @@ class LargestProductOfDigits
         Console.WriteLine(maxSum);
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TravellerBob
+public class TravellerBob
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string typeOfYear = Console.ReadLine();
         int contractsInYear = int.Parse(Console.ReadLine());
@@ -28,4 +23,3 @@ class TravellerBob
         Console.WriteLine(totalTravels);
     }
 }
-

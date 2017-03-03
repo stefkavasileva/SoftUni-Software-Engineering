@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Sunlight
+public class Sunlight
 {
-    static void Main(string[] args)
+    public static void Main()
     {
 
         int size = int.Parse(Console.ReadLine());
@@ -30,15 +25,19 @@ class Sunlight
                 new string('.', outerDots),
                 new string('*', size));
         }
+
         Console.WriteLine("{0}", new string('*', size * 3));
+
         for (int i = 1; i <= size / 2; i++)
         {
             Console.WriteLine("{0}{1}{0}",
                new string('.', outerDots),
                new string('*', size));
         }
+
         outerDots--;
         innerDots++;
+
         for (int i = 1; i <= size - 1; i++)
         {
             Console.WriteLine("{0}*{1}*{1}*{0}",
@@ -51,4 +50,3 @@ class Sunlight
         Console.WriteLine("{0}*{0}", new string('.', ((3 * size) - 1) / 2));
     }
 }
-

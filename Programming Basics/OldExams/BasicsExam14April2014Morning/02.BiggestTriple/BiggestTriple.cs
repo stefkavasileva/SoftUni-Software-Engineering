@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BiggestTriple
+public class BiggestTriple
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
@@ -30,7 +26,6 @@ class BiggestTriple
             {
                 sum = numbers[i] + numbers[i + 1] + numbers[i + 2];
             }
-
 
             if (sum > bigestSum)
             {
@@ -59,4 +54,3 @@ class BiggestTriple
         }
     }
 }
-

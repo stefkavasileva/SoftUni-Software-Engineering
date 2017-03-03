@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class RockLq
+public class RockLq
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int firstSegment = (n + 1) / 2;
@@ -15,6 +10,7 @@ class RockLq
         int thirdSegment = n;
         int outerDots = n - 2;
         int innerDots = n + 2;
+
         for (int i = 0; i < firstSegment; i++)
         {
             if (i == 0)
@@ -36,6 +32,7 @@ class RockLq
         outerDots = n - 4;
         innerDots = n;
         int middlDots = 1;
+
         for (int i = 0; i < secondSegment; i++)
         {
             if (i == 0)
@@ -53,11 +50,11 @@ class RockLq
                 outerDots -= 2;
                 middlDots += 2;
             }
-
         }
 
         outerDots = n - 1;
         innerDots = n;
+
         for (int i = 0; i < thirdSegment; i++)
         {
             if (i == thirdSegment - 1)
@@ -75,4 +72,3 @@ class RockLq
         }
     }
 }
-

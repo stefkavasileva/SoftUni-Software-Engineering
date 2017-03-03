@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class StudentCables
+public class StudentCables
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numOfCables = int.Parse(Console.ReadLine());
 
@@ -39,4 +34,3 @@ class StudentCables
         Console.WriteLine(remainder);
     }
 }
-

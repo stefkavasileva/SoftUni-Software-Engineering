@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SimpleLoops
+public class SimpleLoops
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         BigInteger t1 = BigInteger.Parse(Console.ReadLine());
         BigInteger t2 = BigInteger.Parse(Console.ReadLine());
@@ -35,7 +30,5 @@ class SimpleLoops
         {
             Console.WriteLine(t1);
         }
-
     }
 }
-

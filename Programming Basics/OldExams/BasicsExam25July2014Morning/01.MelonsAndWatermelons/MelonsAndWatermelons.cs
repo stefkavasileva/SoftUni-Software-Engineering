@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MelonsAndWatermelons
+public class MelonsAndWatermelons
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int day = int.Parse(Console.ReadLine());
         int sequentialDays = int.Parse(Console.ReadLine());
@@ -28,6 +24,7 @@ class MelonsAndWatermelons
         int eatsMelons = 0;
         int eatsWatermelons = 0;
         int counter = day;
+
         for (int i = day; i < day + sequentialDays; i++)
         {
             if (counter > 7)
@@ -71,4 +68,3 @@ class MelonsAndWatermelons
         }
     }
 }
-

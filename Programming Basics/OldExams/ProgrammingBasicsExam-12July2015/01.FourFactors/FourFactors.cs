@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FourFactors
+public class FourFactors
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal fG = decimal.Parse(Console.ReadLine());
         decimal fGA = decimal.Parse(Console.ReadLine());
@@ -27,7 +22,5 @@ class FourFactors
         Console.WriteLine("TOV% {0:f3}", tov);
         Console.WriteLine("ORB% {0:f3}", orb);
         Console.WriteLine("FT% {0:f3}", ft);
-
     }
 }
-

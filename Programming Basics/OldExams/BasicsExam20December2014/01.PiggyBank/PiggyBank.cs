@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PiggyBank
+public class PiggyBank
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int tankPrice = int.Parse(Console.ReadLine());
         int partydaysInMonth = int.Parse(Console.ReadLine());
@@ -28,7 +23,5 @@ class PiggyBank
         {
             Console.WriteLine($"{years} years, {month} months");
         }
-
     }
 }
-

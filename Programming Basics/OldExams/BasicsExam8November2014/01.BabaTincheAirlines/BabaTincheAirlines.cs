@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BabaTincheAirlines
+public class BabaTincheAirlines
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-
         int[] firstClassInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int[] businessClassInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int[] economyClassInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -23,7 +18,6 @@ class BabaTincheAirlines
         int economyClassIncome = (int)((economyClassInfo[0] - economyClassInfo[1]) * 1000m) +
             (int)(economyClassInfo[1] * (1000 - (1000 * 0.7m))) + (int)(economyClassInfo[2] * (1000 * 0.005m));
 
-
         int maxIncomeFirstClass = (12 * 7000) + (int)(12 * (7000 * 0.005m));
         int maxIncomeBusinessClass = (28 * 3500) + (int)(28 * (3500 * 0.005m));
         int maxIncomeEconomyClass = (50 * 1000) + (int)(50 * (1000 * 0.005m));
@@ -31,9 +25,7 @@ class BabaTincheAirlines
         decimal totalIncome = firstClassIncome + businessClassIncome + economyClassIncome;
         decimal maxIncome = maxIncomeBusinessClass + maxIncomeEconomyClass + maxIncomeFirstClass;
 
-
         Console.WriteLine((int)totalIncome);
         Console.WriteLine((int)maxIncome - (int)totalIncome);
     }
 }
-

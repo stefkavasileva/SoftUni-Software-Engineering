@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Beers
+public class Beers
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] inputLine = Console.ReadLine().ToLower().Split();
 
@@ -36,4 +31,3 @@ class Beers
         Console.WriteLine($"{stacks} stacks + {beers} beers");
     }
 }
-

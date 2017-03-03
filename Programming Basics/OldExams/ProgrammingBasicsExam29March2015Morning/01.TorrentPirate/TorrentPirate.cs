@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class TorrentPirate
+public class TorrentPirate
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int megabytes = int.Parse(Console.ReadLine());
         int moviePrice = int.Parse(Console.ReadLine());
@@ -28,4 +23,3 @@ class TorrentPirate
         }
     }
 }
-

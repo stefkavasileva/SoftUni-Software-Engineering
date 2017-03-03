@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class HungryGarfield
+public class HungryGarfield
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal dollars = decimal.Parse(Console.ReadLine());
         decimal rateDollars = decimal.Parse(Console.ReadLine());
@@ -23,13 +19,11 @@ class HungryGarfield
 
         if (moneyNeeded <= dollars)
         {
-            Console.WriteLine("Garfield is well fed, John is awesome. Money left: ${0:f2}.", dollars - moneyNeed);
+            Console.WriteLine("Garfield is well fed, John is awesome. Money left: ${0:f2}.", dollars - moneyNeeded);
         }
         else
         {
-            Console.WriteLine("Garfield is hungry. John is a badass. Money needed: ${0:f2}.", moneyNeed - dollars);
+            Console.WriteLine("Garfield is hungry. John is a badass. Money needed: ${0:f2}.", moneyNeeded - dollars);
         }
-
     }
 }
-

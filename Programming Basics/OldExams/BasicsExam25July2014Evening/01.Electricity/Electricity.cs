@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Electricity
+public class Electricity
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int floors = int.Parse(Console.ReadLine());
         int flatsInFloor = int.Parse(Console.ReadLine());
@@ -34,4 +30,3 @@ class Electricity
         Console.WriteLine("{0} Watts", (int)totalElectricity);
     }
 }
-

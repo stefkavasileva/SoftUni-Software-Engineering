@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BaiIvanAdventures
+public class BaiIvanAdventures
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int currentDayOfWeek = int.Parse(Console.ReadLine());
         decimal money = decimal.Parse(Console.ReadLine());
@@ -56,7 +51,5 @@ class BaiIvanAdventures
             Console.WriteLine("Bai Ivan is {0} and quite sad. He wanted to drink another {1:f2} l. of alcohol",
                 condition, wantedAlcohol - alcoholInL);
         }
-
     }
 }
-

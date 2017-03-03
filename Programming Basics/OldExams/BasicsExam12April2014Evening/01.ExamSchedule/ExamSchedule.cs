@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ExamSchedule
+public class ExamSchedule
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int startingHours = int.Parse(Console.ReadLine());
         int startingMinutes = int.Parse(Console.ReadLine());
@@ -31,6 +26,7 @@ class ExamSchedule
                 Console.WriteLine("{0}{1}", time.Substring(0, 6), totalTime[totalTime.Length - 1]);
                 return;
             }
+
             test = test.AddHours(12);
             string[] h = time.Split(':');
 
@@ -69,4 +65,3 @@ class ExamSchedule
         }
     }
 }
-

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LightTheTorches
+public class LightTheTorches
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int numOfRooms = int.Parse(Console.ReadLine());
         string roomsState = Console.ReadLine().ToUpper();
@@ -92,4 +88,3 @@ class LightTheTorches
         Console.WriteLine('D' * darkRooms);
     }
 }
-

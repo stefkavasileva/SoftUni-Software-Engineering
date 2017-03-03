@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class JumpingSums
+public class JumpingSums
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
         int jumps = int.Parse(Console.ReadLine());
@@ -15,6 +11,7 @@ class JumpingSums
         long maxSum = 0;
         int nextIndex = 0;
         long sum = 0;
+
         for (int index = 0; index < nums.Length; index++)
         {
             int currentIndex = index;
@@ -36,4 +33,3 @@ class JumpingSums
         Console.WriteLine("max sum = {0}", maxSum);
     }
 }
-

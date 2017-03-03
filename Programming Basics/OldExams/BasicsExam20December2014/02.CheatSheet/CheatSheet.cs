@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class CheatSheet
+public class CheatSheet
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int matrixRows = int.Parse(Console.ReadLine());
         int matrixCols = int.Parse(Console.ReadLine());
@@ -23,7 +18,5 @@ class CheatSheet
 
             Console.WriteLine();
         }
-
     }
 }
-

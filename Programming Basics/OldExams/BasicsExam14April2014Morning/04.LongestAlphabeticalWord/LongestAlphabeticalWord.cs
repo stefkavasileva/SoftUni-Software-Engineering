@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class LongestAlphabeticalWord
+public class LongestAlphabeticalWord
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string word = Console.ReadLine();
         int size = int.Parse(Console.ReadLine());
@@ -59,6 +55,7 @@ class LongestAlphabeticalWord
                             letter1 = matrix[row][col];
                             break;
                         }
+
                         letter1 = matrix[down + 1][col];
                     }
                     else
@@ -70,6 +67,7 @@ class LongestAlphabeticalWord
                             alphabeticalWord = string.Empty;
                             letter1 = matrix[row][col];
                         }
+
                         break;
                     }
                 }
@@ -90,6 +88,7 @@ class LongestAlphabeticalWord
                             letter1 = matrix[row][col];
                             break;
                         }
+
                         letter1 = matrix[up - 1][col];
                     }
                     else
@@ -101,6 +100,7 @@ class LongestAlphabeticalWord
                             alphabeticalWord = string.Empty;
                             letter1 = matrix[row][col];
                         }
+
                         break;
                     }
                 }
@@ -132,6 +132,7 @@ class LongestAlphabeticalWord
                             alphabeticalWord = string.Empty;
                             letter1 = matrix[row][col];
                         }
+
                         break;
                     }
                 }
@@ -151,6 +152,7 @@ class LongestAlphabeticalWord
                             letter1 = matrix[row][col];
                             break;
                         }
+
                         letter1 = matrix[row][right + 1];
                     }
                     else
@@ -180,9 +182,7 @@ class LongestAlphabeticalWord
                 result = words[i];
             }
         }
+
         Console.WriteLine(result);
-
-
     }
 }
-

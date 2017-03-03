@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SpiralMatrix
+public class SpiralMatrix
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
         string word = Console.ReadLine().ToLower();
@@ -70,7 +65,7 @@ class SpiralMatrix
         Console.WriteLine("{0} - {1}", row, maxWeight);
     }
 
-    private static void GoUp(string word, char[][] matrix, ref int counter, int col, ref int row)
+    public static void GoUp(string word, char[][] matrix, ref int counter, int col, ref int row)
     {
         for (int r = row - 1; r >= 0; r--)
         {
@@ -90,7 +85,7 @@ class SpiralMatrix
         }
     }
 
-    private static void GoLeft(string word, char[][] matrix, ref int counter, ref int col, int row)
+    public static void GoLeft(string word, char[][] matrix, ref int counter, ref int col, int row)
     {
         for (int c = col - 1; c >= 0; c--)
         {
@@ -104,13 +99,14 @@ class SpiralMatrix
             {
                 counter = 0;
             }
+
             matrix[row][c] = word[counter];
             counter++;
             col = c;
         }
     }
 
-    private static void GoDown(string word, char[][] matrix, ref int counter, int col, ref int row)
+    public static void GoDown(string word, char[][] matrix, ref int counter, int col, ref int row)
     {
         for (int r = row + 1; r < matrix.Length; r++)
         {
@@ -124,13 +120,14 @@ class SpiralMatrix
             {
                 counter = 0;
             }
+
             matrix[r][col] = word[counter];
             counter++;
             row = r;
         }
     }
 
-    private static void GoRight(string word, char[][] matrix, ref int counter, ref int col, int row)
+    public static void GoRight(string word, char[][] matrix, ref int counter, ref int col, int row)
     {
         for (int c = col + 1; c < matrix.Length; c++)
         {
@@ -144,10 +141,10 @@ class SpiralMatrix
             {
                 counter = 0;
             }
+
             matrix[row][c] = word[counter];
             counter++;
             col = c;
         }
     }
 }
-

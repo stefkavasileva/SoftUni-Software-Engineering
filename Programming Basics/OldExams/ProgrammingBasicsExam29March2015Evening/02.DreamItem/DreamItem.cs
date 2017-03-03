@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DreamItem
+public class DreamItem
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] inputArgs = Console.ReadLine().Split('\\').ToArray();
         string month = inputArgs[0];
@@ -32,6 +28,7 @@ class DreamItem
                 daysInMonth = 31;
                 break;
         }
+
         daysInMonth -= 10;
         decimal money = daysInMonth * moneyPerHour * hoursPerDay;
 
@@ -50,4 +47,3 @@ class DreamItem
         }
     }
 }
-

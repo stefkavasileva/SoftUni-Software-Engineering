@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class SpyHard
+public class SpyHard
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int key = int.Parse(Console.ReadLine());
         string message = Console.ReadLine();
         int sumOfLetters = 0;
+
         for (int i = 0; i < message.Length; i++)
         {
             if (message[i] >= 97 && message[i] <= 122)
@@ -36,7 +32,7 @@ class SpyHard
         Console.WriteLine(result);
     }
 
-    private static string ConvertToNumeralSystem(int num, int key)
+    public static string ConvertToNumeralSystem(int num, int key)
     {
         string numsInNumeralSystem = string.Empty;
         int divisor = 0;
@@ -70,13 +66,14 @@ class SpyHard
                 divisor = 10;
                 break;
         }
+
         while (num > 0)
         {
             int binaryNum = num % divisor;
             num = num / divisor;
             numsInNumeralSystem = binaryNum.ToString() + numsInNumeralSystem;
         }
+
         return numsInNumeralSystem;
     }
 }
-

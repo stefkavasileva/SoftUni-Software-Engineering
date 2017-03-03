@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class EncryptTheMessages
+public class EncryptTheMessages
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string comandStart = Console.ReadLine();
         while (comandStart != "START" && comandStart != "start")
         {
             comandStart = Console.ReadLine();
         }
+
         List<string> allMessages = new List<string>();
+
         for (;;)
         {
             string message = Console.ReadLine();
@@ -26,6 +24,7 @@ class EncryptTheMessages
             {
                 continue;
             }
+
             string newMessage = string.Empty;
             for (int i = 0; i < message.Length; i++)
             {
@@ -91,7 +90,5 @@ class EncryptTheMessages
                 Console.WriteLine(message);
             }
         }
-
     }
 }
-

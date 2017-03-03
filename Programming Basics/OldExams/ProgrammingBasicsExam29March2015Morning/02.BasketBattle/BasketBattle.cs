@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class BasketBattle
+public class BasketBattle
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string firstPlayerName = Console.ReadLine();
         int numOfRounds = int.Parse(Console.ReadLine());
@@ -116,8 +111,5 @@ class BasketBattle
                 Console.WriteLine(secondPlayerScore - firstPlayerScore);
             }
         }
-
-
     }
 }
-

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Tables
+public class Tables
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         long packet1 = long.Parse(Console.ReadLine());
         long packet2 = long.Parse(Console.ReadLine());
@@ -47,4 +42,3 @@ class Tables
         }
     }
 }
-

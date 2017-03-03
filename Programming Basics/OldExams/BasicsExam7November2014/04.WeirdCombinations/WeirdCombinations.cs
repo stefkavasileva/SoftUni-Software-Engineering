@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class WeirdCombinations
+public class WeirdCombinations
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         char[] letters = Console.ReadLine().ToCharArray();
         int currentElement = int.Parse(Console.ReadLine());
@@ -44,4 +39,3 @@ class WeirdCombinations
         }
     }
 }
-

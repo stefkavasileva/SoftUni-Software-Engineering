@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class StripedTowel
+public class StripedTowel
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
         string elements = "#..";
         int count = 0;
+
         for (int i = 1; i <= 1.5 * n; i++)
         {
             for (int j = 0; j < n; j++)
@@ -32,4 +28,3 @@ class StripedTowel
         }
     }
 }
-

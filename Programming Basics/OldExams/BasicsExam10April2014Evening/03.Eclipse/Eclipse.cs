@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Eclipse
+public class Eclipse
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
 
@@ -36,4 +31,3 @@ class Eclipse
             new string(' ', n - 1));
     }
 }
-

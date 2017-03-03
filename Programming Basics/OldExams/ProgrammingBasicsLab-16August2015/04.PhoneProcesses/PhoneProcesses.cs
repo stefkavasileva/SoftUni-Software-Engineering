@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class PhoneProcesses
+public class PhoneProcesses
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         //88/100
         string percentageAsStr = Console.ReadLine().Replace("%", "");
@@ -46,6 +42,7 @@ class PhoneProcesses
 
             int neededPercentage = int.Parse(inputLine.Substring(inputLine.Length - 3, 2));
             percentage -= neededPercentage;
+
             if (percentage > 0 && percentage <= 15)
             {
                 results.Add("Connect charger -> " + percentage + "%");
@@ -72,4 +69,3 @@ class PhoneProcesses
         }
     }
 }
-

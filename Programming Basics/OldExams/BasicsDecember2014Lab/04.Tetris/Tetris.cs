@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Tetris
+public class Tetris
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int[] matrixInfo = Console.ReadLine().Split().Select(int.Parse).ToArray();
         char[][] matrix = new char[matrixInfo[0]][];
@@ -37,7 +33,7 @@ class Tetris
             sumOfElements[6]);
     }
 
-    private static int GetSumOfTElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfTElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -62,7 +58,7 @@ class Tetris
         return sum;
     }
 
-    private static int GetSumOfSElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfSElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -87,7 +83,7 @@ class Tetris
         return sum;
     }
 
-    private static int GetSumOfZElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfZElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -112,7 +108,7 @@ class Tetris
         return sum;
     }
 
-    private static int GetSumOfOElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfOElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -138,7 +134,7 @@ class Tetris
 
     }
 
-    private static int GetSumOfJElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfJElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -163,7 +159,7 @@ class Tetris
         return sum;
     }
 
-    private static int GetSumOfLElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfLElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -188,7 +184,7 @@ class Tetris
         return sum;
     }
 
-    private static int GetSumOfIElements(char[][] matrix, int[] matrixInfo)
+    public static int GetSumOfIElements(char[][] matrix, int[] matrixInfo)
     {
         int rows = matrixInfo[0];
         int cols = matrixInfo[1];
@@ -213,7 +209,6 @@ class Tetris
         return sum;
     }
 
+}
 
-}
-}
 

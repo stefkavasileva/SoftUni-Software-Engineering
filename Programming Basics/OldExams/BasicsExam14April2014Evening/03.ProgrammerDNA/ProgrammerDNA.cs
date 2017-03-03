@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ProgrammerDNA
+public class ProgrammerDNA
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int size = int.Parse(Console.ReadLine());
         char startLeter = char.Parse(Console.ReadLine());
@@ -32,7 +27,6 @@ class ProgrammerDNA
 
                     Console.Write(letters[index]);
                     index++;
-
                 }
 
                 Console.WriteLine(new string('.', dots));
@@ -48,6 +42,7 @@ class ProgrammerDNA
                     dots = 1;
                     numOfLetters = 5;
                 }
+
                 Console.Write(new string('.', dots));
 
                 for (int l = 0; l < numOfLetters; l++)
@@ -73,8 +68,6 @@ class ProgrammerDNA
                     numOfLetters = 1;
                 }
             }
-
         }
     }
 }
-

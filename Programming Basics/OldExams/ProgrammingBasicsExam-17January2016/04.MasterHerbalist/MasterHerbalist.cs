@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MasterHerbalist
+public class MasterHerbalist
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int dailyExpenses = int.Parse(Console.ReadLine());
         string informations = Console.ReadLine();
@@ -82,10 +77,7 @@ class MasterHerbalist
         else
         {
             double moneyNeeded = (dailyExpenses * days) - (averageEarnings * days);
-
             Console.WriteLine("We are in the red. Money needed: {0}.", (int)moneyNeeded);
         }
-
     }
 }
-

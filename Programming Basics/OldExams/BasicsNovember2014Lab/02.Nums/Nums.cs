@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Nums
+public class Nums
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int startNum = int.Parse(Console.ReadLine());
         int endNum = int.Parse(Console.ReadLine());
@@ -28,4 +23,3 @@ class Nums
         }
     }
 }
-

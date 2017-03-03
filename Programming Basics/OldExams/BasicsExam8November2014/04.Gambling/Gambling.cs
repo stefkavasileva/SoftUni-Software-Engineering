@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class Gambling
+public class Gambling
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         decimal amountOfCash = decimal.Parse(Console.ReadLine());
         string[] cardsHouse = Console.ReadLine().Split();
@@ -72,4 +67,3 @@ class Gambling
         Console.WriteLine("{0:f2}", expextedWinning);
     }
 }
-

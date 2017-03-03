@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-class FallenInLove
+public class FallenInLove
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int n = int.Parse(Console.ReadLine());
         int outerDots = 2 * n;
@@ -19,7 +15,7 @@ class FallenInLove
             {
                 Console.WriteLine("#{0}#{1}#{2}#{1}#{0}#",
                     new string('~', symbol),
-                    new string('.', outerDots), 
+                    new string('.', outerDots),
                     new string('.', innerDots));
 
                 symbol++;
@@ -34,7 +30,7 @@ class FallenInLove
                 }
                 Console.WriteLine("{0}#{1}#{2}#{1}#{0}",
                     new string('.', outerDots),
-                    new string('~', symbol), 
+                    new string('~', symbol),
                     new string('.', innerDots));
 
                 outerDots += 2;
@@ -50,11 +46,9 @@ class FallenInLove
             }
             else
             {
-                Console.WriteLine("{0}##{0}", 
+                Console.WriteLine("{0}##{0}",
                     new string('.', outerDots));
             }
         }
-
     }
 }
-

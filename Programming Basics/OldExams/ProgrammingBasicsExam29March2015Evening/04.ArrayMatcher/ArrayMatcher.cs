@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class ArrayMatcher
+public class ArrayMatcher
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string[] inputArrsArgs = Console.ReadLine().Split('\\').ToArray();
         string str1 = inputArrsArgs[0];
@@ -51,4 +48,3 @@ class ArrayMatcher
         Console.WriteLine(string.Join("", result));
     }
 }
-

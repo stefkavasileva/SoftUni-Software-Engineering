@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class MagicWand
+public class MagicWand
 {
-    static void Main(string[] args)
+    public static void Main()
     {
 
         int n = int.Parse(Console.ReadLine());
@@ -41,6 +36,7 @@ class MagicWand
         innerDots = n / 2;
         int middleDots = n;
         int innerDots2 = 0;
+
         for (int i = 1; i <= (n + 1) / 2; i++)
         {
             if (outerDots == -1)
@@ -73,9 +69,7 @@ class MagicWand
             {
                 Console.WriteLine("{0}*{0}*{0}", new string('.', n));
             }
-
         }
     }
 }
-
 

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class FruitMarket
+public class FruitMarket
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         string dayOfWeek = Console.ReadLine().ToLower();
         decimal quantity1 = decimal.Parse(Console.ReadLine());
@@ -69,8 +65,6 @@ class FruitMarket
         }
 
         decimal totalPrice = price1 + price2 + price3;
-
         Console.WriteLine($"{totalPrice:f2}");
     }
 }
-

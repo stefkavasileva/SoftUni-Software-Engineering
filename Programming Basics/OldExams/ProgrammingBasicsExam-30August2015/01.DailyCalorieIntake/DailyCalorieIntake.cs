@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-class DailyCalorieIntake
+public class DailyCalorieIntake
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         int weightLbs = int.Parse(Console.ReadLine());
         int hightInInches = int.Parse(Console.ReadLine());
@@ -55,4 +50,3 @@ class DailyCalorieIntake
         Console.WriteLine(Math.Floor(dCI));
     }
 }
-
