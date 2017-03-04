@@ -8,19 +8,18 @@ public class LargestNElements
         var numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
         var count = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < numbers.Length; i++)
+        for (int firstNum = 0; firstNum < numbers.Length; firstNum++)
         {
-            var curretnNum = numbers[i];
-            var j = 0;
-            for (j = i - 1; (j >= 0) && (numbers[j] > curretnNum); j--)
+            for (int seconNum = firstNum + 1; seconNum < numbers.Length; seconNum++)
             {
-                numbers[j + 1] = numbers[j];
+                if (numbers[seconNum] >= numbers[firstNum])
+                {
+                    var tempNum = numbers[firstNum];
+                    numbers[firstNum] = numbers[seconNum];
+                    numbers[seconNum] = tempNum;
+                }
             }
-
-            numbers[j + 1] = curretnNum;
         }
-
-        Array.Reverse(numbers);
 
         var largestNElements = numbers.Take(count);
         Console.WriteLine(string.Join(" ", largestNElements));

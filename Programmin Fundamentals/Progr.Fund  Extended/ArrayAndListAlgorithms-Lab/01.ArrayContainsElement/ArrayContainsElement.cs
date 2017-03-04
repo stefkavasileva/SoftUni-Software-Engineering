@@ -8,9 +8,18 @@ public class ArrayContainsElement
         var numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
         var number = int.Parse(Console.ReadLine());
 
-        var isContains = numbers.Contains(number);
-        var result = isContains ? "yes" : "no";
+        var isContains = false;
 
+        for (int i = 0; i < numbers.Count(); i++)
+        {
+            if (numbers[i] == number)
+            {
+                isContains = true;
+                break;
+            }
+        }
+
+        var result = isContains ? "yes" : "no";
         Console.WriteLine(result);
     }
 }
