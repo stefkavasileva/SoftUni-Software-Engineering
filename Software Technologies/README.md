@@ -7,6 +7,7 @@
 ## Exercises and labs.
 1. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Software%20Technologies/HTML5%20and%20CSS%20-%20Exercises" >HTML5 and CSS - Exercises</a> 
 2. <a href="https://github.com/stefkavasileva/stefkavasileva.github.io" >HTML5 and CSS - Blog Design</a> 
+3. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Software%20Technologies/PHP%20FirstSteps-Exercises" >PHP First Steps - Exercises</a> 
 
 
 
