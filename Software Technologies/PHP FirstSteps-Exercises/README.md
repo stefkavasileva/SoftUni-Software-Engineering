@@ -50,6 +50,7 @@ Print the output in the HTML document, just after the HTML form.
 }
 ?>
 ```
+
 ## 2.Multiply Two Numbers
 
 You are given a number **num1** and a number **num2**. Write a PHP script that multiplies **num1 \* num2** and prints the result. The input comes as parameters named **num1** and **num2**. Print the output in the HTML page.
@@ -61,8 +62,8 @@ num1
 num2
 
 | **Input** | **Output** |  
-| --- | --- |
- | 2 </br> 3 | 6 |
+| --- | --- |--- | --- |
+| 2 </br> 3 | 6 |
 | 13 </br>  13| 169 |
 
 
@@ -96,7 +97,7 @@ num2
 	$m = inval($_GET['num2']));
   }
   ?> 
-  
+  ```
 ## 3.Multiply / Divide Numbers
 
 You are given a number **num1** and a number **num2**. Write a PHP script that:
