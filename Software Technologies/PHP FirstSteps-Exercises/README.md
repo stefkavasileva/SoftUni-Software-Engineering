@@ -184,8 +184,8 @@ You are given a number **num**. Write a PHP script that prints **factorial** of 
 
 ### Examples
 
-| **Parameter name** | **Input** | **Output** |   | **Input** | **Output** |
-| --- | --- | --- | --- | --- | --- |
+| **Parameter name** | **Input** |
+| --- | --- | --- |
 | num | 5 | 120 |  
 |num | 3 | 6 |
 
@@ -246,7 +246,7 @@ There is no indentation on the elements.
 ### Examples
 
 | **Parameter name** | **Input** | **Output** | 
-| --- | --- | 
+| --- | --- | ---|
 | num | 3 |  &lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; |
 | num | 5 | &lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; </br>&lt;button&gt;1&lt;/button&gt; 
 | num | 1 | &lt;button&gt;1&lt;/button&gt; |
