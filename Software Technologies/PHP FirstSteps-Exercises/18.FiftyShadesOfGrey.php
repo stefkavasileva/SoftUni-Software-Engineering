@@ -15,13 +15,10 @@
 <body>
 <?php
 
-for ($i = 0; $i < 5; $i++){
-    $grey= 51 * $i;
-    for ($j = 0; $j < 10; $j++) {?>
-        <div style="background-color:rgb(<?=$grey?>,<?= $grey?>,<?=$grey?>)"></div>
-        <?php
-        $grey+=5;
-    } ?>
+for ($i = 0; $i <=204; $i+=51){
+    for ($j = $i; $j <=$i+45; $j+=5) { ?>
+        <div style="background-color: rgb(<?=$j?>,<?=$j?>,<?=$j?>)"></div>
+   <?php } ?>
    <br/>
     <?php
 }
