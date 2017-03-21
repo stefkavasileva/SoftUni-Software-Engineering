@@ -1,4 +1,4 @@
-#<p align="center"> Lists - Exercises <p>
+# <p align="center"> Lists - Exercises <p>
 
 ## 01.Max Sequence of Equal Elements
 Read a **list of integers** and find the **longest sequence of equal elements**. If several exist, print the **leftmost**.

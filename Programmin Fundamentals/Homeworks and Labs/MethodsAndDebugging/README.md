@@ -1,4 +1,4 @@
-#<p align="center"> Methods and Debugging - Lab <p>
+# <p align="center"> Methods and Debugging - Lab <p>
 
 ## 01.Blank Receipt
 Create a method that prints a blank cash receipt. The method should invoke three other methods: one for printing the header, one for the body and one for the footer of the receipt. 

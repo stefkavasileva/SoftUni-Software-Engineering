@@ -1,4 +1,4 @@
-#<p align="center"> Programming Fundamentals Sample Exam II - October 2016 <p>
+# <p align="center"> Programming Fundamentals Sample Exam II - October 2016 <p>
 
 ## 01.Sweet Dessert
 Ivancho and his girlfriend are **throwing a party**. She plans **to cook her favorite dessert**. She asks Ivancho to **buy the needed products**. The **number of desserts** depends on **how many people will be coming**. She can prepare the dessert **in portions of 6**. If there are **5 guests** coming, she will still **cook 6 portions, 10 guests – cook 12**. The products for the dessert are **bananas, eggs and berries**. For **a set of 6** she needs **2 bananas, 4 eggs and 0.2 kilos berries**.

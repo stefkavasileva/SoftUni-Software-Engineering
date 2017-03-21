@@ -1,4 +1,4 @@
-#<p align="center"> Array and List Algorithms - Exercises <p>
+# <p align="center"> Array and List Algorithms - Exercises <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

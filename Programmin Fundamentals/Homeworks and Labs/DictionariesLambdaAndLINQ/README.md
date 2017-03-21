@@ -1,4 +1,4 @@
-#<p align="center"> Dictionaries, Lambda and LINQ - Lab <p>
+# <p align="center"> Dictionaries, Lambda and LINQ - Lab <p>
 
 ## 01.Count Real Numbers
 Read a **list of real numbers** and **print them in ascending order** along with their **number of occurrences**.

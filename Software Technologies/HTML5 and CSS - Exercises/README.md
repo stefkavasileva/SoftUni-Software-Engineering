@@ -1,4 +1,4 @@
-#<p align="center"> Exercises: HTML5 and CSS  <p>
+# <p align="center"> Exercises: HTML5 and CSS  <p>
 
 Problems for exercises and homework for the [&quot;Software Technologies&quot; course @ SoftUni](https://softuni.bg/courses/software-technologies).
 

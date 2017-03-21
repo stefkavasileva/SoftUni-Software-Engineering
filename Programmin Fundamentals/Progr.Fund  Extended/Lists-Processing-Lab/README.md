@@ -1,4 +1,4 @@
-#<p align="center"> Lists: Processing Variable-Length Sequences - Lab  <p>
+# <p align="center"> Lists: Processing Variable-Length Sequences - Lab  <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

@@ -1,4 +1,4 @@
-#<p align="center"> Strings and Text Processing - Lab <p>
+# <p align="center"> Strings and Text Processing - Lab <p>
 
 ## 01.Reverse string
 Write a program that reads a string from the console, reverses it and prints the result back at the console.

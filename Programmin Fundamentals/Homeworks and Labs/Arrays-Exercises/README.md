@@ -1,4 +1,4 @@
-#<p align="center"> Arrays - Exercises <p>
+# <p align="center"> Arrays - Exercises <p>
 
 ## 01.Largest Common End
 Read **two arrays of words** and find the length of the **largest common end** (left or right).

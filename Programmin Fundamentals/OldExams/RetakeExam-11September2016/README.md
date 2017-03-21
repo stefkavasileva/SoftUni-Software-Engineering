@@ -1,4 +1,4 @@
-#<p align="center"> Programming Fundamentals Retake Exam - 11 September 2016 <p>
+# <p align="center"> Programming Fundamentals Retake Exam - 11 September 2016 <p>
 
 ## 01.Thea the Photographer
 Thea is a **photographer.** She takes pictures of people on special events. She is a good friend and you want to help her.

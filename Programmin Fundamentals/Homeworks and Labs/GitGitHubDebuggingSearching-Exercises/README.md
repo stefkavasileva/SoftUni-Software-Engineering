@@ -1,4 +1,4 @@
-#<p align="center"> Git, GitHub, Debugging, Searching - Exersices <p>
+# <p align="center"> Git, GitHub, Debugging, Searching - Exersices <p>
 
 ## 01. **Instruction Set**
 

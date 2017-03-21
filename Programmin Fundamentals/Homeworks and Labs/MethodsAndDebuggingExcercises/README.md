@@ -1,4 +1,4 @@
-#<p align="center"> Methods and Debugging - Exercises <p>
+# <p align="center"> Methods and Debugging - Exercises <p>
 
 ## 01.Hello, Name!
 Write a **method** that receives a name as **parameter** and prints on the console. **“Hello, <name>!”**

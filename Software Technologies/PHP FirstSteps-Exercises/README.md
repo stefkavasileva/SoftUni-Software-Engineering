@@ -1,4 +1,4 @@
-#<p align="center"> Exercises: PHP Syntax, Basic Web <p>
+# <p align="center"> Exercises: PHP Syntax, Basic Web <p>
 
 Problems for exercises and homework for the [&quot;Software Technologies&quot; course @ SoftUni](https://softuni.bg/courses/software-technologies).
 

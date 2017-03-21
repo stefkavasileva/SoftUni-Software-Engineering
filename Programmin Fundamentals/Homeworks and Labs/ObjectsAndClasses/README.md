@@ -1,4 +1,4 @@
-#<p align="center"> Objects and Classes - Lab <p>
+# <p align="center"> Objects and Classes - Lab <p>
 
 ## 01.Day of Week
 You are given a **date** in format **day-month-year**. Calculate and print the **day of week** in **English**.

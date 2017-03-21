@@ -1,4 +1,4 @@
-#<p align="center"> Lab: Data Types: Text and Other Types, Variables <p>
+# <p align="center"> Lab: Data Types: Text and Other Types, Variables <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

@@ -1,4 +1,4 @@
-#<p align="center"> Arrays: Simple Array Processing  <p>
+# <p align="center"> Arrays: Simple Array Processing  <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

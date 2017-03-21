@@ -1,4 +1,4 @@
-#<p align="center"> Data Type And Variables - Exercises <p>
+# <p align="center"> Data Type And Variables - Exercises <p>
 
 ## 01.Practice Integer Numbers
 

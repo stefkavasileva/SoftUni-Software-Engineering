@@ -1,4 +1,4 @@
-#<p align="center"> Lab: Data Types: Numeral Types and Type Conversion <p>
+# <p align="center"> Lab: Data Types: Numeral Types and Type Conversion <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

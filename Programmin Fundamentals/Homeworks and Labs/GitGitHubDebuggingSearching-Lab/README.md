@@ -1,4 +1,4 @@
-#<p align="center"> Git, GitHub, Debugging, Searching - Lab <p>
+# <p align="center"> Git, GitHub, Debugging, Searching - Lab <p>
 
 ## 01.**Debug the Code:** __Holidays between Two Dates__
 

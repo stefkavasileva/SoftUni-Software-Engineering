@@ -1,4 +1,4 @@
-#<p align="center"> Dictionaries, Lambda and LINQ - Exercises <p>
+# <p align="center"> Dictionaries, Lambda and LINQ - Exercises <p>
 
 ## 01.Phonebook
 Write a program that receives some info from the console about **people** and their **phone numbers**. Each **entry** should have just **one name** and **one number** (both of them strings). 

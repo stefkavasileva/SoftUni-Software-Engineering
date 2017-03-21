@@ -1,4 +1,4 @@
-#<p align="center"> Exercises: Methods  <p>
+# <p align="center"> Exercises: Methods  <p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 

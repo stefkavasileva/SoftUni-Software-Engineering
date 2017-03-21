@@ -1,4 +1,4 @@
-#<p align="center"> Arrays - Lab <p>
+# <p align="center"> Arrays - Lab <p>
 
 ## 01.Day of Week
 Enter a **day number** [1…7] and print the **day name** (in English) or **“Invalid Day!”**. Use an **array of strings**.

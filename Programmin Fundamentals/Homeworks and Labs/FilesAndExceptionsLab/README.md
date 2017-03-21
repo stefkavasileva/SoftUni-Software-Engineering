@@ -1,4 +1,4 @@
-#<p align="center"> Files And Exceptions - Lab <p>
+# <p align="center"> Files And Exceptions - Lab <p>
 
 ## 01.Odd Lines
 Write a program that reads a text file and writes its every **odd** line in another file. Line numbers starts from 0. 
