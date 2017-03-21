@@ -1,10 +1,10 @@
-#<p align="center"> JavaScript Syntax and Basic Web  <p>
+# <p align="center"> JavaScript Syntax and Basic Web  <p>
 
 Problems for exercises and homework for the [&quot;Software Technologies&quot; course @ SoftUni](https://softuni.bg/courses/software-technologies).
 
 You can submit your solutions here [https://judge.softuni.bg/Contests/223/](https://judge.softuni.bg/Contests/223/).
 
-##01.Sum Numbers with HTML and JS
+## 01.Sum Numbers with HTML and JS
 
 Create an HTML form holding two text fields and a result field and write a JavaScript function to **sum** them.
 
