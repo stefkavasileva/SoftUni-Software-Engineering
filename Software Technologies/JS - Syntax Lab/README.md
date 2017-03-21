@@ -11,7 +11,7 @@ Create an HTML form holding two text fields and a result field and write a JavaS
 ### Examples
 
 | **Input** | **Output** | 
-| --- | --- | --- | --- | 
+| --- | --- | 
 | 1 2 | 3 |   
 | 5 5 | 10 |
 | 10 15 | 25 |
@@ -33,7 +33,7 @@ After you create the file, it should look something like this:
 
 3.Create the Form
 
-``html
+```HTML
 <form>
     <label for="num1"> First Number</label>
     <input type="text" id ="num1">
@@ -41,7 +41,7 @@ After you create the file, it should look something like this:
     <input type="text" id="num2">
     <input type="button" onclick="sumNumbers()" value="Calculate">
 </form>
-``
+```
 After you create the file, it&#39;s time to make the form. Create a **&lt;form&gt;** tag with some **&lt;input&gt;** fields inside:
 The input fields are as follows:
 
@@ -55,7 +55,7 @@ When we&#39;re done writing the code, our little html page should look something
 
 4.Write the JavaScript Code
 
-``JavaScript
+```JavaScript
  function sumNumbers() {
         let num1 =document.getElementById('num1').value;
         let num2 =document.getElementById('num2').value;
@@ -64,7 +64,7 @@ When we&#39;re done writing the code, our little html page should look something
 
         document.getElementById('result').innerHTML = sum;
     }
-``
+```
 5.Open the HTML Page
 Looks like it works!
 
@@ -83,16 +83,16 @@ Write a JavaScript program to print the value of the following expression:
 
 ### Hints
 
--
-This exercise has a **Judge**** contest ****entry** , so you need to create a **JavaScript**** function **, in order for the judge system to** accept **it as** valid **, and submit** only** that function, like so:
-``JavaScript
+- This exercise has a **Judge**** contest ****entry** , so you need to create a **JavaScript**** function **, in order for the judge system to** accept **it as** valid **, and submit** only** that function, like so:
+
+```JavaScript
 function solve () {
     let result='';	//TODO...
     result*=result;
     console.log(result);
 }
 
-``
+```
 - You can solve this problem by either using the **Math.pow()** method or by multiplying the result by **itself**.
 
 ## 3.Sum Two Numbers
@@ -107,13 +107,13 @@ Write a JavaScript program to sum **two numbers** , which are received as a **st
 
 ### Hints
 
--
-The first and second numbers will be elements in the first parameter of the function, like so:
- ``JavaScript
+- The first and second numbers will be elements in the first parameter of the function, like so:
+
+```JavaScript
  function sum(nums){
  
  }
- ``
+```
  In this case, the two numbers would be **nums[0]** and **nums[1]**.
 - Since the input is received as a **string array** , you&#39;re going to have to do some conversion, in order to be able to sum them.
 
@@ -124,7 +124,7 @@ Write a JavaScript program, which receives **three numbers** , as a **string arr
 ### Examples
 
 | **Input** | **Output** |  
-| --- | --- | --- | --- |
+| --- | --- |
 | 8 15 7 | 7 + 8 = 15 |  
 | -5 -3 -2 | -3 + -2 = -5 |   
 | 3 8 12 | No |
@@ -148,10 +148,7 @@ You are given a sequence of **JSON**** strings **holding** town **+** income **.
 
 | **Input** | **Output** |
 | --- | --- |
-| {&quot;town&quot;:&quot;Sofia&quot;,&quot;income&quot;:200}<br/>
-{&quot;town&quot;:&quot;Varna&quot;,&quot;income&quot;:120} <br/> 
-{&quot;town&quot;:&quot;Pleven&quot;,&quot;income&quot;:60} <br/>
-{&quot;town&quot;:&quot;Varna&quot;,&quot;income&quot;:70} | Pleven -&gt; 60 <br/>Sofia -&gt; 200<br/>Varna -&gt; 190 |
+| {&quot;town&quot;:&quot;Sofia&quot;,&quot;income&quot;:200}<br/>{&quot;town&quot;:&quot;Varna&quot;,&quot;income&quot;:120} <br/>  {&quot;town&quot;:&quot;Pleven&quot;,&quot;income&quot;:60} <br/>{&quot;town&quot;:&quot;Varna&quot;,&quot;income&quot;:70} | Pleven -&gt; 60 <br/>Sofia -&gt; 200<br/>Varna -&gt; 190 |
 
 ## 7.Largest 3 Numbers
 
@@ -160,7 +157,7 @@ Write a program to read an **array** of **numbers** and find and print the **lar
 ### Examples
 
 | **Input** | **Output** |   
-| --- | --- | --- | --- | 
+| --- | --- | 
 | 10 30 15 20 50 5 | 50<br/>30<br/>20 |  
  | 20 30 | 30<br/>20 |  
  | 10 5 20 3 20 | 20<br/>20<br/>10 |
@@ -173,7 +170,4 @@ Write a **JavaScript** function to **extract** from array of strings all **capit
 
 | **Input** | **Output** |
 | --- | --- |
-| We start by HTML, CSS, JavaScript, JSON and REST.<br/>
-Later we touch some PHP, MySQL and SQL.<br/>
-Later we play with C#, EF, SQL Server and ASP.NET MVC.<br/>
-Finally, we touch some Java, Hibernate and Spring.MVC. | HTML, CSS, JSON, REST, PHP, SQL, C, EF, SQL, ASP, NET, MVC, MVC |
+| We start by HTML, CSS, JavaScript, JSON and REST.<br/>Later we touch some PHP, MySQL and SQL.<br/> Later we play with C#, EF, SQL Server and ASP.NET MVC.<br/> Finally, we touch some Java, Hibernate and Spring.MVC. | HTML, CSS, JSON, REST, PHP, SQL, C, EF, SQL, ASP, NET, MVC, MVC |
