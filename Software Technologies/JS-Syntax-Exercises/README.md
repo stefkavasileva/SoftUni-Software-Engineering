@@ -67,7 +67,7 @@ The input comes as array of strings.
 | 2 <br/> 3 | 6 |   
 | 13 <br/> 13 | 169 |
 | 3 <br/> 2 | 1.5 |
-|144 <br/ 12 | 12 |
+|144 <br/> 12 | 12 |
 
 ## 4.Product of 3 Numbers
 
@@ -179,7 +179,7 @@ You will be given input lines, each holding **two elements** separated by a spac
 ### Examples
 
 | **Input** | **Output** | 
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- |
 | key value <br/> key eulav <br/> test tset <br/> key | value <br/> eulav |   
 | 3 test <br/> 3 test1 <br/> 4 test2 <br/> 4 test3 <br/> 4 test5 <br/> 4 | test2 <br/> test3 <br/> test5 |
 | 3 bla <br/> 3 alb <br/> 2 | None |
