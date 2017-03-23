@@ -8,6 +8,7 @@
 2. <a href="https://github.com/stefkavasileva/stefkavasileva.github.io" >HTML5 and CSS - Blog Design</a> 
 3. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Software%20Technologies/PHP%20FirstSteps-Exercises" >PHP First Steps - Exercises</a> 
 4. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Software%20Technologies/JS%20-%20Syntax%20Lab" >JS Syntax - Lab</a> 
+5. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Software%20Technologies/JS-Syntax-Exercises" > JavaScript Syntax and Basic Web </a> 
 
 
 
