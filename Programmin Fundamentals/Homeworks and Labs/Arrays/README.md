@@ -87,8 +87,8 @@ Rounding in “away from zero” style means:
 |  -5.01 -1.599 -2.5 -1.50 0|-5.01 => -5<br/>-1.599 => -2<br/>-2.5 => -3<br/>-1.50 => -2<br/>0 => 0|
 
 > #### Hints:
-- **Variant I:** Take the absolute value of each input number, add 0.5 and truncate the integral part. If the original number is negative, make the result also negative.
-- **Variant II:** Search in Internet for “rounding away from zero” + C#. You should find a build-in C# method for rounding in many styles. Choose **“away from zero”** rounding.
+> - **Variant I:** Take the absolute value of each input number, add 0.5 and truncate the integral part. If the original number is negative, make the result also negative.
+> - **Variant II:** Search in Internet for “rounding away from zero” + C#. You should find a build-in C# method for rounding in many styles. Choose **“away from zero”** rounding.
 
 ## 06.Reverse an Array of Strings
 Write a program to read **an array of strings**, reverse it and **print** its elements. The input consists of a sequence of space separated strings. Print the output on a single line (space separated).
@@ -118,10 +118,10 @@ Write a program that reads two **arrays of integers** and sums them. When the ar
 | 1 2 3 4 5<br/>2 3|  3 5 5 7 7 |1 2 3 4 5 +<br/>2 3 2 3 2 =<br/>3 5 5 7 7|
 | 5 4 3<br/>2 3 1 4|7 7 4 9  |  5 4 3 5 +<br/>2 3 1 4 +<br/>7 7 4 9|
 
-#### Hints
-- Assume the first array **arr1** has **len1** elements and the second arr2 has len2 elements.
-- The result array will have max**(len1, len2)** elements.
-- We sum array elements one by one (from the first to the **last**). To enable rotating (take the first element as next after the last), we use the **position % length** indexing: **arr1[i % len1]** and **arr2[i % len2]**.
+>#### Hints
+>- Assume the first array **arr1** has **len1** elements and the second arr2 has len2 elements.
+>- The result array will have max**(len1, len2)** elements.
+>- We sum array elements one by one (from the first to the **last**). To enable rotating (take the first element as next after the last), we use the **position % length** indexing: **arr1[i % len1]** and **arr2[i % len2]**.
 
 ## 08.Condense Array to Number
 Write a program to read **an array of integers** and **condense** them by **summing** adjacent couples of elements until a **single integer** is obtained. For example, if we have 3 elements {2, 10, 3}, we sum the first two and the second two elements and obtain {2+10, 10+3} = {12, 13}, then we sum again all adjacent elements and obtain {12+13} = {25}.
@@ -136,11 +136,11 @@ Write a program to read **an array of integers** and **condense** them by **summ
 | 1  |  1 |1 is already condensed to number |
 
 > #### Hints
-While we have more than one element in the array **nums[]**, repeat the following:
-- Allocate a new array **condensed[]** of size **nums.Length-1**.
-- Sum the numbers from **nums[]** to **condensed[]**:
-- **condensed[i] = nums[i] + nums[i+1]**
-- **nums[] = condensed[]**
+>While we have more than one element in the array **nums[]**, repeat the following:
+>- Allocate a new array **condensed[]** of size **nums.Length-1**.
+>- Sum the numbers from **nums[]** to **condensed[]**:
+>- **condensed[i] = nums[i] + nums[i+1]**
+>- **nums[] = condensed[]**
 
 The process is illustrated below:
 
@@ -163,8 +163,8 @@ Create a program that reads an **array of integers** (space separated values) an
 | 10 20 30 40 50 60 70 80  | { 40, 50 }  |
 
 > #### Hints
-- Write different logic for each case (n = 1, even n, odd n)
-- **n = 1** -> take the first element
-- **odd n** -> take elements **n/2-1, n/2, n/2+1**
-- **even n** -> take elements **n/2-1** and **n/2**
+>- Write different logic for each case (n = 1, even n, odd n)
+>- **n = 1** -> take the first element
+>- **odd n** -> take elements **n/2-1, n/2, n/2+1**
+>- **even n** -> take elements **n/2-1** and **n/2**
 
