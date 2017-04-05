@@ -1,4 +1,3 @@
-
 # <p align="center"> Arrays - Lab <p>
 
 ## 01.Day of Week
@@ -13,10 +12,10 @@ Enter a **day number** [1…7] and print the **day name** (in English) or **“I
 |0|Invalid Day!|
 
 
-#### Hints
-
-- Use an **array of strings-- holding the day names: {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}.
-- Print the element at index **(day-1)** when it is in the range [1…7] or **“Invalid Day!”** otherwise.
+>#### Hints
+>
+>- Use an **array of strings-- holding the day names: {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}.
+>- Print the element at index **(day-1)** when it is in the range [1…7] or **“Invalid Day!”** otherwise.
 
 
 ## 02.Reverse an Array of Integers
@@ -29,11 +28,11 @@ Write a program to read **an array of integers, reverse** it and **print** its e
 | 3 <br/> 10 <br/> 20 <br/> 30  |  30 20 10 |
 | 4 <br/> -1 <br/> 20 <br/> 99 <br/>5 |5 99 20 -1|
 
-Hints
-- First, read the number n.
-- Allocate an array of n integers.
-- Read the integers in a for-loop.
-- Instead of reversing the array, you can just pass through the elements from the last (n-1) to the first (0) with a reverse for-loop.
+>#### Hints
+>- First, read the number n.
+>- Allocate an array of n integers.
+>- Read the integers in a for-loop.
+>- Instead of reversing the array, you can just pass through the elements from the last (n-1) to the first (0) with a reverse for-loop.
 
 
 ## 03.Last K Numbers Sums Sequence
@@ -50,12 +49,12 @@ Enter two integers **n** and **k**. Generate and print the following sequence of
 |  8<br/>2  |  1 1 2 3 5 8 13 21 |
 |  9<br/>5  |  1 1 2 4 8 16 31 61 120 |
 
-#### Hints
-- Use an array of integers to hold the sequence.
-- Initially seq[0] = 1
-- Use two nested loops:
- - Loop through all elements i = 1 … n
- -  Sum the elements i-k … i-1: seq[i] = sum(seq[i-k … i-1])
+>#### Hints
+>- Use an array of integers to hold the sequence.
+>- Initially seq[0] = 1
+>- Use two nested loops:
+> - Loop through all elements i = 1 … n
+> -  Sum the elements i-k … i-1: seq[i] = sum(seq[i-k … i-1])
 
 ## 04.Triple Sum
 Write a program to read **an array of integers** and find all triples of elements **a, b** and **c**, such that **a + b == c** (where **a** stays left from **b**). Print **“No”** if no such triples exist.
@@ -68,10 +67,10 @@ Write a program to read **an array of integers** and find all triples of element
 | 2 7 5 0 | 2 + 5 == 7<br/>2 + 0 == 2<br/>7 + 0 == 7<br/>5 + 0 == 5|
 | 3 1 5 6 1 2   | 3 + 5 == 5<br/>1 + 5 == 6<br/>1 + 1 == 2<br/>1 + 2 == 3<br/>5 + 1 == 6<br/>1 + 2 == 3|
 
-#### Hints:
-- Read the input numbers in array **arr[]**.
-- Use nested loops to generate all pairs **{a, b}**, such that **0 ≤ a < b < n**.
-- Check whether **arr[]** contains the **sum arr[a] + arr[b]**.
+>#### Hints:
+>- Read the input numbers in array **arr[]**.
+>- Use nested loops to generate all pairs **{a, b}**, such that **0 ≤ a < b < n**.
+>- Check whether **arr[]** contains the **sum arr[a] + arr[b]**.
 
 ## 05.Rounding Numbers Away from Zero
 Write a program to read **an array of real numbers** (space separated values), **round** them to the nearest integer in **“away from 0”** style and print the output as in the examples below.
@@ -87,7 +86,7 @@ Rounding in “away from zero” style means:
 |  0.9 1.5 2.4 2.5 3.14 |0.9 => 1<br/>1.5 => 2<br/>2.4 => 2<br/>2.5 => 3<br/>3.14 => 3|
 |  -5.01 -1.599 -2.5 -1.50 0|-5.01 => -5<br/>-1.599 => -2<br/>-2.5 => -3<br/>-1.50 => -2<br/>0 => 0|
 
-#### Hints:
+> #### Hints:
 - **Variant I:** Take the absolute value of each input number, add 0.5 and truncate the integral part. If the original number is negative, make the result also negative.
 - **Variant II:** Search in Internet for “rounding away from zero” + C#. You should find a build-in C# method for rounding in many styles. Choose **“away from zero”** rounding.
 
@@ -101,12 +100,12 @@ Write a program to read **an array of strings**, reverse it and **print** its el
 |  a b c d e |  e d c b a |
 | -1 hi ho w  |  w ho hi -1 |
 
-#### Hints
-- Read the array of strings.
-- Exchange the first element **(at index 0)** with the last element **(at index n-1)**.
-- Exchange the second element **(at index 1)** with the element before the last **(at index n-2)**.
-- Continue the same way until the **middle** of the array is reached.
-- Another, shorter approach, is to use the **.Reverse()** extension method from **“System.Linq”**.
+> #### Hints
+> - Read the array of strings.
+> - Exchange the first element **(at index 0)** with the last element **(at index n-1)**.
+> - Exchange the second element **(at index 1)** with the element before the last **(at index n-2)**.
+> - Continue the same way until the **middle** of the array is reached.
+> - Another, shorter approach, is to use the **.Reverse()** extension method from **“System.Linq”**.
 
 ## 07.Sum Arrays
 Write a program that reads two **arrays of integers** and sums them. When the arrays are not of the same size, duplicate the smaller array a few times.
@@ -135,7 +134,7 @@ Write a program to read **an array of integers** and **condense** them by **summ
 |  5 0 4 1 2 | 30  |5 0 4 1 2 **->** 5+0 0+4 4+1 1+2 **->** 5 4 5 3 **->** 5+4 4+5 5+3 **->** 9 9 8 **->** 9+9 9+8 **->** 18 17 **->** 18+17 **->** 35 |
 | 1  |  1 |1 is already condensed to number |
 
-#### Hints
+> #### Hints
 While we have more than one element in the array **nums[]**, repeat the following:
 - Allocate a new array **condensed[]** of size **nums.Length-1**.
 - Sum the numbers from **nums[]** to **condensed[]**:
@@ -159,7 +158,7 @@ Create a program that reads an **array of integers** (space separated values) an
 | 1 2 3 4 5 6 7  |  { 3, 4, 5 } |
 | 10 20 30 40 50 60 70 80  | { 40, 50 }  |
 
-#### Hints
+> #### Hints
 - Write different logic for each case (n = 1, even n, odd n)
 - **n = 1** -> take the first element
 - **odd n** -> take elements **n/2-1, n/2, n/2+1**
