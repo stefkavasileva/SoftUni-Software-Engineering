@@ -78,7 +78,7 @@ Rounding in “away from zero” style means:
 - To round to the nearest integer, e.g. 2.9  3; -1.75  -2
 - In case the number is exactly in the middle of two integers (midpoint value), round it to the next integer which is away from the 0:
 
-![Not fount](https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/away_from_zero.png)
+![Not fount](Homeworks%20and%20Labs/images/away_from_zero.png)
 #### Example
 
 |  Input | Output  |
@@ -105,7 +105,7 @@ Write a program to read **an array of strings**, reverse it and **print** its el
 > - Exchange the first element **(at index 0)** with the last element **(at index n-1)**.
 > - Exchange the second element **(at index 1)** with the element before the last **(at index n-2)**.
 > - Continue the same way until the **middle** of the array is reached.
-![Not fount](https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/problem-6.png)
+![Not fount](images/problem-6.png)
 > - Another, shorter approach, is to use the **.Reverse()** extension method from **“System.Linq”**.
 
 ## 07.Sum Arrays
@@ -144,7 +144,7 @@ While we have more than one element in the array **nums[]**, repeat the followin
 
 The process is illustrated below:
 
-![Not fount](https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/problem-8.png)
+![Not fount](/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/problem-8.png)
 
 ## 09.Extract Middle 1, 2 or 3 Elements
 Write a method to extract the **middle 1, 2** or **3** elements from array of n integers and **print** them.
