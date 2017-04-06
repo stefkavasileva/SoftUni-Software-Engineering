@@ -4,7 +4,7 @@
 Read **two arrays of words** and find the length of the **largest common end** (left or right).
 
 # Examples 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |hi php java csharp sql html css js<br/>hi php java js softuni nakov java learn|3|The largest common end is at the left: hi php java|
 |hi php java xml csharp sql html css js <br/> nakov java sql html css js|4|The largest common end is at the right: sql html css js|
@@ -22,7 +22,7 @@ Write a program to read an array of **n integers** (space separated on a single 
 
 # Examples
 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |3 2 4 -1 <br/> 2|3 2 5 6|rotated1[] = -1  3  2  4 <br/> rotated2[] =  4 -1  3  2 <br/> sum[] =  3  2  5  6|
 |1 2 3 <br/> 1| 3 1 2 |rotated1[] = 3 1 2 <br/> sum[] = 3 1 2|
@@ -41,7 +41,7 @@ Read an array of **4*k** integers, fold it, and print the sum of the upper and l
 
 # Examples 
 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |5 2 3 6|7 9|5  6  + <br/>2  3  = <br/> 7  9|
 |1 2 3 4 5 6 7 8|5 5 13 13|2  1  8  7  + <br/> 3  4  5  6  = <br/> 5  5 13 13|
@@ -133,7 +133,7 @@ Write a program that finds the **most frequent number** in a given sequence of n
 
 # Examples
 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |4 1 1 4 2 3 4 4 1 2 4 9 3	|4|	The number 4 is the most frequent (occurs 5 times)|
 |2 2 2 2 1 2 2 2	|2|	The number 2 is the most frequent (occurs 7 times)|
@@ -160,7 +160,7 @@ Write a program that **count the number of pairs** in given array **which differ
  
 # Examples
 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |1 5 3 4 2 <br/>2	|3|	Pairs of elements with difference 2 -> {1, 3}, {5, 3}, {4, 2} |
 |5 3 8 10 12 1 <br/> 1	|0|	No pairs with difference 1|
@@ -170,7 +170,7 @@ Write a program that determines if there **exists an element in the array** such
 
 # Examples
 
-|**Input**|**Outpit**|**Comments|
+|**Input**|**Outpit**|**Comments**|
 |---|---|---|
 |1 2 3 3	|2|	At a[2] -> left sum = 3, right sum = 3 <br/> a[0] + a[1] = a[3]|
 |1 2	|no|	At a[0] -> left sum = 0, right sum = 2 <bt/> At a[1] -> left sum = 1, right sum = 0 <bt/> No such index exists|
