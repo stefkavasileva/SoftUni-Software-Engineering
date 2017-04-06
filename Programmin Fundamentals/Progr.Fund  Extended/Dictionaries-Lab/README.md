@@ -1,4 +1,4 @@
-# 1.Lab: Dictionaries
+# <p align="center"> 1.Lab: Dictionaries </p>
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
