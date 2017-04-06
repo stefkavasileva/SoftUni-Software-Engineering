@@ -2,7 +2,7 @@
 
 Problems for exercises and homework for the [&quot;Programming Fundamentals&quot; course @ SoftUni](https://softuni.bg/courses/programming-fundamentals).
 
-Check your solutions here: [https://judge.softuni.bg/Contests/174/Dictionaries-Lambda-and-LINQ-Lab](https://judge.softuni.bg/Contests/174/Dictionaries-Lambda-and-LINQ-Lab).
+Check your solutions[here:](https://judge.softuni.bg/Contests/429/Dictionaries-Lab).
 
 # 01.Count Real Numbers
 
