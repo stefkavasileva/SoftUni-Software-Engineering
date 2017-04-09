@@ -65,7 +65,7 @@ Create a method that prints the sign of an integer number n.
 
 ![Not fount](/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/methods5.png)
 
-##03.Printing Triangle
+## 03.Printing Triangle
 Create a method for printing triangles as shown below: n=3
 
 #### Examples 
