@@ -18,7 +18,7 @@ Create a new C# project and create a program that **assigns integer values** to 
 
 ## 02. Practice Floating Points
 
-####Problem Description
+#### Problem Description
 
 Create a new C# project and create a program that **assigns floating point values** to **variables**. Be sure that each **value** is stored in the **correct variable type** (try to find the most suitable variable type in order to save memory). Finally, you need to **print** all variables to the console.
 
@@ -34,7 +34,7 @@ Create a new C# project and create a program that **assigns floating point value
 
 ## 03.Practice Characters and Strings
 
-####Problem Description
+#### Problem Description
 
 Create a new C# project and create a program that **assigns character** and **string values to variables**. Be sure that each **value** is stored in the **correct variable**. Finally, you need to **print** all variables to the console.
 
