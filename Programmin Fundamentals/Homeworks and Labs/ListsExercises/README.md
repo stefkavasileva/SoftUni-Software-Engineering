@@ -68,7 +68,7 @@ For example, [1, 2, 4, 5, 6, 7, 8] -> [3, 9, 13, 8].
 |2 2 4 2 4 <br/> add 1 4 <br/> sumPairs <br/> print|[6, 6, 6]|
 |1 2 1 2 1 2 1 2 1 2 1 2 <br/> sumPairs <br/> sumPairs <br/> addMany 0 -1 -2 -3 <br/> print|[-1, -2, -3, 6, 6, 6]|
 
-##04.Sum Reversed Numbers
+## 04.Sum Reversed Numbers
 Write a program that reads sequence of numbers, reverses their digits, and prints their sum.
 
 #### Examples
