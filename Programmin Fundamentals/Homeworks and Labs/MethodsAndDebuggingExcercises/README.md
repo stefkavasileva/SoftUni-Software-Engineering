@@ -139,7 +139,7 @@ The output should be **rounded** to the **second digit after the decimal point.*
 |triangle <br/> 3 <br/> 6	|9.00|
 |rectangle <br/> 4 <br/> 5	|20.00|
 
-##12.Master Numbers
+## 12.Master Numbers
 A master number is an integer that holds the following properties:
 - Is **symmetric** (palindrome), e.g. 5, 77, 282, 14341, 9553559.
 - Its **sum of digits is divisible by 7**, e.g. 77, 313, 464, 5225, 37173.
@@ -160,7 +160,7 @@ Write a program to **print all master numbers** in the range **[1…n]**.
 > - ContainsEvenDigit(int num)
 > 2.	Loop through all numbers in range [1…n] and check every number with the helper methods.
 
-##13.* Factorial
+## 13.* Factorial
 Write a program that calculates and prints the **n!** for any n in the range [1…1000].
 
 #### Examples
@@ -185,7 +185,7 @@ Write a program that calculates and prints the **n!** for any n in the range [1�
 
 ![Not fount](/Programmin%20Fundamentals/Homeworks%20and%20Labs/images/methods25.png)
 
-##14.Factorial Trailing Zeroes
+## 14.Factorial Trailing Zeroes
 Create a program that counts the trailing zeroes of the factorial of a given number.
 
 #### Examples
