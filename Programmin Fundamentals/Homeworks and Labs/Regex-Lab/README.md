@@ -10,6 +10,12 @@ To help you out, we've outlined several steps:
 - For each word, specify that what follows the first letter are only **lowercase letters**, one or more – use another character set and the correct quantifier.
 - To prevent capturing of letters across new lines, put "\b" at the beginning and at the end of your regex. This will ensure that what precedes and what follows the match is a word boundary (like a new line).
 
+#### Examples
+
+| **Match ALL of these**| **Match NONE of these**|
+|---|---|
+|Ivan Ivanov	|ivan ivanov, Ivan ivanov, ivan Ivanov, IVan Ivanov, Ivan IvAnov, Ivan	Ivanov|
+
 ## 02.Match phone number
 Write a regular expression to match a valid phone number from Sofia. A valid number will start with "+359" followed by the area code (2) and then the number itself, consisting of 7 digits (separated in two group of 3 and 4 digits respectively). The different parts of the number are separated **by either a space or a hyphen ('-')**. Refer to the examples to get the idea. 
 - Use quantifiers to match a specific number of digits
@@ -17,5 +23,19 @@ Write a regular expression to match a valid phone number from Sofia. A valid num
 - Add a word boundary at the end of the match to avoid partial matches (the last example on the right-hand side)
 - Ensure that before the '+' sign there is either a space or the beginning of the string
 
-##03.Replace <a> tag
-Write a program that replaces in a HTML document given as string **all the tags <a href=…>…</a>** with corresponding tags **[URL href=…>…[/URL]**. Read an input, until you receive **“end” command**. Print the result on the console. 
+#### Examples
+
+| **Match ALL of these**| **Match NONE of these**|
+|---|---|
+|+359 2 222 2222|359-2-222-2222, +359/2/222/2222, +359-2 222 2222 <br/> +359 2-222-2222, +359-2-222-222, +359-2-222-22222|
+|+359-2-222-2222|+359 2-222-2222, +359-2-222-222, +359-2-222-22222|
+
+## 03.Replace \<a> tag
+Write a program that replaces in a HTML document given as string **all the tags \<a href=…>…\</a>** with corresponding tags **[URL href=…>…[/URL]**. Read an input, until you receive **“end” command**. Print the result on the console. 
+
+#### Examples
+
+| **Input**| **Output**|
+|---|---|
+|\<ul> \<li> \<a href="http://softuni.bg">SoftUni</a> <br/>  \</li> \</ul> <br/> end|\<ul> \<li> <br/>   [URL href="http://softuni.bg">SoftUni[/URL] <br/>  \</li> <br/> \</ul> <br/>  \</li> \</ul>|
+
