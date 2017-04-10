@@ -39,3 +39,4 @@ Write a program that replaces in a HTML document given as string **all the tags 
 |---|---|
 |\<ul> \<li> \<a href="http://softuni.bg">SoftUni</a> <br/>  \</li> \</ul> <br/> end|\<ul> \<li> <br/>   [URL href="http://softuni.bg">SoftUni[/URL] <br/>  \</li> <br/> \</ul> <br/>  \</li> \</ul>|
 
+**Note:** The input may be read on a single line (unlike the example above) or from a file. Remove all new lines if you choose the first approach.
