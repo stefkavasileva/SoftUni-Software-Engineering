@@ -220,7 +220,41 @@ In case of **repeating towns**, count the last seen population for each town (ig
 | --- | --- | 
 |Bulgaria\sofia\123000 <br/> burgas\Bulgaria\4456576 <br/> stop|Bulgaria -> 2 <br/> burgas -> 4456576 <br/> sofia -> 123000|
 |Bulgaria\sofia\100 <br/> sofia\Bulgaria\200 <br/> stop|Bulgaria -> 2 <br/> sofia -> 200|
-|G$er&m@an@y\berlin\1234333 <br/> pa$r###is\F&r&a&n&c&e\30000000 <br/> Bulg@aria\varn@a@#$#\32145535 <br/> Bulgaria\pom$#or$ie\3131231 <br/> l$#ond$32on\U$#434565K43\98686644 <br/> ham$#bu4300r43g\Ger$man2@y\1324 <br/> stop|
+|G$er&m@an@y\berlin\1234333 <br/> pa$r###is\F&r&a&n&c&e\30000000 <br/> Bulg@aria\varn@a@#$#\32145535 <br/> Bulgaria\pom$#or$ie\3131231 <br/> l$#ond$32on\U$#434565K43\98686644 <br/> ham$#bu4300r43g\Ger$man2@y\1324 <br/> stop|Bulgaria -> 2 <br/> France -> 1 <br/> Germany -> 2 <br/> UK -> 1 <br/> london -> 98686644 <br/> varna -> 32145535 <br/> paris -> 30000000|
 
+#### Solution
+1.	 Read Input
+Firstly we need to create a loop that will read commands from the console until it receives command “stop”. Every line is split by back slash.
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam22.PNG)
+
+2.Get Country And City From Input
+Now we should decide which element of the commandArgs array is the country and which the city is. To decide we must check if the first letter of the first argument is in upper case. If it is the first argument is the country and the second is the city. Otherwise the first element is the city and the second element is the country
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam23.PNG)
+
+3.Remove Prohibited Symbols
+We could easily do that by replacing the prohibited symbols with an empty string.
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam24.PNG)
+
+4.	 Add Information to The Appropriate Data Structure
+We now need to define 2 data structures that will keep the information we need. First data structure will keep information about countries and cities count ordered alphabetically. The second data structure will keep information about city and its population. We can use SortedDictionary<string, int> and Dictionary<string, long>
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam25.PNG)
+
+Let’s add the data to the appropriate dictionaries. To the first dictionary if the country does not exists in it we add it and set its counter to 1 otherwise we increment the value with 1. And on the second structure we just add the city as key and its population as value.
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam26.PNG)
+
+5.	 Print Countries
+Just print all the data that is in the sorted dictionary
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam27.PNG)
+
+6. Print Biggest 3 Cities by Population
+Now we should sort the dictionary containing cities name by their population in descending order and take first 3 elements and print their information
+
+![Not fount](/Programmin%20Fundamentals/OldExams/images/exam28.PNG)
 
 
