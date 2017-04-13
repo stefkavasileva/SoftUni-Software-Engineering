@@ -120,7 +120,7 @@ Finally we need to print the final state of the sequence separated by a comma an
 #### Problem Description
 
 Write a program which reads from the console **dimensions of a matrix** and **matrix elements values**. Get a **targeted cell** and **multiply its value** with the **sum of all neighboring cells**. The **neighboring cells** must **change their values too**. **Each one** should be **the product** of **its initial value** and the **initial value of the targeted cell**. Then **print on the console updated matrix**. 
-####Input
+#### Input
 The input data should be read from the console:
 - The **first line** holds the number of **rows – R** and **columns – C**, separated by space.
 - The **next R lines** hold the **matrix values**. Each line holds **C integers**, separated by space.
