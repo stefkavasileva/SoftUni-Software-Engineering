@@ -20,9 +20,7 @@ You will be given a list of **integers** on the **first line** of the input (spa
 
 You will receive a list of **integers** on the same line (separated by **one** space). On the next lines, you will start receiving a list of **strings** , until you receive the string &quot; **end**&quot;. Your task is to insert each string ( **converted** to integer) at a specific index in the list. The index is determined by the **first digit** of the **number**.
 
-Example: 514 -> first digit – 5 -> insert 514 at the **5**
-
-# th
+Example: 514 -> first digit – 5 -> insert 514 at the **5th**
  index of the list.
 
 After you insert all the elements, print the list, separated by single spaces.
