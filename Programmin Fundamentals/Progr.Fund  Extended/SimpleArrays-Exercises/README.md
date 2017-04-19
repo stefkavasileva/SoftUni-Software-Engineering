@@ -4,7 +4,7 @@ Problems for exercises and homework for the [&quot;Programming Fundamentals&quot
 
 You can check your solutions [here] (https://judge.softuni.bg/Contests/Practice/Index/421#0).
 
-##1.Largest Element in Array
+## 1.Largest Element in Array
 
 Read an integer **N** and on the next **N** lines read an **array** of **integers.** Then, find its **largest** element.
 
