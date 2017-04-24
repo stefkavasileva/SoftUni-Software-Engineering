@@ -6,18 +6,20 @@ public class ReplaceTag
 {
     public static void Main()
     {
-        //66/100
-        var result = new List<string>();
-
+        string inputLine = Console.ReadLine();
         var pattern = @"<a.*href=(""|')(.*)\1>(.*?)<\/a>";
-        var inputLine = Console.ReadLine();
 
-        var reg = new Regex(pattern);
-        var matches = reg.Matches(inputLine);
+        while (!inputLine.Equals("end"))
+        {
 
-        inputLine = reg.Replace(inputLine, @"[URL href=""$2""]$3[/URL]");
+            var reg = new Regex(pattern);
+            var matches = reg.Matches(inputLine);
 
-        Console.WriteLine(inputLine);
+            inputLine = reg.Replace(inputLine, @"[URL href=""$2""]$3[/URL]");
+
+            Console.WriteLine(inputLine);
+
+            inputLine = Console.ReadLine();
+        }
     }
 }
-
