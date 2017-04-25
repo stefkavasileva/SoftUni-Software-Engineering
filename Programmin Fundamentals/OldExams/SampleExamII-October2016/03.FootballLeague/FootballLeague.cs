@@ -1,106 +1,108 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
-class FootballLeague
+public class Team
 {
-    static void Main(string[] args)
+    public string Name { get; set; }
+
+    public int Score { get; set; }
+
+    public long Points { get; set; }
+}
+
+public class FootballLeague
+{
+    public static void Main()
     {
-        string key = Console.ReadLine();
-        string footballMatch = Console.ReadLine();
+        var teams = new List<Team>();
 
-        Dictionary<string, int> teams = new Dictionary<string, int>();
-        Dictionary<string, int> teamsGoals = new Dictionary<string, int>();
+        var key = Regex.Escape(Console.ReadLine());
+        var keyReg = new Regex($"{key}(.*?){key}.*{key}(.*?){key}.*?(\\d+):(\\d+)");
 
-        while (!footballMatch.Equals("final"))
+        var inputLine = Console.ReadLine();
+
+        while (!inputLine.Equals("final"))
         {
-            int startIndex = footballMatch.IndexOf(key);
-            int endIndex = footballMatch.IndexOf(key, startIndex + 1);
-            string firstTeam = footballMatch.Substring(startIndex + key.Length, endIndex - key.Length - startIndex);
-            firstTeam = new string(firstTeam.Reverse().ToArray()).ToUpper();
+            var match = keyReg.Match(inputLine);
 
-            startIndex = footballMatch.IndexOf(key, endIndex + 1);
-            endIndex = footballMatch.IndexOf(key, startIndex + 1);
-            string secondTeam = footballMatch.Substring(startIndex + key.Length, endIndex - key.Length - startIndex);
-            secondTeam = new string(secondTeam.Reverse().ToArray()).ToUpper();
-
-            int indexOfLastSpace = footballMatch.LastIndexOf(' ');
-            int[] score = footballMatch.Substring(indexOfLastSpace)
-                                .Split(':').Select(int.Parse).ToArray();
-
-            if (!teams.ContainsKey(firstTeam))
+            if (match.Success)
             {
-                teams.Add(firstTeam, 0);
+                var firstTeamName = new string(match.Groups[1].Value.Reverse().ToArray()).ToUpper();
+                var secondTeamName = new string(match.Groups[2].Value.Reverse().ToArray()).ToUpper();
+                var firstTeamPoints = int.Parse(match.Groups[3].Value);
+                var secondTeamPoints = int.Parse(match.Groups[4].Value);
+                var firstTeamScore = 0;
+                var secondTeamScore = 0;
+
+                if (firstTeamPoints > secondTeamPoints)
+                {
+                    firstTeamScore = 3;
+                }
+                else if (secondTeamPoints > firstTeamPoints)
+                {
+                    secondTeamScore = 3;
+                }
+                else
+                {
+                    firstTeamScore = 1;
+                    secondTeamScore = 1;
+                }
+
+                if (!teams.Any(t => t.Name == firstTeamName))
+                {
+                    Addteam(teams, firstTeamName, firstTeamPoints, firstTeamScore);
+                }
+                else
+                {
+                    UpdateTeamScore(teams, firstTeamName, firstTeamPoints, firstTeamScore);
+                }
+
+                if (!teams.Any(t => t.Name == secondTeamName))
+                {
+                    Addteam(teams, secondTeamName, secondTeamPoints, secondTeamScore);
+                }
+                else
+                {
+                    UpdateTeamScore(teams, secondTeamName, secondTeamPoints, secondTeamScore);
+                }
+
             }
 
-            if (!teams.ContainsKey(secondTeam))
-            {
-                teams.Add(secondTeam, 0);
-            }
-
-            if (score[0] > score[1])
-            {
-                teams[firstTeam] += 3;
-            }
-            else if (score[0] < score[1])
-            {
-                teams[secondTeam] += 3;
-            }
-            else
-            {
-                teams[firstTeam] += 1;
-                teams[secondTeam] += 1;
-            }
-
-            if (!teamsGoals.ContainsKey(firstTeam))
-            {
-                teamsGoals.Add(firstTeam, 0);
-            }
-
-            if (!teamsGoals.ContainsKey(secondTeam))
-            {
-                teamsGoals.Add(secondTeam, 0);
-            }
-
-
-            teamsGoals[firstTeam] += score[0];
-            teamsGoals[secondTeam] += score[1];
-
-
-            footballMatch = Console.ReadLine();
+            inputLine = Console.ReadLine();
         }
 
-        teams = teams.OrderByDescending(x => x.Value)
-                     .ThenBy(x => x.Key)
-                     .ToDictionary(x => x.Key, x => x.Value);
-
-        int count = 1;
+        teams = teams.OrderByDescending(t => t.Score).ThenBy(t => t.Name).ToList();
 
         Console.WriteLine("League standings:");
+        var count = 1;
 
         foreach (var team in teams)
         {
-            Console.WriteLine($"{count}. {team.Key} {team.Value}");
+            Console.WriteLine($"{count}. {team.Name} {team.Score}");
             count++;
         }
 
-        count = 0;
-
-        teamsGoals = teamsGoals.OrderByDescending(x => x.Value)
-                     .ThenBy(x => x.Key)
-                     .ToDictionary(x => x.Key, x => x.Value);
+        var topTeams = teams.OrderByDescending(t => t.Points).ThenBy(t => t.Name).Take(3).ToList();
 
         Console.WriteLine("Top 3 scored goals:");
-
-        foreach (var teamg in teamsGoals)
+        foreach (var topTeam in topTeams)
         {
-            if (count == 3)
-            {
-                break;
-            }
-
-            Console.WriteLine($"- {teamg.Key} -> {teamg.Value}");
-            count++;
+            Console.WriteLine($"- {topTeam.Name} -> {topTeam.Points}");
         }
     }
+
+    private static void UpdateTeamScore(List<Team> teams, string name, int points, int score)
+    {
+        teams.First(t => t.Name == name).Points += points;
+        teams.First(t => t.Name == name).Score += score;
+    }
+
+    private static void Addteam(List<Team> teams, string teamName, int points, int score)
+    {
+        var team = new Team { Name = teamName, Points = points, Score = score };
+        teams.Add(team);
+    }
 }
+
