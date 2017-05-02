@@ -9,7 +9,7 @@
 1. Стартирайте Visual Studio.
 2. Създайте нов конзолен проект: [File] [New] [Project].
 
-![Not fount](/Programming%20Basics/Exercises/images/35.PNG)
+![Not fount](/Programming%20Basics/Exercises/images/35.PNG =100x20)
 
 3. Изберете от диалоговия прозорец [Visual C#] [Windows] [Console Application]и дайте подходящо име на проекта, например &quot; **HelloCSharp**&quot;:
 
