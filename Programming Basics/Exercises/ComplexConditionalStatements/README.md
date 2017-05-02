@@ -112,12 +112,12 @@
 Напишете програма, която проверява дали **точка {x, y}** се намира **вътре в правоъгълник {x1, y1} – {x2, y2}**. Входните данни се четат от конзолата и се състоят от 6 реда: десетичните числа **x1** , **y1** , **x2** , **y2** , **x** и **y** (като се гарантира, че **x1 &lt; x2** и **y1 &lt; y2** ). Една точка е вътрешна за даден правоъгълник, ако се намира някъде във вътрешността му или върху някоя от страните му. Отпечатайте &quot; **Inside**&quot; или &quot; **Outside**&quot;. Примери:
 
 | **вход** | **изход** | **визуализация** |  
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | 
 | 2 <br/> -3 <br/> 12 <br/> 3 <br/> 8 <br/> -1  | Inside |![Not fount](/Programming%20Basics/Exercises/images/17.PNG)|
 | 2 <br/> -3 <br/> 12 <br/> 3 <br/> 11 <br/> -3.5  | Outside |![Not fount](/Programming%20Basics/Exercises/images/18.PNG)|
  
 | **вход** | **изход** | **визуализация** | 
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | 
 | -1 <br/> -3 <br/> 4 <br/> 1 <br/> 0.5 <br/> 1 | Inside |![Not fount](/Programming%20Basics/Exercises/images/19.PNG)|
 | -1 <br/> -3 <br/> 4 <br/> 1 <br/> -1.2 <br/> 1.4 | Outside |![Not fount](/Programming%20Basics/Exercises/images/20.PNG)|
 
@@ -305,7 +305,7 @@ Write a program to print animal type by its name:
 Напишете програма, която въвежда **тип прожекция** (стринг), брой **редове** и брой **колони** в залата (цели числа) и изчислява общите приходи от билети при пълна зала. Резултатът да се отпечата във формат като в примерите по-долу, с 2 знака след десетичната точка.  Примери:
 
 | **вход** | **изход** |   **вход** | **изход** |  **вход** | **изход** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | 
 | Premiere <br/> 10 <br/> 12 | 1440.00 leva | Normal <br/> 21 <br/> 13 | 2047.50 leva | Discount <br/> 12 <br/> 30 | 1800.00 leva |
 
 **Тествайте** решението си в **judge**  **системата** : [https://judge.softuni.bg/Contests/Practice/Index/153#8](https://judge.softuni.bg/Contests/Practice/Index/153#8).
@@ -356,7 +356,7 @@ Write a program to print animal type by its name:
 Примери:
 
 | **вход** | **изход** | 
-| --- | --- | --- | 
+| --- | --- |  
 |2 <br/> 3 <br/> 10|outside|
 |2 <br/> 3 <br/> 1|inside|
 |2 <br/> 2 <br/> 2|border|
@@ -366,7 +366,7 @@ Write a program to print animal type by its name:
 ![Not fount](/Programming%20Basics/Exercises/images/29.PNG)
 
 | **вход** | **изход** | 
-| --- | --- | --- | 
+| --- | --- | 
 |15 <br/> 13 <br/> 55|outside|
 |15 <br/> 29 <br/> 37|inside|
 |15 <br/> 37 <br/> 18|outside|
