@@ -43,7 +43,7 @@ Your task is to calculate the incomes Kircho gets for a single projection full o
 
 The illuminati are an ancient, very secret society that very secretly rules the world. They&#39;ve managed to keep their existence secret by using a very secretive way of communication. Their secret is that they incorporate their secret messages into popular (non-secret) movies.
 
-Your task is to extract the meaning of some movie lines. The messages are actually codes that can be extracted by summing the secret values of every vowel in the message. The values of the vowels are as follows: **A = 65, E = 69, I = 73, O = 79, U = 85.** The values apply for both upper and lowercase letters. For example, &#39; **I am Batman!**&#39; has a total of **4 vowels** : three times &#39; **A**&#39; and one time &#39; **I**** &#39; **and their sum is:** 3 \* 65 + 1 \* 73 = 268**.
+Your task is to extract the meaning of some movie lines. The messages are actually codes that can be extracted by summing the secret values of every vowel in the message. The values of the vowels are as follows: **A = 65, E = 69, I = 73, O = 79, U = 85.** The values apply for both upper and lowercase letters. For example, &#39; **I am Batman!** &#39; has a total of **4 vowels** : three times &#39; **A** &#39; and one time &#39; **I** &#39; **and their sum is:** 3 \* 65 + 1 \* 73 = 268.
 
 ### Input
 
