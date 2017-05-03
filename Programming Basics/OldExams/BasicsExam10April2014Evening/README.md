@@ -31,7 +31,7 @@ The input data will always be valid and in the format described. There is no nee
 
 | **Input** | **Output** | **Comments** |
 | --- | --- | --- |
-| leap <br/> 5 <br/> 2 | 45 | 48 weekends total in the year, split into: <br/> - 2 hometown weekends 2 Sundays **2** plays <br/> - 46 normal weekends 46 \* 3 / 4 **34.5** plays <br/> 4 holidays  5 \* 2/3 -> **3.33** playsLeap year -> additional 15% \* 39.83  **5.97** playsTotal plays = **45.8** plays -> **45** (rounded down) |
+| leap <br/> 5 <br/> 2 | 45 | 48 weekends total in the year, split into: <br/> - 2 hometown weekends 2 Sundays **2** plays <br/> - 46 normal weekends 46 \* 3 / 4 **34.5** plays <br/> 4 holidays -> 5 \* 2/3 -> **3.33** playsLeap year -> additional 15% \* 39.83 -> **5.97** playsTotal plays = **45.8** plays -> **45** (rounded down) |
 
 | **Input** | **Output** |  **Input** | **Output** |   **Input** | **Output** |  
 | --- | --- | --- | --- | --- | --- |
