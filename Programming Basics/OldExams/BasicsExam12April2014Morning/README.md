@@ -35,7 +35,7 @@ The output data should be printed on the console and must contain two lines.
 ### Examples
 
 | **Input** | **Output** | **Comments** | 
-| --- | --- | --- | --- | --- | --- | --- 
+| --- | --- | --- | 
 | 2 <br/> 2 <br/> 0 <br/> 0 <br/> 1 <br/> 1 | No  <br/> 2.83  |![Not fount](/Programming%20Basics/OldExams/images/8.PNG)|
 | 0 <br/> 2 <br/> 3 <br/> 0 <br/> -1 <br/> 4 <br/> -2 | Yes <br/> 2.00 |![Not fount](/Programming%20Basics/OldExams/images/9.PNG)|
 
