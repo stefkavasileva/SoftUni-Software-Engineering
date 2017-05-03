@@ -31,7 +31,7 @@ The input data will always be valid and in the format described. There is no nee
 
 | **Input** | **Output** | **Comments** |
 | --- | --- | --- |
-| leap <br/> 5 <br/> 2 | 45 | 48 weekends total in the year, split into: <br/> - 2 hometown weekends 2 Sundays **2** plays <br/> - 46 normal weekends 46 \* 3 / 4 **34.5** plays <br/> 4 holidays  5 \* 2/3  **3.33** playsLeap year  additional 15% \* 39.83  **5.97** playsTotal plays = **45.8** plays  **45** (rounded down) |
+| leap <br/> 5 <br/> 2 | 45 | 48 weekends total in the year, split into: <br/> - 2 hometown weekends 2 Sundays **2** plays <br/> - 46 normal weekends 46 \* 3 / 4 **34.5** plays <br/> 4 holidays  5 \* 2/3 -> **3.33** playsLeap year -> additional 15% \* 39.83  **5.97** playsTotal plays = **45.8** plays -> **45** (rounded down) |
 
 | **Input** | **Output** |  **Input** | **Output** |   **Input** | **Output** |  
 | --- | --- | --- | --- | --- | --- |
@@ -148,5 +148,5 @@ The output should be printed on the console. Print Hayvan numbers matching given
 | 63 <br/> 201 | 567768969 <br/> 576777978 <br/> 585786987| 5+6+7+7+6+8+9+6+9 = 63; 768-567 = 201; 969-768 = 201 <br/> 5+7+6+7+7+7+9+7+8 = 63; 777-576 = 201; 978-777 = 201 <br/> 5+8+5+7+8+6+9+8+7 = 63; 786-585 = 201; 987-786 = 201 |
 
 | **Input** | **Output** | **Input** | **Output** |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | 
 | 75 <br/> 1 | 897898899 <br/> 987988989 <br/> 996997998 | 93 <br/> 10 | No |
