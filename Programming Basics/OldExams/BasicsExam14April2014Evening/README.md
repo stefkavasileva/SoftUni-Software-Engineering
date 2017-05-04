@@ -1,4 +1,4 @@
-# <p align="center"> C# Basics Exam 14 April 2014 Morning <p>
+# <p align="center"> C# Basics Exam 14 April 2014 Evening <p>
 
 ## Problem 1 – Inside the Building
 
