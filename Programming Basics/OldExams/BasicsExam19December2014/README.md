@@ -85,7 +85,7 @@ Stamat really loves all kinds of music. He listens to music all the time. He eve
 
 Your task is to help Stamat write a program that **prints his headphones** on the console using only asterisks &#39; **\*** &#39; and dashes &#39; **-** &#39;. And since his headphones are very special they have a **diameter**. See the example below to better understand how the diameter affects the headphones&#39; size.
 
-![Not fount](/Programming%20Basics/OldExam/images/13.PNG)
+![Not fount](/Programming%20Basics/OldExams/images/13.PNG)
 
 ### Input
 
@@ -145,7 +145,7 @@ The weight of each letter is the product of its position in the English alphabet
 
 Example
 
-![Not fount](/Programming%20Basics/OldExam/images/14.PNG)
+![Not fount](/Programming%20Basics/OldExams/images/14.PNG)
 
 The matrix is 4x4 and the keyword is &quot;SoftUni&quot;. The weight of every row is:
 
