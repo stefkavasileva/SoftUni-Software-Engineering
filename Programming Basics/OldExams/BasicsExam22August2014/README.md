@@ -16,7 +16,7 @@ The input data will always be valid and in the format described. There is no nee
 
 ### Output
 
-The output should be printed on the console. It should consist of **1**** or 2** lines:
+The output should be printed on the console. It should consist of **1**  or **2** lines:
 
 - Print &quot; **more: {0}** &quot; on the **first** line **, if the** tables ****made** are **more** than the **tables**** needed.
   - Print the materials **left** on the **second line** : &quot; **table tops left: {0}, legs left: {1}** &quot;
@@ -65,7 +65,7 @@ The output should be printed on the console. It should consist of exactly **2** 
 
 ### Constraints
 
-- The number of **orders** , **packets** and **books**** per ****packet** will all be integers in range [0…10000].
+- The number of **orders** , **packets** and **books** **per** **packet** will all be integers in range [0…10000].
 - The **book price** will always be a floating-point number in range [[±5.0 × 10-(-324) … ±1.7 × 10-308]
 - Allowed working time for your program: 0.1 seconds.
 - Allowed memory: 16 MB.
@@ -155,7 +155,7 @@ The input data will always be valid and in the format described. There is no nee
 ## Problem 4 – Chess Queens
 
 We are given a chess board of size **N \* N**. The only figures we have on the
-chess board are two queens. The queen in chess can move in **horizontal** , **vertical** and **diagonal** directions.We are also given a **number D** whichrepresents the distance between the two queens. The distance is measured by **D squares away**. All positions on the chessboard are represented with numbers and letters **(a1, a2… a8, b1-b8, c1-c8, …, h1-h8)**. Example: if **N=16** , the numbers on the board will be represented with integers **(1-16)** and letters **(a-o)**. Your task is to find **all**** couples **of queens where the queens stay either on the** same ****vertical** , **horizontal** or **diagonal** , at **distance**** D **. See the diagram aside to understand your task better. The green queens meet the condition of** 2** blocks away but the red queens aren&#39;t.
+chess board are two queens. The queen in chess can move in **horizontal** , **vertical** and **diagonal** directions.We are also given a **number D** whichrepresents the distance between the two queens. The distance is measured by **D squares away**. All positions on the chessboard are represented with numbers and letters **(a1, a2… a8, b1-b8, c1-c8, …, h1-h8)**. Example: if **N=16** , the numbers on the board will be represented with integers **(1-16)** and letters **(a-o)**. Your task is to find **all** couples of queens where the queens stay either on the same ****vertical** , **horizontal** or **diagonal** , at **distance**** D **. See the diagram aside to understand your task better. The green queens meet the condition of** 2 blocks away but the red queens aren&#39;t.
 
 ![Not fount](/Programming%20Basics/OldExams/images/16.PNG)
 
