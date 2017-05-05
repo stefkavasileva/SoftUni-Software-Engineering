@@ -1,0 +1,5 @@
+﻿public static class DirectoryInfo
+{
+
+}
+
