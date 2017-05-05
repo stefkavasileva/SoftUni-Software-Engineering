@@ -24,8 +24,7 @@ public static class IOManager
             foreach (var directoryPath in Directory.GetDirectories(currentPath))
             {
                 //Add all it's subfolders to the end of the queue
-                subFolders.Enqueue(directoryPath);
-              
+                subFolders.Enqueue(directoryPath);              
             }         
         }
     }
