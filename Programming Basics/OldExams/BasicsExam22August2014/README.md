@@ -20,9 +20,9 @@ The output should be printed on the console. It should consist of **1**** or 2**
 
 - Print &quot; **more: {0}** &quot; on the **first** line **, if the** tables ****made** are **more** than the **tables**** needed.
   - Print the materials **left** on the **second line** : &quot; **table tops left: {0}, legs left: {1}** &quot;
-- Print &quot; **less: {0}** &quot;, if the **tables**** made **are** less **than the** tables ****needed**.
+- Print &quot; **less: {0}** &quot;, if the **tables** made **are** less **than the** tables **needed**.
   - Print the materials **needed**  to create all needed tables: &quot; **tops needed: {0}, legs needed {1}&quot;**
-- Print &quot; **Just enough tables made: {0}** &quot;, if the **tables**** made **are** equal **with the** tables ****needed**.
+- Print &quot; **Just enough tables made: {0}** &quot;, if the **tables** made **are** equal **with the** tables **needed**.
 
 ### Constraints
 
