@@ -32,7 +32,7 @@ The output should be printed on the console. It should consist of **1** **line**
 
 | **Input** | **Output** | **Board** | **Comments** |
 | --- | --- | --- | --- |
-| 1 <br/> 1 <br/> 10 | 537824 |    0    1    2 <br/> 0 \|10 \| 11 \| 12  <br/> 1 \|13 \| **14** \| 15 <br/> 2 \|16 \| 17 \| 18 | The cell with coordinates {x=1, y=1} has an index 5. Cell at index 5 has value = 14. 14-5 = 537824  |
+| 1 <br/> 1 <br/> 10 | 537824 |    0    1    2 <br/> 0 \|10 \| 11 \| 12  <br/> 1 \|13 \| **14** \| 15 <br/> 2 \|16 \| 17 \| 18 | The cell with coordinates {x=1, y=1} has an index 5. <br/>  Cell at index 5 has value = 14. 14-5 = 537824  |
 
 | **Input** | **Output** |  **Input** | **Output** |  **Input** | **Output** |
 | --- | --- | --- | --- | --- | --- | 
