@@ -178,7 +178,7 @@ In some poker games, we have a hand called &quot; **straight**&quot; which consi
 
 **Examples** of &quot;straight&quot;: (AC 2H 3H 4C 5H), (2H 3S 4H 5H 6D), (5C 6C 7C 8C 9C), (7C 8D 9S 10S JS), (9C 10H JD QD KD), (10D JD QS KH AH). The following hands are not &quot;straight&quot;: (9D JD QS KH AH) – not sequential; (10C 7C 9D 8S JS) – sequential, but not ordered; (9H 8S 7H 6H 5D) – sequential, but incorrectly ordered.
 
-**Card faces** have the following **weights** : A  1 (as first card) or 14 (as last card); 2  2; 3  3; 4  4; 5  5; 6  6; 7  7; 8  8; 9  9; 10  10; J  11; Q  12; K 13. **Card suits** have the following weights: Clubs  1; Diamonds  2; Hearts  3; Spades  4. **Hands weight** is calculated as follows:
+**Card faces** have the following **weights** : A => 1 (as first card) or 14 (as last card); 2 => 2; 3 => 3; 4 => 4; 5 => 5; 6 => 6; 7 => 7; 8 => 8; 9 => 9; 10 => 10; J => 11; Q => 12; K => 13. **Card suits** have the following weights: Clubs  1; Diamonds  2; Hearts  3; Spades  4. **Hands weight** is calculated as follows:
 
 10 \* weight(first card face) + weight(first card suit) +
 
