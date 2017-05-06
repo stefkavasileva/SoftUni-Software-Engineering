@@ -174,7 +174,7 @@ The output should be printed on the console as a sequence of **winning numbers**
 
 | **Input** | **Output** | **Comments** |  
 | --- | --- | --- | 
-| aa | 112-112 <br/> 112-121 <br/> 112-211 <br/> 121-112 <br/> 121-121 <br/> 121-211 <br/> 211-112 <br/> 211-121 <br/> 211-211 | The sum of aa = **2**. The first output has product of the first 3 digits 1\*1\*2 = 2 and second 3 digits have product 1\*1\*2 = 2. <br/>  The same product 2 is obtained in all other outputs. |
+| aa | 112-112 <br/> 112-121 <br/> 112-211 <br/> 121-112 <br/> 121-121 <br/> 121-211 <br/> 211-112 <br/> 211-121 <br/> 211-211 | The sum of aa = **2**. <br/> The first output has product of the first 3 digits <br/>  1\*1\*2 = 2 and second 3 digits have product <br/>  1\*1\*2 = 2. <br/>  The same product 2 is obtained in all other outputs. |
 
 | **Input** | **Output** | **Input**|**Output**|
 |---|---|---|---|
