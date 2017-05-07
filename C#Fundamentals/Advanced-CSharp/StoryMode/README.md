@@ -181,20 +181,19 @@ We will also **add** a **public** boolean flag **for** whether **the** data stru
 In order to complete our task, we need to **initialize** our **data structure** and **fill it** , so we will **make a new method** that **initializes** the **data structure,** if it is not initialized yet **,** reads the data , if it is, we display a new **message** called **DataAlreadyInitialisedException** that we need to **add** first in the **ExceptionMessages** **class**. It&#39;s message should be: Data is already initialized!The implementation of the method for the initialization should look like this:
 
 ```csharp
-
-    public static void InitializeData()
+public static void InitializeData()
+{
+    if (!isDataInitialized)
     {
-        if (!isDataInitialized)
-        {
-            OutputWriter.WriteMessageOnNewLine("Reading data...");
-            studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
-            ReadData();
-        }
-        else
-        {
-            OutputWriter.WriteMessageOnNewLine(ExceptionMessages.DataAlreadyInitialisedException);
-        }
+        OutputWriter.WriteMessageOnNewLine("Reading data...");
+        studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
+        ReadData();
     }
+    else
+    {
+        OutputWriter.WriteMessageOnNewLine(ExceptionMessages.DataAlreadyInitialisedException);
+    }
+}
 ```
 
 Now it&#39;s time to **fill** the **private ReadData** method (the data will always be valid). It is **private** because we **do not want** to be reachable out of our class.
@@ -203,45 +202,44 @@ All we are going to do, is to **read from the console until an empty line is rea
 
 ```csharp
 private static void ReadData()
+{
+    var input = Console.ReadLine();
+    
+    while (!string.IsNullOrEmpty(input))
     {
-        var input = Console.ReadLine();
-
-        while (!string.IsNullOrEmpty(input))
-        {
-            var tokens = input.Split();
-            var course = tokens[0];
-            var student = tokens[1];
-            var mark = int.Parse(tokens[2]);
-
-            //TODO: Add the course and student if they don't exist
-            //TODO: Add the mark
-           
-        }
+        var tokens = input.Split();
+        var course = tokens[0];
+        var student = tokens[1];
+        var mark = int.Parse(tokens[2]);
+    
+        //TODO: Add the course and student if they don't exist
+        //TODO: Add the mark
+       
     }
+}
 ```
 Now we need to **check** if **our course and student** exists **in our data.** If **we** don&#39;t do this **we are sure to get an** exception **. So** if **the** course ****doesn&#39;t exist** we must **initialize the inner**** dictionary **holding the students for the given course. Also** if **the** student **doesn&#39;t** exist we have to **initialize the inner list** with grades. Finally we **add** the mark.
 
 ```csharp
- if (!studentsByCourse.ContainsKey(course))
-            {
-                studentsByCourse.Add(course, new Dictionary<string, List<int>>());
-            }
+if (!studentsByCourse.ContainsKey(course))
+{
+    studentsByCourse.Add(course, new Dictionary<string, List<int>>());
+}
 
-            if (!studentsByCourse[course].ContainsKey(student))
-            {
-                studentsByCourse[course].Add(student, new List<int>());
-            }
+if (!studentsByCourse[course].ContainsKey(student))
+{
+    studentsByCourse[course].Add(student, new List<int>());
+}
 
-            studentsByCourse[course][student].Add(mark);
-
-            input = Console.ReadLine();
+studentsByCourse[course][student].Add(mark);
+input = Console.ReadLine();
 ```
 
 Finally **after** the **while** loop **we need to** set the isDataInitialized to true and print&quot; **Data read**! &quot; on a new line!
 
 ```csharp
- isDataInitialized = true;
- OutputWriter.WriteMessageOnNewLine("Data read");
+isDataInitialized = true;
+OutputWriter.WriteMessageOnNewLine("Data read");
 ```
 #### Problem 4.Making security checks available before retrieving data from the data structure
 
@@ -260,50 +258,50 @@ First thing we need to **check** in order to search for the given course name, i
 
 ```csharp
 private static bool IsQueryForCoursePossible(string courseName)
+{
+    if (isDataInitialized)
     {
-        if (isDataInitialized)
-        {
-            return true;
-        }
-        else
-        {
-            OutputWriter.DisplayExceotion(ExceptionMessages.DataNotInitializedExceptionMessage);
-        }
-
-        return false;
+        return true;
     }
+    else
+    {
+        OutputWriter.DisplayExceotion(ExceptionMessages.DataNotInitializedExceptionMessage);
+    }
+    
+    return false;
+}
 ```
 
  We are now **returning** true ****if** the **data**** structure **has been** initialized **, but we** haven&#39;t ****checked**** whether **the** given ****courseName exists** as a key in the data structure.
 So now we have to **add** this **check**** in **the** body ****of** the **if** and **if** the **data**** structure ****contains** the **key** , we **return**** true **while in the** other ****case** we **display** an **exception** that we&#39;ll need to add in the **ExceptionsMessages** called **InexistingCourseInDataBase**** with **the following** message: &quot;The course you are trying to get does not exist in the data base!&quot;
 
 ```csharp
- if (studentsByCourse.ContainsKey(courseName))
- {
-    return true;
- }
- else
- {
-    OutputWriter.DisplayExceotion(ExceptionMessages.InexistingCourseInDataBase);
- }
+if (studentsByCourse.ContainsKey(courseName))
+{
+   return true;
+}
+else
+{
+   OutputWriter.DisplayExceotion(ExceptionMessages.InexistingCourseInDataBase);
+}
 ```
 
 Now that we’ve implemented the first method for the checks, it’s time for it’s **sidekick**. As we’ve said we will reuse the check from the first **method** and also add a check for whether the **given student user name exists** in the data structure of the university. If it is present, **we return true**, if it is not we display an **exception that we’ll need to add** in the ExceptionsMessages called **InexistingStudentInDataBase** with the following message: **“The user name for the student you are trying to get does not exist!” and finally we return false** : 
 
 ```csharp
 private static bool IsQueryForStudentPossible(string courseName, string studentUserName)
+{
+    if (IsQueryForCoursePossible(courseName) && studentsByCourse[courseName].ContainsKey(studentUserName))
     {
-        if (IsQueryForCoursePossible(courseName) && studentsByCourse[courseName].ContainsKey(studentUserName))
-        {
-            return true;
-        }
-        else
-        {
-            OutputWriter.DisplayExceotion(ExceptionMessages.InexistingStudentInDataBase);
-        }
-
-        return false;
+        return true;
     }
+    else
+    {
+        OutputWriter.DisplayExceotion(ExceptionMessages.InexistingStudentInDataBase);
+    }
+
+    return false;
+}
 ```
 
 #### Problem 5.Displaying a student entry:
@@ -337,14 +335,14 @@ The other method is analogical. It **gets all students from a given course**** i
 ```csharp
 public static void GetAllStudentsFromCourse(string courseName)
 {
-   if (IsQueryForCoursePossible(courseName))
-   {
-     OutputWriter.WriteMessageOnNewLine($"{courseName}:");
-     foreach (var studentMarksEntry in studentsByCourse[courseName])
-     {
-        OutputWriter.PrintStudent(studentMarksEntry);
-     }
-  }
+    if (IsQueryForCoursePossible(courseName))
+    {
+        OutputWriter.WriteMessageOnNewLine($"{courseName}:");
+        foreach (var studentMarksEntry in studentsByCourse[courseName])
+        {
+            OutputWriter.PrintStudent(studentMarksEntry);
+        }
+    }
 }
 ```
 
