@@ -163,7 +163,7 @@ However, this will never end and in a few seconds a StackOverflow Exception is t
 
 For the Nth Fibonacci number, we calculate the N-1th and the N-2th number, but for the calculation of N-1th number we calculate the N-1-1th(N-2th) and the N-1-2th number, so we have a lot of repeated calculations.
 
-![Not fount](/C%23Fundamentals/Advanced-CSharp/images/1.png)
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/1.PNG)
 
 If you want to figure out how to skip those unnecessary calculations, you can search for a technique called [memoization](https://en.wikipedia.org/wiki/Memoization).
 
