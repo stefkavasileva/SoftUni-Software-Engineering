@@ -4,8 +4,8 @@
 ---
 
 ## Exercises
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/StacksAndQueues" > Stacks And Queues </a> 
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/SetsAndDictionaries" > Sets And Dictionaries </a> 
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/RegularExpressions" > Regular Expressions </a>
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ManualStringProcessing" > Manual String Processing </a>
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/FunctionalProgramming" > Functional Programming </a> 
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/StacksAndQueues" > Stacks And Queues </a> 
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/SetsAndDictionaries" > Sets And Dictionaries </a> 
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/RegularExpressions" > Regular Expressions </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/ManualStringProcessing" > Manual String Processing </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/FunctionalProgramming" > Functional Programming </a> 
