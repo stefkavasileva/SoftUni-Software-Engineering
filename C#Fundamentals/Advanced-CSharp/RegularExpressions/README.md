@@ -1,4 +1,4 @@
-# <p> Exercises: Regular Expressions </p>
+# <p align="center"> Exercises: Regular Expressions </p>
 
 This document defines the **exercise assignments** for the [&quot;CSharp Advanced&quot; course @ Software University](file:///h). Please submit your solutions (source code) of all below described problems in [Judge](https://judge.softuni.bg/).
 
