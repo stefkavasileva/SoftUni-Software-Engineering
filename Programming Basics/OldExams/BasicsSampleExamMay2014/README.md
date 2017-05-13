@@ -157,5 +157,4 @@ Given the secret number and the number of bulls and cows your task is to write a
 | --- | --- | --- | --- | --- | --- | 
 | 2228 <br/> 2 <br/> 1 | 1222 2122 2212 2232 2242 2252 2262 2272 2281 2283 2284 2285 2286 2287 2289 22922322 2422 2522 2622 2722 2821 2823 2824 2825 2826 2827 2829 2922 3222 4222 52226222 7222 8221 8223 8224 8225 8226 8227 8229 9222 | 1234 <br/> 3 <br/> 0 | 1134 1214 1224 1231 1232 1233 1235 1236 1237 1238 1239 1244 1254 1264 1274 12841294 1334 1434 1534 1634 1734 1834 1934 2234 3234 4234 5234 6234 7234 8234 9234 | 1234 <br/> 3 <br/> 1 | No |
 
-
 Attribution: this work may contain portions from the &quot; [C# Part I](https://telerikacademy.com/Courses/Courses/Details/81)&quot; course by Telerik Academy under [CC-BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US) license.
