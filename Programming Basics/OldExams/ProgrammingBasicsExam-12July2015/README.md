@@ -48,37 +48,6 @@ Look at the examples below, to get a better understanding of how the output shou
 - Allowed working time for your program: 0.25 seconds.
 - Allowed memory: 16 MB.
 
-1. **Examples**
-
-|
-1. **Input**
- |
-1. **Output**
- |
-1. **Comments**
- |
-| --- | --- | --- |
-|
-1. 3351
-2. 7018
-3. 796
-4. 1125
-5. 967
-6. 2550
-7. 1556
-8. 2080
- |
-1. eFG% 0.534
-2. TOV% 0.124
-3. ORB% 0.275
-4. FT% 0.222
- |
-1. eFG% = (3351 + 0.5 \* 796) / 7018 = 0.534
-2. TOV% = 1125 / (7018 + 0.44 \* 2080 + 1125) = 0.124
-3. ORB% = 967 / (967 + 2550) = 0.275
-4. FT% = 1556 / 7018 = 0.222
- |
-
 |**Input**|**Output**|**Comments**|
 |---|---|---|
 |3351  <br/> 7018  <br/> 796 <br/> 1125 <br/> 967 <br/> 2550 <br/> 1556 <br/> 2080|eFG% 0.534  <br/> TOV% 0.124 <br/> ORB% 0.275 <br/> FT% 0.222|eFG% = (3351 + 0.5 * 796) / 7018 = 0.534 <br/> TOV% = 1125 / (7018 + 0.44 * 2080 + 1125) = 0.124 <br/> ORB% = 967 / (967 + 2550) = 0.275 <br/> FT% = 1556 / 7018 = 0.222|
@@ -258,8 +227,8 @@ The output should be printed on the console and should consist of a **single num
 
 #### Example
 
-|**Input**|**Output**|
-|---|---|
+|**Input**|**Output**|**Comments**|
+|---|---|---|
 |5 <br/> LD <br/> LEFT 0 <br/> LEFT 20 <br/> RIGHT 2 <br/> LEFT 2 <br/> END| 0 |![Not fount](/Programming%20Basics/OldExams/images/22.PNG) |
 
 
