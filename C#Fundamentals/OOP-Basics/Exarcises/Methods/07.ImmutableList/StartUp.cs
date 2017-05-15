@@ -1,23 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _07.ImmutableList
-{
-    public class ImmutableList
-    {
-        public List<int> numbers;
-        public List<int> Numbers => this.numbers;
-
-        public ImmutableList GetNewList()
-        {
-            return  new ImmutableList();
-        }
-    }
-
+{   
     public class StartUp
     {
         public static void Main()
@@ -43,7 +29,6 @@ namespace _07.ImmutableList
             {
                 Console.WriteLine(methods[0].ReturnType.Name);
             }
-
         }
     }
 }
