@@ -62,7 +62,7 @@ num1
 num2
 
 | **Input** | **Output** |  
-| --- | --- |--- | --- |
+| --- | --- |
 | 2 </br> 3 | 6 |
 | 13 </br>  13| 169 |
 
@@ -185,7 +185,7 @@ You are given a number **num**. Write a PHP script that prints **factorial** of 
 ### Examples
 
 | **Parameter name** | **Input** |
-| --- | --- | --- |
+| --- | --- |
 | num | 5 | 120 |  
 |num | 3 | 6 |
 
