@@ -80,7 +80,7 @@ Your task is to write a **program** , which gets as **input** the **number of th
 #### Examples
 
 | **Input** | **Output** | **Comments** | **Input** | **Output** |
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- | ---|
 | 10 <br/> 2 <br/> 3 <br/> 4 <br/> 5 <br/> 6 <br/> 7 <br/> 8 <br/> 9 <br/> 10 <br/> 11 | c d a b c d a b c d <br/> Answer A: 2 <br/> Answer B: 2 <br/> Answer C: 3 <br/> Answer D: 3 | 5 <br/> 56 <br/> 654 <br/> 236 <br/> 56997 <br/> 4555 | a c a b d <br/> Answer A: 2 <br/> Answer B: 1 <br/> Answer C: 1 <br/> Answer D: 1 |
 
 ## Problem 3 – Fallen In Love
