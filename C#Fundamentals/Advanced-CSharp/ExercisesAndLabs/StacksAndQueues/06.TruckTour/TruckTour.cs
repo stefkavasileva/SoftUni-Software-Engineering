@@ -4,53 +4,56 @@ using System.Linq;
 
 public class TruckTour
 {
-    public static void Main()
-    {
-        var count = int.Parse(Console.ReadLine());
-        var pumps = new List<int[]>();
+    static int entries;
+    static Queue<int[]> pumps;
 
-        for (int i = 0; i < count;i++)
+    public static void Main(string[] args)
+    {
+        entries = int.Parse(Console.ReadLine());
+        pumps = new Queue<int[]>();
+
+        for (int entry = 0; entry < entries; entry++)
         {
-            pumps.Add(Console.ReadLine().Split(' ').Select(int.Parse).ToArray());
+            pumps.Enqueue(Console.ReadLine().Split(' ').Select(int.Parse).ToArray());
         }
 
-        for (int i = 0; i < count; i++)
+        for (int entry = 0; entry < entries; entry++)
         {
-            if (IsSolution(count, pumps))
+            if (IsSolution())
             {
-                Console.WriteLine(i);
+                Console.WriteLine(entry);
                 break;
             }
 
-
-            var startingPump = pumps[pumps.Count - 1];
-            pumps.RemoveAt(pumps.Count - 1);
-            pumps.Add(startingPump);
+            var startingPump = pumps.Dequeue();
+            pumps.Enqueue(startingPump);
         }
 
     }
 
-    public static bool IsSolution(int count, List<int[]> pumps)
+    static bool IsSolution()
     {
-        int tankFuel = 0;
-        bool foundAnswer = true;
+        var tankFuel = 0;
+        var foundAnswer = true;
 
-        for (int i = 0; i < count; i++)
+        for (int entry = 0; entry < entries; entry++)
         {
-            var currPump = pumps[pumps.Count - 1];
-            pumps.RemoveAt(pumps.Count - 1);
+            var currPump = pumps.Dequeue();
             tankFuel += currPump[0] - currPump[1];
+
             if (tankFuel < 0)
             {
                 foundAnswer = false;
-
-                break;
             }
 
-            pumps.Add(currPump);
+            pumps.Enqueue(currPump);
         }
 
-        return foundAnswer;
+        if (foundAnswer)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
-

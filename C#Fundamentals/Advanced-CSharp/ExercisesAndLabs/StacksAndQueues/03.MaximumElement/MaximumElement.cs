@@ -9,8 +9,7 @@ public class MaximumElement
         var queriesCount = int.Parse(Console.ReadLine());
 
         var numbers = new Stack<int>();
-        var maxNumber = new Stack<int>();
-        maxNumber.Push(int.MinValue);
+        var maxNumber = int.MinValue;
 
         for (int i = 0; i < queriesCount; i++)
         {
@@ -20,10 +19,9 @@ public class MaximumElement
             {
                 numbers.Push(queryArgs[1]);
 
-                if (maxNumber.Peek() <= numbers.Peek())
+                if (maxNumber < numbers.Peek())
                 {
-                    maxNumber.Pop();
-                    maxNumber.Push(numbers.Peek());
+                    maxNumber = numbers.Peek();
                 }
             }
             else if (query.Equals(2))
@@ -31,26 +29,25 @@ public class MaximumElement
                 numbers.Pop();
                 if (numbers.Count > 0)
                 {
-                    maxNumber.Push(numbers.Max());
+                    maxNumber = numbers.Max();
                 }
                 else
                 {
-                    maxNumber.Push(int.MinValue);
+                    maxNumber = int.MinValue;
                 }
 
             }
             else
             {
-                if (maxNumber.Peek().Equals(int.MinValue))
+                if (maxNumber.Equals(int.MinValue))
                 {
                     Console.WriteLine(numbers.Peek());
                 }
                 else
                 {
-                    Console.WriteLine(maxNumber.Peek());
+                    Console.WriteLine(maxNumber);
                 }
             }
         }
     }
 }
-

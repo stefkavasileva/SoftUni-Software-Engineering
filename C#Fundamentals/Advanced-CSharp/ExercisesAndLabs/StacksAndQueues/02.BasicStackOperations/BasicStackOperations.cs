@@ -6,56 +6,61 @@ public class BasicStackOperations
 {
     public static void Main()
     {
-        var numbers = Console.ReadLine()
+        var inputArgs = Console.ReadLine()
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(int.Parse)
             .ToArray();
 
-        var amountOfElementsToPush = numbers[0];
-        var amountOfElementsToPop = numbers[1];
-        var elementToCheck = numbers[2];
+        var pushCount = inputArgs[0];
+        var popCount = inputArgs[1];
+        var chackNum = inputArgs[2];
 
-        var numbersToBePushed = Console.ReadLine()
+        var inputLine = Console.ReadLine()
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-            .Select(int.Parse)
-            .ToArray();
+            .Select(int.Parse);
 
-        var stack = new Stack<int>();
+        var inputNumbers = new Queue<int>(inputLine);
+        var resultNumbers = new Stack<int>();
 
-        for (int i = 0; i < amountOfElementsToPush; i++)
+        PushNumbers(inputNumbers, resultNumbers, pushCount);
+        PopNumbers(resultNumbers, popCount);
+
+        if (resultNumbers.Contains(chackNum))
         {
-            stack.Push(numbersToBePushed[i]);
-        }
-
-        for (int i = 0; i < amountOfElementsToPop; i++)
-        {
-            stack.Pop();
-        }
-
-        var hasElement = stack.Contains(elementToCheck);
-
-        if (stack.Count.Equals(0))
-        {
-            Console.WriteLine("0");
-        }
-        else if (hasElement)
-        {
-            Console.WriteLine(hasElement.ToString().ToLower());
+            Console.WriteLine("true");
         }
         else
         {
-            var minNum = int.MaxValue;
-            while (stack.Count > 0)
+            if (resultNumbers.Any())
             {
-                if (stack.Peek() < minNum)
-                {
-                    minNum = stack.Peek();
-                }
-
-                stack.Pop();
+                Console.WriteLine(resultNumbers.Min());
             }
+            else
+            {
+                Console.WriteLine(0);
+            }
+        }
+    }
 
-            Console.WriteLine(minNum);
+    public static void PopNumbers(Stack<int> resultNumbers, int popCount)
+    {
+        for (int i = 0; i < popCount; i++)
+        {
+            if (resultNumbers.Any())
+            {
+                resultNumbers.Pop();
+            }
+        }
+    }
+
+    public static void PushNumbers(Queue<int> inputNumbers, Stack<int> resultNumbers, int pushCount)
+    {
+        for (int i = 0; i < pushCount; i++)
+        {
+            if (inputNumbers.Any())
+            {
+                resultNumbers.Push(inputNumbers.Dequeue());
+            }
         }
     }
 }

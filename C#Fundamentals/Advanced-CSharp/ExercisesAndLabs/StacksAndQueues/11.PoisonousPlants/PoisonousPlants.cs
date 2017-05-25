@@ -6,54 +6,35 @@ public class PoisonousPlants
 {
     public static void Main()
     {
-	//11/100
-        var count = int.Parse(Console.ReadLine());
-        var numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+        var n = int.Parse(Console.ReadLine());
+        var plants = Console.ReadLine()
+            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .Take(n)
+            .ToArray();
 
-        var plants = new Queue<int>();
-        numbers.ForEach(x => plants.Enqueue(x));
+        var days = new int[n];
+        var indexes = new Stack<int>();
+        indexes.Push(0);
 
-        var days = 0;
-        var lastPlant = numbers[numbers.Count - 1];
-        var middlePlants = new Queue<int>();
-        var counter = 0;
-        var haveToAdd = true;
-        while (true)
+        for (int i = 1; i < plants.Length; i++)
         {
-            if (plants.Peek() == lastPlant && counter > 0)
+            int maxDays = 0;
+
+            while (indexes.Count > 0 && plants[indexes.Peek()] >= plants[i])
             {
-                days++;
-                plants.Dequeue();
-
-                if (count == plants.Count)
-                {
-                    break;
-                }
-
-                count = plants.Count();
-                continue;
+                maxDays = Math.Max(maxDays, days[indexes.Pop()]);
             }
 
-            var firstPlant = plants.Dequeue();
-
-            if (plants.Peek() < firstPlant)
+            if (indexes.Count > 0)
             {
-                if (haveToAdd)
-                {
-                    plants.Enqueue(firstPlant);
-                }
-
-                plants.Enqueue(plants.Peek());
-                haveToAdd = true;
-            }
-            else if (plants.Peek() > firstPlant)
-            {
-                haveToAdd = false;
+                days[i] = maxDays + 1;
             }
 
-            counter++;
+            indexes.Push(i);
         }
 
-        Console.WriteLine(days);
+        Console.WriteLine(days.Max());
     }
 }
+
