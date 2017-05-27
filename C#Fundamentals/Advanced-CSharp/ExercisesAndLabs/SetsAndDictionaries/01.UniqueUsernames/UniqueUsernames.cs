@@ -5,14 +5,18 @@ public class UniqueUsernames
 {
     public static void Main()
     {
-        var namesCount = int.Parse(Console.ReadLine());
+        var nameCount = int.Parse(Console.ReadLine());
         var uniqueNames = new HashSet<string>();
 
-        for (int i = 0; i < namesCount; i++)
+        for (int i = 0; i < nameCount; i++)
         {
-            uniqueNames.Add(Console.ReadLine());
+            var currentName = Console.ReadLine();
+            uniqueNames.Add(currentName);
         }
 
-        Console.Write(string.Join(Environment.NewLine, uniqueNames));
+        foreach (var uniqueName in uniqueNames)
+        {
+            Console.WriteLine(uniqueName);
+        }
     }
 }

@@ -5,23 +5,22 @@ public class CountSymbols
 {
     public static void Main()
     {
+        var symbolCount = new SortedDictionary<char,int>();
         var text = Console.ReadLine();
-
-        var symbolsCount = new SortedDictionary<char, int>();
 
         foreach (var symbol in text)
         {
-            if (!symbolsCount.ContainsKey(symbol))
+            if (!symbolCount.ContainsKey(symbol))
             {
-                symbolsCount.Add(symbol, 0);
+                symbolCount.Add(symbol,0);
             }
 
-            symbolsCount[symbol]++;
+            symbolCount[symbol]++;
         }
 
-        foreach (var symbol in symbolsCount)
+        foreach (var currentSymbol in symbolCount)
         {
-            Console.WriteLine($"{symbol.Key}: {symbol.Value} time/s");
+            Console.WriteLine($"{currentSymbol.Key}: {currentSymbol.Value} time/s");
         }
     }
 }

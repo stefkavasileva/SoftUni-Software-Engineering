@@ -6,45 +6,33 @@ public class PopulationCounter
 {
     public static void Main()
     {
-        string inputLine = Console.ReadLine();
-
-        var population = new Dictionary<string, Dictionary<string, long>>();
-
-        while (!inputLine.Equals("report"))
+        var countries = new List<Country>();
+        var input = Console.ReadLine();
+        while (!input.Equals("report"))
         {
-            string[] lineArgs = inputLine.Split('|').ToArray();
+            var tokens = input.Split('|');
+            var cityName = tokens[0];
+            var country = tokens[1];
+            var populationCount = int.Parse(tokens[2]);
 
-            string country = lineArgs[1];
-            string city = lineArgs[0];
-            int populationCount = int.Parse(lineArgs[2]);
-
-            if (!population.ContainsKey(country))
+            if (!countries.Any(c => c.Name == country))
             {
-                population.Add(country, new Dictionary<string, long>());
+                var newCountry = new Country(country);
+                countries.Add(newCountry);
             }
 
-            if (!population[country].ContainsKey(city))
-            {
-                population[country].Add(city, 0);
-            }
+            var city = new City(cityName, populationCount);
+            countries.FirstOrDefault(c => c.Name == country).TotalPopulation += populationCount;
+            countries.FirstOrDefault(c => c.Name == country).Cities.Add(city);
 
-            population[country][city] += populationCount;
-
-            inputLine = Console.ReadLine();
+            input = Console.ReadLine();
         }
 
-        population = population
-             .OrderByDescending(x => x.Value.Values.Sum())
-             .ToDictionary(x => x.Key, x => x.Value);
+        countries = countries.OrderByDescending(x => x.TotalPopulation).ToList();
 
-        foreach (var country in population)
+        foreach (var country in countries)
         {
-            Console.WriteLine($"{country.Key} (total population: {country.Value.Values.Sum()})");
-
-            foreach (var city in country.Value.OrderByDescending(x => x.Value))
-            {
-                Console.WriteLine($"=>{city.Key}: {city.Value}");
-            }
+            Console.Write(country);
         }
     }
 }

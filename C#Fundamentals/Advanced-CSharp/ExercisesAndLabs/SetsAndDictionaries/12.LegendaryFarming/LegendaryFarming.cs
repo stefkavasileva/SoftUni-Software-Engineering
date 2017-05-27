@@ -11,7 +11,7 @@ public class LegendaryFarming
         keyMaterialesNames.Add("fragments", "Valanyr");
         keyMaterialesNames.Add("motes", "Dragonwrath");
 
-        string[] lineArgs = Console.ReadLine().ToLower().Split().ToArray();
+        var lineArgs = Console.ReadLine().ToLower().Split().ToArray();
 
         var junkMateriales = new SortedDictionary<string, int>();
         var keyMateriales = new Dictionary<string, int>();
@@ -22,8 +22,8 @@ public class LegendaryFarming
 
         while (true)
         {
-            string[] currentMaterials = lineArgs.Where((x, i) => i % 2 == 1).ToArray();
-            int[] quantity = lineArgs.Where((x, i) => i % 2 == 0).Select(int.Parse).ToArray();
+            var currentMaterials = lineArgs.Where((x, i) => i % 2 == 1).ToArray();
+            var quantity = lineArgs.Where((x, i) => i % 2 == 0).Select(int.Parse).ToArray();
 
             bool hasObtained = false;
 
@@ -49,12 +49,7 @@ public class LegendaryFarming
                     }
 
                     junkMateriales[currentMaterial] += quantity[i];
-                }
-
-                if (hasObtained)
-                {
-                    break;
-                }
+                }                       
             }
 
             if (hasObtained)
@@ -68,8 +63,7 @@ public class LegendaryFarming
         var obtainedElementName = keyMateriales
             .Where(x => x.Value >= 250)
             .First()
-            .Key
-            .ToString();
+            .Key;
 
         keyMateriales[obtainedElementName] -= 250;
 

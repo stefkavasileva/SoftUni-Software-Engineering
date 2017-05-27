@@ -1,44 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 public class Phonebook
 {
     public static void Main()
     {
-        var inputLine = Console.ReadLine();
-
         var phonebook = new Dictionary<string, string>();
 
-        while (!inputLine.ToLower().Equals("search"))
+        var input = Console.ReadLine();
+        while (!input.Equals("search"))
         {
-            var tokens = inputLine.Split('-');
+            var tokens = input.Split(new[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
             var name = tokens[0];
-            var phone = tokens[1];
+            var phoneNumber = tokens[1];
 
             if (!phonebook.ContainsKey(name))
             {
-                phonebook.Add(name, string.Empty);
+                phonebook.Add(name,string.Empty);
             }
 
-            phonebook[name] = phone;
-
-            inputLine = Console.ReadLine();
+            phonebook[name] = phoneNumber;
+            input = Console.ReadLine();
         }
 
-        inputLine = Console.ReadLine();
+        var sb = new StringBuilder();
 
-        while (!inputLine.ToLower().Equals("stop"))
+        var search = Console.ReadLine();
+        while (!search.Equals("stop"))
         {
-            if (phonebook.ContainsKey(inputLine))
+            if (phonebook.ContainsKey(search))
             {
-                Console.WriteLine($"{inputLine} -> {phonebook[inputLine]}");
+                sb.AppendLine($"{search} -> {phonebook[search]}");
             }
             else
             {
-                Console.WriteLine($"Contact {inputLine} does not exist.");
+                sb.AppendLine($"Contact {search} does not exist.");
             }
 
-            inputLine = Console.ReadLine();
+            search = Console.ReadLine();
         }
+
+        Console.WriteLine(sb.ToString().Trim());
     }
 }

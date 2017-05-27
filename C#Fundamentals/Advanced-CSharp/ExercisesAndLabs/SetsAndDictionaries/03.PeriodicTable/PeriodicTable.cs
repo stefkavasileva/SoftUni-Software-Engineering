@@ -5,20 +5,21 @@ public class PeriodicTable
 {
     public static void Main()
     {
-        var chemicalElements = new SortedSet<string>();
+        var elementsCount = int.Parse(Console.ReadLine());
+        var elements = new SortedSet<string>();
 
-        var count = int.Parse(Console.ReadLine());
-
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < elementsCount; i++)
         {
-            var currentElements = Console.ReadLine().Split();
-            foreach (var element in currentElements)
+            var currentElements = Console.ReadLine()
+                .Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+              
+            for (int j = 0; j < currentElements.Length; j++)
             {
-                chemicalElements.Add(element);
-            }           
+                elements.Add(currentElements[j]);
+            }         
         }
 
-        Console.WriteLine(string.Join(" ", chemicalElements));
+        Console.WriteLine(string.Join(" ",elements));
     }
 }
 

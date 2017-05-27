@@ -17,9 +17,9 @@ public class DragonArmy
             var dragonType = lineArgs[0];
             var dragonName = lineArgs[1];
 
-            int damage = lineArgs[2].Equals("null") ? 45 : int.Parse(lineArgs[2]);
-            int health = lineArgs[3].Equals("null") ? 250 : int.Parse(lineArgs[3]);
-            int armor = lineArgs[4].Equals("null") ? 10 : int.Parse(lineArgs[4]);
+            var damage = lineArgs[2].Equals("null") ? 45 : int.Parse(lineArgs[2]);
+            var health = lineArgs[3].Equals("null") ? 250 : int.Parse(lineArgs[3]);
+            var armor = lineArgs[4].Equals("null") ? 10 : int.Parse(lineArgs[4]);
 
             if (!dragons.ContainsKey(dragonType))
             {

@@ -7,25 +7,25 @@ public class SrabskoUnleashed
 {
     public static void Main()
     {
-        string pattern = @"(([A-Za-z]+\s){1,})@(([A-Za-z]+\s){1,})(\d+)\s(\d+)";
+        var pattern = @"(([A-Za-z]+\s){1,})@(([A-Za-z]+\s){1,})(\d+)\s(\d+)";
 
-        string inputLine = Console.ReadLine();
+        var inputLine = Console.ReadLine();
 
         var venues = new Dictionary<string, Dictionary<string, int>>();
 
         while (!inputLine.Equals("End"))
         {
-            Regex reg = new Regex(pattern);
-            Match match = reg.Match(inputLine);
+            var reg = new Regex(pattern);
+            var match = reg.Match(inputLine);
 
             if (match.Success)
             {
-                string singer = match.Groups[1].Value.Trim();
-                string venue = match.Groups[3].Value.Trim();
-                decimal ticketsPrice = decimal.Parse(match.Groups[5].Value);
-                int ticketsCount = int.Parse(match.Groups[6].Value);
+                var singer = match.Groups[1].Value.Trim();
+                var venue = match.Groups[3].Value.Trim();
+                var ticketsPrice = decimal.Parse(match.Groups[5].Value);
+                var ticketsCount = int.Parse(match.Groups[6].Value);
 
-                int income = (int)(ticketsCount * ticketsPrice);
+                var income = (int)(ticketsCount * ticketsPrice);
 
                 if (!venues.ContainsKey(venue))
                 {
