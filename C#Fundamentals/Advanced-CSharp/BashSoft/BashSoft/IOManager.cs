@@ -48,5 +48,32 @@
             var path = SessionData.currentPath + "\\" + name;
             Directory.CreateDirectory(path);
         }
+
+        public static void ChangeCurrentDirectoryRelative(string relativePath)
+        {
+            if (relativePath.Equals(".."))
+            {
+                var currentPath = SessionData.currentPath;
+                var indexOfLastSlash = currentPath.LastIndexOf("\\");
+                var newPath = currentPath.Substring(0, indexOfLastSlash);
+            }
+            else
+            {
+                var currentPath = SessionData.currentPath;
+                currentPath += "\\" + relativePath;
+                ChangeCurrentDirectoryAbsolute(currentPath);
+            }
+        }
+
+        private static void ChangeCurrentDirectoryAbsolute(string absolutePath)
+        {
+            if (!Directory.Exists(absolutePath))
+            {
+                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidPath);
+                return;
+            }
+
+            SessionData.currentPath = absolutePath;
+        }
     }
 }
