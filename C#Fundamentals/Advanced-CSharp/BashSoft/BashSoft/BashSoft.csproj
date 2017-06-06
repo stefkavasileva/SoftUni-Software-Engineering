@@ -46,6 +46,7 @@
     <Compile Include="ExceptionMessages.cs" />
     <Compile Include="IOManager.cs" />
     <Compile Include="OutputWriter.cs" />
+    <Compile Include="SessionData.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentsRepository.cs" />

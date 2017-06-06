@@ -8,9 +8,10 @@
         public static void TraverseDirectory(string path)
         {
             OutputWriter.WriteEmptyLine();
-            var initialIdentation = path.Split('\\').Length;
+            var initialIdentation = SessionData.currentPath.Split('\\').Length;
             var subFolders = new Queue<string>();
-            subFolders.Enqueue(path);
+            subFolders.Enqueue(SessionData.currentPath);
+            var deapt = 0;
 
             while (subFolders.Count != 0)
             {
@@ -27,7 +28,25 @@
                 {
                     subFolders.Enqueue(directoryPath);
                 }
+
+                foreach (var file in Directory.GetFiles(currentPath))
+                {
+                    var indexOfLastSlash = file.LastIndexOf("\\");
+                    var fileName = file.Substring(indexOfLastSlash);
+                    OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
+                }
+
+                if (deapt - initialIdentation > 0)
+                {
+                    break;
+                }
             }
+        }
+
+        public static void CreateDirectoryInCurrentFolder(string name)
+        {
+            var path = SessionData.currentPath + "\\" + name;
+            Directory.CreateDirectory(path);
         }
     }
 }
