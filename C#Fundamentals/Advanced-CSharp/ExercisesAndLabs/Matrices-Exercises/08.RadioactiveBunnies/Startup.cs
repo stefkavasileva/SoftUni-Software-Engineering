@@ -4,206 +4,157 @@ using System.Text;
 
 namespace _08.RadioactiveBunnies
 {
+
     public class Player
     {
         public int Row { get; set; }
         public int Col { get; set; }
     }
+
     public class Startup
     {
         public static void Main()
         {
+            //80/100
             var matrixSizes = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse).ToArray();
+                .Select(int.Parse)
+                .ToArray();
 
-            var matrix = new char[matrixSizes[0]][];
+            var matrixRows = matrixSizes[0];
+            var matrix = new char[matrixRows][];
+
+            for (int rowIndex = 0; rowIndex < matrixRows; rowIndex++)
+            {
+                matrix[rowIndex] = Console.ReadLine().ToCharArray();
+            }
+
             var player = new Player();
 
             for (int rowIndex = 0; rowIndex < matrix.Length; rowIndex++)
             {
-                var currentRow = Console.ReadLine();
-                matrix[rowIndex] = currentRow.ToCharArray();
-                if (currentRow.Contains('P'))
+                for (int colIndex = 0; colIndex < matrix[rowIndex].Length; colIndex++)
                 {
-                    player.Row = rowIndex;
-                    player.Col = currentRow.IndexOf('P');
+                    if (matrix[rowIndex][colIndex].Equals('P'))
+                    {
+                        player.Row = rowIndex;
+                        player.Col = colIndex;
+                    }
                 }
             }
 
             var sb = new StringBuilder();
+            var gameOver = false;
 
             var comands = Console.ReadLine();
             foreach (var comand in comands)
             {
+                var nextRow = player.Row;
+                var nextCol = player.Col;
                 if (comand.Equals('U'))
                 {
-                    if (player.Row <= 0)
-                    {
-                        sb.AppendLine($"won: {player.Row} {player.Col}");
-                        matrix[player.Row][player.Col] = '.';
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    if (matrix[player.Row - 1][player.Col] == 'B')
-                    {
-                        sb.AppendLine($"dead: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    matrix[player.Row - 1][player.Col] = 'P';
-                    matrix[player.Row][player.Col] = '.';
-                    player.Row--;
+                    nextRow = player.Row - 1;
                 }
                 else if (comand.Equals('D'))
                 {
-                    if (player.Row >= matrix.Length)
-                    {
-                        sb.AppendLine($"won: {player.Row} {player.Col}");
-                        matrix[player.Row][player.Col] = '.';
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    if (matrix[player.Row + 1][player.Col] == 'B')
-                    {
-                        sb.AppendLine($"dead: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    matrix[player.Row + 1][player.Col] = 'P';
-                    matrix[player.Row][player.Col] = '.';
-                    player.Row++;
+                    nextRow = player.Row + 1;
                 }
                 else if (comand.Equals('L'))
                 {
-                    if (player.Col <= 0)
-                    {
-                        sb.AppendLine($"won: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        matrix[player.Row][player.Col] = '.';
-                        break;
-                    }
-
-                    if (matrix[player.Row][player.Col - 1] == 'B')
-                    {
-                        sb.AppendLine($"dead: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    matrix[player.Row][player.Col - 1] = 'P';
-                    matrix[player.Row][player.Col] = '.';
-                    player.Col--;
+                    nextCol = player.Col - 1;
                 }
                 else
                 {
-                    if (player.Col >= matrix.Length)
-                    {
-                        sb.AppendLine($"won: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        matrix[player.Row][player.Col] = '.';
-                        break;
-                    }
-
-                    if (matrix[player.Row][player.Col + 1] == 'B')
-                    {
-                        sb.AppendLine($"dead: {player.Row} {player.Col}");
-                        matrix = MultiplyBunnies(matrix);
-                        break;
-                    }
-
-                    matrix[player.Row][player.Col + 1] = 'P';
-                    matrix[player.Row][player.Col] = '.';
-                    player.Col++;
+                    nextCol = player.Col + 1;
                 }
 
-                matrix = MultiplyBunnies(matrix);
+                if (nextCol < 0 || nextCol > matrix[player.Row].Length - 1 || nextRow < 0 ||
+                    nextRow > matrix.Length - 1)
+                {
+                    sb.AppendLine($"won: {player.Row} {player.Col}");
+                    gameOver = true;
+                }
+
+                if (!gameOver && matrix[nextRow][nextCol].Equals('B'))
+                {
+                    sb.AppendLine($"dead: {nextRow} {nextCol}");
+                    gameOver = true;
+                }
+
+                if (gameOver)
+                {
+                    matrix[player.Row][player.Col] = '.';
+                    matrix = MultiplayBunnies(matrix);
+                    break;
+                }
+
+                if (IsPlayerDie(matrix))
+                {
+                    break;
+                }
+
+                matrix[player.Row][player.Col] = '.';
+                player.Row = nextRow;
+                player.Col = nextCol;
+                matrix[player.Row][player.Col] = 'P';
+                matrix = MultiplayBunnies(matrix);
             }
 
-            foreach (var row in matrix)
+            for (int rowIndex = 0; rowIndex < matrix.Length; rowIndex++)
             {
-                Console.WriteLine(string.Join("", row));
+                for (int colIndex = 0; colIndex < matrix[rowIndex].Length; colIndex++)
+                {
+                    Console.Write(matrix[rowIndex][colIndex]);
+                }
 
+                Console.WriteLine();
             }
 
-            if (sb.ToString().Any())
-            {
-                Console.WriteLine(sb);
-            }
-            else
-            {
-                Console.WriteLine($"won: {player.Row} {player.Col}");
-            }
-
+            Console.Write(sb);
         }
 
-        private static char[][] MultiplyBunnies(char[][] matrix)
+        private static bool IsPlayerDie(char[][] matrix)
         {
-            var temp = new char[matrix.Length][];
-
-            for (int row = 0; row < matrix.Length; row++)
+            var isPlayerDie = true;
+            for (int rowIndex = 0; rowIndex < matrix.Length; rowIndex++)
             {
-                temp[row] = new char[matrix[row].Length];
+                if (!matrix[rowIndex].Contains('P'))
+                {
+                    isPlayerDie = false;
+                }
             }
 
-            for (int row = 0; row < matrix.Length; row++)
+            return isPlayerDie;
+        }
+
+        private static char[][] MultiplayBunnies(char[][] matrix)
+        {
+            var temp = new char[matrix.Length][];
+            for (int rowIndex = 0; rowIndex < temp.Length; rowIndex++)
             {
-                for (int col = 0; col < matrix[row].Length; col++)
+                temp[rowIndex] = new char[matrix[rowIndex].Length];
+                for (int colIndex = 0; colIndex < temp[rowIndex].Length; colIndex++)
                 {
-                    if (matrix[row][col] == 'B')
-                    {
-                        var leftSpread = Math.Max(0, col - 1);
-                        var rightSpread = Math.Min(col + 1, matrix[row].Length - 1);
-                        var upSpread = Math.Max(0, row - 1);
-                        var downSpread = Math.Min(row + 1, matrix.Length - 1);
+                    temp[rowIndex][colIndex] = matrix[rowIndex][colIndex];
+                }
+            }
 
-                        temp[row][col] = 'B';
-                        temp[upSpread][col] = 'B';
-                        temp[downSpread][col] = 'B';
-                        temp[row][leftSpread] = 'B';
-                        temp[row][rightSpread] = 'B';
 
-                    }
-                    else if (matrix[row][col] == 'P')
+            for (int rowIndex = 0; rowIndex < temp.Length; rowIndex++)
+            {
+                for (int colIndex = 0; colIndex < temp[rowIndex].Length; colIndex++)
+                {
+                    if (temp[rowIndex][colIndex].Equals('B') && matrix[rowIndex][colIndex] == 'B')
                     {
-                        temp[row][col] = 'P';
-                    }
-                    else if (temp[row][col] == 0)
-                    {
-                        temp[row][col] = '.';
+                        temp[Math.Max(0, rowIndex - 1)][colIndex] = 'B';
+                        temp[Math.Min(temp.Length - 1, rowIndex + 1)][colIndex] = 'B';
+                        temp[rowIndex][Math.Min(colIndex + 1, temp[rowIndex].Length - 1)] = 'B';
+                        temp[rowIndex][Math.Max(0, colIndex - 1)] = 'B';
                     }
                 }
             }
 
             return temp;
-        }
-        
-
-        private static void MultiplyBunny(char[][] matrix, int rowIndex, int colIndex)
-        {
-            if (rowIndex - 1 >= 0)
-            {
-                matrix[rowIndex - 1][colIndex] = 'B';
-            }
-
-            if (colIndex - 1 >= 0)
-            {
-                matrix[rowIndex][colIndex - 1] = 'B';
-            }
-
-            if (rowIndex + 1 < matrix.Length)
-            {
-                matrix[rowIndex + 1][colIndex] = 'B';
-            }
-
-            if (colIndex + 1 < matrix[rowIndex].Length)
-            {
-                matrix[rowIndex][colIndex + 1] = 'B';
-            }
         }
     }
 }
