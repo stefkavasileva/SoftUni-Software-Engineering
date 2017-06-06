@@ -1,4 +1,6 @@
-﻿namespace BashSoft
+﻿using System;
+
+namespace BashSoft
 {
     using System.Collections.Generic;
     using System.IO;
@@ -24,18 +26,25 @@
 
                 //TODO: Add all it's subfolders to the end of the queue
 
-                foreach (var directoryPath in Directory.GetDirectories(currentPath))
+                try
                 {
-                    subFolders.Enqueue(directoryPath);
-                }
+                    foreach (var file in Directory.GetFiles(currentPath))
+                    {
+                        var indexOfLastSlash = file.LastIndexOf("\\");
+                        var fileName = file.Substring(indexOfLastSlash);
+                        OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
+                    }
 
-                foreach (var file in Directory.GetFiles(currentPath))
+                    foreach (var directoryPath in Directory.GetDirectories(currentPath))
+                    {
+                        subFolders.Enqueue(directoryPath);
+                    }
+
+                }
+                catch (UnauthorizedAccessException)
                 {
-                    var indexOfLastSlash = file.LastIndexOf("\\");
-                    var fileName = file.Substring(indexOfLastSlash);
-                    OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }
-
                 if (deapt - initialIdentation > 0)
                 {
                     break;
@@ -46,16 +55,34 @@
         public static void CreateDirectoryInCurrentFolder(string name)
         {
             var path = SessionData.currentPath + "\\" + name;
-            Directory.CreateDirectory(path);
+
+            try
+            {
+                Directory.CreateDirectory(path);
+            }
+            catch (ArgumentException)
+            {
+                OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolContainedInName);
+            }
+
         }
 
         public static void ChangeCurrentDirectoryRelative(string relativePath)
         {
             if (relativePath.Equals(".."))
             {
-                var currentPath = SessionData.currentPath;
-                var indexOfLastSlash = currentPath.LastIndexOf("\\");
-                var newPath = currentPath.Substring(0, indexOfLastSlash);
+                try
+                {
+                    var currentPath = SessionData.currentPath;
+                    var indexOfLastSlash = currentPath.LastIndexOf("\\");
+                    var newPath = currentPath.Substring(0, indexOfLastSlash);
+                    SessionData.currentPath = newPath;
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                   OutputWriter.DisplayException(ExceptionMessages.UnableToGoHigherInPartitionHierarchy);
+                }
+
             }
             else
             {
@@ -65,7 +92,7 @@
             }
         }
 
-        private static void ChangeCurrentDirectoryAbsolute(string absolutePath)
+        public static void ChangeCurrentDirectoryAbsolute(string absolutePath)
         {
             if (!Directory.Exists(absolutePath))
             {
