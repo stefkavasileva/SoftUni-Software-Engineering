@@ -16,5 +16,3 @@
 - <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/Regex-Lab" > Regular Expressions - Lab </a>
 - <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/RegularExpressions" > Regular Expressions - Exercises </a>
 
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/ManualStringProcessing" > Manual String Processing </a>
-- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/FunctionalProgramming" > Functional Programming </a> 
