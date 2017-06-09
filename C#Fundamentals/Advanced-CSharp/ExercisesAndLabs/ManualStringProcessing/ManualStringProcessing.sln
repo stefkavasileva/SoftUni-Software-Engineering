@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.MelrahShake", "15.Melrah
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FormattingNumbers", "03.FormattingNumbers\03.FormattingNumbers.csproj", "{8E8DF7A0-B36F-4486-9398-2A0571F8E945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.ExtractHyperlinks", "16.ExtractHyperlinks\16.ExtractHyperlinks.csproj", "{79AF37E5-1132-470A-8BE8-36321AF56730}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{8E8DF7A0-B36F-4486-9398-2A0571F8E945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E8DF7A0-B36F-4486-9398-2A0571F8E945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E8DF7A0-B36F-4486-9398-2A0571F8E945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AF37E5-1132-470A-8BE8-36321AF56730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AF37E5-1132-470A-8BE8-36321AF56730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AF37E5-1132-470A-8BE8-36321AF56730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AF37E5-1132-470A-8BE8-36321AF56730}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
