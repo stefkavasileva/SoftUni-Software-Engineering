@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DirectoryInfo.cs" />
     <Compile Include="ExceptionMessages.cs" />
+    <Compile Include="InputReader.cs" />
     <Compile Include="IOManager.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="SessionData.cs" />
