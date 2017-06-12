@@ -9,15 +9,15 @@ namespace _01.SecondNature
         public static void Main()
         {
             //80/100
-            var flowers = new Stack<int>(Console.ReadLine().Split().Select(int.Parse).ToArray().Reverse());
-            var buckets = new Stack<int>(Console.ReadLine().Split().Select(int.Parse).ToArray());
+            var flowers = new Stack<int>(Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray().Reverse());
+            var buckets = new Stack<int>(Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray());
             var secondNatureFlowers = new Queue<int>();
 
             while (flowers.Count > 0 && buckets.Count > 0)
             {
                 var currentBuket = buckets.Pop();
                 var currentFlower = flowers.Pop();
-                
+
                 if (currentFlower > currentBuket)
                 {
                     currentFlower -= currentBuket;
