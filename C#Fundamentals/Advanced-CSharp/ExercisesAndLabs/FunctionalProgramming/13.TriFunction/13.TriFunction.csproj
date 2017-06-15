@@ -7,7 +7,7 @@
     <ProjectGuid>{B95008F8-4939-4D83-BDB7-334922282B9D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_13.TriFunction</RootNamespace>
-    <AssemblyName>_13.TriFunction</AssemblyName>
+    <AssemblyName>13.TriFunction</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

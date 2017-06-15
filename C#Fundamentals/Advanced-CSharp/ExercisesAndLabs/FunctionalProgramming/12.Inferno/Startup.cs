@@ -9,18 +9,19 @@ namespace _12.Inferno
         public static void Main()
         {
             var gems = Console.ReadLine()
-                .Split()
+                .Split(new [] {' '},StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
 
-            var input = Console.ReadLine().Split(';');
+            var input = Console.ReadLine();
             var exclusionFilters = new Queue<KeyValuePair<string, int>>();
 
-            while (input[0] != "Forge")
+            while (!input.Equals("Forge"))
             {
-                var command = input[0];
-                var filterType = input[1];
-                var filterParamenter = int.Parse(input[2]);
+                var commandArgs = input.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                var command = commandArgs[0];
+                var filterType = commandArgs[1];
+                var filterParamenter = int.Parse(commandArgs[2]);
 
                 if (command.Equals("Exclude"))
                 {
@@ -31,12 +32,11 @@ namespace _12.Inferno
                     exclusionFilters.Dequeue();
                 }
 
-                input = Console.ReadLine().Split(';');
+                input = Console.ReadLine();
             }
 
-            foreach (var filter in exclusionFilters)
+            foreach (var filter in exclusionFilters.Reverse())
             {
-
                 if (filter.Key.Equals("Sum Left"))
                 {
                     SumLeft(filter.Value, gems);
@@ -88,7 +88,7 @@ namespace _12.Inferno
 
         private static void SumLeft(int value, List<int> gems)
         {
-            while (gems.First() == value && gems.Count > 0)
+            while ( gems.Count > 0 && gems.First() == value)
             {
                 gems.RemoveAt(0);
             }

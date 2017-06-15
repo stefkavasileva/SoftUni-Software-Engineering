@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.PartyReserFilterModule",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Inferno", "12.Inferno\12.Inferno.csproj", "{70787755-F790-4078-B264-EA378DE7CE90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.TriFunction", "13.TriFunction\13.TriFunction.csproj", "{B95008F8-4939-4D83-BDB7-334922282B9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{70787755-F790-4078-B264-EA378DE7CE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70787755-F790-4078-B264-EA378DE7CE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70787755-F790-4078-B264-EA378DE7CE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95008F8-4939-4D83-BDB7-334922282B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95008F8-4939-4D83-BDB7-334922282B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95008F8-4939-4D83-BDB7-334922282B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95008F8-4939-4D83-BDB7-334922282B9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
