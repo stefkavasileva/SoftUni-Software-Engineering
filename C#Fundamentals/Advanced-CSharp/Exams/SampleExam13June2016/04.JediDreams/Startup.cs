@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace _04.JediDreams
 {
@@ -8,46 +9,34 @@ namespace _04.JediDreams
     {
         public static void Main()
         {
+            //40/100
             var linesCount = int.Parse(Console.ReadLine());
             var methodsCount = new Dictionary<string, List<string>>();
 
+            var reg = new Regex(@"([A-Z]+[\w]*?)\s*\(");
             var previousMethodName = string.Empty;
             for (int i = 0; i < linesCount; i++)
             {
                 var currentLine = Console.ReadLine();
-                var methodName = GetMethodName(currentLine, -1);
-
-                if (methodName.Equals(string.Empty))
+                var matches = reg.Matches(currentLine);
+                foreach (Match match in matches)
                 {
-                    continue;
-                }
-
-                if (currentLine.Contains("static"))
-                {
-                    if (!methodsCount.ContainsKey(methodName))
+                    if (match.Success && currentLine.Contains("static"))
                     {
-                        methodsCount.Add(methodName, new List<string>());
+                        var currentMethodName = match.Groups[1].Value;
+                        previousMethodName = currentMethodName;
+                        if (!methodsCount.ContainsKey(currentMethodName))
+                        {
+                            methodsCount.Add(currentMethodName, new List<string>());
+                        }
                     }
-
-                    previousMethodName = methodName;
-                }
-                else
-                {
-                    methodsCount[previousMethodName].Add(methodName);
-                    var firstIndex = currentLine.IndexOf(methodName);
-
-                    while (methodName != string.Empty)
+                    else if (match.Success && methodsCount.ContainsKey(previousMethodName))
                     {
-                        var nextIndex = firstIndex + methodName.Length + 2;
-                        if(nextIndex>=currentLine.Length) break;
-                        var index = currentLine.IndexOf("(", firstIndex + methodName.Length + 2);
-
-                        if (index == -1) break;
-
-                        methodName = GetMethodName(currentLine, index);
-                        methodsCount[previousMethodName].Add(methodName);
+                        methodsCount[previousMethodName].Add(match.Groups[1].Value);
                     }
+                    
                 }
+
             }
 
             methodsCount = methodsCount
@@ -60,35 +49,6 @@ namespace _04.JediDreams
                 Console.WriteLine($"{method.Key} -> {method.Value.Count} -> {string.Join(", ", method.Value.OrderBy(x => x))}");
             }
 
-        }
-
-        private static string GetMethodName(string currentLine, int startIndex)
-        {
-            var indexOfStartLetter = startIndex;
-            var indexOfBracket = startIndex;
-
-            for (int j = 0; j < currentLine.Length; j++)
-            {
-                if (char.IsUpper(currentLine[j]) && indexOfStartLetter > startIndex)
-                {
-                    indexOfStartLetter = j;
-                }
-
-                if (currentLine[j] == '(' && indexOfStartLetter != -1 && j > indexOfBracket)
-                {
-                    indexOfBracket = j;
-                    break;
-                }
-            }
-
-            if (indexOfBracket == -1 || indexOfStartLetter == -1)
-            {
-                return string.Empty;
-            }
-
-            return currentLine
-                .Substring(indexOfStartLetter, indexOfBracket - indexOfStartLetter)
-                .Trim();
         }
     }
 }
