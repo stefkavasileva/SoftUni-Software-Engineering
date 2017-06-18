@@ -7,14 +7,17 @@ namespace BashSoft
 
     public static class IOManager
     {
-        public static void TraverseDirectory(string path)
+        public static void TraverseDirectory(int depth)
+        {
+            TraverseDirectory(SessionData.currentPath, depth);
+        }
+
+        public static void TraverseDirectory(string path,int depth)
         {
             OutputWriter.WriteEmptyLine();
             var initialIdentation = SessionData.currentPath.Split('\\').Length;
             var subFolders = new Queue<string>();
-            subFolders.Enqueue(SessionData.currentPath);
-            var deapt = 0;
-
+            subFolders.Enqueue(SessionData.currentPath);         
             while (subFolders.Count != 0)
             {
                 //TODO: Dequeue the folder  at the start of the queue
@@ -45,7 +48,7 @@ namespace BashSoft
                 {
                     OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }
-                if (deapt - initialIdentation > 0)
+                if (depth - initialIdentation > 0)
                 {
                     break;
                 }

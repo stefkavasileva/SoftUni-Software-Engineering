@@ -16,6 +16,8 @@
 
            // IOManager.ChangeCurrentDirectoryAbsolute(@"C:\Windows");
            // IOManager.TraverseDirectory(@"C:\Widnows");
+
+           InputReader.StartReadingCommands();
         }
     }
 }

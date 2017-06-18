@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E18AD66C-E831-4210-B6C8-D376E18060D2}</ProjectGuid>
+    <ProjectGuid>{FB32AC1A-4F01-4978-B5A9-224FC460333F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BashSoft</RootNamespace>
-    <AssemblyName>BashSoft</AssemblyName>
+    <RootNamespace>_04.JediDreams</RootNamespace>
+    <AssemblyName>04.JediDreams</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandInterpreter.cs" />
-    <Compile Include="DirectoryInfo.cs" />
-    <Compile Include="ExceptionMessages.cs" />
-    <Compile Include="InputReader.cs" />
-    <Compile Include="IOManager.cs" />
-    <Compile Include="OutputWriter.cs" />
-    <Compile Include="SessionData.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentsRepository.cs" />
-    <Compile Include="Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

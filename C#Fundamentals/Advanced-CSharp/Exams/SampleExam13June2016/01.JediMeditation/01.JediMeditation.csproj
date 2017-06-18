@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E18AD66C-E831-4210-B6C8-D376E18060D2}</ProjectGuid>
+    <ProjectGuid>{EED6A5EA-51DC-4094-B67D-F15796517816}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BashSoft</RootNamespace>
-    <AssemblyName>BashSoft</AssemblyName>
+    <RootNamespace>_01.JediMeditation</RootNamespace>
+    <AssemblyName>01.JediMeditation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandInterpreter.cs" />
-    <Compile Include="DirectoryInfo.cs" />
-    <Compile Include="ExceptionMessages.cs" />
-    <Compile Include="InputReader.cs" />
-    <Compile Include="IOManager.cs" />
-    <Compile Include="OutputWriter.cs" />
-    <Compile Include="SessionData.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentsRepository.cs" />
-    <Compile Include="Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

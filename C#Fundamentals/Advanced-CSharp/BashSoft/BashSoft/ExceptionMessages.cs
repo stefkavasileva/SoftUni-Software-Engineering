@@ -24,5 +24,7 @@
         public const string ForbiddenSymbolContainedInName = "Directory contains forbidden symbol in its name.";
 
         public const string UnableToGoHigherInPartitionHierarchy = "Unable to go higher in partition hierarchy.";
+
+        public const string UnableToParseNumber = "The sequence you've written is not a valid number.";
     }
 }
