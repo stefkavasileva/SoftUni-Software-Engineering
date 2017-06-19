@@ -15,4 +15,9 @@
 - <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/ManualStringProcessing" > Manual String Processing - Exercises  </a> 
 - <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/Regex-Lab" > Regular Expressions - Lab </a>
 - <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/RegularExpressions" > Regular Expressions - Exercises </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/FunctionalProgramming-Lab" > Functional Programming - Lab </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/FunctionalProgramming" > Functional Programming - Exercises </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/LINQ-Lab" > LINQ - Lab </a>
+- <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/Advanced-CSharp/ExercisesAndLabs/LINQ-Exercise" > LINQ - Exercises </a>
+
 
