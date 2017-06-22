@@ -264,7 +264,7 @@ The **input ends** when you receive the command &quot;Nuke it from orbit&quot;. 
 
 - The dimensions of the matrix will be integers in the range [2, 100].
 - The given rows and columns will be valid integers in the range [-2 31+ 1, 2-31- 1].
--  The radius will be in range [0, 2 31- 1].
+- The radius will be in range [0, 2 31- 1].
 - Allowed time/memory: 250ms/16MB.
 
 ### Examples
