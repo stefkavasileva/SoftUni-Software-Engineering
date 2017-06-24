@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E18AD66C-E831-4210-B6C8-D376E18060D2}</ProjectGuid>
+    <ProjectGuid>{D851065C-F9E9-4DAF-A0F3-5FA319530AB8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BashSoft</RootNamespace>
-    <AssemblyName>BashSoft</AssemblyName>
+    <RootNamespace>_01.Plus_Remove</RootNamespace>
+    <AssemblyName>01.Plus-Remove</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,18 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IO\CommandInterpreter.cs" />
-    <Compile Include="Static data\ExceptionMessages.cs" />
-    <Compile Include="IO\InputReader.cs" />
-    <Compile Include="IO\IOManager.cs" />
-    <Compile Include="IO\OutputWriter.cs" />
-    <Compile Include="Repository\RepositoryFilters.cs" />
-    <Compile Include="Repository\RepositorySorters.cs" />
-    <Compile Include="Static data\SessionData.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\StudentsRepository.cs" />
-    <Compile Include="Judge\Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
