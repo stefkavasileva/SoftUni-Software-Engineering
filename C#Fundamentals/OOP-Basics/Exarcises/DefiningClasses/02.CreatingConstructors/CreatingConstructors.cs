@@ -24,9 +24,9 @@ public class CreatingConstructors
         Person personWithAge = (Person)ageCtor.Invoke(new object[] { age });
         Person personWithAgeAndName = swapped ? (Person)nameAgeCtor.Invoke(new object[] { age, name }) : (Person)nameAgeCtor.Invoke(new object[] { name, age });
 
-        Console.WriteLine("{0} {1}", basePerson.name, basePerson.age);
-        Console.WriteLine("{0} {1}", personWithAge.name, personWithAge.age);
-        Console.WriteLine("{0} {1}", personWithAgeAndName.name, personWithAgeAndName.age);
+        Console.WriteLine("{0} {1}", basePerson.Name, basePerson.Age);
+        Console.WriteLine("{0} {1}", personWithAge.Name, personWithAge.Age);
+        Console.WriteLine("{0} {1}", personWithAgeAndName.Name, personWithAgeAndName.Age);
     }
 }
 

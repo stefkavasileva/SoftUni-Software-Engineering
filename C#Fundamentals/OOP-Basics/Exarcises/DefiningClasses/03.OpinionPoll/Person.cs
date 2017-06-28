@@ -1,9 +1,40 @@
-﻿namespace _03.OpinionPoll
+﻿using System;
+namespace _02.CreatingConstructors
 {
-    class Person
+    public class Person
     {
-        public string name;
-        public int age;
+        private string name;
+        private int age;
+
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    this.name = "No name";
+                }
+
+                this.name = value;
+            }
+        }
+
+        public int Age
+        {
+            get { return this.age; }
+            set
+            {
+                try
+                {
+                    this.age = value;
+                }
+                catch (Exception invalidException)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+        }
 
         public Person()
         {
@@ -12,12 +43,14 @@
         }
 
         public Person(int age)
+            : this()
         {
             this.name = "No name";
             this.age = age;
         }
 
         public Person(string name, int age)
+            : this(age)
         {
             this.name = name;
             this.age = age;

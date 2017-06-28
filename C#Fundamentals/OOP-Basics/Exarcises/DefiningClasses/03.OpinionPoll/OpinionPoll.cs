@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using _02.CreatingConstructors;
 
 namespace _03.OpinionPoll
 {
@@ -8,7 +9,7 @@ namespace _03.OpinionPoll
     {
         public static void Main()
         {
-            var people = new List<Person>();
+            var people = new Family();
 
             var count = int.Parse(Console.ReadLine());
 
@@ -19,15 +20,12 @@ namespace _03.OpinionPoll
                 var age = int.Parse(personInfo[1]);
 
                 var person = new Person(name, age);
-                people.Add(person);
+                people.AddMember(person);
             }
 
-            var result = people.Where(p => p.age > 30).ToList().OrderBy(p => p.name);
-
-            foreach (var person in result)
-            {
-                Console.WriteLine($"{person.name} - {person.age}");
-            }
+            var oldestPerson = people.GetOldestMember(people.People);
+                Console.WriteLine($"{oldestPerson.Name} {oldestPerson.Age}");
+            
         }
     }
 }
