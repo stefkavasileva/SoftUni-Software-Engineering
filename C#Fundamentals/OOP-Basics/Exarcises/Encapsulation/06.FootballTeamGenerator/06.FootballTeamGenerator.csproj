@@ -7,7 +7,7 @@
     <ProjectGuid>{67DBB8CB-EC77-4CD7-A367-1AC48F936495}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_06.FootballTeamGenerator</RootNamespace>
-    <AssemblyName>_06.FootballTeamGenerator</AssemblyName>
+    <AssemblyName>06.FootballTeamGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
