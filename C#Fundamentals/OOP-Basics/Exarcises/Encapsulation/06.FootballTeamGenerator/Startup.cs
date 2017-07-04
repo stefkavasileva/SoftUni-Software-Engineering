@@ -2,81 +2,59 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class Startup
+public class StartUp
 {
     public static void Main()
     {
         var teams = new List<Team>();
 
-        var inputLine = Console.ReadLine();
-        while (!inputLine.Equals("END"))
+        var input = string.Empty;
+
+        while ((input = Console.ReadLine()) != "END")
         {
-            var token = inputLine.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-
-            if (token[0].Equals("Team"))
+            var tokens = input.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            var command = tokens[0];
+            try
             {
-                try
+                switch (command)
                 {
-                    teams.Add(new Team(token[1]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    throw;
+                    case "Team":
+                        teams.Add(new Team(tokens[1]));
+                        break;
+
+                    case "Add":
+                        if (!teams.Any(t => t.Name == tokens[1]))
+                        {
+                            throw new ArgumentException($"Team {tokens[1]} does not exist.");
+                        }
+                        else
+                        {
+                            var currentTeam = teams.First(t => t.Name == tokens[1]);
+                            currentTeam.AddPlayer(new Player(tokens[2], int.Parse(tokens[3]), int.Parse(tokens[4]), int.Parse(tokens[5]), int.Parse(tokens[6]), int.Parse(tokens[7])));
+                        }
+                        break;
+
+                    case "Remove":
+                        var teamToRemove = teams.First(t => t.Name == tokens[1]);
+                        teamToRemove.RemovePlayer(tokens[2]);
+                        break;
+
+                    case "Rating":
+                        if (!teams.Any(t => t.Name == tokens[1]))
+                        {
+                            throw new ArgumentException($"Team {tokens[1]} does not exist.");
+                        }
+                        else
+                        {
+                            Console.WriteLine(teams.First(t => t.Name == tokens[1]).ToString());
+                        }
+                        break;
                 }
             }
-            else if (token[0].Equals("Add"))
+            catch (Exception e)
             {
-                var currentTeam = teams.First(x => x.Name.Equals(token[1]));
-
-                try
-                {
-                    currentTeam.AddPlayer(new Player(token[2], long.Parse(token[3]), long.Parse(token[4]),
-                        long.Parse(token[5]), long.Parse(token[6]), long.Parse(token[7])));
-                }
-                catch (ArgumentException exception)
-                {
-                    Console.WriteLine(exception.Message);
-                }
-                catch (NullReferenceException)
-                {
-                    Console.WriteLine($"Team {token[1]} does not exist.");
-                }
+                Console.WriteLine(e.Message);
             }
-            else if (token[0].Equals("Remove"))
-            {
-                var currentTeam = teams.First(x => x.Name.Equals(token[1]));
-                var playerName = token[2];
-
-                try
-                {
-                    var currentPlayer = currentTeam.Players.First(x => x.Name.Equals(playerName));
-                    currentTeam.Players.Remove(currentPlayer);
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine($"Player {playerName} is not in {currentTeam.Name} team.");
-                }
-            }
-            else if (token[0].Equals("Rating"))
-            {
-                try
-                {
-                    var rating = teams.First(x => x.Name.Equals(token[1])).GetRating();
-                    Console.WriteLine($"{token[1]} - {rating}");
-                }
-                catch (ArgumentException)
-                {
-                    Console.WriteLine($"Team {token[1]} does not exist.");
-                }
-                catch (InvalidOperationException)
-                {
-                    Console.WriteLine($"{token[1]} - 0");
-                }
-            }
-
-            inputLine = Console.ReadLine();
         }
     }
 }
-
