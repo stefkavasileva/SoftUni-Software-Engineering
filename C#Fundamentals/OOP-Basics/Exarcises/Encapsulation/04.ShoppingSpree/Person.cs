@@ -12,13 +12,21 @@ public class Person
     {
         this.Name = name;
         this.Money = money;
-        this.Products= new List<Product>();
+        this.Products = new List<Product>();
     }
 
     public string Name
     {
         get { return this.name; }
-        private set { this.name = value; }
+        private set
+        {
+            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("Name cannot be empty");
+            }
+
+            this.name = value;
+        }
     }
 
     public decimal Money
@@ -27,7 +35,7 @@ public class Person
         {
             return this.money;
         }
-         set
+        set
         {
             if (value < 0)
             {

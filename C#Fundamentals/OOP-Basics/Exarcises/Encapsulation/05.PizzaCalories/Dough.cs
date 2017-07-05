@@ -34,7 +34,7 @@ public class Dough
         get => this.doughType;
         private set
         {
-            if (!DoughTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || value.Equals(" "))
+            if (!DoughTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }
@@ -47,7 +47,7 @@ public class Dough
         get => this.bakingTech;
         private set
         {
-            if (!BakingTechTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || value.Equals(" "))
+            if (!BakingTechTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }

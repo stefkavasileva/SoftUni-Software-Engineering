@@ -12,15 +12,27 @@ public class Pizza
     {
         this.Name = name;
         this.ToppingCount = toppimgCount;
-        this.Toppings= new List<Topping>();
+        this.Toppings = new List<Topping>();
     }
 
     public Pizza()
     {
-        
+
     }
 
-    public string Name { get; private set; }
+    public string Name
+    {
+        get => this.name;
+        private set
+        {
+            if (string.IsNullOrEmpty(value) ||  value.Length > 15)
+            {
+                throw new ArgumentException("Pizza name should be between 1 and 15 symbols.");
+            }
+
+            this.name = value;
+        }
+    }
 
     public double Calories { get; set; }
 
@@ -31,7 +43,7 @@ public class Pizza
         {
             if (value < 0 || value > 10)
             {
-                throw  new ArgumentException("Number of toppings should be in range [0..10].");
+                throw new ArgumentException("Number of toppings should be in range [0..10].");
             }
 
             this.toppingCount = value;

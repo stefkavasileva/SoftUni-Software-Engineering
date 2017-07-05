@@ -25,7 +25,7 @@ public class Topping
         get => this.type;
         private set
         {
-            if (!ToppingTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || value.Equals(" "))
+            if (!ToppingTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentException($"Cannot place {value} on top of your pizza.");
             }

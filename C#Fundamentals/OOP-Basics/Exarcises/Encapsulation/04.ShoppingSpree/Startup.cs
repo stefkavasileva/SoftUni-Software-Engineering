@@ -6,7 +6,6 @@ public class Startup
 {
     public static void Main()
     {
-        //80/100
         var people = new List<Person>();
         var products = new List<Product>();
 
