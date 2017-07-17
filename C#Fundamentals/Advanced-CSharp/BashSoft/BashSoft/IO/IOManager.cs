@@ -1,4 +1,5 @@
 ﻿using System;
+using BashSoft.Exceptions;
 
 namespace BashSoft
 {
@@ -12,12 +13,12 @@ namespace BashSoft
             TraverseDirectory(SessionData.currentPath, depth);
         }
 
-        public static void TraverseDirectory(string path,int depth)
+        public static void TraverseDirectory(string path, int depth)
         {
             OutputWriter.WriteEmptyLine();
             var initialIdentation = SessionData.currentPath.Split('\\').Length;
             var subFolders = new Queue<string>();
-            subFolders.Enqueue(SessionData.currentPath);         
+            subFolders.Enqueue(SessionData.currentPath);
             while (subFolders.Count != 0)
             {
                 //TODO: Dequeue the folder  at the start of the queue
@@ -65,7 +66,7 @@ namespace BashSoft
             }
             catch (ArgumentException)
             {
-                OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolContainedInName);
+                throw new InvalidFileNameException();
             }
 
         }
@@ -83,7 +84,7 @@ namespace BashSoft
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                   OutputWriter.DisplayException(ExceptionMessages.UnableToGoHigherInPartitionHierarchy);
+                    throw new InvalidPathException( );
                 }
 
             }
@@ -99,8 +100,7 @@ namespace BashSoft
         {
             if (!Directory.Exists(absolutePath))
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidPath);
-                return;
+                throw new InvalidPathException();
             }
 
             SessionData.currentPath = absolutePath;

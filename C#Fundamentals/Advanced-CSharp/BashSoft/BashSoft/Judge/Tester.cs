@@ -24,7 +24,7 @@ namespace BashSoft
             }
             catch (FileNotFoundException)
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
 
         }
@@ -44,7 +44,7 @@ namespace BashSoft
                 }
                 catch (DirectoryNotFoundException)
                 {
-                   OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                    throw new InvalidPathException();
                 }
 
                 return;

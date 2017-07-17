@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\DublicateEntryInStructureException.cs" />
+    <Compile Include="Exceptions\InvalidFileNameException.cs" />
+    <Compile Include="Exceptions\InvalidPathException.cs" />
+    <Compile Include="Exceptions\InvalidStringException.cs" />
     <Compile Include="IO\CommandInterpreter.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />
     <Compile Include="IO\InputReader.cs" />
