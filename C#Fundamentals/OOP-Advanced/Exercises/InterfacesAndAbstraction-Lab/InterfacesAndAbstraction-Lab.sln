@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{82735991-1634-4CD3-A802-41297C1CD668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{9DDC87C0-2E28-44EE-8177-6FA0DBB842EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82735991-1634-4CD3-A802-41297C1CD668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82735991-1634-4CD3-A802-41297C1CD668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82735991-1634-4CD3-A802-41297C1CD668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82735991-1634-4CD3-A802-41297C1CD668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDC87C0-2E28-44EE-8177-6FA0DBB842EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDC87C0-2E28-44EE-8177-6FA0DBB842EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDC87C0-2E28-44EE-8177-6FA0DBB842EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDC87C0-2E28-44EE-8177-6FA0DBB842EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
