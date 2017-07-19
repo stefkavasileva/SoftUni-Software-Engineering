@@ -1,4 +1,8 @@
-﻿namespace BashSoft
+﻿using BashSoft.IO;
+using BashSoft.Repository;
+using BashSoft.SimpleJudge;
+
+namespace BashSoft
 {
     public class Launcher
     {

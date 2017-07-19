@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BashSoft.Exceptions;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.IO
 {
     public class IOManager
     {
@@ -20,31 +19,31 @@ namespace BashSoft
             {
                 string currentPath = subFolders.Dequeue();
                 int identation = currentPath.Split('\\').Length - initialIdentation;
-
                 if (depth - identation < 0)
                 {
                     break;
                 }
+                OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', identation), currentPath));
 
                 try
                 {
-                    foreach (var directoryPath in Directory.GetDirectories(currentPath))
-                    {
-                        subFolders.Enqueue(directoryPath);
-                    }
-
-                    OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', identation), currentPath));
-
-                    foreach (var file in Directory.GetFiles(SessionData.currentPath))
+                    foreach (string file in Directory.GetFiles(currentPath))
                     {
                         int indexOfLastSlash = file.LastIndexOf("\\");
                         string fileName = file.Substring(indexOfLastSlash);
                         OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
                     }
+
+                    string[] subDirsArray = Directory.GetDirectories(currentPath);
+
+                    foreach (string directoryPath in subDirsArray)
+                    {
+                        subFolders.Enqueue(directoryPath);
+                    }
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    OutputWriter.WriteMessageOnNewLine(ExceptionMessages.UnauthorizedExceptionMessage);
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }
             }
         }
@@ -52,20 +51,20 @@ namespace BashSoft
         public void CreateDirectoryInCurrentFolder(string name)
         {
             string path = SessionData.currentPath + "\\" + name;
-
             try
             {
                 Directory.CreateDirectory(path);
             }
             catch (ArgumentException)
             {
-                throw new ArgumentException(ExceptionMessages.ForbiddenSymbolsContainedInName);               
+                throw new InvalidFileNameException();
             }
+
         }
 
         public void ChangeCurrentDirectoryRelative(string relativePath)
         {
-            if (relativePath == "..")
+            if (relativePath.Equals(".."))
             {
                 try
                 {
@@ -76,14 +75,14 @@ namespace BashSoft
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    throw new ArgumentOutOfRangeException("indexOfLastSlash",ExceptionMessages.InvalidDestination);
+                    throw new InvalidPathException();
                 }
             }
             else
             {
-                string currenPath = SessionData.currentPath;
-                currenPath += "\\" + relativePath;
-                SessionData.currentPath = currenPath;
+                string currentPath = SessionData.currentPath;
+                currentPath += "\\" + relativePath;
+                ChangeCurrentDirectoryAbsolute(currentPath);
             }
         }
 
@@ -91,7 +90,7 @@ namespace BashSoft
         {
             if (!Directory.Exists(absolutePath))
             {
-                throw new DirectoryNotFoundException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
 
             SessionData.currentPath = absolutePath;

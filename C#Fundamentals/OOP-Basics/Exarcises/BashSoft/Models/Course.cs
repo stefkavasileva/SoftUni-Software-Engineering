@@ -1,46 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using BashSoft;
+﻿using System.Collections.Generic;
+using BashSoft.Exceptions;
 
-public class Course
+namespace BashSoft.Models
 {
-    private string name;
-    private Dictionary<string, Student> studentsByName;
-
-    public const int NumberOfTasksOnExam = 5;
-    public const int MaxScoreOnExamTask = 100;
-
-    public Course(string name)
+    public class Course
     {
-        this.name = name;
-        this.studentsByName = new Dictionary<string, Student>();
-    }
+        public const int NumberOfTasksOnExam = 5;
+        public const int MaxScoreOnExamTask = 100;
 
-    public string Name
-    {
-        get => this.name;
-        private set
+        private string name;
+        public Dictionary<string, Student> studentsByName;
+
+        public Course(string name)
         {
-            if (string.IsNullOrEmpty(value))
+            this.Name = name;
+            this.studentsByName = new Dictionary<string, Student>();
+        }
+
+        public IReadOnlyDictionary<string, Student> StudentsByName => this.studentsByName;
+
+        public string Name
+        {
+            get => this.name;
+            private set
             {
-                throw new ArgumentNullException(nameof(this.name), ExceptionMessages.NullOrEmptyValue);
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new InvalidStringException();
+                }
+
+                this.name = value;
+            }
+        }
+
+        public void EnrollStudent(Student student)
+        {
+            if (this.studentsByName.ContainsKey(student.UserName))
+            {
+                throw new DuplicateEntryInStructureException(student.UserName, this.Name);
             }
 
-            this.name = value;
+            this.studentsByName.Add(student.UserName, student);
         }
-    }
-
-    public IReadOnlyDictionary<string, Student> StudentsByName 
-        => this.studentsByName;
-
-    public void EnrollStudent(Student student)
-    {
-        if (this.studentsByName.ContainsKey(student.UserName))
-        {
-            throw new ArgumentException(ExceptionMessages.StudentAlreadyEnrolledInGivenCourse);
-        }
-
-        this.studentsByName.Add(student.UserName, student);
     }
 }
-

@@ -1,39 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BashSoft.StaticData;
 
-namespace BashSoft
+namespace BashSoft.Repository
 {
     public class RepositorySorter
     {
-        public void OrderAndTake(Dictionary<string, double> studentsWithMarks, string comparison, int studentsToTake)
+        public void OrderAndTake(Dictionary<string, double> studentsMarks, string comparison, int studentsToTake)
         {
             comparison = comparison.ToLower();
-            if (comparison == "ascending")
+
+            if (comparison.Equals("ascending"))
             {
-               this.PrintStudents(studentsWithMarks
+                this.PrintStudents(studentsMarks
                     .OrderBy(x => x.Value)
                     .Take(studentsToTake)
-                    .ToDictionary(x => x.Key, x => x.Value));
+                    .ToDictionary(pair => pair.Key, pair => pair.Value));
             }
-            else if (comparison == "descending")
+            else if (comparison.Equals("descending"))
             {
-                PrintStudents(studentsWithMarks
+                PrintStudents(studentsMarks
                     .OrderByDescending(x => x.Value)
                     .Take(studentsToTake)
-                    .ToDictionary(x => x.Key, x => x.Value));
+                    .ToDictionary(pair => pair.Key, pair => pair.Value));
             }
             else
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidQueryComparison);
+                throw new ArgumentException(ExceptionMessages.InvalidComparisonQuery);
             }
         }
 
-        public void PrintStudents(Dictionary<string, double> studentsSorted)
+        private void PrintStudents(Dictionary<string, double> studentsSorted)
         {
-            foreach (var kv in studentsSorted)
+            foreach (var student in studentsSorted)
             {
-                OutputWriter.PrintStudent(kv);
+                OutputWriter.PrintStudent(student);
             }
         }
     }
