@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _03.BarrackWars_ANewFactory
+﻿public class Startup
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        IRepository repository = new UnitRepository();
+        IUnitFactory unitFactory = new UnitFactory();
+        IRunnable engine = new Engine(repository, unitFactory);
+        engine.Run();
     }
 }
+

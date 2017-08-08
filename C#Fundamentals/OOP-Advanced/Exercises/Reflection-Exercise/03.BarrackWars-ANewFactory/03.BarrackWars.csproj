@@ -7,7 +7,7 @@
     <ProjectGuid>{A508D919-7FEA-46B6-B822-8D65942168CD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_03.BarrackWars_ANewFactory</RootNamespace>
-    <AssemblyName>_03.BarrackWars_ANewFactory</AssemblyName>
+    <AssemblyName>03.BarrackWars-ANewFactory</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Core\CommandInterpreter.cs" />
+    <Compile Include="Core\Commands\AddCommand.cs" />
+    <Compile Include="Core\Commands\Command.cs" />
+    <Compile Include="Core\Commands\FightCommand.cs" />
+    <Compile Include="Core\Commands\ReportCommand.cs" />
+    <Compile Include="Core\Commands\RetireCommand.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\Factories\UnitFactory.cs" />
+    <Compile Include="InjectAttribute.cs" />
+    <Compile Include="Interfaces\IAttacker.cs" />
+    <Compile Include="Interfaces\ICommandInterpreter.cs" />
+    <Compile Include="Interfaces\IDestroyable.cs" />
+    <Compile Include="Interfaces\IExecutable.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IRunnable.cs" />
+    <Compile Include="Interfaces\IUnit.cs" />
+    <Compile Include="Interfaces\IUnitFactory.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitRepository.cs" />
+    <Compile Include="Units\Archer.cs" />
+    <Compile Include="Units\Gunner.cs" />
+    <Compile Include="Units\Horseman.cs" />
+    <Compile Include="Units\Pikeman.cs" />
+    <Compile Include="Units\SwordsMan.cs" />
+    <Compile Include="Units\Unit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

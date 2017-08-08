@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HarvestingFields", "01.H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.BlackBoxInteger", "02.BlackBoxInteger\02.BlackBoxInteger.csproj", "{BE64761E-1A71-40F2-BA38-85349823C63D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.BarrackWars", "03.BarrackWars-ANewFactory\03.BarrackWars.csproj", "{A508D919-7FEA-46B6-B822-8D65942168CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BE64761E-1A71-40F2-BA38-85349823C63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE64761E-1A71-40F2-BA38-85349823C63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE64761E-1A71-40F2-BA38-85349823C63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A508D919-7FEA-46B6-B822-8D65942168CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A508D919-7FEA-46B6-B822-8D65942168CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A508D919-7FEA-46B6-B822-8D65942168CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A508D919-7FEA-46B6-B822-8D65942168CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
