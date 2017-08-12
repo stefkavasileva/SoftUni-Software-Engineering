@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09BA4408-E989-42CA-85D3-41B37DB650DD}</ProjectGuid>
+    <ProjectGuid>{0E95E30B-1D39-4994-8D0F-2BDC844633E2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_03.CardPower</RootNamespace>
-    <AssemblyName>03.CardPower</AssemblyName>
+    <RootNamespace>_11.InfernoInfinity</RootNamespace>
+    <AssemblyName>11.InfernoInfinity</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Card.cs" />
-    <Compile Include="Enums\Rank.cs" />
-    <Compile Include="Models\Player.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Enums\RarityLevel.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Weapons\Axe.cs" />
+    <Compile Include="Models\Weapons\Knife.cs" />
+    <Compile Include="Models\Weapons\Sword.cs" />
+    <Compile Include="Models\Weapons\Weapon.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enums\Suit.cs" />
-    <Compile Include="Attributes\TypeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
