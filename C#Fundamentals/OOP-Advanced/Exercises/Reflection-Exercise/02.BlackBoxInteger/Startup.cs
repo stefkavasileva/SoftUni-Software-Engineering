@@ -7,26 +7,20 @@ public class Startup
     public static void Main()
     {
         var classType = typeof(BlackBoxInt);
-        var flags = BindingFlags.NonPublic | BindingFlags.Instance;
+        var methodsInfo = classType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance);
+        var instance = (BlackBoxInt)Activator.CreateInstance(classType, true);
 
-        var blackBox = (BlackBoxInt)Activator.CreateInstance(classType, true);
-
-        string command = Console.ReadLine();
-
-        while (!command.Equals("END"))
+        var input = Console.ReadLine();
+        while (!input.Equals("END"))
         {
-            var args = command.Split('_');
-            var methodName = args[0];
-            var passedValue = int.Parse(args[1]);
+            var lineArgs = input.Split('_');
+            var currentMethod = methodsInfo.FirstOrDefault(x => x.Name.Equals(lineArgs[0]));
+            currentMethod.Invoke(instance, new object[] { int.Parse(lineArgs[1]) });
 
-            var currentMethod = classType.GetMethod(methodName, flags);
+            var innerValue = classType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault(x => x.Name.Equals("innerValue")).GetValue(instance);
 
-            currentMethod.Invoke(blackBox, new object[] { passedValue });
-
-            var innerValue = classType.GetFields(flags).First().GetValue(blackBox).ToString();
             Console.WriteLine(innerValue);
-
-            command = Console.ReadLine();
+            input = Console.ReadLine();
         }
     }
 }

@@ -7,72 +7,53 @@ public class Startup
 {
     public static void Main()
     {
-        var fieslds = new List<FieldInfo>();
-        var line = Console.ReadLine();
+        var fieldsInfo = new List<FieldInfo>();
 
-        while (!line.Equals("HARVEST"))
+        var input = Console.ReadLine();
+        while (!input.Equals("HARVEST"))
         {
-            if (line.Equals("private"))
-            {
-                fieslds.AddRange(GetPrivateFields());
-            }
-            else if (line.Equals("protected"))
-            {
-                fieslds.AddRange(GetProtectedFields());
-            }
-            else if (line.Equals("public"))
-            {
-                fieslds.AddRange(GetPublicdFields());
-            }
-            else
-            {
-                fieslds.AddRange(GetAllFields());
-            }
-
-            line = Console.ReadLine();
+            fieldsInfo.AddRange(GetCurrentFields(input));
+            input = Console.ReadLine();
         }
 
-        foreach (var fieldInfo in fieslds)
+        foreach (var fieldInfo in fieldsInfo)
         {
             Console.WriteLine($"{GetModifire(fieldInfo)} {fieldInfo.FieldType.Name} {fieldInfo.Name}");
         }
     }
 
-    private static object GetModifire(FieldInfo fieldInfo)
+    private static string GetModifire(FieldInfo fieldInfo)
     {
         if (fieldInfo.IsPublic)
         {
             return "public";
         }
-        else if (fieldInfo.IsPrivate)
+
+        if (fieldInfo.IsPrivate)
         {
             return "private";
         }
-        else
-        {
-            return "protected";
-        }
+
+        return "protected";
     }
 
-    private static List<FieldInfo> GetAllFields()
+    private static IEnumerable<FieldInfo> GetCurrentFields(string input)
     {
         var type = Type.GetType("HarvestingFields");
-        var allFields = type.GetFields(BindingFlags.Static | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
-        return allFields.ToList();
-    }
+        var fields = type.GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+        switch (input)
+        {
+            case "private":
+                fields = fields.Where(x => x.IsPrivate).ToArray();
+                break;
+            case "protected":
+                fields = fields.Where(x => x.IsFamily).ToArray();
+                break;
+            case "public":
+                fields = fields.Where(x => x.IsPublic).ToArray();
+                break;
+        }
 
-    private static List<FieldInfo> GetPublicdFields()
-    {
-        return GetAllFields().Where(x => x.IsPublic).ToList();
-    }
-
-    private static List<FieldInfo> GetProtectedFields()
-    {
-        return GetAllFields().Where(x => x.IsFamily).ToList();
-    }
-
-    private static List<FieldInfo> GetPrivateFields()
-    {
-        return GetAllFields().Where(x => x.IsPrivate).ToList();
+        return fields;
     }
 }
