@@ -1,1 +1,2 @@
-SELECT FirstName,LastName,Salary FROM Employees
+SELECT FirstName, LastName, Salary 
+  FROM Employees

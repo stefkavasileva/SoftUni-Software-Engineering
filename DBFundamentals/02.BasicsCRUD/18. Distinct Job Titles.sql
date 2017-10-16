@@ -1,1 +1,3 @@
-SELECT DISTINCT JobTitle FROM Employees
+  SELECT 
+DISTINCT JobTitle 
+    FROM Employees

@@ -1,1 +1,2 @@
-SELECT Name FROM Departments
+SELECT [Name] 
+  FROM Departments

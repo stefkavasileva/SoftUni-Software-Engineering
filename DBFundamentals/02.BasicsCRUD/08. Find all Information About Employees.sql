@@ -1,1 +1,3 @@
-SELECT * FROM Employees WHERE JobTitle ='Sales Representative'
+SELECT * 
+  FROM Employees 
+ WHERE JobTitle ='Sales Representative'

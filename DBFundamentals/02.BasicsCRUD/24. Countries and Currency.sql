@@ -3,7 +3,7 @@ SELECT CountryName,CountryCode,Currency =
          WHEN 'EUR' THEN 'Euro'
          ELSE 'Not Euro'  
       END 
-FROM Countries
+ FROM Countries
 ORDER BY CountryName
 
 

@@ -1,2 +1,3 @@
-SELECT PeakName FROM Peaks
+SELECT PeakName 
+ FROM Peaks
 ORDER BY PeakName

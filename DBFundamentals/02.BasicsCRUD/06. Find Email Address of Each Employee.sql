@@ -1,2 +1,3 @@
 SELECT FirstName + '.' + LastName + '@softuni.bg' 
-AS 'Full Email Address' FROM Employees 
+    AS 'Full Email Address' 
+  FROM Employees 

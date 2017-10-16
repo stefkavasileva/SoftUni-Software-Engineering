@@ -1,2 +1,3 @@
-SELECT Name FROM Characters
-ORDER BY Name
+SELECT [Name] 
+  FROM Characters
+ ORDER BY [Name]

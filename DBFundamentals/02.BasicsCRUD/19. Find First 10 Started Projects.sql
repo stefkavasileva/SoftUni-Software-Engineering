@@ -1,3 +1,4 @@
-SELECT TOP(10) * FROM Projects 
+SELECT TOP(10) * 
+  FROM Projects 
  WHERE StartDate <= GETDATE() 
- ORDER BY StartDate, Name
+ ORDER BY StartDate, [Name]

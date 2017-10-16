@@ -1,2 +1,2 @@
-SELECT FirstName,MiddleName, LastName 
-FROM Employees
+SELECT FirstName, MiddleName, LastName 
+  FROM Employees
