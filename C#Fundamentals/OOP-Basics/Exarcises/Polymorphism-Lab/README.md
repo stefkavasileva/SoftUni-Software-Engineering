@@ -80,10 +80,10 @@ Console.WriteLine(dog.ExplainMyself());
 Create class hierarchy, starting with **abstract** class Shape:
 
 - **Abstract methods:**
-  - **oo**** calculatePerimeter(): doulbe**
-  - **oo**** calculateArea****(): double**
-- **Virtual methods**** :**
-  - **oo**** Draw(): string**
+  - **calculatePerimeter(): doulbe**
+  - **calculateArea****(): double**
+- **Virtual methods**
+  - **Draw(): string**
 
 Extend Shape class with two children:
 
@@ -93,8 +93,8 @@ Extend Shape class with two children:
 Each of them need to have:
 
 - **Fields:**
-  - **oo**** height and width for Rectangle**
-  - **oo**** radius for Circle**
+  - **height and width for Rectangle**
+  - **radius for Circle**
 - **Encapsulation for this fields**
 - **Public constructor**
 - **Concrete methods for calculations (perimeter and area)**
