@@ -4,7 +4,7 @@ his document defines the exercises for [&quot;C# OOP Basics&quot; course @ Softw
 
 ## Problem 1.Vehicles
 
-Write a program that models 2 vehicles ( **Car** and **Truck** ) and will be able to simulate **driving** and **refueling** them. **Car** and **truck** both have **fuel quantity** , **fuel consumption**** in liters ****per km** and can be **driven given distance** and **refueled with given liters.** But in the summer both vehicles use air conditioner and their **fuel consumption** per km is **increased** by **0.9** liters for the **car** and with **1.6** liters for the **truck**. Also the **truck** has a tiny hole in his tank and when it gets **refueled** it gets only **95%** of given **fuel**. The **car** has no problems when refueling and adds **all given fuel to its tank.** If vehicle cannot travel given distance its fuel does not change.
+Write a program that models 2 vehicles ( **Car** and **Truck** ) and will be able to simulate **driving** and **refueling** them. **Car** and **truck** both have **fuel quantity** , **fuel consumption** in liters ****per km** and can be **driven given distance** and **refueled with given liters.** But in the summer both vehicles use air conditioner and their **fuel consumption** per km is **increased** by **0.9** liters for the **car** and with **1.6** liters for the **truck**. Also the **truck** has a tiny hole in his tank and when it gets **refueled** it gets only **95%** of given **fuel**. The **car** has no problems when refueling and adds **all given fuel to its tank.** If vehicle cannot travel given distance its fuel does not change.
 
 **Input**
 
@@ -38,14 +38,14 @@ Write a program that models 2 vehicles ( **Car** and **Truck** ) and will be abl
 
 | **Input** | **Output** |
 | --- | --- |
-| Car 15 0.3Truck 100 0.94Drive Car 9Drive Car 30Refuel Car 50Drive Truck 10 | Car travelled 9 kmCar needs refuelingTruck travelled 10 kmCar: 54.20Truck: 75.00 |
-| Car 30.4 0.4Truck 99.34 0.95Drive Car 500Drive Car 13.5Refuel Truck 10.300Drive Truck 56.2Refuel Car 100.2 | Car needs refuelingCar travelled 13.5 kmTruck needs refuelingCar: 113.05Truck: 109.13 |
+| Car 15 0.3 <br/> Truck 100 0.9 <br/> 4 <br/> Drive Car 9 <br/> Drive Car 30 <br/> Refuel Car 50 <br/> Drive Truck 10 | Car travelled 9 km <br/> Car needs refueling <br/> Truck travelled 10 km <br/> Car: 54.20Truck: 75.00 |
+| Car 30.4 0.4 <br/> Truck 99.34 0.9 <br/> 5 <br/> Drive Car 500 <br/> Drive Car 13.5 <br/> Refuel Truck 10.300 <br/> Drive Truck 56.2 <br/> Refuel Car 100.2 | Car needs refueling <br/> Car travelled 13.5 km <br/> Truck needs refueling <br/> Car: 113.05 <br/> Truck: 109.13 |
 
 ## Problem 2.Vehicles Extension
 
-Use your solution of the previous task for starting point and add more functionality. Add new vehicle – **Bus**. Now every vehicle has **tank capacity** and fuel quantity **cannot fall**** below 0**(If fuel quantity become less than 0**print **on the console**&quot;Fuel must be a positive number&quot;**).
+Use your solution of the previous task for starting point and add more functionality. Add new vehicle – **Bus**. Now every vehicle has **tank capacity** and fuel quantity **cannot fall** below 0**(If fuel quantity become less than 0**print **on the console**&quot;Fuel must be a positive number&quot;**).
 
-The **car** and the **bus**** cannot be filled **with fuel** more than their tank capacity **. If you** try to put more fuel **in the tank than the** available space, **print on the console**&quot;Cannot fit fuel in tank&quot; **and** do not add any fuel** in vehicles tank.
+The **car** and the **bus** cannot be filled **with fuel** more than their tank capacity **. If you** try to put more fuel **in the tank than the** available space, **print on the console**&quot;Cannot fit fuel in tank&quot; **and** do not add any fuel** in vehicles tank.
 
 Add **new command** for the bus. The **bus** can **drive**** with or without people **. If the bus is driving** with people **, the** air-conditioner ****is turned on** and its **fuel consumption** per kilometer is **increased with 1.4 liters**. If there are **no people in the bus** when driving the air-conditioner is **turned off** and **does not increase** the fuel consumption.
 
@@ -75,7 +75,7 @@ Add **new command** for the bus. The **bus** can **drive**** with or without peo
 
 **Car/Truck/Bus needs refueling**
 
-- **If given fuel is**** ≤ 0 **print**&quot;Fuel must be a positive number&quot;.**
+- **If given fuel is** ≤ 0 **print**&quot;Fuel must be a positive number&quot;.
 - **If given fuel cannot fit in car or bus tank print**  **&quot;Cannot fit in tank&quot;**
 - **Finally print the**  **remaining fuel**  **for both car and truck rounded**  **2 digits after floating point**  **in format:**
 
@@ -89,9 +89,9 @@ Add **new command** for the bus. The **bus** can **drive**** with or without peo
 
 | **Input** | **Output** |
 | --- | --- |
-| Car 30 0.04 70Truck 100 0.5 300Bus 40 0.3 1508Refuel Car -10Refuel Truck 0Refuel Car 10Refuel Car 300Drive Bus 10Refuel Bus 1000DriveEmpty Bus 100Refuel Truck 1000   | Cannot fit fuel in tankBus travelled 10 kmCannot fit fuel in tankBus needs refuelingCar: 30.00Truck: 1050.00Bus: 23.00 |
+| Car 30 0.04 70 <br/> Truck 100 0.5 300 <br/> Bus 40 0.3 150 <br/> 8 <br/> Refuel Car -10 <br/> Refuel Truck 0 <br/> Refuel Car 10 <br/> Refuel Car 300 <br/> Drive Bus 10 <br/> Refuel Bus 1000 <br/> DriveEmpty Bus 100 <br/> Refuel Truck 1000   | Cannot fit fuel in tank <br/> Bus travelled 10 km <br/> Cannot fit fuel in tank <br/> Bus needs refueling <br/> Car: 30.00 <br/> Truck: 1050.00 <br/> Bus: 23.00 |
 
-1. Problem 3.Wild farm
+## Problem 3.Wild farm
 
 Your task is to create a class hierarchy. All the classes except Vegetable, Meat, Mouse, Tiger, Cat &amp; Zebra should be abstract. Override method ToString().
 
@@ -115,7 +115,7 @@ After you read information about the Animal and Food then invoke **MakeSound** m
 
 | **Input** | **Output** |
 | --- | --- |
-| Cat Gray 1.1 Home PersianVegetable 4End | MeowwwwCat[Gray, Persian, 1.1, Home, 4] |
-| Tiger Typcho 167.7 AsiaVegetable 1End | ROAAR!!!Tigers are not eating that type of food!Tiger[Typcho, 167.7, Asia, 0] |
-| Zebra Doncho 500 AfricaVegetable 150End | ZsZebra[Doncho, 500, Africa, 150] |
-| Mouse Jerry 0.5 AnywhereVegetable 0End | SQUEEEAAAK! Mouse[Jerry, 0.5, Anywhere, 0] |
+| Cat Gray 1.1 Home Persian <br/> Vegetable 4 <br/> End | Meowwww <br/> Cat[Gray, Persian, 1.1, Home, 4] |
+| Tiger Typcho 167.7 Asia <br/> Vegetable 1 <br/> End | ROAAR!!! <br/> Tigers are not eating that type of food! <br/> Tiger[Typcho, 167.7, Asia, 0] |
+| Zebra Doncho 500 Africa <br/> Vegetable 150 <br/> End | Zs <br/> Zebra[Doncho, 500, Africa, 150] |
+| Mouse Jerry 0.5 Anywhere <br/> Vegetable 0 <br/> End | SQUEEEAAAK! <br/>  Mouse[Jerry, 0.5, Anywhere, 0] |
