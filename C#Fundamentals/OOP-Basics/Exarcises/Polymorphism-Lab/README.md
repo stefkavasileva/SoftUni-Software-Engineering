@@ -81,7 +81,7 @@ Create class hierarchy, starting with **abstract** class Shape:
 
 - **Abstract methods:**
   - **calculatePerimeter(): doulbe**
-  - **calculateArea****(): double**
+  - **calculateArea(): double**
 - **Virtual methods**
   - **Draw(): string**
 
