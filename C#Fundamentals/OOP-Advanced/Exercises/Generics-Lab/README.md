@@ -20,7 +20,7 @@ Adding should add on top of its contents. Remove should get the topmost element.
 
 ### Examples
 
-```scharp\
+```scharp
 public staticvoid Main(string[] args)
 {
 	Box<int> box = newBox<int>();    
