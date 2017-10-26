@@ -1,66 +1,70 @@
-# <p align="center"> Lab:  Inheritance </p>
+# <p align="center"> Lab:  Generics </p>
 
-Problems for exercises and homework for the [&quot;C# OOP Basics&quot; course @ SoftUni](https://softuni.bg/courses/csharp-oop-basics)&quot;.
+Problems for exercises and homework for the [https://softuni.bg/courses/csharp-oop-advanced-high-quality-code](https://softuni.bg/courses/csharp-oop-advanced-high-quality-code)
 
-You can check your solutions here: [https://judge.softuni.bg/Contests/679/Inheritance-Lab](https://judge.softuni.bg/Contests/679/Inheritance-Lab).
+You can check your solutions here: [https://judge.softuni.bg/Contests/Compete/Index/706#0](https://judge.softuni.bg/Contests/Compete/Index/706#0)
 
-# Part I: Inheritance
+# Part I: Generics
 
-## 1.Single Inheritance
+## 1.Box of T
 
-Create two classes named **Animal** and **Dog**.
+Create a class **Box&lt;&gt;** that can store anything.
 
-**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
+It should have two public methods:
 
-**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
+- void Add(element)
+- element Remove()
+- int Count { get; }
 
-**Dog** should inherit from **Animal**.
+Adding should add on top of its contents. Remove should get the topmost element.
+
+### Examples
+
+```scharp\
+public staticvoid Main(string[] args)
+{
+	Box<int> box = newBox<int>();    
+	box.Add(1);    
+	box.Add(2);    
+	box.Add(3);    
+	Console.WriteLine(box.Remove());
+	box.Add(4);    
+	box.Add(5);    
+	Console.WriteLine(box.Remove());
+} 
+```
 
 > ### Hints
-> Use the **: operator** to build a hierarchy
+> Use the syntax **Box&lt;T&gt;** to create a generic class
 
-## 2.Multiple Inheritance
+## 2.Generic Array Creator
 
-Create three classes named **Animal** , **Dog** and **Puppy**.
+Create a class **ArrayCreator** with a method and a single overload to it:
 
-**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
+- static T[] create(int length, T item)
 
-**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
+The method should return an array with the given length and every element should be set to the given default item.
 
-**Puppy** with a single public method **Weep()** that prints: **&quot;** **weeping…** **&quot;**
+### Examples
 
-**Dog** should inherit from **Animal**. **Puppy** should inherit from **Dog**.
+```csharp
+static void Main(string[] args)
+{
+	string[] strings = ArrayCreator.Create(5,"Pesho");   
+	int[] integers = ArrayCreator.Create(10, 33);
+} 
+```
 
-## 3.Hierarchical Inheritance
+# 3.Part II: Generic Constaints
 
-Create three classes named **Animal** , **Dog** and **Cat**.
+## 3.Generic Scale
 
-**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
+Create a class **Scale&lt;T&gt;** that holds two elements - left and right. The scale should receive the elements through its single constructor:
 
-**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
+- Scale(T left, T right)
 
-**Cat** with a single public method **Meow()** that prints: **&quot;meowing…&quot;**
+The scale should have a single method:
 
-**Dog** and **Cat** should inherit from **Animal**.
+- T getHeavier()
 
-# 3.Part II: Reusing Classes
-
-## 4.Random List
-
-Create a **RandomList** class that has all the functionality of **Array** **List**.
-
-Add additional function that **returns** and **removes** a random element from the list.
-
-- Public method: **RandomString(): string**
-
-## 5.Stack of Strings
-
-Create a class **StackOfStrings** which can store only strings and has the following functionality:
-
-- Private field: **data: List&lt;string&gt;**
-- Public method: **Push(string item): void**
-- Public method: **Pop(): string**
-- Public method: **Peek(): string**
-- Public method: **IsEmpty(): bool**
-
-Use composition/delegation in order to have a field in which to store the stack&#39;s data
+The greater of the two elements is heavier. The method should return **null** if elements are equal.
