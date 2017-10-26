@@ -149,15 +149,15 @@ The input consists of three lines:
 
 - The first one is holding a person name and an address. They are separated by space(s). Your task is to collect them in the tuple and print them on the console. Format of the input:
 
-**&lt;&lt;first name&gt; &lt;last**  **name** **&gt;&gt; lt;** **address ** **&gt;**
+**&lt;&lt;first name&gt; &lt;last**  **name** >> **address** **&gt;**
 
 - The second line holds a **name** f a personand the **amount of beer** (int) he can drink. Format:
 
-**&lt;** ** name ** **&gt; &lt;** ** liters of beer ** **&gt;**
+**&lt;** **name** **&gt; &lt;** **liters of beer** **&gt;**
 
 - The last line will hold an **Integer** and a **Double**. Format:
 
-**&lt;** ** Integer ** **&gt; &lt;** ** Double ** **&gt;**
+**&lt;** **Integer** **&gt; &lt;** **Double** **&gt;**
 
 ### Output
 
@@ -183,15 +183,15 @@ The input consists of three lines:
 
 - The first one is holding a name, an address and a town. Format of the input:
 
-**&lt;&lt;first name&gt; &lt;last name&gt;&gt; &lt;** ** address ** **&gt; &lt;** ** town ** **&gt;**
+**&lt;&lt;first name&gt; &lt;last name&gt;&gt; &lt;** **address** **&gt; &lt;** **town** **&gt;**
 
 - The second line is holding a name, beer liters, and a Boolean variable with value - **drunk** or **not**. Format:
 
-**&lt;** ** name ** **&gt; &lt;** ** liters of beer ** **&gt; &lt;** ** drunk or not ** **&gt;**
+**&lt;** **name** **&gt; &lt;** **liters of beer** **&gt; &lt;** **drunk or not** **&gt;**
 
 - The last line will hold a name, a bank balance (double) and a bank name. Format:
 
-**&lt;** ** name ** **&gt; &lt;account**  **balance** ** &gt; &lt; ** **bank name** ** &gt;**
+**&lt;** **name** **&gt; &lt;account**  **balance** **&gt; &lt;** **bank name** **&gt;**
 
 ### Output
 
