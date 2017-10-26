@@ -1,70 +1,66 @@
-# <p align="center"> Lab:  Generics </p>
+# <p align="center"> Lab:  Inheritance </p>
 
-Problems for exercises and homework for the [https://softuni.bg/courses/csharp-oop-advanced-high-quality-code](https://softuni.bg/courses/csharp-oop-advanced-high-quality-code)
+Problems for exercises and homework for the [&quot;C# OOP Basics&quot; course @ SoftUni](https://softuni.bg/courses/csharp-oop-basics)&quot;.
 
-You can check your solutions here: [https://judge.softuni.bg/Contests/Compete/Index/706#0](https://judge.softuni.bg/Contests/Compete/Index/706#0)
+You can check your solutions here: [https://judge.softuni.bg/Contests/679/Inheritance-Lab](https://judge.softuni.bg/Contests/679/Inheritance-Lab).
 
-# Part I: Generics
+# Part I: Inheritance
 
-## 1.Box of T
+## 1.Single Inheritance
 
-Create a class **Box&lt;&gt;** that can store anything.
+Create two classes named **Animal** and **Dog**.
 
-It should have two public methods:
+**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
 
-- void Add(element)
-- element Remove()
-- int Count { get; }
+**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
 
-Adding should add on top of its contents. Remove should get the topmost element.
-
-### Examples
-
-```scharp\
-public staticvoid Main(string[] args)
-{
-	Box<int> box = newBox<int>();    
-	box.Add(1);    
-	box.Add(2);    
-	box.Add(3);    
-	Console.WriteLine(box.Remove());
-	box.Add(4);    
-	box.Add(5);    
-	Console.WriteLine(box.Remove());
-} 
-```
+**Dog** should inherit from **Animal**.
 
 > ### Hints
-> Use the syntax **Box&lt;T&gt;** to create a generic class
+> Use the **: operator** to build a hierarchy
 
-## 2.Generic Array Creator
+## 2.Multiple Inheritance
 
-Create a class **ArrayCreator** with a method and a single overload to it:
+Create three classes named **Animal** , **Dog** and **Puppy**.
 
-- static T[] create(int length, T item)
+**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
 
-The method should return an array with the given length and every element should be set to the given default item.
+**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
 
-### Examples
+**Puppy** with a single public method **Weep()** that prints: **&quot;** **weeping…** **&quot;**
 
-```csharp
-static void Main(string[] args)
-{
-	string[] strings = ArrayCreator.Create(5,"Pesho");   
-	int[] integers = ArrayCreator.Create(10, 33);
-} 
-```
+**Dog** should inherit from **Animal**. **Puppy** should inherit from **Dog**.
 
-# 3.Part II: Generic Constaints
+## 3.Hierarchical Inheritance
 
-## 3.Generic Scale
+Create three classes named **Animal** , **Dog** and **Cat**.
 
-Create a class **Scale&lt;T&gt;** that holds two elements - left and right. The scale should receive the elements through its single constructor:
+**Animal** with a single public method **Eat()** that prints: **&quot;eating…&quot;**
 
-- Scale(T left, T right)
+**Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
 
-The scale should have a single method:
+**Cat** with a single public method **Meow()** that prints: **&quot;meowing…&quot;**
 
-- T getHeavier()
+**Dog** and **Cat** should inherit from **Animal**.
 
-The greater of the two elements is heavier. The method should return **null** if elements are equal.
+# 3.Part II: Reusing Classes
+
+## 4.Random List
+
+Create a **RandomList** class that has all the functionality of **Array** **List**.
+
+Add additional function that **returns** and **removes** a random element from the list.
+
+- Public method: **RandomString(): string**
+
+## 5.Stack of Strings
+
+Create a class **StackOfStrings** which can store only strings and has the following functionality:
+
+- Private field: **data: List&lt;string&gt;**
+- Public method: **Push(string item): void**
+- Public method: **Pop(): string**
+- Public method: **Peek(): string**
+- Public method: **IsEmpty(): bool**
+
+Use composition/delegation in order to have a field in which to store the stack&#39;s data
