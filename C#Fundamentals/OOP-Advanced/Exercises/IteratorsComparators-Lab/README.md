@@ -10,7 +10,7 @@ Create a class **Book** which should have three public properties:
 - **int Year**
 - **List&lt;string&gt; Authors**
 
-Authors can be **anonymous, one or many**. A Book should have only **one**** constructor**.
+Authors can be **anonymous, one or many**. A Book should have only **one** **constructor**.
 
 Create a class **Library** which should store a collection of books and implement the **IEnumerable&lt;Book&gt;** interface.
 
@@ -33,7 +33,7 @@ A Library should be could be intilized without books or with any number of books
 ```
 ## 2.Library Iterator
 
-Extend your solution from the prevoius task. Inside the Library class create a **nested class**** LibraryIterator **which should implement the** IEnumerator&lt;Book&gt;** interface. Try to implement the bodies of the inherited methods by yourself. You will need two more members:
+Extend your solution from the prevoius task. Inside the Library class create a **nested class** **LibraryIterator** which should implement the **IEnumerator&lt;Book&gt;** interface. Try to implement the bodies of the inherited methods by yourself. You will need two more members:
 
 - **List&lt;Book&gt; books**
 - **int currentIndex**
@@ -111,12 +111,9 @@ Modify your Library class once again to implement the **new sorting**.
      
 
  }
-```csharp
+```
 
 | **Output** |
 | --- |
 | Animal Farm - 2003 <br/> The Documents in the Case - 2002 <br/> The Documents in the Case - 1930 |
 
-### Solution
-
- 
