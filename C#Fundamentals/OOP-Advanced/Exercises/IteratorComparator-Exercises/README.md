@@ -516,34 +516,8 @@ line seperated by spaces, by calling foreach on the collection.
 
 | **Input** | **Output** |
 |-----------|------------|
-| 5         
-            
- Add 7      
-            
- Add -50    
-            
- Remove 3   
-            
- Remove 7   
-            
- Add 20     | 2          
-                         
-             -50 20      |
-| 6         
-            
- Add 13     
-            
- Add 4      
-            
- Add 20     
-            
- Add 4      
-            
- Remove 4   
-            
- Add 4      | 4          
-                         
-             13 20 4 4   |
+| 5 <br/> Add 7 <br/> Add -50 <br/> Remove 3 <br/> Remove 7 <br/> Add 20     | 2 <br/>  -50 20      |
+| 6  <br/> Add 13 <br/> Add 4 <br/> Add 20 <br/> Add 4 <br/> Remove 4 <br/> Add 4      | 4  <br/> 13 20 4 4   |
 
 ### Hint
 
