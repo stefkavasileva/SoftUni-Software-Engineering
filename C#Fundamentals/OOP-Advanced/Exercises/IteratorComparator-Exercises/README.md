@@ -116,36 +116,8 @@ instead.
 
 | **Input**                   | **Output**           |
 |-----------------------------|----------------------|
-| Create 1 2 3 4 5            
-                              
- Move                         
-                              
- PrintAll                     
-                              
- END                          | True                 
-                                                     
-                               1 2 3 4 5             |
-| Create Stefcho Goshky Peshu 
-                              
- PrintAll                     
-                              
- Move                         
-                              
- Move                         
-                              
- Print                        
-                              
- HasNext                      
-                              
- END                          | Stefcho Goshky Peshu 
-                                                     
-                               True                  
-                                                     
-                               True                  
-                                                     
-                               Peshu                 
-                                                     
-                               False                 |
+| Create 1 2 3 4 5 <br/> Move <br/> PrintAll <br/> END| True <br/> 1 2 3 4 5 |
+| Create Stefcho Goshky Peshu  <br/> PrintAll <br/> Move <br/> Move <br/> Print <br/> HasNext <br/> END| Stefcho Goshky Peshu  <br/> True <br/> True <br/> Peshu <br/> False|
 
 Stack
 -----
