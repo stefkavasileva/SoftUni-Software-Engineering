@@ -244,22 +244,8 @@ If there are no equal people print: **"No matches"**
 
 | **Input**      | **Output** |
 |----------------|------------|
-| Pesho 22 Vraca 
-                 
- Gogo 14 Sofeto  
-                 
- END             
-                 
- 2               | No matches |
-| Pesho 22 Vraca 
-                 
- Gogo 22 Vraca   
-                 
- Gogo 22 Vraca   
-                 
- END             
-                 
- 2               | 2 1 3      |
+| Pesho 22 Vraca <br/> Gogo 14 Sofeto <br/> END <br/> 2 | No matches |
+| Pesho 22 Vraca  <br/> Gogo 22 Vraca  <br/> Gogo 22 Vraca <br/> END <br/> 2 | 2 1 3|
 
  Strategy Pattern
 -----------------
@@ -314,52 +300,8 @@ the name comparator.
 
 | **Input** | **Output** |
 |-----------|------------|
-| 3         
-            
- Pesho 20   
-            
- Joro 100   
-            
- Pencho 1   | Joro 100   
-                         
-             Pesho 20    
-                         
-             Pencho 1    
-                         
-             Pencho 1    
-                         
-             Pesho 20    
-                         
-             Joro 100    |
-| 5         
-            
- Ivan 17    
-            
- asen 33    
-            
- Stoqn 25   
-            
- Nasko 99   
-            
- Joro 3     | asen 33    
-                         
-             Ivan 17     
-                         
-             Joro 3      
-                         
-             Nasko 99    
-                         
-             Stoqn 25    
-                         
-             Joro 3      
-                         
-             Ivan 17     
-                         
-             Stoqn 25    
-                         
-             asen 33     
-                         
-             Nasko 99    |
+| 3 <br/> Pesho 20 <br/> Joro 100 <br/>  Pencho 1   | Joro 100 <br/> Pesho 20 <br/> Pencho 1 <br/> Pencho 1 <br/> Pesho 20  <br/> Joro 100    |
+| 5  <br/> Ivan 17 <br/> asen 33 <br/> Stoqn 25 <br/> Nasko 99 <br/> Joro 3 | asen 33  <br/> <br/> Ivan 17 <br/> Joro 3 <br/> Nasko 99  <br/> Stoqn 25 <br/> Joro 3 <br/> Ivan 17 <br/> Stoqn 25 <br/> asen 33 <br/> Nasko 99    |
 
 \*Equality Logic
 ----------------
@@ -398,34 +340,8 @@ hashset.
 
 | **Input** | **Output** |
 |-----------|------------|
-| 4         
-            
- Pesho 20   
-            
- Peshp 20   
-            
- Joro 15    
-            
- Pesho 21   | 4          
-                         
-             4           |
-| 7         
-            
- Ivan 17    
-            
- ivan 17    
-            
- Stoqn 25   
-            
- Ivan 18    
-            
- Ivan 17    
-            
- Stopn 25   
-            
- Stoqn 25   | 5          
-                         
-             5           |
+| 4 <br/>  Pesho 20 <br/> Peshp 20 <br/> Joro 15 <br/> Pesho 21   | 4  <br/> 4 |
+| 7  <br/> Ivan 17 <br/> ivan 17 <br/> Stoqn 25  <br/> Ivan 18 <br/> Ivan 17  <br/> Stopn 25 <br/> Stoqn 25   | 5 <br/> 5|
 
 ### Hint
 
@@ -559,50 +475,8 @@ print information for each room in the clinic in order of their numbers.
 
 | **Input**                                                                                                                              | **Output**                                                    |
 |----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| 9                                                                                                                                      
-                                                                                                                                         
- Create Pet Gosho 7 Cat                                                                                                                  
-                                                                                                                                         
- Create Clinic Rezovo 4                                                                                                                  
-                                                                                                                                         
- Create Clinic Rizovo 1                                                                                                                  
-                                                                                                                                         
- HasEmptyRooms Rizovo                                                                                                                    
-                                                                                                                                         
- Release Rizovo                                                                                                                          
-                                                                                                                                         
- Add Gosho Rizovo                                                                                                                        
-                                                                                                                                         
- HasEmptyRooms Rizovo                                                                                                                    
-                                                                                                                                         
- Create Pet Sharo 2 Dog                                                                                                                  
-                                                                                                                                         
- <span id="__DdeLink__1205_810317894" class="anchor"><span id="__DdeLink__1201_810317894" class="anchor"></span></span>Add Sharo Rizovo  | <span id="OLE_LINK7" class="anchor"></span>Invalid Operation! 
-                                                                                                                                                                                                         
-                                                                                                                                          True                                                           
-                                                                                                                                                                                                         
-                                                                                                                                          False                                                          
-                                                                                                                                                                                                         
-                                                                                                                                          True                                                           
-                                                                                                                                                                                                         
-                                                                                                                                          False                                                          
-                                                                                                                                                                                                         
-                                                                                                                                          False                                                          |
-| 8                                                                                                                                      
-                                                                                                                                         
- Create Pet Gosho 7 Cat                                                                                                                  
-                                                                                                                                         
- Create Pet Sosho 1 Cata                                                                                                                 
-                                                                                                                                         
- Create Clinic Rezovo 5                                                                                                                  
-                                                                                                                                         
- Add Gosho Rezovo                                                                                                                        
-                                                                                                                                         
- Add Sosho Rezovo                                                                                                                        
-                                                                                                                                         
- Print Rezovo 3                                                                                                                          
-                                                                                                                                         
- Release Rezovo                                                                                                                          
+| 9 <br/> Create Pet Gosho 7 Cat <br/> Create Clinic Rezovo 4 <br/> Create Clinic Rizovo 1  <br/> HasEmptyRooms Rizovo <br/> Release Rizovo <br/> Add Gosho Rizovo <br/> HasEmptyRooms Rizovo <br/> Create Pet Sharo 2 Dog <br/> <span id="__DdeLink__1205_810317894" class="anchor"><span id="__DdeLink__1201_810317894" class="anchor"></span></span>Add Sharo Rizovo  | <span id="OLE_LINK7" class="anchor"></span>Invalid Operation!  | 8                                                                                                                                      
+  <br/> Create Pet Gosho 7 Cat <br/> Create Pet Sosho 1 Cata <br/> Create Clinic Rezovo 5 <br/> Add Gosho Rezovo <br/> Add Sosho Rezovo <br/> Print Rezovo 3 <br/> Release Rezovo                                                                                                                          
                                                                                                                                          
  <span id="__DdeLink__1207_810317894" class="anchor"><span id="__DdeLink__1203_810317894" class="anchor"></span></span>Print Rezovo      | True                                                          
                                                                                                                                                                                                          
