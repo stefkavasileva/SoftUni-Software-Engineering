@@ -1,8 +1,5 @@
 # <p align="center"> Lab:  Iterators and Comparators </p>
 
-Exercises: Iterators And Comparators
-====================================
-
 This document defines the exercises for [*"C\# OOP Advanced" course @
 Software
 University*](https://softuni.bg/trainings/1637/c-sharp-oop-advanced-july-2017).
@@ -71,53 +68,9 @@ their messages instead.
 
 | **Input**             | **Output**         |
 |-----------------------|--------------------|
-| Create                
-                        
- Print                  
-                        
- END                    | Invalid Operation! |
-| Create Stefcho Goshky 
-                        
- HasNext                
-                        
- Print                  
-                        
- Move                   
-                        
- Print                  
-                        
- END                    | True               
-                                             
-                         Stefcho             
-                                             
-                         True                
-                                             
-                         Goshky              |
-| Create 1 2 3          
-                        
- HasNext                
-                        
- Move                   
-                        
- HasNext                
-                        
- HasNext                
-                        
- Move                   
-                        
- HasNext                
-                        
- END                    | True               
-                                             
-                         True                
-                                             
-                         True                
-                                             
-                         True                
-                                             
-                         True                
-                                             
-                         False               |
+| Create <br/> Print <br/> END | Invalid Operation! |
+| Create Stefcho Goshky  <br/> HasNext <br/> Print <br/> Move <br/> Print <br/> END| True <br/> Stefcho <br/> True <br/> Goshky|
+| Create 1 2 3 <br/> HasNext <br/> Move <br/> HasNext <br/> HasNex <br/> Move <br/> HasNext <br/> END | True <br/> True <br/> True <br/> True  <br/> True <br/> False |
 
 Collection
 ----------
