@@ -55,15 +55,6 @@ foreach (var weeklyEntry in ordered)
 	Console.WriteLine(weeklyEntry);                                                                                                        
 }                                                              
 ```
-### Hints
-
-Create the **WeeklyCalendar**:
-
-<img src="./media/image1.png" width="368" height="190" />
-
-Create **WeeklyEntry** and think about a solution to compare entries:
-
-<img src="./media/image2.png" width="482" height="347" />
 
 Coffee Machine
 --------------
