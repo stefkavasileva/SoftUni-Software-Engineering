@@ -171,7 +171,7 @@ and print all elements each on new line.
 
 | **Input**       | **Output**  |
 |-----------------|-------------|
-| Push 1, 2, 3, 4  <br/> Pop <br/> Pop  <br/> END 2  <br/> 1 <br/>  <br/> 2 <br/> 1 |
+| Push 1, 2, 3, 4  <br/> Pop <br/> Pop  <br/> END 2  |<br/> 1 <br/>  <br/> 2 <br/> 1 |
 | Push 1, 2, 3, 4  <br/> Pop <br/> Push 1 <br/> END | 1 <br/> 3 <br/> 2 <br/> 1 <br/> 1 <br/> 3 <br/> 2 <br/> 1 |
 | Push 1, 2, 3, 4  <br/> Pop <br/> Pop <br/> Pop <br/> Pop <br/> Pop <br/> END| No elements |
 
