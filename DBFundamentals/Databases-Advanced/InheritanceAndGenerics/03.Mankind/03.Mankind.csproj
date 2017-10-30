@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36DC80C3-1263-4201-B1B6-D4F57D2CDBC1}</ProjectGuid>
+    <ProjectGuid>{B5E7816D-1EA4-4D32-BF20-537892E8F493}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.BookShop</RootNamespace>
-    <AssemblyName>02.BookShop</AssemblyName>
+    <RootNamespace>_03.Mankind</RootNamespace>
+    <AssemblyName>03.Mankind</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
     <Compile Include="ErrorMessages.cs" />
-    <Compile Include="GoldenEditionBook.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
