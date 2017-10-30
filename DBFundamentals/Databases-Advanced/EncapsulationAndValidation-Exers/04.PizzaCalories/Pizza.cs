@@ -4,25 +4,24 @@ using System.Linq;
 
 public class Pizza
 {
+    private readonly IList<Topping> toppings;
+    private readonly Dough dough;
     private string name;
-    private decimal calories;
-    private int toppingCount;
 
-    public Pizza(string name, int toppimgCount)
+    public Pizza(string name, Dough dough)
     {
         this.Name = name;
-        this.ToppingCount = toppimgCount;
-        this.Toppings = new List<Topping>();
-    }
-
-    public Pizza()
-    {
-
+        this.dough = dough;
+        this.toppings = new List<Topping>();
     }
 
     public string Name
     {
-        get => this.name;
+        get
+        {
+            return this.name;
+        }
+
         private set
         {
             if (string.IsNullOrEmpty(value) || value.Length > 15)
@@ -34,27 +33,21 @@ public class Pizza
         }
     }
 
-    public double Calories { get; set; }
-
-    public int ToppingCount
+    public void AddTopping(Topping topping)
     {
-        get => this.toppingCount;
-        private set
-        {
-            if (value < 0 || value > 10)
-            {
-                throw new ArgumentException("Number of toppings should be in range [0..10].");
-            }
+        this.toppings.Add(topping);
 
-            this.toppingCount = value;
+        if (this.toppings.Count > 10)
+        {
+            throw new ArgumentException("Number of toppings should be in range[0..10].");
         }
     }
 
-    public Dough Dough { get; set; }
-    public List<Topping> Toppings { get; set; }
-
-    public decimal CalcCalories()
+    public double CalcTotalCalories()
     {
-        return this.Dough.CalcCalories() + this.Toppings.Sum(t => t.CalcCalories());
+        double doughCalories = this.dough.CalcCalories();
+        double toppingsCalories = (double)this.toppings.Sum(t => t.CalcCalories());
+
+        return doughCalories + toppingsCalories;
     }
 }

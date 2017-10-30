@@ -4,113 +4,34 @@ public class Startup
 {
     public static void Main()
     {
-        //75/100
-        var pizza = new Pizza();
-        var dough = new Dough();
-
-        var inputLine = Console.ReadLine();
-
-        if (inputLine.Contains("Dough"))
+        //92/100
+        try
         {
-            var tokens = inputLine.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            var type = tokens[1];
-            var tech = tokens[2];
-            var weight = double.Parse(tokens[3]);
+            var pizzaInfo = Console.ReadLine().Split();
+            var pizzaName = pizzaInfo[1];
 
-            try
+            var doughInfo = Console.ReadLine().Split();
+
+            Dough dough = new Dough(doughInfo[1], doughInfo[2], double.Parse(doughInfo[3]));
+            Pizza pizza = new Pizza(pizzaName, dough);
+
+            var toppingInfo = Console.ReadLine();
+            while (!toppingInfo.Equals("END"))
             {
-                dough = new Dough(type, tech, weight);
-                Console.WriteLine($"{dough.CalcCalories():f2}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return;
+                var args = toppingInfo.Split();
+
+                var topping = new Topping(args[1], double.Parse(args[2]));
+                pizza.AddTopping(topping);
+
+                toppingInfo = Console.ReadLine();
             }
 
-            inputLine = Console.ReadLine();
-            if (inputLine.Equals("END")) return;
+            Console.WriteLine($"{pizza.Name} - {pizza.CalcTotalCalories():F2} Calories.");
         }
-
-        if (inputLine.Contains("Topping"))
+        catch (Exception e)
         {
-            var tokens = inputLine.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            var toppingName = tokens[1];
-            var toppingWeight = double.Parse(tokens[2]);
-
-            try
-            {
-                var topping = new Topping(toppingName, toppingWeight);
-                Console.WriteLine($"{topping.CalcCalories():f2}");
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return;
-            }
-
-            return;
+            Console.WriteLine(e.Message);
         }
-
-
-        while (!inputLine.Equals("END"))
-        {
-            var tokens = inputLine.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            if (tokens[0].Equals("Pizza"))
-            {
-                var name = tokens[1];
-                var toppingCount = int.Parse(tokens[2]);
-
-                try
-                {
-                    pizza = new Pizza(name, toppingCount);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    return;
-                }
-            }
-            else if (tokens[0].Equals("Dough"))
-            {
-                var type = tokens[1];
-                var tech = tokens[2];
-                var weight = double.Parse(tokens[3]);
-
-                try
-                {
-                    dough = new Dough(type, tech, weight);
-                    pizza.Dough = dough;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    return;
-                }
-            }
-            else
-            {
-                var toppingName = tokens[1];
-                var toppingWeight = double.Parse(tokens[2]);
-
-                try
-                {
-                    var topping = new Topping(toppingName, toppingWeight);
-                    pizza.Toppings.Add(topping);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    return;
-                }
-
-            }
-
-            inputLine = Console.ReadLine();
-        }
-
-        Console.WriteLine($"{pizza.Name} – {pizza.CalcCalories():f2} Calories.");
     }
 }
 

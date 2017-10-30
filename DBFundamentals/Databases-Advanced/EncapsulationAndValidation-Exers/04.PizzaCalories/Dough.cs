@@ -1,107 +1,102 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 public class Dough
 {
-    private readonly string[] DoughTypes = { "white", "wholegrain" };
-    private readonly string[] BakingTechTypes = { "crispy", "chewy", "homemade" };
-    private const int MinWeight = 1;
-    private const int MaxWeight = 200;
-    private const decimal WhiteValue = 1.5m;
-    private const decimal WholegrainValue = 1m;
-    private const decimal CrispyValue = 0.9m;
-    private const decimal ChewyValue = 1.1m;
-    private const decimal HomemadeValue = 1m;
+    private string flourType;
+    private string bakingTechnique;
+    private double weightGrams;
 
-    private string doughType;
-    private string bakingTech;
-    private double weight;
-
-    public Dough(string doughType, string bakingTech, double weight)
+    private static readonly IDictionary<string, double> DoughsWithModifiers = new Dictionary<string, double>
     {
-        this.DoughType = doughType;
-        this.BakingTech = bakingTech;
-        this.Weight = weight;
+        { "white", 1.5 },
+        { "wholegrain", 1.0 },
+        { "crispy", 0.9 },
+        { "chewy", 1.1 },
+        { "homemade", 1.0 }
+    };
+
+    public Dough(string flourType, string bakingTechnique, double weightGrams)
+    {
+        this.FlourType = flourType;
+        this.BakingTechnique = bakingTechnique;
+        this.WeightGrams = weightGrams;
     }
 
-    public Dough()
+    private string FlourType
     {
-
-    }
-
-    public string DoughType
-    {
-        get => this.doughType;
-        private set
+        set
         {
-            if (!DoughTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            if (!IsDoughValid(value))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }
 
-            this.doughType = value;
+            this.flourType = value;
         }
     }
-    public string BakingTech
+
+    private string BakingTechnique
     {
-        get => this.bakingTech;
-        private set
+        set
         {
-            if (!BakingTechTypes.Contains(value.ToLower()) || string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            if (!IsDoughValid(value))
             {
                 throw new ArgumentException("Invalid type of dough.");
             }
 
-            this.bakingTech = value;
+            this.bakingTechnique = value;
         }
     }
 
-    public double Weight
+    private double WeightGrams
     {
-        get => this.weight;
-        private set
+        get
         {
-            if (value < MinWeight || value > MaxWeight)
+            return this.weightGrams;
+        }
+
+        set
+        {
+            if (value < 1 || value > 200)
             {
-                throw new ArgumentException($"Dough weight should be in the range [{MinWeight}..{MaxWeight}].");
+                throw new ArgumentException("Dough weight should be in the range [1..200].");
             }
 
-            this.weight = value;
+            this.weightGrams = value;
         }
     }
 
-    public decimal CalcCalories()
+    public double CalcCalories()
     {
-        var bakingTechValue = 0.0m;
-        var typeValue = 0.0m;
+        double result = this.WeightGrams * 2 * GetDoughModifier(this.flourType) * GetDoughModifier(this.bakingTechnique);
+        return result;
+    }
 
-        switch (this.doughType.ToLower())
+    public static bool IsDoughValid(string doughType)
+    {
+        string searcherDoughType = doughType.ToLower();
+
+        if (DoughsWithModifiers.ContainsKey(searcherDoughType))
         {
-            case "white":
-                typeValue = WhiteValue;
-                break;
-            case "wholegrain":
-                typeValue = WholegrainValue;
-                break;
-            default:
-                throw new ArgumentException("Invalid type of dough.");
+            return true;
         }
 
-        switch (this.bakingTech.ToLower())
+        return false;
+    }
+
+
+    public static double GetDoughModifier(string flourTypeOrBakingTechnique)
+    {
+        string searcherDoughModifier = flourTypeOrBakingTechnique.ToLower();
+
+        if (DoughsWithModifiers.ContainsKey(searcherDoughModifier))
         {
-            case "crispy":
-                bakingTechValue = CrispyValue;
-                break;
-            case "chewy":
-                bakingTechValue = ChewyValue;
-                break;
-            case "homemade":
-                bakingTechValue = HomemadeValue;
-                break;
-            default:
-                throw new ArgumentException("Invalid type of dough.");
+            double doughModifier = DoughsWithModifiers[searcherDoughModifier];
+            return doughModifier;
         }
 
-        return (2 * (decimal)this.Weight) * typeValue * bakingTechValue;
+        throw new ArgumentException("Such a modifier does not exist.");
     }
 }
+
