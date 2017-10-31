@@ -19,12 +19,12 @@ public abstract class Human
         {
             if (char.IsLower(value[0]))
             {
-                throw new ArgumentException(string.Format(ErrorMessages.InvalidName,nameof(firstName)));
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidName, nameof(firstName)));
             }
 
             if (value.Length < 4)
             {
-                throw new ArgumentException(string.Format(ErrorMessages.InvalidNameLength,nameof(firstName),3));
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidNameLength, 4, nameof(firstName)));
             }
 
             this.firstName = value;
@@ -43,7 +43,7 @@ public abstract class Human
 
             if (value.Length < 3)
             {
-                throw new ArgumentException(string.Format(ErrorMessages.InvalidNameLength, nameof(lastName), 2));
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidNameLength, 3, nameof(lastName)));
             }
 
             this.lastName = value;
