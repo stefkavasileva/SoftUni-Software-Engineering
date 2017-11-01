@@ -7,7 +7,5 @@
     {
         base.Price += this.Price * Percentage;
     }
-
-
 }
 

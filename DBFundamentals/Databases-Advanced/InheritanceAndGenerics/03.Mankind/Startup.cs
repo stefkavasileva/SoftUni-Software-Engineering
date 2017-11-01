@@ -4,7 +4,6 @@ public class Startup
 {
     public static void Main()
     {
-        //80/100
         var studentInfo = Console.ReadLine().Split();
         var workerInfo = Console.ReadLine().Split();
 

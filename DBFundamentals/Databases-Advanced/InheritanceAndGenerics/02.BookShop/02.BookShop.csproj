@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="ErrorMessages.cs" />
-    <Compile Include="GoldenEditionBook.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Utilities\ErrorMessages.cs" />
+    <Compile Include="Models\GoldenEditionBook.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

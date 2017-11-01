@@ -18,7 +18,7 @@ public class Person
         {
             if (value.Length < 3)
             {
-                throw new ArgumentException("Name's length should not be less than 3 symbols!");
+                throw new ArgumentException(ErrorMessages.InvalidNameLength);
             }
 
             this.name = value;
@@ -32,7 +32,7 @@ public class Person
         {
             if (value < 0)
             {
-                throw new ArgumentException("Age must be positive!");
+                throw new ArgumentException(ErrorMessages.InvalidAge);
             }
 
             this.age = value;

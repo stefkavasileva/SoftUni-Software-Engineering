@@ -4,7 +4,6 @@ public class Startup
 {
     public static void Main()
     {
-
         try
         {
             string author = Console.ReadLine();
@@ -21,7 +20,6 @@ public class Startup
         {
             Console.WriteLine(ae.Message);
         }
-
     }
 }
 

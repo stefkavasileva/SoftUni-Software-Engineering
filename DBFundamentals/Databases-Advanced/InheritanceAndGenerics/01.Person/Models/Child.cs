@@ -15,7 +15,7 @@ public class Child : Person
         {
             if (value > 15)
             {
-                throw  new ArgumentException("Child's age must be less than 15!");
+                throw  new ArgumentException(ErrorMessages.InvalidChildAge);
             }
 
             base.Age = value;

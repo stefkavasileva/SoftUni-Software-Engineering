@@ -67,4 +67,3 @@ public class Book
         return sb.ToString().Trim();
     }
 }
-
