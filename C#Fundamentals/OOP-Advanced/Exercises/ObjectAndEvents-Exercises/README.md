@@ -6,7 +6,7 @@ This document defines the exercises for [&quot;C# OOP Advanced&quot; course @ So
 
 Create a class **Dispatcher** with a property **name** and a class **Handler**. Create a public delegate called **NameChangeEventHandler** with return type void in the Namespace of the Dispatcher (but outside of the Dispatcher class) and an **event** (a field of the delegate&#39;s type) inside the **Dispatcher** class called **NameChange**. Create a class NameChangeEventArgs which inherits the EventArgs class and has a property - **name** which is received through the constructor and has a private setter and a public getter. Create also a method called **OnNameChange(NameChangeEventArgs args)** in the **Dispatcher** - this is the method that should be called to fire the event. In the setter for the Dispatcher&#39;s name, call the **OnNameChange** method and pass it an object of NameChangeEventArgs type with the new value for the name passed to the setter.
 
-Implement a method **OnDispatcherNameChange(object sender, NameChangeEventArgs args)** in the Handler class, the implementation should write on the console **&quot;**** Dispatcher&#39;s name changed to &lt;newName&gt;&quot; **. At the start of your program create a new Dispatcher and Handler, then add the Handler&#39;s** OnDispatcherNameChange **method to the** NameChange event** in the Dispatcher.
+Implement a method **OnDispatcherNameChange(object sender, NameChangeEventArgs args)** in the Handler class, the implementation should write on the console **&quot;**** Dispatcher&#39;s name changed to &lt;newName&gt;&quot; **. At the start of your program create a new Dispatcher and Handler, then add the Handler&#39;s **OnDispatcherNameChange** method to the **NameChange event** in the Dispatcher.
 
 ### Input
 
@@ -14,7 +14,7 @@ From the console you will receive lines containing a name until the **&quot;End&
 
 ###  Output
 
-For each name change of the dispatcher the handler should print **&quot;**** Dispatcher&#39;s name changed to &lt;newName&gt;. ****&quot;** on the console.
+For each name change of the dispatcher the handler should print &quot; **Dispatcher&#39;s name changed to &lt;newName&gt;.** &quot;** on the console.
 
 ### Constraints
 
@@ -33,8 +33,8 @@ For each name change of the dispatcher the handler should print **&quot;**** Dis
 
 Implement 3 classes - **King, Footman** and **Royal Guard**. All of them have a **name** (names are **unique** there will never be two units with the same name), Footmen and Royal Guards can also be **killed** (killed units are removed from the program), while the king is **attackable** - should have a method to respond to attacks. Whenever the king is attacked, he should print to the console &quot; **King &lt;kingName&gt; is under attack!**&quot;and all **alive** Footmen and Royal guards should respond to the attack:
 
-- **Footman** respond by writing to the console **&quot;**** Footman &lt;footmanName&gt; is panicking!&quot;**.
-- **Royal Guards** instead write **&quot;**** Royal Guard &lt;guardName&gt; is defending!&quot;**.
+- **Footman** respond by writing to the console **&quot;** **Footman &lt;footmanName&gt; is panicking!&quot;**.
+- **Royal Guards** instead write **&quot;** **Royal Guard &lt;guardName&gt; is defending!&quot;**.
 
 ### Input
 
@@ -101,7 +101,7 @@ Print the results of the calculation of all number lines - each result on a new 
 
 ## Problem 4.\*Work Force
 
-Create two classes - **StandartEmployee** and **PartTimeEmployee** , both of which have a **name** and **work hours per week**. The **StandartEmployee**&#39;s work hours per week are always **40** and the **PartTimeEmployee**&#39;s work hours per week are always **20**. Create a class **Job** which should receive an employee through its constructor, have fields - **name** and **hours of work**** required **and a method** Update **which should subtract from its** hours of work required **the employee&#39;s** work hours per week **. Whenever a job&#39;s** hours of work required **reaches** 0 or less **it should print**&quot;Job &lt;jobName&gt; done **!**&quot;** and find a way to notify the collection you hold all jobs in, that it is done and should be deleted from the collection.
+Create two classes - **StandartEmployee** and **PartTimeEmployee** , both of which have a **name** and **work hours per week**. The **StandartEmployee**&#39;s work hours per week are always **40** and the **PartTimeEmployee** &#39;s work hours per week are always **20**. Create a class **Job** which should receive an employee through its constructor, have fields - **name** and **hours of work** **required** and a method Update **which should subtract from its** hours of work required **the employee&#39;s **work hours per week** . Whenever a job&#39;s hours of work required **reaches** 0 or less **it should print** &quot;Job &lt;jobName&gt; done **!**&quot;** and find a way to notify the collection you hold all jobs in, that it is done and should be deleted from the collection.
 
 ### Input
 
@@ -137,7 +137,7 @@ Every time a job ends the message **&quot;Job &lt;jobName&gt; done**! **&quot;**
 
 ## Problem 5.\*King&#39;s Gambit Extended
 
-Extend your code from **Problem 2**** King&#39;s Gambit **- normal** Footmen **should now die in** 2 hits**(you would have to receive 2 Kill commands with their name from the input to kill them), while**Royal Guards **should die from** 3 hits**. Dead Footmen and Royal Guards should still not respond to the king being attacked and be deleted from the collection of units. Find a way for the dying soldiers to communicate their deaths to the king and the collection holding them without you manually checking their state at each Kill command (i.e. use Events).
+Extend your code from **Problem 2 King&#39;s Gambit - normal** Footmen **should now die in 2 hits** (you would have to receive 2 Kill commands with their name from the input to kill them), while**Royal Guards **should die from** 3 hits. Dead Footmen and Royal Guards should still not respond to the king being attacked and be deleted from the collection of units. Find a way for the dying soldiers to communicate their deaths to the king and the collection holding them without you manually checking their state at each Kill command (i.e. use Events).
 
 ### Input
 
