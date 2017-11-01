@@ -90,17 +90,17 @@ You are already expert of **High Quality Code** , so you know what kind of **acc
 Create a method inside your Spy class called - **AnalyzeAcessModifiers**** ( ****stirng className**** ) **. Check all** fields and methods access modifiers **. Print on console all** mistakes** in format:
 
 - Fields
-  - **oo**** {fieldName} must be private!**
+  - **{fieldName} must be private!**
 - Getters
-  - **oo**** {methodName} have to be public!**
+  - **{methodName} have to be public!**
 - Setters
-  - **oo**** {methodName} have to be private!**
+  - **{methodName} have to be private!**
 
 Use **StringBuilder** to concatenate the answer **. Don&#39;t change anything in &quot;Hacker&quot; class!**
 
 In your main Method you should be able to check your program with the current piece of code.
 
-``csharp
+```csharp
 var result = spy.AnalyzeAcessModifiers("Hacker");
 Console.WriteLine(result);
 ```
@@ -144,7 +144,7 @@ Console.WriteLine(result);
 ```
 ## 3.Mission Private Impossible
 
-It&#39;s time to see what this hacker you are dealing with aims to do.  Create a method inside your Spy class called - **RevealPrivateMethods**** ( ****stirng className**** )**. Print all private methods in the following format:
+It&#39;s time to see what this hacker you are dealing with aims to do.  Create a method inside your Spy class called - **RevealPrivateMethods( stirng className)**. Print all private methods in the following format:
 
 All Private Methods of Class: **{className}**
 
