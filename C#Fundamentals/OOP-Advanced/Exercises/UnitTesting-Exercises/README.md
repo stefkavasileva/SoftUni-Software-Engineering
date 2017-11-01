@@ -65,7 +65,7 @@ Create tests, so you are sure all methods in the class ListIterator are working 
 
 ### Constraints
 
-- There will always be only **1**** Create** command and it will always be the first command passed.
+- There will always be only **1** **Create** command and it will always be the first command passed.
 - The last command will always be the only **END** command.
 
 ### Examples
@@ -128,7 +128,7 @@ It is not considered as good practice to mock foreign objects. For the sake of l
 **Methods to Test:**
 
 - **Math.Àbs()**
-- **Math.**** F****loor()**
+- **Math.Floor()**
 
 Try to mock the classes containing these methods and create tests which are proving they are working correctly.
 
@@ -136,11 +136,11 @@ Try to mock the classes containing these methods and create tests which are prov
 
 Use the VS **solution**&quot; **CustomLinkedList**&quot;.
 
-- Create new **Unit**** Test ****Project** and **add**** reference **to the &quot;** CustomLinkedList**&quot;.
+- Create new **Unit Test Project** and add reference to the &quot; **CustomLinkedList** &quot;.
 - Create Test Methods for **all public members** that need testing.
 - Create tests that ensure all methods, getters and setters **work correctly** (do not test auto-properties).
-- Use the **[ExpectedException(typeof(Exception)]**attribute for methods that are expected to throw exception in case wrong input is entered (those tests doesn&#39;t need assert messages).
-- Give **meaningful**** assert ****messages** for failed tests.
+- Use the **[ExpectedException(typeof(Exception)]** attribute for methods that are expected to throw exception in case wrong input is entered (those tests doesn&#39;t need assert messages).
+- Give **meaningful** **assert** **messages** for failed tests.
 
 ## Problem 9.DateTime.Now.AddDays();
 
