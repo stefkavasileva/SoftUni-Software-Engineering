@@ -2,6 +2,10 @@
 
 public class Box
 {
+    private double length;
+    private double width;
+    private double height;
+
     public Box(double length, double width, double height)
     {
         this.Lenght = length;
@@ -9,11 +13,23 @@ public class Box
         this.Height = height;
     }
 
-    public double Lenght { get; set; }
+    public double Lenght
+    {
+        get => this.length;
+        protected set => this.length = value;
+    }
 
-    public double Width { get; set; }
+    public double Width
+    {
+        get => this.width;
+        protected set => this.width = value;
+    }
 
-    public double Height { get; set; }
+    public double Height
+    {
+        get => this.height;
+        protected set => this.height = value;
+    }
 
     public override string ToString()
     {

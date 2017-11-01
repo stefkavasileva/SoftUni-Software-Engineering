@@ -29,7 +29,7 @@ public class Dough
         {
             if (!IsDoughValid(value))
             {
-                throw new ArgumentException("Invalid type of dough.");
+                throw new ArgumentException(ErrorMessages.InvalidDough);
             }
 
             this.flourType = value;
@@ -42,7 +42,7 @@ public class Dough
         {
             if (!IsDoughValid(value))
             {
-                throw new ArgumentException("Invalid type of dough.");
+                throw new ArgumentException(ErrorMessages.InvalidDough);
             }
 
             this.bakingTechnique = value;
@@ -60,7 +60,7 @@ public class Dough
         {
             if (value < 1 || value > 200)
             {
-                throw new ArgumentException("Dough weight should be in the range [1..200].");
+                throw new ArgumentException(ErrorMessages.InvalidDoughRange);
             }
 
             this.weightGrams = value;
@@ -96,7 +96,7 @@ public class Dough
             return doughModifier;
         }
 
-        throw new ArgumentException("Such a modifier does not exist.");
+        throw new ArgumentException(ErrorMessages.InvalidModifier);
     }
 }
 

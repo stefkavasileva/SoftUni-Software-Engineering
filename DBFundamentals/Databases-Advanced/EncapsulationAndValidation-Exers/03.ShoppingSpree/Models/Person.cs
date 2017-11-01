@@ -22,7 +22,7 @@ public class Person
         {
             if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException("Name cannot be empty");
+                throw new ArgumentException(ErrorMessages.InvalidName);
             }
 
             this.name = value;
@@ -39,7 +39,7 @@ public class Person
         {
             if (value < 0)
             {
-                throw new ArgumentException("Money cannot be negative");
+                throw new ArgumentException(ErrorMessages.InvalidMoneyValue);
             }
 
             this.money = value;

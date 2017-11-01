@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dough.cs" />
-    <Compile Include="Pizza.cs" />
+    <Compile Include="Models\Dough.cs" />
+    <Compile Include="Utilities\ErrorMessages.cs" />
+    <Compile Include="Models\Pizza.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Topping.cs" />
+    <Compile Include="Models\Topping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

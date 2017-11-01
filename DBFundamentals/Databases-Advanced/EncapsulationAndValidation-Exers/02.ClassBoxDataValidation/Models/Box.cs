@@ -24,7 +24,7 @@ public class Box
         {
             if (value <= 0)
             {
-                throw new ArgumentException($"Length cannot be zero or negative.");
+                throw new ArgumentException(ErrorMessages.InvalidLength);
             }
 
             this.length = value;
@@ -41,7 +41,7 @@ public class Box
         {
             if (value <= 0)
             {
-                throw new ArgumentException($"Width cannot be zero or negative.");
+                throw new ArgumentException(ErrorMessages.InvalidWidth);
             }
 
             this.width = value;
@@ -58,7 +58,7 @@ public class Box
         {
             if (value <= 0)
             {
-                throw new ArgumentException($"Height cannot be zero or negative.");
+                throw new ArgumentException(ErrorMessages.InvalidHeight);
             }
 
             this.height = value;

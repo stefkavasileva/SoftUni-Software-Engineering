@@ -26,7 +26,7 @@ public class Pizza
         {
             if (string.IsNullOrEmpty(value) || value.Length > 15)
             {
-                throw new ArgumentException("Pizza name should be between 1 and 15 symbols.");
+                throw new ArgumentException(ErrorMessages.InvalidPizzaName);
             }
 
             this.name = value;
@@ -39,7 +39,7 @@ public class Pizza
 
         if (this.toppings.Count > 10)
         {
-            throw new ArgumentException("Number of toppings should be in range[0..10].");
+            throw new ArgumentException(ErrorMessages.InvalidNumberOdToppings);
         }
     }
 

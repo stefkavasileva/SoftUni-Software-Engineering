@@ -13,18 +13,18 @@ public class Product
 
     public string Name
     {
-        get { return this.name; }
-        private set { this.name = value; }
+        get=>this.name; 
+        private set => this.name = value; 
     }
 
     public decimal Cost
     {
-        get { return this.cost; }
+        get => this.cost; 
         private set
         {
             if (value < 0)
             {
-                throw new ArgumentException("Money cannot be negative");
+                throw new ArgumentException(ErrorMessages.InvalidMoneyValue);
             }
 
             this.cost = value;
