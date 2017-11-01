@@ -1,5 +1,15 @@
-﻿public class Cat : Animal
+﻿using System;
+
+public class Cat : Animal
 {
-    public int IntelligenceQuotient { get; set; }
+    public Cat(string name, int age, string gender) 
+        : base(name, age, gender)
+    {
+    }
+
+    public override string ProduceSound()
+    {
+       return "Meow meow";
+    }
 }
 

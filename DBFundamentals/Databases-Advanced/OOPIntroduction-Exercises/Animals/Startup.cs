@@ -1,82 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 public class Startup
 {
     public static void Main()
     {
-        var inputLine = Console.ReadLine();
+        //83/100
+        var animals = new List<Animal>();
 
-        var cats = new List<Cat>();
-        var dogs = new List<Dog>();
-        var snakes = new List<Snake>();
+        var animalTypeAsStr = Console.ReadLine();
 
-        while (!inputLine.Equals("I'm your Huckleberry"))
+        while (!animalTypeAsStr.Equals("Beast!"))
         {
-            var tokens = inputLine.Split();
+            var animalType = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .FirstOrDefault(x => x.Name == animalTypeAsStr);
 
-            if (tokens.Length < 4)
+            if (animalType is null)
             {
-                var animalName = tokens[1];
-                var sound = string.Empty;
-
-                if (cats.Any(c => c.Name == animalName))
-                {
-                    sound = "I'm an Aristocat, and I will now produce an aristocratic sound! Myau Myau.";
-                }
-                else if (dogs.Any(d => d.Name == animalName))
-                {
-                    sound = "I'm a Distinguishedog, and I will now produce a distinguished sound! Bau Bau.";
-                }
-                else if (snakes.Any(s => s.Name == animalName))
-                {
-                    sound = "I'm a Sophistisnake, and I will now produce a sophisticated sound! Honey, I'm home.";
-                }
-
-                Animal.ProduceSound(sound);
-                inputLine = Console.ReadLine();
-                continue;
+                throw new ArgumentException("Invalid input!");
             }
 
-            var className = tokens[0];
-            var name = tokens[1];
-            var age = int.Parse(tokens[2]);
-            var parameter = int.Parse(tokens[3]);
-
-            if (className.Equals("Dog"))
+            var animalArgs = Console.ReadLine().Split();
+            var animalName = animalArgs[0];
+            var animalAge = int.Parse(animalArgs[1]);
+            var animalGender = string.Empty;
+            if (animalType.Name == typeof(Kitten).Name)
             {
-                var dog = new Dog { Age = age, Name = name, NumberOfLegs = parameter };
-                dogs.Add(dog);
+                animalGender = "Female";
             }
-            else if (className.Equals("Cat"))
+            else if (animalType.Name == typeof(Tomcat).Name)
             {
-                var cat = new Cat { Age = age, Name = name, IntelligenceQuotient = parameter };
-                cats.Add(cat);
+                animalGender = "Male";
             }
             else
             {
-                var snake = new Snake { Age = age, Name = name, CrueltyCoefficient = parameter };
-                snakes.Add(snake);
+                animalGender = animalArgs[2];
             }
 
-            inputLine = Console.ReadLine();
+            try
+            {
+                var animal =
+                                (Animal)Activator
+                                .CreateInstance(animalType, new object[] { animalName, animalAge, animalGender });
+                animals.Add(animal);
+            }
+            catch (Exception e)
+            {
+                if (e.InnerException != null)
+                {
+                    Console.WriteLine(e.InnerException.Message);
+                }
+                else
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            animalTypeAsStr = Console.ReadLine();
         }
 
-        foreach (var dog in dogs)
-        {
-            Console.WriteLine($"Dog: {dog.Name}, Age: {dog.Age}, Number Of Legs: {dog.NumberOfLegs}");
-        }
-
-        foreach (var cat in cats)
-        {
-            Console.WriteLine($"Cat: {cat.Name}, Age: {cat.Age}, IQ: {cat.IntelligenceQuotient}");
-        }
-
-        foreach (var snake in snakes)
-        {
-            Console.WriteLine($"Snake: {snake.Name}, Age: {snake.Age}, Cruelty: {snake.CrueltyCoefficient}");
-        }
+        animals.ForEach(x => Console.Write(x));
     }
 }
 
