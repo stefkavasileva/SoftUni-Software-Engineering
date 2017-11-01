@@ -361,6 +361,124 @@ The change directory with absolute path method is actually not very complicated.
 
 By now we should be ready with everything in the **IOManager**** class **, so we can test the whole functionality. Now you can** test **the** functionality **of everything we&#39;ve written today and more specific the part with the** IOManager** and if there is something wrong with the whole picture, you may want to fix it, so that everything it according to the documents, for the next exercise.
 
+## Lab: Exception Handling
 
+The piece from this lecture is **not**** going ****to**** add **any** additional ****functionality** to what the final user can see, **only**** handle **some** possible ****errors** that may appear for some corner cases. These cases are not so much, because
+
+1. We haven&#39;t got so much code, in order to have many error prone places.
+2. We are taking safety precautions and check much of the input information, so that such unexpected events can&#39;t happen.
+
+So let&#39;s get started with filling out some holes in our application.
+
+## Cover Possible Unexpected Behavior in Traversal Method in the IOManager
+
+The first thing you might want to think about is whether your user can access all the folders and files in the file system and if there are some that you may not, what happens. Well, let&#39;s try.
+
+**Try**** traversing **the** windows ****directory** on your PC, but before that you should go to that directory using the absolute change of directory.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/80.png)
+
+The result should be something like the following lines:
+
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/81.png)
+
+As you&#39;ve probably noticed, trying to access folders for which we do not have rights, **throws** an **UnauthorizedAccessException** , and it **ruins** the **user**** experience ****and**** breaks **the** functionality ****of** our **application**.
+
+In order for our program to **catch** such an **exceptional**** event **,** handle ****it**** and ****continue**** working **, we have to** add **the** try **-** catch ****block** to **put** the **reading**** of **the** data ****in** the **try**** block **and** if **an** exception **is** catch **we** display **a** message **suitable** for **the** current ****event** , but **in** a more **user**** friendly ****way**.
+
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/82.png)
+
+This type of exception message is not yet in the **ExceptionMessages** , so you should **add**** it ****and**** put **the** following ****message** : &quot;The folder/file you are trying to get access needs a higher level of rights than you currently have.&quot;.
+
+Now the possible problems with the traversal are solved. And we can proceed with the next thing.
+
+## Reading Two Files for Comparison in the Tester Class
+
+We need to take care of one more thing before we finally leave our main logic and move onto printing the results. What **if**** one ****of** the **files** is **smaller**** than **the** other ****one**? **Try**** comparing **the** two ****files** given to you, called **expected**** and ****actual** from the current piece and you may **see** the **result**. It should be something like this:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/83.png)
+
+The **outputs** are definitely **not**** identical **, but we still would like a match/mismatch report. There are many ways to achieve this but maybe to catch the exception here would not be the best choice. For that reason, we are going to** add ****one**** variable **, the** minimal ****number**** of ****lines**** of **the** two ****files**. We **check**** if **the** arrays **that hold all the lines from the files,** are ****with** the **same**** length **and** if **they** are ****not** , **set** the **minimal**** number ****of**** lines ****to** the **shorter**** length **,** set **the** hasMismatch **variable to** true **and finally** display **an** error ****.** However, we first need to **add**** it to **the** Exception ****messages**** class **, named** ComparisonOfFilesWithDifferentSizes** and with the following message &quot;Files not of equal size, certain mismatch.&quot; All what we&#39;ve just talked about is displayed below in the piece of code that you should insert before the for loop that compares line by line.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/84.png)
+
+After that we should only **replace** the **variable**** in **the** for ****loop** for the **upped**** boundary** of the index.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/85.png)
+
+Finally, we should also **move** the **initialization** of the **mismatch**** array **,** under **the** if ****statement** and also **change** the **capacity**** of **the** array ****to** the **value**** of ****minOutputLines**.
+
+Now that we&#39;ve fixed the situation here, we should **proceed**** to **the** next ****step**.
+
+## Reading two files for comparison from invalid path
+
+We took safety precautions about the number of rows in each file, but what we didn&#39;t think of, **what**** could ****happen**** if **the** path ****given** to the file is **not** a **valid** path. Let&#39;s try it:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/88.png)
+
+Results in the following:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/89.png)
+
+If we are **making** any kind of **user**** interface **, the** application ****should** always **presume** that the **user**** is **a** two **-year-old and** can ****probably**** do ****or**** enter **just about** everything **you can imagine** and **even** more**.
+
+So the thing we are going to **change** in the **Tester class** is to **put** the **reading**** from **the** files ****in** a **try**** block **and** catch **the** file ****not**** found ****exception** and **display** a **related** to the **error**** message**. Now your code should be looking like this:
+
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/90.png)
+
+This should change to:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/91.png)
+
+We are reusing the message for the invalid path in the current action, so we do not need to make a new one.
+Alright, now that we are done, let&#39;s proceed to what is considered forbidden and what is consider allowed when talking about creating names of files and folders.
+
+## Making a Directory with Illegal Symbols
+
+I don&#39;t know if you&#39;ve noticed but not every symbol is permitted to be used when giving a name to a folder or a file. This is why we must **consider**** listening ****for**** exceptions ****when** the **user**** creates **a** new ****folder**** using **the** public ****method**** CreateDirectoryInCurrentFolder ****,** because the **user**** can ****always**** make **some** mistakes **and** enter **an** invalid ****folder** / **file**** name **… Let&#39;s see what happens now if we** try ****to**** create **a** new ****folder**** called ****\*2**.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/92.png)
+
+And the result of the current operation will give us the following horrible screen:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/93.png)
+
+Our task now is to **catch** that **argument**** exception **and** display **an** understandable ****user**** message ****on** the **output**** writer**
+
+The **operation** that **throws** the **exception**** in **the** creation **of** directory ****method** is clearly the **Directory.CreateDirectory(path)** and since we know that fact, we can easily **put**** it ****in** a **try**** block **, to** catch **the** raised exception**.
+
+The modified implementation of the method should look pretty similar to the following piece of code:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/94.png)
+
+As you can see we are **displaying on** the **output** a **message called**  **ForbiddenSymbolsContainedInName** , however it is **no yet added in** the **ExceptionMessages class** , **so** it is your job to **do it** now. The **message** it has **is**&quot;The given name contains symbols that are not allowed to be used in names of files and folders.&quot;.
+
+Now you can **try**** starting **the** program ****again**** and **the** output ****should** be the **user**** styled ****message**.
+
+## Printing to a Non-Existing Path
+
+Since we generate the path for the mismatches from the expected output path, if it is wrong, the program shouldn&#39;t even arrive to the point in the PrintOutput in the Tester class, however we can never be sure whether some event might trigger such an exception, so that&#39;s why we&#39;ll double check and put the File.WriteAllLines in a try block with a DirectoryNotFoundException catch block watching whether such an exception is raised. After this change the print output should look like this:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/95.png)
+
+## Going One Folder up the Hierarchy
+
+As we know, the logic for the changing of the folders works correctly, but have you tried to go one folder up when you are in the root folder of the partition.
+
+Let&#39;s **call** the **ChangeCurrentDirectoryRelative**** enough ****times**** with **the parameter**&quot;..&quot;, ****so** that we are **sure**** to ****go**** up ****until** the **root**** folder ****of** the **current**** partition ****and** then **one**** folder ****above**.
+
+In my case that&#39;s 7 calls of the following line of code:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/96.png)
+
+And that results in the following situation:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/97.png)
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/98.png)
+
+These are surely not all the exceptional cases in our program, but these are some of them. You may use the techniques that we used in order to find these holes in the functionality and try to find some other errors that might occur.
+
+Congratulations! You&#39;ve completed the lab exercises for Exception Handling.
 
 
