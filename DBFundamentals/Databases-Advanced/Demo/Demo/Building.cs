@@ -5,7 +5,6 @@ using System.Linq;
 
 public class Building
 {
-    private IList<Hallway> hallways = new List<Hallway>();
     private IList<Room> rooms = new List<Room>();
     private IList<Route> routs = new List<Route>();
 
@@ -38,27 +37,27 @@ public class Building
 
         }
 
-        for (int index = 0; index < data.Count; index++)
-        {
-            string line = data[index];
-            string[] lineArray = line.Split();
-            string start = lineArray[0];
-            Room startRoom = findRoom(start);
+        //for (int index = 0; index < data.Count; index++)
+        //{
+        //    string line = data[index];
+        //    string[] lineArray = line.Split();
+        //    string start = lineArray[0];
+        //    Room startRoom = findRoom(start);
 
-            for (int index2 = 2; index2 < lineArray.Length; index2++)
-            {
-                string hallwayString = lineArray[index2];
-                string[] hallwayArray = hallwayString.Split('-');
-                string end = hallwayArray[1];
-                Room endRoom = findRoom(end);
-                int length = int.Parse(hallwayArray[0]);
-                Hallway hallway = new Hallway(length);
-                hallway.setStart(startRoom);
-                hallway.setEnd(endRoom);
-                this.hallways.Add(hallway);
+        //    //for (int index2 = 2; index2 < lineArray.Length; index2++)
+        //    //{
+        //    //    string hallwayString = lineArray[index2];
+        //    //    string[] hallwayArray = hallwayString.Split('-');
+        //    //    string end = hallwayArray[1];
+        //    //    Room endRoom = findRoom(end);
+        //    //    int length = int.Parse(hallwayArray[0]);
+        //    //    Room hallway = new Room();
+        //    //    hallway.setStart(startRoom);
+        //    //    hallway.setEnd(endRoom);
+        //    //    this.hallways.Add(hallway);
 
-            }
-        }
+        //    //}
+        //}
 
         for (int index = 0; index < this.rooms.Count; index++)
         {
@@ -105,8 +104,8 @@ public class Building
 
         for (int index = 0; index < room.getExits().Count(); index++)
         {
-            Hallway exitHallway = room.getExits()[index];
-            Room exitRoom = exitHallway.getEnd();
+            Room exitHallway = room.getExits()[index];
+            Room exitRoom = exitHallway.getExit(exitHallway);
             route.Add(exitRoom);
             this.findRoute(route);
             route.RemoveAt(route.Count - 1);

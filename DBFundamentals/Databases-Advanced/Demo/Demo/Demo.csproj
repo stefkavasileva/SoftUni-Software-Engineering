@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building.cs" />
-    <Compile Include="Hallway.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="Startup.cs" />

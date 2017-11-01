@@ -4,9 +4,7 @@ using System.Text;
 public class Route
 {
     private IList<Room> rooms;
-    private int length;
     private int difficulty;
-
 
     public Route(IList<Room> rooms)
     {
@@ -23,27 +21,12 @@ public class Route
             Room room = this.rooms[index];
             int roomDifficulty = room.getDifficulty();
             this.difficulty = this.difficulty + roomDifficulty;
-        }
-
-        this.length = 0;
-        for (int index = 0; index < this.rooms.Count- 1; index++)
-        {
-            Room start = this.rooms[index];
-            Room end = this.rooms[index + 1];
-            Hallway hallway = start.getExit(end);
-            int length = hallway.getLength();
-            this.length = this.length + length;
-        }
+        }   
     }
 
     public IList<Room> getRooms()
     {
         return rooms;
-    }
-
-    public int getLength()
-    {
-        return length;
     }
 
     public int getDifficulty()
@@ -55,9 +38,6 @@ public class Route
     {
         StringBuilder builder = new StringBuilder();
 
-        builder.Append("Length: ");
-        builder.Append(this.length);
-        builder.Append("\t");
         builder.Append("Difficulty: ");
         builder.Append(this.difficulty);
         builder.Append("\t");
@@ -74,5 +54,28 @@ public class Route
         return builder.ToString();
     }
 
+    //public Room getStart()
+    //{
+    //    return start;
+    //}
+
+    //public void setStart(Room start)
+    //{
+    //    if (this.start == start) return;
+    //    this.start = start;
+    //    //start.addExit(this);
+    //}
+
+    //public Room getEnd()
+    //{
+    //    return end;
+    //}
+
+    //public void setEnd(Room end)
+    //{
+    //    if (this.end == end) return;
+    //    this.end = end;
+    //    //end.addEntrance(this);
+    //}
 }
 

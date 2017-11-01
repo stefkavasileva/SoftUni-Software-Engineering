@@ -5,51 +5,42 @@ public class Room
 {
     private string name;
     private int difficulty;
-    private IList<Room> entrances = new List<Room>();
-    private IList<Room> exits = new List<Room>();
+  
+    private List<Room> entrances = new List<Room>();
+    private List<Room> exits = new List<Room>();
 
     public Room(string name, int difficulty)
     {
-        this.Name = name;
-        this.Difficulty = difficulty;
+        this.name = name;
+        this.difficulty = difficulty;
     }
 
-    public string Name
+    public string getName()
     {
-        get => this.name;
-        protected set => value = this.name;
+        return name;
     }
 
-    public int Difficulty
+    public void setName(string name)
     {
-        get => this.difficulty;
-        protected set => value = this.difficulty;
+        this.name = name;
     }
 
+    public int getDifficulty()
+    {
+        return difficulty;
+    }
 
-    public IList<Room> Entrances => this.entrances;
-
-    public IList<Hallway> getEntrances()
+    public List<Room> getEntrances()
     {
         return entrances;
     }
 
-    public void AddEntrance(Room entrance)
-    {
-        if (!this.entrances.Contains(entrance))
-        {
-            this.entrances.Add(entrance);
-            entrance.setEnd(this);
-        }
-
-    }
-
-    public Hallway getExit(Room exit)
+    public Room getExit(Room exit)
     {
         for (int index = 0; index < this.exits.Count; index++)
         {
-            Hallway hallway = this.exits[index];
-            if (hallway.getEnd() == exit)
+            Room hallway = this.exits[index];
+            if (hallway.getName() == exit.getName())
             {
                 return hallway;
             }
@@ -59,21 +50,27 @@ public class Room
 
     }
 
+    public void addEntrance(Room entrance)
+    {
+        if (this.entrances.Contains(entrance)) return;
+        this.entrances.Add(entrance);
+    }
 
-
-    public IList<Hallway> getExits()
+    public List<Room> getExits()
     {
         return exits;
     }
 
-    public void addExit(Hallway exit)
+    public void addExit(Room exit)
     {
         if (this.exits.Contains(exit)) return;
         this.exits.Add(exit);
-        exit.setStart(this);
     }
 
-
+    public void setDifficulty(int difficulty)
+    {
+        this.difficulty = difficulty;
+    }
 
     public override string ToString()
     {
@@ -83,7 +80,7 @@ public class Room
         builder.Append(this.difficulty);
         for (int index = 0; index < exits.Count; index++)
         {
-            Hallway hallway = exits[index];
+            Room hallway = exits[index];
             builder.Append("\t");
             builder.Append(hallway);
         }
