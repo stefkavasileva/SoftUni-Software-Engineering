@@ -1,4 +1,4 @@
-# <p align="center"> BashSoft </p>
+﻿# <p align="center"> BashSoft </p>
 
 # 1.BashSoft piece: Stacks and Queues
 
@@ -137,7 +137,7 @@ Finally **after** the **while**** loop **we need to** set **the** isDataInitiali
 
 Since we are going to **make**** queries ****to** the **data**** structure **in this BashSoft piece and also in some others along the track of the course, so it** would ****be** a **good**** idea ****to**** make **a** method ****for** the **security**** checks ****in**** order ****to**** retrieve **some** data **for a given course or for a given student in some course. This way we will** save ****our**** selves **the** writing **of the** checks ****each**** time **and** invoke **the** methods ****where** such a check is **needed**.
 
-So the **first**** method **will be** called ****IsQueryForCoursePossible** and the **second** will be **called**** IsQueryForStudentPossibl ****�**. **Both** should be **private** and **static** and as you might guess their **return** type is **bool**. The **first** one take **one**** parameter**(**the course name**) and the**second **one takes** two ****parameters** ( **the course name** ) ( **the user name of the student** ). Their definition should look like the following:
+So the **first**** method **will be** called ****IsQueryForCoursePossible** and the **second** will be **called**** IsQueryForStudentPossibl ****е**. **Both** should be **private** and **static** and as you might guess their **return** type is **bool**. The **first** one take **one**** parameter**(**the course name**) and the**second **one takes** two ****parameters** ( **the course name** ) ( **the user name of the student** ). Their definition should look like the following:
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/41.PNG)
 
@@ -152,7 +152,7 @@ So now we have to **add** this **check**** in **the** body ****of** the **if** a
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/43.PNG)
 
-Now that we�ve implemented the first method for the checks, it�s time for it�s sidekick. As we�ve said we will reuse the check from the first method and also add a check for whether the given student user name exists in the data structure of the university. If it is present, we return true, if it is not we display an exception that we�ll need to add in the ExceptionsMessages called InexistingStudentInDataBase with the following message: �The user name for the student you are trying to get does not exist!� and finally we return false : 
+Now that we’ve implemented the first method for the checks, it’s time for it’s sidekick. As we’ve said we will reuse the check from the first method and also add a check for whether the given student user name exists in the data structure of the university. If it is present, we return true, if it is not we display an exception that we’ll need to add in the ExceptionsMessages called InexistingStudentInDataBase with the following message: “The user name for the student you are trying to get does not exist!” and finally we return false : 
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/44.PNG)
 
@@ -197,7 +197,7 @@ Now we are ready with the current piece and now we can easily keep track of the 
 
 ### Idea overview
 
-Our first task is to **implement** a simple &quot; **judge**&quot; system which we will later **use**** to ****test** our **solutions**. Why not use the good old judge? Well he&#39;s taken the week off and we still need a way to test our code. The idea is simple � **create a program which will read a text file** (your output for a given problem) and **compare** its **contents** to the contents of another text file (expected output for that problem), **if** the contents are **identical** then the files are identical and your **output is correct** and everything&#39;s smooth. **If** the files **differ** in any way then an extra file called &quot; **Mismatches.txt**&quot; is **created** which **holds detailed information about the lines that do not match**. Let&#39;s start off.
+Our first task is to **implement** a simple &quot; **judge**&quot; system which we will later **use**** to ****test** our **solutions**. Why not use the good old judge? Well he&#39;s taken the week off and we still need a way to test our code. The idea is simple – **create a program which will read a text file** (your output for a given problem) and **compare** its **contents** to the contents of another text file (expected output for that problem), **if** the contents are **identical** then the files are identical and your **output is correct** and everything&#39;s smooth. **If** the files **differ** in any way then an extra file called &quot; **Mismatches.txt**&quot; is **created** which **holds detailed information about the lines that do not match**. Let&#39;s start off.
 
 ### Set up our Tester Class
 
@@ -217,15 +217,15 @@ What this method does is simply **get the path**** to **the directory of the** e
 
 ### Read from and create files
 
-Next up we need to **read** the **two files** � the user output and the expected output. This is done again in just one line of code. We call the **File** class and invoke the **.ReadAllLines(string path)** method. However this time around we need a variable in which we can actually store the contents of the files we read from. The **File.ReadAllLines(string path)** function **returns a string array** so our code will look something like this:
+Next up we need to **read** the **two files** – the user output and the expected output. This is done again in just one line of code. We call the **File** class and invoke the **.ReadAllLines(string path)** method. However this time around we need a variable in which we can actually store the contents of the files we read from. The **File.ReadAllLines(string path)** function **returns a string array** so our code will look something like this:
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/55.PNG)
 
-We end up with a variable input which holds all the **user output** , read from the user output text file line by line, and a variable called **expectedOutput** which holds the� expected output, again read from the expected output text file line by line. We are ready to start the **comparison of the two**** files **.The information we will need while comparing the files is whether there are any mismatches and also the result of the comparison of two corresponding lines.  So we can** make **one** Boolean **for the** mismatches ****and**** one ****string**** array **called** mismatches **which** gets **it&#39;s** value ****from** the **method**** GetLineWithPossibleMismatches** with it&#39;s three parameters shown in the picture below:
+We end up with a variable input which holds all the **user output** , read from the user output text file line by line, and a variable called **expectedOutput** which holds the… expected output, again read from the expected output text file line by line. We are ready to start the **comparison of the two**** files **.The information we will need while comparing the files is whether there are any mismatches and also the result of the comparison of two corresponding lines.  So we can** make **one** Boolean **for the** mismatches ****and**** one ****string**** array **called** mismatches **which** gets **it&#39;s** value ****from** the **method**** GetLineWithPossibleMismatches** with it&#39;s three parameters shown in the picture below:
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/56.PNG)
 
- We�ll get to the implementation of this method in a moment. First we need to finish the CompareContent method so that we can focus our attention on the other functionality waiting to be written. 
+ We’ll get to the implementation of this method in a moment. First we need to finish the CompareContent method so that we can focus our attention on the other functionality waiting to be written. 
 The last thing we can do after all the checks for mismatches is to write them on the set output writer and in the mismatches.txt file which is in the same folder as the first file given for comparison and that is done by the PrintOutput method. And finally print on the output writer that the files are read:
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/57.PNG)
@@ -285,7 +285,7 @@ So we make our public static class called **SessionData** and our only variable 
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/68.PNG)
 
-This variable can be very useful in the **IOManager** , because we can use it for different operations like **traversing the current folder** , **creating files** in the current folder, **moving up and down in the folder tree** and also as a starting point in order to navigate to the &quot;resources&quot; folder and **read the**** Database **from a** file **and not from the** console**�
+This variable can be very useful in the **IOManager** , because we can use it for different operations like **traversing the current folder** , **creating files** in the current folder, **moving up and down in the folder tree** and also as a starting point in order to navigate to the &quot;resources&quot; folder and **read the**** Database **from a** file **and not from the** console**…
 
 We are going to go through each of these steps in big details so you would be able to understand how each component works.
 
@@ -435,7 +435,7 @@ Alright, now that we are done, let&#39;s proceed to what is considered forbidden
 
 ## Making a Directory with Illegal Symbols
 
-I don&#39;t know if you&#39;ve noticed but not every symbol is permitted to be used when giving a name to a folder or a file. This is why we must **consider**** listening ****for**** exceptions ****when** the **user**** creates **a** new ****folder**** using **the** public ****method**** CreateDirectoryInCurrentFolder ****,** because the **user**** can ****always**** make **some** mistakes **and** enter **an** invalid ****folder** / **file**** name **� Let&#39;s see what happens now if we** try ****to**** create **a** new ****folder**** called ****\*2**.
+I don&#39;t know if you&#39;ve noticed but not every symbol is permitted to be used when giving a name to a folder or a file. This is why we must **consider**** listening ****for**** exceptions ****when** the **user**** creates **a** new ****folder**** using **the** public ****method**** CreateDirectoryInCurrentFolder ****,** because the **user**** can ****always**** make **some** mistakes **and** enter **an** invalid ****folder** / **file**** name **… Let&#39;s see what happens now if we** try ****to**** create **a** new ****folder**** called ****\*2**.
 
 ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/92.png)
 
@@ -481,4 +481,152 @@ These are surely not all the exceptional cases in our program, but these are som
 
 Congratulations! You&#39;ve completed the lab exercises for Exception Handling.
 
+# Lab: Manual String Processing
+# Implementing the command interpreter of our Bash
 
+Now is probably the key moment in the application we are building. Currently our app is a stack of different functionalities that are coupled to the class with the Main methodand to be more specific to the commands we have written there. However, our application has no predefined order of the commands and the main aim is to provide interpretation of these commands at runtime. So now our job is to **build** an **interpreter**** that ****calls** the **functionalities** we already have.
+
+We are going to need **two**** public ****static**** classes **that** handle **the** input **and the** commands **. The** first ****one** is called **InputReader** and the **second**** one **is called** CommandInterpreter.**
+
+Now that you have created these classes we are going to write some code so that they could get their jobs done.
+
+## Implement InputReader class
+
+First we are going to start with the **InputReader** because it **uses** the **command**** interpreter ****to**** do ****some** of its **job.**
+
+The only method for now will be called from the main one that starts to **listen**** for ****commands** and **executes**** them ****if** the **syntax** is **correct**. We will name this **method**** StartReadingCommands()** and it&#39;s return type will be void.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/99.png)
+
+You&#39;ve probably opened the Command Prompt before and you&#39;ve seen that you do not write your commands on empty lines. Instead the folder that you are currently in is the beginning of the line.
+
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/100.png)
+
+In order to add this functionality so that our bash **looks**** like **the** command ****prompt** , we will **write** a **message**** on **the** OutputWriter **which will be the** current ****path**** from **the** SessionData **class** followed ****by****&#39;&gt;**&#39;.
+
+Now it&#39;s time to read an input and trim it from all white spaces.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/101.png)
+
+However, **once** we&#39;ve **interpreted** the **current**** command **we want to** continue reading **the next commands so maybe here will be a good time to** add **a** while ****loop** and **read** a **new**** input ****at** the **end**** of **the** loop **. Note that we** repeat **the** code ****above**** in **our** while ****loop** but we **do** the **first**** read ****out**** of **the** loop**, because even the first command can be the command for terminating the BashSoft.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/102.png)
+
+Now we have only two things left to do in the while loop, to finish with its implementation. Firstly, we should **set** some **condition**** for **which the** while ****loop** has to be true. A good way of doing this is to **make** a **constant**** for **the** command ****for**** termination**(which is &quot;quit&quot;) and**then ****check**** in **the** condition ****of** the **loop** whether the input is different from the termination command.
+
+The declaration of a constant looks like this:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/103.png)
+
+and it is **private** because **we**** do ****not**** want ****other**** classes ****to** be able to **see**** it ****or**** use ****it**. Your task now is to **implement** the **check**** between **the** end ****command**** and **the** input**.
+
+## Interpreting commands
+
+Once you&#39;ve done that it is time to move on to the **interpreting** of a **command**. Before substituting the comment with some code, we have to **write** the **functionality**** for ****interpreting** a **command**. This functionality is somewhat a **different**** task **from reading input and for this reason we will** use ****another**** class **you&#39;ve already made and** write **the** method ****that**** interprets **a** command**.
+
+It can be called exactly as its purpose and its declaration should be similar to this: ![](data:image/*;base64,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)
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/104.png)
+
+However, in order **to**** write **an** implementation ****for** this **method** we need to **know**** all **the** commands **that our** interpreter ****is able to understand**.
+
+The declaration of a command will be given in the following format:
+
+**Description of the command – actual command and possible parameters**
+
+Here is a list of all of them:
+
+Commands list:
+
+- **mkdir**** directoryName** – create a directory in the current directory
+- **ls (depth)** – traverse the current directory to the given depth
+- **cmp**** absolutePath1 ****absolutePath2** – comparing two files by given two absolute paths
+- **changeDirRel**** relativePath** – change the current directory by a relative path
+- **changeDirAbs**** absolutePath** – change the current directory by an absolute path
+- **readDb**** dataBaseFileName** – read students database by a given name of the database file which is placed in the current folder
+- **filter**** courseName ****poor/average/excellent take 2/10/42/all** – filter students from а given course by a given filteroption and add quantity for the number of students to take or all if you want to take all the students matching the current filter option
+- **order**** courseName ****ascending/descending take 3/26/52/all** – order student from a given course by ascending or descending order and then taking some quantity of the filter or all that match it
+- **download (path of file)** – download a file
+- **downloadAsynch: (path of file)** – download file asinchronously
+- **help** – get help
+- **open** – opens a file
+
+An easy approach is to **check**** if **the** input ****command** corresponds to the ones given in the **commands**** set **. And** if **the given command** exists **, to** check **for the** input ****parameters**. The primary check you may need to perform over the input parameters in each command could be whether the **number**** of ****parameters**** corresponds ****to** the **number**** of ****parameters required by the respective command**. So you&#39;ll probably need this piece of code in each method for calling the given command (data is all the parameters given on the current line, split by a space):
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/105.png)
+
+An approach to **check**** whether **the** command ****is** one of the **possible** can be achieved if we **split** the **input** by a **space** and **check** the **element** with index **0** in a **switch** - **case.**** If **it** enters **one of the cases, we** call **the** corresponding ****method** that **executes** the **given**** command **.** If ****no**** command ****matches** the input, then the default action is a method that **displays** a **message** for an **invalid**** command **.** InterpretCommand ****method** should look something like this:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/106.png)
+
+In all the cases we have a lot of methods that we call which are not yet known and we haven&#39;t talked about. However almost **every**** single ****one** of them **contains** the **check**** for **the** number **of** parameters **. First we are going to** look ****at** the **implementation**** of **the** method **that** displays **an** invalid ****command**** message **. Actually the only thing that we do** in **this** function **is to** display **an** exception **in the** following ****format** : $&quot; **The command &#39;**** {input} ****&#39; is invalid**&quot; ( **Display**** exception ****using** _the_ **OutputWriter** ). We are going to call this method every time when something with the commands or parameters is not ok and notify the user that something went wrong.
+
+Now we have to look at the implementations of the other methods and follow the order in which they were given above.
+
+ **1.**** Open file **– all we need to know here is the name of the file that we have to open and then we** use **the** current ****path** from the **Session Data** to **generate** the **absolute**** path **of the** file **. The** length **of the** data ****must**** be ****2** elements. Finally, we need to know how to open files with their default program, using C# and this is done using the following code:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/107.png)
+
+**2.**** Make directory **– when making a directory, again we need to check if the length of the data array equals 2 and then take the folder name and create such a folder using the functionality in the** IOManager**:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/108.png)
+
+**3.**** Traverse current folder**– here it is not necessary to have any parameters (only**ls **will display** the files and subfolders in the current folder**) or you can have just one parameter (the depth to go in [ls 4]). If the number of elements in the data array is 1, we call the**TraverseDirectory **from the** IOManager **with depth of 0 and if the elements are 2, then the second element should be the depth and we try to parse it. In case of success pass it to the method for traversal.** If the parameter can&#39;t be parsed**, we print an exception message on the output writer using its method Display exception. We should first add the exception we talked about to the ExceptionsMessages class with the name UnableToParseNumber and a message: &quot;The sequence you&#39;ve written is not a valid number.&quot; The code inside the check for whether the elements are two looks something like this:
+
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/109.png)
+
+
+**4.**** Compare content of two files **** – **if the input corresponds to this command, two parameters are expected,** which are the absolute path of the first and the absolute path of the second file **and if there are any mismatches, a new log file is created in the same folder as the second file path. The way we compare two files is already implemented in the** Tester** class, so we just need to call it if all conditions are true:
+ 
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/110.png)
+
+**5.**** Change directory relative **** – **here the path given should be appended to the current path in the** SessionData **and then it is passed to the** change directory absolute **, because an actual absolute path is generated, but we have all of this implemented in the** IOManager** so we are going to use it to change the current directory by a relative path…
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/111.png)
+
+**6.**** Change directory absolute** – the approach now is pretty much the same as in the previous command.
+ 
+ ![Not fount](/C%23Fundamentals/Advanced-CSharp/images/112.png)
+
+ **7.**** Read database**– the parameter needed here for the initialization of the database is a file name from which to read the database of SoftUni. Note that only the name is wanted, which should mean that the file will be searched in the current folder. So maybe we can use the StudentRepository and make a few changes so that our new input comes from a file and not from the console.
+
+First thing you might want to add is a parameter for the public method **InitializeData()** from the student repo so it should look something like this :
+
+public static void InitializeData(string fileName)
+
+However **InitializeData** is just a **façade**** for **the** method ****that**** does **the** actual ****reading** of the data, **so** we need to **add** the **same**** parameter ****in** this **method**** and **then** pass **the** filename ****to** the **ReadData** call:
+
+private static void ReadData(string fileName)
+
+Now it&#39;s time for only a little change in the read data method. First we need to remove the while loop and all the places where we read from the console and finally the input variable. After that you can make a new variable to generate the absolute path and instead checking the Direcotry we will check if the file exists.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/113.png)
+
+If the path exists we are going to do all the processing of the input, so you may **copy all the code that was in the while loop and paste it in the body of the if statement**. Now that you know that there is such a file, you may read it. And after that **wrap everything that was in the while loop in a for loop** , **iterating through all the lines of the file and processing them one by one**. Your code in the if should begin with something like this:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/114.png)
+
+If the path does not exist however, an exception with the name InvalidPath from the ExceptionsMessages is displayed on the OutputWriter. Now that we&#39;ve done all these changes, we can easily call the method from the command interpreter like this.
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/115.png)
+
+**8.**** Get help**– does not need any parameters. Displays some information about all of the commands, so that we can use them easily. We&#39;ve given the whole code for the get help method in the file appended with this lecture. Use it to copy all the printing and not lose time in doing such things. The file is called getHelp.txt.
+**9.**** For the rest of the commands ****–** you may leave the body empty, because we do not have the functionality implemented yet.
+
+So now that we&#39;ve written the functionality for the command interpreter, we can link it to the **InputReader** and we should be finally done. All we have to do is to go back to the input reader and **change** the **comment**** for ****interpreting** the command **with** the **method** that interprets a command from the command interpreter.
+
+CommandInterpreter.InterpredCommand(input);
+
+Now we should be done with the functionality for interpreting commands and we will only extend it further on in future pieces in order to implement the full functionality of our BashSoft.And we should also be ready with the whole piece. The only thing left is to call the StartReadingCommands from the main method, and test all the functionality that we have by now. We&#39;ll leave the part with the testing to you, but we&#39;ll show a few pictures of the current state of the program:
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/116.png)
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/117.png)
+
+![Not fount](/C%23Fundamentals/Advanced-CSharp/images/118.png)
+
+In the next piece we are going to learn how to make more restricted, pattern following data and
+
+filter it easily.
+
+Congratulations! You&#39;ve successfully completed the lab for Manual String Processing.
