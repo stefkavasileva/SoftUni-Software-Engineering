@@ -151,7 +151,7 @@ After the &quot;END&quot; command you should print Logger info which includes st
 | **Input** |
 | --- |
 |2 <br/> ConsoleAppender SimpleLayout CRITICAL <br/> FileAppender XmlLayout <br/> INFO|3/26/2015 2:08:11 PM|Everything seems fine <br/> WARNING|3/26/2015 2:22:13 PM|Warning: ping is too high - disconnect imminent <br/> ERROR|3/26/2015 2:32:44 PM|Error parsing request <br/> CRITICAL|3/26/2015 2:38:01 PM|No connection string found in App.config <br/> FATAL|3/26/2015 2:39:19 PM|mscorlib.dll does not respond <br/> END|
-| **Output*|
+| **Output**|
 |3/26/2015 2:38:01 PM - CRITICAL - No connection string found in App.config <br/> 3/26/2015 2:39:19 PM - FATAL - mscorlib.dll does not respond <br/> Logger info <br/> Appender type: ConsoleAppender, Layout type: SimpleLayout, Report level: CRITICAL, Messages appended: 2  <br/> Appender type: FileAppender, Layout type: XmlLayout, Report level: INFO, Messages appended: 5, File size: 37526|
 
 ## Problem 2.Blobs
@@ -227,11 +227,11 @@ Each command should progress the game with **1 turn** after it is executed.
 
 The application should support the creation of blobs with **any behavior** and **attack**.
 
-##Task 6 - Input / Output Independence
+## Task 6 - Input / Output Independence
 
 The application should be designed to work with **any input source** and **output destination**. In other words, it should **NOT** depend on the console.
 
-##\* Bonus Task 7 - Blob Events
+## \* Bonus Task 7 - Blob Events
 
 Implement a fifth command:
 
