@@ -10,17 +10,17 @@ public class Team
     public Team(string name)
     {
         this.Name = name;
-        this.players = new List<Player>();
+        this.Players = new List<Player>();
     }
 
     public string Name
     {
-        get { return this.name; }
+        get => this.name;
         private set
         {
             if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException($"A name should not be empty.");
+                throw new ArgumentException(ErrorMessages.InvalidName);
             }
 
             this.name = value;
@@ -29,14 +29,11 @@ public class Team
 
     private IList<Player> Players
     {
-        get { return this.players; }
-        set { this.players = value; }
+        get => this.players;
+        set => this.players = value;
     }
 
-    public int Rating
-    {
-        get { return CalculateTeamRating(); }
-    }
+    public int Rating => CalculateTeamRating();
 
     private int CalculateTeamRating()
     {
@@ -44,22 +41,18 @@ public class Team
         {
             return (int)Math.Round(this.players.Average(p => p.Stats));
         }
-        else
-        {
-            return 0;
-        }
+
+        return 0;
     }
 
-    public void AddPlayer(Player player)
-    {
-        this.players.Add(player);
-    }
+    public void AddPlayer(Player player) => this.players.Add(player);
+
 
     public void RemovePlayer(string player)
     {
         if (!this.players.Any(p => p.Name == player))
         {
-            throw new ArgumentException($"Player {player} is not in {this.Name} team. ");
+            throw new ArgumentException(string.Format(ErrorMessages.NotExistingPlayer,player,this.name));
         }
 
         Player pl = this.players.FirstOrDefault(p => p.Name == player);

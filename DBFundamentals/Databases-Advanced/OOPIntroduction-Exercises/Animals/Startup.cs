@@ -20,7 +20,7 @@ public class Startup
 
             if (animalType is null)
             {
-                throw new ArgumentException("Invalid input!");
+                throw new ArgumentException(ErrorMessages.InvalidInput);
             }
 
             var animalArgs = Console.ReadLine().Split();

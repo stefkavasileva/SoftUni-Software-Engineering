@@ -9,20 +9,6 @@ public class Player
     private int shooting;
     private int sprint;
 
-    public string Name
-    {
-        get { return this.name; }
-        private set
-        {
-            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentException($"A name should not be empty.");
-            }
-
-            this.name = value;
-        }
-    }
-
     public Player(string name, int endurance, int sprint, int dribble, int passing, int shooting)
     {
         this.Name = name;
@@ -33,16 +19,30 @@ public class Player
         this.Shooting = shooting;
     }
 
-    public int Stats { get { return CalculateAverageStats(); } }
+    public string Name
+    {
+        get => this.name;
+        private set
+        {
+            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException(ErrorMessages.InvalidName);
+            }
+
+            this.name = value;
+        }
+    }
+
+    public int Stats => CalculateAverageStats();
 
     private int Dribble
     {
-        get { return this.dribble; }
+        get => this.dribble;
         set
         {
             if (value < 0 || value > 100)
             {
-                throw new ArgumentException($"Dribble should be between 0 and 100.");
+                throw new ArgumentException(ErrorMessages.InvalidDribbleRange);
             }
 
             this.dribble = value;
@@ -51,12 +51,12 @@ public class Player
 
     private int Endurance
     {
-        get { return this.endurance; }
+        get => this.endurance;
         set
         {
             if (value < 0 || value > 100)
             {
-                throw new ArgumentException($"Endurance should be between 0 and 100.");
+                throw new ArgumentException(ErrorMessages.InvalidEnduranceRange);
             }
 
             this.endurance = value;
@@ -65,12 +65,12 @@ public class Player
 
     private int Passing
     {
-        get { return this.passing; }
+        get => this.passing;
         set
         {
             if (value < 0 || value > 100)
             {
-                throw new ArgumentException($"Passing should be between 0 and 100.");
+                throw new ArgumentException(ErrorMessages.InvalidPassingRange);
             }
 
             this.passing = value;
@@ -79,12 +79,12 @@ public class Player
 
     private int Shooting
     {
-        get { return this.shooting; }
+        get => this.shooting;
         set
         {
             if (value < 0 || value > 100)
             {
-                throw new ArgumentException($"Shooting should be between 0 and 100.");
+                throw new ArgumentException(ErrorMessages.InvalidShootingRange);
             }
 
             this.shooting = value;
@@ -93,12 +93,12 @@ public class Player
 
     private int Sprint
     {
-        get { return this.sprint; }
+        get => this.sprint;
         set
         {
             if (value < 0 || value > 100)
             {
-                throw new ArgumentException($"Sprint should be between 0 and 100.");
+                throw new ArgumentException(ErrorMessages.InvalidSprintRange);
             }
 
             this.sprint = value;

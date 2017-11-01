@@ -25,7 +25,7 @@ public class Startup
                     case "Add":
                         if (!teams.Any(t => t.Name == tokens[1]))
                         {
-                            throw new ArgumentException($"Team {tokens[1]} does not exist.");
+                            throw new ArgumentException(string.Format(ErrorMessages.NotExistingTeam,tokens[1]));
                         }
                         else
                         {
@@ -43,7 +43,7 @@ public class Startup
                     case "Rating":
                         if (!teams.Any(t => t.Name == tokens[1]))
                         {
-                            throw new ArgumentException($"Team {tokens[1]} does not exist.");
+                            throw new ArgumentException(string.Format(ErrorMessages.NotExistingTeam,tokens[1]));
                         }
                         else
                         {

@@ -6,6 +6,7 @@ public class Startup
 {
     public static void Main()
     {
+        //87/100
         var songs = new List<Song>();
 
         var songsCount = int.Parse(Console.ReadLine());

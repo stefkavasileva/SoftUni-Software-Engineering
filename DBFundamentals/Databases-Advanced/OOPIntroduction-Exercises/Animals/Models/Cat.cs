@@ -1,6 +1,4 @@
-﻿using System;
-
-public class Cat : Animal
+﻿public class Cat : Animal
 {
     public Cat(string name, int age, string gender) 
         : base(name, age, gender)
@@ -9,7 +7,7 @@ public class Cat : Animal
 
     public override string ProduceSound()
     {
-       return "Meow meow";
+       return Constats.CatSound;
     }
 }
 

@@ -6,9 +6,7 @@ public class Startup
 {
     public static void Main()
     {
-
         var count = int.Parse(Console.ReadLine());
-
         var cars = new List<Car>();
 
         for (int i = 0; i < count; i++)
@@ -24,6 +22,7 @@ public class Startup
             var cargo = new Cargo(cargoType, cargoWeight);
             var tires = new Tire[4];
             var counter = 0;
+
             for (int j = 0; j < 8; j += 2)
             {
                 var tirePressure = double.Parse(carInfo[5 + j]);
@@ -39,8 +38,8 @@ public class Startup
         }
 
         var result = new List<Car>();
-
         var cargotype = Console.ReadLine();
+
         if (cargotype.Equals("fragile"))
         {
             result = cars.Where(c => c.Cargo.Type.Equals("fragile") && c.Tires.Any(t => t.Pressure < 1)).ToList();

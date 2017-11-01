@@ -42,10 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Player.cs" />
+    <Compile Include="Utilites\ErrorMessages.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Team.cs" />
+    <Compile Include="Models\Team.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

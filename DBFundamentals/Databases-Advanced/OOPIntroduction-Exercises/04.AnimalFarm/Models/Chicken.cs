@@ -16,21 +16,19 @@ public class Chicken
 
     public double ProductPerDay
     {
-        get { return this.productPerDay; }
-        private set { this.productPerDay = CalculateProductPerDay(); }
+        get => this.productPerDay; 
+        private set => this.productPerDay = CalculateProductPerDay(); 
     }
 
     public string Name
     {
-        get
-        {
-            return this.name;
-        }
+        get => this.name;
+        
         private set
         {
             if (string.IsNullOrWhiteSpace(value) || value.Equals(" "))
             {
-                throw new ArgumentException($"Name cannot be empty.");
+                throw new ArgumentException(ErrrorMessages.InvalidName);
             }
 
             this.name = value;
@@ -47,7 +45,7 @@ public class Chicken
         {
             if (value < 0 || value > 15)
             {
-                throw new ArgumentException($"Age should be between 0 and 15.");
+                throw new ArgumentException(ErrrorMessages.InvalidAge);
             }
 
             this.age = value;

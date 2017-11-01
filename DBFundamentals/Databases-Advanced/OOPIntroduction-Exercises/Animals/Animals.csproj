@@ -42,14 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="Frog.cs" />
-    <Compile Include="Kitten.cs" />
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Cat.cs" />
+    <Compile Include="Models\Dog.cs" />
+    <Compile Include="Models\Frog.cs" />
+    <Compile Include="Models\Kitten.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tomcat.cs" />
+    <Compile Include="Models\Tomcat.cs" />
+    <Compile Include="Utilities\Constats.cs" />
+    <Compile Include="Utilities\ErrorMessages.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

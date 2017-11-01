@@ -42,12 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Cargo.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Cargo.cs" />
+    <Compile Include="Models\Engine.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tire.cs" />
+    <Compile Include="Models\Tire.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

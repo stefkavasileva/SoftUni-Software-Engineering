@@ -42,18 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InvalidArtistNameException.cs" />
-    <Compile Include="InvalidSongException.cs" />
-    <Compile Include="InvalidSongLengthException.cs" />
-    <Compile Include="InvalidSongMinutesException.cs" />
-    <Compile Include="InvalidSongNameException.cs" />
-    <Compile Include="InvalidSongSecondsException.cs" />
-    <Compile Include="Song.cs" />
+    <Compile Include="Models\InvalidArtistNameException.cs" />
+    <Compile Include="Models\InvalidSongException.cs" />
+    <Compile Include="Models\InvalidSongLengthException.cs" />
+    <Compile Include="Models\InvalidSongMinutesException.cs" />
+    <Compile Include="Models\InvalidSongNameException.cs" />
+    <Compile Include="Models\InvalidSongSecondsException.cs" />
+    <Compile Include="Models\Song.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

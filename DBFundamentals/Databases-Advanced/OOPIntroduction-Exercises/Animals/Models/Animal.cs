@@ -21,7 +21,7 @@ public abstract class Animal
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("Invalid input!");
+                throw new ArgumentException(ErrorMessages.InvalidInput);
             }
 
             this.name = value;
@@ -35,7 +35,7 @@ public abstract class Animal
         {
             if (string.IsNullOrWhiteSpace(value.ToString()) || value < 0)
             {
-                throw new ArgumentException("Invalid input!");
+                throw new ArgumentException(ErrorMessages.InvalidInput);
             }
 
             this.age = value;
@@ -49,7 +49,7 @@ public abstract class Animal
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("Invalid input!");
+                throw new ArgumentException(ErrorMessages.InvalidInput);
             }
 
             this.gender = value;
