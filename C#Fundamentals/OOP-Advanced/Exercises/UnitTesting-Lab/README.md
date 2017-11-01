@@ -36,9 +36,8 @@ Create the following tests:
 - Dead Dummy can give XP
 - Alive Dummy can&#39;t give XP
 
-### Hints
-
-Follow the logic of the previous problem
+> ### Hints
+> Follow the logic of the previous problem
 
 ## 3.Refactor Tests
 
@@ -47,20 +46,16 @@ Refactor the tests for **Axe** and **Dummy** classes
 Make sure that:
 
 - **Names** of test methods are **descriptive**
-- You use **appropriate**** assertions** (assert equals vs assert true)
-- You use **assertion**** messages**
+- You use **appropriate** **assertions** (assert equals vs assert true)
+- You use **assertion** **messages**
 - There are **no magic numbers**
 - There is **no code duplication** (Don&#39;t Repeat Yourself)
 
-### Hints
-
-Extract constants and private fields for **Axe** class
-
-Create a method that executes **before each test**
-
-Make use of constants and private fields, as well as add assertion messages
-
-Follow the same logic for other test methods and **TestDummy** class
+> ### Hints
+> Extract constants and private fields for **Axe** class
+> Create a method that executes **before each test**
+> Make use of constants and private fields, as well as add assertion messages
+> Follow the same logic for other test methods and **TestDummy** class
 
 # 3.Part II: Dependencies
 
@@ -77,13 +72,10 @@ To do this, you need to:
 
 Create fake Weapon and fake Dummy for the test
 
-### Hints
-
-Create **I**** Weapon and ITarget **interface. Modify implementation methods to** make use of interfaces. **Modify both** Axe **and** Dummy** classes.
-
-Use **Dependency Injection** for Hero class
-
-Create **HeroTests** class and test gaining XP functionality by faking Weapon and Target classes
+> ### Hints
+> Create **I  Weapon and ITarget** interface. Modify implementation methods to** make use of interfaces. Modify both **Axe** and **Dummy** classes.
+> Use **Dependency Injection** for Hero class
+> Create **HeroTests** class and test gaining XP functionality by faking Weapon and Target classes
 
 ## 5.Mocking
 
