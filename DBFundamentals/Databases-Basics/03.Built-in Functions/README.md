@@ -2,7 +2,7 @@
 
 This document defines the **exercise assignments** for the [&quot;Databases Basics - MSSQL&quot; course @ Software University.](https://softuni.bg/courses/databases-basics-ms-sql-server)
 
-## Problem 2.Part I – Queries for SoftUni Database
+## Part I – Queries for SoftUni Database
 
 ## Problem 1.Find Names of All Employees by First Name
 
@@ -120,7 +120,7 @@ Write a SQL query to find the **names of all employees** whose **last name** is 
 | Diane | Glimp |
 | … | … |
 
-## Problem 3.Part II – Queries for Geography Database
+## Part II – Queries for Geography Database
 
 ## Problem 10.Countries Holding &#39;A&#39; 3 or More Times
 
@@ -147,7 +147,7 @@ Combine all peak names with all river names, so that the **last letter** of each
 | Banski Suhodol | Lena | banski suhodolena |
 | … | … | … |
 
-## Problem 4.Part III – Queries for Diablo Database
+## Part III – Queries for Diablo Database
 
 ## Problem 12.Games from 2011 and 2012 year
 
@@ -205,7 +205,7 @@ Find all games with part of the day and duration sorted by game name alphabetica
 | Acaeria | Evening | Long |
 | … | … | … |
 
-## Problem 5.Part IV – Date Functions Queries
+## Part IV – Date Functions Queries
 
 ## Problem 16. Orders Table
 
