@@ -22,5 +22,5 @@
 
 ## Exams
 
-> <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/OOP-Advanced/Exams/Hell-Skeleton" > HELL </a>
-> <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/OOP-Advanced/Exams/LastArmy-20.08.17" > Last Army </a>
+- 1. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/OOP-Advanced/Exams/Hell-Skeleton" > HELL </a>
+- 2. <a href="https://github.com/stefkavasileva/SoftUni-Software-Engineering/tree/master/C%23Fundamentals/OOP-Advanced/Exams/LastArmy-20.08.17" > Last Army </a>
