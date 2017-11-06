@@ -7,7 +7,7 @@ public class StartUp
     {
         var builder = new SqlConnectionStringBuilder
         {
-            ["Data Source"] = "DESKTOP-P3EEUC7\\SQLEXPRESS",
+            ["Data Source"] = ".",
             ["Integrated Security"] = true
         };
 
