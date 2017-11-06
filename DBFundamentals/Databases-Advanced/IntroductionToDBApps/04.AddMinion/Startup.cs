@@ -32,7 +32,7 @@ public class Startup
 
             if (!reader.Read())
             {               
-                reader.Close();;
+                reader.Close();
                 // add town to databasere
                 var insertTownSql = "INSERT INTO Towns(Name) VALUES (@townName)";
                command = new SqlCommand(insertTownSql, connection);
