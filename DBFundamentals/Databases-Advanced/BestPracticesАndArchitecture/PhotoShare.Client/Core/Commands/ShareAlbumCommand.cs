@@ -30,24 +30,21 @@
                     throw new ArgumentException($"User {username} not found!");
                 }
 
-                var role = new Role();
-                try
-                {
-                    role = (Role)Enum.Parse(typeof(Color), permission);
-                }
-                catch (Exception e)
-                {
+                bool isPermissionValid = Enum.TryParse(data[2], true, out Role permissionRole);
+
+                if (isPermissionValid)
+                {                 
                     throw new ArgumentException("Permission must be either “Owner” or “Viewer”!");
                 }
-
+                
                 var user = context.Users.Single(u => u.Username.Equals(username));
                 var album = context.Albums.Single(a => a.Id.Equals(albumId));
 
-                user.AlbumRoles.Add(new AlbumRole { Album = album, User = user, Role = role });
+                user.AlbumRoles.Add(new AlbumRole { Album = album, User = user, Role = (Role)Enum.Parse(typeof(Role),permission) });
                 context.SaveChanges();
-            }
 
-            return $"Username {username} added to album {albumId} ({permission})";
+                return $"Username {username} added to album {album.Name} ({permission})";
+            }
         }
     }
 }

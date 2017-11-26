@@ -4,6 +4,8 @@
     using System.Linq;
     using Data;
     using Contracts;
+    using Microsoft.EntityFrameworkCore;
+    using Models;
 
     public class AcceptFriendCommand : ICommand
     {
@@ -15,26 +17,53 @@
 
             using (var context = new PhotoShareContext())
             {
-                if (!context.Users.Any(x => x.Username.Equals(firstUsername)))
+                var firstUser = context
+                    .Users
+                    .Include(u => u.FriendsAdded)
+                    .ThenInclude(f => f.Friend)
+                    .Include(u => u.AddedAsFriendBy)
+                    .ThenInclude(f => f.Friend)
+                    .Single(u => u.Username.Equals(firstUsername));
+
+                if (firstUser is null)
                 {
                     throw new ArgumentException($"{firstUsername} not found!");
                 }
 
-                if (!context.Users.Any(x => x.Username.Equals(secondUsername)))
+                var secondUser = context
+                    .Users
+                    .Include(u => u.FriendsAdded)
+                    .ThenInclude(f => f.Friend)
+                    .Include(u => u.AddedAsFriendBy)
+                    .ThenInclude(f => f.Friend)
+                    .SingleOrDefault(u => u.Username.Equals(secondUsername));
+
+                if (secondUser is null)
                 {
                     throw new ArgumentException($"{secondUsername} not found!");
                 }
 
-                if (context.Friendships.Any(x =>
-                    x.User.Username.Equals(firstUsername) && x.Friend.Username.Equals(secondUsername)))
+                if (firstUser.FriendsAdded.Any(f => f.Friend.Username.Equals(secondUsername)))
                 {
-                    throw new InvalidOperationException($"{secondUsername} is already a friend to {firstUsername}");
+                    throw new InvalidOperationException($"{secondUser} is already a friend to {firstUsername}!");
                 }
 
-                /////////There is no such friend request
-            }
+                if (!firstUser.FriendsAdded.Any(f => f.Friend.Username.Equals(secondUsername)))
+                {
+                    throw new InvalidOperationException($"{secondUsername} has not added {firstUsername} as a friend!");
+                }
 
-            return $"{firstUsername} accepted {secondUsername} as a friend";
+                var friendship = new Friendship
+                {
+                    User = firstUser,
+                    Friend = secondUser
+                };
+
+                firstUser.FriendsAdded.Add(friendship);
+                context.SaveChanges();
+
+                return $"{firstUsername} accepted {secondUsername} as a friend.";
+            }
         }
     }
 }

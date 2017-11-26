@@ -25,58 +25,76 @@ namespace PhotoShare.Client.Core.Commands
             {
                 if (!context.Users.Any(x => x.Username == username))
                 {
-                    throw new ArgumentException("User [username] not found!");
+                    throw new ArgumentException($"User {username} not found!");
                 }
 
-                var propertyInfos = context.Users
+                var currentUser = context.Users.Single(u => u.Username.Equals(username));
+
+                var propertyInfos = currentUser
                     .GetType()
-                    .GetProperties(BindingFlags.Instance | BindingFlags.Public);
+                    .GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+                var exeption = $"Value {newValue} not valid.{Environment.NewLine}";
 
                 if (!propertyInfos.Any(p => p.Name.Equals(propertyName)))
                 {
-                    throw new ArgumentException($"Property {propertyName} not supported!");
+                    throw new ArgumentException($"{exeption}Property {propertyName} not supported!");
                 }
 
-                var currentUser = context.Users.Single(u => u.Username == username);
-                var currentProperty = currentUser.GetType().GetProperty(propertyName);
+                if (propertyName.ToLower().Equals("password"))
+                {
+                    if (!newValue.Any(char.IsLower) || !newValue.Any(char.IsDigit))
+                    {
+                        throw new ArgumentException(
+                            $"Value {newValue} not valid. Password must include a lower letter and a digit.{Environment.NewLine}Invalid Password");
 
-                if (currentProperty.Name.ToLower().Equals(nameof(currentUser.Username.ToLower)))
+                    }
+
+                    currentUser.Password = newValue;
+                }
+                else if (propertyName.ToLower().Equals("borntown"))
                 {
-                    throw new ArgumentException("Cannot change username");
+                    var newBornTown = context.Towns.Single(t => t.Name.Equals(newValue));
+
+                    if (newBornTown is null)
+                    {
+                        throw new ArgumentException(
+                            $"Value {newValue} not valid.{Environment.NewLine}Town {newValue} not found!");
+                    }
+
+                    currentUser.BornTown = newBornTown;
+                }
+                else if (propertyName.ToLower().Equals("currenttown"))
+                {
+                    var newCurrentTown = context.Towns.Single(t => t.Name.Equals(newValue));
+
+                    if (newCurrentTown is null)
+                    {
+                        throw new ArgumentException(
+                            $"Value {newValue} not valid.{Environment.NewLine}Town {newValue} not found!");
+                    }
+
+                    currentUser.CurrentTown = newCurrentTown;
+                }
+                else
+                {
+                    return $"Property {propertyName} not supported!";
                 }
 
-                if (currentProperty.Name.Equals(nameof(currentUser.Password))
-                    && (!newValue.Any(x => char.IsDigit(x)) || !newValue.Any(x => char.IsLetter(x))))
-                {
-                    throw new ArgumentException("Invalid Password");
-                }
-
-                if (propertyName.Equals(nameof(currentUser.BornTown)) || propertyName.Equals(
-                        nameof(currentUser.CurrentTown)))
-                {
-                    CheckForTheTown(context, newValue);
-                }
-
-                try
-                {
-                    currentProperty.SetValue(currentProperty, newValue);
-                }
-                catch (Exception exception)
-                {
-                    throw new ArgumentException($"Value {newValue} not valid.{exception.InnerException.Message}");
-                }
 
                 context.SaveChanges();
-
-                return $"User {username} {propertyName} is {newValue}.";
             }
+
+            return $"User {username} {propertyName} is {newValue}.";
         }
+
 
         private void CheckForTheTown(PhotoShareContext context, string newValue)
         {
             if (!context.Towns.Any(t => t.Name == newValue))
             {
-                throw new ArgumentException($"Town {newValue} not found!”");
+                throw new ArgumentException(
+                    $"Value {newValue} not valid.{Environment.NewLine}Town {newValue} not found!");
             }
         }
     }

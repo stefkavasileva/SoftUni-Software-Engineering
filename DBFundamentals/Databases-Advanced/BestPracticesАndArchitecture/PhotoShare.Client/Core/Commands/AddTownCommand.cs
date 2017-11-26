@@ -26,7 +26,7 @@
                 context.Towns.Add(town);
                 context.SaveChanges();
 
-                return townName + " was added to database!";
+                return $"{townName} was added to database!";
             }
         }
     }

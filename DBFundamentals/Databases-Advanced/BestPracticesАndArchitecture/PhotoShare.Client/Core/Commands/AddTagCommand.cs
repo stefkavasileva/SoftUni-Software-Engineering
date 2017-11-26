@@ -26,7 +26,7 @@
                 context.SaveChanges();
             }
 
-            return tagName + " was added successfully to database!";
+            return $"Tag {tagName} was added successfully to database!";
         }
     }
 }

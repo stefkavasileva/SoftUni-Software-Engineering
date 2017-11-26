@@ -5,7 +5,6 @@
     using Data;
     using Models;
     using Contracts;
-
     public class AddFriendCommand : ICommand
     {
         // AddFriend <username1> <username2>
@@ -26,14 +25,14 @@
                     throw new ArgumentException($"{secondUsername} not found!");
                 }
 
+                var firstUser = context.Users.Single(u => u.Username.Equals(firstUsername));
+                var secondUser = context.Users.Single(u => u.Username.Equals(secondUsername));
+
                 if (context.Friendships.Any(x =>
-                    x.User.Username.Equals(firstUsername) && x.Friend.Username.Equals(secondUsername)))
+                    x.User.Id.Equals(firstUser.Id) && x.Friend.Id.Equals(secondUser.Id)))
                 {
                     throw new InvalidOperationException($"{secondUsername} is already a friend to {firstUsername}");
                 }
-
-                var firstUser = context.Users.Single(u => u.Username.Equals(firstUsername));
-                var secondUser = context.Users.Single(u => u.Username.Equals(secondUsername));
 
                 var friendship = new Friendship { User = firstUser, Friend = secondUser };
 

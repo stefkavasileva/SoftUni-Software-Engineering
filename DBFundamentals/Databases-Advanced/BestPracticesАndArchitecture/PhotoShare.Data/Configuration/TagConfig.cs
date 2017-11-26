@@ -2,7 +2,6 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
     using Models;
 
     internal class TagConfig : IEntityTypeConfiguration<Tag>

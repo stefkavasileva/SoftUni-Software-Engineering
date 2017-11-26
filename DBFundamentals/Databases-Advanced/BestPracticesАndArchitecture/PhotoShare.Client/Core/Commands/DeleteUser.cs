@@ -14,7 +14,7 @@
             using (var context = new PhotoShareContext())
             {
                 var user = context.Users.Single(u => u.Username == username);
-                if (user == null)
+                if (user is null)
                 {
                     throw new InvalidOperationException($"User with {username} was not found!");
                 }

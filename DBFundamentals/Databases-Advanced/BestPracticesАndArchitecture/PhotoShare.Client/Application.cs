@@ -2,7 +2,6 @@
 {
     using Core;
     using Data;
-    using Models;
 
     public class Application
     {

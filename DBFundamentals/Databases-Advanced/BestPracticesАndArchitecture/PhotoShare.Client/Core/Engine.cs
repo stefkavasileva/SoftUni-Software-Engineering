@@ -17,9 +17,9 @@
             {
                 try
                 {
-                    string input = Console.ReadLine().Trim();
-                    string[] data = input.Split(' ');
-                    string result = this.commandDispatcher.DispatchCommand(data);
+                    var input = Console.ReadLine().Trim();
+                    var data = input.Split(' ');
+                    var result = this.commandDispatcher.DispatchCommand(data);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
