@@ -9,8 +9,8 @@
         {
             ResetDatabase();
 
-            CommandDispatcher commandDispatcher = new CommandDispatcher();
-            Engine engine = new Engine(commandDispatcher);
+            var commandDispatcher = new CommandDispatcher();
+            var engine = new Engine(commandDispatcher);
             engine.Run();
         }
 

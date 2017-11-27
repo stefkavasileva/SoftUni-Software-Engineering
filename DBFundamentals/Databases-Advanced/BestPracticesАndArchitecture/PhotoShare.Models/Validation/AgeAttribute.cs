@@ -1,7 +1,8 @@
-﻿namespace PhotoShare.Models.Validation
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace PhotoShare.Models.Validation
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     internal class AgeAttribute : ValidationAttribute
     {
@@ -15,7 +16,7 @@
                 return true;
             }
 
-            int age = int.Parse(value.ToString());
+            var age = int.Parse(value.ToString());
             return age >= MinAge && age <= MaxAge;
         }
     }

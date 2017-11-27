@@ -1,7 +1,7 @@
-﻿namespace PhotoShare.Models
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace PhotoShare.Models
+{
     public class Town
     {
         public Town()

@@ -1,24 +1,29 @@
-﻿namespace PhotoShare.Client.Core.Commands
-{
-    using Models;
-    using Data;
-    using Utilities;
-    using Contracts;
-    using System;
-    using System.Linq;
+﻿using System;
+using System.Linq;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
+using PhotoShare.Models;
 
-    public class AddTagCommand : ICommand
+namespace PhotoShare.Client.Core.Commands
+{
+    public class AddTagCommand : Command
     {
+        private const int DataLength = 1;
         // AddTag <tag>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length == DataLength)
+            {
+                throw new ArgumentException(ErrorMessages.InvalidCommandName);
+            }
+
             var tagName = data[1].ValidateOrTransform();
 
             using (var context = new PhotoShareContext())
             {
                 if (context.Tags.Any(t => t.Name == tagName))
                 {
-                    throw new ArgumentException($"Tag {tagName} exists!");
+                    throw new ArgumentException(string.Format(ErrorMessages.ExistingTag, tagName));
                 }
 
                 context.Tags.Add(new Tag(tagName));
@@ -26,7 +31,7 @@
                 context.SaveChanges();
             }
 
-            return $"Tag {tagName} was added successfully to database!";
+            return string.Format(Messages.AddedTag, tagName);
         }
     }
 }

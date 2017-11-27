@@ -1,9 +1,9 @@
-﻿namespace PhotoShare.Models.Validation
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
+namespace PhotoShare.Models.Validation
+{
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     internal class PasswordAttribute : ValidationAttribute
     {
@@ -27,7 +27,7 @@
 
         public override bool IsValid(object value)
         {
-            string password = value.ToString();
+            var password = value.ToString();
             if (password.Length < this.minLength || password.Length > this.maxLength)
             {
                 return false;

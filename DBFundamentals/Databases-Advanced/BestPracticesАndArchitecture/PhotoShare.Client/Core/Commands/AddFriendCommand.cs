@@ -1,37 +1,44 @@
-﻿namespace PhotoShare.Client.Core.Commands
+﻿using System;
+using System.Linq;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
+using PhotoShare.Models;
+
+namespace PhotoShare.Client.Core.Commands
 {
-    using System;
-    using System.Linq;
-    using Data;
-    using Models;
-    using Contracts;
-    public class AddFriendCommand : ICommand
+    public class AddFriendCommand : Command
     {
+        private const int DataLength = 3;
+
         // AddFriend <username1> <username2>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length != DataLength)
+            {
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidCommandName, nameof(AddFriendCommand)));
+            }
+
             var firstUsername = data[1];
             var secondUsername = data[2];
 
             using (var context = new PhotoShareContext())
             {
-                if (!context.Users.Any(x => x.Username.Equals(firstUsername)))
-                {
-                    throw new ArgumentException($"{firstUsername} not found!");
-                }
-
-                if (!context.Users.Any(x => x.Username.Equals(secondUsername)))
-                {
-                    throw new ArgumentException($"{secondUsername} not found!");
-                }
+                CheckUser(context, firstUsername);
+                CheckUser(context, secondUsername);
 
                 var firstUser = context.Users.Single(u => u.Username.Equals(firstUsername));
+
+                if (!firstUser.Username.Equals(Session.User.Username))
+                {
+                    throw new InvalidOperationException(ErrorMessages.InvalidCredentials);
+                }
+
                 var secondUser = context.Users.Single(u => u.Username.Equals(secondUsername));
 
                 if (context.Friendships.Any(x =>
                     x.User.Id.Equals(firstUser.Id) && x.Friend.Id.Equals(secondUser.Id)))
                 {
-                    throw new InvalidOperationException($"{secondUsername} is already a friend to {firstUsername}");
+                    throw new InvalidOperationException(string.Format(ErrorMessages.UsersAreAlreadyFriends, secondUsername, firstUsername));
                 }
 
                 var friendship = new Friendship { User = firstUser, Friend = secondUser };
@@ -40,7 +47,15 @@
                 context.SaveChanges();
             }
 
-            return $"Friend {firstUsername} added to {secondUsername}";
+            return string.Format(Messages.AcceptUserToFriendList, firstUsername, secondUsername);
+        }
+
+        private void CheckUser(PhotoShareContext context, string username)
+        {
+            if (!context.Users.Any(x => x.Username.Equals(username)))
+            {
+                throw new ArgumentException(string.Format(ErrorMessages.NonExistentUser, username));
+            }
         }
     }
 }

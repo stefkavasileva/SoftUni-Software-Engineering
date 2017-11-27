@@ -1,16 +1,24 @@
-﻿namespace PhotoShare.Client.Core.Commands
-{
-    using System;
-    using System.Linq;
-    using Data;
-    using Models;
-    using Contracts;
+﻿using System;
+using System.Linq;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
+using PhotoShare.Models;
 
-    public class AddTagToCommand : ICommand
+namespace PhotoShare.Client.Core.Commands
+{
+    public class AddTagToCommand : Command
     {
+        private const char TagPrefix = '#';
+        private const int DataLength = 2;
+
         // AddTagTo <albumName> <tag>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length < DataLength)
+            {
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidCommandName, nameof(AddFriendCommand)));
+            }
+
             var albumName = data[1];
             var tagName = data[2];
 
@@ -18,11 +26,11 @@
             {
                 if (!context.Albums.Any(a => a.Name == albumName) || !context.Tags.Any(t => t.Name == "#" + tagName))
                 {
-                    throw new ArgumentException("Either tag or album do not exist!");
+                    throw new ArgumentException(ErrorMessages.NonExistingTagOrAlbum);
                 }
 
                 var album = context.Albums.Single(a => a.Name.Equals(albumName));
-                var tag = context.Tags.Single(t => t.Name.Equals("#" + tagName));
+                var tag = context.Tags.Single(t => t.Name.Equals(TagPrefix + tagName));
 
                 var albumTag = new AlbumTag { Album = album, Tag = tag };
 
@@ -30,7 +38,7 @@
                 context.SaveChanges();
             }
 
-            return $"Tag {tagName} added to {albumName}!";
+            return string.Format(Messages.AddedTagToAlbum, tagName, albumName);
         }
     }
 }

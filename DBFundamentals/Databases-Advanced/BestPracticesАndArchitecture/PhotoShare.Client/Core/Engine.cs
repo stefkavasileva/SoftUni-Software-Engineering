@@ -1,7 +1,7 @@
-﻿namespace PhotoShare.Client.Core
-{
-    using System;
+﻿using System;
 
+namespace PhotoShare.Client.Core
+{
     public class Engine
     {
         private readonly CommandDispatcher commandDispatcher;

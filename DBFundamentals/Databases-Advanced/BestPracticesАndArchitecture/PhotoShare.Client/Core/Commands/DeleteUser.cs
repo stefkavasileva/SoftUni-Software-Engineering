@@ -1,27 +1,40 @@
-﻿namespace PhotoShare.Client.Core.Commands
-{
-    using Data;
-    using System;
-    using System.Linq;
-    using Contracts;
+﻿using System;
+using System.Linq;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
 
-    public class DeleteUser : ICommand
+namespace PhotoShare.Client.Core.Commands
+{
+    public class DeleteUserCommand : Command
     {
+        private const int DataLength = 2;
+
         // DeleteUser <username>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length != DataLength)
+            {
+                throw new ArgumentException(ErrorMessages.InvalidCommandName);
+            }
+
             var username = data[1];
+
             using (var context = new PhotoShareContext())
             {
                 var user = context.Users.Single(u => u.Username == username);
                 if (user is null)
                 {
-                    throw new InvalidOperationException($"User with {username} was not found!");
+                    throw new InvalidOperationException(string.Format(ErrorMessages.NonExistentUser, username));
+                }
+
+                if (!user.Username.Equals(Session.User.Username))
+                {
+                    throw new InvalidOperationException(ErrorMessages.InvalidCredentials);
                 }
 
                 if (user.IsDeleted is null || user.IsDeleted.Value)
                 {
-                    throw new InvalidOperationException($"User {username} is already deleted!");
+                    throw new InvalidOperationException(string.Format(ErrorMessages.UserIsAlreadyDeleted, username));
                 }
 
                 user.IsDeleted = true;

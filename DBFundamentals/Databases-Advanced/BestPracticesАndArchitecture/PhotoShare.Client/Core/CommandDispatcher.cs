@@ -1,10 +1,11 @@
-﻿namespace PhotoShare.Client.Core
-{
-    using System;
-    using System.Linq;
-    using System.Reflection;
-    using Contracts;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using PhotoShare.Client.Core.Contracts;
+using PhotoShare.Client.Utilities;
 
+namespace PhotoShare.Client.Core
+{
     public class CommandDispatcher
     {
         public string DispatchCommand(string[] commandParameters)
@@ -18,7 +19,7 @@
 
             if (commandType is null)
             {
-                throw new InvalidOperationException($"Command {inputCommand} not valid!");
+                throw new InvalidOperationException(string.Format(ErrorMessages.InvalidCommandName, inputCommand));
             }
 
             var command = (ICommand)Activator.CreateInstance(commandType);

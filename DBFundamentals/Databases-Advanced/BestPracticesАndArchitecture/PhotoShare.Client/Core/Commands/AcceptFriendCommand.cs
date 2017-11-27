@@ -1,17 +1,24 @@
-﻿namespace PhotoShare.Client.Core.Commands
-{
-    using System;
-    using System.Linq;
-    using Data;
-    using Contracts;
-    using Microsoft.EntityFrameworkCore;
-    using Models;
+﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
+using PhotoShare.Models;
 
-    public class AcceptFriendCommand : ICommand
+namespace PhotoShare.Client.Core.Commands
+{
+    public class AcceptFriendCommand : Command
     {
+        private const int DataLength = 3;
+
         // AcceptFriend <username1> <username2>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length != DataLength)
+            {
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidCommandName, nameof(AcceptFriendCommand)));
+            }
+
             var firstUsername = data[1];
             var secondUsername = data[2];
 
@@ -27,7 +34,12 @@
 
                 if (firstUser is null)
                 {
-                    throw new ArgumentException($"{firstUsername} not found!");
+                    throw new ArgumentException(string.Format(ErrorMessages.NonExistentUser, firstUsername));
+                }
+
+                if (!firstUser.Username.Equals(Session.User.Username))
+                {
+                    throw new InvalidOperationException(ErrorMessages.InvalidCredentials);
                 }
 
                 var secondUser = context
@@ -40,17 +52,17 @@
 
                 if (secondUser is null)
                 {
-                    throw new ArgumentException($"{secondUsername} not found!");
+                    throw new ArgumentException(string.Format(ErrorMessages.NonExistentUser, secondUsername));
                 }
 
                 if (firstUser.FriendsAdded.Any(f => f.Friend.Username.Equals(secondUsername)))
                 {
-                    throw new InvalidOperationException($"{secondUser} is already a friend to {firstUsername}!");
+                    throw new InvalidOperationException(string.Format(ErrorMessages.UsersAreAlreadyFriends, secondUsername, firstUsername));
                 }
 
                 if (!firstUser.FriendsAdded.Any(f => f.Friend.Username.Equals(secondUsername)))
                 {
-                    throw new InvalidOperationException($"{secondUsername} has not added {firstUsername} as a friend!");
+                    throw new InvalidOperationException(string.Format(ErrorMessages.NotAddedAsFriends, secondUsername, firstUsername));
                 }
 
                 var friendship = new Friendship
@@ -62,7 +74,7 @@
                 firstUser.FriendsAdded.Add(friendship);
                 context.SaveChanges();
 
-                return $"{firstUsername} accepted {secondUsername} as a friend.";
+                return string.Format(Messages.AcceptUserToFriendList, firstUsername, secondUsername);
             }
         }
     }

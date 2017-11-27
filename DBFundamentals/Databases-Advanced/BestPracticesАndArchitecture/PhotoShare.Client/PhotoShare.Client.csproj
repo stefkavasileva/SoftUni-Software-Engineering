@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Core\Commands\DeleteUserCommand.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PhotoShare.Data\PhotoShare.Data.csproj" />
     <ProjectReference Include="..\PhotoShare.Models\PhotoShare.Models.csproj" />
   </ItemGroup>

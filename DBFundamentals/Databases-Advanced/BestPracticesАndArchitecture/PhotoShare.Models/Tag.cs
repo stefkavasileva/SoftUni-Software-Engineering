@@ -1,8 +1,8 @@
-﻿namespace PhotoShare.Models
-{
-    using System.Collections.Generic;
-    using Validation;
+﻿using System.Collections.Generic;
+using PhotoShare.Models.Validation;
 
+namespace PhotoShare.Models
+{
     public class Tag
     {
         private ICollection<AlbumTag> albumTags;

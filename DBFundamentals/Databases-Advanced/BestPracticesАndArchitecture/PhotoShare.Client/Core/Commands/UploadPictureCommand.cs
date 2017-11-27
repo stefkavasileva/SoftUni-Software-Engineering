@@ -1,16 +1,23 @@
-﻿namespace PhotoShare.Client.Core.Commands
-{
-    using System;
-    using System.Linq;
-    using Data;
-    using Models;
-    using Contracts;
+﻿using System;
+using System.Linq;
+using PhotoShare.Client.Utilities;
+using PhotoShare.Data;
+using PhotoShare.Models;
 
-    public class UploadPictureCommand : ICommand
+namespace PhotoShare.Client.Core.Commands
+{
+    public class UploadPictureCommand : Command
     {
+        public const int DataLength = 4;
+
         // UploadPicture <albumName> <pictureTitle> <pictureFilePath>
-        public string Execute(string[] data)
+        public override string Execute(string[] data)
         {
+            if (data.Length != DataLength)
+            {
+                throw new ArgumentException(string.Format(ErrorMessages.InvalidCommandName, nameof(UploadPictureCommand)));
+            }
+
             var albumName = data[1];
             var picTitle = data[2];
             var picFilePath = data[3];
@@ -19,7 +26,7 @@
             {
                 if (!context.Albums.Any(a => a.Name.Equals(albumName)))
                 {
-                    throw new ArgumentException($"Album {albumName} not found!");
+                    throw new ArgumentException(string.Format(ErrorMessages.NonExistingAlbum, albumName));
                 }
 
                 var currentAlbum = context.Albums.Single(a => a.Name.Equals(albumName));
@@ -30,7 +37,7 @@
                 context.SaveChanges();
             }
 
-            return $"Picture {picTitle} added to {albumName}!";
+            return string.Format(Messages.AddedPicture, picTitle);
         }
     }
 }
