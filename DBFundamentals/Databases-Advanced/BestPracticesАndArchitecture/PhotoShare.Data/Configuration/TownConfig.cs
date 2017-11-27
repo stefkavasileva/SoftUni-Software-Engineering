@@ -1,11 +1,10 @@
-﻿namespace PhotoShare.Data.Configuration
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PhotoShare.Models;
+
+namespace PhotoShare.Data.Configuration
 {
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-    using Models;
-
-    class TownConfig : IEntityTypeConfiguration<Town>
+    internal class TownConfig : IEntityTypeConfiguration<Town>
     {
         public void Configure(EntityTypeBuilder<Town> builder)
         {

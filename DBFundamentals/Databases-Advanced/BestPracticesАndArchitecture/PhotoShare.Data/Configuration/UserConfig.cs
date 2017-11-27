@@ -1,10 +1,10 @@
-﻿namespace PhotoShare.Data.Configuration
-{
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PhotoShare.Models;
 
-    class UserConfig : IEntityTypeConfiguration<User>
+namespace PhotoShare.Data.Configuration
+{
+    internal class UserConfig : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {

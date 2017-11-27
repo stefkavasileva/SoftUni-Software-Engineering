@@ -1,10 +1,9 @@
-﻿namespace PhotoShare.Data.Configuration
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using PhotoShare.Models;
+
+namespace PhotoShare.Data.Configuration
 {
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-    using Models;
-
     internal class AlbumTagConfig : IEntityTypeConfiguration<AlbumTag>
     {
         public void Configure(EntityTypeBuilder<AlbumTag> builder)
