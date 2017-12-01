@@ -1,4 +1,6 @@
-﻿namespace Employees.DtoModels
+﻿using Employees.Models;
+
+namespace Employees.DtoModels
 {
     public class EmployeeDto
     {
@@ -21,5 +23,7 @@
         public string LastName { get; set; }
 
         public decimal Salary { get; set; }
+
+        public Employee Employee { get; set; }
     }
 }
