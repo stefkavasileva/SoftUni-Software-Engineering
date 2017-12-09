@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Cards>
+  <Card name="Jeremy Carroll" type="Elder">
+    <Tickets>
+      <Ticket>
+        <OriginStation>Sofia</OriginStation>
+        <DestinationStation>Varna</DestinationStation>
+        <DepartureTime>24/05/2017 22:00</DepartureTime>
+      </Ticket>
+      <Ticket>
+        <OriginStation>Huaian</OriginStation>
+        <DestinationStation>Chysky</DestinationStation>
+        <DepartureTime>13/08/2011 12:33</DepartureTime>
+      </Ticket>
+      <Ticket>
+        <OriginStation>Sofia</OriginStation>
+        <DestinationStation>Varna</DestinationStation>
+        <DepartureTime>24/05/2017 12:00</DepartureTime>
+      </Ticket>
+      <Ticket>
+        <OriginStation>Sofia</OriginStation>
+        <DestinationStation>Varna</DestinationStation>
+        <DepartureTime>24/05/2017 12:00</DepartureTime>
+      </Ticket>
+    </Tickets>
+  </Card>
+  <Card name="Wanda Ward" type="Elder">
+    <Tickets>
+      <Ticket>
+        <OriginStation>Sofia</OriginStation>
+        <DestinationStation>Sofia Sever</DestinationStation>
+        <DepartureTime>27/12/2016 12:00</DepartureTime>
+      </Ticket>
+    </Tickets>
+  </Card>
+  <Card name="Michelle Sanders" type="Elder">
+    <Tickets>
+      <Ticket>
+        <OriginStation>Matriz de Camaragibe</OriginStation>
+        <DestinationStation>Chysky</DestinationStation>
+        <DepartureTime>23/11/2016 15:09</DepartureTime>
+      </Ticket>
+    </Tickets>
+  </Card>
+</Cards>
