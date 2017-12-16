@@ -4,5 +4,4 @@ function letterCount(text,letter) {
     console.log(count);
 }
 
-
 letterCount("hello", "l");
