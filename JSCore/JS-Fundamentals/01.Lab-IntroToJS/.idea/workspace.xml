@@ -17,18 +17,18 @@
       <file leaf-file-name="02.CalculateSumAndVAT.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02.CalculateSumAndVAT.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="210">
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03.LetterOccurencesInString.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="03.LetterOccurencesInString.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/03.LetterOccurencesInString.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="126">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -37,18 +37,48 @@
       <file leaf-file-name="04.FilterByAge.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04.FilterByAge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="300">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="05.StringOfNumbers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="05.StringOfNumbers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05.StringOfNumbers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="279">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="06.FigureArea.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/06.FigureArea.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07.NextDay.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07.NextDay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="08.DistanceBetweenPoints.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08.DistanceBetweenPoints.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -57,7 +87,7 @@
       <file leaf-file-name="01.SumThreeNumbers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01.SumThreeNumbers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="105">
               <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
@@ -81,6 +111,9 @@
         <option value="$PROJECT_DIR$/04.FilterByAge.js" />
         <option value="$PROJECT_DIR$/03.LetterOccurencesInString.js" />
         <option value="$PROJECT_DIR$/05.StringOfNumbers.js" />
+        <option value="$PROJECT_DIR$/06.FigureArea.js" />
+        <option value="$PROJECT_DIR$/07.NextDay.js" />
+        <option value="$PROJECT_DIR$/08.DistanceBetweenPoints.js" />
       </list>
     </option>
   </component>
@@ -117,6 +150,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,7 +163,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,27 +184,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.05.StringOfNumbers.js">
+  <component name="RunManager" selected="Node.js.08.DistanceBetweenPoints.js">
     <configuration name="01.SumThreeNumbers.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="01.SumThreeNumbers.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="02.CalculateSumAndVAT.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="02.CalculateSumAndVAT.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="03.LetterOccurencesInString.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="03.LetterOccurencesInString.js" working-dir="$PROJECT_DIR$" />
     <configuration name="04.FilterByAge.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="04.FilterByAge.js" working-dir="$PROJECT_DIR$" />
     <configuration name="05.StringOfNumbers.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="05.StringOfNumbers.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="06.FigureArea.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="06.FigureArea.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="07.NextDay.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="07.NextDay.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="08.DistanceBetweenPoints.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="08.DistanceBetweenPoints.js" working-dir="$PROJECT_DIR$" />
     <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" />
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Node.js.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.01.SumThreeNumbers.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.02.CalculateSumAndVAT.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.03.LetterOccurencesInString.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.04.FilterByAge.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.05.StringOfNumbers.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.04.FilterByAge.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.05.StringOfNumbers.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.06.FigureArea.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.07.NextDay.js" />
+      <item index="6" class="java.lang.String" itemvalue="Node.js.08.DistanceBetweenPoints.js" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.05.StringOfNumbers.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.04.FilterByAge.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.03.LetterOccurencesInString.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.02.CalculateSumAndVAT.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.08.DistanceBetweenPoints.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.07.NextDay.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.06.FigureArea.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.05.StringOfNumbers.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.04.FilterByAge.js" />
       </list>
     </recent_temporary>
   </component>
@@ -190,11 +226,12 @@
       <updated>1513416625363</updated>
       <workItem from="1513416629365" duration="3913000" />
       <workItem from="1513421241045" duration="4239000" />
+      <workItem from="1513794816327" duration="2281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8152000" />
+    <option name="totallyTimeSpent" value="10433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -226,11 +263,59 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/07.NextDay.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/02.CalculateSumAndVAT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03.LetterOccurencesInString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04.FilterByAge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01.SumThreeNumbers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05.StringOfNumbers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/02.CalculateSumAndVAT.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -239,9 +324,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/08.DistanceBetweenPoints.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07.NextDay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06.FigureArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05.StringOfNumbers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04.FilterByAge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01.SumThreeNumbers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="105">
           <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
@@ -249,32 +374,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02.CalculateSumAndVAT.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="210">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03.LetterOccurencesInString.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04.FilterByAge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05.StringOfNumbers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,11 @@
 function printNumbers(numberAsString) {
+    let number = Number(numberAsString);
+    let result = "";
+    for(let i = 1; i <= number; i++){
+     result+=i;
+    }
 
+    return result;
 }
 
-printNumbers("5");
+console.log(printNumbers("5"));
