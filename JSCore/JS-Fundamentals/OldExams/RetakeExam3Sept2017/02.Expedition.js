@@ -31,27 +31,96 @@ function main(primaryMatrix, secondaryMatrix,overlayCoordinates, startCoordinate
         }
     }
 
-    let startX = startCoordinates[0];
-    let startY = startCoordinates[1];
+    let startPosition = {x: startCoordinates[0], y: startCoordinates[1]};
 
-    let stepCount = 0;
+    let stepCount = 1;
+    primaryMatrix[startPosition.x][startPosition.y] = 1;
 
-    
-
-
+    while (true){
+        let nextPosition = {x: startPosition.x, y: startPosition.y - 1};
+        if(nextPosition.y >= 0 && primaryMatrix[nextPosition.x][nextPosition.y] === 0){
+            startPosition = nextPosition;
+            stepCount++;
+            primaryMatrix[nextPosition.x][nextPosition.y] = 1;
+            continue;
         }
 
-main([[1, 1, 0, 1, 1, 1, 1, 0],
-        [0, 1, 1, 1, 0, 0, 0, 1],
-        [1, 0, 0, 1, 0, 0, 0, 1],
-        [0, 0, 0, 1, 1, 0, 0, 1],
-        [1, 0, 0, 1, 1, 1, 1, 1],
-        [1, 0, 1, 1, 0, 1, 0, 0]],
-    [[0, 1, 1],
-        [0, 1, 0],
-        [1, 1, 0]],
-    [[1, 1],
-        [2, 3],
-        [5, 3]],
-    [0, 2]
+        nextPosition.y += 2;
+        if(nextPosition.y < primaryMatrix[nextPosition.x].length && primaryMatrix[nextPosition.x][nextPosition.y] === 0){
+            startPosition = nextPosition;
+            primaryMatrix[nextPosition.x][nextPosition.y] = 1;
+            stepCount++;
+            continue;
+        }
+
+        --nextPosition.y;
+        --nextPosition.x;
+        if(nextPosition.x > 0 && primaryMatrix[nextPosition.x][nextPosition.y] === 0){
+            startPosition = nextPosition;
+            primaryMatrix[nextPosition.x][nextPosition.y] = 1;
+            stepCount++;
+            continue;
+        }
+
+        nextPosition.x += 2;
+        if(nextPosition.x < primaryMatrix.length && primaryMatrix[nextPosition.x][nextPosition.y] === 0){
+            startPosition = nextPosition;
+            primaryMatrix[nextPosition.x][nextPosition.y] = 1;
+            stepCount++;
+            continue;
+        }
+
+        console.log(stepCount);
+
+        if(nextPosition.x >= primaryMatrix.length){
+            console.log("Bottom");
+            break;
+        }
+
+        if(nextPosition.x <= 0){
+            console.log("Top");
+            break;
+        }
+
+        if(nextPosition.y < 0){
+            console.log("Left");
+            break;
+        }
+
+        if(nextPosition.y >= primaryMatrix[nextPosition.x].length){
+            console.log("Right");
+            break;
+        }
+
+        let quadrantNumber = 0;
+        let halfRowCount = parseInt(primaryMatrix.length / 2);
+        let halfColCount = parseInt(primaryMatrix[startPosition.x].length / 2);
+
+        if(startPosition.y >= halfRowCount &&  startPosition.x <= halfColCount){
+            quadrantNumber = 1;
+        }else if(startPosition.y <= halfColCount &&  startPosition.x < halfRowCount){
+            quadrantNumber = 2;
+        }else if(startPosition.y < halfColCount &&  startPosition.x > halfRowCount){
+            quadrantNumber = 3;
+        }else {
+            quadrantNumber = 4;
+        }
+
+        console.log(`Dead end ${quadrantNumber}`);
+        break;
+    }
+}
+
+main([[1, 1, 0, 1],
+        [0, 1, 1, 0],
+        [0, 0, 1, 0],
+        [1, 0, 1, 0]],
+    [[0, 0, 1, 0, 1],
+        [1, 0, 0, 1, 1],
+        [1, 0, 1, 1, 1],
+        [1, 0, 1, 0, 1]],
+    [[0, 0],
+        [2, 1],
+        [1, 0]],
+    [2, 0]
 );
