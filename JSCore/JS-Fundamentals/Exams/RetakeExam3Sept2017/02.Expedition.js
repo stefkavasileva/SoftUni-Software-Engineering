@@ -96,11 +96,11 @@ function main(primaryMatrix, secondaryMatrix,overlayCoordinates, startCoordinate
         let halfRowCount = parseInt(primaryMatrix.length / 2);
         let halfColCount = parseInt(primaryMatrix[startPosition.x].length / 2);
 
-        if(startPosition.y >= halfRowCount &&  startPosition.x <= halfColCount){
+        if(nextPosition.y >= halfRowCount &&  nextPosition.x < halfColCount){
             quadrantNumber = 1;
-        }else if(startPosition.y <= halfColCount &&  startPosition.x < halfRowCount){
+        }else if(nextPosition.y < halfColCount &&  nextPosition.x < halfRowCount){
             quadrantNumber = 2;
-        }else if(startPosition.y < halfColCount &&  startPosition.x > halfRowCount){
+        }else if(nextPosition.y < halfColCount &&  nextPosition.x >= halfRowCount){
             quadrantNumber = 3;
         }else {
             quadrantNumber = 4;
