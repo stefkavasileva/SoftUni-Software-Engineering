@@ -1,0 +1,5 @@
+function mai() {
+
+}
+
+mai();
