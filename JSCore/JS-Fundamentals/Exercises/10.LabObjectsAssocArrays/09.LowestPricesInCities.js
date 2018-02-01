@@ -1,34 +1,23 @@
-function main(input) {
-    let map = new Map();
-    for (let i = 0; i < input.length; i++) {
-        let currentArgs = input[i]
-            .split('|')
-            .filter(x => x !== '')
-            .map(x => x.trim());
-
-        let town = currentArgs[0];
-        let product = currentArgs[1];
-        let price = Number(currentArgs[2]);
-
-        if(!map.has(town)){
-            map.set(town,new Map());
-        }
-
-        if(!map.get(town).has(product)){
-            map.get(town).set(product,price);
-        }
-
-        if(map.get(town).get(product) >= price ){
-            continue;
-        }
-
-            map.get(town).set(product,price);
+function main(inputArr) {
+    let products = new Map;
+    for (let priceList of inputArr) {
+        let [town, product, price] = priceList.split(/\s+\|\s+/g);
+        if (!products.has(product))
+            products.set(product, new Map);
+        products.get(product).set(town, Number(price));
     }
 
-    for (let town of map) {
-        for (let product of town[1]) {
-            console.log(`${product[0]} -> ${product[1]} (${town[0]})`);
+    for (let [product, towns] of products) {
+        let minPrice = Number.MAX_VALUE;
+        let minPriceTown = '';
+        for (let [town, price] of towns) {
+            if (price < minPrice) {
+                minPrice = price;
+                minPriceTown = town;
+            }
         }
+
+        console.log(`${product} -> ${minPrice} (${minPriceTown})`);
     }
 }
 
