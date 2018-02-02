@@ -27,10 +27,11 @@ function main(input) {
             juiceBottles.set(fruitName, juiceBottles.get(fruitName) + bottles);
         }
 
-        juices = Array.from(juiceBottles);
-        for (let fruit of juices) {
-            console.log(`${fruit[0]} => ${quantity}`);
-        }
+    }
+
+    juices = Array.from(juiceBottles);
+    for (let fruit of juices) {
+        console.log(`${fruit[0]} => ${fruit[1]}`);
     }
 }
 
