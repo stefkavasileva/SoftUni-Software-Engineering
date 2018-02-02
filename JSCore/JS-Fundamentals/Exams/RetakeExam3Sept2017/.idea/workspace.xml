@@ -17,28 +17,28 @@
       <file leaf-file-name="03.Lost.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03.Lost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="04.RestHouse.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="04.RestHouse.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04.RestHouse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="1976">
+              <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01.TheHungryProgrammer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="01.TheHungryProgrammer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01.TheHungryProgrammer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1575">
-              <caret line="75" column="2" lean-forward="true" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
+              <caret line="75" column="2" lean-forward="false" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -96,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -109,6 +108,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,20 +130,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.03.Lost.js">
+  <component name="RunManager" selected="Node.js.04.RestHouse.js">
     <configuration name="01.TheHungryProgrammer.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="01.TheHungryProgrammer.js" working-dir="$PROJECT_DIR$" />
     <configuration name="02.Expedition.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="02.Expedition.js" working-dir="$PROJECT_DIR$" />
     <configuration name="03.Lost.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="03.Lost.js" working-dir="$PROJECT_DIR$" />
-    <list size="3">
+    <configuration name="04.RestHouse.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="04.RestHouse.js" working-dir="$PROJECT_DIR$" />
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Node.js.01.TheHungryProgrammer.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.02.Expedition.js" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.03.Lost.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.04.RestHouse.js" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.03.Lost.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.02.Expedition.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.01.TheHungryProgrammer.js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.04.RestHouse.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.03.Lost.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.02.Expedition.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.01.TheHungryProgrammer.js" />
       </list>
     </recent_temporary>
   </component>
@@ -162,15 +165,15 @@
       <updated>1516188009144</updated>
       <workItem from="1516188011880" duration="15631000" />
       <workItem from="1517399370272" duration="4120000" />
+      <workItem from="1517581130255" duration="7403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19751000" />
+    <option name="totallyTimeSpent" value="27154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -199,11 +202,35 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/03.Lost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04.RestHouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01.TheHungryProgrammer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="75" column="2" lean-forward="true" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/03.Lost.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -223,16 +250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03.Lost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04.RestHouse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -240,7 +259,39 @@
     <entry file="file://$PROJECT_DIR$/01.TheHungryProgrammer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1575">
-          <caret line="75" column="2" lean-forward="true" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
+          <caret line="75" column="2" lean-forward="false" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7656.11249/solution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1563">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7656.23343/solution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8584.41536/solution.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="93" column="4" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04.RestHouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1976">
+          <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
           <folding />
         </state>
       </provider>
