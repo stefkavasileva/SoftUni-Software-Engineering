@@ -1,77 +1,88 @@
 function main(roomsInput,peopleInput) {
    let movedGuests = 0;
-    for (let i = 0; i < peopleInput.length; i++) {
-       let firstPerson = peopleInput[i].first;
-       let secondPerson = peopleInput[i].second;
-       if(firstPerson.gender !== secondPerson.gender){
-           let doubleRoom = roomsInput.find(x => x.type === 'double-bedded' && !x.hasOwnProperty('guests'));
+    for (let people of peopleInput) {
+        let firstGuest = people.first;
+        let secondGuest = people.second;
 
-           if(doubleRoom === undefined){
-               movedGuests += 2;
-               continue;
-           }
-           doubleRoom['guests'] = peopleInput[i];
-           continue;
-       }
-
-      let leftGuests = peopleInput[i];
-        for (let room of roomsInput.filter(x => x.type === 'triple')) {
-            if(leftGuests.second === undefined){
-                break;
+        if(firstGuest.gender !== secondGuest.gender){
+            let currentRoom = roomsInput.find(x => x.type === 'double-bedded' && !x.hasOwnProperty('guests'));
+            if(currentRoom){
+                currentRoom['guests'] = [];
+                currentRoom.guests.push(firstGuest);
+                currentRoom.guests.push(secondGuest);
+                continue;
             }
 
-            for (let key in leftGuests) {
-                if(!room.hasOwnProperty('guests')){
-                    room['guests'] = [];
-                    room.guests.push(leftGuests[key]);
-                    leftGuests[key] = undefined;
-                    continue;
-                }
-
-                if(room.guests.length < 3){
-                    if(room.guests[0].gender !== leftGuests[key].gender){
-                        break;
-                    }
-                    room.guests.push(leftGuests[key]);
-                    leftGuests[key] = undefined;
-                    continue;
-                }
-            }
+            movedGuests += 2;
+            continue;
         }
 
-        if(leftGuests.first !== undefined){
-            movedGuests += 2;
-        }else if(leftGuests.second !== undefined){
-            movedGuests += 1;
+        let hasPushed = pushGuest(firstGuest,roomsInput);
+        if(!hasPushed){
+            movedGuests++;
+        }
+
+        hasPushed = pushGuest(secondGuest,roomsInput);
+
+        if(!hasPushed){
+            movedGuests++;
         }
     }
 
-    let roomsKeys = Array.from(roomsInput).sort((a,b) => a - b);
-    for (let key of roomsKeys) {
-        console.log(`Room number: ${key.number}`);
-        let guests = key.guests;
-        for (let guest of guests.keys()) {
+    function pushGuest(guest, rooms){
+        let isPushed = false;
+        for (let currentRoom of rooms.filter(x => x.type === 'triple')) {
+            if(!currentRoom.hasOwnProperty('guests')){
+                currentRoom['guests'] = [];
+                currentRoom.guests.push(guest);
+                isPushed = true;
+                break;
+            }
+
+            if(currentRoom.guests[0].gender === guest.gender && currentRoom.guests.length < 3){
+                currentRoom.guests.push(guest);
+                isPushed = true;
+                break;
+            }
+        }
+
+        return isPushed;
+    }
+
+    let sortedRooms = roomsInput.sort((a,b) => a.number.localeCompare(b.number));
+    for (let room of sortedRooms) {
+        console.log(`Room number: ${room.number}`);
+
+        let bedsCount = room.type === 'triple' ? 3 : 2;
+
+        if(!room.hasOwnProperty('guests')){
+            console.log(`Empty beds in the room: ${bedsCount}`);
+            continue;
+        }
+
+        let guests = room.guests.sort((a,b) => a.name.localeCompare(b.name));
+        for (let guest of guests) {
             console.log(`--Guest Name: ${guest.name}`);
             console.log(`--Guest Age: ${guest.age}`);
         }
 
-        let leftBeds = 0;
-        if(key.type === 'triple'){
-            leftBeds = key.guests.length - 3;
-        }
-
-        console.log(`Empty beds in the room: ${leftBeds}`);
+        let freeBeds = bedsCount - guests.length;
+        console.log(`Empty beds in the room: ${freeBeds}`);
     }
 
     console.log(`Guests moved to the tea house: ${movedGuests}`);
-
-
 }
 
-main([ { number: '206', type: 'double-bedded' },
-    { number: '311', type: 'triple' } ],[ { first: { name: 'Tanya Popova', gender: 'female', age: 24 },
-    second: { name: 'Miglena Yovcheva', gender: 'female', age: 23 } },
-    { first: { name: 'Katerina Stefanova', gender: 'female', age: 23 },
-        second: { name: 'Angel Nachev', gender: 'male', age: 22 } },
-    { first: { name: 'Tatyana Germanova', gender: 'female', age: 23 },
-        second: { name: 'Boryana Baeva', gender: 'female', age: 22 } } ])
+main([ { number: '101A', type: 'double-bedded' },
+        { number: '104', type: 'triple' },
+        { number: '101B', type: 'double-bedded' },
+        { number: '102', type: 'triple' } ],
+    [ { first: { name: 'Sushi & Chicken', gender: 'female', age: 15 },
+        second: { name: 'Salisa Debelisa', gender: 'female', age: 25 } },
+        { first: { name: 'Daenerys Targaryen', gender: 'female', age: 20 },
+            second: { name: 'Jeko Snejev', gender: 'male', age: 18 } },
+        { first: { name: 'Pesho Goshov', gender: 'male', age: 20 },
+            second: { name: 'Gosho Peshov', gender: 'male', age: 18 } },
+        { first: { name: 'Conor McGregor', gender: 'male', age: 29 },
+            second: { name: 'Floyd Mayweather', gender: 'male', age: 40 } } ]
+);

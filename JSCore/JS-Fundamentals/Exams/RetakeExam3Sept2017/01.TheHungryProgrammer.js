@@ -14,6 +14,11 @@ function main(meals, commands) {
 
         }else if(commandName === 'Add'){
             let mealToBeAdded = commandArgs[1];
+
+            if(mealToBeAdded === undefined){
+                continue;
+            }
+
             meals.unshift(mealToBeAdded);
 
         }else if(commandName === 'Shift'){
@@ -63,7 +68,7 @@ function main(meals, commands) {
 
     function areValidIndexes(firstIndex, secondIndex, length) {
        let isValidFirstIndex = firstIndex >= 0 && firstIndex < length;
-       let isValidSecondIndex = secondIndex > 0 && secondIndex < length && secondIndex > firstIndex;
+       let isValidSecondIndex = secondIndex >= 0 && secondIndex < length;
 
        return isValidFirstIndex && isValidSecondIndex;
     }
