@@ -1,39 +1,23 @@
-//(.*?(\n)) ===> match new line
-//80/100
 function main(input) {
-    let pattern = /^<message((?:\s+[a-z]+="[A-Za-z \.\d]+")*)>(.+(\n)*.+)*<\/message>$/;
+    let pattern = /^<message((?:\s+[a-z]+="[A-Za-z .\d]+")*)>((?:.|\n)+)<\/message>$/;
     let match = pattern.exec(input);
-    if(!pattern.test(input)){
+    if(!match){
         console.log('Invalid message format');
         return;
     }
 
-    let attributeMatch ;
-    let attributesPattern = /(from=|to=)"(.+?)"/;
-    let attributes = [];
-    let sender;
-    let recipient;
+    let toMatch = /\bto="([A-Za-z0-9 .]+)"/.exec(match[1]);
+    let fromMatch = /\bfrom="([A-Za-z0-9 .]+)"/.exec(match[1]);
 
-    while (attributeMatch = attributesPattern.exec(input)){
-        if(attributeMatch[1] === 'from='){
-            sender = attributeMatch[2];
-            input = input.replace('from=','');
-            continue;
-        }
-
-        recipient = attributeMatch[2];
-        input = input.replace('to=','');
-    }
-
-    if(sender === undefined || recipient === undefined){
+    if(!toMatch || !fromMatch){
         console.log('Missing attributes');
         return;
     }
 
-    let messages = match[2].split(/\n/).filter(x => x !== '');
+    let messages = match[2].split(/\n/);
     let html = '<article>\n';
-    html += `  <div>From: <span class="sender">${sender}</span></div>\n`;
-    html += `  <div>To: <span class="recipient">${recipient}</span></div>\n`;
+    html += `  <div>From: <span class="sender">${fromMatch[1]}</span></div>\n`;
+    html += `  <div>To: <span class="recipient">${toMatch[1]}</span></div>\n`;
     html += `  <div>\n`;
 
     for (let message of messages) {
@@ -45,4 +29,6 @@ function main(input) {
 
     console.log(html);
 }
+
+
 main('<message to="Bob" from="Alice" timestamp="1497254092">Hey man, what\'s up?</message>');

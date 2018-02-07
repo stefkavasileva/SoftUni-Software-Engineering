@@ -1,50 +1,81 @@
-function main(input) {
-    let landedPlans = [];
-    let departedPlans = [];
+function getReportOfAirport(planes) {
+    let airport = []; // => id and action of a plan
+    let towns = [] // => name, arrivals and departures and set of a plans
 
-    for (let i = 0; i < input.length; i++) {
-        let args = input[i].split(' ').filter(x => x !== '');
-        let planId= args[0];
-        let townName = args[1];
-        let passengersCount = Number(args[2]);
-        let action = args[3];
+    for (let currentPlan of planes) {
+        let planArgs = currentPlan
+            .split(' ')
+            .filter(x => x !== '');
 
-        if(action === 'land'){
-            let plan = landedPlans.find(x => x.id === planId);
-            if(plan !== undefined){
-                continue;
-            }
+        let [planId,townName,passerngersCount,action] = [planArgs[0], planArgs[1],Number(planArgs[2]),planArgs[3]];
 
-            plan = {id: planId, town: townName, passengersCount: passengersCount};
-            landedPlans.push(plan);
-        }else if(action === 'depart'){
-            let plan = landedPlans.find(x => x.id == planId);
-            if(plan === undefined){
-                continue;
-            }
+        let plan = airport.find(x => x.id == planId);
 
-            departedPlans.push(plan);
-            plan.id = undefined;
+        if(plan === undefined && action === 'depart'){
+            continue;
         }
+
+        if((plan === undefined && action === 'land') || (plan.action === 'depart' && action === 'land')){
+            plan = {id:planId, action: action};
+            airport.push(plan);
+        }else if(plan && action === 'depart'){
+            plan.action = 'depart';
+        }else {
+            continue;
+        }
+
+        let town = towns.find(x => x.name === townName);
+        if(!town){
+           town = {name: townName, arrivals: 0,departures: 0, planes: new Set()}
+           towns.push(town);
+        }
+
+        if(plan.action === 'land'){
+            town.arrivals += passerngersCount;
+        }else if(plan.action === 'depart'){
+            town.departures += passerngersCount;
+        }
+
+        town.planes.add(plan.id);
     }
 
-    landedPlans = landedPlans.sort((a,b) => a.id.localeCompare(b.id)).filter(x => x.id !== undefined);
+    let planesLeft = airport
+        .filter(x => x.action === 'land')
+        .sort((a,b) => a.id.localeCompare(b.id));
+
     console.log(`Planes left:`);
-    for (let plan of landedPlans) {
-        console.log(`- ${plan.id}`);
+    planesLeft.forEach(x => console.log(`- ${x.id}`));
+
+    let sortedTown = towns
+        .sort(sortByArrivalsAndName);
+
+    for (let town of sortedTown) {
+        console.log(town.name);
+        console.log(`Arrivals: ${town.arrivals}`);
+        console.log(`Departures: ${town.departures}`);
+        console.log(`Planes:`);
+
+        let currentPlanes = [...town.planes].sort((a,b) => a.localeCompare(b));
+        currentPlanes.forEach(x =>   console.log(`-- ${x}`))
     }
 
+    function sortByArrivalsAndName(a,b) {
+        let arrivalsA = a.arrivals;
+        let arrivalsB = b.arrivals;
+        let firstCriteria = arrivalsB - arrivalsA;
+        if(firstCriteria === 0){
+            let nameA = a.name;
+            let nameB = b.name;
+            return nameA.localeCompare(nameB);
+        }
 
-
-
-
+        return firstCriteria;
+    }
 }
 
-main([
-        "Boeing474 Madrid 300 land",
-        "AirForceOne WashingtonDC 178 land",
-        "Airbus London 265 depart",
-        "ATR72 WashingtonDC 272 land",
-        "ATR72 Madrid 135 depart"
-    ]
-);
+getReportOfAirport([
+    "Airbus Paris 356 land",
+    "Airbus London 321 land",
+    "Airbus Paris 213 depart",
+    "Airbus Ljubljana 250 land"
+]);
