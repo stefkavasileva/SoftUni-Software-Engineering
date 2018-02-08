@@ -58,8 +58,10 @@ function parseAngularData(inputArgs) {
             let modelsLengthB = modules[b].models.length;
             if(modelsLengthA > modelsLengthB){
                 return 1;
-            }else{
+            }else if (modelsLengthA > modelsLengthB) {
                 return -1
+            }else {
+                return 0;
             }
         }
     }
