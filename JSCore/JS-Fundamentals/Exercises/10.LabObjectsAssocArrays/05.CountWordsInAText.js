@@ -1,4 +1,4 @@
-function main(input) {
+function countWords(input) {
     let words = [];
     for (let i = 0; i < input.length; i++) {
       words = words.concat(input[i]
@@ -19,4 +19,4 @@ function main(input) {
     console.log(JSON.stringify(obj));
 }
 
-main(['Far too slow, you\'re far too slow.']);
+countWords(['Far too slow, you\'re far too slow.']);

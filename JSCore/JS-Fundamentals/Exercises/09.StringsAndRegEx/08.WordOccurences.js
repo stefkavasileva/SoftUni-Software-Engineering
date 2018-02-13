@@ -1,5 +1,5 @@
 //80/100
-function main(text, word) {
+function wordCount(text, word) {
     word = word.toLowerCase();
     text = text.toLowerCase();
 

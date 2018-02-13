@@ -1,4 +1,4 @@
-function main(input) {
+function escapeHtml(input) {
     let html = '<ul>\n';
     for (let i = 0; i < input.length; i++) {
         let currentElement = input[i];
@@ -13,4 +13,4 @@ function main(input) {
     console.log(html);
 }
 
-main(['<b>unescaped text</b>', 'normal text'])
+escapeHtml(['<b>unescaped text</b>', 'normal text'])

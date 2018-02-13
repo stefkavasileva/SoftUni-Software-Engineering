@@ -1,4 +1,4 @@
-function  main(rows, cols) {
+function  getSpiralMatrix(rows, cols) {
     let matrix=[];
 
     for (let row = 0; row < rows; row++) {
@@ -59,4 +59,4 @@ function  main(rows, cols) {
 
 }
 
-main(5,5);
+getSpiralMatrix(5,5);

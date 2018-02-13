@@ -1,5 +1,5 @@
 //50/100
-function main(primaryMatrix, secondaryMatrix,overlayCoordinates, startCoordinates) {
+function getPath(primaryMatrix, secondaryMatrix,overlayCoordinates, startCoordinates) {
 
     for (let startPosition of overlayCoordinates) {
         let x = startPosition[0];
@@ -118,7 +118,7 @@ function main(primaryMatrix, secondaryMatrix,overlayCoordinates, startCoordinate
     }
 }
 
-main([[1, 1, 0, 1],
+getPath([[1, 1, 0, 1],
         [0, 1, 1, 0],
         [0, 0, 1, 0],
         [1, 0, 1, 0]],

@@ -1,4 +1,4 @@
-function main(key,text) {
+function getMessage(key,text) {
     let coordinatesPattern = /(north|east)[^,]*?(\d{2})[^,]*?,[^,]*?(\d{6})/i;
     let match;
     let northMatch;
@@ -22,4 +22,4 @@ function main(key,text) {
     console.log(`Message: ${message[1]}`);
 }
 
-main('4ds', 'eaSt 19,432567noRt north east 53,123456north 43,3213454dsNot all those who wander are lost.4dsnorth 47,874532');
+getMessage('4ds', 'eaSt 19,432567noRt north east 53,123456north 43,3213454dsNot all those who wander are lost.4dsnorth 47,874532');

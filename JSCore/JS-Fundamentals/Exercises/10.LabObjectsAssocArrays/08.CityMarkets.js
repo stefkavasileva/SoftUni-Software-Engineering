@@ -1,4 +1,4 @@
-function main(input) {
+function getTownSales(input) {
     let map = new Map();
     for (let i = 0; i < input.length; i++) {
         let currentArgs = input[i]
@@ -30,7 +30,7 @@ function main(input) {
     }
 }
 
-main(['Sofia -> Laptops HP -> 200 : 2000',
+getTownSales(['Sofia -> Laptops HP -> 200 : 2000',
 'Sofia -> Raspberry -> 200000 : 1500',
 'Sofia -> Audi Q7 -> 200 : 100000',
 'Montana -> Portokals -> 200000 : 1',

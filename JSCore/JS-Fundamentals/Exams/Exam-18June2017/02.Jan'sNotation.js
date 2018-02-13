@@ -1,4 +1,4 @@
-function main(input) {
+function calc(input) {
     let numbers = [];
 
     for (let i = 0; i < input.length; i++) {
@@ -41,7 +41,7 @@ function main(input) {
     }
 }
 
-main([-1,
+calc([-1,
     1,
     '+',
     101,

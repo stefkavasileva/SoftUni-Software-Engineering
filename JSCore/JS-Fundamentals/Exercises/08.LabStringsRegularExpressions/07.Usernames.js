@@ -1,4 +1,4 @@
-function main(input) {
+function getEmails(input) {
     let result = [];
     for (let i = 0; i < input.length; i++) {
         let elements = input[i].split(/@/g);
@@ -13,4 +13,4 @@ function main(input) {
 
     console.log(result.join(', '));
 }
-main(['peshoo@gmail.com', 'todor_43@mail.dir.bg', 'foo@bar.com'])
+getEmails(['peshoo@gmail.com', 'todor_43@mail.dir.bg', 'foo@bar.com'])

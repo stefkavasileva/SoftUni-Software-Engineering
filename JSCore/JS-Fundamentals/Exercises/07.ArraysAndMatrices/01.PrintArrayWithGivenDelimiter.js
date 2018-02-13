@@ -1,9 +1,9 @@
-function main(input) {
+function joinByDelimiter(input) {
     let delimiter = input.pop();
     console.log(input.join(delimiter));
 }
 
-main(["One",
+joinByDelimiter(["One",
 "Two",
 "Three",
 "Four",

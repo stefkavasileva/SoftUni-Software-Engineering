@@ -1,4 +1,4 @@
-function main(input) {
+function getVariablesName(input) {
     let result = [];
     let reg = /_([A-Za-z\d]+)/g;
     let match;
@@ -9,4 +9,4 @@ function main(input) {
     console.log(result.join(','));
 }
 
-main('The _id and _age variables are both integers.');
+getVariablesName('The _id and _age variables are both integers.');

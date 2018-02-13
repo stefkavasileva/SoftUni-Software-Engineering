@@ -1,4 +1,4 @@
-function main(text, substring) {
+function isTextEndWith(text, substring) {
     if(text.endsWith(substring)){
         console.log('true');
         return;
@@ -7,4 +7,4 @@ function main(text, substring) {
     console.log('false');
 }
 
-main('This sentence ends with fun?','fun?');
+isTextEndWith('This sentence ends with fun?','fun?');

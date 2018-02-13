@@ -1,4 +1,4 @@
-function main(matrixAsStr, comands) {
+function printPollutedMatrix(matrixAsStr, comands) {
     let matrix  = [];
     for (let i = 0; i < matrixAsStr.length; i++) {
         matrix[i] = matrixAsStr[i].split(' ').filter(x => x !== '').map(Number);
@@ -52,7 +52,7 @@ function main(matrixAsStr, comands) {
     result = result.substr(0,result.length - 1);
     console.log(result);
 }
-main([
+printPollutedMatrix([
         "5 7 3 28 32",
         "41 12 49 30 33",
         "3 16 20 42 12",

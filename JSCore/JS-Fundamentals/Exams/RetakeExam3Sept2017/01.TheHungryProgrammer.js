@@ -1,4 +1,4 @@
-function main(meals, commands) {
+function printLeftMeals(meals, commands) {
     let eatenMealsCount = 0;
     for (let command of commands) {
         let commandArgs = command.split(' ').filter(x => x !== '');
@@ -75,7 +75,7 @@ function main(meals, commands) {
 
 }
 
-main(['carrots', 'apple', 'beet'],
+printLeftMeals(['carrots', 'apple', 'beet'],
     ['shift 2 ds',
         'End',]
 );

@@ -1,4 +1,4 @@
-function main(roomsInput,peopleInput) {
+function roomsReport(roomsInput,peopleInput) {
    let movedGuests = 0;
     for (let people of peopleInput) {
         let firstGuest = people.first;
@@ -73,7 +73,7 @@ function main(roomsInput,peopleInput) {
     console.log(`Guests moved to the tea house: ${movedGuests}`);
 }
 
-main([ { number: '101A', type: 'double-bedded' },
+roomsReport([ { number: '101A', type: 'double-bedded' },
         { number: '104', type: 'triple' },
         { number: '101B', type: 'double-bedded' },
         { number: '102', type: 'triple' } ],

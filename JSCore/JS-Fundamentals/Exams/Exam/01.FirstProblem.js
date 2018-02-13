@@ -1,4 +1,4 @@
-function main(input) {
+function printBitcoins(input) {
     let golds = input.map(Number);
     let bitcoins = 0;
     let money = 0;

@@ -1,5 +1,5 @@
 function getTriangleArea(firstSide, secondSide, thirdSide) {
-    let semiperimeter=(firstSide + secondSide + thirdSide)/2;
+    let semiperimeter = (firstSide + secondSide + thirdSide)/2;
     let area = Math.sqrt(semiperimeter*
         (semiperimeter - firstSide)*
         (semiperimeter - secondSide)*

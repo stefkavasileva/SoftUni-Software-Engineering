@@ -1,4 +1,4 @@
-function main(input) {
+function capitalizeTheWords(input) {
     let pattern = /\w+/g;
     let match;
     while (match = pattern.exec(input)){
@@ -10,4 +10,4 @@ function main(input) {
     console.log(input);
 }
 
-main('Capitalize these words');
+capitalizeTheWords('Capitalize these words');

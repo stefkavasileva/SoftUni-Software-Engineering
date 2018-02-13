@@ -1,4 +1,4 @@
-function main(n, k) {
+function getTribonacci(n, k) {
     let sequence = [];
     sequence[0] = 1;
 
@@ -16,4 +16,4 @@ function main(n, k) {
     console.log(sequence.join(" "));
 }
 
-main(6,3);
+getTribonacci(6,3);

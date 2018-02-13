@@ -1,4 +1,4 @@
-function oddNumbers(numbers) {
+function getOddNumbers(numbers) {
     let oddNumbers = numbers
         .filter((a,b) => b % 2 != 0)
         .map(a => a * 2)
@@ -7,4 +7,4 @@ function oddNumbers(numbers) {
     console.log(oddNumbers.join(" "));
 }
 
-oddNumbers([10, 15, 20, 25]);
+getOddNumbers([10, 15, 20, 25]);

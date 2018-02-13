@@ -1,4 +1,4 @@
-function main(input) {
+function getPopulationInTown(input) {
     let townAndPopulation = input
         .map(x => x.split(/<->/).filter(x => x !== ''))
         .reduce((a,b) => a.concat(b));
@@ -18,7 +18,7 @@ function main(input) {
     }
 }
 
-main(['Sofia <-> 1200000',
+getPopulationInTown(['Sofia <-> 1200000',
 'Montana <-> 20000',
 'New York <-> 10000000',
 'Washington <-> 2345000',

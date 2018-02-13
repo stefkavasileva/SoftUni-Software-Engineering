@@ -1,4 +1,4 @@
-function main(email) {
+function isEmailValid(email) {
     let pattern = /^[A-Za-z\d]+@[a-z]+\.[a-z]+$/g;
     if(pattern.test(email)){
         console.log('Valid');
@@ -8,4 +8,4 @@ function main(email) {
     console.log('Invalid');
 }
 
-main(['valid@email.bg']);
+isEmailValid(['valid@email.bg']);

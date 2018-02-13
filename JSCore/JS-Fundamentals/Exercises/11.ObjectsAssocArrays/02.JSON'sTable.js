@@ -1,4 +1,4 @@
-function main(input) {
+function printHtml(input) {
     let html = `<table>\n`;
     for (let i = 0; i < input.length; i++) {
         let obj = JSON.parse(input[i]);
@@ -9,6 +9,6 @@ function main(input) {
     console.log(html);
 }
 
-main(['{"name":"Pesho","position":"Promenliva","salary":100000}',
+printHtml(['{"name":"Pesho","position":"Promenliva","salary":100000}',
 '{"name":"Teo","position":"Lecturer","salary":1000}',
 '{"name":"Georgi","position":"Lecturer","salary":1000}']);

@@ -1,4 +1,4 @@
-function main(inputArr) {
+function diagonalAttack(inputArr) {
     let matrix=[];
     for (let row = 0; row < inputArr.length; row++) {
         matrix[row] = inputArr[row].split(' ').map(Number);
@@ -34,7 +34,7 @@ function main(inputArr) {
     }
 }
 
-main(['5 3 12 3 1',
+diagonalAttack(['5 3 12 3 1',
     '11 4 23 2 5',
     '101 12 3 21 10',
     '1 4 5 2 2',

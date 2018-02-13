@@ -1,4 +1,4 @@
-function main(input) {
+function aggregateTable(input) {
     let allText = input.join('');
     let elements = allText
         .split('|')
@@ -15,7 +15,7 @@ function main(input) {
     console.log(sum);
 }
 
-main(['| Sofia           | 300',
+aggregateTable(['| Sofia           | 300',
     '| Veliko Tarnovo  | 500',
     '| Yambol          | 275']
 );

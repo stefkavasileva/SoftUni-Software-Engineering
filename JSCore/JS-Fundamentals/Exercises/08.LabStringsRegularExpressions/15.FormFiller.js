@@ -1,4 +1,4 @@
-function main(userName,email,phoneNumber,input) {
+function filter(userName,email,phoneNumber,input) {
     let namePattern = /<![A-Za-z]+!>/;
     let emailPattern = /<@[A-Za-z]+@>/;
     let numberPattern = /<\+[A-Za-z]+\+>/;
@@ -12,7 +12,7 @@ function main(userName,email,phoneNumber,input) {
     input.forEach(x => console.log(x));
 }
 
-main('Pesho',
+filter('Pesho',
     'pesho@softuni.bg',
     '90-60-90',
     ['Hello, <!username!>!',

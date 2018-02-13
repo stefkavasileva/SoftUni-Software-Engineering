@@ -1,4 +1,4 @@
-function main(arr) {
+function getSumByTown(arr) {
     let obj = {};
     for (let i = 0; i < arr.length; i+= 2) {
         let townName = arr[i];
@@ -14,4 +14,4 @@ function main(arr) {
     console.log(JSON.stringify(obj));
 }
 
-main(['Sofia','20','Varna','3','Sofia','5','Varna','4']);
+getSumByTown(['Sofia','20','Varna','3','Sofia','5','Varna','4']);

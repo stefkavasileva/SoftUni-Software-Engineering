@@ -1,4 +1,4 @@
-function main([rows, cols, y, x]) {
+function changeMatrix([rows, cols, y, x]) {
     let matrix=[];
 
     for (let row = 0; row < rows; row++) {
@@ -20,4 +20,4 @@ function main([rows, cols, y, x]) {
     }
 }
 
-main([5, 5, 2, 2]);
+changeMatrix([5, 5, 2, 2]);

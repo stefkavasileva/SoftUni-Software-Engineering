@@ -1,8 +1,8 @@
-function fileterByAge(minAge,fistPersonName,firstPersonAge,secondPersonName,secondPersonAge) {
+function filterByAge(minAge,fistPersonName,firstPersonAge,secondPersonName,secondPersonAge) {
    let fistPerson =  {name:fistPersonName,age: firstPersonAge};
-   let seconPerson = {name: secondPersonName,age: secondPersonAge};
+   let secondPerson = {name: secondPersonName,age: secondPersonAge};
 
-   let people =  [fistPerson,seconPerson];
+   let people =  [fistPerson,secondPerson];
    people = people.filter(x => x.age >= minAge);
 
    for(let index in people){
@@ -10,4 +10,4 @@ function fileterByAge(minAge,fistPersonName,firstPersonAge,secondPersonName,seco
    }
 }
 
-fileterByAge(12, 'Ivan', 15, 'Asen', 9);
+filterByAge(12, 'Ivan', 15, 'Asen', 9);

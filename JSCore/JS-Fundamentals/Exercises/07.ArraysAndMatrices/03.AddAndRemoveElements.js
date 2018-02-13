@@ -1,4 +1,4 @@
-function main(commands) {
+function changeNumbers(commands) {
     let numbers = [];
     let counter = 1;
 
@@ -20,4 +20,4 @@ function main(commands) {
     console.log(numbers.reverse().join(`\n`));
 }
 
-main(["add","add","remove","add","add"]);
+changeNumbers(["add","add","remove","add","add"]);

@@ -25,7 +25,7 @@
     }
 }*/
 
-function main(input) {
+function printCompanyInfo(input) {
     let cars = [];
     for (let i = 0; i < input.length; i++) {
         let args = input[i].split('|').filter(x => x !== '').map(x => x.trim());
@@ -56,7 +56,7 @@ function main(input) {
     }
 }
 
-main(['Audi | Q7 | 1000',
+printCompanyInfo(['Audi | Q7 | 1000',
 'Audi | Q7 | 100',
 'BMW | X5 | 1000',
 'BMW | X6 | 100',

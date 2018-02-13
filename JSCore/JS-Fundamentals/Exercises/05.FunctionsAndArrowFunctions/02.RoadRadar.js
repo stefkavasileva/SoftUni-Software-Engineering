@@ -1,4 +1,4 @@
-function main([speed,zone]) {
+function getInfraction([speed,zone]) {
     let limit = getLimit();
 
     function getLimit() {
@@ -33,4 +33,4 @@ function main([speed,zone]) {
     console.log(infraction);
 }
 
-main([21, "residential"]);
+getInfraction([21, "residential"]);

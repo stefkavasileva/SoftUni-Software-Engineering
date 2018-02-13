@@ -1,4 +1,4 @@
-function main(inputArr) {
+function getLowestPriceInSity(inputArr) {
     let products = new Map;
     for (let priceList of inputArr) {
         let [town, product, price] = priceList.split(/\s+\|\s+/g);
@@ -21,7 +21,7 @@ function main(inputArr) {
     }
 }
 
-main(['Sample Town | Sample Product | 1000',
+getLowestPriceInSity(['Sample Town | Sample Product | 1000',
 'Sample Town | Orange | 2',
 'Sample Town | Peach | 1',
 'Sofia | Orange | 3',

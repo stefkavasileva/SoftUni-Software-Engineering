@@ -1,4 +1,4 @@
-function main(input) {
+function printSystems(input) {
     let systems = [];
     for (let i = 0; i < input.length; i++) {
        let args = input[i].split('|').map(x => x.trim()).filter(x => x !== '');
@@ -61,7 +61,7 @@ function main(input) {
     }
 }
 
-main(['SULS | Main Site | Home Page',
+printSystems(['SULS | Main Site | Home Page',
 'SULS | Main Site | Login Page',
 'SULS | Main Site | Register Page',
 'SULS | Judge Site | Login Page',

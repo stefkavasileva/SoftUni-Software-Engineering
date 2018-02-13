@@ -1,4 +1,4 @@
-function main(text) {
+function getVote(text) {
     let svgMatch = /<svg>(.+?)<\/svg>/g.exec(text);
 
     if (!svgMatch || svgMatch.length > 2) {
@@ -67,4 +67,4 @@ function main(text) {
     console.log(`${label}: ${Math.round(result * 100) / 100}`);
 }
 
-main('<svg><cat><text>Which is your favourite meal from our selection?</text></cat><cat><g><val>Fish</val>15</g><g><val>Prawns</val>31</g><g><val>Crab Langoon</val>12</g><g><val>Calamari</val>17</g></cat></svg>')
+getVote('<svg><cat><text>Which is your favourite meal from our selection?</text></cat><cat><g><val>Fish</val>15</g><g><val>Prawns</val>31</g><g><val>Crab Langoon</val>12</g><g><val>Calamari</val>17</g></cat></svg>')

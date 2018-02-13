@@ -1,6 +1,6 @@
-function main(text,delimiter) {
+function splitByDelimiter(text,delimiter) {
     let result = text.split(delimiter);
     result.forEach(x => console.log(x));
 }
 
-main('One-Two-Three-Four-Five','-');
+splitByDelimiter('One-Two-Three-Four-Five','-');

@@ -1,4 +1,4 @@
-function main(input) {
+function getUniqueWords(input) {
    let set = new Set();
     for (let i = 0; i < input.length; i++) {
        let currentWords = input[i]
@@ -12,7 +12,7 @@ function main(input) {
     console.log(Array.from(set).join(", "));
 }
 
-main(['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis hendrerit dui.Quisque fringilla est urna, vitae efficitur urna vestibulum fringilla.',
+getUniqueWords(['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis hendrerit dui.Quisque fringilla est urna, vitae efficitur urna vestibulum fringilla.',
 'Vestibulum dolor diam, dignissim quis varius non, fermentum non felis. ',
 'Vestibulum ultrices ex massa, sit amet faucibus nunc aliquam ut. ',
 'Morbi in ipsum varius, pharetra diam vel, mattis arcu. ',

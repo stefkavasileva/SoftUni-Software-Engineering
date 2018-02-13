@@ -1,4 +1,4 @@
-function main(objectsAsString) {
+function getHtml(objectsAsString) {
     let objects = JSON.parse(objectsAsString);
     let html = `<table>\n`;
     let keys = takeKeys(objects[0]);
@@ -44,4 +44,4 @@ function main(objectsAsString) {
     }
 }
 
-main('[{"name":"Pesho","score":479},{"name":"Gosho","score":205}]');
+getHtml('[{"name":"Pesho","score":479},{"name":"Gosho","score":205}]');

@@ -1,4 +1,4 @@
-function main(objectsAsString) {
+function getHtmlFromJSOM(objectsAsString) {
     let objects = JSON.parse(objectsAsString);
     let html = `<table>\n`;
     let keys = takeKeys(objects[0]);
@@ -44,4 +44,4 @@ function main(objectsAsString) {
     }
 }
 
-main('[{"Name":"Tomatoes & Chips","Price":2.35},{"Name":"J&B Chocolate","Price":0.96}]');
+getHtmlFromJSOM('[{"Name":"Tomatoes & Chips","Price":2.35},{"Name":"J&B Chocolate","Price":0.96}]');

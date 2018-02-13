@@ -1,4 +1,4 @@
-function main(input) {
+function getBill(input) {
     let pattern = /\b(-*\d+)?\s*\*\s*(-*\d+\.*\d*)\b/;
     let match ;
     while (match = pattern.exec(input)){
@@ -11,4 +11,4 @@ function main(input) {
     console.log(input);
 }
 
-main('My bill: 2*2.50 (beer); 2* 1.20 (kepab); -2  * 0.5 (deposit).');
+getBill('My bill: 2*2.50 (beer); 2* 1.20 (kepab); -2  * 0.5 (deposit).');

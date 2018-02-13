@@ -1,6 +1,6 @@
-function hello(name) {
+function printHello(name) {
     let result = `Hello, ${name}, I am JavaScript!`;
     console.log(result);
 }
 
-hello("pesho")
+printHello("pesho")

@@ -1,4 +1,4 @@
-function main(input) {
+function getUniqueName(input) {
     let uniqueNames = new Set();
     input.forEach(x => uniqueNames.add(x));
     uniqueNames = Array.from(uniqueNames).sort(sortNames);
@@ -12,7 +12,7 @@ function main(input) {
     }
 }
 
-main(['Ashton',
+getUniqueName(['Ashton',
 'Kutcher',
 'Ariel',
 'Lilly',

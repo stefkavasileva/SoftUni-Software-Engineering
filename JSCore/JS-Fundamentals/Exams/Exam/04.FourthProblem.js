@@ -1,4 +1,4 @@
-    function main(inputKingdoms, attackts) {
+    function printWinnerInKingdom(inputKingdoms, attackts) {
         let kingdoms = [];
         for (let currentKingdom of inputKingdoms) {
             let kingdom = kingdoms.find(x => x.name === currentKingdom.kingdom);
@@ -120,7 +120,7 @@
         }
     }
 
-main([ { kingdom: "Maiden Way", general: "Merek", army: 5000 },
+    printWinnerInKingdom([ { kingdom: "Maiden Way", general: "Merek", army: 5000 },
         { kingdom: "Stonegate", general: "Ulric", army: 4900 },
         { kingdom: "Stonegate", general: "Doran", army: 70000 },
         { kingdom: "YorkenShire", general: "Quinn", army: 0 },

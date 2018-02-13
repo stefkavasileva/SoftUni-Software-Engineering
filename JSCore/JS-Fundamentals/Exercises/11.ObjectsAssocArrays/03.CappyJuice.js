@@ -1,4 +1,4 @@
-function main(input) {
+function getJuices(input) {
     let juices = new Map();
     let juiceBottles = new Map();
 
@@ -35,4 +35,4 @@ function main(input) {
     }
 }
 
-main(['Orange => 2000','Peach => 1432','Banana => 450','Peach => 600','Strawberry => 549']);
+getJuices(['Orange => 2000','Peach => 1432','Banana => 450','Peach => 600','Strawberry => 549']);

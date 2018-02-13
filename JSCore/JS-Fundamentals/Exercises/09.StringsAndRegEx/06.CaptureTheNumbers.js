@@ -1,4 +1,4 @@
-function main(input) {
+function getNumber(input) {
     let result = [];
     for (let i = 0; i < input.length; i++) {
         input[i]
@@ -10,7 +10,7 @@ function main(input) {
     console.log(result.join(' '));
 }
 
-main(['The300',
+getNumber(['The300',
 'What is that?',
 'I think it’s the 3rd movie.',
 'Lets watch it at 22:45']);

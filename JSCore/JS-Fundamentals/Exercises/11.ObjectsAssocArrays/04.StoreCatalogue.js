@@ -1,4 +1,4 @@
-function main(input) {
+function printCatalogue(input) {
     let map = new Map();
     for (let i = 0; i < input.length; i++) {
        let args = input[i].split(':').map(x => x.trim()).filter(x => x !== '');
@@ -24,7 +24,7 @@ function main(input) {
     }
 }
 
-main(['Appricot : 20.4',
+printCatalogue(['Appricot : 20.4',
 'Fridge : 1500',
 'TV : 1499',
 'Deodorant : 10',

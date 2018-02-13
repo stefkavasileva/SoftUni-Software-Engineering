@@ -1,4 +1,4 @@
-function main(number) {
+function getHtml(number) {
     let result = "<ul>";
     for(i = 1; i <= number; i++){
         let color = "green";
@@ -14,4 +14,4 @@ function main(number) {
     console.log(result);
 }
 
-main(10);
+getHtml(10);

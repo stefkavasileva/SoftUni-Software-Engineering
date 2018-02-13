@@ -1,5 +1,5 @@
 //75/100
-function main(input) {
+function printSystem(input) {
     let systems = [];
     for (let i = 0; i < input.length; i++) {
         let currentSystem = input[i];
@@ -91,7 +91,7 @@ function main(input) {
 }
 
 
-main([ { system: 'Tau',     candidate: 'Flying Shrimp', votes: 150 },
+printSystem([ { system: 'Tau',     candidate: 'Flying Shrimp', votes: 150 },
     { system: 'Tau',     candidate: 'Space Cow',     votes: 100 },
     { system: 'Theta',   candidate: 'Space Cow',     votes: 10 },
     { system: 'Sigma',   candidate: 'Space Cow',     votes: 200 },

@@ -1,4 +1,4 @@
-function main(n) {
+function printChessboard(n) {
     let result = `<div class=\"chessboard"> `
     for (let row = 0; row < n; row++) {
         result += "\n" + `   <div>`;
@@ -12,4 +12,4 @@ function main(n) {
     console.log(result);
 }
 
-main(3)
+printChessboard(3);

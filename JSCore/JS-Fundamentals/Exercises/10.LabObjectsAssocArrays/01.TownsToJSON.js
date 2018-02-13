@@ -1,4 +1,4 @@
-function main(arr){
+function parseToJSON(arr){
     let keysName = arr[0]
         .split(/[|]/)
         .filter(x => x !== '')
@@ -27,6 +27,6 @@ function main(arr){
     console.log(JSON.stringify(objects));
 }
 
-main(['| Town | Latitude | Longitude |',
+parseToJSON(['| Town | Latitude | Longitude |',
     '| Sofia | 42.696552 | 23.32601 |',
     '| Beijing | 39.913818 | 116.363625 |']);

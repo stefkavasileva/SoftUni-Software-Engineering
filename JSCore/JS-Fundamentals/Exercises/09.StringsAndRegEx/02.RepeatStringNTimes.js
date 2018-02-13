@@ -1,5 +1,5 @@
-function main(text, count) {
+function repeatText(text, count) {
     console.log(text.repeat(count))
 }
 
-main('text', 3);
+repeatText('text', 3);

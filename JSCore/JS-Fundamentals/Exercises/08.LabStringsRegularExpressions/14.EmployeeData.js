@@ -1,4 +1,4 @@
-function main(input) {
+function getPersonInfo(input) {
     let pattern = /(^[A-Z][A-Za-z]*) - ([1-9]+[0-9]*) - ([A-Za-z\d \-]+)$/;
     for (let i = 0; i < input.length; i++) {
        let currentEmployee = input[i];
@@ -11,6 +11,6 @@ function main(input) {
     }
 }
 
-main(['Jonathan - 2000 - Manager',
+getPersonInfo(['Jonathan - 2000 - Manager',
     'Peter- 1000- Chuck',
     'George - 1000 - Team Leader']);

@@ -1,4 +1,4 @@
-function main(input) {
+function getSubsequence(input) {
     let arr = [];
 
     let biggest;
@@ -19,4 +19,4 @@ function main(input) {
     arr.forEach(e => console.log(e));
 }
 
-main([2, 0, 3, 2, 15, 6, 1]);
+getSubsequence([2, 0, 3, 2, 15, 6, 1]);

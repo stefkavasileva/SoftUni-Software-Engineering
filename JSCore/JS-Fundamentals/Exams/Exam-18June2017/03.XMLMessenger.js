@@ -1,4 +1,4 @@
-function main(input) {
+function printMessage(input) {
     let pattern = /^<message((?:\s+[a-z]+="[A-Za-z .\d]+")*)>((?:.|\n)+)<\/message>$/;
     let match = pattern.exec(input);
     if(!match){
@@ -31,4 +31,4 @@ function main(input) {
 }
 
 
-main('<message to="Bob" from="Alice" timestamp="1497254092">Hey man, what\'s up?</message>');
+printMessage('<message to="Bob" from="Alice" timestamp="1497254092">Hey man, what\'s up?</message>');

@@ -1,4 +1,4 @@
-function main(inputArr) {
+function sortNumber(inputArr) {
     inputArr = inputArr.map(Number);
     let positiveNums = [];
     let negativeNums = [];
@@ -17,4 +17,4 @@ function main(inputArr) {
 
 }
 
-main([3, 0, -2, -1]);
+sortNumber([3, 0, -2, -1]);

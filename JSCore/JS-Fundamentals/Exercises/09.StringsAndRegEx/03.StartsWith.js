@@ -1,4 +1,4 @@
-function main(text, substring) {
+function isTextStartWith(text, substring) {
     if(text.startsWith(substring)){
         console.log('true');
         return;
@@ -7,4 +7,4 @@ function main(text, substring) {
     console.log('false');
 }
 
-main('How have you been?','how');
+isTextStartWith('How have you been?','how');

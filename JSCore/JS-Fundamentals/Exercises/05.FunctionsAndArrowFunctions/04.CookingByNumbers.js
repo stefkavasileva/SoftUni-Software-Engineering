@@ -1,7 +1,7 @@
-function main(input) {
+function changeNumber(input) {
     let number = input[0];
 
-    for(i = 1; i < input.length; i++){
+    for(let i = 1; i < input.length; i++){
         let operation = input[i];
 
         switch (operation){
@@ -29,4 +29,4 @@ function main(input) {
     }
 }
 
-main([9, "dice", "spice", "chop", "bake", "fillet"]);
+changeNumber([9, "dice", "spice", "chop", "bake", "fillet"]);
