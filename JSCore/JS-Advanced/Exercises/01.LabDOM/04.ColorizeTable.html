@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04. Colorize Table</title>
+</head>
+<body>
+<table>
+    <tr><th>Name</th><th>Town</th></tr>
+    <tr><td>Eve</td><td>Sofia</td></tr>
+    <tr><td>Nick</td><td>Varna</td></tr>
+    <tr><td>Didi</td><td>Ruse</td></tr>
+    <tr><td>Tedy</td><td>Varna</td></tr>
+</table>
+<button onclick="colorize()">Colorize</button>
+<script>
+    function colorize() {
+        let elements = document.getElementsByTagName("tr");
+        console.log(elements);
+        for (let i = 1; i < elements.length; i += 2) {
+            elements[i].style.background = "Teal";
+        }
+    }
+</script>
+
+</body>
+</html>

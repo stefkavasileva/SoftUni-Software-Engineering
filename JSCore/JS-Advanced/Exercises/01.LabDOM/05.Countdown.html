@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05. Countdown</title>
+</head>
+<body>
+<input type="text" id="time" style="border:3px solid blue; text-align:center; font-size:2em;" disabled="true"/>
+<script>
+    window.onload = function() {
+        countdown(600);
+    }
+
+    function countdown(sec){
+        setInterval(() => {
+            sec--;
+            let minutes = Math.floor(sec / 60);
+            let seconds = sec % 60;
+            let time =  minutes + ':' + (seconds < 10 ? '0' + seconds : seconds)
+
+            document.getElementById('time').value = time;
+
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>
