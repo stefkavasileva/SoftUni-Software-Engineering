@@ -38,13 +38,13 @@
             p.textContent = sentence;
             div.appendChild(p);
 
-            div.addEventListener('onclick',displayParagraph);
+            div.addEventListener('click',displayParagraph);
 
             content.appendChild(div);
         }
 
         function displayParagraph(event) {
-           p.style.display = 'block';
+           event.target.children[0].style.display = 'block';
         }
     }
 </script>

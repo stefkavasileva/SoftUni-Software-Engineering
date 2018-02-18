@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distance Converter</title>
+    <script src="distanceConverter.js"></script>
+    <style>
+        label, input {
+            display: inline-block;
+            width: 5em;
+        }
+
+        label {
+            text-align: right;
+        }
+    </style>
+</head>
+<body onload="attachEventsListeners()">
+<h1>Distance Converter</h1>
+<div>
+    <label for="inputDistance">From:</label>
+    <input type="text" id="inputDistance">
+    <select id="inputUnits">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+        <option value="mi">Miles</option>
+        <option value="yrd">Yards</option>
+        <option value="ft">Feet</option>
+        <option value="in">Inches</option>
+    </select>
+    <input type="button" id="convert" value="Convert">
+</div>
+<div>
+    <label for="outputDistance">To:</label>
+    <input type="text" id="outputDistance" disabled="disabled">
+    <select id="outputUnits">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+        <option value="mi">Miles</option>
+        <option value="yrd">Yards</option>
+        <option value="ft">Feet</option>
+        <option value="in">Inches</option>
+    </select>
+</div>
+<script>
+    function attachEventsListeners() {
+        let rates = {km: 1000, m: 1, cm: 0.01, mm: 0.001, mi: 1609.34, yrd: 0.9144, ft: 0.3048, in: 0.0254};
+
+        let btn = document.getElementById('convert');
+        btn.addEventListener('click',convert);
+        function convert(event) {
+            let inputValue = document.getElementById('inputDistance');
+            let fromValue = document.getElementById('inputUnits').value;
+            let toValue  = document.getElementById('outputUnits').value;
+            let outputValue = document.getElementById('outputDistance');
+
+            outputValue.disabled = false;
+            outputValue.value = Number(inputValue.value) * rates[fromValue] / rates[toValue];
+        }
+    }
+</script>
+</body>
+</html>

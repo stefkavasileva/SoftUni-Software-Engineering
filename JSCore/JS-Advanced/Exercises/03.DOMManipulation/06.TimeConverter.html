@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Converter</title>
+    <script src="timeConverter.js"></script>
+    <style>
+        label, input {
+            display: inline-block;
+            width: 5em;
+        }
+        label {
+            text-align: right;
+        }
+    </style>
+</head>
+<body onload="attachEventsListeners()">
+<h1>Time Converter</h1>
+<div>
+    <label for="days">Days: </label>
+    <input type="text" id="days">
+    <input id="daysBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="hours">Hours: </label>
+    <input type="text" id="hours">
+    <input id="hoursBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="minutes">Minutes: </label>
+    <input type="text" id="minutes">
+    <input id="minutesBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="seconds">Seconds: </label>
+    <input type="text" id="seconds">
+    <input id="secondsBtn" type="button" value="Convert">
+</div>
+<script>
+    function attachEventsListeners(){
+        let btns = document.querySelectorAll('input[type=\'button\']');
+
+        for (let btn of btns) {
+            if(btn.id === 'daysBtn'){
+                btn.addEventListener('click',convertFromDays);
+            }else if(btn.id === 'hoursBtn'){
+                btn.addEventListener('click',convertFromHours);
+            }else if(btn.id === 'minutesBtn'){
+                btn.addEventListener('click',convertFromMinutes);
+            }else {
+                btn.addEventListener('click',convertFromSeconds);
+            }
+        }
+
+        function convertFromDays(event) {
+            let value = Number(event.target.parentElement.children[1].value);
+
+            document.getElementById('hours').value = value * 24;
+            document.getElementById('minutes').value = value * 24 * 60;
+            document.getElementById('seconds').value = value * 24 * 60 * 60;
+        }
+
+        function convertFromHours(event) {
+            let value = Number(event.target.parentElement.children[1].value);
+
+            document.getElementById('days').value = value / 24;
+            document.getElementById('minutes').value = value * 60;
+            document.getElementById('seconds').value = value * 60 * 60
+        }
+
+        function convertFromMinutes(event) {
+            let value = Number(event.target.parentElement.children[1].value);
+
+            document.getElementById('days').value = value / 24 / 60;
+            document.getElementById('hours').value = value / 60;
+            document.getElementById('seconds').value = value * 60;
+        }
+
+        function convertFromSeconds(event) {
+            let value = Number(event.target.parentElement.children[1].value);
+
+            document.getElementById('days').value = value / 24 / 60 / 60;
+            document.getElementById('hours').value = value / 60 / 60;
+            document.getElementById('minutes').value = value / 60;
+        }
+    }
+</script>
+</body>
+</html>

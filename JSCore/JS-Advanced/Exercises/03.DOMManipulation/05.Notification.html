@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification</title>
+    <style>
+        body { width: 600px; text-align: center; }
+        .header {
+            background-color: #5555ff;
+            color: white;
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 0.5em;
+        }
+        #container {
+            position: relative;
+        }
+        .post {
+            margin: 48px;
+            text-align: left;
+        }
+        #notification {
+            float: right;
+            background: #119911;
+            color: #ffffff;
+            padding: 0.5em 2em 0.5em 2em;
+            margin: 1em;
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header class="header">
+        <h1>Welcome to our site</h1>
+    </header>
+    <div id="content">
+        <article class="post">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <button onclick="notify('Something happened!')">Get notified</button>
+    </div>
+    <div id="notification"></div>
+</div>
+<script>
+    function notify(message) {
+        let div = document.getElementById('notification');
+        div.textContent = message;
+        div.style.display = 'block';
+
+       setTimeout(function (message) {
+        div.style.display = 'none';
+       },2000);
+    }
+</script>
+</body>
+</html>
