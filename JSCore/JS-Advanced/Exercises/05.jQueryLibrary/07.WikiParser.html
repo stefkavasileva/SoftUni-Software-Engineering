@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Parser</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div>
+    <p id="wiki">
+        Normal text[ [ [[hyperlink]] [[not a hyperlink] ] [[still not[ a hyperlink]]
+    </p>
+</div>
+<script src="src/wiki-parser.js"></script>
+<script>
+    window.onload = function(){
+        wikiParser('#wiki');
+    }
+</script>
+</body>
+</html>
