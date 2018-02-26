@@ -1,47 +1,78 @@
-(function solution() {
-    let stock = {};
+let result = function () {
+    let robot ={
+        protein: 0,
+        carbohydrate: 0,
+        fat: 0,
+        flavour: 0,
+    };
     let products = {
-        apple:{
-            carb:1,
-            flavour:2
+        apple: {
+            carbohydrate: 1,
+            flavour: 2
         },
         coke:{
-            carb:10,
-            flavour:20
+            carbohydrate: 10,
+            flavour: 20
         },
-        burger :{
-            carb:5,
-            fat:7,
-            flavour:3
+        burger:{
+            carbohydrate: 5,
+            fat: 7,
+            flavour: 3
         },
-        omelet :{
-            protein:5,
-            fat:1,
-            flavour:1
+        omelet:{
+            protein: 5,
+            fat: 1,
+            flavour: 1
         },
-        cheverme  :{
-            protein:10,
-            carb: 10,
-            fat:10,
-            flavour:10
+        cheverme:{
+            protein: 10,
+            carbohydrate: 10,
+            fat: 10,
+            flavour: 10
         }
-    }
-    
-    return function (command) {
-        let commandArgs = command.split(' ');
-        let commandName = commandArgs;
+    };
+
+    return function (input) {
+        let commandArgs = input.split(' ');
+        let commandName = commandArgs[0];
         if(commandName === 'restock'){
-            if(!stock.hasOwnProperty(commandArgs[1])){
-                stock[commandArgs[1]] = 0;
+            let element = commandArgs[1];
+            let quantity = Number(commandArgs[2]);
+            robot[element] += quantity;
+            return 'Success';
+        }else if(commandName === 'prepare'){
+            let selectedProduct = commandArgs[1];
+            let selectedProductQuantity = Number(commandArgs[2]);
+            let currentProductStats = products[selectedProduct];
+
+            let canProductBeCooked = true;
+            for (let microElement in currentProductStats) {
+                if(currentProductStats.hasOwnProperty(microElement)){
+                    let microElementQuantity = currentProductStats[microElement];
+                    if(robot[microElement] < microElementQuantity * selectedProductQuantity){
+                        canProductBeCooked = false;
+                        return `Error: not enough ${microElement} in stock`;
+                    }
+                }
             }
 
-            stock[commandArgs[1]] += Number(commandArgs[2]);
-        }else if(commandName === 'prepare'){
-            let productQuantity = Number(commandArgs[2]);
-            
+            if(canProductBeCooked){
+                for (let microElement in currentProductStats) {
+                    if(currentProductStats.hasOwnProperty(microElement)){
+                        let microElementQuantity = currentProductStats[microElement];
+                        robot[microElement] -= microElementQuantity * selectedProductQuantity;
+                    }
+                }
+            }
+        }else if(commandName === 'report'){
+            return `protein=${robot.protein} carbohydrate=${robot.carbohydrate} fat=${robot.fat} flavour=${robot.flavour}`;
         }
     }
-})();
+}
 
-let manager =  solution();
-manager(); //<==command
+result('restock carbohydrate 10');
+result('restock flavour 10');
+result('prepare apple 1');
+result('restock fat 10');
+result('prepare burger 1');
+result('report');
