@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<input type="text" id="num1" />
+<input type="text" id="num2" />
+<input type="text" id="result" readonly />
+<br>
+<button id="sumButton">
+    Sum</button>
+<button id="subtractButton">
+    Subtract</button>
+<script>
+    function solve() {
+        let firstSelector, secondSelector, resultSelector;
+        return {
+            init:  function(selector1,selector2,resultSelectorAsStr){
+                firstSelector = $(selector1);
+                secondSelector = $(selector2);
+                resultSelector = $(resultSelectorAsStr);
+            },
+            add: function () {
+                let firstVal = Number(firstSelector.val());
+                let secondVal = Number(secondSelector.val());
+                resultSelector.val(firstVal + secondVal);
+            },
+            subtract: function () {
+                let firstVal = Number(firstSelector.val());
+                let secondVal = Number(secondSelector.val());
+                resultSelector.val(firstVal - secondVal);
+            }
+        }
+    }
+</script>
+</body>
+</html>

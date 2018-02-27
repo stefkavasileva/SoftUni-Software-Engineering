@@ -14,11 +14,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="06.BreakfastRobot.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06.BreakfastRobot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06.BreakfastRobot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="09.Kepler'sProblem.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/09.Kepler'sProblem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07.MonkeyPatcher.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07.MonkeyPatcher.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-351">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="08.EuclidsAlgorithm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08.EuclidsAlgorithm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,7 +71,10 @@
         <option value="$PROJECT_DIR$/03.FunctionalSum.js" />
         <option value="$PROJECT_DIR$/04.PersonalBMI.js" />
         <option value="$PROJECT_DIR$/05.VectorMath.js" />
+        <option value="$PROJECT_DIR$/07.MonkeyPatcher.js" />
+        <option value="$PROJECT_DIR$/08.EuclidsAlgorithm.js" />
         <option value="$PROJECT_DIR$/06.BreakfastRobot.js" />
+        <option value="$PROJECT_DIR$/09.Kepler'sProblem.js" />
       </list>
     </option>
   </component>
@@ -78,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +123,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -111,26 +144,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.06.BreakfastRobot.js">
-    <configuration name="02.ArgumentInfo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="02.ArgumentInfo.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="03.FunctionalSum.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="03.FunctionalSum.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="04.PersonalBMI.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="04.PersonalBMI.js" working-dir="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Node.js.09.Kepler'sProblem.js">
     <configuration name="05.VectorMath.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="05.VectorMath.js" working-dir="$PROJECT_DIR$" />
     <configuration name="06.BreakfastRobot.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="06.BreakfastRobot.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="07.MonkeyPatcher.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="07.MonkeyPatcher.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="08.EuclidsAlgorithm.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="08.EuclidsAlgorithm.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="09.Kepler'sProblem.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="09.Kepler'sProblem.js" working-dir="$PROJECT_DIR$" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.02.ArgumentInfo.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.03.FunctionalSum.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.04.PersonalBMI.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.05.VectorMath.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.06.BreakfastRobot.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.05.VectorMath.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.06.BreakfastRobot.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.07.MonkeyPatcher.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.08.EuclidsAlgorithm.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.09.Kepler'sProblem.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.06.BreakfastRobot.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.05.VectorMath.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.04.PersonalBMI.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.03.FunctionalSum.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.02.ArgumentInfo.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.09.Kepler'sProblem.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.08.EuclidsAlgorithm.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.07.MonkeyPatcher.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.06.BreakfastRobot.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.05.VectorMath.js" />
       </list>
     </recent_temporary>
   </component>
@@ -150,14 +183,16 @@
       <workItem from="1519414336496" duration="7044000" />
       <workItem from="1519566703037" duration="2615000" />
       <workItem from="1519671884040" duration="4278000" />
+      <workItem from="1519741023706" duration="1663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13937000" />
+    <option name="totallyTimeSpent" value="15600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -194,22 +229,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/06.BreakfastRobot.js</url>
-          <line>45</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/06.BreakfastRobot.js</url>
           <line>35</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/06.BreakfastRobot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01.SortArray.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -344,10 +380,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/08.EuclidsAlgorithm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07.MonkeyPatcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/06.BreakfastRobot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="237">
+          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09.Kepler'sProblem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
         </state>
       </provider>

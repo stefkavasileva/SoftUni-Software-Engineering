@@ -1,4 +1,4 @@
-let result = function () {
+let result =(function solve() {
     let robot ={
         protein: 0,
         carbohydrate: 0,
@@ -63,16 +63,22 @@ let result = function () {
                         robot[microElement] -= microElementQuantity * selectedProductQuantity;
                     }
                 }
+                return 'Success';
             }
         }else if(commandName === 'report'){
             return `protein=${robot.protein} carbohydrate=${robot.carbohydrate} fat=${robot.fat} flavour=${robot.flavour}`;
         }
     }
-}
+})();
 
-result('restock carbohydrate 10');
-result('restock flavour 10');
-result('prepare apple 1');
-result('restock fat 10');
-result('prepare burger 1');
+result('prepare cheverme 1'),
+result('restock protein 10'),
+result('prepare cheverme 1'),
+result('restock carbohydrate 10'),
+result('prepare cheverme 1'),
+result('restock fat 10'),
+result('prepare cheverme 1'),
+result('restock flavour 10'),
+result('prepare cheverme 1'),
 result('report');
+
