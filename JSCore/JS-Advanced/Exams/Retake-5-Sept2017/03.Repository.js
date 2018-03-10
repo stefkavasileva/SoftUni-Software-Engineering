@@ -1,4 +1,4 @@
-//73/100
+//86/100
 let Repository = (function () {
     let id = 0;
 
@@ -9,12 +9,14 @@ let Repository = (function () {
         }
 
         add(entity) {
+            if(Object.keys(entity).length > Object.keys(this.props).length){
+                throw new Error(`Property ${key} is missing from the entity!`) // ==> get key from entity
+            }
+
             if(isValidEntity(entity,this.props)){
                 this.data.set(id++,entity);
-                return id;
+                return id - 1;
             }
-            /// pomisli za varqnt v koito moje v entrito da se podawat poveche parametri ot prop
-
         }
 
         update(inputId,entity){
@@ -92,12 +94,12 @@ entity = {
 repository.update(1, entity);
 console.log(repository.get(1));
 // {"name":"Valio","age":19,"birthday":"1998-01-06T22:00:00.000Z"}
-// Delete an entity
-repository.del(0);
+
 console.log(repository.count); // Returns 1
 let anotherEntity = {
     name1: 'Nakov',
     age: 26,
     birthday: new Date(1991, 0, 21)
 };
+console.log(repository.data.keys());
 
