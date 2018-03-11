@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Overlay</title>
+    <style>
+        .overlay {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .dialog {
+            border: 1px solid black;
+            background: #eeeeee;
+            display: inline-block;
+            margin: 40vh auto;
+            padding: 1em 3em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<h1>Modal Dialog Overlay</h1>
+<button onclick="spawnConfirm()">Create OK/Cancel</button>
+<button onclick="spawnInput()">Create Input</button>
+<textarea style="resize: none; display: block; width: 300px; height: 200px" disabled id="output"></textarea>
+
+<script src="solution.js"></script>
+<script>
+    function spawnConfirm() {
+        log('Spawning Confirm dialog');
+        let callback = (params) => {
+            log('Clicked OK');
+        };
+        let dialog = new Dialog("Test Dialog, containing OK and Cancel buttons.", callback);
+        dialog.render();
+    }
+
+    function spawnInput() {
+        log('Spawning Input dialog');
+        let callback = (params) => {
+            log(`Params: {${Object.keys(params).map(k => k + ': ' + params[k]).join(', ')}}`);
+        };
+        let dialog = new Dialog("Dialog, containing message text and input field.", callback);
+        dialog.addInput('Name', 'name', 'text');
+        dialog.render();
+    }
+
+    function log(text) {
+        document.getElementById('output').textContent += text + '\n';
+    }
+</script>
+</body>
+</html>
