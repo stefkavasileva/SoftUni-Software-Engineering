@@ -10,7 +10,7 @@
 
 <h2> Certificates </h2>
 
-|**Course**|**Link**|
+|**Course**|**Link**| 
 |---|---|
 |<a href="https://softuni.bg/trainings/1439/programming-basics-august-2016" > Programming Basics </a>   | <a href="https://softuni.bg/certificates/details/15409/8d5c6577"> Link</a> |
 |<a href="https://softuni.bg/trainings/1568/programming-fundamentals-exended-january-2017"> Programming Fundamentals - Extended  </a>| <a href="https://softuni.bg/certificates/details/19338/71d887b2"> Link</a> |
