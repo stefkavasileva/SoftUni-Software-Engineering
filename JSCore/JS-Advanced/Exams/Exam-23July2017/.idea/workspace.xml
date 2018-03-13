@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="04.Contacts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04.Contacts.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,8 +41,8 @@
         <option value="$PROJECT_DIR$/01.SelectАndPrint.js" />
         <option value="$PROJECT_DIR$/02.SumatorClass.js" />
         <option value="$PROJECT_DIR$/tests/02.SumatorTests.js" />
-        <option value="$PROJECT_DIR$/04.Contacts.js" />
         <option value="$PROJECT_DIR$/03.Task.js" />
+        <option value="$PROJECT_DIR$/04.Contacts.js" />
       </list>
     </option>
   </component>
@@ -82,8 +82,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,7 +98,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -118,11 +118,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.03.Task.js">
+  <component name="RunManager" selected="Node.js.04.Contacts.js">
     <configuration name="01.Select.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Exam-23July2017/01.Select.html" />
     <configuration name="01.SelectАndPrint.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="01.SelectАndPrint.js" working-dir="$PROJECT_DIR$" />
     <configuration name="02.SumatorTests.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="02.SumatorTests.js" working-dir="$PROJECT_DIR$/tests" />
     <configuration name="03.Task.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="03.Task.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="04.Contacts.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="04.Contacts.js" working-dir="$PROJECT_DIR$" />
     <configuration name="Unnamed" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -135,18 +136,20 @@
       <test-directory>$PROJECT_DIR$/tests</test-directory>
       <recursive>false</recursive>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Mocha.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.02.SumatorTests.js" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.01.Select.html" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.01.SelectАndPrint.js" />
       <item index="4" class="java.lang.String" itemvalue="Node.js.03.Task.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.04.Contacts.js" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.03.Task.js" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.01.Select.html" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.01.SelectАndPrint.js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.04.Contacts.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.03.Task.js" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.01.Select.html" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.01.SelectАndPrint.js" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1520783233646</updated>
       <workItem from="1520783234911" duration="8611000" />
+      <workItem from="1520795667956" duration="1446000" />
     </task>
     <servers />
   </component>
@@ -200,7 +204,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8611000" />
+    <option name="totallyTimeSpent" value="10057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -215,13 +219,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -233,19 +237,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/04.Contacts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01.Select.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-          <folding>
-            <element signature="e#762#774#1" expanded="false" />
-            <element signature="e#832#843#1" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -253,7 +261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -261,7 +268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -269,7 +275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2387">
           <caret line="99" column="2" lean-forward="false" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -277,7 +282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="43" column="0" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -285,11 +289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#isOverdue#0;n#Task#0" expanded="false" />
-            <element signature="n#!!block;n#deadline#0;n#Task#0" expanded="false" />
-            <element signature="n#!!block;n#deadline#1;n#Task#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
