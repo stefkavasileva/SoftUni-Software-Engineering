@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Bill</title>
+    <style>
+        body {padding: 30px;}
+        table, section {border: 1px solid black; border-collapse: collapse;}
+        th, td {padding: 5px 20px;}
+        th, tfoot td {background: #cccccc;}
+        tr:nth-child(odd) {background: #eeeeee;}
+        tr:nth-child(even) {background: #dddddd;}
+        tfoot > tr td {font-style: italic; font-weight: bold;}
+        section {margin-top: 10px; width: 177px; background: #cccccc;}
+        section > * {display: block; padding: 5px;}
+        h3 {margin: 0; text-align: center;}
+        button {margin: 5px auto;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h2>Restaurant Bill</h2>
+<table id="bill">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody id="product-list"></tbody>
+    <tfoot>
+    <tr>
+        <td>Total:</td>
+        <td>0.00</td>
+    </tr>
+    </tfoot>
+</table>
+<section id="add-product">
+    <h3>Add new product</h3>
+    <label>Product:
+        <input type="text">
+    </label>
+    <label>Price:
+        <input type="number">
+    </label>
+    <button onclick="addProduct()">Add</button>
+</section>
+
+<script>
+    function addProduct() {
+        let productName = $('#add-product :input[type=\'text\']');
+        let productPrice = $('#add-product :input[type=\'number\']');
+
+        let productNameVal = productName.val();
+        let productPriceVal = Number(productPrice.val());
+
+        if(productNameVal === '' || productPrice.val() === ''){
+            return;
+        }
+
+        $('#product-list').append($('<tr>')
+            .append($(`<td>`).text(productNameVal))
+            .append($('<td>').text(productPriceVal)));
+
+       let totalBill = $('#bill tfoot tr td:last-child');
+       let totalBillValue = Number(totalBill.text()) + productPriceVal;
+       totalBill.text(totalBillValue);
+
+       productName.val('');
+       productPrice.val('');
+    }
+</script>
+
+</body>
+</html>
