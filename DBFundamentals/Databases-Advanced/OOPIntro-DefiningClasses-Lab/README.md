@@ -12,8 +12,8 @@ Create a class named **BankAccount**.
 
 The class should have public properties for:
 
-- **ID:**** int**
-- **Balance:**** decimal**
+- **ID:** **int**
+- **Balance:** **decimal**
 
 You should be able to use the class like this:
 
@@ -41,13 +41,13 @@ Create a class **BankAccount** (you can use class from previous task)
 
 The class should have properties for:
 
-- **ID:**** int**
-- **Balance:**** decimal**
+- **ID:** **int**
+- **Balance:** **decimal**
 
 And methods for:
 
-- **Deposit(decimal amount):****void**
-- **Withdraw(decimal amount):****void**
+- **Deposit(decimal amount):void**
+- **Withdraw(decimal amount):void**
 
 You should be able to use the class like this:
 
@@ -88,9 +88,9 @@ Support the **following commands** :
 
 If you try to create an account with existing Id, print **&quot;Account already exists&quot;.**
 
-If you try to perform an operation on **non-existing account** with existing Id, print **&quot;**** Account does not exist ****&quot;**.
+If you try to perform an operation on **non-existing account** with existing Id, print **&quot;** **Account does not exist** **&quot;**.
 
-If you try to withdraw an amount larger than the balance, print **&quot;**** Insufficient balance ****&quot;**.
+If you try to withdraw an amount larger than the balance, print **&quot;** **Insufficient balance** **&quot;**.
 
 The Print command should print **&quot;Account ID {id}, balance = {balance}&quot;**. Round the balance to the second digit after the decimal separator.
 
@@ -135,7 +135,7 @@ The class should have **constructors** :
 
 The class should also have **public methods** for:
 
-- **GetBalance():****decimal**
+- **GetBalance():** **decimal**
 
 ### Solution
 
