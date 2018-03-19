@@ -1,7 +1,5 @@
 ﻿# <p align="center"> Inheritance - Lab</p>
 
-![Not fount](/DBFundamentals/Databases-Advanced/images/21.png)
-
 Problems for exercises and homework for the [&quot;CSharp DB Advanced&quot; course @ Software University](https://softuni.bg/trainings/1741/databases-advanced-entity-framework-october-2017).
 
 ## Part I: Inheritance
@@ -37,7 +35,7 @@ Create three classes named **Animal** , **Dog** and **Puppy**.
 
 **Dog** with a single public method **Bark()** that prints: **&quot;barking…&quot;**
 
-**Puppy** with a single public method **Weep()** that prints: **&quot;**** weeping… ****&quot;**
+**Puppy** with a single public method **Weep()** that prints: **&quot;** **weeping…** **&quot;**
 
 **Dog** should inherit from **Animal**. **Puppy** should inherit from **Dog**.
 
@@ -75,7 +73,7 @@ Create a **RandomList** class that has all the functionality of **List&lt;string
 
 Add additional function that **returns** and **removes** a random element from the list.
 
-- Public method: **RandomString(): string       **
+- Public method: **RandomString(): string**
 
 Create a class **RandomList** , derived from **List&lt;string&gt;** :
 
@@ -122,7 +120,7 @@ Create the **fields** and **properties** we will need. Validate **count** in the
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/32.png)
 
-Create a **constructor** that gives the **Box** an empty **data**** array** with a size of 4 and a Count of 0.
+Create a **constructor** that gives the **Box** an empty **data** **array** with a size of 4 and a Count of 0.
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/33.png)
 
