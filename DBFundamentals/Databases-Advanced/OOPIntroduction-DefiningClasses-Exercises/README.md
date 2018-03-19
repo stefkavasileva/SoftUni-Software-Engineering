@@ -41,7 +41,7 @@ Use both the inline initialization and the default constructor. Your fields shou
 Add 3 constructors to the **Person** class from the last task, use constructor chaining to reuse code:
 
 1. The first should take **no arguments** and produce a person with **name**&quot; **No name**&quot; and **age** = **1**.
-2. The second should accept only **an**** integer ****number** for the **age** and produce a person with **name**&quot; **No name**&quot; and **age** equal to the passed parameter.
+2. The second should accept only **an** **integer** **number** for the **age** and produce a person with **name**&quot; **No name**&quot; and **age** equal to the passed parameter.
 3. The third one should accept a **string** for the name and an **integer** for the age and should produce a person with the given **name** and **age**.
 
 Add the following code to your main method and submit it to Judge.
@@ -125,10 +125,3 @@ Your task is to write a program which takes **N** lines of employees from the co
 
 
 
-
-
-
-
-
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/10.png)
