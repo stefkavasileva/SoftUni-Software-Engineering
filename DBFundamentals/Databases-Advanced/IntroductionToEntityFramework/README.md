@@ -12,7 +12,7 @@ Import the SoftUni database into SQL Management Studio by **executing** the prov
 
 Model the existing database by using Database First.
 
-First create a new empty **.Net Core**** ConsoleApplication **and after it is created open the** Package Manager Console**:
+First create a new empty **.Net Core** **ConsoleApplication** and after it is created open the **Package Manager Console**:
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/39.png)
 
@@ -29,9 +29,9 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer.Design
 ```
 
 
-These are the **packages** you will need, in order to **scaffold** our **SoftUniContext** from the **SoftUni**** database**.
+These are the **packages** you will need, in order to **scaffold** our **SoftUniContext** from the **SoftUni** **database**.
 
-Next, we must **execute** the **command** to **scaffold** our **context**** class**. It will consist of 4 things:
+Next, we must **execute** the **command** to **scaffold** our **context** **class**. It will consist of 4 things:
 
 - First, the name of the command:
 
@@ -59,11 +59,11 @@ Our final command will look like this:
 
 Execute the **whole command** on a **single line**
 
-Entity Framework Core has successfully **mapped the database schema to C# classes**. However, it isn&#39;t good enough with names – all classes have been pluralized. Use the **Solution Explorer** in Visual Studio to move the **SoftUniContext** class out of **Models** intothe **Data** folder and rename all of our classes properly. Use **right click**  **→ Rename** or the **F2** shortcut and press **OK** on this **pop**** up ****window** after each class:
+Entity Framework Core has successfully **mapped the database schema to C# classes**. However, it isn&#39;t good enough with names – all classes have been pluralized. Use the **Solution Explorer** in Visual Studio to move the **SoftUniContext** class out of **Models** intothe **Data** folder and rename all of our classes properly. Use **right click**  **→ Rename** or the **F2** shortcut and press **OK** on this **pop up window** after each class:
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/41.png)
 
-This way Visual Studio will also **rename** the **classes**** everywhere** they&#39;re used.
+This way Visual Studio will also **rename** the **classes everywhere** they&#39;re used.
 
 The final result should look like this:
 
@@ -73,7 +73,7 @@ Don&#39;t forget to fix the **SoftUniContext&#39;s** namespace after moving it a
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/43.png)
 
-**Make**** sure **that your namespaces are** exactly** the same as these:
+**Make sure** that your namespaces are **exactly** the same as these:
 
 ``` 
 P02\_DatabaseFirst
@@ -107,7 +107,7 @@ Now we can use the **SoftUniContext** to extract data from our database. Your fi
 
 ### **4.** Employees with Salary Over 50 000
 
-Your task is to extract **all employees** with **salary** over **50000**. Return **only the**** first names **of those employees, ordered** alphabetically**.
+Your task is to extract **all employees** with **salary** over **50000**. Return **only the first names of those employees, ordered** alphabetically**.
 
 | Output |
 | --- |
@@ -119,7 +119,7 @@ Your task is to extract **all employees** with **salary** over **50000**. Return
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/44.png)
 
-Use **Express**** Profiler** and check if the query Entity Framework Core sent is correct (there is only one query, but there may be more that are performed by EF for checks).
+Use **Express Profiler** and check if the query Entity Framework Core sent is correct (there is only one query, but there may be more that are performed by EF for checks).
 
 ![Not fount](/DBFundamentals/Databases-Advanced/images/45.png)
 
@@ -143,9 +143,9 @@ Use Express Profiler and check if the made query by Entity Framework is correct 
 
 ## **6.** Adding a New Address and Updating Employee
 
-Create a new address with **text**&quot; **Vitoshka 15**&quot; and **TownId**** 4 **. Set that address to the employee with last name &quot;** Nakov**&quot;.
+Create a new address with **text**&quot; **Vitoshka 15**&quot; and **TownId 4**. Set that address to the employee with last name &quot;**Nakov**&quot;.
 
-Then order by **descending** all the employees by their **Address&#39;**** Id **, take** 10 **rows and from them, take the** AddressText**. Print the results each on a new line:
+Then order by **descending** all the employees by their **Address&#39 Id**, take 10 rows and from them, take the **AddressText**. Print the results each on a new line:
 
 | Output |
 | --- |
@@ -163,7 +163,7 @@ Create the address and find the employee with last name equal to &quot; **Nakov*
 
 ## **7.** Employees and Projects
 
-Find the first **30** employees who have **projects** started in the period **2001 - 2003** (inclusive). Print each employee&#39;s **first name** , **last name, manager&#39;s first name** and **last name****. **Then print** all **of their** projects **in the format &quot;--&lt;** ProjectName **&gt; - &lt;** StartDate **&gt; - &lt;** EndDate **&gt;&quot;, each on a** new ****row**. If a project has no end date, print &quot; **not finished**&quot; instead.
+Find the first **30** employees who have **projects** started in the period **2001 - 2003** (inclusive). Print each employee&#39;s **first name** , **last name, manager&#39;s first name** and **last name**. **Then print** all **of their** projects **in the format &quot;--&lt;** ProjectName **&gt; - &lt;** StartDate **&gt; - &lt;** EndDate **&gt;&quot;, each on a** new **row**. If a project has no end date, print &quot; **not finished**&quot; instead.
 
 Here is the format:
 
@@ -180,7 +180,7 @@ Use date format: &quot; **M/d/yyyy h:mm:ss tt**&quot;.
 
 ## **8.** Addresses by Town
 
-Find all addresses, **ordered** by the **number of employees** who live there ( **descending** ), then by **town name** ( **ascending** ), and finally by **address**** text**(**ascending**). Take only the**first 10 addresses **. For each address print it in the format &quot;&lt;** AddressText **&gt;, &lt;** TownName **&gt; - &lt;** EmployeeCount**&gt; employees&quot;:
+Find all addresses, **ordered** by the **number of employees** who live there ( **descending** ), then by **town name** ( **ascending** ), and finally by **address text**(**ascending**). Take only the**first 10 addresses **. For each address print it in the format &quot;&lt;** AddressText **&gt;, &lt;** TownName **&gt; - &lt;** EmployeeCount**&gt; employees&quot;:
 
 | Output |
 | --- |
@@ -190,7 +190,7 @@ Find all addresses, **ordered** by the **number of employees** who live there ( 
 
 ## **9.** Employee 147
 
-Get the **employee with id 147.** Print only his/her **first name** , **last name** , **job title** and **projects** (print only their names). The projects should be **ordered**** by ****name** ( **ascending** ). Format of the output:
+Get the **employee with id 147.** Print only his/her **first name** , **last name** , **job title** and **projects** (print only their names). The projects should be **ordered by name** ( **ascending** ). Format of the output:
 
 | Output |
 | --- |
@@ -200,9 +200,9 @@ Get the **employee with id 147.** Print only his/her **first name** , **last nam
 
 ## **10.** Departments with More Than 5 Employees
 
-Find **all departments** with more than **5 employees**. Order them by **employee count** ( **ascending** ), then by **department**** name**(**alphabetically**).
-For each department, print the **department name** and the **manager&#39;s first** and **last name** on the **first row**. Then print the **first**** name **, the** last ****name** and the **job**** title **of every** employee **on a new row. Then, print** 10 dashes**before the next department (&quot;**----------**&quot;).
-Order the employees by **first**** name**(**ascending**), then by**last ****name** ( **ascending** ). Format of the output:
+Find **all departments** with more than **5 employees**. Order them by **employee count** ( **ascending** ), then by **department name**(**alphabetically**).
+For each department, print the **department name** and the **manager&#39;s first** and **last name** on the **first row**. Then print the **first name **, the **last name** and the **job title** of every **employee** on a new row. Then, print** 10 dashes** before the next department (&quot;**----------**&quot;).
+Order the employees by **first name**(**ascending**), then by**last name** ( **ascending** ). Format of the output:
 
 | Output |
 | --- |
@@ -213,7 +213,7 @@ Order the employees by **first**** name**(**ascending**), then by**last ****name
 
 ## **11.** Find Latest 10 Projects
 
-Write a program that prints information about the **last 10 started projects**. **Sort**** them by name **lexicographically and print** their name, description and start date**, each on a new row. Format of the output:
+Write a program that prints information about the **last 10 started projects**. **Sort them by name** lexicographically and **print their name, description and start date**, each on a new row. Format of the output:
 
 | Output |
 | --- |
@@ -226,7 +226,7 @@ Use date format: &quot; **M/d/yyyy h:mm:ss tt**&quot;.
 
 ## **12.** Increase Salaries
 
-Write a program that increase salaries of all employees that are in the **Engineering** , **Tool Design** , **Marketing** or **Information Services** department by **12%**. Then **print first name, last name and salary** (2 symbols after the decimal separator)for those employees whose salary was increased. Order them by **first**** name**(**ascending**), then by**last ****name** ( **ascending** ). Format of the output:
+Write a program that increase salaries of all employees that are in the **Engineering** , **Tool Design** , **Marketing** or **Information Services** department by **12%**. Then **print first name, last name and salary** (2 symbols after the decimal separator)for those employees whose salary was increased. Order them by **first name**(**ascending**), then by **last name** ( **ascending** ). Format of the output:
 
 | Output |
 | --- |
@@ -236,7 +236,7 @@ Write a program that increase salaries of all employees that are in the **Engine
 
 ## **13.** Find Employees by First Name Starting With &quot;Sa&quot;
 
-Write a program that finds all employees whose first name starts with &quot; **Sa**&quot;. Print their **first** , **last**** name **, their** job ****title** and **salary** in the format given in the example below. Order them by **first**** name **, then by** last ****name** ( **ascending** ).
+Write a program that finds all employees whose first name starts with &quot; **Sa**&quot;. Print their **first** , **last name**, their **job title** and **salary** in the format given in the example below. Order them by **first name**, then by **last name** ( **ascending** ).
 
 \*Note: You have to solve **previous** task in order to display proper results.
 
@@ -274,7 +274,7 @@ This is done by removing the project from all employees who reference it.
 
 ## **15.** Remove Towns
 
-Write a program that **deletes a**  **town** by its name, given as an input. Also, **delete all addresses** that are in those towns. Print on the console the **number** of **addresses** that were **deleted**. There will be **employees** living at those addresses, which will be a problem when trying to delete the addresses. So, start by setting the **AddressID** of each employee for the given address to **null**. After all of them are set to null, you may safely remove all the addresses from the **context.Addresses** and finally remove the **given**** town **. You should test this task** locally**, so you can see what happens for more than 1 case of deletion.
+Write a program that **deletes a**  **town** by its name, given as an input. Also, **delete all addresses** that are in those towns. Print on the console the **number** of **addresses** that were **deleted**. There will be **employees** living at those addresses, which will be a problem when trying to delete the addresses. So, start by setting the **AddressID** of each employee for the given address to **null**. After all of them are set to null, you may safely remove all the addresses from the **context.Addresses** and finally remove the **given town **. You should test this task** locally**, so you can see what happens for more than 1 case of deletion.
 
 ### Example
 
