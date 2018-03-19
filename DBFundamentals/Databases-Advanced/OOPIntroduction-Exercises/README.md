@@ -34,7 +34,7 @@ If you defined the class correctly, the test should pass.
 
 ### Problem 2.Date Modifier
 
-Create a class **DateModifier** , which stores the difference of the days between two Dates. It should have a method, which takes **two string parameters**** representing a date **as strings and** calculates the** difference in the days between them.
+Create a class **DateModifier** , which stores the difference of the days between two Dates. It should have a method, which takes **two string parameters** representing a date **as strings and** calculates the difference in the days between them.
 
 ### Examples
 
@@ -99,7 +99,7 @@ Submit your code as a zip file in Judge. Zip everything except the bin and obj f
 
 ### Problem 5.Football Team Generator
 
-A football team has variable **number of players** , a **name** and a **rating**. A player has a **name** and **stats**** , **which are the basis for his skill level. The stats a player has are** endurance **,** sprint **,** dribble **,** passing **and** shooting **. Each stat can be an** integer** in the range [0..100]. The overall skill level of a player is calculated as the average of his stats. Only the name of a player and his stats should be visible to the entire outside world. Everything else should be hidden.
+A football team has variable **number of players** , a **name** and a **rating**. A player has a **name** and **stats**, **which are the basis for his skill level. The stats a player has are** endurance **,** sprint **,** dribble **,** passing **and** shooting **. Each stat can be an** integer in the range [0..100]. The overall skill level of a player is calculated as the average of his stats. Only the name of a player and his stats should be visible to the entire outside world. Everything else should be hidden.
 
 A team should expose a name, a rating (calculated by the average skill level of all players in the team and rounded to the integer part only) and methods for adding and removing players.
 
@@ -193,16 +193,16 @@ You will be given some lines of input. Each two lines will represent an animal. 
 ### Constraints
 
 -  Each **Animal** should have a **name** , an **age** and a **gender**
-- ** All **input values should** not be blank** (e.g. name, age and so on…)
+- **All input values should** not be blank** (e.g. name, age and so on…)
 -  If you receive an input for the **gender** of a **Tomcat** or a **Kitten** , ignore it but **create** the animal
 -  If the input is invalid for one of the properties, throw an exception with message: &quot;I **nvalid input!**&quot;
 -  Each animal should have the functionality to **ProduceSound()**
 -  Here is the type of sound each animal should produce:
-  - **oo**** Dog: &quot;Woof!&quot;**
-  - **oo**** Cat: &quot;Meow meow&quot;**
-  - **oo**** Frog: &quot;Ribbit&quot;**
-  - **oo**** Kittens: &quot;Meow&quot;**
-  - **oo**** Tomcat: &quot;MEOW&quot;**
+  - **Dog: &quot;Woof!&quot;**
+  - **Cat: &quot;Meow meow&quot;**
+  - **Frog: &quot;Ribbit&quot;**
+  - **Kittens: &quot;Meow&quot;**
+  - **Tomcat: &quot;MEOW&quot;**
 
 ### Examples
 
