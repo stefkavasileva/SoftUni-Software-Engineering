@@ -6,7 +6,7 @@ This document defines the **exercise assignments** for the [&quot;Databases Adva
 
 Write a program that connects to your **localhost** server. Create **new database** called **MinionsDB** where we will keep information about our minions and villains.
 
-For each **minion** we should keep information about its **name** , **age** and **town**.  Each **town** has information about **the**** country **where it&#39;s located.** Villains **have** name **and** evilness ****factor** ( **super good** , **good** , **bad** , **evil** , **super**** evil**). Each**minion **can** serve ****several**** villains **and** each ****villain** can **have**** several ****minions**** serving ****him**. Fill all tables with at least 5 records each.
+For each **minion** we should keep information about its **name** , **age** and **town**.  Each **town** has information about the **country** where it&#39;s located. **Villains** have **name** and **evilness factor** ( **super good** , **good** , **bad** , **evil** , **super evil**). Each **minion can** serve **several** villains and each **villain** can **have** **several** **minions** **serving** **him**. Fill all tables with at least 5 records each.
 
 In the end you shoud have the following tables:
 
@@ -31,7 +31,7 @@ Write a program that prints on the console **all villains&#39; names** and their
 
 ## 3.Minion Names
 
-Write a program that prints on the console **all minion names** and age for a given **villain id** , ordered by **name**** alphabetically.**
+Write a program that prints on the console **all minion names** and age for a given **villain id** , ordered by **name** **alphabetically.**
 
 If there is no villain with the given ID, print &quot;No villain with ID &lt; **VillainId** &gt; exists in the database.&quot;.
 If the selected villain has no minions, print &quot;(no minions)&quot; on the second row.
@@ -48,7 +48,7 @@ If the selected villain has no minions, print &quot;(no minions)&quot; on the se
 
 ## 4.Add Minion
 
-Write a program that **reads**** information **about a minion and its villain and** adds it to the database **. In case the town of the minion is not in the database,** insert **it as well. In case the villain is not present in the database, add him too with a default** evilness ****factor** of &quot;evil&quot;. Finally set the new minion to be a servant of the villain. Print appropriate messages after each operation.
+Write a program that **reads** **information** about a minion and its villain and **adds it to the database**. In case the town of the minion is not in the database, **insert** it as well. In case the villain is not present in the database, add him too with a default **evilness factor** of &quot;evil&quot;. Finally set the new minion to be a servant of the villain. Print appropriate messages after each operation.
 
 ### Input
 
@@ -56,7 +56,7 @@ The input comes in two lines:
 
 - On the first line, you will receive the **minion**** information **in the format &quot;Minion: &lt;** Name **&gt; &lt;** Age **&gt; &lt;** TownName**&gt;&quot;
 
-- On the second – the **villain**** information **in the format &quot;Villain: &lt;** Name**&gt;&quot;
+- On the second – the **villain** **information** in the format **&quot;Villain: &lt Name&gt;&quot;**
 
 ### Output
 
@@ -83,9 +83,9 @@ Write a program that **changes all town names to uppercase** for a given country
 
 You will receive one line of input with the **name** of the country.
 
-**Print the**** number of towns that were changed **in the format &quot;&lt;** ChangedTownsCount **&gt; town names were affected.&quot;. On a second line,** print **the** names that were changed**, separated with a comma and a space.
+**Print the** **number of towns that were changed** in the format &quot;&lt; **ChangedTownsCount** &gt; town names were affected.&quot;. On a second line, **print** the **names that were changed**, separated with a comma and a space.
 
-If **no**** towns**were affected (the country does not exist in the database or has no cities connected to it),**print **&quot;** No town names were affected.**&quot;.
+If **no** **towns** were affected (the country does not exist in the database or has no cities connected to it),**print **&quot;** No town names were affected.**&quot;.
 
 ### Example
 
@@ -96,7 +96,7 @@ If **no**** towns**were affected (the country does not exist in the database or 
 
 ## 6.\*Remove Villain
 
-Write a program that receives the **ID** of a villain, **deletes him from the database** and **releases his minions** from serving to him. Print on **two**** lines **the name of the deleted villain in format &quot;&lt;** Name **&gt;** was ****deleted**.&quot; and the number of minions released in format &quot;&lt; **MinionCount** &gt; **minions**** were ****released**.&quot;. Make sure all operations go as planned, otherwise do not make any changes in the database.
+Write a program that receives the **ID** of a villain, **deletes him from the database** and **releases his minions** from serving to him. Print on **two** **lines** the name of the deleted villain in format &quot;&lt;**Name** &gt; **was deleted**.&quot; and the number of minions released in format &quot;&lt; **MinionCount** &gt; **minions were released**.&quot;. Make sure all operations go as planned, otherwise do not make any changes in the database.
 
 If there is no villain in the database with the given ID, print &quot; **No such villain was found**.&quot;.
 
