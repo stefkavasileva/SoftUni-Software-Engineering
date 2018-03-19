@@ -131,6 +131,4 @@ Your task is to write a program which takes **N** lines of employees from the co
 
 
 
-
-
 ![Not fount](/DBFundamentals/Databases-Advanced/images/10.png)
