@@ -126,12 +126,12 @@ public int Age
 ### Constraints
 
 - If the age of a person is negative – exception&#39;s message is: **&quot;Age must be positive!&quot;**
-- If the age of a child is bigger than 15 – exception&#39;s message is: **&quot;**** Child ****&#39;**** s age must be less than 15! ****&quot;**
+- If the age of a child is bigger than 15 – exception&#39;s message is: ** Child ' s age must be less than 15!**
 - If the name of a child or a person is no longer than 3 symbols – exception&#39;s message is: **&quot;Name&#39;s length should not be less than 3 symbols!&quot;**
 
 ### Step 6 - Override ToString()
 
-As you probably already know, all classes in C# inherit the **Object** class and therefore have all its **public** members ( **T**** oString() **,** E****quals()** and **G**** etHashCode()**methods).**T****oString()** serves to return information about an instance as string. Let&#39;s **override** (change) its behavior for our **Person** class.
+As you probably already know, all classes in C# inherit the **Object** class and therefore have all its **public** members (**ToString()**, **Equals()** and **GetHashCode()** methods).**ToString()** serves to return information about an instance as string. Let&#39;s **override** (change) its behavior for our **Person** class.
 
 ```csharp
 public override string ToString()
@@ -183,9 +183,9 @@ You are working in a library and you don&#39;t want to write descriptions for bo
 
 ### Constraints
 
-- If the author&#39;s second name is starting with a digit – the exception message is **&quot;**** Author not valid! ****&quot;**
-- If the title&#39;s length is less than 3 symbols – the exception message is **&quot;**** Title not valid!&quot;**
-- If the price is zero or it is negative – the exception message is **&quot;**** Price not valid! ****&quot;**
+- If the author&#39;s second name is starting with a digit – the exception message is **&quot;Author not valid!&quot;**
+- If the title&#39;s length is less than 3 symbols – the exception message is **&quot;Title not valid!&quot;**
+- If the price is zero or it is negative – the exception message is **&quot;Price not valid!&quot;**
 - Price must be formatted to **two** symbols after the decimal separator
 
 Use this Main() method to test your solution locally and in Judge:
@@ -347,23 +347,15 @@ On the second input line you will be given info about a single worker - first na
 You should first print the info about the student following a single blank line and the info about the worker in the given formats:
 
 - Print the student info in the following format:
-
-        **First Name: {student&#39;s first name}**
-
-**        Last Name: {student&#39;s last name}**
-
-**        Faculty number: {student&#39;s faculty number}**
+**First Name: {student&#39;s first name}**
+**Last Name: {student&#39;s last name}**
+**Faculty number: {student&#39;s faculty number}**
 
 - Print the worker info in the following format:
-
-**        First Name: {worker&#39;s first name}**
-
+**First Name: {worker&#39;s first name}**
 **Last Name: {worker&#39;s second name}**
-
 **Week Salary: {worker&#39;s salary}**
-
 **Hours per day: {worker&#39;s working hours}**
-
 **Salary per hour: {worker&#39;s salary per hour}**
 
 All numeric values will be **real numbers** , even the working hours. Use the most appropriate data type for each of them.
