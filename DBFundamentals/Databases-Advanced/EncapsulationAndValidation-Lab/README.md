@@ -143,9 +143,9 @@ The class should have **constructors** :
 
 The class should also have **public methods** for:
 
-- **AddPlayer**** (Person person): **** void**
-- **FirstTeam:**   **IReadOnlyCollection**
-- **ReserveTeam:**   **IReadOnlyCollection**
+- **AddPlayer(Person person): void**
+- **FirstTeam:IReadOnlyCollection**
+- **ReserveTeam:IReadOnlyCollection**
 
 You should be able to use the class like this:
 
