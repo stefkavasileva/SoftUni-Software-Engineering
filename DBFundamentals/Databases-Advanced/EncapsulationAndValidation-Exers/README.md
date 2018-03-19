@@ -42,9 +42,9 @@ A box&#39;s side should not be zero or a negative number. Expand your class from
 
 ### Problem 3.Shopping Spree
 
-Create two classes: **class**** Person **and** class ****Product**. Each person should have a **name** , **money** and a **bag**** of products **. Each product should have** name **and** price **. The name cannot be an** empty string **. The price cannot be** negative or zero**.
+Create two classes: **class** **Person** and class **Product**. Each person should have a **name** , **money** and a **bag** of products . Each product should have **name** and **price**. The **name cannot be an empty string**. The **price cannot be negative or zero**.
 
-Create a program in which **each command** corresponds to a **person buying a product**. If the person can **afford** a product, **add** it to his bag. If a person **doesn&#39;t have enough** money, print an **appropriate**** message** (&quot;[Person name] can&#39;t afford [Product name]&quot;).
+Create a program in which **each command** corresponds to a **person buying a product**. If the person can **afford** a product, **add** it to his bag. If a person **doesn&#39;t have enough** money, print an **appropriate** **message** (&quot;[Person name] can&#39;t afford [Product name]&quot;).
 
 On the **first two lines,** you are given **all people** and **all products**. After all purchases print **every person** in the order of **appearance** and **all products** that he has **bought** also in order of **appearance**. If **nothing is bought** , print the name of the person followed by &quot; **Nothing bought**&quot;.
 
@@ -54,8 +54,7 @@ In case of **invalid input** (negative money exception message: &quot; **Money c
 
 | **Input** | **Output** |
 | --- | --- |
-|Pesho=11;Gosho=4
-|<br/> Bread=10;Milk=2;<br/> Pesho Bread<br/> Gosho Milk<br/> Gosho Milk<br/> Pesho Milk<br/> END|Pesho bought Bread<br/> Gosho bought Milk<br/> Gosho bought Milk<br/> Pesho can't afford Milk<br/> Pesho - Bread<br/> Gosho - Milk, Milk|
+|Pesho=11;Gosho=4<br/> Bread=10;Milk=2;<br/> Pesho Bread<br/> Gosho Milk<br/> Gosho Milk<br/> Pesho Milk<br/> END|Pesho bought Bread<br/> Gosho bought Milk<br/> Gosho bought Milk<br/> Pesho can't afford Milk<br/> Pesho - Bread<br/> Gosho - Milk, Milk|
 |Mimi=0<br/> Kafence=2<br/> Mimi Kafence<br/> END|Mimi can't afford Kafence <br/> Mimi – Nothing bought|
 |Jeko=-3<br/> Chushki=1;<br/> Jeko Chushki<br/> END |Money cannot be negative|
 
@@ -142,7 +141,7 @@ Make a test in your main method that reads a single dough and a topping after th
 
 A Pizza should have a **name** , some **toppings** and a **dough**. Make use of the two classes you made earlier. In addition, a pizza should have **public getters** for its **name** , **number of toppings** and the **total calories**. The **total calories** are **calculated by summing the calories of all the ingredients a pizza has**. Create the class using a proper constructor, expose a method for adding a topping, a public setter for the dough and a getter method for the total calories.
 
-The input for a pizza consists of **several**** lines **. On the first line is the** pizza name **and on the second line, you will get input for the** dough**. On the next lines, you will receive every topping the pizza has.
+The input for a pizza consists of **several** **lines**. On the first line is the **pizza name** and on the second line, you will get input for the **dough**. On the next lines, you will receive every topping the pizza has.
 
 If creation of the pizza was **successful,** print on a single line the name of the pizza and the **total calories** it has.
 
@@ -152,7 +151,7 @@ The **name** of the pizza should **not** be an **empty string**. In addition, it
 
 The **number of toppings** should be in range [0..10]. If not, throw an **exception** with the message &quot;Number of toppings should be in range [0..10].&quot;
 
-Your task is to print the **name** of the pizza and the **total**** calories** it has according to the examples below.
+Your task is to print the **name** of the pizza and the **total** **calories** it has according to the examples below.
 
 #### Examples
 
