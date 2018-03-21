@@ -1,160 +1,121 @@
-﻿# <p align="center"> OOP Intro - Defining Classes - Lab </p>
+﻿# <p align="center"> Exercises: Code First </p>
 
-# Lab: Defining Classes
+This document defines the **exercise assignments** for the [&quot;Databases Advanced – EF Core&quot; course @ Software University](https://softuni.bg/trainings/1741/databases-advanced-entity-framework-october-2017).
 
-Problems for exercises and homework for the [&quot;CSharp DB Advanced&quot; course @ Software University](https://softuni.bg/trainings/1741/databases-advanced-entity-framework-october-2017).
+## 1.Hospital Database
 
-## Part I: Defining Classes
+You went to your GP for your annual exam and you told him that you&#39;ve started work as a Junior Database App Developer. It turned out he was looking for someone to make an app, which he could use to manage and store data about his patients.
 
- ### 1.Define Bank Account Class
+Your task is to design a database using the **Code**** First **approach. The GP needs to keep information about his** patients **. Each patient has** first name **,** last name **,** address **,** email **, information whether he has** medical ****insurance** or not and should keep history about all his **visitations** , **diagnoses** and **prescribed**** medicaments **. Each visitation has** date **and** comments **. Each** diagnose **has** name **and** comments **for it. Each** medicament **has** name **.** Validate** all data before inserting it in the database.
 
-Create a class named **BankAccount**.
+Your Database should look something like this:
+Remember! With Entity Framework Core you can have **different**** column ****names** from your **classes&#39;**** property ****names**!
 
-The class should have public properties for:
+![Not fount](/DBFundamentals/Databases-Advanced/images/52.png)
 
-- **ID:** **int**
-- **Balance:** **decimal**
+### Constraints
 
-You should be able to use the class like this:
+Your **namespaces** should be:
 
- ```csharp
- public static void Main()
- {
-	BankAccount acc = new BankAccount();
+- **P01\_HospitalDatabase** – for your Startup class, if you have one
+- **P01\_HospitalDatabase****.Data** – for your DbContext
+- **P01\_HospitalDatabase****.Data.Models** – for your models
 
-	acc.ID = 1;
-	acc.Balance = 15;
+Your **classes** should be:
 
-	Console.WriteLine($"Account {acc.ID}, balance {acc.Balance}");
- }
- ```
+- **HospitalContext**  **– your DbContext**
+- **Patient** :
+  - PatientId
+  - FirstName (up to 50 characters, unicode)
+  - LastName (up to 50 characters, unicode)
+  - Address (up to 250 characters, unicode)
+  - Email (up to 80 characters, not unicode)
+  - HasInsurance
+- **Visitation** :
+  - VisitationId
+  - Date
+  - Comments (up to 250 characters, unicode)
+  - Patient
+- **Diagnose** :
+  - DiagnoseId
+  - Name (up to 50 characters, unicode)
+  - Comments (up to 250 characters, unicode)
+  - Patient
+- **Medicament** :
+  - MedicamentId
+  - Name (up to 50 characters, unicode)
+- **PatientMedicament** – mapping class between Patients and Medicaments
 
-### Solution
+The **collections** of mapping classes ( **ICollection&lt;PatientMedicament&gt;** ) must be named **Prescriptions**!
 
-Create a **new class** and ensure **proper naming**
+Don&#39;t forget to remove the **Tools** package before uploading your project to Judge, if you have used it!
 
-![Not fount](/DBFundamentals/Databases-Advanced/images/01.png)
+### Bonus Task
 
-### 2.Methods
+Make a console-based user interface, so the doctor can easily use the database.
 
-Create a class **BankAccount** (you can use class from previous task)
+## 2.Hospital Database Modification
 
-The class should have properties for:
+Your GP bragged around in the hospital about the cool software you made for him. Now the hospital administration wants to modify your program so they can use it too. They want to store information about the **doctors** ( **name** and **specialty** ). Each doctor can perform **many**** visitations **. Make the necessary changes in the** database **to satisfy the new needs of the hospital administration. When** migrating **to the new database schema make sure, no** data** is lost. If you have created an interface, change it as well.
 
-- **ID:** **int**
-- **Balance:** **decimal**
+### Constraints
 
-And methods for:
+Keep the **namespaces** fromthe previous task and only add the class **Doctor** and change the class **Visitation** accordingly. The doctor&#39;s **name** and **specialty** should be up to 100 **characters** long, **unicode**.
 
-- **Deposit(decimal amount):void**
-- **Withdraw(decimal amount):void**
+### \*\*Bonus Task
 
-You should be able to use the class like this:
+Make an authentication system for doctors. Each **doctor** should be able to log in with his **email** and **password**. Choose what information each doctor should have access to and hide the rest.
 
-```csharp
-static void Main()
-{
-    BankAccount acc = new BankAccount();
+## 3.Sales Database
 
-    acc.ID = 1;
-    acc.Deposit(15);
-    acc.Withdraw(5);
+Create a database for storing data about sales using the Code First approach. The database should look like this:
 
-    Console.WriteLine($"Account {acc.ID}, balance = {acc.Balance:f2}.");
-}
-```
+![Not fount](/DBFundamentals/Databases-Advanced/images/53.png)
 
-### Solution
+Your **namespaces** should be:
 
-Create a method **Deposit(decimal amount)**
+- **P03\_SalesDatabase**
+- **P03\_SalesDatabase****.Data**
+- **P03\_SalesDatabase****.Data.Models**
 
-![Not fount](/DBFundamentals/Databases-Advanced/images/02.png)
+Your **classes** should be:
 
-Create a method **Withdraw(double amount)**
+- **SalesContext**  **– your DbContext**
+- **Product** :
+  - ProductId
+  - Name (up to 50 characters, unicode)
+  - Quantity (real number)
+  - Price
+  - Sales
+- **Customer** :
+  - CustomerId
+  - Name (up to 100 characters, unicode)
+  - Email (up to 80 characters, not unicode)
+  - CreaditCardNumber (string)
+  - Sales
+- **Store** :
+  - StoreId
+  - Name (up to 80 characters, unicode)
+  - Sales
+- **Sale** :
+  - SaleId
+  - Date
+  - Product
+  - Customer
+  - Store
 
-![Not fount](/DBFundamentals/Databases-Advanced/images/03.png) 
+### Bonus Task
 
-### 3.Test Client
+Write a **seed method** that fills the database with sample data (randomly generated).
 
-Create a test client that tests your **BankAccount** class.
+## 4.Products Migration
 
-Support the **following commands** :
+For table **Products** add string column **Description** , up to 250 symbols. Use migrations. The migration should be named: **&quot;ProductsAddColumnDescription****&quot; **. Add a default value for the description property:**&quot;No description&quot;**.
 
-- **Create {Id}**
-- **Deposit {Id} {Amount}**
-- **Withdraw {Id} {Amount}**
-- **Print {Id}**
-- **End**
+## 5.Sales Migration
 
-If you try to create an account with existing Id, print **&quot;Account already exists&quot;.**
+For table **Sales** make **Date** column with default value **GETDATE()** function, called from the database, not the application. Use explicit migration. Do **not** use **DateTime.Now**! Name the migration &quot; **SalesAddDateDefault**&quot;.
 
-If you try to perform an operation on **non-existing account** with existing Id, print **&quot;** **Account does not exist** **&quot;**.
+After that, open your table data and see if the default value is applied or not.
 
-If you try to withdraw an amount larger than the balance, print **&quot;** **Insufficient balance** **&quot;**.
-
-The Print command should print **&quot;Account ID {id}, balance = {balance}&quot;**. Round the balance to the second digit after the decimal separator.
-
-### Examples
-
-| **Input** | **Output** |
-| --- | --- |
-|Create 1<br/> Create 2<br/> Deposit 1 20<br/> Withdraw 1 30<br/> Withdraw 1 10<br/> Print 1<br/> End |Account already exists <br/> Insufficient balance <br/> Account ID1, balance 10.00 |
-|Account already exists<br/> Insufficient balance<br/> Account ID1, balance 10.00 |Account does not exist</br> Account does not exist</br> Account does not exist|
-
-
-### Solution
-
-Create a **Dictionary&lt;int, BankAccount&gt;** to store existing accounts
-
-Create the input loop
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/04.png) 
-
-Check the **type of command** and **execute** accordingly ( **optional:** _you can create a separate method for each command_)
-
-Implement the Create command
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/05.png) 
-
-Implement the rest of the commands following the same logic
-
-### 4.Define Person Class
-
-Create a **Person** class.
-
-The class should have **properties** for:
-
-- Name: **string**
-- Age: **int**
-- Accounts: **List&lt;BankAccount&gt;**
-
-The class should have **constructors** :
-
-- **Person(string name, int age)**
-- **Person(string name, int age, List&lt;BankAccount&gt; accounts)**
-
-The class should also have **public methods** for:
-
-- **GetBalance():** **decimal**
-
-### Solution
-
-Create the class as usual
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/06.png)
-
-Create a constructor with two parameters
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/07.png)
-
-Create a constructor with three parameters
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/08.png)
-
-Create method **GetBalance()**
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/09.png)
-
-**Optional:** You can take advantage of **constructor chaining**
-
-![Not fount](/DBFundamentals/Databases-Advanced/images/10.png)
+Keep your **namespaces** from **Task**** 3 **and do both** Task ****4** and **Task**** 5 **before testing your project in** Judge **. Make sure to upload your** migrations** too!
