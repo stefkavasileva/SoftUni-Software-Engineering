@@ -107,7 +107,7 @@ Table relationships:
 - **A Player** can play for **one** **Team** and **one** **Team** can have many **Players**
 - **A Player** can play at one **Position** and one **Position** can be played by **many** **Players**
 - **One** **Player** can play in **many Games** and in each **Game** , **many** **Players** take part (**PlayerStatistics**)
-- **Many** **Bets** can be placed on **one Game** , but **a Bet ** can be only on **one Game**
+- **Many** **Bets** can be placed on **one Game** , but **a Bet** can be only on **one Game**
 - Each bet for given game must have **Prediction** result
 - **A Bet** can be placed by only **one User** and one **User** can place **many Bets**
 
