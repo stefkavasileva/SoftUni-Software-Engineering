@@ -1,1 +1,0 @@
-result.mapSort = require('./mapsort');
