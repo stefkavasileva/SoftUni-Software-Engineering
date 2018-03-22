@@ -13,9 +13,9 @@ Your task is to create a database for the **Student System** , using the **EF Co
 
 Your **namespaces** should be:
 
-- **P01\_**** StudentSystem** – for your Startup class, if you have one
-- **P01\_**** Data** – for your DbContext
-- **P01\_**** Data.Models** – for your models
+- **P01_StudentSystem** – for your Startup class, if you have one
+- **P01_Data** – for your DbContext
+- **P01_Data.Models** – for your models
 
 Your **models** should be:
 
@@ -77,9 +77,9 @@ Your task is to create a database for a **Football Bookmaker System** , using th
 
 Your **namespaces** should be:
 
-- **P03\_**** FootballBetting** – for your Startup class, if you have one
-- **P03\_**** Data** – for your DbContext
-- **P03\_**** Data.Models** – for your models
+- **P03_FootballBetting** – for your Startup class, if you have one
+- **P03_Data** – for your DbContext
+- **P03_Data.Models** – for your models
 
 Your models should be:
 
@@ -101,14 +101,14 @@ Table relationships:
 - **A Color** has **many PrimaryKitTeams** and **many SecondaryKitTeams**
 
 - **A Team** residents in one **Town**
-- **A Town** can host **several**** Teams**
-- **A Game** has one **HomeTeam** and one **AwayTeam** and a **Team** can have **many**** HomeGames **and** many ****AwayGames**
-- **A Town** can be placed in **one**** Country **and a** Country **can have many** Towns**
-- **A Player** can play for **one**** Team **and** one ****Team** can have many **Players**
-- **A Player** can play at one **Position** and one **Position** can be played by **many**** Players**
-- **One**** Player **can play in** many ****Games** and in each **Game** , **many**** Players**take part (**PlayerStatistics**)
-- **Many**** Bets **can be placed on** one ****Game** , but **a**** Bet **can be only on** one ****Game**
+- **A Town** can host **several Teams**
+- **A Game** has one **HomeTeam** and one **AwayTeam** and a **Team** can have **many HomeGames** and **many AwayGames**
+- **A Town** can be placed in **one** **Country** and a **Country** can have many **Towns**
+- **A Player** can play for **one** **Team** and **one** **Team** can have many **Players**
+- **A Player** can play at one **Position** and one **Position** can be played by **many** **Players**
+- **One** **Player** can play in **many Games** and in each **Game** , **many** **Players** take part (**PlayerStatistics**)
+- **Many** **Bets** can be placed on **one Game** , but **a Bet ** can be only on **one Game**
 - Each bet for given game must have **Prediction** result
-- **A Bet** can be placed by only **one**** User **and one** User **can place many** Bets**
+- **A Bet** can be placed by only **one User** and one **User** can place **many Bets**
 
 Separate the **models** , **data** and **client** into **different layers** (projects).
