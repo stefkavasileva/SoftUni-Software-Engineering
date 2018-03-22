@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Repos</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="src/03.GithubRepos.js"></script>
+</head>
+<body>
+GitHub username:
+<input type="text" id="username" value="k1r1L" />
+<button onclick="loadRepos()">Load Repos</button>
+<ul id="repos">
+    <li>
+        <a href="{repo.html_url}">
+            {repo.full_name}
+        </a>
+    </li>
+</ul>
+</body>
+</html>
