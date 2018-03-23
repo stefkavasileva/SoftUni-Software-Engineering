@@ -8,7 +8,7 @@ For the following tasks, use the [BookShop](http://svn.softuni.org/admin/svn/csh
 
 ## 0.Book Shop Database
 
-You must create a **database** for a **book**** shop ****system**. It should look like this:
+You must create a **database** for a **book shop system**. It should look like this:
 
  ![Not fount](/DBFundamentals/Databases-Advanced/images/58.png)
 
@@ -46,11 +46,11 @@ Your **models** should be:
 
 For the following tasks, you will be creating methods that accept a BookShopContext as a parameter and use it to run some queries. Create those methods inside your **StartUp** class and upload your whole solution to **Judge**.
 
-### 1.Age Restriction
+### 01.Age Restriction
 
-Create a **method GetBooksByAgeRestriction** (BookShopContext context, **string**** command**), that returns in a**single ****string** allbook **titles** , each on a **new line,** that have **age**** restriction **, equal to the** given ****command**. Order the titles **alphabetically**.
+Create a **method GetBooksByAgeRestriction** (BookShopContext context, **string command**), that returns in a**single string** allbook **titles** , each on a **new line**, that have **age restriction**, equal to the **given command**. Order the titles **alphabetically**.
 
-Read **input** from the console in your **main**** method **, and call your** method **with the** necessary ****arguments**. Print the **returned**** string **to the console.** Ignore** casing of the input.
+Read **input** from the console in your **main method**, and call your **method** with the **necessary arguments**. Print the **returned string** to the console. **Ignore** casing of the input.
 
 ### Example
 
@@ -59,9 +59,9 @@ Read **input** from the console in your **main**** method **, and call your** me
 | miNor | A Confederacy of Dunces <br/> A Farewell to A <br/> rmsA Handful of Dust <br/> … |
 | teEN | A Passage to India <br/> A Scanner Darkly <br/> A Swiftly Tilting Planet <br/> … |
 
-## 2.Golden Books
+## 02.Golden Books
 
-Just like in task 1, write a method **GetGoldenBooks** (BookShopContext context), that returns in a **single** string **titles of the golden edition books** that have **less than 5000 copies** ,each on a **new line**. Order them by **book**** id** ascending.
+Just like in task 1, write a method **GetGoldenBooks** (BookShopContext context), that returns in a **single** string **titles of the golden edition books** that have **less than 5000 copies** ,each on a **new line**. Order them by **book id** ascending.
 
 Call the **GetGoldenBooks()** method in your **Main()** and print the returned string to the console.
 
@@ -71,9 +71,9 @@ Call the **GetGoldenBooks()** method in your **Main()** and print the returned s
 | --- |
 | Lilies of the Field <br/> Look Homeward <br/> The Mirror Crack&#39;d from Side to Side <br/> … |
 
-## 3.Books by Price
+## 03.Books by Price
 
-Write a **GetBooksByPrice** (BookShopContext context) method that returns in a single string all **titles and prices**** of books **with** price higher than 40 **, each on a** new ****row** in the **format** given below. Order them by **price** descending.
+Write a **GetBooksByPrice** (BookShopContext context) method that returns in a single string all **titles and prices** of books with price higher than 40  each on a **new row** in the **format** given below. Order them by **price** descending.
 
 ### Example
 
@@ -81,9 +81,9 @@ Write a **GetBooksByPrice** (BookShopContext context) method that returns in a s
 | --- |
 | O Pioneers! - $49.90 <br/> That Hideous Strength - $48.63 <br/> A Handful of Dust - $48.63 <br/> … |
 
-## 4.Not Released In
+## 04.Not Released In
 
-Write a **GetBooksNotRealeasedIn** (BookShopContext context **, int year** ) method that returns in a **single** string all **titles of books** that are **NOT released** on a given year. Order them by **book**** id** ascending.
+Write a **GetBooksNotRealeasedIn** (BookShopContext context **, int year** ) method that returns in a **single** string all **titles of books** that are **NOT released** on a given year. Order them by **book id** ascending.
 
 ### Example
 
@@ -92,7 +92,7 @@ Write a **GetBooksNotRealeasedIn** (BookShopContext context **, int year** ) met
 | 2000 | Absalom <br/> Nectar in a Sieve <br/> Nine Coaches Waiting <br/> … |
 | 1998 | The Needle&#39;s Eye <br/> No Country for Old Men <br/> No Highway <br/> … |
 
-## 5.Book Titles by Category
+## 05.Book Titles by Category
 
 Write a **GetBooksByCategory** (BookShopContext context, string input) method that **selects** and **returns** in a single string the **titles of books** by a given **list of categories**. The list of **categories** will be given in a single line separated with one or more spaces. Ignore casing. Order by **title** alphabetically.
 
@@ -102,11 +102,11 @@ Write a **GetBooksByCategory** (BookShopContext context, string input) method th
 | --- | --- |
 | horror mystery drama | A Fanatic Heart <br/> A Farewell to A <br/> rmsA Glass of Blessings <br/> … |
 
-## 6.Released Before Date
+## 06.Released Before Date
 
 Write a **GetBooksReleasedBefore** (BookShopContext context, string date) method that **returns the title, edition type and price** of all books that are **released before a given date**. The date will be a string **in format**  **dd-MM-yyyy**.
 
-Return all of the rows in a **single** string, ordered by **release**** date ****descending**.
+Return all of the rows in a **single** string, ordered by **release date descending**.
 
 ### Example
 
@@ -115,11 +115,11 @@ Return all of the rows in a **single** string, ordered by **release**** date ***
 | 12-04-1992 | If I Forget Thee Jerusalem - Gold - $33.21 <br/> Oh! To be in England - Normal - $46.67 <br/> The Monkey&#39;s Raincoat - Normal - $46.93 <br/> … |
 | 30-12-1989 | A Fanatic Heart - Normal - $9.41 <br/> The Curious Incident of the Dog in the Night-Time - Normal - $23.41 <br/> The Other Side of Silence - Gold - $46.26 <br/> … |
 
-## 7.Author Search
+## 07.Author Search
 
-Write a **GetAuthorNamesEndingIn** (BookShopContext context, string input) method that returns the **full**** names **of** authors **, whose** first ****name** ends with a **given**** string**.
+Write a **GetAuthorNamesEndingIn** (BookShopContext context, string input) method that returns the **full names** of **authors**, whose **first name** ends with a **given string**.
 
-Return all **names** in a **single**** string **, each on a** new ****row** , ordered alphabetically.
+Return all **names** in a **single string**, each on a **new row** , ordered alphabetically.
 
 ### Example
 
@@ -128,11 +128,11 @@ Return all **names** in a **single**** string **, each on a** new ****row** , or
 | e | George Powell <br/> Jane Ortiz |
 | dy | Randy Morales |
 
-## 8.Book Search
+## 08.Book Search
 
-Write a **GetBookTitlesContaining** (BookShopContext context, string input) method that returns the **titles** of **book** , which contain a **given**** string**. Ignore casing.
+Write a **GetBookTitlesContaining** (BookShopContext context, string input) method that returns the **titles** of **book** , which contain a **given string**. Ignore casing.
 
-Return all **titles** in a **single**** string **, each on a** new ****row** , ordered alphabetically.
+Return all **titles** in a **single string**, each on a **new row** , ordered alphabetically.
 
 ### Example
 
@@ -141,11 +141,11 @@ Return all **titles** in a **single**** string **, each on a** new ****row** , o
 | sK | A Catskill Eagle <br/> The Daffodil Sky <br/> The Skull Beneath the Skin |
 | WOR | Great Work of Time <br/> Terrible Swift Sword |
 
-## 9.Book Search by Author
+## 09.Book Search by Author
 
 Write a **GetBooksByAuthor** (BookShopContext context, string input) method that **returns all titles of books and their authors&#39; names** for books, which are written by authors whose last names **start with the given string**.
 
-Return a single string with each title on a new row. **Ignore** casing. Order by **book**** id** ascending.
+Return a single string with each title on a new row. **Ignore** casing. Order by **book id** ascending.
 
 ### Example
 
@@ -167,9 +167,9 @@ Write a **CountBooks** (BookShopContext context, int lengthCheck) method that **
 
 ## 11.Total Book Copies
 
-Write a method **CountCopiesByAuthor** (BookShopContext context) that **returns** the **total number of book copies**** for each author **. Order the results** descending by total book copies**.
+Write a method **CountCopiesByAuthor** (BookShopContext context) that **returns** the **total number of book copies** for each author. Order the results **descending by total book copies**.
 
-Return all results in a **single**** string **, each on a** new ****line**.
+Return all results in a **single string**, each on a **new line**.
 
 ### Example
 
@@ -189,7 +189,7 @@ Write a method **GetTotalProfitByCategory** (BookShopContext context) that **ret
 
 ## 13.Most Recent Books
 
-Get the most recent books by categories in a **GetMostRecentBooks** (BookShopContext context) method. The **categories** should be ordered by **total**** book count **. Only take the** top 3 **most recent books from each category - ordered by** release date**(descending).**Select **and** print **the** category name **, and for each** book **– its** title **and** release year**.
+Get the most recent books by categories in a **GetMostRecentBooks** (BookShopContext context) method. The **categories** should be ordered by **total book count**. Only take the **top 3** most recent books from each category - ordered by **release date** (descending). **Select** and **print** the **category name** , and for each **book - its title** and **release year**.
 
 ### Example
 
@@ -199,7 +199,7 @@ Get the most recent books by categories in a **GetMostRecentBooks** (BookShopCon
 
 ## 14.Increase Prices
 
-Write a method **IncreasePrices** (BookShopContext context) that **increases the prices of all books**** released before 2010 by 5**.
+Write a method **IncreasePrices** (BookShopContext context) that **increases the prices of all books released before 2010 by 5**.
 
 ## 15.Remove Books
 
