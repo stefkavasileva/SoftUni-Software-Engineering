@@ -49,7 +49,7 @@ Your **models** should be:
 
 **Everything** is required! Only **PaymentMethod**&#39;s **BankAccountId** and **CreditCardId** should be **nullable** ,and you should make sure that always **one** of them **is null** and the **other one** is **not** (add a **CHECK** constraint).
 
-Make sure that **every record **in the **PaymentMethods** table has a unique combination of **UserId, BankAccountId** and **CreditCardId**!
+Make sure that **every record** in the **PaymentMethods** table has a unique combination of **UserId, BankAccountId** and **CreditCardId**!
 
 ## 2.Seed Some Data
 
