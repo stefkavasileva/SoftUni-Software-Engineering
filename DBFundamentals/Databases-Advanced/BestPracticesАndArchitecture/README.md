@@ -16,7 +16,7 @@ Then **implement the missing commands** by the hints given in each command class
 
 The photo share system contains the following commands:
 
-- **Register**** User &lt;username&gt; &lt;password&gt; &lt;repeat-password&gt; &lt;email&gt;**
+- **Register** **User &lt;username&gt; &lt;password&gt; &lt;repeat-password&gt; &lt;email&gt;**
 Registers a new user.
 
 | **Case** | **Message** | **Exception** |
@@ -48,7 +48,7 @@ Modifies current user.
 | Property not found | Property [property] not supported! | ArgumentException |
 | Value not valid for that property | Value [value] not valid.[DetailedMessage] | ArgumentException |
 
-**       ** The above command may be executed in the following formats:
+**The above command may be executed in the following formats:**
 
 ModifyUser &lt;username&gt; Password &lt;NewPassword&gt;
 
@@ -243,7 +243,7 @@ When database is up and running **seed** it with some **sample records in each t
 
 Now let&#39;s **make a command line application** that would **use that database and provide the following functionalities** :
 
-- **print information for trips for a given bus station –  ** Print a list of arrivals and departures buses for given bus station id in the format provided below
+- **print information for trips for a given bus station – ** Print a list of arrivals and departures buses for given bus station id in the format provided below
 - **buy ticket –** Insert new ticket and reduce the balance from customers&#39; bank account. Consider managing all cases such as the customer does not have enough money in his/her bank account.
 - **publish review –** insert new review from given user into the database
 - **print reviews –** print a list of reviews for a given bus company in the format provided below
