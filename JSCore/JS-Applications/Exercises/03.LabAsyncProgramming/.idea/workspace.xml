@@ -28,19 +28,10 @@
         <entry file="file://$PROJECT_DIR$/src/02.Blog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+              <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding>
-                <marker date="1521997758892" expanded="true" signature="24:1908" ph="{...}" />
-                <marker date="1521997758892" expanded="true" signature="538:1400" ph="{...}" />
-                <marker date="1521997758892" expanded="true" signature="623:725" ph="{&quot;headers&quot;: authHeaders...}" />
-                <marker date="1521997758892" expanded="true" signature="766:892" ph="{&quot;headers&quot;: authHeaders...}" />
-                <marker date="1521997758892" expanded="true" signature="1079:1394" ph="{...}" />
-                <marker date="1521997758892" expanded="true" signature="1302:1384" ph="{...}" />
-                <marker date="1521997758892" expanded="false" signature="1426:1819" ph="{...}" />
-                <marker date="1521997758892" expanded="true" signature="1443:1507" ph="{&quot;headers&quot;: authHeaders...}" />
-                <marker date="1521997758892" expanded="true" signature="1596:1813" ph="{...}" />
-                <marker date="1521997758892" expanded="true" signature="1666:1803" ph="{...}" />
-                <marker date="1521997758892" expanded="false" signature="1847:1906" ph="{...}" />
+                <element signature="n#!!block;n#loadPosts#0;n#!!block;n#attachEvents#0" expanded="false" />
+                <element signature="n#!!block;n#error#0;n#!!block;n#attachEvents#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -166,11 +157,12 @@
       <updated>1521992047211</updated>
       <workItem from="1521992048977" duration="5585000" />
       <workItem from="1521998072174" duration="220000" />
+      <workItem from="1522047204432" duration="150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5805000" />
+    <option name="totallyTimeSpent" value="5955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -216,20 +208,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/02.Blog.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#loadPosts#0;n#!!block;n#attachEvents#0" expanded="false" />
+            <element signature="n#!!block;n#error#0;n#!!block;n#attachEvents#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02.Blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/02.Blog.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1521997758892" expanded="true" signature="24:1908" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="538:1400" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="623:725" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="766:892" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="1079:1394" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1302:1384" ph="{...}" />
-            <marker date="1521997758892" expanded="false" signature="1426:1819" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1443:1507" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="1596:1813" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1666:1803" ph="{...}" />
-            <marker date="1521997758892" expanded="false" signature="1847:1906" ph="{...}" />
+            <element signature="n#!!block;n#loadPosts#0;n#!!block;n#attachEvents#0" expanded="false" />
+            <element signature="n#!!block;n#error#0;n#!!block;n#attachEvents#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -260,19 +262,10 @@
     <entry file="file://$PROJECT_DIR$/src/02.Blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
-            <marker date="1521997758892" expanded="true" signature="24:1908" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="538:1400" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="623:725" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="766:892" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="1079:1394" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1302:1384" ph="{...}" />
-            <marker date="1521997758892" expanded="false" signature="1426:1819" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1443:1507" ph="{&quot;headers&quot;: authHeaders...}" />
-            <marker date="1521997758892" expanded="true" signature="1596:1813" ph="{...}" />
-            <marker date="1521997758892" expanded="true" signature="1666:1803" ph="{...}" />
-            <marker date="1521997758892" expanded="false" signature="1847:1906" ph="{...}" />
+            <element signature="n#!!block;n#loadPosts#0;n#!!block;n#attachEvents#0" expanded="false" />
+            <element signature="n#!!block;n#error#0;n#!!block;n#attachEvents#0" expanded="false" />
           </folding>
         </state>
       </provider>

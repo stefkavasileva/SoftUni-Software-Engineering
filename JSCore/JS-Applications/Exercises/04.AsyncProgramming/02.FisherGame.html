@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biggest Catch</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="catch.js"></script>
+    <style>
+        h1 { text-align: center; }
+        input { display: block; }
+        div { border: 1px solid black; padding: 5px; display: inline-table; width: 24%; }
+        div#aside { margin-top: 8px; width: 15%; border: 2px solid grey; }
+        div#catches{ width:auto; }
+        button { display: inline-table; margin: 5% 0 5% 5%; width: 39%; }
+        button.add { width: 90%; }
+        button.load { width: 90%; padding: 10px; }
+        button.load { vertical-align: top; }
+        fieldset { display: inline-table; vertical-align: top; }
+        fieldset#main { width: 70%; }
+    </style>
+</head>
+<body>
+<h1>Biggest Catches</h1>
+<fieldset id="main">
+    <legend>Catches</legend>
+    <div id="catches">
+        <div class="catch" data-id="<id-goes-here>">
+            <label>Angler</label>
+            <input type="text" class="angler" value="Paulo Amorim"/>
+            <label>Weight</label>
+            <input type="number" class="weight" value="636"/>
+            <label>Species</label>
+            <input type="text" class="species" value="Atlantic Blue Marlin"/>
+            <label>Location</label>
+            <input type="text" class="location" value="Vitória, Brazil"/>
+            <label>Bait</label>
+            <input type="text" class="bait" value="trolled pink"/>
+            <label>Capture Time</label>
+            <input type="number" class="captureTime" value="80"/>
+            <button class="update">Update</button>
+            <button class="delete">Delete</button>
+        </div>
+    </div>
+</fieldset>
+<div id="aside">
+    <button class="load">Load</button>
+    <fieldset id="addForm">
+        <legend>Add Catch</legend>
+        <label>Angler</label>
+        <input type="text" class="angler"/>
+        <label>Weight</label>
+        <input type="number" class="weight"/>
+        <label>Species</label>
+        <input type="text" class="species"/>
+        <label>Location</label>
+        <input type="text" class="location"/>
+        <label>Bait</label>
+        <input type="text" class="bait"/>
+        <label>Capture Time</label>
+        <input type="number" class="captureTime"/>
+        <button class="add">Add</button>
+    </fieldset>
+</div>
+<script src="src/02.FisherGameLogic.js"></script>
+</body>
+</html>
