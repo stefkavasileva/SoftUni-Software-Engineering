@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Book Library</title>
+		<script src="scripts/jquery-3.1.1.min.js"></script>
+		<script src="scripts/displayElements.js"></script>
+		<script src="scripts/crudOperations.js"></script>
+		<script src="scripts/attachEvents.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/pagination.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/book-library.css" />
+	</head>
+	
+    <body onload="startApp()">
+        <header id="menu">
+            <a href="#" id="linkHome">Home</a>
+            <a href="#" id="linkLogin">Login</a>
+            <a href="#" id="linkRegister">Register</a>
+            <a href="#" id="linkListBooks">List Books</a>
+            <a href="#" id="linkCreateBook">Create Book</a>
+            <a href="#" id="linkLogout">Logout</a>
+            <span id="loggedInUser"></span>
+        </header>
+
+        <main>
+            <section id="loadingBox" class="notification">Loading ...</section>
+
+            <section id="infoBox" class="notification">Info</section>
+
+            <section id="errorBox" class="notification">Error</section>
+
+            <section id="viewHome">
+                <h1>Welcome</h1>
+				<div class="content">
+					<p>Welcome to our book library.</p>
+				</div>
+				<div class="homeImage">
+					<img src="images/library.jpeg">
+				</div>
+            </section>
+
+            <section id="viewLogin">
+                <h1>Please login</h1>
+				<div class="content">
+					<form id="formLogin">
+						<div>Username:</div>
+						<div><input type="text" name="username" required /></div>
+						<div>Password:</div>
+						<div><input type="password" name="passwd" required /></div>
+						<div><input type="submit" value="Login" /></div>
+					</form>
+				</div>
+            </section>
+
+            <section id="viewRegister">
+                <h1>Please register here</h1>
+				<div class="content">
+					<form id="formRegister">
+						<div>Username:</div>
+						<div><input type="text" name="username" required /></div>
+						<div>Password:</div>
+						<div><input type="password" name="passwd" required /></div>
+						<div><input type="submit" value="Register" /></div>
+					</form>
+				</div>
+            </section>
+
+            <section id="viewBooks">
+                <h1>Books</h1>
+				<div class="content">
+					<div id="books">
+						<table>
+							<tr>
+								<th>Title</th>
+								<th>Author</th>
+								<th>Description</th>
+								<th>Actions</th>
+							</tr>
+							<tr>
+								<td>Book title</td>
+								<td>Book author</td>
+								<td>Book description</td>
+								<td>
+									<a href="#">[Delete]</a>
+									<a href="#">[Edit]</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Book title</td>
+								<td>Book author</td>
+								<td>Book description</td>
+								<td>
+									<a href="#">[Delete]</a>
+									<a href="#">[Edit]</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<div class="col-sm-12">
+						<ul id="pagination-demo" class="pagination"></ul>
+					</div>
+				</div>
+            </section>
+
+            <section id="viewCreateBook">
+                <h1>Create new book</h1>
+				<div class="content">
+					<form id="formCreateBook">
+						<div>Title:</div>
+						<div><input type="text" name="title" required /></div>
+						<div>Author:</div>
+						<div><input type="text" name="author" required /></div>
+						<div>Description:</div>
+						<div><textarea name="description" rows="10" required></textarea></div>
+						<div><input type="submit" value="Create" /></div>
+					</form>
+				</div>
+            </section>
+
+            <section id="viewEditBook">
+                <h1>Edit existing book</h1>
+				<div class="content">
+					<form id="formEditBook">
+						<div><input type="hidden" name="id" required /></div>
+						<div>Title:</div>
+						<div><input type="text" name="title" required /></div>
+						<div>Author:</div>
+						<div><input type="text" name="author" required /></div>
+						<div>Description:</div>
+						<div><textarea name="description" rows="10" required></textarea></div>
+						<div><input type="submit" value="Edit" /></div>
+					</form>
+				</div>
+            </section>
+        </main>
+
+        <footer>Book Library - Simple SPA Application &copy 2018</footer>
+	</body>
+</html>

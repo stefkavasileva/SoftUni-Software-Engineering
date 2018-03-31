@@ -1,0 +1,130 @@
+body {
+	background: #f2f2f2;
+}
+
+#menu {
+	font-size: 1.5em;
+	background: #999;
+	padding: 5px;
+	line-height: 1.5;
+	border-radius: 3px;
+    overflow: auto;
+}
+
+#menu a {
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+#menu a:hover {
+	background: #BBB;
+}
+
+#menu a:visited {
+	color: #fff;
+}
+
+#menu a.active {
+	background: #BBB;
+}
+
+#menu>#loggedInUser {
+    float: right;
+    margin-right: 10px;
+}
+
+main > section {
+	display: none;
+}
+
+section {
+	margin: 1em;
+	border-radius: 10px;
+	background: #fff;
+}
+
+section > .content {
+	padding: 1em;
+}
+
+section h1 {
+	font-size: 1.5em;
+	background: #e6f7ff;
+	padding: 0.5em 1em;
+	margin: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+table th {
+    background: #DDD;
+    padding: 10px;
+}
+
+table tr:nth-child(odd) {
+    background: #EEE;
+}
+
+table tr:nth-child(even) {
+    background: #FFF;
+}
+
+table td {
+    padding: 5px 10px;
+}
+
+.notification {
+	font-size: 1.5em;
+	float: right;
+    color: #ffffff;
+    padding:  0.5em 2em 0.5em 2em;
+    margin: 1em;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+	text-align: center;
+	border-radius: 3px;
+}
+
+#loadingBox {
+	background: #7CB3E9;
+}
+#infoBox {
+	background: #393;
+}
+#errorBox {
+	background: #F50;
+}
+
+footer {
+	background: #DDD;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.homeImage > img {
+	width: 100%;
+	height: 490px;
+}
+
+td:nth-child(1n) {
+	width: 17%;
+}
+
+td:nth-child(2n) {
+	width: 17%;
+}
+
+td:nth-child(3n) {
+	width: 55%;
+}
+
+td:nth-child(4n) {
+	width: 11%;
+}
+

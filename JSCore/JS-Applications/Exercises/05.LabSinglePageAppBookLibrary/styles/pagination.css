@@ -1,0 +1,28 @@
+.wrapper{
+    margin: 20px auto;
+    text-align: center;
+}
+
+#pagination-demo li{
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #999  ;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination a {
+    border: 1px solid #ddd;
+}
