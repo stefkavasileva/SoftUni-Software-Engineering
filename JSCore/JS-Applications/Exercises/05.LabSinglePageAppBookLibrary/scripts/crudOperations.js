@@ -1,6 +1,6 @@
 const BASE_URL = 'https://baas.kinvey.com/';
-const APP_KEY = '';
-const APP_SECRET = '';
+const APP_KEY = 'kid_SJUG61k9G';
+const APP_SECRET = 'ded604ed204a4224a054ec5ee7a9cb10';
 const AUTH_HEADERS = {'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET)};
 const BOOKS_PER_PAGE = 10
 
@@ -48,32 +48,27 @@ function listBooks() {
         .catch(handleAjaxError)
 }
 
-
 function createBook() {
-    let btnCreate = $('#formCreateBook input[type=submit]').on('click', createBookPost);
+    let title = $('#formCreateBook [name=title]');
+    let author = $('#formCreateBook [name=author]');
+    let description = $('#formCreateBook textarea');
+    let newBook = {title: title.val(), author: author.val(), description: description.val()};
 
-    function createBookPost() {
-        let title = $('#formCreateBook [name=title]');
-        let author = $('#formCreateBook [name=author]');
-        let description = $('#formCreateBook textarea');
-        let newBook = {title: title.val(), author: author.val(), description: description.val()};
+    $.ajax({
+        method: 'POST',
+        url: BASE_URL + 'appdata/' + APP_KEY + '/books',
+        headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authToken')},
+        data: newBook
+    }).then(function (res) {
+        listBooks();
+        showInfo('Book created.');
+    })
+        .catch();
 
-        $.ajax({
-            method: 'POST',
-            url: BASE_URL + 'appdata/' + APP_KEY + '/books',
-            headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authToken')},
-            data: newBook
-        }).then(function (res) {
-            showView('viewBooks');
-            showInfo('Book created.');
+    title.val('');
+    author.val('');
+    description.val('');
 
-        })
-            .catch();
-
-        title.val('');
-        author.val('');
-        description.val('');
-    }
 }
 
 function deleteBook(book) {
@@ -89,13 +84,29 @@ function deleteBook(book) {
 }
 
 function loadBookForEdit(book) {
-    // TODO
+    showView('viewEditBook');
+    $('#formEditBook input[name=id]').val(book._id);
+    $('#formEditBook input[name=title]').val(book.title);
+    $('#formEditBook input[name=author]').val(book.author);
+    $('#formEditBook textarea[name=description]').val(book.description);
 }
 
 function editBook() {
-    // TODO
-    // PUT -> BASE_URL + 'appdata/' + APP_KEY + '/books/' + book._id
-    // showInfo('Book edited.')
+    let id = $('#formEditBook input[name=id]').val();
+    let title = $('#formEditBook input[name=title]').val();
+    let author = $('#formEditBook input[name=author]').val();
+    let description = $('#formEditBook textarea[name=description]').val();
+    let newBook = {title,author,description};
+
+    $.ajax({
+        method: 'PUT',
+        url:BASE_URL + 'appdata/' + APP_KEY + '/books/' + id,
+        headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authToken')},
+        data: newBook
+    }).then(function () {
+        listBooks();
+        showInfo('Book edited.');
+    }).catch(handleAjaxError)
 }
 
 function logoutUser() {
@@ -147,7 +158,7 @@ function displayPaginationAndBooks(books) {
                     tr.append($('<td>')
                         .append($('<a href="#">[Edit]</a>').on('click',
                             function () {
-                                editBook(books[i]);
+                                loadBookForEdit(books[i]);
                             }))
                         .append($('<a href="#">[Delete]</a>').on('click',
                             function () {
