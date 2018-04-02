@@ -1,6 +1,6 @@
 const BASE_URL = 'https://baas.kinvey.com/';
-const APP_KEY = 'kid_SJUG61k9G';
-const APP_SECRET = 'ded604ed204a4224a054ec5ee7a9cb10';
+const APP_KEY = '';
+const APP_SECRET = '';
 const AUTH_HEADERS = {'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET)};
 const BOOKS_PER_PAGE = 10
 
