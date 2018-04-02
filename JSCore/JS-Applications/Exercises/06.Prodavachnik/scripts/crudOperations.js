@@ -1,6 +1,6 @@
 const BASE_URL = 'https://baas.kinvey.com/';
-const APP_KEY = 'kid_SJUG61k9G';
-const APP_SECRET = 'ded604ed204a4224a054ec5ee7a9cb10';
+const APP_KEY = '';
+const APP_SECRET = '';
 const AUTH_HEADERS = {'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET)};
 
 function registerUser() {
@@ -54,13 +54,15 @@ function createAd() {
     let description = $('#formCreateAd [name="description"]');
     let datePublished = $('#formCreateAd [name="datePublished"]');
     let price = $('#formCreateAd [name="price"]');
+    let image = $('#formCreateAd [name="image"]');
 
     let advertisement = {
         title: title.val(),
         publisher: sessionStorage.getItem('username'),
         description: description.val(),
         price: price.val(),
-        datePublished: datePublished.val()
+        datePublished: datePublished.val(),
+        image: image.val()
     };
 
     $.ajax({
@@ -109,20 +111,24 @@ function listAds() {
                 .append($('<td>').text(ad.price))
                 .append($('<td>').text(ad.datePublished));
 
+            let td = $('<td>');
+            td.append($('<a href="#">').text('[Read more]')
+                .on('click', function () {
+                    displayAdvert(ad);
+                }));
 
             if (ad._acl.creator === sessionStorage.getItem('userId')) {
-                tr.append($('<td>')
-                    .append($('<a href="#">').text('[Delete]')
-                        .unbind().on('click', function () {
-                            deleteAd(ad);
-                        }))
+                td.append($('<a href="#">').text('[Delete]')
+                    .unbind().on('click', function () {
+                        deleteAd(ad);
+                    }))
                     .append($('<a href="#">').text('[Edit]')
                         .unbind().on('click', function () {
                             loadAdForEdit(ad);
-                        })));
+                        }));
             }
 
-            table.append(tr);
+            table.append(tr.append(td));
         }
     })
         .catch(showErrorMessage)
@@ -155,11 +161,12 @@ function editAd() {
     let description = $('#formEditAd [name="description"]').val();
     let datePublished = $('#formEditAd [name="datePublished"]').val();
     let price = $('#formEditAd [name="price"]').val();
+    let image = $('#formEditAd [name="image"]').val();
 
-    let newAd = {title,description,datePublished,price,publisher:sessionStorage.getItem('username')};
+    let newAd = {title, description, datePublished, price, publisher: sessionStorage.getItem('username')};
 
     $.ajax({
-        method:'PUT',
+        method: 'PUT',
         url: BASE_URL + 'appdata/' + APP_KEY + '/advertisementsData/' + id,
         headers: {'Authorization': 'Kinvey ' + sessionStorage.getItem('authToken')},
         data: newAd
@@ -167,6 +174,26 @@ function editAd() {
         listAds();
         showInfo('Advertisement edited!!!')
     }).catch(showErrorMessage)
+}
+
+function displayAdvert(ad) {
+    $('#vewDetailsAd').empty();
+
+    let advertInfo = $('<div>').append(
+        $('<div>').append($('<img>').attr('scr', ad.image)),
+        $('<br>'),
+        $('<label>').text('Title:'),
+        $('<h1>').text(ad.title),
+        $('<label>').text('Description:'),
+        $('<p>').text(ad.description),
+        $('<label>').text('Publisher:'),
+        $('<div>').text(ad.publisher),
+        $('<label>').text('Date:'),
+        $('<div>').text(ad.datePublished)
+    );
+
+    $('#vewDetailsAd').append(advertInfo);
+    showView('vewDetailsAd');
 }
 
 function showErrorMessage(err) {
