@@ -1,6 +1,6 @@
 const BASE_URL = 'https://baas.kinvey.com/';
-const APP_KEY = '';
-const APP_SECRET = '';
+const APP_KEY = 'kid_SJUG61k9G';
+const APP_SECRET = 'ded604ed204a4224a054ec5ee7a9cb10';
 const AUTH_HEADERS = {'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET)};
 
 function registerUser() {
@@ -103,6 +103,7 @@ function listAds() {
             .append($('<th>Actions</th>')));
 
 
+        res = res.reverse();
         for (let ad of res) {
             let tr = $('<tr>');
             tr.append($('<td>').text(ad.title))
@@ -153,6 +154,7 @@ function loadAdForEdit(ad) {
     $('#formEditAd [name="description"]').val(ad.description);
     $('#formEditAd [name="datePublished"]').val(ad.datePublished);
     $('#formEditAd [name="price"]').val(ad.price);
+    $('#formEditAd [name="image"]').val(ad.image);
 }
 
 function editAd() {
@@ -163,7 +165,7 @@ function editAd() {
     let price = $('#formEditAd [name="price"]').val();
     let image = $('#formEditAd [name="image"]').val();
 
-    let newAd = {title, description, datePublished, price, publisher: sessionStorage.getItem('username')};
+    let newAd = {title, description, datePublished, price, publisher: sessionStorage.getItem('username'),image};
 
     $.ajax({
         method: 'PUT',
@@ -180,7 +182,7 @@ function displayAdvert(ad) {
     $('#vewDetailsAd').empty();
 
     let advertInfo = $('<div>').append(
-        $('<div>').append($('<img>').attr('scr', ad.image)),
+        $('<div>').append($('<img>').attr('src', ad.image)),
         $('<br>'),
         $('<label>').text('Title:'),
         $('<h1>').text(ad.title),

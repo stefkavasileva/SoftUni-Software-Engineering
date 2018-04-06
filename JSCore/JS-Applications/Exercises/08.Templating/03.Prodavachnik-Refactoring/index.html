@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prodavachnik</title>
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/displayElements.js"></script>
+    <script src="scripts/crudOperations.js"></script>
+    <script src="scripts/attachEvents.js"></script>
+    <script src="scripts/prodavachnik.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/prodavachnik.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+<header id="menu" class="menu"></header>
+
+<main>
+    <section id="loadingBox" class="loadingBox">Loading ...</section>
+
+    <section id="infoBox" class="infoBox">Info</section>
+
+    <section id="errorBox" class="errorBox">Error</section>
+
+    <section id="viewHome" class="viewHome">
+        <h1 class="title">Welcome</h1>
+        <p class="body-text">Welcome to our advertisement site.</p>
+    </section>
+
+    <section id="viewLogin" class="viewLogin"></section>
+
+    <section id="viewRegister" class="viewRegister"></section>
+
+    <section id="viewAds" class="viewAds"></section>
+
+    <section id="viewCreateAd" class="viewCreateAd"></section>
+
+    <section id="viewEditAd" class="viewEditAd"></section>
+
+    <section id="viewReadMore" class="viewReadMore">
+
+    </section>
+
+    <script>
+        startApp();
+    </script>
+</main>
+<footer>Prodavachnik - Simple SPA Application</footer>
+</body>
+</html>

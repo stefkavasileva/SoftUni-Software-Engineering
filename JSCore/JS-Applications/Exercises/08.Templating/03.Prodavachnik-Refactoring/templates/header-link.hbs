@@ -1,0 +1,20 @@
+
+{{#if checkIfLogged}}
+    <a href="#" id="linkHome" class="menu-item" style="display: inline">Home</a>
+    <a href="#" id="linkLogin" class="menu-item" style="display: inline">Login</a>
+    <a href="#" id="linkRegister" class="menu-item" style="display: inline">Register</a>
+    <a href="#" id="linkListAds" class="menu-item" style="display: none">List Advertisements</a>
+    <a href="#" id="linkCreateAd" class="menu-item" style="display: none">Create Advertisement</a>
+    <a href="#" id="linkLogout" class="menu-item" style="display: none">Logout</a>
+    <span id="loggedInUser" class="menu-item" style="display: none"></span>
+    <div></div>
+{{else}}
+    <a href="#" id="linkHome" class="menu-item" style="display: inline">Home</a>
+    <a href="#" id="linkLogin" class="menu-item" style="display: none">Login</a>
+    <a href="#" id="linkRegister" class="menu-item" style="display: none">Register</a>
+    <a href="#" id="linkListAds" class="menu-item" style="display: inline">List Advertisements</a>
+    <a href="#" id="linkCreateAd" class="menu-item" style="display: inline">Create Advertisement</a>
+    <a href="#" id="linkLogout" class="menu-item" style="display: inline">Logout</a>
+    <span id="loggedInUser" class="menu-item" style="display: inline">{{text}}</span>
+    <div></div>
+{{/if}}

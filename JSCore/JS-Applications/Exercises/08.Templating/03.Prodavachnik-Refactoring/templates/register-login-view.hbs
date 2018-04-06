@@ -1,0 +1,19 @@
+{{#if reigsterLoginCheck}}
+    <h1 class="titleForm">Please login</h1>
+    <form id="formLogin" class="form">
+        <div>Username:</div>
+        <div><input type="text" name="username" required/></div>
+        <div>Password:</div>
+        <div><input type="password" name="passwd" required/></div>
+        <div><input type="button" id="buttonLoginUser" value="Login"/></div>
+    </form>
+{{else}}
+    <h1 class="titleForm">Please register here</h1>
+    <form id="formRegister" class="form">
+        <div>Username:</div>
+        <div><input type="text" name="username" required /></div>
+        <div>Password:</div>
+        <div><input type="password" name="passwd" required /></div>
+        <div><input type="button" id="buttonRegisterUser" value="Register" /></div>
+    </form>
+{{/if}}
