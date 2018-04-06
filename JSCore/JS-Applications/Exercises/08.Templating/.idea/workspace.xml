@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="777">
+              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/crudOperations.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4053">
-              <caret line="193" column="27" lean-forward="true" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+              <caret line="193" column="27" lean-forward="false" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/styles/prodavachnik.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
-              <caret line="155" column="8" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+              <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/templates/create-edit-view.hbs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -57,7 +57,7 @@
       <file leaf-file-name="displayElements.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/displayElements.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
+            <state relative-caret-position="4200">
               <caret line="200" column="19" lean-forward="false" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
               <folding />
             </state>
@@ -180,7 +180,7 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../09.LabPatterns" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -217,11 +217,12 @@
       <updated>1522863454778</updated>
       <workItem from="1522863456152" duration="12869000" />
       <workItem from="1523010565268" duration="781000" />
+      <workItem from="1523021205500" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13650000" />
+    <option name="totallyTimeSpent" value="13665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -259,14 +260,47 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/app.js">
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="777">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/crudOperations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4053">
+          <caret line="193" column="27" lean-forward="true" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/templates/create-edit-view.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/displayElements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4200">
+          <caret line="200" column="19" lean-forward="false" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/styles/prodavachnik.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3255">
+          <caret line="155" column="8" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/app.js" />
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -320,7 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -380,7 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -388,14 +420,14 @@
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/templates/create-edit-view.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/displayElements.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="4200">
           <caret line="200" column="19" lean-forward="false" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
           <folding />
         </state>
@@ -403,8 +435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="777">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -412,7 +444,7 @@
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/scripts/crudOperations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4053">
-          <caret line="193" column="27" lean-forward="true" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+          <caret line="193" column="27" lean-forward="false" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -420,7 +452,7 @@
     <entry file="file://$PROJECT_DIR$/03.Prodavachnik-Refactoring/styles/prodavachnik.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
-          <caret line="155" column="8" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+          <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
           <folding />
         </state>
       </provider>
