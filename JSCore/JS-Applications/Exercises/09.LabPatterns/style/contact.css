@@ -1,0 +1,68 @@
+#list {
+    float: left;
+    width: 40%;
+}
+
+#details {
+    float: left;
+    width: 60%;
+}
+
+.contact {
+    background: #EEE;
+    padding: 5px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.contact:hover {
+    background: #d59450;
+}
+
+.avatar {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    font-size: 5em;
+    line-height: 96px;
+    vertical-align: middle;
+    text-align: center;
+    background: #838383;
+    color: #ffffff;
+}
+
+.small {
+    width: 48px;
+    height: 48px;
+    font-size: 2.5em;
+    line-height: 48px;
+}
+
+.title {
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 5px 20px;
+}
+
+.info-line {
+    margin: 5px;
+}
+
+.info {
+    overflow: auto;
+    padding: 5px;
+}
+
+.info span {
+    display: block;
+}
+
+.col {
+    float: left;
+}

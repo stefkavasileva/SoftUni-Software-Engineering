@@ -1,0 +1,9 @@
+{
+  "name": "Skeleton",
+  "version": "0.0.1",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1",
+    "sammy": "^0.7.6"
+  }
+}
