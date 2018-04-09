@@ -1,0 +1,27 @@
+.details-box p {
+    margin: 1.5em;
+}
+
+.member {
+    font-size: 1.5em;
+    margin: 0.25em;
+    margin-left: 1em;
+    list-style-type: none;
+    display: block;
+}
+
+.titlebar {
+    display: block;
+    font-size: 2em;
+    padding: 0.25em;
+    padding-left: 0.75em;
+}
+
+.spanner {
+    display: block;
+    padding: 0.25em;
+    padding-left: 1.5em;
+    background-color: antiquewhite;
+    font-weight: 600;
+}
+

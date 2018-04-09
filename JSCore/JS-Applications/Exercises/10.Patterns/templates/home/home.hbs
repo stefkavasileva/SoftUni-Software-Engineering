@@ -1,0 +1,18 @@
+<div class="container">
+
+    {{> header}}
+    <div>
+        <h1>Home Page</h1>
+        {{#if loggedIn}}
+            {{#if hasTeam}}
+                <a href="#/catalog/:{{teamId}}">Go To Team</a>
+            {{else}}
+                <p>You are currently not a member of a team. View the <a href="#/catalog">catalog</a> to join or create one.</p>
+            {{/if}}
+        {{else}}
+            <p>You are currently not logged in. <a href="#/login">Log in</a> / <a href="#/register">Register</a></p>
+        {{/if}}
+    </div>
+</div>
+
+{{> footer}}

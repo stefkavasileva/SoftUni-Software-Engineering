@@ -1,0 +1,24 @@
+<div class="container">
+    {{> header}}
+        <div class="details-box">
+            <span class="titlebar">{{name}} details</span>
+            <span class="spanner">Team members</span>
+            <div>
+                {{#each members}}
+                    {{> teamMember}}
+                {{else}}
+                    <p>No member info</p>
+                {{/each}}
+            </div>
+            <span class="spanner">Description</span>
+            {{#if comment}}
+                <p>{{comment}}</p>
+            {{else}}
+                <p>No description</p>
+            {{/if}}
+            <span class="spanner">Team management</span>
+                {{> teamControls}}
+        </div>
+</div>
+
+{{> footer}}

@@ -1,0 +1,32 @@
+.team-box {
+    float:left;
+    width: 20em;
+    margin: 1em;
+    border: 3px solid antiquewhite;
+    text-decoration: none;
+    color: black;
+}
+
+.team-box:hover {
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.spanner {
+    display: block;
+    padding: 0.25em;
+    background-color: antiquewhite;
+}
+
+.title {
+    font-size: 1.5em;
+    display: block;
+    padding: 0.25em;
+    padding-left: 1.5em;
+    font-weight: 600;
+}
+
+.team-box p {
+    margin: 1.5em;
+}

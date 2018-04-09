@@ -1,0 +1,19 @@
+<header>
+    <div class="jumbotron">
+        <h1>Team Manager</h1>
+        {{#if loggedIn}}
+            <span>Welcome, {{username}}</span>
+        {{/if}}
+        <nav>
+            <a href="#/home" class="btn btn-default">Home</a>
+            <a href="#/about" class="btn btn-default">About</a>
+            {{#if loggedIn}}
+                <a href="#/catalog" class="btn btn-default">Catalog</a>
+                <a href="#/logout" class="btn btn-default">Logout</a>
+             {{else}}
+                 <a href="#/login" class="btn btn-default">Login</a>
+                 <a href="#/register" class="btn btn-default">Register</a>
+            {{/if}}
+        </nav>
+    </div>
+</header>

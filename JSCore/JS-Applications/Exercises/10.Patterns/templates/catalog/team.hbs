@@ -1,0 +1,10 @@
+<a href="#/catalog/:{{_id}}" class="team-box">
+    <span class="spanner">Team name</span>
+    <span class="title">{{name}}</span>
+    <span class="spanner">Description</span>
+    {{#if comment}}
+            <p>{{comment}}</p>
+    {{else}}
+            <p>No description</p>
+    {{/if}}
+</a>

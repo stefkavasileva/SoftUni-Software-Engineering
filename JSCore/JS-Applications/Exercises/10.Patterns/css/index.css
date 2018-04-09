@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#main {
+  text-align: center;
+}
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+}
+
+.notification {
+  font-size: 1.5em;
+  float: right;
+  color: #ffffff;
+  padding:  0.5em 2em 0.5em 2em;
+  margin: 1em;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#infoBox {
+  background: #393;
+}
+
+#errorBox {
+  background: #F50;
+}
