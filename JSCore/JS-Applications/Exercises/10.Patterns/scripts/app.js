@@ -81,24 +81,81 @@ $(() => {
         });
 
         //GET catalog
-        this.get('#/catalog', function (ctx) {
+        this.get('#/catalog', displayCatalog);
+
+        //GET create time
+        this.get('#/create', function (ctx) {
+            this.loadPartials({
+                header: './templates/common/header.hbs',
+                footer: './templates/common/footer.hbs',
+                createForm: './templates/create/createForm.hbs',
+            }).then(function () {
+                this.partial('./templates/create/createPage.hbs');
+            })
+                .catch(auth.showError);
+        });
+
+        //POST create time
+        this.post('#/create',function (ctx) {
+            let name = ctx.params.name;
+            let description = ctx.params.comment;
+
+            teamsService.createTeam(name,description)
+                .then(function (teamInfo) {
+                    teamsService.joinTeam(teamInfo._id)
+                        .then(function (userInfo) {
+                            auth.saveSession(userInfo);
+                            auth.showInfo(`Team ${name} created!!!`);
+                            displayCatalog(ctx);
+                        }).catch(auth.showError);
+                })
+                .catch(auth.showError)
+        });
+
+        //GET details team
+        this.get('#/catalog/:id',function (ctx) {
+            let teamId = ctx.params.id.substr(1);
+
+            teamsService.loadTeamDetails(teamId)
+                .then(function (teamInfo) {
+                    ctx.loggedIn = sessionStorage.getItem('authtoken') !== null;
+                    ctx.username = sessionStorage.getItem('username');
+                    ctx.teamId = teamId;
+                    ctx.name = teamInfo.name;
+                    ctx.comment = teamInfo.comment;
+
+                    ctx.isAuthor = teamInfo._acl.creator === sessionStorage.getItem('userId');
+
+                    ctx.loadPartials({
+                        header: './templates/common/header.hbs',
+                        footer: './templates/common/footer.hbs',
+                        teamControls: './templates/catalog/teamControls.hbs',
+                    }).then(function () {
+                        this.partial('./templates/catalog/details.hbs')
+                    }).catch(auth.showError);
+                }).catch(auth.showError);
+
+        });
+
+        function displayCatalog(ctx) {
             ctx.loggedIn = sessionStorage.getItem('authtoken') !== null;
             ctx.username = sessionStorage.getItem('username');
 
             teamsService.loadTeams()
                 .then(function (teams) {
                     ctx.hasNoTeam = sessionStorage.getItem('teamId') === null || sessionStorage.getItem('teamId') === 'undefined';
+                    ctx.teams = teams;
+
                     ctx.loadPartials({
                         header: './templates/common/header.hbs',
                         footer: './templates/common/footer.hbs',
-                        team:'./templates/catalog/team.hbs',
+                        team: './templates/catalog/team.hbs',
                     }).then(function () {
                         this.partial('./templates/catalog/teamCatalog.hbs')
                     }).catch(auth.showError);
                 })
                 .catch(auth.showError)
-
-        });
+        }
 
         function displayHome(ctx) {
             ctx.loggedIn = sessionStorage.getItem('authtoken') !== null;
