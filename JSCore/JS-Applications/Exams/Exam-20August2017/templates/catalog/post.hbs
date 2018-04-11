@@ -1,0 +1,31 @@
+<article class="post">
+    <div class="col rank">
+        <span>{{postCounter}}</span>
+    </div>
+    <div class="col thumbnail">
+        <a href="{{url}}">
+            <img src="{{imageUrl}}">
+        </a>
+    </div>
+    <div class="post-content">
+        <div class="title">
+            <a href="{{url}}">
+                {{title}}
+            </a>
+        </div>
+        <div class="details">
+            <div class="info">
+                submitted {{cretedTime}} day ago by {{author}}
+            </div>
+            <div class="controls">
+                <ul>
+                    <li class="action"><a class="commentsLink" href="#/comments/{{_id}}">comments</a></li>
+                    {{#if isAuthor}}
+                        <li class="action"><a class="editLink" href="#/editPost/{{_id}}">edit</a></li>
+                        <li class="action"><a class="deleteLink" href="#/deletePost/{{_id}}">delete</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>

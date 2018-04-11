@@ -1,0 +1,102 @@
+.post {
+    overflow: auto;
+    background: #ddf9c0;
+    margin: 15px;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.col {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.thumbnail img {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.rank {
+    width: 30px;
+    text-align: center;
+    color: #999999;
+    font-weight: bold;
+}
+
+.rank>span {
+    position: relative;
+    top: 1.5em;
+}
+
+.voting {
+    width: 50px;
+    text-align: center;
+    color: #999999;
+    font-weight: bold;
+}
+
+.thumbnail {
+    width: 100px;
+    text-align: center;
+}
+
+.post-content {
+    display: block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.title a {
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.info {
+    color: #999999;
+}
+
+.controls {
+    overflow: auto;
+}
+
+.controls .action {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.controls .action a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.controls .action a:hover {
+    color: #000000;
+}
+
+.arrow {
+    font-size: 2em;
+    line-height: 0.75em;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #000000;
+}
+
+.arrow.clicked {
+    color: #ffffff;
+}

@@ -1,0 +1,33 @@
+#menu {
+    display: inline-block;
+    float: right;
+    border: 1px solid black;
+    margin: 15px;
+    width: 200px;
+}
+
+#menu .title {
+    background: #ddf9c0;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav {
+    font-size: 1.25em;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.nav:hover {
+    background: #ddf9c0;
+}
+
+.nav:visited {
+}
+
+.nav.active {
+    background: #ffffff;
+}

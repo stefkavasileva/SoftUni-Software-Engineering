@@ -1,0 +1,9 @@
+<article class="post post-content">
+    <p>{{content}}</p>
+    <div class="info">
+        submitted {{date}} ago by {{author}} |
+        {{#if commentAuthor}}
+            <a href="#/commentDelete/{{_id}}/post/{{postId}}" class="deleteLink">delete</a>
+        {{/if}}
+    </div>
+</article>

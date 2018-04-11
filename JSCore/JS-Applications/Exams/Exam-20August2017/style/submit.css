@@ -1,0 +1,26 @@
+.submitArea {
+    background: #ddf9c0;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.submitForm>* {
+    display: block;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.submitForm>label {
+    margin-top: 10px;
+}
+
+.submitForm>textarea {
+    resize: none;
+    height: 9em;
+}
+
+.submitForm>input[type="submit"] {
+    margin-top: 10px;
+    width: 100px;
+}

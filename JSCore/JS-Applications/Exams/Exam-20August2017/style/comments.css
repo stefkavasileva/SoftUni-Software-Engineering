@@ -1,0 +1,19 @@
+#commentForm>* {
+    display: block;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+#commentForm>label {
+    margin-top: 10px;
+}
+
+#commentForm>textarea {
+    resize: none;
+    height: 6em;
+}
+
+#commentForm>input[type="submit"] {
+    margin-top: 10px;
+    width: 100px;
+}
