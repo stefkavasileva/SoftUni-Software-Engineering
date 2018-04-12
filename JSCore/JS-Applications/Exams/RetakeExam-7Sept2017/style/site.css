@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+    background: #cfcfcf;
+    height: 40px;
+    vertical-align: middle;
+}
+
+header>*, footer>* {
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+#main>div {
+    margin: auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.menu {
+    background: #4d4d4d;
+}
+
+.menu>a {
+    color: #e0e0e0;
+    text-decoration: none;
+
+    padding: 5px 10px;
+}
+
+.menu>a:hover {
+    background: #7f7f7f;
+}
+
+.loading {
+    padding: 10px;
+}
+
+.chirps {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.chirp {
+    border-top: 1px solid #e0e0e0;
+}
+
+.titlebar {
+    overflow: auto;
+    padding: 10px;
+}
+
+.chirp-author {
+    font-weight: bold;
+}
+
+.chirp-time {
+    float: right;
+}
+
+.chirp-time>a {
+    text-decoration: none;
+}
+
+.chirp>p {
+    padding: 10px;
+}
+
+.userbox {
+    border-top: 1px solid #e0e0e0;
+    padding: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+
+.user-details {
+    vertical-align: bottom;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #7f7f7f;
+}
+
+.chirper {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    vertical-align: bottom;
+    position: relative;
+}
+
+#formSubmitChirp {
+    text-align: right;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+.chirp-input {
+    resize: none;
+    width: 300px;
+    height: 5em;
+    display: block;
+}
+
+#btnSubmitChirp {
+    width: 75px;
+    height: 25px;
+    background: #6592bf;
+    color: #ffffff;
+    border: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+#btnSubmitChirp:hover {
+    background: #83bef7;
+    cursor: pointer;
+}
+
+.chirp-author {
+    color: #6592bf;
+    text-decoration: none;
+}
+
+.chirp-author:hover {
+    color: #83bef7;
+}
+
+.chirp-time {
+    color: #7f7f7f;
+}
+
+#btnFollow {
+    margin: 10px;
+    padding: 5px 10px;
+    background: #6592bf;
+    color: #ffffff;
+    display: inline-block;
+}
+#btnFollow:hover {
+    background: #83bef7;
+}
+
+#btnUnfollow {
+    margin: 10px;
+    padding: 5px 10px;
+    background: #6592bf;
+    color: #ffffff;
+    display: inline-block;
+}
+#btnUnfollow:hover {
+    background: #f79c97;
+}
+
+.form {
+    text-align: center;
+}
+
+.form>* {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.form>input[type="submit"] {
+    border: 0;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #6592bf;
+    color: #ffffff;
+}
+.form>input[type="submit"]:hover {
+    background: #83bef7;
+    cursor: pointer;
+}

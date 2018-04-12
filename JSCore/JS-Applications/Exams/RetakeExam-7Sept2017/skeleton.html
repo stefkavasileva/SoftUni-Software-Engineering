@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chirper</title>
+    <link rel="stylesheet" href="./style/site.css">
+    <link rel="stylesheet" href="./style/notifications.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/min/sammy-0.7.6.min.js"></script>
+    <script src="node_modules/sammy/lib/min/plugins/sammy.handlebars-0.7.6.min.js"></script>
+    <script src="scripts/notify.js"></script>
+    <script src="scripts/remote.js"></script>
+    <script src="scripts/services/authService.js"></script>
+    <script src="scripts/services/chirpService.js"></script>
+
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+<div id="main">
+
+
+</div>
+
+<div id="notifications">
+    <div id="loadingBox" class="notification" style="display: none;"><span>Loading …</span></div>
+    <div id="infoBox" class="notification"><span>Info</span></div>
+    <div id="errorBox" class="notification"><span>Error</span></div>
+</div>
+
+</body>
+</html>

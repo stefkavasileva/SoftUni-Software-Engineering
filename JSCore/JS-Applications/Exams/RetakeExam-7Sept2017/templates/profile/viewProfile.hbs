@@ -1,0 +1,19 @@
+<section id="viewProfile">
+    <div class="content">
+        <div class="chirper">
+
+            <h2 class="titlebar">{{username}}</h2>
+
+            <a id="btnFollow" class="chirp-author" href="#">Follow</a>
+
+            <div id="userProfileStats" class="user-details">
+                <span>{{chirpsCount}} chirps</span> | <span>{{followingCount}} following</span> | <span>{{followerCount}} followers</span>
+            </div>
+        </div>
+        <div id="profileChirps" class="chirps"><h2 class="titlebar">Chirps</h2>
+           {{#each chirps}}
+               {{> chirp}}
+           {{/each}}
+        </div>
+    </div>
+</section>
