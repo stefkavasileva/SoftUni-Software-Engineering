@@ -1,0 +1,15 @@
+<div class="main">
+    <header id="menu">
+        <a href="#" class="useronly" id="linkMenuUserHome">Home</a>
+        {{#if isAuth}}
+            <a href="#/messages" class="useronly" id="linkMenuMyMessages">My Messages</a>
+            <a href="#/archive" class="useronly" id="linkMenuArchiveSent">Archive (Sent)</a>
+            <a href="#/send" class="useronly" id="linkMenuSendMessage">Send Message</a>
+            <a href="#/logout" class="useronly" id="linkMenuLogout">Logout</a>
+            <span class="useronly" id="spanMenuLoggedInUser">Welcome, {{username}}!</span>
+        {{else}}
+            <a href="#/login" class="anonymous" id="linkMenuLogin">Login</a>
+            <a href="#/register" class="anonymous" id="linkMenuRegister">Register</a>
+        {{/if}}
+    </header>
+</div>
