@@ -1,0 +1,31 @@
+{{> header}}
+<section id="viewShop">
+    <h1>Products</h1>
+    <div class="products" id="shopProducts">
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+          {{#each products}}
+              <tr>
+                  <td>{{name}}</td>
+                  <td>{{description}}</td>
+                  <td>{{price}}</td>
+                  <td>
+                      <form action="#/purchase/{{_id}}" method="post">
+                          <button>Purchase</button>
+                      </form>
+                  </td>
+              </tr>
+          {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+{{> footer}}

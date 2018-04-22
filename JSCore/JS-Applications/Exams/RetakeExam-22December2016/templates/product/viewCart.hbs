@@ -1,0 +1,32 @@
+{{> header}}
+<section id="viewCart">
+    <h1>My Cart</h1>
+    <div class="products" id="cartProducts">
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each products}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{price}}</td>
+                    <td>
+                        <form action="#/discard/{{_id}}" method="post">
+                            <button>Discard</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+{{>footer}}

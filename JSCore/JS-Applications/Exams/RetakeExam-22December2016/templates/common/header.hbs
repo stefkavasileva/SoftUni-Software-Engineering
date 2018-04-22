@@ -1,0 +1,12 @@
+<header id="menu">
+    <a href="#/home" class="anonymous" id="linkMenuAppHome">Home</a>
+    {{#if isAuth}}
+        <a href="#/shop" class="useronly" id="linkMenuShop">Shop</a>
+        <a href="#/cart" class="useronly" id="linkMenuCart">Cart</a>
+        <a href="#/logout" class="useronly" id="linkMenuLogout">Logout</a>
+        <span class="useronly" id="spanMenuLoggedInUser">Welcome, {{username}}!</span>
+    {{else}}
+        <a href="#/login" class="anonymous" id="linkMenuLogin">Login</a>
+        <a href="#/register" class="anonymous" id="linkMenuRegister">Register</a>
+    {{/if}}
+</header>
