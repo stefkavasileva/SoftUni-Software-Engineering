@@ -28,8 +28,9 @@ $(() => {
             let username = ctx.params.username;
             let password = ctx.params.password;
             let name = ctx.params.name;
+            let cart = {};
 
-            auth.register(username, password, name)
+            auth.register(username, password, name, cart)
                 .then(function (userData) {
                     auth.saveSession(userData);
                     notify.showInfo('User registration successful!');
@@ -104,22 +105,23 @@ $(() => {
                 }).catch(notify.handleError);
         });
 
+        //POST method for purchase
         this.post('#/purchase/:purchaseId', function (ctx) {
             let userId = sessionStorage.getItem('userId');
             let productId = ctx.params.purchaseId;
-            let userPromise =  userService.getParticularUser(userId);
+            let userPromise = userService.getParticularUser(userId);
             let productPromise = productService.getProductById(productId);
 
-            Promise.all([userPromise,productPromise])
+            Promise.all([userPromise, productPromise])
                 .then(function ([user, product]) {
-                    if(!user.hasOwnProperty('cart')){
+                    if (!user.hasOwnProperty('cart')) {
                         user.cart = {};
                     }
 
-                    if(!user.cart.hasOwnProperty(productId)){
+                    if (!user.cart.hasOwnProperty(productId)) {
                         user.cart[productId] = {
-                            quantity:1,
-                            product:{
+                            quantity: 1,
+                            product: {
                                 name: product.name,
                                 description: product.description,
                                 price: product.price
@@ -127,28 +129,70 @@ $(() => {
                         }
                     }
                     user.cart[product._id].quantity = Number(user.cart[product._id].quantity) + 1;
-                    notify.showInfo('Product was added to your cart!')
-            }).catch(notify.handleError)
+                    userService.updateParticularUser(userId, user.username, user.name, user.cart)
+                        .then(function () {
+                            notify.showInfo('Product was added to your cart!')
+                        })
+                        .catch(notify.handleError)
+
+                }).catch(notify.handleError)
 
         });
 
-        this.get('#/cart',function (ctx) {
-           ctx.isAuth = auth.isAuth();
-           ctx.username = sessionStorage.getItem('username');
+        //GET method for car view
+        this.get('#/cart', function (ctx) {
+            ctx.isAuth = auth.isAuth();
+            ctx.username = sessionStorage.getItem('username');
             let userId = sessionStorage.getItem('userId');
 
-           userService.getParticularUser(userId)
-               .then(function (user) {
-                   let products  = [];
+            userService.getParticularUser(userId)
+                .then(function (user) {
+                    let products = [];
 
-                   Object.keys(user.cart).forEach((key,index) =>{
-                       products.push(user.cart[key]);
-                   });
+                    for (let key of Object.keys(user.cart)) {
+                        if (user.cart[key] !== null && user.cart[key] !== '') {
+                            let currentPurchase = user.cart[key];
 
-                   ctx.products = products;
-               })
-               .catch(notify.handleError)
+                            let currentProduct = {
+                                id:key,
+                                name: currentPurchase.product.name,
+                                description: currentPurchase.product.description,
+                                price: currentPurchase.product.price,
+                                totalPrice: currentPurchase.product.price * currentPurchase.quantity
+                            };
+                            products.push(currentProduct);
+                        }
+                    }
+
+                    ctx.products = products;
+
+                    ctx.loadPartials({
+                        header: './templates/common/header.hbs',
+                        footer: './templates/common/footer.hbs',
+                    }).then(function () {
+                        this.partial('./templates/product/viewCart.hbs');
+                    })
+                })
+                .catch(notify.handleError)
         });
+
+        //POST method for discard purchase
+        this.post('#/discard/:discardId', function (ctx) {
+            let userId = sessionStorage.getItem('userId');
+
+            userService.getParticularUser(userId)
+                .then(function (user) {
+                    user.cart[ctx.params.discardId] = null;
+                    userService.updateParticularUser(userId, user.username, user.name, user.cart)
+                        .then(function () {
+                            notify.showInfo('Successfully removed product.');
+                            ctx.redirect('#/cart');
+                        })
+                        .catch(notify.handleError)
+                }).catch(notify.handleError);
+
+        });
+
     });
 
     app.run();
