@@ -1,0 +1,146 @@
+section h1 {
+	font-size: 1.5rem;
+	padding: 15px;
+}
+
+.welcome-text {
+	width: 60%;
+	float: left;
+}
+
+.welcome-text p {
+	padding: 15px;
+	padding-top: 0;
+	box-sizing: border-box;
+	font-size: 1.25rem;
+}
+
+.welcome-forms {
+	width: 35%;
+	float: right;
+}
+
+.welcome-forms input, .welcome-forms label, .welcome-forms input[type=submit] {
+	display: block;
+	margin: 10px 0;
+	box-sizing: border-box;
+	padding: 0 10px;
+	font-size: 1.25rem
+}
+
+.welcome-forms input[type=submit] {
+	border: 2px solid #41719c;
+	width: 100%;
+	background: #5b9bd5;
+	color: #fff;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+.welcome-forms input {
+	border: 2px solid #41719c;
+	width: 100%;
+	padding: 5px;
+}
+
+table {
+	width: 100%;
+	border: 2px solid #41719c;
+	border-collapse: collapse;
+}
+
+tr.table-head th {
+	border-bottom: 2px solid #41719c;
+}
+
+th, td {
+	font-size: 1.25rem;
+	text-align: left;
+	padding: 10px;
+}
+
+td input, td select {
+	padding: 5px;
+	border: 2px solid #41719c;
+	width: 100%;
+	font-size: 1.25rem;
+}
+
+td button {
+	padding: 5px;
+	border: 2px solid #41719c;
+	width: 100%;
+	font-size: 1.5rem;
+	background: #5b9bd5;
+	color: #fff;
+	max-width: 119px;
+}
+
+.table {
+    width: 100%;
+	border: 2px solid #41719c;
+}
+
+.table-head {
+    border-bottom: 2px solid #41719c;
+    font-weight: bold;
+}
+
+.col {
+    width: 10%;
+    font-size: 1.25rem;
+    padding: 10px;
+    display: inline-block;
+}
+
+.wide {
+    width: 20%;
+}
+
+.right {
+    text-align: right;
+}
+
+.table-foot {
+    border-top:  2px solid #41719c;
+	font-weight: bold;
+}
+
+.table a {
+	padding: 5px;
+	border: 2px solid #41719c;
+	font-size: 1.5rem;
+	background: #5b9bd5;
+	color: #fff;
+	margin-right: 10px;
+}
+
+.table a:hover {
+    text-decoration: none;
+    background-color: #41719c;
+}
+
+.table input {
+	padding: 5px;
+	border: 2px solid #41719c;
+	width: 100%;
+	font-size: 1.25rem;
+}
+
+.table input[type=submit] {
+	padding: 5px;
+	border: 2px solid #41719c;
+	width: 100%;
+	font-size: 1.5rem;
+	background: #5b9bd5;
+	color: #fff;
+	max-width: 119px;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #41719c;
+}

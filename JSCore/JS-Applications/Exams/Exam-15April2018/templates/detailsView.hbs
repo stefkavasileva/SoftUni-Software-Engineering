@@ -1,0 +1,21 @@
+{{>header}}
+<section id="receipt-details-view">
+    <h1>Receipt Details</h1>
+    <div class="table">
+        <div class="table-head">
+            <div class="col wide">Product Name</div>
+            <div class="col wide">Quantity</div>
+            <div class="col wide">Price per Unit</div>
+            <div class="col">Sub-total</div>
+        </div>
+        {{#each entries}}
+            <div class="row">
+                <div class="col wide">{{type}}</div>
+                <div class="col wide">{{qty}}</div>
+                <div class="col wide">{{price}}</div>
+                <div class="col">{{subtotal}}</div>
+            </div>
+        {{/each}}
+    </div>
+</section>
+{{>footer}}

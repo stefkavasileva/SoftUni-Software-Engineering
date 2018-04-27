@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+	font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    background: #5b9bd5;
+	font-family: sans-serif;
+}
+
+#container {
+    margin: 40px;
+	background: #fff;
+	padding: 40px;
+}
+
+footer {
+	margin-top: 20px;
+	text-align: center;
+}

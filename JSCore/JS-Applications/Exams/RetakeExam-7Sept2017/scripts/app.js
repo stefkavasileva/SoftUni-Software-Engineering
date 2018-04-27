@@ -114,7 +114,6 @@ $(() => {
                 .catch(notify.handleError);
         });
 
-
         function displayHome(ctx) {
             if (!authService.isAuth()) {
 

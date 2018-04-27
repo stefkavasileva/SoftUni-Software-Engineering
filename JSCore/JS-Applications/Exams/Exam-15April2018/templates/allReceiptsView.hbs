@@ -1,0 +1,34 @@
+{{>header}}
+
+<section id="all-receipt-view">
+    <h1>All Receipts</h1>
+    <div class="table">
+        <div class="table-head">
+            <div class="col wide">Creation Date</div>
+            <div class="col wide">Items</div>
+            <div class="col">Total</div>
+            <div class="col">Actions</div>
+        </div>
+        {{#each receipts}}
+            <div class="row">
+                <div class="col wide">{{date}}</div>
+                <div class="col wide">{{productCount}}</div>
+                <div class="col">{{total}}</div>
+                <div class="col">
+                    <a href="#/details/{{_id}}">Details</a>
+                </div>
+            </div>
+        {{/each}}
+        <div class="table-foot">
+            <form id="create-receipt-form">
+                <div class="col wide">
+                </div>
+                <div class="col wide right">Total:</div>
+                <div class="col">{{totalPrice}}</div>
+                <div class="col">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{{> footer}}
