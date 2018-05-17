@@ -1,0 +1,11 @@
+﻿table,td,tr,th {
+    border: solid;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.textCenter {
+    text-align: center;
+}
