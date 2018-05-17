@@ -1,4 +1,4 @@
-let authService = (() => {
+let auth = (() => {
     function isAuth() {
         return sessionStorage.getItem('authtoken') !== null;
     }
@@ -6,12 +6,13 @@ let authService = (() => {
     function saveSession(userData) {
         sessionStorage.setItem('authtoken', userData._kmd.authtoken);
         sessionStorage.setItem('username', userData.username);
+        sessionStorage.setItem('subscriptions', userData.subscriptions);
         sessionStorage.setItem('userId', userData._id);
     }
 
 
     function register (username, password) {
-        let obj = { username, password };
+        let obj = { username, password,subscriptions: [] };
 
         return remote.post('user', '', 'basic', obj);
     }

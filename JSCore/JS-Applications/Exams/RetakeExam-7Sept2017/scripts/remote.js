@@ -32,14 +32,16 @@ let remote = (() => {
     function post (module, endpoint, auth, data) {
         let obj = makeRequest('POST', module, endpoint, auth);
         if (data) {
-            obj.data = data;
+            obj.data = JSON.stringify(data);
+            obj.headers['Content-Type'] = 'application/json';
         }
         return $.ajax(obj);
     }
 
     function update(module, endpoint, auth, data) {
         let obj = makeRequest('PUT', module, endpoint, auth);
-        obj.data = data;
+        obj.data = JSON.stringify(data);
+        obj.headers['Content-Type'] = 'application/json';
         return $.ajax(obj);
     }
 
