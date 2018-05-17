@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Courgette');
+*{
+    font-family:Amaranth ;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.log-out:hover{
+   color:red;
+}
+li,.log-out{
+    list-style-type: none;
+    display: inline-block;
+    border: 2px solid lightsteelblue;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+li:hover{
+    transform: scale(1.1);
+}
+a:hover{
+    color:yellow;
+}
+nav{
+    background: cornflowerblue;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 0;
+    padding-top: 0;
+}
+.left-container,.right-container{
+    width: 49%;
+}
+.right-container{
+    text-align: center;
+    margin:0 5px;
+}
+img{
+    width: 35px;
+    height:35px;
+    margin-top: 25px;
+}
+h2{
+    font-size:50px;
+
+}
+label{
+    color:gray;
+    font-size: 25px;
+}
+section{
+    text-align: center;
+    margin-top: 5px;
+    position: relative;
+    padding-bottom: 60px;
+}
+form{
+    text-align: center;
+}
+input{
+    display: block;
+    margin:10px auto;
+    width: 200px;
+    border: 2px solid lightsteelblue;
+    padding: 5px;
+}
+.create,.save-changes,.login,.register{
+    background:cornflowerblue;
+    color: white;
+    border: 2px solid lightsteelblue;
+    padding: 15px;
+    width: 100px;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+    background: cornflowerblue;
+    padding: 20px 0;
+    color: white;
+    /*position:absolute; */
+    bottom:0;
+    width:100%;
+}
+
+.background-img{
+    background: url("../../static/img/plane.jpg") no-repeat center ;
+    margin: auto;
+    width: 60%;
+    padding-left: 530px;
+}
+span,.log-out,.cart{
+    margin-right:10px;
+}
+.flight-parameters
+{
+   text-align: left;
+}
+.flight-parameters span{
+    margin-left: 35px;
+    font-size:35px;
+}
+.single-ticket{
+    display: flex;
+    margin: auto;
+    background:cornflowerblue ;
+    padding-bottom: 30px;
+    width: 80%;
+    margin-top: 5px;
+}
+.destination-img{
+    width: 100%;
+    height: 300px;
+    margin-left: 20px;
+}
+.left-ticket-container{
+    width: 49%;
+}
+.right-ticket-container{
+    text-align: left;
+    margin-left: 50px;
+    width:45%;
+}
+.number-of-tickets{
+    margin-top:5px;
+    font-size:35px;
+}
+.right-ticket-container p{
+    font-size: 25px;
+}
+.remove{
+    float: right;
+    list-style-type: none;
+    display: inline-block;
+    border: 2px solid lightsteelblue;
+    padding: 10px;
+    margin: 10px;
+    width: 140px;
+    text-align: center;
+    color: red;
+    background: none;
+}
+.details{
+    float: right;
+    list-style-type: none;
+    display: inline-block;
+    border: 2px solid lightsteelblue;
+    padding: 10px;
+    margin: 10px;
+    width: 140px;
+    text-align: center;
+    color: black;
+    background: none;
+}
+.right-ticket-container div{
+    display: flex;
+    margin-top: 40px;
+}
+.right-ticket-container .remove{
+    margin-left: 260px;
+}
+.ticket-checkout{
+    font-size: 25px;
+    height: 150px;
+    padding: 15px;
+}
+.total {
+    margin: 10px;
+}
+.checkout{
+    border: 2px solid lightskyblue;
+    padding: 14px;
+    margin: 10px;
+    width: 160px;
+    text-align: center;
+    color: white;
+    background: lightsteelblue;
+    font-size: 20px;
+}
+.search{
+    background:cornflowerblue;
+    color: white;
+    border: 2px solid lightsteelblue;
+    padding: 15px;
+    width: 120px;
+    font-size: 20px;
+    display: block;
+}
+.add-flight{
+    width: 150px;
+    background:cornflowerblue;
+    color: white;
+    border: 2px solid lightsteelblue;
+    padding: 15px;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+}
+.added-flight{
+    color: black;
+    cursor: pointer;
+    width: 400px;
+    border: 2px solid blue;
+    text-align: center;
+    background: cornflowerblue;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 250px;
+}
+.buttons-container{
+
+}
+.picture-added-flight{
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+}
+.added-flights{
+    display: flex;
+    justify-content: space-around;
+}
+.save-changes{
+    width: 140px;
+}
+.edit-flight-detail{
+    background: url("../../static/img/pencil.png") center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid blue;
+    border-radius: 100%;
+    margin-left: 25px;
+    display: inline-block;
+}
+.ticket-area-left img{
+    width: 100%;
+    height: 90%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.ticket-area{
+    display: flex;
+    justify-content: center;
+    background: cornflowerblue;
+    width: 60%;
+    margin: auto;
+    height: 235px;
+}
+.ticket-area-right{
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+}
+.data-and-time{
+    margin-left: 85px;
+}
+.seat-form{
+    display: inline-flex;
+}
+.seat-form input,button{
+    margin:20px;
+}
+.seat-form span{
+    margin:20px;
+}
+.delete{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border:2px solid blue;
+    color: red;
+    margin: 20px;
+}
+.navigation{
+    margin: auto;
+}
+.flight-ticket{
+    display: flex;
+    text-align: left;
+    padding:0 0 0 75px;
+    font-size: 15px;
+    width: 100%;
+    margin: auto;
+}
+.flight-left img{
+    width: 400px;
+    height: 70%;
+    padding:0 0 0 15px;
+}
+.flight-right{
+    padding-left: 20px;
+    font-size: 20px;
+}
+h3{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.nav-register{
+    text-align: center;
+}
+#notifications {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: 1em;
+}
+
+.notification {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: right;
+	display: none;
+}
+
+.notification>span {
+    display: inline-block;
+    padding:  0.5em 2em 0.5em 2em;
+    border-radius: 10px;
+	width: 500px;
+	display: block;
+	text-align: center;
+}
+
+#loadingBox>span {
+    background: #7CB3E9;
+}
+#infoBox>span {
+    background: #393;
+}
+#errorBox>span {
+    background: #F50;
+}

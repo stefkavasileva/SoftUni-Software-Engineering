@@ -1,0 +1,15 @@
+{{> nav}}
+<section id="viewCatalog" class="background-img">
+    <a href="#/addFlight" class="add-flight">Add Flight +</a>
+
+    <div class="added-flights">
+        {{#each flights}}
+            <a href="#/details/{{_id}}" class="added-flight">
+                <img src="{{image}}" alt="" class="picture-added-flight">
+                <h3>{{destination}}</h3>
+                <span>from {{origin}}</span><span>20 {{date}} </span>
+            </a>
+        {{/each}}
+    </div>
+</section>
+{{> footer}}
