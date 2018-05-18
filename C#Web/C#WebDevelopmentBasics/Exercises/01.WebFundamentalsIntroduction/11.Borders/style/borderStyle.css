@@ -1,0 +1,29 @@
+﻿.borderStyle {
+    border: solid;
+    border-radius: 7px;
+    background-color:darkgrey;
+    text-align:center;
+}
+#redBorder{
+    border-color:red
+}
+
+#greenBorder {
+    border-color: green
+}
+
+#blueBorder {
+    border-color: blue
+}
+
+#redSpan {
+    color: red
+}
+
+#greenSpan {
+    color: green
+}
+
+#blueSpan {
+    color: blue
+}

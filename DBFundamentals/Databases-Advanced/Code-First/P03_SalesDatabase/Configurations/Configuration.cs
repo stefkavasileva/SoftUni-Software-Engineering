@@ -2,6 +2,6 @@
 {
     public class Configuration
     {
-        public const string ConnectionString = @"Server=DESKTOP-P3EEUC7\SQLEXPRESS;Database=Sales;Integrated Security = True;";
+        public const string ConnectionString = @"Server=.;Database=Sales;Integrated Security = True;";
     }
 }

@@ -1,0 +1,22 @@
+﻿#outsideDiv {
+    border:dotted;
+    border-radius:7px;
+    padding:10px;
+    border-color:blue
+}
+
+#middleDiv {
+    border:dashed;
+    border-radius:7px;
+    padding:10px;
+    border-color:red
+}
+
+#innerDiv {
+    border:solid;
+    border-radius:5px;
+    padding:10px;
+    border-color:green;
+    text-align:center; 
+    font-size:1.5em
+}

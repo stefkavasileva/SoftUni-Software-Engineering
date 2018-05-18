@@ -1,0 +1,11 @@
+﻿body {
+    background:#EEE;
+    font-size: 24pt;
+}
+
+span{
+    border:1px #AAA;
+    border-radius:10px;
+    background-color:#CCC;
+    padding:5px;
+}

@@ -1,5 +1,5 @@
 ﻿public class Configuration
 {
-    public const string ConnectionString = @"Server=DESKTOP-P3EEUC7\SQLEXPRESS;Database=SoftUni;Integrated Security = True;";
+    public const string ConnectionString = @"Server=.;Database=SoftUni;Integrated Security = True;";
 }
 
