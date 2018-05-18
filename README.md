@@ -20,4 +20,6 @@
 |<a href="https://softuni.bg/courses/csharp-oop-advanced-high-quality-code"> C# OOP Advanced</a> | <a href="https://softuni.bg/certificates/details/23377/34ce688d"> Link</a> |
 |<a href="https://softuni.bg/trainings/1747/databases-basics-mssql-server-september-2017/internal"> Databases Basics - MS SQL Server </a> | <a href="https://softuni.bg/certificates/details/23901/477ecc1a"> Link</a> |
 |<a href="https://softuni.bg/courses/databases-advanced-entity-framework"> Databases Advanced - Entity Framework </a> | <a href="https://softuni.bg/certificates/details/49703/217cf00f"> Link</a> |
-|<a href="https://softuni.bg/trainings/1850/js-fundamentals-%D1%8F%D0%BD%D1%83%D0%B0%D1%80%D0%B8-2018"> JavaScript Fundamentals </a> | <a href="https://softuni.bg/certificates/details/51647/9570106f"> Link</a> |
+|<a href="https://softuni.bg/trainings/1850/js-fundamentals-january-2018"> JavaScript Fundamentals </a> | <a href="https://softuni.bg/certificates/details/51647/9570106f"> Link</a> |
+|<a href="https://softuni.bg/courses/javascript-advanced"> JavaScript Advanced </a> | <a href="https://softuni.bg/certificates/details/53002/2f221978"> Link</a> |
+|<a href="https://softuni.bg/courses/javascript-applications"> JavaScript Applications </a> | <a href="https://softuni.bg/certificates/details/54725/d2412db2"> Link</a> |
