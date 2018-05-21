@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.URLDecode", "01.URLDecode\01.URLDecode.csproj", "{AD80B051-B174-4028-B3A1-AB22AD55D4D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ValidateURL", "02.ValidateURL\02.ValidateURL.csproj", "{0B40B59B-8460-4440-9433-E22690C30173}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD80B051-B174-4028-B3A1-AB22AD55D4D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD80B051-B174-4028-B3A1-AB22AD55D4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD80B051-B174-4028-B3A1-AB22AD55D4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD80B051-B174-4028-B3A1-AB22AD55D4D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B40B59B-8460-4440-9433-E22690C30173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B40B59B-8460-4440-9433-E22690C30173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B40B59B-8460-4440-9433-E22690C30173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B40B59B-8460-4440-9433-E22690C30173}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46FC7E34-9627-4BD2-807C-9759AF2A71DE}
+	EndGlobalSection
+EndGlobal
