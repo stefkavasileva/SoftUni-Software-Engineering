@@ -12,7 +12,7 @@ namespace _02.ValidateURL
             var encodedUrl = Console.ReadLine();
             var decodeUrl = WebUtility.UrlDecode(encodedUrl);
 
-            var urlReg = new Regex(@"(http[s]*:\/\/)*(\w+\.\w+):*(\d+)*\/(\w+\/*)*\?*(\w+=\w+&*)*#*(\w+)*");
+            var urlReg = new Regex(@"(http[s]*:\/\/)*([w+\.+\w+]+):*(\d+)*([\/\w*\/*]*)\?*(\w+=\w+&*)*#*(\w+)*");
             var urlMatch = urlReg.Match(decodeUrl);
             if (!urlMatch.Success)
             {
@@ -23,7 +23,7 @@ namespace _02.ValidateURL
             var protocol = urlMatch.Groups[1].Value.Trim(new char[] { '/', ':' });
             var host = urlMatch.Groups[2].Value;
             var port = urlMatch.Groups[3].Value;
-            if((protocol == "http" && port == "443") || (protocol == "https" && port == "80"))
+            if ((protocol == "http" && port == "443") || (protocol == "https" && port == "80"))
             {
                 Console.WriteLine("Invalid URL");
                 return;
@@ -36,8 +36,16 @@ namespace _02.ValidateURL
             var sb = new StringBuilder();
             sb.AppendLine($"Protocol: {protocol}");
             sb.AppendLine($"Host: {host}");
-            if (port != "") sb.AppendLine($"Port: {port}");
-            if (path == "") path = "/";
+            if (port == "" && protocol == "http")
+            {
+                port = "80";
+            }
+            else if (port == "" && protocol == "https")
+            {
+                port = "443";
+            }
+
+            sb.AppendLine($"Port: {port}");         
             sb.AppendLine($"Path: {path}");
             if (queryStrings != "") sb.AppendLine($"Query: {queryStrings}");
             if (fragment != "") sb.AppendLine($"Fragment: {fragment}");
