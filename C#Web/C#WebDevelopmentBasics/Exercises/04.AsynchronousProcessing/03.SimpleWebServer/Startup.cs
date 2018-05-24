@@ -28,7 +28,8 @@ namespace _03.SimpleWebServer
             {
                 Console.WriteLine("Waiting for client...");
                 var client = await lisener.AcceptTcpClientAsync();
-                Console.WriteLine("Client connected.");
+               
+			   Console.WriteLine("Client connected.");
 
                 var buffer = new byte[1024];
                 client.GetStream().Read(buffer, 0, buffer.Length);
