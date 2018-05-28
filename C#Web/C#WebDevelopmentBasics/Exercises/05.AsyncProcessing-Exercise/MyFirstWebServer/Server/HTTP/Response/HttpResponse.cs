@@ -18,7 +18,7 @@ namespace MyFirstWebServer.Server.HTTP.Response
 
         public void AddHeaders(string location, string redirectUrl)
         {
-            this.HeaderCollection.Add(new HttpHeader(location, redirectUrl)); //==>> edvali bachka??? 
+            this.HeaderCollection.Add(new HttpHeader(location, redirectUrl));  
         }
 
         protected HttpResponse(HttpStatusCode responseCode, IView view)

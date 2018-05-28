@@ -5,7 +5,7 @@ namespace MyFirstWebServer.Server.HTTP.Contracts
 {
     public interface IHttpRequest
     {
-        Dictionary<string, string> FormFata { get; }
+        Dictionary<string, string> FormData { get; }
 
         HttpHeaderCollection HttpHeaderCollection { get; }
 

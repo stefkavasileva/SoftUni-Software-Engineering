@@ -22,7 +22,6 @@ namespace MyFirstWebServer.Server.HTTP
             }
 
             this.headers[header.Key] = header;
-
         }
 
         public bool ContainsKey(string key)
@@ -34,7 +33,7 @@ namespace MyFirstWebServer.Server.HTTP
         {
             if (!this.headers.ContainsKey(key))
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Headers collection does not contains a given key.");
             }
 
             return this.headers[key];

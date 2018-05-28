@@ -1,7 +1,7 @@
 ﻿using MyFirstWebServer.Server.Handlers.Contracts;
 using MyFirstWebServer.Server.HTTP.Contracts;
+using MyFirstWebServer.Server.HTTP.Response;
 using MyFirstWebServer.Server.Routing.Contracts;
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -37,7 +37,7 @@ namespace MyFirstWebServer.Server.Handlers
                return kvp.Value.RequestHandler.Handle(httpContext);
             }
 
-            throw new ArgumentException("Not Found"); // return view ???
+            return new NotFoundResponse();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace MyFirstWebServer.Server.HTTP
             this.HttpHeaderCollection = new HttpHeaderCollection();
             this.UrlParameters = new Dictionary<string, string>();
             this.QueryParameters = new Dictionary<string, string>();
-            this.FormFata = new Dictionary<string, string>();
+            this.FormData = new Dictionary<string, string>();
 
             this.ParseRequest(requestString);
         }
@@ -23,7 +23,7 @@ namespace MyFirstWebServer.Server.HTTP
         {
         }
 
-        public Dictionary<string, string> FormFata { get; }
+        public Dictionary<string, string> FormData { get; }
 
         public HttpHeaderCollection HttpHeaderCollection { get; }
 
@@ -67,7 +67,7 @@ namespace MyFirstWebServer.Server.HTTP
 
             if (this.RequestMethod == HttpRequestMethod.POST)
             {
-                this.ParseQuery(requestLines[requestLines.Length - 1], this.FormFata);
+                this.ParseQuery(requestLines[requestLines.Length - 1], this.FormData);
             }
 
 

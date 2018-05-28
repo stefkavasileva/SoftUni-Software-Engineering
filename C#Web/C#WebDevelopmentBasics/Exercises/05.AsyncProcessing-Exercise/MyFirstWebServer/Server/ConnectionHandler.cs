@@ -23,14 +23,20 @@ namespace MyFirstWebServer.Server
         public async Task ProcessRequestAsync()
         {
             var request = await this.ReadRequest();
-            var httpContext = new HttpContext(request);
-            var response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
-            var toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
+            if (request != null)
+            {
+                var httpContext = new HttpContext(request);
+                var response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
+                var toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
 
-            await this.client.SendAsync(toBytes, SocketFlags.None);
+                await this.client.SendAsync(toBytes, SocketFlags.None);
 
-            Console.WriteLine(request);
-            Console.WriteLine(response.Response);
+                Console.WriteLine(request);
+                Console.WriteLine(response.Response);
+            }
+
+            this.client.Shutdown(SocketShutdown.Both);
+
         }
 
         private async Task<string> ReadRequest()
@@ -45,6 +51,10 @@ namespace MyFirstWebServer.Server
                 if (numBytesRead < 1024) break;
             }
 
+            if (request.Length == 0)
+            {
+                return null;
+            }
             return request;
         }
     }
