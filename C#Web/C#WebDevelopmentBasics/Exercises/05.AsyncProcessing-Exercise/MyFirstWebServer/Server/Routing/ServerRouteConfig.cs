@@ -1,90 +1,108 @@
-﻿using System.Collections.Generic;
-using MyFirstWebServer.Server.Enums;
+﻿using MyFirstWebServer.Server.Enums;
+using MyFirstWebServer.Server.Routing;
 using MyFirstWebServer.Server.Routing.Contracts;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using MyFirstWebServer.Server.Handlers;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace MyFirstWebServer.Server.Routing
+namespace HTTPServer.Server.Routing
 {
     public class ServerRouteConfig : IServerRouteConfig
     {
-        private readonly Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> routes;
+        private readonly IDictionary<HttpRequestMethod, IDictionary<string, IRoutingContext>> routes;
+
 
         public ServerRouteConfig(IAppRouteConfig appRouteConfig)
         {
-            this.routes = new Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>>();
+            this.routes = new Dictionary<HttpRequestMethod, IDictionary<string, IRoutingContext>>();
 
-            foreach (HttpRequestMethod requestMethod in Enum.GetValues(typeof(HttpRequestMethod)).Cast<HttpRequestMethod>())
+            var availableMethods = Enum
+                .GetValues(typeof(HttpRequestMethod))
+                .Cast<HttpRequestMethod>();
+
+            foreach (var method in availableMethods)
             {
-                this.routes.Add(requestMethod, new Dictionary<string, IRoutingContext>());
+                this.routes[method] = new Dictionary<string, IRoutingContext>();
             }
 
-            this.InitializeServerConfig(appRouteConfig);
+            this.InitializeRouteConfig(appRouteConfig);
         }
 
-        private void InitializeServerConfig(IAppRouteConfig appRouteConfig)
+        public IDictionary<HttpRequestMethod, IDictionary<string, IRoutingContext>> Routes => this.routes;
+
+        private void InitializeRouteConfig(IAppRouteConfig appRouteConfig)
         {
-            foreach (KeyValuePair<HttpRequestMethod, Dictionary<string, RequestHandler>> kvp in appRouteConfig.Routes)
+            foreach (var registeredRoute in appRouteConfig.Routes)
             {
-                foreach (KeyValuePair<string, RequestHandler> requestHandler in kvp.Value)
+                var requestMethod = registeredRoute.Key;
+                var routesWithHandlers = registeredRoute.Value;
+
+                foreach (var routeWithHandler in routesWithHandlers)
                 {
-                    var args = new List<string>();
+                    var route = routeWithHandler.Key;
+                    var handler = routeWithHandler.Value;
 
-                    var parsedRegex = this.ParseRoute(requestHandler.Key, args);
+                    var parameters = new List<string>();
 
-                    IRoutingContext routingContext = new RoutingContext(requestHandler.Value, args);
+                    var parsedRouteRegex = this.ParseRoute(route, parameters);
 
-                    this.Routes[kvp.Key].Add(parsedRegex, routingContext);
+                    var routingContext = new RoutingContext(handler, parameters);
+
+                    this.routes[requestMethod].Add(parsedRouteRegex, routingContext);
                 }
             }
         }
 
-        private string ParseRoute(string key, List<string> args)
+        private string ParseRoute(string route, List<string> parameters)
         {
-            var parsedRegex = new StringBuilder();
-            parsedRegex.Append('^');
-
-            if (key == "/")
+            if (route == "/")
             {
-                parsedRegex.Append($"{key}$");
-                return parsedRegex.ToString();
+                return "^/$";
             }
 
-            var tokens = key.Split("/");
-            this.ParseTokens(args, tokens, parsedRegex);
+            var result = new StringBuilder();
 
-            return parsedRegex.ToString();
+            result.Append("^/");
+
+            var tokens = route.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+            this.ParseTokens(tokens, parameters, result);
+
+            return result.ToString();
         }
 
-        private void ParseTokens(List<string> args, string[] tokens, StringBuilder parsedRegex)
+        private void ParseTokens(string[] tokens, List<string> parameters, StringBuilder result)
         {
             for (int i = 0; i < tokens.Length; i++)
             {
                 var end = i == tokens.Length - 1 ? "$" : "/";
-                if (!tokens[i].StartsWith("{") && !tokens[i].EndsWith("}"))
+                var currentToken = tokens[i];
+
+                if (!currentToken.StartsWith('{') && !currentToken.EndsWith('}'))
                 {
-                    parsedRegex.Append($"{tokens[i]}{end}");
+                    result.Append($"{currentToken}{end}");
                     continue;
                 }
 
-                var pattern = "<\\w+>";
-                var regex = new Regex(pattern);
-                var match = regex.Match(tokens[i]);
+                var parameterRegex = new Regex("<\\w+>");
+                var parameterMatch = parameterRegex.Match(currentToken);
 
-                if (!match.Success)
+                if (!parameterMatch.Success)
                 {
-                    continue;
+                    throw new InvalidOperationException($"Route parameter in '{currentToken}' is not valid.");
                 }
 
-                var paramName = match.Groups[0].Value.Substring(1, match.Groups[0].Length - 2);
-                args.Add(paramName);
-                parsedRegex.Append($"{tokens[i].Substring(1, tokens[i].Length - 2)}{end}");
+                var match = parameterMatch.Value;
+                var parameter = match.Substring(1, match.Length - 2);
+
+                parameters.Add(parameter);
+
+                var currentTokenWithoutCurlyBrackets = currentToken.Substring(1, currentToken.Length - 2);
+
+                result.Append($"{currentTokenWithoutCurlyBrackets}{end}");
             }
         }
-
-        public Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> Routes => this.routes;
     }
 }

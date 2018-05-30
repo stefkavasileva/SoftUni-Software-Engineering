@@ -1,6 +1,5 @@
 ﻿using MyFirstWebServer.Server.Handlers.Contracts;
 using MyFirstWebServer.Server.HTTP.Contracts;
-using MyFirstWebServer.Server.HTTP.Response;
 using MyFirstWebServer.Server.Routing.Contracts;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -11,6 +10,7 @@ namespace MyFirstWebServer.Server.Handlers
     {
         private readonly IServerRouteConfig serverRouteConfig;
 
+
         public HttpHandler(IServerRouteConfig serverRouteConfig)
         {
             this.serverRouteConfig = serverRouteConfig;
@@ -18,23 +18,33 @@ namespace MyFirstWebServer.Server.Handlers
 
         public IHttpResponse Handle(IHttpContext httpContext)
         {
-            foreach (KeyValuePair<string,IRoutingContext> kvp in this.serverRouteConfig.Routes[httpContext.Request.RequestMethod])
+
+            var requestMethod = httpContext.Request.Method;
+            var requestPath = httpContext.Request.Path;
+            var registeredRoutes = this.serverRouteConfig.Routes[requestMethod];
+
+            foreach (var registeredRoute in registeredRoutes)
             {
-                var pattern = kvp.Key;
-                var regex = new Regex(pattern);
-                Match match = regex.Match(httpContext.Request.Path);
+                var routePattern = registeredRoute.Key;
+                var routingContext = registeredRoute.Value;
+
+                var routeRegex = new Regex(routePattern);
+                var match = routeRegex.Match(requestPath);
 
                 if (!match.Success)
                 {
                     continue;
                 }
 
-                foreach (var parameter in kvp.Value.Parameters)
+                var parameters = routingContext.Parameters;
+
+                foreach (var parameter in parameters)
                 {
-                    httpContext.Request.AddUrlParameters(parameter, match.Groups[parameter].Value);
+                    var parameterValue = match.Groups[parameter].Value;
+                    httpContext.Request.AddUrlParameter(parameter, parameterValue);
                 }
 
-               return kvp.Value.RequestHandler.Handle(httpContext);
+                return routingContext.RequestHandler.Handle(httpContext);
             }
 
             return new NotFoundResponse();

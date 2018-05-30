@@ -7,6 +7,7 @@ namespace MyFirstWebServer.Server.Handlers
     public abstract class RequestHandler : IRequestHandler
     {
         private readonly Func<IHttpRequest, IHttpResponse> func;
+
         public RequestHandler(Func<IHttpRequest, IHttpResponse> func)
         {
             this.func = func;

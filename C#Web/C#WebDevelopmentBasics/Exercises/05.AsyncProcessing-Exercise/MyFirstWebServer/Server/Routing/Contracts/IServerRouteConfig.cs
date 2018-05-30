@@ -5,6 +5,6 @@ namespace MyFirstWebServer.Server.Routing.Contracts
 {
     public interface IServerRouteConfig
     {
-        Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> Routes { get; }
+        IDictionary<HttpRequestMethod, IDictionary<string, IRoutingContext>> Routes { get; }
     }
 }

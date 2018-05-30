@@ -1,4 +1,6 @@
-﻿namespace MyFirstWebServer.Server.HTTP.Contracts
+﻿using System.Collections.Generic;
+
+namespace MyFirstWebServer.Server.HTTP.Contracts
 {
     public interface IHttpHeaderCollection
     {
@@ -6,6 +8,6 @@
 
         bool ContainsKey(string key);
 
-        HttpHeader GetHeader(string key);
+        ICollection<HttpHeader> GetHeader(string key);
     }
 }

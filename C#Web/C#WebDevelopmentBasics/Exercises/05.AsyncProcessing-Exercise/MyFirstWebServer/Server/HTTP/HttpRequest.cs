@@ -1,146 +1,161 @@
-﻿using System;
-using System.Collections.Generic;
-using MyFirstWebServer.Server.Enums;
-using MyFirstWebServer.Server.HTTP.Contracts;
+﻿using MyFirstWebServer.Server.Enums;
 using MyFirstWebServer.Server.Exeptions;
+using MyFirstWebServer.Server.HTTP;
+using MyFirstWebServer.Server.HTTP.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 
-namespace MyFirstWebServer.Server.HTTP
+namespace HTTPServer.Server.Http
 {
     public class HttpRequest : IHttpRequest
     {
-        public HttpRequest(string requestString)
+        private readonly string requestText;
+
+        public HttpRequest(string requestText)
         {
-            this.HttpHeaderCollection = new HttpHeaderCollection();
-            this.UrlParameters = new Dictionary<string, string>();
-            this.QueryParameters = new Dictionary<string, string>();
+            this.requestText = requestText;
+
             this.FormData = new Dictionary<string, string>();
-
-            this.ParseRequest(requestString);
+            this.QueryParameters = new Dictionary<string, string>();
+            this.UrlParameters = new Dictionary<string, string>();
+            this.Headers = new HttpHeaderCollection();
+            this.ParseRequest(requestText);
         }
 
-        public HttpRequest()
-        {
-        }
+        public IDictionary<string, string> FormData { get; private set; }
 
-        public Dictionary<string, string> FormData { get; }
-
-        public HttpHeaderCollection HttpHeaderCollection { get; }
+        public IHttpHeaderCollection Headers { get; private set; }
 
         public string Path { get; private set; }
 
-        public Dictionary<string, string> QueryParameters { get; }
+        public IDictionary<string, string> QueryParameters { get; private set; }
 
-        public HttpRequestMethod RequestMethod { get; private set; }
+        public HttpRequestMethod Method { get; private set; }
 
         public string Url { get; private set; }
 
-        public Dictionary<string, string> UrlParameters { get; }
+        public IDictionary<string, string> UrlParameters { get; private set; }
 
-        public void AddUrlParameters(string key, string value)
+        public void AddUrlParameter(string key, string value)
         {
-            if (!this.UrlParameters.ContainsKey(key))
-            {
-                this.UrlParameters.Add(key, value);
-                return;
-            }
-
             this.UrlParameters[key] = value;
         }
 
-        private void ParseRequest(string requestString)
+        private void ParseRequest(string requestText)
         {
-            var requestLines = requestString.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            var requestLines = requestText.Split(Environment.NewLine);
 
-            var requestLine = requestLines[0].Trim().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var requestLine = requestLines.First().Split(
+                new[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries);
 
             if (requestLine.Length != 3 || requestLine[2].ToLower() != "http/1.1")
             {
-                throw new BadRequestException("Invalid request line.");
+                throw new BadRequestException("Invalid request");
             }
 
-            this.RequestMethod = this.ParseRequestMethod(requestLine[0].ToUpper());
+            this.Method = this.ParseMethod(requestLine.First());
             this.Url = requestLine[1];
-            this.Path = this.Url.Split(new char[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
-            this.ParseHeader(requestLines);
-            this.ParseParameters();
+            this.Path = this.ParsePath(this.Url);
 
-            if (this.RequestMethod == HttpRequestMethod.POST)
+            this.ParseHeaders(requestLines);
+            this.ParseParameters();
+            this.ParseFormData(requestLines.Last());
+        }
+
+        private HttpRequestMethod ParseMethod(string method)
+        {
+            HttpRequestMethod parsedMethod;
+            if (!Enum.TryParse(method, true, out parsedMethod))
             {
-                this.ParseQuery(requestLines[requestLines.Length - 1], this.FormData);
+               throw new  BadRequestException("Invalid request");
             }
 
+            return parsedMethod;
+        }
 
+        private string ParsePath(string url)
+            => url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
+
+        private void ParseHeaders(string[] requestLines)
+        {
+            var emptyLineAfterHeadersIndex = Array.IndexOf(requestLines, string.Empty);
+
+            for (int i = 1; i < emptyLineAfterHeadersIndex; i++)
+            {
+                var currentLine = requestLines[i];
+                var headerParts = currentLine.Split(new[] { ": " }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (headerParts.Length != 2)
+                {
+                   throw new  BadRequestException("Invalid request");
+                }
+
+                var headerKey = headerParts[0];
+                var headerValue = headerParts[1].Trim();
+
+                var header = new HttpHeader(headerKey, headerValue);
+
+                this.Headers.Add(header);
+            }
+
+            if (!this.Headers.ContainsKey("Host"))
+            {
+                throw new BadRequestException("Invalid reques");
+            }
         }
 
         private void ParseParameters()
         {
-            if (!this.Url.Contains("?"))
+            if (!this.Url.Contains('?'))
             {
                 return;
             }
 
-            var query = this.Url.Split("?")[1];
-            this.ParseQuery(query, this.QueryParameters);
+            var query = this.Url
+                .Split(new[] { '?' }, StringSplitOptions.RemoveEmptyEntries)
+                .Last();
+
+            this.ParseQuery(query, this.UrlParameters);
         }
 
-        private void ParseQuery(string query, Dictionary<string, string> queryParameters)
+        private void ParseFormData(string formDataLine)
         {
-            if (!query.Contains("="))
+            if (this.Method == HttpRequestMethod.GET)
             {
                 return;
             }
 
-            var queryPairs = query.Split("%");
+            this.ParseQuery(formDataLine, this.FormData);
+        }
+
+        private void ParseQuery(string query, IDictionary<string, string> dict)
+        {
+            if (!query.Contains('='))
+            {
+                return;
+            }
+
+            var queryPairs = query.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+
             foreach (var queryPair in queryPairs)
             {
-                var queryArgs = queryPair.Split("=");
-                if (queryArgs.Length != 2)
+                var queryKvp = queryPair.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (queryKvp.Length != 2)
                 {
-                    continue;
+                    return;
                 }
 
-                var key = queryArgs[0];
-                var value = queryArgs[1];
+                var queryKey = WebUtility.UrlDecode(queryKvp[0]);
+                var queryValue = WebUtility.UrlDecode(queryKvp[1]);
 
-                queryParameters.Add(WebUtility.UrlDecode(key), WebUtility.UrlDecode(value));
+                dict.Add(queryKey, queryValue);
             }
         }
-
-        private void ParseHeader(string[] requestLines)
-        {
-            var endIndex = Array.IndexOf(requestLines, string.Empty);
-
-            for (int i = 1; i < endIndex; i++)
-            {
-                var headerArgs = requestLines[i].Split(new[] { ": " }, StringSplitOptions.None);
-                if (headerArgs.Length != 2 || string.IsNullOrWhiteSpace(headerArgs[0]) || string.IsNullOrWhiteSpace(headerArgs[1]))
-                {
-                    throw new BadRequestException("Header must not be a empty string");
-                }
-
-                this.HttpHeaderCollection.Add(new HttpHeader(headerArgs[0], headerArgs[1]));
-            }
-
-            if (!this.HttpHeaderCollection.ContainsKey("Host"))
-            {
-                throw new BadRequestException("Invalid request.");
-            }
-        }
-
-        private HttpRequestMethod ParseRequestMethod(string requestName)
-        {
-            HttpRequestMethod requestMethod;
-            try
-            {
-                requestMethod = (HttpRequestMethod)Enum.Parse(typeof(HttpRequestMethod), requestName);
-                return requestMethod;
-
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("Invalid method type.");
-            }
-        }
+      
+        public override string ToString() => this.requestText;
     }
 }

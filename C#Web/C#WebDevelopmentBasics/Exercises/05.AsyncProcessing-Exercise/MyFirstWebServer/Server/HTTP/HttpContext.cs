@@ -1,4 +1,5 @@
-﻿using MyFirstWebServer.Server.HTTP.Contracts;
+﻿using HTTPServer.Server.Http;
+using MyFirstWebServer.Server.HTTP.Contracts;
 
 namespace MyFirstWebServer.Server.HTTP
 {
