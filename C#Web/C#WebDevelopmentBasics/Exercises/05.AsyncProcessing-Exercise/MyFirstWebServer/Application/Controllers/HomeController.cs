@@ -11,5 +11,10 @@ namespace MyFirstWebServer.Application.Controllers
         {
             return new ViewResponse(HttpStatusCode.OK, new HomeIndexView());
         }
+
+        public IHttpResponse About()
+        {
+            return new ViewResponse(HttpStatusCode.OK, new AboutView());
+        }
     }
 }

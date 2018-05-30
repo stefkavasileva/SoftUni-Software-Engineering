@@ -24,6 +24,10 @@ namespace MyFirstWebServer.Application
                 "/user/{(?<name>[a-z]+)}",
                 new GetHandler(httpRerequest => new UserControllers()
                 .Details(httpRerequest.UrlParameters["name"])));
+
+            appRouteConfig.AddRoute(
+              "/about",
+              new GetHandler(httpRerequest => new HomeController().About()));
         }
     }
 }

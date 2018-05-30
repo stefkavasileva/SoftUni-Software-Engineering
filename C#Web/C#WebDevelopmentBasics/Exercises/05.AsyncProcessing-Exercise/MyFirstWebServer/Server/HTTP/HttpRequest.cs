@@ -141,11 +141,11 @@ namespace HTTPServer.Server.Http
             var queryPairs = query.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var queryPair in queryPairs)
-            {
+            {   
                 var queryKvp = queryPair.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (queryKvp.Length != 2)
-                {
+                {                    
                     return;
                 }
 

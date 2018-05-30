@@ -1,6 +1,5 @@
 ﻿using MyFirstWebServer.Server.HTTP.Contracts;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -45,11 +44,6 @@ namespace MyFirstWebServer.Server.HTTP
             return this.headers[key];
         }
 
-        public IEnumerator<ICollection<HttpHeader>> GetEnumerator()
-              => this.headers.Values.GetEnumerator();
-
-         //IEnumerator IEnumerable.GetEnumerator()
-         //   => this.headers.Values.GetEnumerator();
 
         public override string ToString()
         {
