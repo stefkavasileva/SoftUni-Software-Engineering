@@ -11,5 +11,10 @@ namespace HTTPServer.Application.Controllers
         {
             return new ViewResponse(HttpStatusCode.Ok, new HomeIndexView());
         }
+
+        public IHttpResponse About()
+        {
+            return new ViewResponse(HttpStatusCode.Ok, new AboutView());
+        }
     }
 }
