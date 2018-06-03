@@ -2,6 +2,9 @@
 using HTTPServer.Server.Enums;
 using HTTPServer.Server.Http.Contracts;
 using HTTPServer.Server.Http.Response;
+using HTTPServer.Server.Models;
+using System.IO;
+using System.Linq;
 
 namespace HTTPServer.Application.Controllers
 {
@@ -16,8 +19,26 @@ namespace HTTPServer.Application.Controllers
         //POST => add cake
         public IHttpResponse AddCakePost(string name, decimal price)
         {
-           
-            return new RedirectResponse($"/add/{name}{price}");
+            CakeList.Add(new Cake(name, price));
+
+            File.WriteAllText("../../../Application/Resources/database.csv", CakeList.GetCakes());
+
+            return new RedirectResponse($"/add");
         }
+
+        //GET => search cake
+        public IHttpResponse SearchCakeGet(IHttpRequest req)
+        {
+            string cakeName = string.Empty;
+
+            if (req.UrlParameters.ContainsKey("search"))
+            {
+                cakeName = req.UrlParameters["search"];
+            }
+
+            return new ViewResponse(HttpStatusCode.Ok, new SearchView(cakeName));
+        }
+
+        
     }
 }

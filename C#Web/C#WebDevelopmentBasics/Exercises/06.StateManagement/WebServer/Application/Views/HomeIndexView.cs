@@ -9,6 +9,7 @@ namespace HTTPServer.Application.Views
         public string View()
         {
             var html = string.Join(Environment.NewLine, File.ReadAllLines(@"../../../Application/Resources/index.html"));
+
             return html;
         }
     }

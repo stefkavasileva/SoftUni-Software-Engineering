@@ -4,14 +4,14 @@ namespace HTTPServer.Server.Models
 {
     public class Cake
     {
-        public Cake(string name, double price)
+        public Cake(string name, decimal price)
         {
             this.Name = name;
             this.Price = price;
         }
 
         public string Name { get; private set; }
-        public double Price { get; private set; }
+        public decimal Price { get; private set; }
 
 
         public override string ToString()
