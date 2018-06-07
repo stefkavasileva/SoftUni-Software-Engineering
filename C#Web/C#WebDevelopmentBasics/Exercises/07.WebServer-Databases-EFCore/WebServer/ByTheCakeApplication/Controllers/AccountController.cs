@@ -9,6 +9,14 @@
 
     public class AccountController : Controller
     {
+        public IHttpResponse Register()
+        {
+            this.ViewData["showError"] = "none";
+            this.ViewData["authDisplay"] = "none";
+
+            return this.FileViewResponse(@"account\register");
+        }
+
         public IHttpResponse Login()
         {
             this.ViewData["showError"] = "none";

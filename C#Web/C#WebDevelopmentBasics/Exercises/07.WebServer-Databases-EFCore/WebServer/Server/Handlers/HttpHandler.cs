@@ -7,6 +7,7 @@
     using Routing.Contracts;
     using Server.Http;
     using System;
+    using System.Linq;
     using System.Text.RegularExpressions;
 
     public class HttpHandler : IRequestHandler
@@ -22,16 +23,20 @@
 
         public IHttpResponse Handle(IHttpContext context)
         {
+            const string LoginRoute = "/login";
+            const string RegisterRoute = "/register";
+
             try
             {
+                var anonymouseAccessibleRoutes = new[] { LoginRoute, RegisterRoute };
                 // Check if user is authenticated
-                var loginPath = "/login";
+                
 
-                if (context.Request.Path != loginPath &&
-                    (context.Request.Session == null || 
+                if (!anonymouseAccessibleRoutes.Contains(context.Request.Path) &&
+                   (context.Request.Session == null || 
                     !context.Request.Session.Contains(SessionStore.CurrentUserKey)))
                 {
-                    return new RedirectResponse(loginPath);
+                    return new RedirectResponse(LoginRoute);
                 }
 
                 var requestMethod = context.Request.Method;

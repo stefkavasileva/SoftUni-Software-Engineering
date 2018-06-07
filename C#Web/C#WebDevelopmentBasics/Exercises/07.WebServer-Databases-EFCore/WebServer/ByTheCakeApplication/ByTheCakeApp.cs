@@ -1,6 +1,8 @@
 ﻿namespace HTTPServer.ByTheCakeApplication
 {
     using Controllers;
+    using HTTPServer.ByTheCakeApplication.Data;
+    using Microsoft.EntityFrameworkCore;
     using Server.Contracts;
     using Server.Routing.Contracts;
 
@@ -8,6 +10,9 @@
     {
         public void Configure(IAppRouteConfig appRouteConfig)
         {
+            var context = new ByTheCakeContext();
+            context.Database.Migrate();
+
             appRouteConfig
                 .Get("/", req => new HomeController().Index());
 
@@ -36,6 +41,9 @@
                 .Post(
                     "/login",
                     req => new AccountController().Login(req));
+
+            appRouteConfig
+                .Get("/register", req => new HomeController().Register());
 
             appRouteConfig
                 .Post(
