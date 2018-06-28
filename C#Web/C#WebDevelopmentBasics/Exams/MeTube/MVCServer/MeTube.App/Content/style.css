@@ -1,0 +1,17 @@
+.bg-color-dark {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.footer {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.nav-item>a:hover, .navbar-brand:hover {
+	color: #FFFFFF;
+}
+
+iframe {
+	overflow:hidden;
+}

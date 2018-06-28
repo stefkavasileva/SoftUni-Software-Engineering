@@ -1,0 +1,51 @@
+﻿<div class="text-center mb-3">
+    <h1>Register</h1>
+</div>
+<hr class="my-2">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <div class="form-holder text-center text-danger">{{{error}}}</div>
+            <form class="form-inline" action="/users/register" method="POST">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" id="Username" name="Username" placeholder="" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="password">Password</label>
+                        <div class="controls">
+                            <input type="password" id="Password" name="Password" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="confirmPassword">Confirm Password</label>
+                        <div class="controls">
+                            <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="email">Email</label>
+                        <div class="controls">
+                            <input type="text" id="Email" name="Email" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-info">Register</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

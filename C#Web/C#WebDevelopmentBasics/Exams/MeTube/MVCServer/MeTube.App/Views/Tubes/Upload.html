@@ -1,0 +1,52 @@
+﻿<div class="text-center mb-3">
+    <h1>Upload</h1>
+</div>
+<hr class="my-2">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <div class="form-holder text-center text-danger">{{{error}}}</div>
+            <form class="form-inline" action="/tubes/upload" method="POST">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="title">Title</label>
+                        <div class="controls">
+                            <input type="text" id="Title" name="Title" placeholder="" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="author">Author</label>
+                        <div class="controls">
+                            <input type="text" id="Author" name="Author" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="youTubeLink">YouTube Link</label>
+                        <div class="controls">
+                            <input type="text" id="YouTubeLink" name="YouTubeLink" placeholder=""
+                                   class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label h3 mb-2" for="description">Description</label>
+                        <div class="controls">
+                            <textarea type="text" id="Description" name="Description" placeholder=""
+                                   class="input-xlarge"></textarea>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-info">Upload</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
