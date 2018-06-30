@@ -1,0 +1,16 @@
+﻿<div class="form-holder text-center text-danger">{{{error}}}</div>
+<form action="/flight/search" method="post" class="catalog-form">
+    <label>Destination:</label>
+    <input type="text" placeholder="Destination">
+    <label>Origin:</label>
+    <input type="text" placeholder="Origin">
+    <label>Departure:</label>
+    <input type="text" placeholder="Departure">
+    <input type="submit" class="search" value="Search">
+
+    <a href="/flight/add" class="add-flight">Add Flight +</a>
+</form>
+
+<section class="added-flights">
+    {{{flights}}}
+</section>

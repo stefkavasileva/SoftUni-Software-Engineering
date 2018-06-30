@@ -1,0 +1,15 @@
+﻿<h2>Add new flight</h2>
+<form action="/flight/add" method="post">
+    <div class="form-holder text-center text-danger">{{{error}}}</div>
+    <label>Destination:</label>
+    <input type="text" id="Destination" name="Destination" placeholder="Destination">
+    <label>Origin:</label>
+    <input type="text"  id="Origin" name="Origin" placeholder="Origin">
+    <label>Date:</label>
+    <input type="date" id="Date" name="Date" >
+    <label>Time:</label>
+    <input type="time" id="Time" name="Time">
+    <label>Image:</label>
+    <input type="text" id="ImageUrl" name="ImageUrl">
+    <input type="submit" class="create" value="Create">
+</form>

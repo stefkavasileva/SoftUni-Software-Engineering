@@ -1,0 +1,15 @@
+﻿<h2>Edit Flight</h2>
+<form action="/flight/edit?id={model.Id}" method="post">
+    <input type="hidden" id="Id" name="Id" value="{{{Id}}}">                
+    <label>Destination:</label>
+    <input type = "text" id="Destination" name="Destination" value="{{{Destination}}}">
+    <label>Origin:</label>
+    <input type = "text" id="Origin" name="Origin" value="{{{Origin}}}">
+    <label>Date:</label>
+    <input type = "date" id="Date" name="Date" value="{{{Date}}}">
+    <label>Time:</label>
+    <input type = "time" id="Time" name="Time" value= "{{{Time}}}">
+    <label>Image:</label>
+    <input type="text" id="ImageUrl" name="ImageUrl" value="{{{ImageUrl}}}">
+    <input type = "submit" class="create" value="Edit">
+</form>
