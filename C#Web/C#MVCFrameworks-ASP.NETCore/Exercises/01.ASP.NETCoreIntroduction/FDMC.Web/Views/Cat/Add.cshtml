@@ -1,0 +1,23 @@
+﻿@model CatAddBindingModel
+
+<h1>Add Cat</h1>
+
+<form asp-controller="Cat" asp-action="Add" method="post" class="form-control">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" type="text" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" type="number" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Breed"></label>
+        <input asp-for="Breed" type="text" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl" type="text" />
+    </div>
+    <input type="submit" value="Add Cat" />
+</form>

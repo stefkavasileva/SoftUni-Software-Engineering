@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDMC.Web", "FDMC.Web\FDMC.Web.csproj", "{A6219E95-E9E0-487D-B470-FD8CED760216}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDMC.Data", "FDMC.Data\FDMC.Data.csproj", "{EB50EB5F-55F4-4F03-A19F-1333C3760F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDMC.Models", "FDMC.Models\FDMC.Models.csproj", "{E3F2DCE7-A860-4C3B-8E64-42482A0C9358}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6219E95-E9E0-487D-B470-FD8CED760216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6219E95-E9E0-487D-B470-FD8CED760216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6219E95-E9E0-487D-B470-FD8CED760216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6219E95-E9E0-487D-B470-FD8CED760216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB50EB5F-55F4-4F03-A19F-1333C3760F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB50EB5F-55F4-4F03-A19F-1333C3760F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB50EB5F-55F4-4F03-A19F-1333C3760F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB50EB5F-55F4-4F03-A19F-1333C3760F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F2DCE7-A860-4C3B-8E64-42482A0C9358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F2DCE7-A860-4C3B-8E64-42482A0C9358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F2DCE7-A860-4C3B-8E64-42482A0C9358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F2DCE7-A860-4C3B-8E64-42482A0C9358}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB9DF01F-52E9-414E-812E-EDC7F86B1E4B}
+	EndGlobalSection
+EndGlobal

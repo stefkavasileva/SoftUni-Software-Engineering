@@ -1,0 +1,11 @@
+﻿@model ICollection<CatsViewModel>
+<h1>Fluffy Duffy Munchkin Cats</h1>
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-controller="Cat" asp-route-id="@cat.Id">@cat.Name</a>
+        </li>
+    }
+</ul>
+<button><a asp-action="Add" asp-controller="Cat">Add Cat</a></button>
