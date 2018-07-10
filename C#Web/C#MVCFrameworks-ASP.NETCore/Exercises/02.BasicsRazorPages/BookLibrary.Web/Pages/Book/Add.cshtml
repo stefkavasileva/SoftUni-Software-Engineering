@@ -4,21 +4,24 @@
     ViewData["Title"] = "Add";
 }
 
-<h2>Add</h2>
 
-<form method="post" asp-page-handler="AddBook">
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="Author"></label>
-        <input asp-for="Author"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="ImageUrl"> Image Url</label>
-        <input asp-for="ImageUrl"/>
-    </div>
-    <button type="submit" class="btn btn-primary">Add Book</button>
-    <a asp-page="/Index" class="btn btn-default">Cancel</a>
-</form>
+<div class="container">
+    
+    <h2>Add</h2>
+    <form method="post" asp-page-handler="AddBook">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="ImageUrl"> Image Url</label>
+            <input asp-for="ImageUrl" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Book</button>
+        <a asp-page="/Index" class="btn btn-success">Cancel</a>
+    </form>
+</div>

@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.EntityFrameworkCore
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -18,7 +19,7 @@
             @foreach (var book in Model.BookViewModels)
             {
                 <tr>
-                    <td><a asp-page="Book/Add" asp-route-id="@book.BookId">@book.Title</a></td>
+                    <td><a asp-page="Book/Details" asp-route-id="@book.BookId">@book.Title</a></td>
                     <td><a asp-page="Author/Details" asp-route-id="@book.AuthorId">@book.Author</a></td>
                     <td>@book.Status</td>
                 </tr>

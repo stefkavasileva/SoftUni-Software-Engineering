@@ -1,0 +1,17 @@
+﻿@page
+@model Book.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+<img style="float:left" src="@Model.Book.ImageUrl" />
+
+<div class="container">
+    <div class="row">
+        <div class="span4">
+            <div class="content-heading"><h3>@Model.Book.Title</h3></div>
+            <div class="content-heading"><h4>@Model.Book.Author</h4></div>
+            <div class="content-heading">@Model.Book.Description</div>
+            <div class="content-heading"><strong>Status: </strong><strong style="color:green">@Model.Book.Status</strong></div>
+        </div>
+    </div>
+</div>

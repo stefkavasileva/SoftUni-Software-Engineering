@@ -8,7 +8,6 @@ namespace BookLibrary.Web.Pages.Book
 {
     public class AddModel : PageModel
     {
-
         private BookLibraryContext _context;
 
         public AddModel(BookLibraryContext context)
@@ -16,10 +15,13 @@ namespace BookLibrary.Web.Pages.Book
             this._context = context;
         }
 
+        [BindProperty]
         public string Title { get; set; }
 
+        [BindProperty]
         public string Author { get; set; }
 
+        [BindProperty]
         public string ImageUrl { get; set; }
 
         public IActionResult OnPostAddBook()
@@ -32,7 +34,9 @@ namespace BookLibrary.Web.Pages.Book
                 var author = _context.Authors.FirstOrDefault(a => a.Name == Author);
                 if (author is null)
                 {
-                    author = new Author {Name = Author};
+                    author = new BookLibrary.Models.Author {Name = Author};
+                    this._context.Authors.Add(author);
+                    this._context.SaveChanges();
                 }
 
                 book.AuthorId = author.Id;

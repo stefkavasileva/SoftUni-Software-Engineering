@@ -12,9 +12,6 @@ namespace BookLibrary.Models
         [MaxLength(50)]
         public string Title { get; set; }
 
-        [Required]
-        [MinLength(30)]
-        [MaxLength(200)]
         public string Description { get; set; }
 
         [Required]
