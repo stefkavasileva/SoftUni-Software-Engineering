@@ -1,0 +1,15 @@
+﻿@page
+@model SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search result: "@Model.SearchTerm"</h2>
+
+<ul>
+    @foreach (var searchResult in Model.SearchResults)
+    {
+        <li><a asp-page=@($"/{searchResult.Type}/Details") asp-route-id="@searchResult.Id">@searchResult.Name</a>(@searchResult.Type.ToLower())</li>
+    }
+</ul>
+

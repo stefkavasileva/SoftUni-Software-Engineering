@@ -22,6 +22,9 @@ namespace BookLibrary.Web.Pages.Book
         public string Author { get; set; }
 
         [BindProperty]
+        public string Description { get; set; }
+
+        [BindProperty]
         public string ImageUrl { get; set; }
 
         public IActionResult OnPostAddBook()
@@ -41,6 +44,7 @@ namespace BookLibrary.Web.Pages.Book
 
                 book.AuthorId = author.Id;
                 book.ImageUrl = ImageUrl;
+                book.Description = Description;
 
                 this._context.Books.Add(book);
                 this._context.SaveChanges();
