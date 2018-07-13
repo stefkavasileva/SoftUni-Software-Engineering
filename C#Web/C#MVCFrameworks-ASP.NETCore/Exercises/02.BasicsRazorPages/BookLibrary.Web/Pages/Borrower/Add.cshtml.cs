@@ -30,7 +30,10 @@ namespace BookLibrary.Web.Pages.Borrower
                 };
 
                 this._context.Borrowers.Add(borrower);
+                this._context.SaveChanges();
+                return RedirectToPage("/Index");
             }
+
 
             return this.Page();
         }
