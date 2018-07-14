@@ -1,17 +1,24 @@
 ﻿@page "{id}"
-@model Book.DetailsModel
+@model DetailsModel
 @{
     ViewData["Title"] = "Details";
 }
-<img style="float:left" src="@Model.Book.ImageUrl" />
 
 <div class="container">
     <div class="row">
-        <div class="span4">
-            <div class="content-heading"><h3>@Model.Book.Title</h3></div>
-            <div class="content-heading"><h4>@Model.Book.Author</h4></div>
-            <div class="content-heading">@Model.Book.Description</div>
-            <div class="content-heading"><strong>Status: </strong><strong style="color:green">@Model.Book.Status</strong></div>
+        <div class=" pull-left"><img style="float: left" src="@Model.Book.ImageUrl" /></div>
+        <div class="col-sm-8">
+            <h3>@Model.Book.Title</h3>
+            <h4>@Model.Book.Author</h4>
+            @Model.Book.Description
+            <div>
+                <strong>Status: </strong><strong style="color: green">@Model.Book.Status</strong>
+            </div>
+            @if (Model.Book.Status.ToLower().Equals("at home"))
+            {
+                <a asp-page="/Book/Borrow" class="btn btn-success">Borrow</a>
+            }
         </div>
+
     </div>
 </div>

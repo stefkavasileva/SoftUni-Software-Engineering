@@ -1,19 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using BookLibrary.Data;
 using BookLibrary.Web.Models;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookLibrary.Web.Pages.Book
 {
-    public class DetailsModel : PageModel
+    public class DetailsModel : BasePageModel
     {
-        private BookLibraryContext _context;
-
-        public DetailsModel(BookLibraryContext context)
+        public DetailsModel(BookLibraryContext context) 
+            : base(context)
         {
-            this._context = context;
         }
 
         public BookDetailsViewModel Book { get; set; }
@@ -28,6 +24,7 @@ namespace BookLibrary.Web.Pages.Book
                 Title = bookDb.Title,
                 Description = bookDb.Description,
                 ImageUrl = bookDb.ImageUrl,
+                Id = bookDb.Id
             };
         }
     }

@@ -16,7 +16,6 @@ namespace BookLibrary.Models
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public string Address { get; set; }
 
         public ICollection<Book> BorrowedBooks { get; set; }

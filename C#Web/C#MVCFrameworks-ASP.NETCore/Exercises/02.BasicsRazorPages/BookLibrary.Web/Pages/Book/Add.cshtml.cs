@@ -1,18 +1,15 @@
 ﻿using System.Linq;
 using BookLibrary.Data;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using    BookLibrary.Models;
+using BookLibrary.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookLibrary.Web.Pages.Book
 {
-    public class AddModel : PageModel
+    public class AddModel : BasePageModel
     {
-        private BookLibraryContext _context;
-
-        public AddModel(BookLibraryContext context)
+        public AddModel(BookLibraryContext context) 
+            : base(context)
         {
-            this._context = context;
         }
 
         [BindProperty]

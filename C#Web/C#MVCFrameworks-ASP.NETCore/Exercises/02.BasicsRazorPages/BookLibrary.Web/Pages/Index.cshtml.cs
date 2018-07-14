@@ -1,19 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using BookLibrary.Data;
 using BookLibrary.Web.Models;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookLibrary.Web.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel : BasePageModel
     {
-        private BookLibraryContext _context;
-
         public IndexModel(BookLibraryContext context)
+            : base(context)
         {
-            this._context = context;
         }
 
         public IQueryable<BookViewModel> BookViewModels { get; set; }

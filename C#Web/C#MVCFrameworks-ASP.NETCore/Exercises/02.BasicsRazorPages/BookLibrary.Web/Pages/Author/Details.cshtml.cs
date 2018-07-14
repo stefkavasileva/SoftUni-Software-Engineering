@@ -1,18 +1,15 @@
 ﻿using System.Linq;
 using BookLibrary.Data;
 using BookLibrary.Web.Models;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookLibrary.Web.Pages.Author
 {
-    public class DetailsModel : PageModel
+    public class DetailsModel : BasePageModel
     {
-        private BookLibraryContext _context;
-
-        public DetailsModel(BookLibraryContext context)
+        public DetailsModel(BookLibraryContext context) 
+            : base(context)
         {
-            this._context = context;
         }
 
         public AuthorDetailsViewModel BooksByAuthor { get; set; }
