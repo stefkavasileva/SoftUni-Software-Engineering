@@ -1,0 +1,27 @@
+﻿@page 
+@model BookLibrary.Web.Pages.Book.StatusModel
+@{
+    ViewData["Title"] = "Status";
+}
+
+<div class="container container-fluid">
+    <h1>Borrowing history of the book "@Model.BookTitle"</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Borrowed by:</th>
+            <th>Period</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var book in Model.StatusViewModels)
+        {
+            <tr>
+                <td>@book.BorrowerName</td>
+                <td>@book.Period</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookLibrary.Models
 {
@@ -20,9 +21,9 @@ namespace BookLibrary.Models
         public Author Author { get; set; }
 
         public string ImageUrl { get; set; }
-    
-        public int? BorrowerId { get; set; }
+            
+        public bool IsBorrowed { get; set; }
 
-        public Borrower Borrower { get; set; }
+        public ICollection<BookBorrowers> Borrowerses { get; set; } 
     }
 }

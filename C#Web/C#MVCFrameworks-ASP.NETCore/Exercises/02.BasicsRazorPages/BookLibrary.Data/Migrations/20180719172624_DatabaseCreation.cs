@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookLibrary.Data.Migrations
 {
-    public partial class DataBaseCreation : Migration
+    public partial class DatabaseCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +28,7 @@ namespace BookLibrary.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
-                    Address = table.Column<string>(nullable: false)
+                    Address = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -41,10 +42,10 @@ namespace BookLibrary.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(maxLength: 50, nullable: false),
-                    Description = table.Column<string>(maxLength: 200, nullable: false),
+                    Description = table.Column<string>(nullable: true),
                     AuthorId = table.Column<int>(nullable: false),
                     ImageUrl = table.Column<string>(nullable: true),
-                    BorrowerId = table.Column<int>(nullable: true)
+                    IsBorrowed = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,8 +56,29 @@ namespace BookLibrary.Data.Migrations
                         principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BookBorrowerses",
+                columns: table => new
+                {
+                    BookId = table.Column<int>(nullable: false),
+                    BorrowerId = table.Column<int>(nullable: false),
+                    ReturnDate = table.Column<DateTime>(nullable: false),
+                    BorrowDate = table.Column<DateTime>(nullable: false),
+                    IsBookReturned = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookBorrowerses", x => new { x.BookId, x.BorrowerId });
                     table.ForeignKey(
-                        name: "FK_Books_Borrowers_BorrowerId",
+                        name: "FK_BookBorrowerses_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BookBorrowerses_Borrowers_BorrowerId",
                         column: x => x.BorrowerId,
                         principalTable: "Borrowers",
                         principalColumn: "Id",
@@ -64,26 +86,29 @@ namespace BookLibrary.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_BookBorrowerses_BorrowerId",
+                table: "BookBorrowerses",
+                column: "BorrowerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Books_AuthorId",
                 table: "Books",
                 column: "AuthorId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Books_BorrowerId",
-                table: "Books",
-                column: "BorrowerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "BookBorrowerses");
+
+            migrationBuilder.DropTable(
                 name: "Books");
 
             migrationBuilder.DropTable(
-                name: "Authors");
+                name: "Borrowers");
 
             migrationBuilder.DropTable(
-                name: "Borrowers");
+                name: "Authors");
         }
     }
 }

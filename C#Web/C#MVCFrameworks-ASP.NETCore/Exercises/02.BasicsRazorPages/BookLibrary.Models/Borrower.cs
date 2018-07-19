@@ -5,11 +5,6 @@ namespace BookLibrary.Models
 {
     public class Borrower
     {
-        public Borrower()
-        {
-            this.BorrowedBooks = new HashSet<Book>();
-        }
-
         [Key]
         public int Id { get; set; }
 
@@ -18,6 +13,7 @@ namespace BookLibrary.Models
 
         public string Address { get; set; }
 
-        public ICollection<Book> BorrowedBooks { get; set; }
+        public ICollection<BookBorrowers> BorrowersedBooks { get; set; }
+        
     }
 }

@@ -16,7 +16,7 @@ namespace BookLibrary.Web.Pages.Borrower
         [BindProperty]
         public string Address { get; set; }
 
-        public IActionResult OnGet()
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {

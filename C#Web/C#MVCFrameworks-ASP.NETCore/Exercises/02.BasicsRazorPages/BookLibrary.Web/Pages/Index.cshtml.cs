@@ -20,7 +20,7 @@ namespace BookLibrary.Web.Pages
                 .Select(e => new BookViewModel
                 {
                     Author = e.Author.Name,
-                    Status = e.BorrowerId.HasValue ? "Borrowed" : "At home",
+                    Status = e.IsBorrowed ? "Borrowed" : "At home",
                     Title = e.Title,
                     AuthorId = e.AuthorId,
                     BookId = e.Id

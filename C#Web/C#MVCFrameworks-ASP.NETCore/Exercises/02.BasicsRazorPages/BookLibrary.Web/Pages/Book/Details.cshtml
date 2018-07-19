@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<div class="container">
+<div class="container container-fluid">
     <div class="row">
         <div class=" pull-left"><img style="float: left" src="@Model.Book.ImageUrl" /></div>
         <div class="col-sm-8">
@@ -18,6 +18,13 @@
             {
                 <a asp-page="/Book/Borrow" class="btn btn-success">Borrow</a>
             }
+            else
+            {
+                <a asp-page-handler="ReturnBook" class="btn btn-warning">Return book</a>
+            }
+
+            <a asp-page="/Book/Status" asp-route-id=@Model.Book.Id class="btn btn-info">Status history</a>
+            <a asp-page="/Index" class="btn btn-default">Go back</a>
         </div>
 
     </div>

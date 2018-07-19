@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BookLibrary.Data;
+using BookLibrary.Models;
 using BookLibrary.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,15 +42,23 @@ namespace BookLibrary.Web.Pages.Book
             }
 
             var book = this._context.Books.Find(id);
-
+        
             if (book == null)
             {
                 return this.Page();
             }
 
-            borrower.BorrowedBooks.Add(book);
+            this._context.BookBorrowerses.Add(new BookBorrowers
+            {
+                BookId = book.Id,
+                BorrowDate = this.BorrowBookViewModel.StartDate,
+                BorrowerId = borrower.Id,
+                ReturnDate = this.BorrowBookViewModel.EndDate
+            });
+
+            book.IsBorrowed = true;
             this._context.SaveChanges();
-            return RedirectToPage("/Book/Details", new {id = id});
-        }
+            return RedirectToPage("/Book/Details", new { id = id });
+        }      
     }
 }

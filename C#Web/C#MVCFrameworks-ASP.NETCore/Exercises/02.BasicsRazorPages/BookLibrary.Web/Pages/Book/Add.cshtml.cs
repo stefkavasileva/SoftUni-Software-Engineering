@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using BookLibrary.Data;
 using BookLibrary.Web.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,7 @@ namespace BookLibrary.Web.Pages.Book
         public string Description { get; set; }
 
         [BindProperty]
+        [Display(Name = "Image URL")]
         public string ImageUrl { get; set; }
 
         public IActionResult OnPostAddBook()

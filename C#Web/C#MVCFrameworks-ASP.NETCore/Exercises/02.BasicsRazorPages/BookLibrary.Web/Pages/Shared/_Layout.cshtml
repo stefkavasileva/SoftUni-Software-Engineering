@@ -31,10 +31,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/Book/Addd">Add Book</a></li>
+                    <li><a asp-page="/Book/Add">Add Book</a></li>
+                    <li><a asp-page="/Borrower/Add">Add Borrower</a></li>
                 </ul>
                 <div class="col-sm-3 col-md-3 pull-right">
-                    <form class="navbar-form" asp-page="Search" asp-route-param ="searchTerm">
+                    <form class="navbar-form" asp-page="Search" asp-route-param="searchTerm">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search book by name..." name="SearchTerm">
                             <div class="input-group-btn">
@@ -48,6 +49,9 @@
     </nav>
 
     @RenderBody()
-    <footer>&copy;2018 - My Library</footer>
+    <div class="container container-fluid">
+        <footer style="position: fixed;bottom: 10px;">&copy;2018 - My Library</footer>
+    </div>
+
 </body>
 </html>

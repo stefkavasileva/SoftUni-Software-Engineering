@@ -42,11 +42,11 @@ namespace BookLibrary.Data.Migrations
 
                     b.Property<int>("AuthorId");
 
-                    b.Property<int?>("BorrowerId");
-
                     b.Property<string>("Description");
 
                     b.Property<string>("ImageUrl");
+
+                    b.Property<bool>("IsBorrowed");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -56,9 +56,26 @@ namespace BookLibrary.Data.Migrations
 
                     b.HasIndex("AuthorId");
 
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.BookBorrowers", b =>
+                {
+                    b.Property<int>("BookId");
+
+                    b.Property<int>("BorrowerId");
+
+                    b.Property<DateTime>("BorrowDate");
+
+                    b.Property<bool>("IsBookReturned");
+
+                    b.Property<DateTime>("ReturnDate");
+
+                    b.HasKey("BookId", "BorrowerId", "BorrowDate");
+
                     b.HasIndex("BorrowerId");
 
-                    b.ToTable("Books");
+                    b.ToTable("BookBorrowerses");
                 });
 
             modelBuilder.Entity("BookLibrary.Models.Borrower", b =>
@@ -83,10 +100,19 @@ namespace BookLibrary.Data.Migrations
                         .WithMany("Books")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.BookBorrowers", b =>
+                {
+                    b.HasOne("BookLibrary.Models.Book", "Book")
+                        .WithMany("Borrowerses")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BookLibrary.Models.Borrower", "Borrower")
-                        .WithMany("BorrowedBooks")
-                        .HasForeignKey("BorrowerId");
+                        .WithMany("BorrowersedBooks")
+                        .HasForeignKey("BorrowerId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

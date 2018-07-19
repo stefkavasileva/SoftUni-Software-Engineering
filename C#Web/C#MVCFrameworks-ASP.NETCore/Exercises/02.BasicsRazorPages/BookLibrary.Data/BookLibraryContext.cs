@@ -11,6 +11,8 @@ namespace BookLibrary.Data
 
         public DbSet<Author> Authors { get; set; }
 
+        public DbSet<BookBorrowers> BookBorrowerses { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -19,6 +21,24 @@ namespace BookLibrary.Data
             }
 
             base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BookBorrowers>()
+                .HasOne(e => e.Book)
+                .WithMany(b => b.Borrowerses)
+                .HasForeignKey(b => b.BookId);
+
+            modelBuilder.Entity<BookBorrowers>()
+                .HasOne(e => e.Borrower)
+                .WithMany(b => b.BorrowersedBooks)
+                .HasForeignKey(b => b.BorrowerId);
+
+            modelBuilder.Entity<BookBorrowers>()
+                .HasKey(e => new {e.BookId, e.BorrowerId, e.BorrowDate});
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

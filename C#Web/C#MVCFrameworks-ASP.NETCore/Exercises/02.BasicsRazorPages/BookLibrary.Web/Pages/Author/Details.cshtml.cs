@@ -7,7 +7,7 @@ namespace BookLibrary.Web.Pages.Author
 {
     public class DetailsModel : BasePageModel
     {
-        public DetailsModel(BookLibraryContext context) 
+        public DetailsModel(BookLibraryContext context)
             : base(context)
         {
         }
@@ -16,7 +16,7 @@ namespace BookLibrary.Web.Pages.Author
 
         public void OnGet(int id)
         {
-            var author = this._context.Authors.Include(a=>a.Books).FirstOrDefault(a=>a.Id == id);
+            var author = this._context.Authors.Include(a => a.Books).FirstOrDefault(a => a.Id == id);
             this.BooksByAuthor = new AuthorDetailsViewModel
             {
                 Name = author.Name,
@@ -24,9 +24,9 @@ namespace BookLibrary.Web.Pages.Author
                 {
                     Title = b.Title,
                     Id = b.Id,
-                    Status = b.BorrowerId.HasValue ? "Borrowed" : "At home",
+                    Status = b.IsBorrowed ? "Borrowed" : "At home",
                 }).ToList()
-            };           
+            };
         }
     }
 }

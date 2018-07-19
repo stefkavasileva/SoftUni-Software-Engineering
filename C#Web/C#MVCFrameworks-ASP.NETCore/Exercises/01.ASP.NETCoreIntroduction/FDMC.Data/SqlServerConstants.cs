@@ -2,6 +2,6 @@
 {
     internal class SqlServerConstants
     {
-        internal const string ConnectionString = "Server=DESKTOP-P3EEUC7\\SQLEXPRESS;Database=FDMCDb;Integrated Security=True;";
+        internal const string ConnectionString = "Server=.;Database=FDMCDb;Integrated Security=True;";
     }
 }

@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<div class="container-fluid ">
+<div class="container container-fluid">
     <h1>My Library</h1>
     <a asp-page="Book/Add" class="btn btn-success">Add Book</a>
     <table class="table table-striped">
@@ -20,7 +20,16 @@
                 <tr>
                     <td><a asp-page="Book/Details" asp-route-id="@book.BookId">@book.Title</a></td>
                     <td><a asp-page="Author/Details" asp-route-id="@book.AuthorId">@book.Author</a></td>
-                    <td>@book.Status</td>
+                    @if (@book.Status.ToLower().Equals("at home"))
+                    {
+                        <td><span class="label label-success">@book.Status</span></td>
+
+                    }
+                    else
+                    {
+                        <td><span class="label label-danger">@book.Status</span></td>
+                    }
+
                 </tr>
             }
         </tbody>
