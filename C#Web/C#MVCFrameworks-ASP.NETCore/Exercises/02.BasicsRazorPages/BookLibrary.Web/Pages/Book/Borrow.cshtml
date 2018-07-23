@@ -5,21 +5,9 @@
 }
 
 <div class="container">
-    <h2>Borrow a book</h2>
-    <form method="post">
-        <div class="form-group">
-            <label asp-for="BorrowBookViewModel.BorrowerName"></label>
-            <input asp-for="BorrowBookViewModel.BorrowerName" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="BorrowBookViewModel.StartDate"></label>
-            <input asp-for="BorrowBookViewModel.StartDate" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="BorrowBookViewModel.EndDate"></label>
-            <input asp-for="BorrowBookViewModel.EndDate" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-success">Borrow</button>
-        <a asp-page="/Index" class="btn btn-default">Cancel</a>
-    </form>
+    <h2>Borrow the book</h2>
+    @Html.EditorFor(m => m.BorrowBookBindingModel)
 </div>
+@section Scriptis{
+    <partial name="_ValidationScriptsPartial" />
+}

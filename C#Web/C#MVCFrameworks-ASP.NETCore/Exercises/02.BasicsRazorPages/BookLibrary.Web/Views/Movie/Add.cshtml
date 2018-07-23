@@ -1,0 +1,15 @@
+﻿@using BookLibrary.Web.Models.BindingModels
+@model AddMovieBindingModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="container container-fluid">
+    <h2>Add</h2>
+
+    @Html.EditorForModel()
+</div>
+@section Scriptis{
+    <partial name="_ValidationScriptsPartial" />
+}
+

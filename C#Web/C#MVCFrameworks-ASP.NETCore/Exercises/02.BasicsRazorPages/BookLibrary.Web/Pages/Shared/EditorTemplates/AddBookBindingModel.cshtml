@@ -1,0 +1,26 @@
+﻿@using BookLibrary.Web.Models.BindingModels
+@model AddBookBindingModel
+<form method="post" asp-page-handler="AddBook">
+    <div class="form-group">
+        <label asp-for="@Model.Title"></label>
+        <input asp-for="@Model.Title" class="form-control"/>
+        <span asp-validation-for="@Model.Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Author"></label>
+        <input asp-for="@Model.Author" class="form-control"/>
+        <span asp-validation-for="@Model.Author" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Description"></label>
+        <textarea asp-for="@Model.Description" class="form-control"></textarea>
+        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ImageUrl"> Image Url</label>
+        <input asp-for="@Model.ImageUrl" class="form-control"/>
+        <span asp-validation-for="@Model.ImageUrl" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Add Book</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form>

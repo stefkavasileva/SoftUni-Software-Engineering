@@ -1,0 +1,26 @@
+﻿@using BookLibrary.Web.Models.BindingModels
+@model AddMovieBindingModel
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Title"></label>
+        <input asp-for="@Model.Title" class="form-control" />
+        <span asp-validation-for="@Model.Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Director"></label>
+        <input asp-for="@Model.Director" class="form-control" />
+        <span asp-validation-for="@Model.Director" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Description"></label>
+        <textarea asp-for="@Model.Description" class="form-control"></textarea>
+        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.PosterImageUrl"> Image Url</label>
+        <input asp-for="@Model.PosterImageUrl" class="form-control" />
+        <span asp-validation-for="@Model.PosterImageUrl" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Add Movie</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form>

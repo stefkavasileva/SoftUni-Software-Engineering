@@ -1,5 +1,6 @@
 ﻿using BookLibrary.Data;
 using BookLibrary.Web.Models;
+using BookLibrary.Web.Models.BindingModels;
 using Microsoft.AspNetCore.Mvc;
 namespace BookLibrary.Web.Pages.Borrower
 {
@@ -11,10 +12,7 @@ namespace BookLibrary.Web.Pages.Borrower
         }
 
         [BindProperty]
-        public string Name { get; set; }
-
-        [BindProperty]
-        public string Address { get; set; }
+        public AddBorrowerBingingModel AddBorrowerBingingModel { get; set; }
 
         public IActionResult OnPost()
         {
@@ -22,8 +20,8 @@ namespace BookLibrary.Web.Pages.Borrower
             {
                 var borrower = new BookLibrary.Models.Borrower
                 {
-                    Name = this.Name,
-                    Address = this.Address
+                    Name = this.AddBorrowerBingingModel.Name,
+                    Address = this.AddBorrowerBingingModel.Address
                 };
 
                 this._context.Borrowers.Add(borrower);

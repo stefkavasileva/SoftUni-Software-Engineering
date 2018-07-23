@@ -94,6 +94,61 @@ namespace BookLibrary.Data.Migrations
                     b.ToTable("Borrowers");
                 });
 
+            modelBuilder.Entity("BookLibrary.Models.Director", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Directors");
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.Movie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("DirectorId");
+
+                    b.Property<bool>("IsBorrowed");
+
+                    b.Property<string>("PosterImageUrl");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DirectorId");
+
+                    b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.MovieBorrowers", b =>
+                {
+                    b.Property<int>("MovieId");
+
+                    b.Property<int>("BorrowerId");
+
+                    b.Property<DateTime>("BorrowDate");
+
+                    b.Property<bool>("IsMovieReturned");
+
+                    b.Property<DateTime>("ReturnDate");
+
+                    b.HasKey("MovieId", "BorrowerId", "BorrowDate");
+
+                    b.HasIndex("BorrowerId");
+
+                    b.ToTable("MovieBorrowerses");
+                });
+
             modelBuilder.Entity("BookLibrary.Models.Book", b =>
                 {
                     b.HasOne("BookLibrary.Models.Author", "Author")
@@ -112,6 +167,27 @@ namespace BookLibrary.Data.Migrations
                     b.HasOne("BookLibrary.Models.Borrower", "Borrower")
                         .WithMany("BorrowersedBooks")
                         .HasForeignKey("BorrowerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.Movie", b =>
+                {
+                    b.HasOne("BookLibrary.Models.Director", "Director")
+                        .WithMany("Movies")
+                        .HasForeignKey("DirectorId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("BookLibrary.Models.MovieBorrowers", b =>
+                {
+                    b.HasOne("BookLibrary.Models.Borrower", "Borrower")
+                        .WithMany("BorrowersedMovies")
+                        .HasForeignKey("BorrowerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BookLibrary.Models.Movie", "Movie")
+                        .WithMany("Borrowerses")
+                        .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

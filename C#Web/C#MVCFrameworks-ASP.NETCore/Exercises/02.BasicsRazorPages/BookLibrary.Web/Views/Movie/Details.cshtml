@@ -1,0 +1,35 @@
+﻿@using Models
+@model MovieDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container container-fluid">
+    <div class="row">
+        <div class=" pull-left"><img style="float: left" src="@Model.PosterUrl" /></div>
+        <div class="col-sm-8">
+            <h3>@Model.Title</h3>
+            <h4>@Model.Director</h4>
+            @Model.Description
+            <div>
+                <strong>Status: </strong><strong style="color: green">@Model.Status</strong>
+            </div>
+            @if (Model.Status.ToLower().Equals("at home"))
+            {
+                <a asp-controller="Movie" asp-action="Borrow" asp-route-id=@Model.Id class="btn btn-success">Borrow</a>
+            }
+            else
+            {
+                <a asp-controller="Movie" asp-action="ReturnMovie" asp-route-id=@Model.Id class="btn btn-warning">Return movie</a>
+            }
+
+            <a asp-controller="Movie" asp-action="Status" asp-route-id=@Model.Id class="btn btn-info">Status history</a>
+
+            <a asp-controller="Movie" asp-action="DeleteMovie" asp-route-id=@Model.Id class="btn btn-danger">Delete</a>
+
+            <a asp-page="/Index" class="btn btn-secondary">Go back</a>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,21 @@
+﻿@model BookLibrary.Web.Models.BindingModels.BorrowBindingModel
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.BorrowerName"></label>
+        <input asp-for="@Model.BorrowerName" class="form-control" />
+        <span asp-validation-for="@Model.BorrowerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.StartDate"></label>
+        <input asp-for="@Model.StartDate" class="form-control" />
+        <span asp-validation-for="@Model.StartDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.EndDate"></label>
+        <input asp-for="@Model.EndDate" class="form-control" />
+        <span asp-validation-for="@Model.EndDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Borrow</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form>

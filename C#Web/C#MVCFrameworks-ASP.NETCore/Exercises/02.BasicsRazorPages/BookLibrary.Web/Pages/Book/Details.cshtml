@@ -24,7 +24,10 @@
             }
 
             <a asp-page="/Book/Status" asp-route-id=@Model.Book.Id class="btn btn-info">Status history</a>
-            <a asp-page="/Index" class="btn btn-default">Go back</a>
+            
+            <a asp-page-handler="DeleteBook" class="btn btn-danger">Delete</a>
+
+            <a asp-page="/Index" class="btn btn-secondary">Go back</a>
         </div>
 
     </div>

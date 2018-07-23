@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using BookLibrary.Data;
 using BookLibrary.Web.Models;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +11,12 @@ namespace BookLibrary.Web.Pages
         public IndexModel(BookLibraryContext context)
             : base(context)
         {
+           
         }
 
-        public IQueryable<BookViewModel> BookViewModels { get; set; }
+        public ICollection<BookViewModel> BookViewModels { get; set; }
+
+        public ICollection<MovieViewModel> MovieViewModels { get; set; }
 
         public void OnGet()
         {
@@ -24,7 +28,17 @@ namespace BookLibrary.Web.Pages
                     Title = e.Title,
                     AuthorId = e.AuthorId,
                     BookId = e.Id
-                });
+                }).ToList();
+
+            this.MovieViewModels = this._context.Movies.Include(e => e.Director)
+                .Select(e => new MovieViewModel
+                {
+                    Director = e.Director.Name,
+                    Status = e.IsBorrowed ? "Borrowed" : "At home",
+                    Title = e.Title,
+                    DirectorId = e.DirectorId,
+                    MovieId = e.Id
+                }).ToList();
         }
     }
 }

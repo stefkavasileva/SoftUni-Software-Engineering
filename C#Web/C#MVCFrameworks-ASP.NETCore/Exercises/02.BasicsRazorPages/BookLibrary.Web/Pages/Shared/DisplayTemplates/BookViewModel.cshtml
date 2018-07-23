@@ -1,0 +1,15 @@
+﻿@model BookLibrary.Web.Models.BookViewModel
+
+<tr><td><a asp-page="Book/Details" asp-route-id="@Model.BookId">@Model.Title</a></td>
+    <td><a asp-page="Author/Details" asp-route-id="@Model.AuthorId">@Model.Author</a></td>
+    @if (Model.Status.ToLower().Equals("at home"))
+    {
+        <td><span class="badge badge-success">@Model.Status</span></td>
+
+    }
+    else
+    {
+        <td><span class="badge badge-danger">@Model.Status</span></td>
+    }
+
+</tr>

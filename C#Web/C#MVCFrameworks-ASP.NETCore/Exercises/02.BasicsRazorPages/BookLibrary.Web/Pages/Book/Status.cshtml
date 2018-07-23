@@ -1,4 +1,5 @@
-﻿@page 
+﻿@page
+
 @model BookLibrary.Web.Pages.Book.StatusModel
 @{
     ViewData["Title"] = "Status";
@@ -8,19 +9,13 @@
     <h1>Borrowing history of the book "@Model.BookTitle"</h1>
     <table class="table table-striped">
         <thead>
-        <tr>
-            <th>Borrowed by:</th>
-            <th>Period</th>
-        </tr>
+            <tr>
+                <th>Borrowed by:</th>
+                <th>Period</th>
+            </tr>
         </thead>
         <tbody>
-        @foreach (var book in Model.StatusViewModels)
-        {
-            <tr>
-                <td>@book.BorrowerName</td>
-                <td>@book.Period</td>
-            </tr>
-        }
+            @Html.DisplayFor(m => m.StatusViewModels)
         </tbody>
     </table>
 </div>

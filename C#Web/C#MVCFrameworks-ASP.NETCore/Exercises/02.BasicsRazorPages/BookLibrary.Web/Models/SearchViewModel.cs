@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BookLibrary.Web.Models
+﻿namespace BookLibrary.Web.Models
 {
     public class SearchViewModel
     {

@@ -1,0 +1,16 @@
+﻿@model BookLibrary.Web.Models.MovieViewModel
+
+<tr>
+    <td><a asp-controller="Movie" asp-action="Details" asp-route-id="@Model.MovieId">@Model.Title</a></td>
+    <td><a asp-controller="Director" asp-action="Details" asp-route-id="@Model.DirectorId">@Model.Director</a></td>
+    @if (Model.Status.ToLower().Equals("at home"))
+    {
+        <td><span class="badge badge-success">@Model.Status</span></td>
+
+    }
+    else
+    {
+        <td><span class="badge badge-danger">@Model.Status</span></td>
+    }
+
+</tr>

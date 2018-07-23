@@ -1,0 +1,13 @@
+﻿@model BookLibrary.Web.Models.SearchViewModel
+
+<li>
+    @if (Model.Type.Equals("Movie") || Model.Type.Equals("Director"))
+    {
+        <a asp-controller="@Model.Type"asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a>
+    }
+    else
+    {
+        <a asp-page=@($"/{Model.Type}/Details") asp-route-id="@Model.Id">@Model.Name</a>
+    }
+    (@Model.Type.ToLower())
+</li>

@@ -1,6 +1,6 @@
 ﻿namespace BookLibrary.Web.Models
 {
-    public class BookStatusViewModel
+    public class StatusViewModel
     {   
         public string BorrowerName { get; set; }
 

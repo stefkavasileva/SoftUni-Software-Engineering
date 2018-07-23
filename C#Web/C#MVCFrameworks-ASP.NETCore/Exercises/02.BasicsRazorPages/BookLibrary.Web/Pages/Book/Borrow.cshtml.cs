@@ -2,6 +2,7 @@
 using BookLibrary.Data;
 using BookLibrary.Models;
 using BookLibrary.Web.Models;
+using BookLibrary.Web.Models.BindingModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookLibrary.Web.Pages.Book
@@ -11,11 +12,11 @@ namespace BookLibrary.Web.Pages.Book
         public BorrowModel(BookLibraryContext context)
             : base(context)
         {
-            this.BorrowBookViewModel = new BorrowBookViewModel();
+            this.BorrowBookBindingModel = new BorrowBindingModel();
         }
 
         [BindProperty]
-        public BorrowBookViewModel BorrowBookViewModel { get; set; }
+        public BorrowBindingModel BorrowBookBindingModel { get; set; }
 
         public IActionResult OnPost(int id)
         {
@@ -24,18 +25,18 @@ namespace BookLibrary.Web.Pages.Book
                 return this.Page();
             }
 
-            if (this.BorrowBookViewModel.StartDate > this.BorrowBookViewModel.EndDate)
+            if (this.BorrowBookBindingModel.StartDate > this.BorrowBookBindingModel.EndDate)
             {
                 return this.Page();
             }
 
             var borrower = this._context
                 .Borrowers
-                .FirstOrDefault(x => x.Name.Equals(BorrowBookViewModel.BorrowerName));
+                .FirstOrDefault(x => x.Name.Equals(BorrowBookBindingModel.BorrowerName));
 
             if (borrower == null)
             {
-                borrower = new BookLibrary.Models.Borrower {Name = BorrowBookViewModel.BorrowerName};
+                borrower = new BookLibrary.Models.Borrower {Name = BorrowBookBindingModel.BorrowerName};
 
                 this._context.Borrowers.Add(borrower);
                 this._context.SaveChanges();
@@ -51,9 +52,9 @@ namespace BookLibrary.Web.Pages.Book
             this._context.BookBorrowerses.Add(new BookBorrowers
             {
                 BookId = book.Id,
-                BorrowDate = this.BorrowBookViewModel.StartDate,
+                BorrowDate = this.BorrowBookBindingModel.StartDate,
                 BorrowerId = borrower.Id,
-                ReturnDate = this.BorrowBookViewModel.EndDate
+                ReturnDate = this.BorrowBookBindingModel.EndDate
             });
 
             book.IsBorrowed = true;

@@ -10,6 +10,6 @@ namespace BookLibrary.Web.Models
         public BasePageModel(BookLibraryContext context)
         {
             this._context = context;
-        }
+        }   
     }
 }

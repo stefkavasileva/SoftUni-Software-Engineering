@@ -39,17 +39,30 @@ namespace BookLibrary.Web.Pages.Book
             }
 
             book.IsBorrowed = false;
-            //var borrowedBook = this._context.BookBorrowerses.FirstOrDefault(b => b.BookId == id);
-
-            //if (borrowedBook == null)
-            //{
-            //    return this.Page();
-            //}
-
-            //this._context.BookBorrowerses.Remove(borrowedBook);
-            //this._context.SaveChanges();
+            this._context.SaveChanges();
 
             return RedirectToPage("/Book/Details", new { id = book.Id });
+        }
+
+        public IActionResult OnGetDeleteBook(int id)
+        {
+            var bookDb = this._context.Books.Find(id);
+
+            if (bookDb == null)
+            {
+                return this.Page();
+            }
+
+            this._context.Books.Remove(bookDb);
+
+            var borrowerBook = this._context.BookBorrowerses.Where(e => e.BookId == id).ToList();
+            if (borrowerBook.Any())
+            {
+                this._context.BookBorrowerses.RemoveRange(borrowerBook);
+            }
+
+            this._context.SaveChanges();
+            return RedirectToPage("/Index");
         }
     }
 }

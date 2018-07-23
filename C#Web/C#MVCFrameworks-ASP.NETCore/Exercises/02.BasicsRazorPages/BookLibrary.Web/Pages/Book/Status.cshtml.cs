@@ -14,7 +14,7 @@ namespace BookLibrary.Web.Pages.Book
         {
         }
 
-        public ICollection<BookStatusViewModel> StatusViewModels { get; set; }
+        public ICollection<StatusViewModel> StatusViewModels { get; set; }
 
         public string BookTitle { get; set; }
 
@@ -30,18 +30,18 @@ namespace BookLibrary.Web.Pages.Book
 
             if (borrowedBooks.Count == 0)
             {
-                this.StatusViewModels = new List<BookStatusViewModel>();
+                this.StatusViewModels = new List<StatusViewModel>();
                 return this.Page();
             }
 
            
 
-            var result = new List<BookStatusViewModel>();
+            var result = new List<StatusViewModel>();
 
             foreach (var bookBorrowerse in borrowedBooks)
             {
                 var period = bookBorrowerse.BorrowDate.ToString("yyyy-MM-dd") +" : "+ bookBorrowerse.ReturnDate.ToString("yyyy-MM-dd");
-                result.Add(new BookStatusViewModel
+                result.Add(new StatusViewModel
                 {
                     BorrowerName = bookBorrowerse.Borrower.Name,
                     Period = period,                 

@@ -1,0 +1,13 @@
+﻿@using Models.BindingModels
+@model Models.BindingModels.BorrowBindingModel
+@{
+    ViewData["Title"] = "Borrow";
+}
+
+<div class="container">
+    <h2>Borrow the movie</h2>
+    @Html.EditorFor(m => m)
+</div>
+@section Scriptis{
+    <partial name="_ValidationScriptsPartial" />
+}

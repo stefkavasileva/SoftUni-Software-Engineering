@@ -13,6 +13,12 @@ namespace BookLibrary.Data
 
         public DbSet<BookBorrowers> BookBorrowerses { get; set; }
 
+        public DbSet<Movie> Movies { get; set; }
+
+        public DbSet<Director> Directors { get; set; }
+
+        public DbSet<MovieBorrowers> MovieBorrowerses { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -38,6 +44,18 @@ namespace BookLibrary.Data
             modelBuilder.Entity<BookBorrowers>()
                 .HasKey(e => new {e.BookId, e.BorrowerId, e.BorrowDate});
 
+            modelBuilder.Entity<MovieBorrowers>()
+                .HasOne(e => e.Movie)
+                .WithMany(b => b.Borrowerses)
+                .HasForeignKey(b => b.MovieId);
+
+            modelBuilder.Entity<MovieBorrowers>()
+                .HasOne(e => e.Borrower)
+                .WithMany(b => b.BorrowersedMovies)
+                .HasForeignKey(b => b.BorrowerId);
+
+            modelBuilder.Entity<MovieBorrowers>()
+                .HasKey(e => new { e.MovieId, e.BorrowerId, e.BorrowDate });
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -1,0 +1,13 @@
+﻿@model Models.DirectorDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="container container-fluid">
+    <h2>@Model.Name</h2>
+    <ul>
+        @Html.DisplayFor(m => m.Movies)
+    </ul>
+</div>

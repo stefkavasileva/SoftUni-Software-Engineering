@@ -1,0 +1,15 @@
+﻿@model BookLibrary.Web.Models.BindingModels.AddBorrowerBingingModel
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" class="form-control" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Address"></label>
+        <input asp-for="@Model.Address" class="form-control" />
+        <span asp-validation-for="@Model.Address" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Add borrower</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form>

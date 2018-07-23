@@ -41,6 +41,24 @@ namespace BookLibrary.Web.Pages
                         Id = e.Id,
                         Type = e.GetType().Name
                     }));
+
+            this.SearchResults
+                .AddRange(this._context.Movies.Where(a => a.Title.Contains(searchTerm))
+                    .Select(e => new SearchViewModel
+                    {
+                        Name = e.Title,
+                        Id = e.Id,
+                        Type = e.GetType().Name
+                    }));
+
+            this.SearchResults
+                .AddRange(this._context.Directors.Where(a => a.Name.Contains(searchTerm))
+                    .Select(e => new SearchViewModel
+                    {
+                        Name = e.Name,
+                        Id = e.Id,
+                        Type = e.GetType().Name
+                    }));
         }
     }
 }

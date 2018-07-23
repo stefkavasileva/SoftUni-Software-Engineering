@@ -1,0 +1,15 @@
+﻿@page
+@model BookLibrary.Web.Pages.Author.AddModel
+
+<div class="container container-fluid">
+    <h2>Add Author</h2>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="@Model.Name"></label>
+            <input asp-for="@Model.Name" class="form-control"/>
+            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+        </div>       
+        <button type="submit" class="btn btn-success">Add Author</button>
+        <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+    </form> 
+</div>

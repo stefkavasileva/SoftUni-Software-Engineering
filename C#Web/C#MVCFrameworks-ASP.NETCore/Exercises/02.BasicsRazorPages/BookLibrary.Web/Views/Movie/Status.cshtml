@@ -1,0 +1,21 @@
+﻿@using Models
+@model Models.MovieStatusViewModel
+@{
+    ViewData["Title"] = "Status";
+}
+
+<div class="container container-fluid">
+    <h1>Borrowing history of the movie "@Model.Title"</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Borrowed by:</th>
+            <th>Period</th>
+        </tr>
+        </thead>
+        <tbody>
+        @Html.DisplayFor(m => m.Statuses)
+        </tbody>
+    </table>
+</div>
+

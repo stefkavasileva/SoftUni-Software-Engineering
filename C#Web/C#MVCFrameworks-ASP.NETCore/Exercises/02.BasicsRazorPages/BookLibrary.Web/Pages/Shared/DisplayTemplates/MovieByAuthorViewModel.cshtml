@@ -1,0 +1,3 @@
+﻿@model BookLibrary.Web.Models.MovieByAuthorViewModel
+
+<li><a asp-controller="Movie" asp-action="Details" asp-route-id="@Model.Id">@Model.Title</a>(@Model.Status)</li>

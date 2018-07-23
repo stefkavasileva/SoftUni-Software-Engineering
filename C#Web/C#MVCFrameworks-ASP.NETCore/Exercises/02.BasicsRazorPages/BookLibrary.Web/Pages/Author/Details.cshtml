@@ -7,10 +7,7 @@
 <div class="container container-fluid">
     <h2>@Model.BooksByAuthor.Name</h2>
     <ul>
-        @foreach (var book in Model.BooksByAuthor.Books)
-        {
-            <li><a asp-page="/Book/Details" asp-route-id="@book.Id">@book.Title</a>(@book.Status)</li>
-        }
+       @Html.DisplayFor(m=>m.BooksByAuthor.Books)
     </ul>
 </div>
 
