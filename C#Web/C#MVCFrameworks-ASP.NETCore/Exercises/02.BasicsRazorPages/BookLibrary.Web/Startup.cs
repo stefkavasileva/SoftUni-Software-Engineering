@@ -1,4 +1,6 @@
+using System.Diagnostics;
 using BookLibrary.Data;
+using BookLibrary.Web.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,8 +30,13 @@ namespace BookLibrary.Web
             });
 
             services.AddDbContext<BookLibraryContext>();
-            
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddMvc(x =>
+            {
+                x.Filters.Add<LogExecution>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<Stopwatch>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

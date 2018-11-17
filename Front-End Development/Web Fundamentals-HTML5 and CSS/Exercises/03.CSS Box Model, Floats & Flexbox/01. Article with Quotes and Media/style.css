@@ -1,0 +1,43 @@
+html{
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.2;
+}
+
+.site > header:first-of-type{
+    border-bottom: 2px solid #000;
+}
+
+.site a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: "Georgia", sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+nav{
+    display: inline-block;
+}
+
+button{
+    text-decoration: none;
+}
+
+.site-title {
+    font-size: 6em;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+.site{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Helvetica", sans-serif;
+}
+
+blockquote{
+    float: right;
+}

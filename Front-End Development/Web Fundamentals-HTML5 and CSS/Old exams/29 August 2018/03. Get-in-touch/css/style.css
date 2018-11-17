@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU");
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background:linear-gradient(
+        rgba(132, 106, 221, 0.80), 
+        rgba(132, 106, 221, 0.80)
+      ),url("../images/bg-01.jpg");
+     background-size: cover;
+     margin: 50px;
+}
+
+/* Контейнер с определен цвят за фон, широчината му е 60%
+от бодито(от родителя му), марджина е ауто(по 40% от двете страни)
+дисплей флекс позволява елементите да се наредят един до друг */
+
+main{
+    background-color: white;
+    width: 60%;
+    margin:auto;
+    display: flex;
+    border-radius: 15px;
+}
+
+/* 
+По същта логика казваме, че двата елемента в мейн контейнера са 
+по 50% от родителя си, това ще им даде еднаква широчин */
+
+main section{
+    width: 50%;
+    margin: 50px 20px;
+}
+
+section img{
+    text-align: center;
+}
+
+/* Дори да премахна флекс, ще бъдат колони тъй като дивовете са
+блокови елементи  */
+
+main section form{
+    display: flex;
+    flex-direction: column;
+} 
+
+form div{
+    margin: 5px,0;
+}
+
+i{
+    position: relative;
+    color: #aaaaaa;
+    right: 225px;
+}
+
+input, textarea, button{
+    border-radius: 15px;
+    border:none;
+    background:#e6e6e6;
+    color: #aaaaaa;
+    padding: 12px;
+    margin: 3px;
+}
+
+/* Само за инпутите защото текст ериата не трябва да */
+input{
+    padding-left: 30px;
+    padding-right: 40px;
+}
+
+button{
+    background:#846add;
+    color: white;
+    font-weight: bold;
+    width: 220px;
+}
+
+textarea{
+    width: 200px; 
+}
+
+section img{
+    width: 50%;
+}
+
+/* Центриране на картинк в контейнер,когато е сам елемент */
+body > main > section:nth-child(1) {
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* премахване на плейсхолдъра при кликане на инпута */
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    
+}
+/* 
+при кликне н инпута се променя друг елемент */
+input:focus + i { 
+    color: #846add; 
+ }
+
+button:hover{
+    background-color: #333333;
+}

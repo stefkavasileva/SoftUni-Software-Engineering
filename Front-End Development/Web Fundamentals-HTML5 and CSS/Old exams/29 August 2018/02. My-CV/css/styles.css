@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background: rgb(241, 241, 241);
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main {
+    display: flex;
+}
+
+aside, main section {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px 0, rgba(0, 0, 0, 0.19) 0 4px 20px 0;
+    margin: 2%;
+}
+
+aside {
+    width: 22%;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside article p {
+    padding-left: 16px;
+    color: #757575;
+    padding-bottom: 5px;
+}
+
+aside article p i {
+    padding-right: 6px;
+    color: #009688;
+}
+
+main {
+    width: 65%;
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.aside-title {
+    color: #757575;
+    padding-left: 15px;
+    font-weight: 300;
+}
+
+.progress-bar {
+    margin: 0 15px;
+    background: #f1f1f1;
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+}
+
+.inner-progress-bar {
+    border-radius: 16px;
+    background: #009688;
+}
+
+#languages {
+    padding-bottom: 25px;
+}
+
+footer {
+    background: #009688;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 15px;
+}
+
+footer p {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#social-icons i {
+    color: white;
+    margin: 5px;
+}
+
+#work,#education {
+    margin-top: 3.2%;
+    padding: 14px 18px;
+    margin-bottom: 0;
+}
+
+#work h2, #education h2 {
+    color: #757575;
+    font-weight: 300;
+    font-size: 2em;
+}
+
+#work i, #education i {
+    color: #009688;
+    padding-right: 10px;
+}
+
+#work h4 {
+    color: #757575;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#education h4 {
+    color: #757575;
+    font-weight: normal;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.school {
+    border: 1px solid rgb(0, 150, 136);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px 0, rgba(0, 0, 0, 0.19) 0 4px 20px 0;
+}
+
+.school div {
+    display: inline-block;
+    text-align: left;
+    color: #757575;
+    border-radius: 12px;
+}
+
+.school div p {
+    padding-top: 7px;
+}
+
+.uni-img-container {
+    width: 12%;
+    float: left;
+    margin-right: 15px;
+    background-color: rgba(241, 241, 241, .4);
+    padding: 15px;
+}
+
+.school div img {
+    max-width: 100%;
+    width: 90%;
+    height: 40%;
+    margin: 6%;
+}

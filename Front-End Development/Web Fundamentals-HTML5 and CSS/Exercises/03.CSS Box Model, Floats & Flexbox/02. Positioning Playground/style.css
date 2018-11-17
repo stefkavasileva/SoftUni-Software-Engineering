@@ -1,0 +1,20 @@
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+
+body{
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Helvetica", sans-serif;
+}
+
+.first-pic{
+    background-color: rgb(28, 101, 1580);
+}
+
+.second-pic{
+    background-color: rgb(170, 54, 115);
+}
+
+section.card{
+    display: block;
+}

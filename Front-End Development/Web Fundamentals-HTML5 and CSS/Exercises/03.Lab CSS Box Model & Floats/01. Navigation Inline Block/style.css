@@ -1,0 +1,26 @@
+html{
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.2;
+}
+
+body > header:first-of-type{
+    border-bottom: 2px solid #000;
+}
+
+h1{
+    font-family: "Georgia", sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+nav{
+    display: inline-block;
+}
+
+button{
+    text-decoration: none;
+}
+
+.site-tile{
+    font-size: 6em;
+}

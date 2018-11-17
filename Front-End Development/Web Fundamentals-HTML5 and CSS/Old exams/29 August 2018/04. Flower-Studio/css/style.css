@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+
+body{
+    font-family: "PT Sans", sans-serif;
+}
+
+/* ================HEADER================= */
+/*Подреждаме двата списъка един до друг както и елементите в тях*/
+nav, ul{
+    display: flex;
+}
+
+/*Премахване на декорацият на линковете и смяна на цвета на теьта*/
+nav a{
+    text-decoration: none;
+    color:#92a0b1;
+}
+
+/*Премахване на декорацията на списъчните елементи*/
+li{
+    list-style-type: none;    
+}
+
+/*Елементите в списъка в навигацията имат отстояние*/
+nav li{
+    margin-right: 20px;
+}
+
+#active-link, i {
+    color: #fa5b3d;
+}
+
+nav > ul li:first-child{
+    margin-right: 5px;
+}
+
+/* Първия елемент е 60 % от родителя и има отстояние */
+nav > ul:nth-child(1){
+    width: 60%;
+    padding-left: 200px;
+}
+
+/*последия елемент от навигацията има бордер и отстояние*/
+nav > ul:nth-child(2) > li:nth-child(2){
+    border-right: 1px solid #92a0b1; 
+    border-left: 1px solid #92a0b1; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Позицията на картинката е център, тя е кавър не се повтаря и
+има маргин за има вътрешно отстояние от самия текст */
+header > section{
+    background: url("../img/residential-banner-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background-position: center; 
+}
+
+/* Всички елементи в секшъна на хедура трябва да са стилизирни */
+.header-section > h2, 
+.header-section > div, 
+.header-section > p{
+    text-align: center;
+    color: white;    
+    font-size: 150%;
+
+}
+
+/* ================HEADER================= */
+/* ================MAIN================= */
+
+#heder-text, main{
+    text-align: center;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    color:#92a0b1; 
+    margin-right: 10%;
+    margin-left: 10%; 
+}
+
+main section{
+    width: 30%;
+    padding: 15px;
+    font-size: 20px;
+}
+
+main section h2{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+main section h3{
+    margin: 0;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+main section i{
+    color: #92a0b1;
+    font-size:14px;
+    position: relative;
+    vertical-align: middle;
+}
+
+
+
+
+/* ================MAIN================= */
+
+
+
